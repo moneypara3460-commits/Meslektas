@@ -15,7 +15,7 @@
    "Çırak",
    "Kalfa",
    "Usta",
-   "İşletme sahibi"
+   "Baş barista"
   ],
   "tamamlamaBelgesi": {
    "baslik": "Barista Yolu Tamamlama Belgesi",
@@ -262,7 +262,7 @@
       {
        "min": 0,
        "baslik": "Düşük uyum",
-       "metin": "Bu meslek seni zorlayabilir ama denemeden bilemezsin. Belki kahve tarafı değil, kavurma ya da işletme tarafı ilgini çeker."
+       "metin": "Bu meslek seni zorlayabilir ama denemeden bilemezsin. Belki kahve tarafı değil, kavurma tarafı ilgini çeker."
       }
      ]
     }
@@ -1218,7 +1218,7 @@
     "ad": "Usta Barista",
     "ikon": "🏆"
    },
-   "sonraki": "İşletme sahibi kademesi açıldı: maliyet, fiyat, personel ve müşteri.",
+   "sonraki": "Baş barista kademesi açıldı: tarif standardı, kapanış temizliği, kalite ve ekip.",
    "gorevler": [
     {
      "id": "u1-yolculuk",
@@ -1657,423 +1657,379 @@
    ]
   },
   {
-   "ad": "İşletme sahibi",
-   "hedefXp": 365,
+   "ad": "Baş barista",
+   "hedefXp": 340,
    "rozet": {
-    "ad": "Kafe Sahibi",
-    "ikon": "🏪"
+    "ad": "Baş Barista",
+    "ikon": "⭐"
    },
    "sonraki": "Barista mesleğinin tüm kademelerini bitirdin!",
    "gorevler": [
     {
-     "id": "i1-acilis",
+     "id": "b1-bas",
      "sablon": "bilgi",
-     "ikon": "🏪",
-     "baslik": "Kafe açmanın temelleri",
+     "ikon": "⭐",
+     "baslik": "Baş baristanın işi",
      "xp": 20,
      "kartlar": [
       {
-       "ikon": "📍",
-       "baslik": "Konum",
-       "metin": "Kafenin başarısında yer çok önemlidir: geçen insan sayısı, çevredeki rakipler ve kira birlikte düşünülür.",
-       "terim": "yaya trafiği"
+       "ikon": "📏",
+       "baslik": "Tarif standardı",
+       "metin": "Her içeceğin tarifi yazılıdır: kahve gramı, akan miktar, süre, süt miktarı, bardak boyu. Kim yaparsa yapsın aynı içecek çıkar.",
+       "terim": "tarif kartı"
       },
       {
-       "ikon": "📄",
-       "baslik": "Ruhsat ve kayıt",
-       "metin": "Belediyeden işyeri açma ve çalışma ruhsatı alınır; gıda satan işletme İl Tarım ve Orman Müdürlüğü'ne kayıt olur. Ayrıntılar için belediyeye ve mali müşavire danışılır.",
-       "terim": "resmî işlemler"
+       "ikon": "🎛️",
+       "baslik": "Günlük kalibrasyon",
+       "metin": "Her sabah ve gün içinde öğütme ayarı tadılarak kontrol edilir; kayıt tutulur.",
+       "terim": "kalibrasyon"
       },
       {
-       "ikon": "🧾",
-       "baslik": "Vergi ve muhasebe",
-       "metin": "İşletme vergi dairesine kayıt olur. Gelir, gider ve vergiler için bir mali müşavirle çalışmak işi kolaylaştırır.",
-       "terim": "mali müşavir"
+       "ikon": "🧑‍🏫",
+       "baslik": "Ekip eğitimi",
+       "metin": "Yeni baristalar yetiştirilir; tarifler, süt köpürtme ve hijyen kuralları öğretilir, düzenli kontrol edilir.",
+       "terim": "eğitim"
       },
       {
-       "ikon": "👥",
-       "baslik": "Personel",
-       "metin": "Çalışanların sigorta (SGK) girişi işe başlamadan önce yapılır. Gıdayla çalışan herkes hijyen eğitimi almalıdır.",
-       "terim": "SGK + hijyen"
+       "ikon": "📦",
+       "baslik": "Tazelik ve stok",
+       "metin": "Çekirdeğin kavrum tarihi takip edilir; ilk giren ilk çıkar kuralıyla kullanılır, açılan paket kapalı tutulur.",
+       "terim": "kavrum tarihi"
       },
       {
-       "ikon": "☕",
-       "baslik": "Ekipman",
-       "metin": "Espresso makinesi, öğütücü, buzdolabı, su filtresi ve bulaşık makinesi en büyük kalemlerdir. Ucuz makine sık arıza demek olabilir.",
-       "terim": "yatırım"
+       "ikon": "🔧",
+       "baslik": "Makine bakımı",
+       "metin": "Günlük temizlik, conta ve duş filtresi kontrolü, su filtresi değişimi baş baristanın takibindedir.",
+       "terim": "bakım"
       },
       {
-       "ikon": "📊",
-       "baslik": "Maliyet ve fiyat",
-       "metin": "Fiyat; malzeme, kira, personel, enerji ve kâr düşünülerek belirlenir. Malzeme maliyeti fiyatın küçük bir parçası olmalıdır.",
-       "terim": "kâr marjı"
+       "ikon": "💬",
+       "baslik": "Bar kültürü",
+       "metin": "Misafirle iletişim, şikâyet çözümü ve barın düzeni baş baristadan sorulur.",
+       "terim": "bar sorumlusu"
       }
      ]
     },
     {
-     "id": "i2-maliyet",
-     "sablon": "hesap",
-     "ikon": "🧮",
-     "baslik": "Fincan maliyeti",
-     "temelXp": 40,
-     "yildizBasinaXp": 15,
-     "aciklama": "Her ürünün malzeme maliyetini bul, sonra fiyatını belirle. Rakamlar örnektir; gerçek fiyatlar değişir.",
-     "hedefOran": [
-      20,
-      30
-     ],
-     "kural": "Kafelerde sık kullanılan bir kural: bir içeceğin malzeme maliyeti satış fiyatının yaklaşık %20–30'u olmalı. Kalan para kira, personel, enerji, vergi ve kâra gider.",
-     "urunler": [
+     "id": "b2-kapanis",
+     "sablon": "siralama",
+     "ikon": "🧽",
+     "baslik": "Kapanış temizliği",
+     "aciklama": "Gün bitti. Üç yollu valfli espresso makinesini doğru sırayla temizle.",
+     "adimlar": [
       {
-       "ad": "Espresso",
-       "ikon": "☕",
-       "kalemler": [
-        [
-         "Kahve (18 g, kilosu 1.200 TL)",
-         21.6
-        ],
-        [
-         "Fincan/bardak",
-         2.5
-        ],
-        [
-         "Şeker, peçete",
-         1.0
-        ]
-       ]
+       "id": "sok",
+       "ikon": "🔓",
+       "metin": "Portafiltreleri çıkar, sepetleri deterjanlı suya bırak",
+       "neden": "Sepet ve portafiltrelerde biriken kahve yağı ancak bekletilince çözülür.",
+       "ipucu": "Önce makinenin çıkan parçaları."
       },
       {
-       "ad": "Latte",
-       "ikon": "🥛",
-       "kalemler": [
-        [
-         "Kahve (18 g)",
-         21.6
-        ],
-        [
-         "Süt (200 ml, litresi 40 TL)",
-         8.0
-        ],
-        [
-         "Bardak + kapak",
-         4.0
-        ],
-        [
-         "Şeker, peçete, karıştırıcı",
-         1.5
-        ]
-       ]
+       "id": "kor",
+       "ikon": "🧴",
+       "metin": "Kör sepete makine deterjanı koyup grup başlıklarında geri yıkama (backflush) yap",
+       "neden": "Deterjan grup başlığındaki kahve yağını çözer.",
+       "ipucu": "Parçalar suda; şimdi grup başlıkları."
       },
       {
-       "ad": "Americano",
-       "ikon": "🫖",
-       "kalemler": [
-        [
-         "Kahve (18 g)",
-         21.6
-        ],
-        [
-         "Su (filtreli)",
-         0.4
-        ],
-        [
-         "Bardak + kapak",
-         4.0
-        ],
-        [
-         "Şeker, peçete",
-         1.0
-        ]
-       ]
+       "id": "durula",
+       "ikon": "💧",
+       "metin": "Kör sepetle sadece suyla tekrar geri yıkama yaparak durula",
+       "neden": "Deterjan kalıntısı ertesi gün kahvenin tadını bozar.",
+       "ipucu": "Deterjanla yıkadın; bir adım daha gerekir."
+      },
+      {
+       "id": "buhar",
+       "ikon": "♨️",
+       "metin": "Buhar çubuklarını nemli bezle sil, kısa buhar vererek içini boşalt",
+       "neden": "İçeride kalan süt kurur ve bakteri barındırır.",
+       "ipucu": "Grup başlıkları temiz; bir parça daha süt gördü."
+      },
+      {
+       "id": "tepsi",
+       "ikon": "🗑️",
+       "metin": "Damlama tepsisini, telve kutusunu ve tezgâhı temizle",
+       "neden": "Bar ertesi sabah temiz başlamalı.",
+       "ipucu": "Makine bitti; çevresine bak."
+      },
+      {
+       "id": "ogutucu",
+       "ikon": "⚙️",
+       "metin": "Öğütücü haznesini boşaltıp sil, çekirdekleri kapalı kaba al",
+       "neden": "Haznede kalan çekirdek gece boyunca bayatlar.",
+       "ipucu": "Son olarak çekirdekler."
       }
      ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
      "bilgiKarti": {
-      "baslik": "Fiyat nasıl belirlenir?",
+      "baslik": "Kapanış",
       "maddeler": [
-       "Önce malzeme maliyetini kuruşu kuruşuna hesapla.",
-       "Malzeme, fiyatın yaklaşık %20–30'u olsun.",
-       "Kira, personel ve enerjiyi unutma.",
-       "Çevredeki kafelerin fiyatlarına da bak."
+       "Önce parçalar, sonra grup başlıkları.",
+       "Deterjandan sonra mutlaka su ile durula.",
+       "Buhar çubuğu her gün silinir ve boşaltılır.",
+       "Geri yıkama yalnızca üç yollu valfli makinelerde yapılır; makinenin kılavuzuna uy."
       ]
      }
     },
     {
-     "id": "i3-isbilgi",
+     "id": "b3-kalite",
      "sablon": "soru",
-     "ikon": "📚",
-     "baslik": "İşletme bilgisi",
+     "ikon": "❓",
+     "baslik": "Kalite ve tazelik",
      "temelXp": 20,
      "yildizBasinaXp": 10,
      "sorular": [
       {
-       "soru": "Latte'nin malzemesi 35 TL, fiyatı 140 TL. Malzeme oranı yüzde kaç?",
+       "soru": "Tarif kartının amacı nedir?",
        "secenekler": [
-        "%15",
-        "%25",
-        "%40",
-        "%50"
+        "Süs",
+        "Her içeceğin herkes tarafından aynı yapılması",
+        "Fiyat yazmak",
+        "Müşteriye göstermek"
        ],
        "dogru": 1,
-       "aciklama": "35 ÷ 140 = 0,25 yani %25."
+       "aciklama": "Standart, kalitenin temelidir."
       },
       {
-       "soru": "Çalışanın SGK girişi ne zaman yapılır?",
+       "soru": "Çekirdek seçerken hangi tarihe bakılır?",
        "secenekler": [
-        "İlk maaştan sonra",
-        "İşe başlamadan önce",
-        "Deneme süresi bitince",
-        "Gerekmez"
-       ],
-       "dogru": 1,
-       "aciklama": "Sigorta girişi çalışma başlamadan yapılır."
-      },
-      {
-       "soru": "Kafe için konum seçerken hangisi en önemlidir?",
-       "secenekler": [
-        "Sadece kiranın ucuz olması",
-        "Yaya trafiği, rakipler ve kiranın birlikte değerlendirilmesi",
-        "Evine yakın olması",
-        "Binanın rengi"
-       ],
-       "dogru": 1,
-       "aciklama": "Ucuz kira ama hiç müşteri geçmeyen yer işletmeyi zorlar."
-      },
-      {
-       "soru": "Malzeme maliyeti fiyatın %60'ı ise ne olur?",
-       "secenekler": [
-        "Çok kâr edilir",
-        "Kira, personel ve diğer giderlere çok az para kalır",
-        "Fark etmez",
-        "Vergi düşer"
-       ],
-       "dogru": 1,
-       "aciklama": "Malzeme dışındaki giderler de karşılanmalı."
-      },
-      {
-       "soru": "Gıda satan bir işletmenin ilk adımlarından biri hangisidir?",
-       "secenekler": [
-        "Ruhsat ve gıda işletmesi kaydı",
-        "Sadece tabela asmak",
-        "Instagram hesabı açmak",
+        "Sadece son kullanma",
+        "Kavrum tarihi",
+        "Üretim yılı",
         "Hiçbiri"
        ],
-       "dogru": 0,
-       "aciklama": "Resmî kayıtlar olmadan açılmaz; ayrıntıyı belediye ve mali müşavir söyler."
+       "dogru": 1,
+       "aciklama": "Tazelik kavrum tarihinden anlaşılır."
+      },
+      {
+       "soru": "Kalibrasyon ne zaman yapılır?",
+       "secenekler": [
+        "Ayda bir",
+        "Her sabah ve gün içinde gerektikçe",
+        "Yalnızca makine bozulunca",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Akış gün içinde değişebilir."
+      },
+      {
+       "soru": "Deterjanla geri yıkamadan sonra ne yapılır?",
+       "secenekler": [
+        "Hemen kahve yapılır",
+        "Sadece suyla geri yıkanarak durulanır",
+        "Makine kapatılır",
+        "Hiçbir şey"
+       ],
+       "dogru": 1,
+       "aciklama": "Deterjan kalıntısı kalmamalı."
+      },
+      {
+       "soru": "Yeni barista latte'yi tarif dışı yapıyor. Baş barista ne yapar?",
+       "secenekler": [
+        "Görmezden gelir",
+        "Tarifi gösterip birlikte yapar",
+        "Bağırır",
+        "Kendi yapar, öğretmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Göster, birlikte yap, sonra izle."
       }
      ],
      "bilgiKarti": {
-      "baslik": "Hatırla",
+      "baslik": "Baş barista notu",
       "maddeler": [
-       "Oran = malzeme ÷ fiyat.",
-       "SGK girişi işe başlamadan.",
-       "Konum: trafik + rakip + kira.",
-       "Resmî işler için mali müşavir."
+       "Tarif kartı = tutarlı kalite.",
+       "Kavrum tarihini takip et.",
+       "Deterjandan sonra durula.",
+       "Öğret, kontrol et."
       ]
      }
     },
     {
-     "id": "i4-patron",
+     "id": "b4-bar",
      "sablon": "senaryo",
-     "ikon": "💼",
-     "baslik": "Patronluk",
+     "ikon": "🏅",
+     "baslik": "Bar senin",
      "temelXp": 30,
      "yildizBasinaXp": 10,
-     "giris": "Kendi kafeni açtın. Artık kararlar senin.",
+     "giris": "Bugün barın sorumlusu sensin.",
      "adimlar": [
       {
        "kim": "usta",
        "ruh": "kizgin",
-       "metin": "Kahve tedarikçin fiyatlara %20 zam yaptı.",
+       "metin": "Sabah açılışta espresso makinesi basınç tutmuyor, kuyruk birikiyor.",
        "secenekler": [
         {
-         "metin": "Maliyeti yeniden hesaplar, başka tedarikçilerden de teklif alır, gerekirse fiyatı dengeli artırırım",
+         "metin": "Müşterilere dürüstçe bilgi verir, makinesiz yapılabilecek içecekleri sunar, servisi arar ve durumu kaydederim",
          "dogru": true,
-         "aciklama": "Önce rakamlara bak, seçenekleri karşılaştır, sonra karar ver."
+         "aciklama": "Kriz anında dürüstlük ve alternatif, müşteriyi korur."
         },
         {
-         "metin": "Daha ucuz ve kalitesiz kahveye geçerim, kimse anlamaz",
+         "metin": "Makineyi kendim sökmeye çalışırım",
          "dogru": false,
-         "aciklama": "Müdavimler anlar; kalite kaybı müşteri kaybıdır."
+         "aciklama": "Basınçlı ve sıcak sistem; yetkili servis işi."
         },
         {
-         "metin": "Hiçbir şey yapmam, zarar etsem de olur",
+         "metin": "Hiçbir şey söylemeden beklerim",
          "dogru": false,
-         "aciklama": "Bu gidişle kafe kapanır."
+         "aciklama": "Belirsizlik müşteriyi kızdırır."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Yeni barista her latte'de farklı miktarda süt kullanıyor.",
+       "secenekler": [
+        {
+         "metin": "Tarif kartını gösterir, birkaç içeceği birlikte yaparız",
+         "dogru": true,
+         "aciklama": "Standart öğretilerek kazanılır."
+        },
+        {
+         "metin": "Herkesin tarzı farklı, karışmam",
+         "dogru": false,
+         "aciklama": "Müşteri her gün aynı tadı bekler."
+        },
+        {
+         "metin": "Onu bardan alırım",
+         "dogru": false,
+         "aciklama": "Önce öğretmek gerekir."
         }
        ]
       },
       {
        "kim": "musteri",
        "ruh": "kizgin",
-       "metin": "İnternette kötü bir yorum: \"Kahve soğuktu, kasiyer ilgisizdi.\"",
+       "metin": "Müşteri: \"Dün aldığım kahve bugünkünden çok farklıydı!\"",
        "secenekler": [
         {
-         "metin": "Kibarca yanıt verir, özür diler, ekiple konuşup sorunu düzeltirim",
+         "metin": "Özür diler, kalibrasyon kaydına bakar, içeceği yeniden hazırlarım",
          "dogru": true,
-         "aciklama": "Herkes yanıtı görür; ilgilenen işletmeye güven artar."
+         "aciklama": "Tutarsızlığın nedeni bulunup düzeltilir."
         },
         {
-         "metin": "Yorumu yazana sert cevap veririm",
+         "metin": "\"Kahve bu, her gün değişir\" derim",
          "dogru": false,
-         "aciklama": "Yeni müşteriler de bu kavgayı görür."
+         "aciklama": "Standart işin özüdür."
         },
         {
-         "metin": "Arkadaşlarıma iyi yorum yazdırırım",
+         "metin": "Dünkü baristayı suçlarım",
          "dogru": false,
-         "aciklama": "Sahte yorum yanıltıcıdır ve güveni yok eder."
-        }
-       ]
-      },
-      {
-       "kim": "usta",
-       "ruh": "notr",
-       "metin": "En iyi baristan daha yüksek maaş için başka kafeye gitmeyi düşünüyor.",
-       "secenekler": [
-        {
-         "metin": "Onunla konuşur, katkısını hesaplar, imkânım ölçüsünde maaş veya rol artışı öneririm",
-         "dogru": true,
-         "aciklama": "İyi personeli kaybetmek, yenisini yetiştirmekten çoğu zaman daha pahalıdır."
-        },
-        {
-         "metin": "\"Giden gider\" derim",
-         "dogru": false,
-         "aciklama": "Kalite ve müdavimler onunla birlikte gidebilir."
-        },
-        {
-         "metin": "Diğer çalışanların maaşını kesip ona veririm",
-         "dogru": false,
-         "aciklama": "Ekipte adaletsizlik hissi yaratır."
-        }
-       ]
-      },
-      {
-       "kim": "usta",
-       "ruh": "mutlu",
-       "metin": "Kasım ayı sakin geçiyor, ciro düştü.",
-       "secenekler": [
-        {
-         "metin": "Müdavimler için sadakat kartı ve sakin saatlere özel kampanya yaparım",
-         "dogru": true,
-         "aciklama": "Sakin dönemlerde mevcut müşteriyi sık getirmek en ucuz büyüme yoludur."
-        },
-        {
-         "metin": "Her şeye %50 indirim yaparım",
-         "dogru": false,
-         "aciklama": "Maliyetin altına inen indirim zararı büyütür."
-        },
-        {
-         "metin": "Personelin yarısını çıkarırım",
-         "dogru": false,
-         "aciklama": "Hizmet düşer, yoğunluk dönünce hazırlıksız yakalanırsın."
+         "aciklama": "Ekip içi konu müşteriye anlatılmaz."
         }
        ]
       }
      ],
      "bilgiKarti": {
-      "baslik": "İyi bir işletmeci",
+      "baslik": "Baş barista",
       "maddeler": [
-       "Kararı rakamlara bakarak ver.",
-       "Yorumlara kibarca ve dürüstçe yanıt ver.",
-       "İyi personeli korumak ucuzdur.",
-       "Sadık müşteri en değerli varlıktır."
+       "Arızada dürüst ol, alternatif sun.",
+       "Standardı öğret.",
+       "Tutarsızlığın nedenini kayıtlardan bul."
       ]
      }
     },
     {
-     "id": "i5-sinav",
+     "id": "b5-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
-     "baslik": "Final sınavı",
+     "baslik": "Baş barista sınavı",
      "xp": 150,
      "gecmeYuzde": 70,
      "sorular": [
       {
-       "soru": "Americano'nun malzemesi 27 TL. %25 malzeme oranı için fiyatı yaklaşık kaç TL olur?",
+       "soru": "Tarif kartında neler yazar?",
        "secenekler": [
-        "54 TL",
-        "81 TL",
-        "108 TL",
-        "270 TL"
-       ],
-       "dogru": 2,
-       "aciklama": "27 ÷ 0,25 = 108 TL."
-      },
-      {
-       "soru": "Malzeme oranı neden çok yüksek olmamalı?",
-       "secenekler": [
-        "Vergi artar",
-        "Kira, personel ve diğer giderlere para kalmaz",
-        "Müşteri fark eder",
-        "Önemi yok"
-       ],
-       "dogru": 1,
-       "aciklama": "Fiyatın büyük kısmı diğer giderleri ve kârı karşılamalı."
-      },
-      {
-       "soru": "Kötü bir internet yorumuna en doğru yaklaşım?",
-       "secenekler": [
-        "Sert cevap",
-        "Görmezden gelmek",
-        "Kibarca yanıt verip sorunu düzeltmek",
-        "Sahte iyi yorumlar yazdırmak"
-       ],
-       "dogru": 2,
-       "aciklama": "Dürüst ve kibar yanıt güven verir."
-      },
-      {
-       "soru": "Tedarikçi zam yaptığında ilk adım?",
-       "secenekler": [
-        "Kaliteyi düşürmek",
-        "Maliyeti yeniden hesaplayıp seçenekleri karşılaştırmak",
-        "Kafeyi kapatmak",
+        "Sadece fiyat",
+        "Gram, akan miktar, süre, süt ve bardak",
+        "Müşteri adı",
         "Hiçbir şey"
        ],
        "dogru": 1,
-       "aciklama": "Önce rakamlar, sonra karar."
+       "aciklama": "Tutarlılık için."
       },
       {
-       "soru": "Sakin dönemde ciroyu artırmanın akıllıca yolu?",
+       "soru": "Geri yıkama hangi makinelerde yapılır?",
        "secenekler": [
-        "Maliyetin altında indirim",
-        "Sadakat kartı ve hedefli kampanya",
-        "Personeli çıkarmak",
-        "Fiyatları ikiye katlamak"
+        "Hepsinde",
+        "Üç yollu valfli makinelerde",
+        "Hiçbirinde",
+        "Sadece evde"
        ],
        "dogru": 1,
-       "aciklama": "Mevcut müşteriyi sık getirmek ucuz ve etkilidir."
+       "aciklama": "Makine kılavuzuna uyulur."
       },
       {
-       "soru": "Gıdayla çalışan personel için hangisi gerekir?",
+       "soru": "Deterjanla geri yıkamadan sonra?",
        "secenekler": [
-        "Hijyen eğitimi",
-        "Ehliyet",
-        "Yabancı dil",
-        "Hiçbiri"
+        "Suyla durulama",
+        "Hemen servis",
+        "Kapatma",
+        "Yağlama"
        ],
        "dogru": 0,
-       "aciklama": "Gıdayla çalışanlar hijyen eğitimi almalıdır."
+       "aciklama": "Kalıntı kalmaz."
       },
       {
-       "soru": "Espresso 25–30 saniyede akmıyor. Patron olarak ne yaparsın?",
+       "soru": "Çekirdek tazeliği neyle anlaşılır?",
        "secenekler": [
-        "Baristadan ayarı kontrol etmesini ister, gerekirse birlikte ayarlarım",
-        "Fark etmez, satış önemli",
-        "Makineyi atarım",
-        "Kahveyi değiştiririm"
+        "Kavrum tarihi",
+        "Paketin rengi",
+        "Fiyat",
+        "Marka"
        ],
        "dogru": 0,
-       "aciklama": "Patron da kaliteyi bilmeli; ustalığın unutulmaz."
+       "aciklama": "Kavrum tarihi."
       },
       {
-       "soru": "Kafenin en değerli varlığı genelde hangisidir?",
+       "soru": "Espresso hızlı ve ekşi akıyor. Ne yapılır?",
        "secenekler": [
-        "Tabelası",
-        "Sadık müşterileri ve iyi ekibi",
-        "Duvar rengi",
-        "Wi-Fi şifresi"
+        "Öğütme incelir",
+        "Öğütme kalınlaşır",
+        "Daha az kahve",
+        "Su eklenir"
+       ],
+       "dogru": 0,
+       "aciklama": "İnce öğütme akışı yavaşlatır."
+      },
+      {
+       "soru": "Buhar çubuğu ne zaman silinir?",
+       "secenekler": [
+        "Gün sonunda",
+        "Her kullanımdan hemen sonra",
+        "Haftada bir",
+        "Kirlenince"
        ],
        "dogru": 1,
-       "aciklama": "İyi ekip iyi kahve yapar; iyi kahve müşteriyi geri getirir."
+       "aciklama": "Süt saniyeler içinde kurur."
+      },
+      {
+       "soru": "Makine arızasında doğru davranış?",
+       "secenekler": [
+        "Kendin sök",
+        "Müşteriyi bilgilendir, alternatif sun, servisi ara",
+        "Sakla",
+        "Barı kapat, kimseye söyleme"
+       ],
+       "dogru": 1,
+       "aciklama": "Güvenlik ve dürüstlük."
+      },
+      {
+       "soru": "Yeni barista nasıl yetiştirilir?",
+       "secenekler": [
+        "Bağırarak",
+        "Gösterip birlikte yaparak",
+        "Kitap vererek",
+        "Kendi başına bırakarak"
+       ],
+       "dogru": 1,
+       "aciklama": "Göster, birlikte yap, sonra izle."
       }
      ]
     }

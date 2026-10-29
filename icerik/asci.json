@@ -15,7 +15,7 @@
    "Çırak",
    "Kalfa",
    "Usta",
-   "İşletme sahibi"
+   "Şef"
   ],
   "renkler": {
    "ana": "#7a2e1d",
@@ -285,7 +285,7 @@
       {
        "min": 0,
        "baslik": "Düşük uyum",
-       "metin": "Lokanta mutfağı seni zorlayabilir ama denemeden bilemezsin. Pastacılık ya da işletme tarafı ilgini çekebilir."
+       "metin": "Lokanta mutfağı seni zorlayabilir ama denemeden bilemezsin. Pastacılık tarafı ilgini çekebilir."
       }
      ]
     }
@@ -1211,7 +1211,7 @@
     "ad": "Usta Aşçı",
     "ikon": "🏆"
    },
-   "sonraki": "İşletme sahibi kademesi açıldı: maliyet, fiyat, denetim ve müşteri.",
+   "sonraki": "Şef kademesi açıldı: standart reçete, mal kabul, gıda güvenliği sistemi ve mutfak yönetimi.",
    "gorevler": [
     {
      "id": "u1-soslar",
@@ -1672,72 +1672,72 @@
    ]
   },
   {
-   "ad": "İşletme sahibi",
-   "hedefXp": 315,
+   "ad": "Şef",
+   "hedefXp": 375,
    "rozet": {
-    "ad": "Lokanta Sahibi",
-    "ikon": "🏪"
+    "ad": "Şef",
+    "ikon": "👨‍🍳"
    },
    "sonraki": "Aşçılık mesleğinin tüm kademelerini bitirdin!",
    "gorevler": [
     {
-     "id": "i1-acilis",
+     "id": "s1-sef",
      "sablon": "bilgi",
-     "ikon": "🏪",
-     "baslik": "Lokanta açmanın temelleri",
+     "ikon": "👨‍🍳",
+     "baslik": "Şefin işi",
      "xp": 20,
      "kartlar": [
       {
-       "ikon": "📄",
-       "baslik": "İzinler",
-       "metin": "Belediyeden işyeri açma ve çalışma ruhsatı, Tarım ve Orman İl Müdürlüğünden gıda işletmesi kaydı alınır.",
-       "terim": "ruhsat ve kayıt"
-      },
-      {
-       "ikon": "🧼",
-       "baslik": "Hijyen belgeleri",
-       "metin": "Gıdayla çalışan herkesin hijyen eğitimi belgesi olmalıdır; denetimde istenir.",
-       "terim": "hijyen eğitimi"
-      },
-      {
-       "ikon": "⚠️",
-       "baslik": "Alerjen bildirimi",
-       "metin": "Menüde ya da görünür bir yerde 14 alerjen bildirilir.",
-       "terim": "alerjen bildirimi"
-      },
-      {
        "ikon": "📋",
+       "baslik": "Menü planlama",
+       "metin": "Mevsime, ekibin becerisine ve mutfağın kapasitesine uygun menü hazırlanır.",
+       "terim": "menü"
+      },
+      {
+       "ikon": "📏",
        "baslik": "Standart reçete",
-       "metin": "Her yemeğin malzemesi grama kadar yazılır. Böylece tat ve maliyet sabit kalır.",
+       "metin": "Her yemeğin malzemesi, gramajı, yapılışı ve sunumu yazılır; kim pişirirse pişirsin aynı tabak çıkar.",
        "terim": "standart reçete"
       },
       {
-       "ikon": "📦",
-       "baslik": "Stok kontrolü",
-       "metin": "İlk giren ilk çıkar kuralıyla stok döndürülür, israf ve bozulma azaltılır.",
-       "terim": "FIFO"
+       "ikon": "🚚",
+       "baslik": "Mal kabul ve stok",
+       "metin": "Gelen ürünlerin sıcaklığı, tarihi ve kalitesi kontrol edilir; stok ilk giren ilk çıkar kuralıyla döner.",
+       "terim": "mal kabul"
       },
       {
-       "ikon": "💰",
-       "baslik": "Maliyet",
-       "metin": "Bir tabağın malzeme maliyeti genellikle satış fiyatının yaklaşık %25–35'i civarında tutulur. Kalanı kira, personel, enerji, vergi ve kâra gider.",
+       "ikon": "🛡️",
+       "baslik": "Gıda güvenliği sistemi",
+       "metin": "Riskli noktalar (pişirme, soğutma, saklama sıcaklıkları) belirlenir, düzenli ölçülür ve kayda geçirilir.",
+       "terim": "HACCP"
+      },
+      {
+       "ikon": "🧮",
+       "baslik": "Maliyet kontrolü",
+       "metin": "Tabak maliyeti hesaplanır, israf izlenir, porsiyonlar standart tutulur.",
        "terim": "gıda maliyeti"
+      },
+      {
+       "ikon": "👥",
+       "baslik": "Ekip",
+       "metin": "Mutfak brigadı yönetilir, görevler dağıtılır, herkes yetiştirilir ve denetlenir.",
+       "terim": "liderlik"
       }
      ]
     },
     {
-     "id": "i2-maliyet",
+     "id": "s2-maliyet",
      "sablon": "hesap",
      "ikon": "🧮",
-     "baslik": "Tabak maliyeti",
+     "baslik": "Standart reçete maliyeti",
      "temelXp": 40,
      "yildizBasinaXp": 15,
-     "aciklama": "Her tabağın malzeme maliyetini bul, sonra fiyatını belirle. Rakamlar örnektir; gerçek fiyatlar değişir.",
+     "aciklama": "Menüye yeni tabaklar öneriyorsun. Standart reçeteye göre maliyeti çıkar, sonra önereceğin fiyatı belirle. Rakamlar örnektir.",
      "hedefOran": [
       25,
       35
      ],
-     "kural": "Lokantalarda sık kullanılan bir kural: bir tabağın malzeme maliyeti satış fiyatının yaklaşık %25–35'i olmalı. Kalan para kira, personel, enerji, vergi ve kâra gider.",
+     "kural": "Mutfaklarda sık kullanılan bir ölçü: bir tabağın malzeme maliyeti satış fiyatının yaklaşık %25–35'i civarında tutulur. Şef bu oranı izleyerek israfı ve porsiyonu kontrol eder.",
      "urunler": [
       {
        "ad": "Mercimek çorbası",
@@ -1811,185 +1811,222 @@
       }
      ],
      "bilgiKarti": {
-      "baslik": "Fiyat nasıl belirlenir?",
+      "baslik": "Şefin maliyet kuralı",
       "maddeler": [
-       "Önce standart reçeteyle maliyeti hesapla.",
-       "Malzeme, fiyatın yaklaşık %25–35'i olsun.",
-       "Kira, personel ve enerjiyi unutma.",
-       "Fiyatlar değiştikçe maliyeti yeniden hesapla."
+       "Maliyet standart reçeteden hesaplanır.",
+       "Gramajdan sapma maliyeti bozar.",
+       "İsraf ve iade takip edilir.",
+       "Fiyatlar değişince yeniden hesaplanır."
       ]
      }
     },
     {
-     "id": "i3-isbilgi",
-     "sablon": "soru",
-     "ikon": "❓",
-     "baslik": "İşletme bilgisi",
-     "temelXp": 20,
-     "yildizBasinaXp": 10,
-     "sorular": [
-      {
-       "soru": "Lokanta açmak için gıda işletmesi kaydı nereden alınır?",
-       "secenekler": [
-        "Noterden",
-        "Tarım ve Orman İl Müdürlüğünden",
-        "Bankadan",
-        "Muhtarlıktan"
-       ],
-       "dogru": 1,
-       "aciklama": "Gıda işletmeleri Tarım ve Orman Bakanlığı il müdürlüklerine kayıt olur."
-      },
-      {
-       "soru": "Gıda maliyeti oranı neyi gösterir?",
-       "secenekler": [
-        "Personel sayısını",
-        "Malzeme maliyetinin satış fiyatına oranını",
-        "Kira tutarını",
-        "Masa sayısını"
-       ],
-       "dogru": 1,
-       "aciklama": "Örneğin 30 TL malzemeli tabak 100 TL'ye satılırsa oran %30'dur."
-      },
-      {
-       "soru": "Standart reçetenin işletmeye en büyük faydası nedir?",
-       "secenekler": [
-        "Daha uzun menü",
-        "Sabit kalite ve maliyet",
-        "Daha az personel",
-        "Reklam"
-       ],
-       "dogru": 1,
-       "aciklama": "Her tabak aynı tat ve aynı maliyetle çıkar."
-      },
-      {
-       "soru": "Menüde alerjen bildirimi yapılmazsa ne olur?",
-       "secenekler": [
-        "Hiçbir şey",
-        "Yasal yükümlülük yerine getirilmemiş olur",
-        "Sadece uyarı",
-        "Müşteri sorarsa söylenir"
-       ],
-       "dogru": 1,
-       "aciklama": "Alerjen bildirimi toplu tüketim yerlerinde zorunludur."
-      },
-      {
-       "soru": "Malzeme fiyatları arttı. İlk ne yapılmalı?",
-       "secenekler": [
-        "Porsiyonu gizlice küçültmek",
-        "Maliyeti yeniden hesaplayıp fiyatı ve reçeteyi gözden geçirmek",
-        "Hiçbir şey",
-        "Kaliteyi düşürmek"
-       ],
-       "dogru": 1,
-       "aciklama": "Kararlar hesapla verilir; müşteriyi yanıltmak güveni bitirir."
-      }
-     ],
-     "bilgiKarti": {
-      "baslik": "Patron notu",
-      "maddeler": [
-       "Ruhsat, kayıt, hijyen belgeleri tam olmalı.",
-       "Maliyeti bil, fiyatı ona göre koy.",
-       "Alerjen bildirimi zorunlu.",
-       "Müşteriyle dürüst ol."
-      ]
-     }
-    },
-    {
-     "id": "i4-patron",
-     "sablon": "senaryo",
-     "ikon": "👔",
-     "baslik": "Patronluk",
-     "temelXp": 30,
-     "yildizBasinaXp": 10,
-     "giris": "Artık lokanta senin. Bugün zor bir gün.",
+     "id": "s3-malkabul",
+     "sablon": "siralama",
+     "ikon": "🚚",
+     "baslik": "Mal kabul",
+     "aciklama": "Tedarikçi tavuk, süt ve dondurulmuş ürün getirdi. Doğru sırayla teslim al.",
      "adimlar": [
       {
-       "kim": "musteri",
+       "id": "hemen",
+       "ikon": "⏱️",
+       "metin": "Teslimatı bekletmeden karşıla",
+       "neden": "Soğuk ürün kapıda beklerken ısınır.",
+       "ipucu": "Kapıya ürün geldi; ilk iş?"
+      },
+      {
+       "id": "arac",
+       "ikon": "🚛",
+       "metin": "Aracın ve ambalajların temizliğini, hasarını kontrol et",
+       "neden": "Hasarlı ambalaj bulaşma riskidir.",
+       "ipucu": "Ürünler önünde; önce dış görünüş."
+      },
+      {
+       "id": "isi",
+       "ikon": "🌡️",
+       "metin": "Soğuk ürünün sıcaklığını ölç: soğutulmuş 0–4 °C, donuk −18 °C ve altı",
+       "neden": "Soğuk zincir kırılmışsa ürün kabul edilmez.",
+       "ipucu": "Ambalaj sağlam; soğuk ürün için en önemli ölçüm?"
+      },
+      {
+       "id": "etiket",
+       "ikon": "🏷️",
+       "metin": "Son kullanma tarihini ve etiket bilgilerini kontrol et",
+       "neden": "Tarihi geçmiş ya da etiketsiz ürün kullanılamaz.",
+       "ipucu": "Sıcaklık uygun; başka neye bakılır?"
+      },
+      {
+       "id": "iade",
+       "ikon": "↩️",
+       "metin": "Uygun olmayanı iade et, durumu kayda geçir",
+       "neden": "Kayıt, tedarikçiyle sorunun kanıtıdır.",
+       "ipucu": "Bir ürün uygun değil."
+      },
+      {
+       "id": "yerlestir",
+       "ikon": "❄️",
+       "metin": "Uygun ürünleri hemen soğuk depoya, eskiler öne gelecek şekilde yerleştir",
+       "neden": "İlk giren ilk çıkar.",
+       "ipucu": "Kontroller bitti; ürünler nereye?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Mal kabul",
+      "maddeler": [
+       "Bekletme.",
+       "Soğutulmuş 0–4 °C, donuk −18 °C ve altı.",
+       "Tarih ve etiket kontrolü.",
+       "Uygunsuzu iade et ve kaydet.",
+       "FIFO ile yerleştir."
+      ]
+     }
+    },
+    {
+     "id": "s4-mutfak",
+     "sablon": "senaryo",
+     "ikon": "🔥",
+     "baslik": "Mutfak senin",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Bugün mutfağın şefi sensin.",
+     "adimlar": [
+      {
+       "kim": "usta",
        "ruh": "notr",
-       "metin": "Gıda denetçisi geldi, personelin hijyen belgelerini istiyor. Yeni başlayan komininki yok.",
+       "metin": "Gıda denetçisi geldi, soğutucuların sıcaklık kayıtlarını istiyor.",
        "secenekler": [
         {
-         "metin": "Durumu dürüstçe anlatır, komiyi hemen hijyen eğitimine kaydederim",
+         "metin": "Günlük kayıt formlarını gösteririm",
          "dogru": true,
-         "aciklama": "Eksik hemen tamamlanır; gizlemek cezayı ağırlaştırır."
+         "aciklama": "Gıda güvenliği sistemi kayıtla kanıtlanır."
         },
         {
-         "metin": "Komiyi arka kapıdan çıkarırım",
+         "metin": "\"Hep doğru çalışıyor\" derim",
          "dogru": false,
-         "aciklama": "Denetçiyi yanıltmak ciddi yaptırıma yol açar."
+         "aciklama": "Kayıt yoksa kontrol de yok sayılır."
         },
         {
-         "metin": "\"Belgesi evde\" derim",
+         "metin": "Hemen bir kayıt uydururum",
          "dogru": false,
-         "aciklama": "Yalan söylemek sorunu büyütür."
+         "aciklama": "Sahte kayıt hem etik dışı hem ciddi bir suçtur."
         }
        ]
       },
       {
        "kim": "musteri",
        "ruh": "kizgin",
-       "metin": "Müşteri: \"Yemeğimden saç çıktı!\"",
+       "metin": "Bir aşçı porsiyonları reçeteden büyük koyuyor, \"misafir mutlu olsun\" diyor.",
        "secenekler": [
         {
-         "metin": "Özür diler, tabağı hemen yeniler, mutfakta bone kuralını kontrol ederim",
+         "metin": "Standart reçeteyi gösterir, gramajı birlikte tartarız",
          "dogru": true,
-         "aciklama": "Hem müşteriyi kazanırsın hem de sorunun kaynağını çözersin."
+         "aciklama": "Standart hem kaliteyi hem maliyeti korur."
         },
         {
-         "metin": "\"Bizim mutfaktan çıkmaz\" derim",
+         "metin": "Görmezden gelirim",
          "dogru": false,
-         "aciklama": "Müşteriyi suçlamak onu kaybettirir."
+         "aciklama": "Maliyet kayar, tabaklar tutarsızlaşır."
         },
         {
-         "metin": "Hesaptan biraz düşüp konuyu kapatırım",
+         "metin": "Herkesin önünde azarlarım",
          "dogru": false,
-         "aciklama": "Müşteri memnun kalabilir ama mutfaktaki sorun sürer."
+         "aciklama": "Öğretmek azarlamaktan etkilidir."
         }
        ]
       },
       {
        "kim": "usta",
        "ruh": "notr",
-       "metin": "Tedarikçi etin kilosunu %20 artırdı. Ne yaparsın?",
+       "metin": "Dünden kalan pişmiş pilav etiketsiz duruyor, ne zaman yapıldığı belli değil.",
        "secenekler": [
         {
-         "metin": "Et yemeklerinin maliyetini yeniden hesaplar, gerekirse fiyatı ya da tedarikçiyi değiştiririm",
+         "metin": "Kullanmam, imha edip kaydederim; etiketleme kuralını ekiple tekrar konuşurum",
          "dogru": true,
-         "aciklama": "Hesaba dayalı karar işletmeyi ayakta tutar."
+         "aciklama": "Ne zaman yapıldığı bilinmeyen yemek risklidir."
         },
         {
-         "metin": "Porsiyonu sessizce küçültürüm",
+         "metin": "Isıtıp servise veririm",
          "dogru": false,
-         "aciklama": "Müşteri fark eder; güven kaybedilir."
+         "aciklama": "Bilinmeyen süre bilinmeyen risk demektir."
         },
         {
-         "metin": "Daha ucuz, kaynağı belli olmayan et alırım",
+         "metin": "Personel yemeğinde kullanırım",
          "dogru": false,
-         "aciklama": "Kaynağı belli olmayan et hem yasal hem sağlık riskidir."
+         "aciklama": "Personel de insan; aynı risk geçerli."
         }
        ]
       }
      ],
      "bilgiKarti": {
-      "baslik": "İyi patron",
+      "baslik": "Şefin kuralları",
       "maddeler": [
-       "Belgeler tam, denetime hazır.",
-       "Şikâyette özür, çözüm ve kök neden.",
-       "Fiyat kararları hesapla verilir.",
-       "Kaliteden ve dürüstlükten taviz yok."
+       "Kayıt tut, uydurma.",
+       "Standart reçeteye uy.",
+       "Etiketsiz yemek kullanılmaz.",
+       "Ekibe öğret."
       ]
      }
     },
     {
-     "id": "i5-sinav",
+     "id": "s5-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
-     "baslik": "Final sınavı",
-     "xp": 100,
+     "baslik": "Şef sınavı",
+     "xp": 150,
      "gecmeYuzde": 70,
      "sorular": [
       {
-       "soru": "Bir tabağın malzemesi 40 TL. Hedef oran %30 ise fiyat yaklaşık ne olmalı?",
+       "soru": "Standart reçetede neler yazar?",
+       "secenekler": [
+        "Sadece adı",
+        "Malzeme, gramaj, yapılış ve sunum",
+        "Fiyat",
+        "Müşteri yorumu"
+       ],
+       "dogru": 1,
+       "aciklama": "Tutarlılığın temeli."
+      },
+      {
+       "soru": "Soğutulmuş ürün teslim alınırken sıcaklığı kaç olmalı?",
+       "secenekler": [
+        "0–4 °C",
+        "10–15 °C",
+        "Oda sıcaklığı",
+        "−18 °C"
+       ],
+       "dogru": 0,
+       "aciklama": "Soğuk zincir."
+      },
+      {
+       "soru": "Donuk ürün kaç derecede olmalı?",
+       "secenekler": [
+        "0 °C",
+        "−5 °C",
+        "−18 °C ve altı",
+        "4 °C"
+       ],
+       "dogru": 2,
+       "aciklama": "Dondurucu sıcaklığı."
+      },
+      {
+       "soru": "Uygun olmayan ürün geldi. Ne yapılır?",
+       "secenekler": [
+        "Kullanılır",
+        "İade edilir ve kayda geçirilir",
+        "Saklanır",
+        "Personele verilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Kayıt önemlidir."
+      },
+      {
+       "soru": "Bir tabağın malzemesi 40 TL. %30 oranla önerilecek fiyat yaklaşık?",
        "secenekler": [
         "60 TL",
         "90 TL",
@@ -1997,73 +2034,7 @@
         "400 TL"
        ],
        "dogru": 2,
-       "aciklama": "40 ÷ 0,30 ≈ 133 TL; yuvarlanarak yaklaşık 135 TL."
-      },
-      {
-       "soru": "Gıdayla çalışan personelde hangi belge zorunludur?",
-       "secenekler": [
-        "Ehliyet",
-        "Hijyen eğitimi belgesi",
-        "Diploma",
-        "Pasaport"
-       ],
-       "dogru": 1,
-       "aciklama": "Hijyen Eğitimi Yönetmeliği gereği."
-      },
-      {
-       "soru": "FIFO kuralının amacı nedir?",
-       "secenekler": [
-        "Yeni ürünü önce kullanmak",
-        "Eski stoğu önce kullanıp bozulmayı azaltmak",
-        "Stoğu çoğaltmak",
-        "Fiyatı düşürmek"
-       ],
-       "dogru": 1,
-       "aciklama": "İlk giren ilk çıkar."
-      },
-      {
-       "soru": "Müşteri şikâyetinde ilk adım?",
-       "secenekler": [
-        "Tartışmak",
-        "Dinleyip özür dilemek ve çözüm sunmak",
-        "Görmezden gelmek",
-        "Faturayı iptal etmek"
-       ],
-       "dogru": 1,
-       "aciklama": "Dinle, özür dile, çöz."
-      },
-      {
-       "soru": "Menüde bildirilmesi gereken alerjen sayısı?",
-       "secenekler": [
-        "7",
-        "10",
-        "14",
-        "21"
-       ],
-       "dogru": 2,
-       "aciklama": "Türk Gıda Kodeksi'ne göre 14."
-      },
-      {
-       "soru": "Standart reçete neyi sağlar?",
-       "secenekler": [
-        "Sabit tat, porsiyon ve maliyet",
-        "Daha çok müşteri",
-        "Ruhsat",
-        "Reklam"
-       ],
-       "dogru": 0,
-       "aciklama": "İşletmenin temel kontrol aracıdır."
-      },
-      {
-       "soru": "Malzeme fiyatı arttığında doğru davranış?",
-       "secenekler": [
-        "Porsiyonu gizlice küçültmek",
-        "Maliyeti yeniden hesaplamak",
-        "Kaynağı belirsiz ürün almak",
-        "Hiçbir şey yapmamak"
-       ],
-       "dogru": 1,
-       "aciklama": "Karar hesapla verilir."
+       "aciklama": "40 ÷ 0,30 ≈ 133 TL."
       },
       {
        "soru": "Tavuğun güvenli iç sıcaklığı?",
@@ -2074,7 +2045,29 @@
         "40 °C"
        ],
        "dogru": 0,
-       "aciklama": "Patron da olsan mutfak kuralları değişmez."
+       "aciklama": "Şef olsan da kural değişmez."
+      },
+      {
+       "soru": "Etiketsiz, tarihi belli olmayan yemek?",
+       "secenekler": [
+        "Kullanılır",
+        "İmha edilir",
+        "Isıtılır",
+        "Dondurulur"
+       ],
+       "dogru": 1,
+       "aciklama": "Bilinmeyen risk."
+      },
+      {
+       "soru": "Menüde kaç alerjen bildirilir?",
+       "secenekler": [
+        "7",
+        "10",
+        "14",
+        "21"
+       ],
+       "dogru": 2,
+       "aciklama": "Türk Gıda Kodeksi'ne göre 14."
       }
      ]
     }

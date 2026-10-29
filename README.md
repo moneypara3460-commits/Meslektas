@@ -4,7 +4,7 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 
 ## Nasıl çalışır?
 - **Bir meslek = bir içerik paketi** (`icerik/*.json`). Motor paketi okur; kod değişmeden yeni meslek eklenir.
-- Her meslek 5 kademe: Merak → Çırak → Kalfa → Usta → İşletme sahibi. Her kademe sınavla biter, rozet kazanılır.
+- Her meslek kendi içinde baştan sona öğretilir (ör. Merak → Çırak → Kalfa → Usta → Baş barista). İşletme sahipliği ayrı bir meslektir, mesleklerin içine konmaz. Her kademe sınavla biter, rozet kazanılır.
 - Görevler **şablonlarla** oynanır (`sablonlar/`):
   - Genel (her meslek kullanır): bilgi, soru, sınav, senaryo, uyum, sıralama, hesap, **sınıflandırma**, **zamanlama**
   - Mesleğe özel beceri: ayar ve köpürtme (Barista)
