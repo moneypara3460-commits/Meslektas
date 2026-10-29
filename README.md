@@ -30,5 +30,6 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 |---|---|
 | Barista | 26 görev · uzman onayı bekliyor |
 | Aşçı | 26 görev · uzman onayı bekliyor |
+| Salon Servisi (komi → salon şefi) | 26 görev · uzman onayı bekliyor |
 
 Tamamlama belgeleri resmî sertifika değildir.

@@ -1,0 +1,2064 @@
+{
+ "paketSurumu": 5,
+ "meslek": {
+  "id": "servis",
+  "ad": "Salon Servisi",
+  "kategori": "Yiyecek & İçecek",
+  "tanim": "Restoranda misafiri karşılayan, sipariş alan, servis yapan ve salonu yöneten meslek: komiden salon şefine.",
+  "calismaKosullari": [
+   "Ayakta ve hareketli çalışma",
+   "Vardiyalı, akşam ve hafta sonu",
+   "Misafirle yoğun iletişim"
+  ],
+  "kademeler": [
+   "Merak",
+   "Komi",
+   "Garson",
+   "Şef garson",
+   "Salon şefi"
+  ],
+  "renkler": {
+   "ana": "#1e3d33",
+   "vurgu": "#c9a227",
+   "zemin": "#f2f1ea"
+  },
+  "metinler": {
+   "senaryoBasla": "Salona geç",
+   "senaryoBitir": "Servisi bitir",
+   "ucYildiz": "Salon şefi göz kırptı: \"Salon sana emanet!\"",
+   "karakter": {
+    "usta": "Şef garson",
+    "musteri": "Misafir"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Salon Servisi Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Resmî belge için MYK Servis Görevlisi mesleki yeterlilik sınavları vardır."
+  }
+ },
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Servis Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Komi kademesinde salonu, masa kuruluşunu ve servis kurallarını öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir garsonun günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🧹",
+       "baslik": "Açılış hazırlığı",
+       "metin": "Servisten önce salon temizlenir, masalar kurulur, servis istasyonu doldurulur: takımlar, peçeteler, tuzluklar, menüler.",
+       "terim": "mizanplas"
+      },
+      {
+       "ikon": "📋",
+       "baslik": "Brifing",
+       "metin": "Servis öncesi salon şefi ekibi toplar: günün menüsü, biten ürünler, rezervasyonlar, özel misafirler.",
+       "terim": "servis öncesi toplantı"
+      },
+      {
+       "ikon": "🙋",
+       "baslik": "Karşılama",
+       "metin": "Misafir kapıda güler yüzle karşılanır, masasına götürülür, menüsü verilir.",
+       "terim": "ilk izlenim"
+      },
+      {
+       "ikon": "🍽️",
+       "baslik": "Servis",
+       "metin": "Sipariş alınır, mutfağa iletilir, yemekler doğru masaya, doğru kişiye ve sıcakken götürülür.",
+       "terim": "servis akışı"
+      },
+      {
+       "ikon": "💳",
+       "baslik": "Hesap ve uğurlama",
+       "metin": "Hesap doğru hazırlanır, ödeme alınır, misafir teşekkürle uğurlanır.",
+       "terim": "uğurlama"
+      },
+      {
+       "ikon": "📈",
+       "baslik": "Kariyer yolu",
+       "metin": "Komi olarak başlanır; garson, şef garson ve salon şefi olunur. Deneyimle restoran müdürlüğüne yükselinebilir.",
+       "terim": "komiden salon şefine"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "İlk masan",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bugün bir restoranda deneme günündesin. Şef garson seni salona aldı.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Kapıdan iki kişilik bir aile giriyor. Ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Gülümseyip selam veririm, rezervasyon olup olmadığını sorup masaya götürürüm",
+         "dogru": true,
+         "aciklama": "İlk 30 saniye misafirin akşamını belirler. Karşılama hızlı ve sıcak olmalı."
+        },
+        {
+         "metin": "Elim boşalınca ilgilenirim, nasılsa bekliyorlar",
+         "dogru": false,
+         "aciklama": "Fark edilmeyen misafir kendini önemsiz hisseder."
+        },
+        {
+         "metin": "\"Boş yere oturun\" deyip mutfağa dönerim",
+         "dogru": false,
+         "aciklama": "Misafiri masaya götürmek salonun düzenini de korur."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Şef garson: \"Masayı sen kur.\" Çatalı nereye koyarsın?",
+       "secenekler": [
+        {
+         "metin": "Tabağın soluna",
+         "dogru": true,
+         "aciklama": "Çatal solda, bıçak sağda. Bıçağın ağzı tabağa bakar."
+        },
+        {
+         "metin": "Tabağın sağına",
+         "dogru": false,
+         "aciklama": "Sağ taraf bıçak ve kaşığındır."
+        },
+        {
+         "metin": "Tabağın üstüne",
+         "dogru": false,
+         "aciklama": "Tabağın üstüne tatlı takımı konur."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Misafir menüdeki bir yemeği soruyor, sen bilmiyorsun.",
+       "secenekler": [
+        {
+         "metin": "\"Hemen öğrenip size söyleyeyim\" derim ve şefe sorarım",
+         "dogru": true,
+         "aciklama": "Bilmediğini uydurmak yerine öğrenmek güven verir."
+        },
+        {
+         "metin": "Tahmin edip bir şeyler söylerim",
+         "dogru": false,
+         "aciklama": "Yanlış bilgi, özellikle alerjide, tehlikeli olabilir."
+        },
+        {
+         "metin": "\"Bilmiyorum\" deyip giderim",
+         "dogru": false,
+         "aciklama": "Misafiri yarı yolda bırakmak kötü hizmettir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Salonda ilk gün",
+      "maddeler": [
+       "Misafiri hemen fark et ve karşıla.",
+       "Çatal solda, bıçak sağda.",
+       "Bilmediğini sor, uydurma."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Gün boyu ayakta ve hareket hâlinde olmak?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Hiç tanımadığın insanlarla konuşmak?",
+       "secenekler": [
+        [
+         "Keyif alırım",
+         2
+        ],
+        [
+         "Gerekirse",
+         1
+        ],
+        [
+         "Çekinirim",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Aynı anda birkaç masayı akılda tutmak?",
+       "secenekler": [
+        [
+         "Kolay",
+         2
+        ],
+        [
+         "Biraz zorlanırım",
+         1
+        ],
+        [
+         "Kafam karışır",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Sinirli bir misafire sakin kalmak?",
+       "secenekler": [
+        [
+         "Yapabilirim",
+         2
+        ],
+        [
+         "Çoğu zaman",
+         1
+        ],
+        [
+         "Zor",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Akşam, hafta sonu ve bayramlarda çalışmak?",
+       "secenekler": [
+        [
+         "Olabilir",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Hiç istemem",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "İnsanlarla aran iyi, tempoyu seviyorsun. Salon seni bekliyor; Komi kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Komi kademesini oynayıp salonu daha yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Salon servisi seni zorlayabilir ama denemeden bilemezsin. Rezervasyon ya da yönetim tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Komi",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Komi",
+    "ikon": "🍽️"
+   },
+   "sonraki": "Garson kademesi açıldı: sipariş, öneri, alerjen ve akşam servisi.",
+   "gorevler": [
+    {
+     "id": "ko1-salon",
+     "sablon": "bilgi",
+     "ikon": "🧹",
+     "baslik": "Salonun düzeni",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🗄️",
+       "baslik": "Servis istasyonu",
+       "metin": "Salondaki küçük depo. Yedek takımlar, peçeteler, menajlar ve bardaklar burada durur; servis başlamadan doldurulur.",
+       "terim": "servis istasyonu"
+      },
+      {
+       "ikon": "🧂",
+       "baslik": "Menaj",
+       "metin": "Tuzluk, biberlik ve benzeri masa takımları. Dolu, temiz ve her masada aynı olmalı.",
+       "terim": "menaj"
+      },
+      {
+       "ikon": "🍴",
+       "baslik": "Takımlar",
+       "metin": "Çatal, bıçak ve kaşıklar parmak izi kalmasın diye saplarından tutulur, temiz bezle parlatılır.",
+       "terim": "parlatma"
+      },
+      {
+       "ikon": "🫗",
+       "baslik": "Tepsi taşıma",
+       "metin": "Tepsi sol elin parmak uçlarında ve avuç içinde dengelenir. Ağır olanlar ortaya, tepsinin merkezine konur.",
+       "terim": "denge"
+      },
+      {
+       "ikon": "🧼",
+       "baslik": "Hijyen",
+       "metin": "Servis personeli de hijyen eğitimi almak zorundadır. Bardak ağzından, tabak yüzeyinden tutulmaz.",
+       "terim": "hijyen eğitimi"
+      },
+      {
+       "ikon": "👂",
+       "baslik": "Komi",
+       "metin": "Garsonun yardımcısıdır: masaları hazırlar, ekmek ve su servisi yapar, boşalan tabakları toplar, işi izleyerek öğrenir.",
+       "terim": "komi"
+      }
+     ]
+    },
+    {
+     "id": "ko2-masa",
+     "sablon": "siniflandirma",
+     "ikon": "🍽️",
+     "baslik": "Masayı kur",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Klasik bir masa kuruluşu yapıyorsun. Her parçayı servis tabağına göre doğru yere koy.",
+     "kategoriler": [
+      {
+       "id": "sol",
+       "ad": "Tabağın solu",
+       "ikon": "⬅️"
+      },
+      {
+       "id": "sag",
+       "ad": "Tabağın sağı",
+       "ikon": "➡️"
+      },
+      {
+       "id": "ust",
+       "ad": "Tabağın üstü",
+       "ikon": "⬆️"
+      },
+      {
+       "id": "sagust",
+       "ad": "Sağ üst",
+       "ikon": "↗️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Yemek çatalı",
+       "ikon": "🍴",
+       "kategori": "sol",
+       "aciklama": "Çatallar solda durur."
+      },
+      {
+       "ad": "Yemek bıçağı",
+       "ikon": "🔪",
+       "kategori": "sag",
+       "aciklama": "Bıçak sağda, ağzı tabağa dönük."
+      },
+      {
+       "ad": "Çorba kaşığı",
+       "ikon": "🥄",
+       "kategori": "sag",
+       "aciklama": "Kaşık bıçağın sağına konur."
+      },
+      {
+       "ad": "Ekmek tabağı",
+       "ikon": "🍞",
+       "kategori": "sol",
+       "aciklama": "Ekmek tabağı çatalların sol tarafında durur."
+      },
+      {
+       "ad": "Tatlı kaşığı",
+       "ikon": "🍨",
+       "kategori": "ust",
+       "aciklama": "Tatlı takımı tabağın üstüne yatay konur."
+      },
+      {
+       "ad": "Su bardağı",
+       "ikon": "🥛",
+       "kategori": "sagust",
+       "aciklama": "Bardak bıçağın ucunun hizasında, sağ üstte durur."
+      },
+      {
+       "ad": "Balık çatalı",
+       "ikon": "🐟",
+       "kategori": "sol",
+       "aciklama": "Bütün çatallar soldadır; ilk kullanılan en dışta durur."
+      },
+      {
+       "ad": "Balık bıçağı",
+       "ikon": "🗡️",
+       "kategori": "sag",
+       "aciklama": "Bütün bıçaklar sağdadır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Masa kuruluşu",
+      "maddeler": [
+       "Çatallar solda, bıçak ve kaşıklar sağda.",
+       "Bıçağın ağzı tabağa bakar.",
+       "Tatlı takımı tabağın üstünde.",
+       "Bardak sağ üstte, bıçağın ucunda.",
+       "Takımlar dıştan içe kullanılır."
+      ]
+     }
+    },
+    {
+     "id": "ko3-servis",
+     "sablon": "bilgi",
+     "ikon": "🫴",
+     "baslik": "Servis kuralları",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "↔️",
+       "baslik": "Hangi taraftan?",
+       "metin": "Hangi taraftan servis yapılacağı servis türüne göre değişir. Tabakla yapılan serviste tabak genellikle misafirin sağından konur ve sağından alınır.",
+       "terim": "servis yönü"
+      },
+      {
+       "ikon": "🥤",
+       "baslik": "İçecekler",
+       "metin": "İçecekler misafirin sağından, bardağın durduğu taraftan servis edilir.",
+       "terim": "içecek servisi"
+      },
+      {
+       "ikon": "👵",
+       "baslik": "Sıra",
+       "metin": "Genellikle önce konuklara, yaşça büyüklere ve çocuklara servis yapılır; masanın ev sahibi en son alır.",
+       "terim": "servis sırası"
+      },
+      {
+       "ikon": "🔥",
+       "baslik": "Sıcak ve soğuk",
+       "metin": "Sıcak yemek sıcak tabakta, soğuk yemek soğuk tabakta gider. Mutfakta bekleyen tabak bekletilmeden götürülür.",
+       "terim": "tabak sıcaklığı"
+      },
+      {
+       "ikon": "🤫",
+       "baslik": "Sessiz toplama",
+       "metin": "Tabaklar masadaki herkes bitirince toplanır. Takımlar tabağın üstünde paralel duruyorsa misafir bitirmiş demektir.",
+       "terim": "bitirdim işareti"
+      },
+      {
+       "ikon": "🚫",
+       "baslik": "Asla",
+       "metin": "Misafirin önüne uzanılmaz, tabak üst üste yığılarak masada toplanmaz, bardak ağzından tutulmaz.",
+       "terim": "yapılmayanlar"
+      }
+     ]
+    },
+    {
+     "id": "ko4-soru",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "Salon bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Takımlar nereden tutulur?",
+       "secenekler": [
+        "Ağız kısmından",
+        "Saplarından",
+        "Ortasından",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Ağız kısmı misafirin ağzına değer; saplarından tutulur."
+      },
+      {
+       "soru": "İçecek hangi taraftan servis edilir?",
+       "secenekler": [
+        "Soldan",
+        "Sağdan",
+        "Önden",
+        "Arkadan"
+       ],
+       "dogru": 1,
+       "aciklama": "Bardak sağda durduğu için içecek sağdan servis edilir."
+      },
+      {
+       "soru": "Misafir çatal ve bıçağı tabağın üstüne paralel koydu. Bu ne demek?",
+       "secenekler": [
+        "Yemeği beğenmedi",
+        "Bitirdi, tabak alınabilir",
+        "Hesap istiyor",
+        "Ara veriyor"
+       ],
+       "dogru": 1,
+       "aciklama": "Paralel takımlar 'bitirdim' işaretidir."
+      },
+      {
+       "soru": "Tepsiye ağır tabaklar nereye konur?",
+       "secenekler": [
+        "Kenarlara",
+        "Tepsinin ortasına",
+        "Bir tarafa",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Ağırlık merkezde olursa tepsi dengede kalır."
+      },
+      {
+       "soru": "Masada ilk kime servis yapılmaz?",
+       "secenekler": [
+        "Çocuğa",
+        "Yaşça büyük konuğa",
+        "Masanın ev sahibine",
+        "Konuklara"
+       ],
+       "dogru": 2,
+       "aciklama": "Ev sahibi genellikle en son servis alır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hatırla",
+      "maddeler": [
+       "Takımları sapından tut.",
+       "İçecek sağdan.",
+       "Paralel takım: bitirdim.",
+       "Ağır tabak tepsinin ortasına."
+      ]
+     }
+    },
+    {
+     "id": "ko5-devir",
+     "sablon": "siralama",
+     "ikon": "🔄",
+     "baslik": "Masayı yeniden hazırla",
+     "aciklama": "Misafirler kalktı, kapıda bekleyen var. Masayı doğru sırayla yeniden hazırla.",
+     "adimlar": [
+      {
+       "id": "topla",
+       "ikon": "🍽️",
+       "metin": "Kirli tabak, bardak ve takımları tepsiyle topla",
+       "neden": "Önce masa boşaltılır; temizlik ancak sonra yapılabilir.",
+       "ipucu": "Önce masayı boşaltman gerekiyor."
+      },
+      {
+       "id": "sil",
+       "ikon": "🧽",
+       "metin": "Masayı ve sandalyeleri temizle, gerekiyorsa örtüyü değiştir",
+       "neden": "Kırıntı ve leke yeni misafirin ilk göreceği şeydir.",
+       "ipucu": "Masa boş; şimdi temizlik."
+      },
+      {
+       "id": "kur",
+       "ikon": "🍴",
+       "metin": "Temiz takımları ve servis tabağını yerleştir",
+       "neden": "Masa kuruluşu temiz yüzeye yapılır.",
+       "ipucu": "Masa temiz; takımlar gelsin."
+      },
+      {
+       "id": "bardak",
+       "ikon": "🥛",
+       "metin": "Bardakları kontrol edip yerine koy",
+       "neden": "Bardaklar lekesiz olmalı, sağ üstte durur.",
+       "ipucu": "Takımlar yerinde; bardakları unutma."
+      },
+      {
+       "id": "menaj",
+       "ikon": "🧂",
+       "metin": "Menajı ve peçeteleri tamamla, sandalyeleri düzelt",
+       "neden": "Son dokunuş masayı yeni misafire hazır hâle getirir.",
+       "ipucu": "Masada küçük eksikler kaldı."
+      },
+      {
+       "id": "haber",
+       "ikon": "📣",
+       "metin": "Masanın hazır olduğunu şef garsona bildir",
+       "neden": "Kapıdaki misafir bir an önce oturtulur.",
+       "ipucu": "Masa hazır; kime söylemelisin?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Hızlı masa devri",
+      "maddeler": [
+       "Topla, temizle, kur, kontrol et, bildir.",
+       "Kirli tabaklar masada üst üste yığılmaz.",
+       "Hazır masa hemen şef garsona söylenir."
+      ]
+     }
+    },
+    {
+     "id": "ko6-ogle",
+     "sablon": "senaryo",
+     "ikon": "🍽️",
+     "baslik": "Öğle servisinde komi",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Saat 13.00, salon dolu. Garsona yardım ediyorsun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Tepsinde dolu bardaklar var, yolunda bir çocuk koşuyor.",
+       "secenekler": [
+        {
+         "metin": "Durur, çocuğun geçmesini bekler, sonra yürürüm",
+         "dogru": true,
+         "aciklama": "Tepsiyle acele değil, güvenlik önce gelir."
+        },
+        {
+         "metin": "Hızlanıp önünden geçerim",
+         "dogru": false,
+         "aciklama": "Çarpışma hem çocuğu hem tepsiyi tehlikeye atar."
+        },
+        {
+         "metin": "\"Çekil!\" diye seslenirim",
+         "dogru": false,
+         "aciklama": "Misafire, hele çocuğa, böyle seslenilmez."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Bir misafir: \"Su alabilir miyim?\" Ama bu masa senin bölgen değil.",
+       "secenekler": [
+        {
+         "metin": "\"Hemen getiriyorum\" der, suyu getirir, garsona da haber veririm",
+         "dogru": true,
+         "aciklama": "Misafir bölgeleri bilmez; ekip tek bir restorandır."
+        },
+        {
+         "metin": "\"Garsonunuz gelecek\" derim",
+         "dogru": false,
+         "aciklama": "Küçük bir isteği geri çevirmek misafiri bekletir."
+        },
+        {
+         "metin": "Duymamış gibi yaparım",
+         "dogru": false,
+         "aciklama": "Fark edilmemek misafirin en çok kızdığı şeydir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir masada üç kişiden biri hâlâ yiyor, ikisi bitirmiş.",
+       "secenekler": [
+        {
+         "metin": "Herkes bitirene kadar beklerim",
+         "dogru": true,
+         "aciklama": "Tabaklar genellikle herkes bitirince toplanır; yiyen kişi acele ettirilmiş hissetmez."
+        },
+        {
+         "metin": "Bitenlerin tabağını hemen toplarım",
+         "dogru": false,
+         "aciklama": "Son yiyen kişi kendini sıkıştırılmış hisseder."
+        },
+        {
+         "metin": "Hepsini toplarım, masa boşalsın",
+         "dogru": false,
+         "aciklama": "Misafir yemeğini bitirmeden tabak alınmaz."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İyi komi",
+      "maddeler": [
+       "Tepsiyle acele etme.",
+       "Her misafir senin misafirin.",
+       "Tabaklar herkes bitirince toplanır."
+      ]
+     }
+    },
+    {
+     "id": "ko7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Komi sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Yemek bıçağı nereye konur?",
+       "secenekler": [
+        "Tabağın soluna",
+        "Tabağın sağına, ağzı tabağa dönük",
+        "Tabağın üstüne",
+        "Bardağın yanına"
+       ],
+       "dogru": 1,
+       "aciklama": "Bıçak sağda, ağzı tabağa bakar."
+      },
+      {
+       "soru": "Su bardağı nerede durur?",
+       "secenekler": [
+        "Sol üstte",
+        "Sağ üstte, bıçağın ucunda",
+        "Tabağın üstünde",
+        "Masanın ortasında"
+       ],
+       "dogru": 1,
+       "aciklama": "Bardak sağ üstte."
+      },
+      {
+       "soru": "Tatlı kaşığı nereye konur?",
+       "secenekler": [
+        "Tabağın üstüne",
+        "Sola",
+        "Sağa",
+        "Bardağın içine"
+       ],
+       "dogru": 0,
+       "aciklama": "Tatlı takımı tabağın üstüne yatay konur."
+      },
+      {
+       "soru": "Servis istasyonu nedir?",
+       "secenekler": [
+        "Kasa",
+        "Salondaki küçük malzeme deposu",
+        "Mutfak",
+        "Rezervasyon defteri"
+       ],
+       "dogru": 1,
+       "aciklama": "Yedek takım, peçete ve menajlar burada durur."
+      },
+      {
+       "soru": "Paralel takımlar ne anlama gelir?",
+       "secenekler": [
+        "Bitirdim",
+        "Hesap lütfen",
+        "Beğenmedim",
+        "Ara veriyorum"
+       ],
+       "dogru": 0,
+       "aciklama": "Tabak alınabilir."
+      },
+      {
+       "soru": "Bardak nereden tutulur?",
+       "secenekler": [
+        "Ağzından",
+        "Alt kısmından ya da sapından",
+        "İçinden",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Misafirin ağzının değeceği yere dokunulmaz."
+      },
+      {
+       "soru": "Masada en son kime servis yapılır?",
+       "secenekler": [
+        "Çocuğa",
+        "Konuğa",
+        "Masanın ev sahibine",
+        "Yaşlıya"
+       ],
+       "dogru": 2,
+       "aciklama": "Ev sahibi genellikle en sonda."
+      },
+      {
+       "soru": "Gıdayla çalışan servis personelinde hangi belge zorunludur?",
+       "secenekler": [
+        "Ehliyet",
+        "Hijyen eğitimi belgesi",
+        "Diploma",
+        "Pasaport"
+       ],
+       "dogru": 1,
+       "aciklama": "Hijyen Eğitimi Yönetmeliği servis personelini de kapsar."
+      }
+     ]
+    }
+   ],
+   "acikBaslar": true
+  },
+  {
+   "ad": "Garson",
+   "hedefXp": 290,
+   "rozet": {
+    "ad": "Garson",
+    "ikon": "📝"
+   },
+   "sonraki": "Şef garson kademesi açıldı: bölge yönetimi, hesap ve şikâyet.",
+   "gorevler": [
+    {
+     "id": "ga1-siparis",
+     "sablon": "bilgi",
+     "ikon": "📝",
+     "baslik": "Sipariş almak",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "😊",
+       "baslik": "Karşılama",
+       "metin": "Masaya gelince önce selam verilir, menü sunulur, su ikram edilir.",
+       "terim": "karşılama"
+      },
+      {
+       "ikon": "💡",
+       "baslik": "Öneri",
+       "metin": "Günün yemeği ya da şefin önerisi anlatılır. İyi öneri hem misafiri mutlu eder hem satışı artırır.",
+       "terim": "öneri satışı"
+      },
+      {
+       "ikon": "⚠️",
+       "baslik": "Alerji sorusu",
+       "metin": "Siparişte alerjisi ya da yiyemediği bir şey olup olmadığı sorulur ve mutfağa açıkça yazılır.",
+       "terim": "alerjen"
+      },
+      {
+       "ikon": "🔁",
+       "baslik": "Tekrar et",
+       "metin": "Sipariş bitince misafire tekrar okunur. Yanlış yemek hem zaman hem para kaybıdır.",
+       "terim": "sipariş teyidi"
+      },
+      {
+       "ikon": "🧾",
+       "baslik": "Adisyon",
+       "metin": "Sipariş masa numarası ve oturma yeriyle yazılır; böylece hangi tabağın kime gideceği bilinir.",
+       "terim": "adisyon"
+      },
+      {
+       "ikon": "⏱️",
+       "baslik": "Takip",
+       "metin": "Yemek gelince birkaç dakika sonra masaya dönülüp her şeyin yolunda olup olmadığı sorulur.",
+       "terim": "kontrol"
+      }
+     ]
+    },
+    {
+     "id": "ga2-siparis",
+     "sablon": "siralama",
+     "ikon": "📝",
+     "baslik": "Siparişi al",
+     "aciklama": "İki kişilik masa yeni oturdu. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "selam",
+       "ikon": "😊",
+       "metin": "Selam ver, menüleri sun, su ikram et",
+       "neden": "Misafir ilk anda ilgilenildiğini hissetmeli.",
+       "ipucu": "Misafir daha yeni oturdu; önce ne yapılır?"
+      },
+      {
+       "id": "icecek",
+       "ikon": "🥤",
+       "metin": "İçecek siparişini al",
+       "neden": "İçecek önce gelir; misafir menüye bakarken içer.",
+       "ipucu": "Menü elde; misafir ne içecek?"
+      },
+      {
+       "id": "oneri",
+       "ikon": "💡",
+       "metin": "Günün önerisini anlat, soruları cevapla",
+       "neden": "Kararsız misafire yol göstermek siparişi kolaylaştırır.",
+       "ipucu": "İçecekler alındı; misafir kararsız görünüyor."
+      },
+      {
+       "id": "yemek",
+       "ikon": "🍽️",
+       "metin": "Yemek siparişini al, alerji ya da istemediği bir şey var mı diye sor",
+       "neden": "Alerji bilgisi siparişin bir parçasıdır, sonradan sorulmaz.",
+       "ipucu": "Misafir karar verdi; önemli bir soruyu unutma."
+      },
+      {
+       "id": "tekrar",
+       "ikon": "🔁",
+       "metin": "Siparişi misafire tekrar oku",
+       "neden": "Hata en ucuz bu anda düzeltilir.",
+       "ipucu": "Sipariş tamam gibi; emin ol."
+      },
+      {
+       "id": "ilet",
+       "ikon": "🧾",
+       "metin": "Siparişi masa ve oturma yeriyle mutfağa ilet",
+       "neden": "Mutfak doğru bilgiyle doğru tabağı hazırlar.",
+       "ipucu": "Sipariş doğru; şimdi nereye gider?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Sipariş akışı",
+      "maddeler": [
+       "Selam, menü, su.",
+       "Önce içecek.",
+       "Öneri yap.",
+       "Alerji sor.",
+       "Tekrar oku, mutfağa ilet."
+      ]
+     }
+    },
+    {
+     "id": "ga3-menu",
+     "sablon": "soru",
+     "ikon": "⚠️",
+     "baslik": "Menü ve alerjen",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Misafir fıstık alerjisi olduğunu söyledi. İlk ne yaparsın?",
+       "secenekler": [
+        "Menüden tahmin ederim",
+        "Mutfağa sorar, siparişe açıkça yazarım",
+        "Fıstıklı yemekleri önermem, o kadar",
+        "Hiçbir şey"
+       ],
+       "dogru": 1,
+       "aciklama": "Gizli alerjen olabilir; mutfakla teyit edilir ve siparişe yazılır."
+      },
+      {
+       "soru": "Türkiye'de restoranlarda kaç alerjen bildirilmek zorundadır?",
+       "secenekler": [
+        "5",
+        "10",
+        "14",
+        "20"
+       ],
+       "dogru": 2,
+       "aciklama": "Türk Gıda Kodeksi'ndeki 14 alerjen menüde ya da görünür yerde bildirilir."
+      },
+      {
+       "soru": "Sipariş neden misafire tekrar okunur?",
+       "secenekler": [
+        "Zaman geçsin diye",
+        "Hatayı mutfağa gitmeden düzeltmek için",
+        "Kural olduğu için",
+        "Bahşiş için"
+       ],
+       "dogru": 1,
+       "aciklama": "Yanlış yemek iki kat zaman ve maliyet demektir."
+      },
+      {
+       "soru": "2026'dan beri restoranlar misafirden hangisini zorunlu olarak alamaz?",
+       "secenekler": [
+        "Yemek ücretini",
+        "Servis, kuver ya da masa ücretini",
+        "İçecek ücretini",
+        "Tatlı ücretini"
+       ],
+       "dogru": 1,
+       "aciklama": "Fiyat Etiketi Yönetmeliği değişikliğiyle bu ek ücretler yasaklandı; bahşiş ise gönüllüdür."
+      },
+      {
+       "soru": "Misafirin istemediği hâlde getirilen meze ya da aperatif için ne olur?",
+       "secenekler": [
+        "Hesaba yazılır",
+        "Ücreti istenemez",
+        "Yarısı yazılır",
+        "Misafire sorulmadan yazılır"
+       ],
+       "dogru": 1,
+       "aciklama": "İstenmeden getirilen kuver ürünlerin bedeli talep edilemez."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Garson notu",
+      "maddeler": [
+       "Alerji: sor, teyit et, yaz.",
+       "Siparişi tekrar oku.",
+       "Servis, kuver, masa ücreti alınmaz.",
+       "Bahşiş gönüllüdür."
+      ]
+     }
+    },
+    {
+     "id": "ga4-aksam",
+     "sablon": "senaryo",
+     "ikon": "🌙",
+     "baslik": "Akşam servisi",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Cuma akşamı, bölgende beş masa var.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Misafir: \"Ben bunu sipariş etmedim!\" Adisyona bakıyorsun, hata sende.",
+       "secenekler": [
+        {
+         "metin": "Özür diler, doğru yemeği hemen ister, beklerken bir şey ikram edilip edilemeyeceğini şef garsona sorarım",
+         "dogru": true,
+         "aciklama": "Hatayı kabul etmek ve hızlı çözmek misafiri geri kazanır."
+        },
+        {
+         "metin": "\"Siz böyle söylediniz\" derim",
+         "dogru": false,
+         "aciklama": "Hata sendeyken misafiri suçlamak onu kaybettirir."
+        },
+        {
+         "metin": "\"Bunu yiyin, aynı sayılır\" derim",
+         "dogru": false,
+         "aciklama": "Misafirin istediği yemek getirilmelidir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Yanlışlıkla bir misafirin üstüne su döktün.",
+       "secenekler": [
+        {
+         "metin": "Hemen özür diler, temiz peçete getirir, şef garsona haber veririm",
+         "dogru": true,
+         "aciklama": "Hızlı ve sakin müdahale, kazayı küçük bir anıya çevirir."
+        },
+        {
+         "metin": "Görmemiş gibi uzaklaşırım",
+         "dogru": false,
+         "aciklama": "Kaçmak kazadan daha kötü bir izlenim bırakır."
+        },
+        {
+         "metin": "Peçeteyle misafiri kendim silerim",
+         "dogru": false,
+         "aciklama": "Misafire izinsiz dokunulmaz; peçete verilir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Hesapta \"servis ücreti %10\" diye bir satır görüyorsun, misafir soruyor.",
+       "secenekler": [
+        {
+         "metin": "Durumu şef garsona hemen bildiririm; zorunlu servis ücreti alınamaz",
+         "dogru": true,
+         "aciklama": "2026'dan beri servis, kuver ve masa ücreti istenemez. Bahşiş tamamen misafirin isteğidir."
+        },
+        {
+         "metin": "\"Kuralımız böyle\" derim",
+         "dogru": false,
+         "aciklama": "Bu ücret yönetmeliğe aykırıdır."
+        },
+        {
+         "metin": "\"Bahşiş yerine geçer\" derim",
+         "dogru": false,
+         "aciklama": "Bahşiş zorunlu hâle getirilemez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Akşam kuralları",
+      "maddeler": [
+       "Hata sendeyse özür dile ve çöz.",
+       "Kazada sakin kal, yardım et.",
+       "Zorunlu servis ücreti yok, bahşiş gönüllü."
+      ]
+     }
+    },
+    {
+     "id": "ga5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Garson sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Siparişte önce ne alınır?",
+       "secenekler": [
+        "Tatlı",
+        "İçecek",
+        "Ana yemek",
+        "Hesap"
+       ],
+       "dogru": 1,
+       "aciklama": "İçecek önce gelir."
+      },
+      {
+       "soru": "Alerji ne zaman sorulur?",
+       "secenekler": [
+        "Yemek gelince",
+        "Sipariş alınırken",
+        "Hesapta",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Siparişin parçasıdır."
+      },
+      {
+       "soru": "Adisyona masa numarasıyla birlikte ne yazılır?",
+       "secenekler": [
+        "Misafirin adı",
+        "Oturma yeri",
+        "Telefon",
+        "Hava durumu"
+       ],
+       "dogru": 1,
+       "aciklama": "Hangi tabağın kime gideceği bilinir."
+      },
+      {
+       "soru": "Yemek gelince ne yapılır?",
+       "secenekler": [
+        "Masa unutulur",
+        "Birkaç dakika sonra her şey yolunda mı diye sorulur",
+        "Hemen hesap getirilir",
+        "Tabaklar toplanır"
+       ],
+       "dogru": 1,
+       "aciklama": "Sorun varsa erken çözülür."
+      },
+      {
+       "soru": "Restoran zorunlu kuver ücreti alabilir mi?",
+       "secenekler": [
+        "Evet",
+        "Hayır",
+        "Menüde yazıyorsa evet",
+        "Sadece akşam"
+       ],
+       "dogru": 1,
+       "aciklama": "2026 değişikliğiyle yasak."
+      },
+      {
+       "soru": "Bahşiş için doğru olan?",
+       "secenekler": [
+        "Zorunludur",
+        "Gönüllüdür",
+        "Hesaba eklenir",
+        "%10'dur"
+       ],
+       "dogru": 1,
+       "aciklama": "Tamamen misafirin isteğidir."
+      },
+      {
+       "soru": "Yanlış yemek getirdin. Ne yaparsın?",
+       "secenekler": [
+        "Misafiri ikna ederim",
+        "Özür diler, doğrusunu hemen getiririm",
+        "Hiçbir şey",
+        "Hesaptan düşerim, yemek kalsın"
+       ],
+       "dogru": 1,
+       "aciklama": "Hatayı kabul et ve çöz."
+      },
+      {
+       "soru": "Misafirin üstüne bir şey döktün. Ne yaparsın?",
+       "secenekler": [
+        "Kendim silerim",
+        "Özür dilerim, peçete getiririm, şef garsona haber veririm",
+        "Kaçarım",
+        "Gülerim"
+       ],
+       "dogru": 1,
+       "aciklama": "Sakin ve hızlı yardım."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Şef garson",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Şef Garson",
+    "ikon": "🎖️"
+   },
+   "sonraki": "Salon şefi kademesi açıldı: rezervasyon, vardiya, fiyat ve zor günler.",
+   "gorevler": [
+    {
+     "id": "sg1-bolge",
+     "sablon": "bilgi",
+     "ikon": "🗺️",
+     "baslik": "Bölge yönetimi",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🗺️",
+       "baslik": "Bölgeler",
+       "metin": "Salon bölgelere ayrılır; her garsona birkaç masa verilir. Şef garson bölgeleri dengeli dağıtır.",
+       "terim": "istasyon"
+      },
+      {
+       "ikon": "🔄",
+       "baslik": "Servis akışı",
+       "metin": "Hangi masa hangi aşamada, takip edilir: sipariş, ara sıcak, ana yemek, tatlı, hesap.",
+       "terim": "akış"
+      },
+      {
+       "ikon": "📞",
+       "baslik": "Mutfakla köprü",
+       "metin": "Mutfaktan gecikme varsa masaya bilgi verilir; özel istekler mutfağa net iletilir.",
+       "terim": "iletişim"
+      },
+      {
+       "ikon": "💳",
+       "baslik": "Hesap ve ödeme",
+       "metin": "Hesap doğru ve zamanında getirilir, ödeme alınır, kasa kayıtları doğru tutulur.",
+       "terim": "adisyon kapama"
+      },
+      {
+       "ikon": "🧑‍🏫",
+       "baslik": "Ekip",
+       "metin": "Komi ve garsonlar yönlendirilir, eksik görülen yere destek verilir, yeni gelenler yetiştirilir.",
+       "terim": "liderlik"
+      },
+      {
+       "ikon": "🤝",
+       "baslik": "Şikâyet",
+       "metin": "Çözülemeyen sorunlar şef garsona gelir: dinler, özür diler, çözer, sonra ekiple konuşur.",
+       "terim": "şikâyet yönetimi"
+      }
+     ]
+    },
+    {
+     "id": "sg2-ekip",
+     "sablon": "siniflandirma",
+     "ikon": "👥",
+     "baslik": "Kim ne yapar?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Salon ekibindeki görevleri doğru kişiye ver.",
+     "kategoriler": [
+      {
+       "id": "komi",
+       "ad": "Komi",
+       "ikon": "🧑"
+      },
+      {
+       "id": "garson",
+       "ad": "Garson",
+       "ikon": "🧑‍🍳"
+      },
+      {
+       "id": "sefg",
+       "ad": "Şef garson",
+       "ikon": "🎖️"
+      },
+      {
+       "id": "salon",
+       "ad": "Salon şefi",
+       "ikon": "👔"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Ekmek ve su servisi yapar",
+       "ikon": "🍞",
+       "kategori": "komi",
+       "aciklama": "Bu ilk işler komiyle başlar."
+      },
+      {
+       "ad": "Boşalan tabakları toplar",
+       "ikon": "🍽️",
+       "kategori": "komi",
+       "aciklama": "Komi garsonun yardımcısıdır."
+      },
+      {
+       "ad": "Siparişi alır, öneri yapar",
+       "ikon": "📝",
+       "kategori": "garson",
+       "aciklama": "Masayla asıl ilgilenen garsondur."
+      },
+      {
+       "ad": "Kendi masalarının hesabını getirir",
+       "ikon": "🧾",
+       "kategori": "garson",
+       "aciklama": "Garson masasını başından sonuna takip eder."
+      },
+      {
+       "ad": "Bölgeleri garsonlara dağıtır",
+       "ikon": "🗺️",
+       "kategori": "sefg",
+       "aciklama": "Şef garson servis içindeki düzeni kurar."
+      },
+      {
+       "ad": "Çözülemeyen şikâyeti üstlenir",
+       "ikon": "🤝",
+       "kategori": "sefg",
+       "aciklama": "Zor durumlar şef garsona gelir."
+      },
+      {
+       "ad": "Personelin vardiya planını yapar",
+       "ikon": "📅",
+       "kategori": "salon",
+       "aciklama": "Ekip ve plan salon şefinin sorumluluğudur."
+      },
+      {
+       "ad": "Rezervasyon ve oturma planını yönetir",
+       "ikon": "📖",
+       "kategori": "salon",
+       "aciklama": "Salonun bütününü salon şefi planlar."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Salon ekibi",
+      "maddeler": [
+       "Komi: hazırlık ve destek.",
+       "Garson: masa ve sipariş.",
+       "Şef garson: servis düzeni ve sorunlar.",
+       "Salon şefi: plan, ekip, misafir ilişkileri."
+      ]
+     }
+    },
+    {
+     "id": "sg3-hesap",
+     "sablon": "soru",
+     "ikon": "💳",
+     "baslik": "Hesap ve ödeme",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Hesap ne zaman getirilir?",
+       "secenekler": [
+        "Tatlı gelir gelmez",
+        "Misafir isteyince",
+        "Yemek bitmeden",
+        "Her zaman hemen"
+       ],
+       "dogru": 1,
+       "aciklama": "İstenmeden getirilen hesap 'kalkın' demek gibi algılanır."
+      },
+      {
+       "soru": "Hesapta fiyatlar neye uymalıdır?",
+       "secenekler": [
+        "Garsonun aklındakine",
+        "Menüdeki fiyatlara",
+        "Günün havasına",
+        "Kasanın kararına"
+       ],
+       "dogru": 1,
+       "aciklama": "Menüdeki fiyat, ödenecek nihai fiyattır."
+      },
+      {
+       "soru": "Misafir hesaba itiraz etti. İlk adım?",
+       "secenekler": [
+        "Tartışmak",
+        "Adisyonu birlikte satır satır kontrol etmek",
+        "Yok saymak",
+        "Polisi aramak"
+       ],
+       "dogru": 1,
+       "aciklama": "Sakin ve şeffaf kontrol çoğu sorunu çözer."
+      },
+      {
+       "soru": "Ödeme alındıktan sonra ne yapılır?",
+       "secenekler": [
+        "Masa hemen toplanır",
+        "Misafire teşekkür edilir, uğurlanır",
+        "Bahşiş istenir",
+        "Hiçbir şey"
+       ],
+       "dogru": 1,
+       "aciklama": "Son izlenim de ilk izlenim kadar önemlidir."
+      },
+      {
+       "soru": "Bahşiş nasıl alınır?",
+       "secenekler": [
+        "Hesaba eklenerek",
+        "Misafirin isteğine bırakılarak",
+        "Zorla",
+        "Kartla otomatik"
+       ],
+       "dogru": 1,
+       "aciklama": "Bahşiş gönüllüdür, zorunlu hâle getirilemez."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hesap kuralları",
+      "maddeler": [
+       "Misafir isteyince getir.",
+       "Fiyat menüdekiyle aynı.",
+       "İtirazda birlikte kontrol et.",
+       "Uğurlamayı unutma."
+      ]
+     }
+    },
+    {
+     "id": "sg4-cumartesi",
+     "sablon": "senaryo",
+     "ikon": "🔥",
+     "baslik": "Kalabalık cumartesi",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Cumartesi akşamı, salon tam dolu. Yönetim sende.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Mutfak, ana yemeklerin 20 dakika gecikeceğini söylüyor. 6 masa bekliyor.",
+       "secenekler": [
+        {
+         "metin": "Masalara gecikmeyi dürüstçe bildirir, beklerken su ve ekmeği tazeletirim",
+         "dogru": true,
+         "aciklama": "Bilgilendirilen misafir sabırlı olur; habersiz bekleyen kızar."
+        },
+        {
+         "metin": "Kimseye söylemem, belki çabuk gelir",
+         "dogru": false,
+         "aciklama": "Belirsizlik misafiri en çok kızdıran şeydir."
+        },
+        {
+         "metin": "Mutfağa bağırırım",
+         "dogru": false,
+         "aciklama": "Bağırmak yemeği hızlandırmaz, ekibi gerer."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir garson hastalanıp eve gitti. Bölgesindeki 4 masa açıkta.",
+       "secenekler": [
+        {
+         "metin": "Masaları diğer garsonlara dengeli dağıtır, gerekirse kendim de servise girerim",
+         "dogru": true,
+         "aciklama": "Şef garson boşluğu hemen kapatır."
+        },
+        {
+         "metin": "Masaları en hızlı garsona veririm",
+         "dogru": false,
+         "aciklama": "Tek kişiye yüklenmek onu da batırır."
+        },
+        {
+         "metin": "Masalar biraz beklesin",
+         "dogru": false,
+         "aciklama": "Bekleyen masa şikâyet demektir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Misafir: \"45 dakikadır bekliyoruz, bu ne rezalet!\"",
+       "secenekler": [
+        {
+         "metin": "Dinler, özür diler, durumu açıklar ve somut bir çözüm sunarım",
+         "dogru": true,
+         "aciklama": "Dinle, özür dile, çöz: şikâyet yönetiminin özü."
+        },
+        {
+         "metin": "\"Herkes bekliyor\" derim",
+         "dogru": false,
+         "aciklama": "Misafiri küçümser."
+        },
+        {
+         "metin": "Garsonu suçlarım",
+         "dogru": false,
+         "aciklama": "Misafire ekip içi sorun anlatılmaz; sorumluluk alınır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kriz anında",
+      "maddeler": [
+       "Gecikmeyi dürüstçe bildir.",
+       "Boşluğu hemen kapat.",
+       "Dinle, özür dile, çöz."
+      ]
+     }
+    },
+    {
+     "id": "sg5-sikayet",
+     "sablon": "siralama",
+     "ikon": "🤝",
+     "baslik": "Şikâyeti çöz",
+     "aciklama": "Misafir yemeğinin soğuk geldiğinden şikâyetçi. Doğru sırayla çöz.",
+     "adimlar": [
+      {
+       "id": "dinle",
+       "ikon": "👂",
+       "metin": "Sözünü kesmeden dinle",
+       "neden": "Misafir önce duyulduğunu hissetmeli.",
+       "ipucu": "Misafir konuşuyor; ilk ne yapılır?"
+      },
+      {
+       "id": "ozur",
+       "ikon": "🙏",
+       "metin": "Özür dile",
+       "neden": "Suçlu aramadan özür dilemek gerginliği düşürür.",
+       "ipucu": "Misafir derdini anlattı."
+      },
+      {
+       "id": "coz",
+       "ikon": "🔥",
+       "metin": "Çözüm öner: yemeği hemen yeniden hazırlatmak",
+       "neden": "Somut çözüm sözden daha değerlidir.",
+       "ipucu": "Özür yetmez, bir şey yapılmalı."
+      },
+      {
+       "id": "uygula",
+       "ikon": "🍽️",
+       "metin": "Yeni yemeği hızlıca ve sıcak servis ettir",
+       "neden": "Söz verilen çözüm gecikmeden yapılmalı.",
+       "ipucu": "Çözüm önerildi; şimdi gerçekleştir."
+      },
+      {
+       "id": "kontrol",
+       "ikon": "✅",
+       "metin": "Birkaç dakika sonra masaya dönüp memnun mu diye sor",
+       "neden": "Sorunun gerçekten çözüldüğünden emin ol.",
+       "ipucu": "Yeni yemek gitti; işin bitti mi?"
+      },
+      {
+       "id": "ekip",
+       "ikon": "🗣️",
+       "metin": "Servisten sonra ekip ve mutfakla nedenini konuş",
+       "neden": "Aynı hata tekrarlanmasın.",
+       "ipucu": "Servis bitti; bir şey daha kaldı."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Şikâyet adımları",
+      "maddeler": [
+       "Dinle.",
+       "Özür dile.",
+       "Çözüm öner ve uygula.",
+       "Kontrol et.",
+       "Ekiple konuş, tekrarlanmasın."
+      ]
+     }
+    },
+    {
+     "id": "sg6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Şef garson sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Şef garsonun görevi hangisidir?",
+       "secenekler": [
+        "Ekmek servisi",
+        "Bölgeleri dağıtmak ve servisi yönetmek",
+        "Bulaşık",
+        "Yemek pişirmek"
+       ],
+       "dogru": 1,
+       "aciklama": "Servis içindeki düzen ondadır."
+      },
+      {
+       "soru": "Mutfak gecikiyor. Doğru davranış?",
+       "secenekler": [
+        "Saklamak",
+        "Masaya dürüstçe bilgi vermek",
+        "Mutfağa bağırmak",
+        "Hesabı getirmek"
+       ],
+       "dogru": 1,
+       "aciklama": "Bilgilendirilen misafir sabırlıdır."
+      },
+      {
+       "soru": "Şikâyette ilk adım?",
+       "secenekler": [
+        "Açıklama yapmak",
+        "Dinlemek",
+        "Özür dilemek",
+        "İndirim"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce dinle."
+      },
+      {
+       "soru": "Bir garson eksildi. Ne yapılır?",
+       "secenekler": [
+        "Masalar bekler",
+        "Masalar dengeli dağıtılır, gerekirse şef garson da servise girer",
+        "En hızlı garsona verilir",
+        "Salon kapatılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Yük dengelenir."
+      },
+      {
+       "soru": "Hesap ne zaman getirilir?",
+       "secenekler": [
+        "Misafir isteyince",
+        "Tatlıdan önce",
+        "Yemek gelince",
+        "Sabah"
+       ],
+       "dogru": 0,
+       "aciklama": "İstenmeden getirilmez."
+      },
+      {
+       "soru": "Menüdeki fiyat ile hesaptaki fiyat?",
+       "secenekler": [
+        "Farklı olabilir",
+        "Aynı olmalı",
+        "Hesap daha düşük",
+        "Garson belirler"
+       ],
+       "dogru": 1,
+       "aciklama": "Menü fiyatı nihai fiyattır."
+      },
+      {
+       "soru": "Şikâyet çözüldükten sonra ne yapılır?",
+       "secenekler": [
+        "Unutulur",
+        "Ekiple nedeni konuşulur",
+        "Misafir yasaklanır",
+        "Garson cezalandırılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Tekrarlanmaması için."
+      },
+      {
+       "soru": "Misafire ekip içi bir sorun anlatılır mı?",
+       "secenekler": [
+        "Evet, hepsi",
+        "Hayır, sorumluluk alınır",
+        "Sadece garson suçluysa",
+        "Sadece sorarsa"
+       ],
+       "dogru": 1,
+       "aciklama": "Misafir çözüm bekler, suçlu değil."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Salon şefi",
+   "hedefXp": 365,
+   "rozet": {
+    "ad": "Salon Şefi",
+    "ikon": "👔"
+   },
+   "sonraki": "Komilikten salon şefliğine tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "ss1-salon",
+     "sablon": "bilgi",
+     "ikon": "👔",
+     "baslik": "Salonun yöneticisi",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📖",
+       "baslik": "Rezervasyon",
+       "metin": "Rezervasyonlar alınır, masa ve saat planlanır; özel günler ve istekler not edilir.",
+       "terim": "rezervasyon"
+      },
+      {
+       "ikon": "🪑",
+       "baslik": "Oturma planı",
+       "metin": "Masalar kapasiteye ve servis akışına göre dağıtılır; büyük gruplar, çocuklu aileler ve sessiz masa isteyenler düşünülür.",
+       "terim": "oturma planı"
+      },
+      {
+       "ikon": "📅",
+       "baslik": "Vardiya",
+       "metin": "Yoğun saat ve günlere göre personel planlanır; ne eksik ne fazla.",
+       "terim": "vardiya planı"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Eğitim",
+       "metin": "Yeni menü, alerjenler, hizmet standartları ve kurallar ekibe öğretilir.",
+       "terim": "eğitim"
+      },
+      {
+       "ikon": "📊",
+       "baslik": "Satış ve maliyet",
+       "metin": "Satılan ürünler, kişi başı harcama ve içecek maliyetleri takip edilir.",
+       "terim": "ciro"
+      },
+      {
+       "ikon": "⚖️",
+       "baslik": "Kurallar",
+       "metin": "Menü fiyatları nihai fiyattır; servis, kuver ve masa ücreti istenemez; 14 alerjen bildirilir.",
+       "terim": "mevzuat"
+      }
+     ]
+    },
+    {
+     "id": "ss2-icecek",
+     "sablon": "hesap",
+     "ikon": "🧮",
+     "baslik": "İçecek fiyatı",
+     "temelXp": 40,
+     "yildizBasinaXp": 15,
+     "aciklama": "Yeni içecek menüsünü hazırlıyorsun. Her içeceğin maliyetini bul, sonra fiyatını belirle. Rakamlar örnektir.",
+     "hedefOran": [
+      15,
+      25
+     ],
+     "kural": "Alkolsüz içeceklerde sık kullanılan bir kural: malzeme maliyeti satış fiyatının yaklaşık %15–25'i olmalı. Kalanı kira, personel, enerji, vergi ve kâra gider.",
+     "urunler": [
+      {
+       "ad": "Ev yapımı limonata",
+       "ikon": "🍋",
+       "kalemler": [
+        [
+         "Limon (2 adet)",
+         12.0
+        ],
+        [
+         "Şeker ve nane",
+         3.0
+        ],
+        [
+         "Buz ve su",
+         1.0
+        ],
+        [
+         "Bardak ve pipet",
+         3.5
+        ]
+       ]
+      },
+      {
+       "ad": "Ayran",
+       "ikon": "🥛",
+       "kalemler": [
+        [
+         "Yoğurt (150 g)",
+         9.0
+        ],
+        [
+         "Su ve tuz",
+         0.5
+        ],
+        [
+         "Bardak",
+         2.5
+        ]
+       ]
+      },
+      {
+       "ad": "Demleme çay",
+       "ikon": "🫖",
+       "kalemler": [
+        [
+         "Çay (5 g)",
+         2.5
+        ],
+        [
+         "Şeker (2 küp)",
+         0.8
+        ],
+        [
+         "Su ve enerji",
+         1.2
+        ]
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Fiyat nasıl belirlenir?",
+      "maddeler": [
+       "Önce maliyeti kuruşu kuruşuna hesapla.",
+       "İçecekte malzeme fiyatın yaklaşık %15–25'i.",
+       "Fiyat menüde yazdığı gibi alınır; ek ücret yok.",
+       "Fiyatlar değişince yeniden hesapla."
+      ]
+     }
+    },
+    {
+     "id": "ss3-yonetim",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "Yönetim bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Rezervasyonda hangi bilgi mutlaka alınır?",
+       "secenekler": [
+        "Misafirin mesleği",
+        "Kişi sayısı, tarih, saat ve iletişim",
+        "Maaşı",
+        "Arabası"
+       ],
+       "dogru": 1,
+       "aciklama": "Planlama bu bilgilerle yapılır."
+      },
+      {
+       "soru": "Vardiya planı neye göre yapılır?",
+       "secenekler": [
+        "Herkes her gün gelir",
+        "Yoğun gün ve saatlere göre",
+        "Rastgele",
+        "Personelin isteğine göre"
+       ],
+       "dogru": 1,
+       "aciklama": "Yoğunluğa göre personel."
+      },
+      {
+       "soru": "Menüde servis ücreti yazabilir mi?",
+       "secenekler": [
+        "Evet",
+        "Hayır, 2026'dan beri yasak",
+        "Sadece hafta sonu",
+        "Sadece akşam"
+       ],
+       "dogru": 1,
+       "aciklama": "Fiyat Etiketi Yönetmeliği değişikliği."
+      },
+      {
+       "soru": "Yeni bir yemek menüye girdi. Salon şefi ne yapar?",
+       "secenekler": [
+        "Hiçbir şey",
+        "Ekibe içeriğini ve alerjenlerini anlatır",
+        "Yalnızca fiyatını söyler",
+        "Mutfağa bırakır"
+       ],
+       "dogru": 1,
+       "aciklama": "Ekip misafirin sorusunu cevaplayabilmeli."
+      },
+      {
+       "soru": "Kişi başı harcamayı artırmanın dürüst yolu?",
+       "secenekler": [
+        "Gizli ücret",
+        "İyi öneri ve iyi hizmet",
+        "Porsiyonu küçültmek",
+        "Zorla tatlı"
+       ],
+       "dogru": 1,
+       "aciklama": "Misafir değer gördüğü şeye para verir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Salon şefi notu",
+      "maddeler": [
+       "Rezervasyon: kişi, tarih, saat, iletişim.",
+       "Vardiya yoğunluğa göre.",
+       "Ekibe her yeniliği öğret.",
+       "Gizli ücret yok, iyi hizmet var."
+      ]
+     }
+    },
+    {
+     "id": "ss4-zor",
+     "sablon": "senaryo",
+     "ikon": "⭐",
+     "baslik": "Zor bir gün",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Bugün salon tamamen senin sorumluluğunda.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Rezervasyonu olan 8 kişilik aile geldi ama masaları yanlışlıkla başkasına verilmiş.",
+       "secenekler": [
+        {
+         "metin": "Özür diler, en hızlı uygun masayı birleştirir, beklerken bir ikram teklif ederim",
+         "dogru": true,
+         "aciklama": "Hata bizim; çözüm ve jest misafiri kazandırır."
+        },
+        {
+         "metin": "\"Rezervasyonunuz görünmüyor\" derim",
+         "dogru": false,
+         "aciklama": "Hatayı misafire yüklemek güveni bitirir."
+        },
+        {
+         "metin": "Oturan masayı kaldırırım",
+         "dogru": false,
+         "aciklama": "Bir hatayı başka bir misafire ödetmek olmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Yarın büyük bir doğum günü grubu var, iki garson izinli.",
+       "secenekler": [
+        {
+         "metin": "Bugünden vardiyayı yeniden planlar, ek personel ayarlar, grubun menüsünü önceden konuşurum",
+         "dogru": true,
+         "aciklama": "Salon şefi sorunu yaşanmadan önce çözer."
+        },
+        {
+         "metin": "Yarın bakarız",
+         "dogru": false,
+         "aciklama": "Plansız yoğunluk kaosa döner."
+        },
+        {
+         "metin": "Rezervasyonu iptal ederim",
+         "dogru": false,
+         "aciklama": "Gelir ve itibar kaybı."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Bir misafir yorum sitesine kötü yorum yazacağını söylüyor.",
+       "secenekler": [
+        {
+         "metin": "Sorunu dinleyip çözmeye çalışırım; yorum yazıp yazmamak onun hakkıdır",
+         "dogru": true,
+         "aciklama": "Amaç misafiri memnun etmek, yorumu engellemek değil."
+        },
+        {
+         "metin": "Yorum yazmazsa indirim yapacağımı söylerim",
+         "dogru": false,
+         "aciklama": "Yorumu satın almaya çalışmak etik değildir."
+        },
+        {
+         "metin": "Tehdit ederim",
+         "dogru": false,
+         "aciklama": "Asla."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İyi salon şefi",
+      "maddeler": [
+       "Hatayı kabul et, çöz, jest yap.",
+       "Sorunu yaşanmadan planla.",
+       "Misafir yorumunu satın alma, hizmeti düzelt."
+      ]
+     }
+    },
+    {
+     "id": "ss5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Salon şefinin temel sorumluluğu?",
+       "secenekler": [
+        "Yemek pişirmek",
+        "Salonun planı, ekibi ve misafir ilişkileri",
+        "Bulaşık",
+        "Mal kabul"
+       ],
+       "dogru": 1,
+       "aciklama": "Salonun bütünü."
+      },
+      {
+       "soru": "Restoran zorunlu servis ücreti alabilir mi?",
+       "secenekler": [
+        "Evet",
+        "Hayır",
+        "Menüde yazarsa",
+        "Kalabalık masada"
+       ],
+       "dogru": 1,
+       "aciklama": "2026'dan beri yasak."
+      },
+      {
+       "soru": "İstenmeden getirilen kuver ürün?",
+       "secenekler": [
+        "Ücretlidir",
+        "Ücreti istenemez",
+        "Yarı fiyat",
+        "Hesaba eklenir"
+       ],
+       "dogru": 1,
+       "aciklama": "Bedeli talep edilemez."
+      },
+      {
+       "soru": "Limonatanın maliyeti 20 TL. Hedef oran %20 ise fiyat ne olmalı?",
+       "secenekler": [
+        "40 TL",
+        "100 TL",
+        "200 TL",
+        "25 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "20 ÷ 0,20 = 100 TL."
+      },
+      {
+       "soru": "Rezervasyon hatası bizdeyse?",
+       "secenekler": [
+        "Misafiri suçla",
+        "Özür dile, çöz, jest yap",
+        "Görmezden gel",
+        "Başka masayı kaldır"
+       ],
+       "dogru": 1,
+       "aciklama": "Sorumluluk al."
+      },
+      {
+       "soru": "Kötü yorum tehdidinde doğru davranış?",
+       "secenekler": [
+        "İndirimle yorumu engellemek",
+        "Sorunu çözmeye çalışmak",
+        "Tehdit etmek",
+        "Kapıdan çıkarmak"
+       ],
+       "dogru": 1,
+       "aciklama": "Hizmeti düzelt."
+      },
+      {
+       "soru": "Menüde kaç alerjen bildirilir?",
+       "secenekler": [
+        "7",
+        "10",
+        "14",
+        "21"
+       ],
+       "dogru": 2,
+       "aciklama": "Türk Gıda Kodeksi'ne göre 14."
+      },
+      {
+       "soru": "Masa kuruluşunda bıçak nerede durur?",
+       "secenekler": [
+        "Solda",
+        "Sağda, ağzı tabağa dönük",
+        "Üstte",
+        "Bardakta"
+       ],
+       "dogru": 1,
+       "aciklama": "Salon şefi de temeli bilir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "kaynaklar": [
+  "MYK Servis Görevlisi (Seviye 4) Ulusal Yeterliliği (kendi cümlelerimizle)",
+  "Fiyat Etiketi Yönetmeliği değişikliği (RG 30.01.2026): servis, kuver ve masa ücreti yasağı",
+  "Hijyen Eğitimi Yönetmeliği (RG 05.07.2013)",
+  "Türk Gıda Kodeksi Etiketleme Yönetmeliği, Ek-1 alerjenler",
+  "MEB Yiyecek İçecek Hizmetleri alanı modülleri",
+  "Servis uzmanı görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false
+}
