@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Meslektaş",
+    "slug": "meslektas",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "android": { "package": "com.meslektas.app", "edgeToEdgeEnabled": true },
+    "ios": { "bundleIdentifier": "com.meslektas.app", "supportsTablet": false },
+    "plugins": ["expo-secure-store"]
+  }
+}

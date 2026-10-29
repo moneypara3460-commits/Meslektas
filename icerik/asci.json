@@ -1,0 +1,2092 @@
+{
+ "paketSurumu": 5,
+ "meslek": {
+  "id": "asci",
+  "ad": "Aşçı",
+  "kategori": "Yiyecek & İçecek",
+  "tanim": "Lokanta, otel ve yemekhane mutfaklarında yemekleri tarifine, hijyen kurallarına ve maliyetine uygun hazırlayan meslek elemanı.",
+  "calismaKosullari": [
+   "Sıcak ortamda ayakta çalışma",
+   "Vardiyalı, hafta sonu ve akşam",
+   "Ekip içinde yoğun tempo"
+  ],
+  "kademeler": [
+   "Merak",
+   "Çırak",
+   "Kalfa",
+   "Usta",
+   "İşletme sahibi"
+  ],
+  "renkler": {
+   "ana": "#7a2e1d",
+   "vurgu": "#e0a030",
+   "zemin": "#fbf3ea"
+  },
+  "metinler": {
+   "senaryoBasla": "Mutfağa geç",
+   "senaryoBitir": "Servisi bitir",
+   "ucYildiz": "Şef geçerken omzuna dokundu: \"Eline sağlık!\"",
+   "karakter": {
+    "usta": "Şef",
+    "musteri": "Ekip arkadaşı"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Aşçı Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Resmî belge için MYK Aşçı (Seviye 3/4) mesleki yeterlilik sınavları vardır."
+  }
+ },
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Aşçı Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Çırak kademesinde hijyeni, bıçağı ve ilk çorbanı öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir aşçının günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔪",
+       "baslik": "Hazırlık",
+       "metin": "Servisten saatler önce gelinir. Sebzeler doğranır, soslar ve çorbalar hazırlanır, her şey tezgâhta yerini alır.",
+       "terim": "mise en place"
+      },
+      {
+       "ikon": "📦",
+       "baslik": "Mal kabul",
+       "metin": "Gelen et, sebze ve süt kontrol edilir: sıcaklığı, tarihi, görünüşü. Uygun olmayan ürün geri çevrilir.",
+       "terim": "mal kabul"
+      },
+      {
+       "ikon": "🔥",
+       "baslik": "Servis",
+       "metin": "Siparişler art arda gelir. Her tabak aynı lezzette, aynı sürede ve aynı görünüşte çıkmalıdır.",
+       "terim": "servis"
+      },
+      {
+       "ikon": "👥",
+       "baslik": "Ekip",
+       "metin": "Mutfak bir ekiptir: şef, şef yardımcısı, bölüm şefleri ve komiler birlikte çalışır.",
+       "terim": "mutfak brigadı"
+      },
+      {
+       "ikon": "🧽",
+       "baslik": "Temizlik",
+       "metin": "Servis bitince tezgâhlar, ocaklar ve aletler temizlenir; artan malzeme etiketlenip saklanır.",
+       "terim": "hijyen"
+      },
+      {
+       "ikon": "📈",
+       "baslik": "Kariyer yolu",
+       "metin": "Komi olarak başlanır; deneyimle bölüm şefi, şef yardımcısı, şef ya da kendi lokantasının sahibi olunabilir.",
+       "terim": "komiden şefe"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Mutfakta ilk günün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bugün bir lokantada deneme günündesin. Şef seni tezgâha çağırdı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Şef: \"Önce şunu söyle, mutfağa girince ilk ne yaparsın?\"",
+       "secenekler": [
+        {
+         "metin": "Önlüğümü ve bonemi takar, ellerimi yıkarım",
+         "dogru": true,
+         "aciklama": "Mutfakta her iş temizlikle başlar. Saçlar örtülür, eller sabunla yıkanır."
+        },
+        {
+         "metin": "Hemen bıçağı alıp doğramaya başlarım",
+         "dogru": false,
+         "aciklama": "Yıkanmamış eller gıdaya mikrop taşır. Önce hijyen."
+        },
+        {
+         "metin": "Yemekleri tadına bakmak için gezerim",
+         "dogru": false,
+         "aciklama": "Tadım, şefin izniyle ve temiz kaşıkla yapılır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Şef: \"Şu soğanları doğrayacaksın. Bıçağı nasıl tutup soğanı nasıl bastırırsın?\"",
+       "secenekler": [
+        {
+         "metin": "Parmak uçlarımı içe kıvırır, bıçağı parmak boğumlarıma dayarım",
+         "dogru": true,
+         "aciklama": "Buna pençe tutuşu denir. Parmak uçları bıçaktan uzak kalır."
+        },
+        {
+         "metin": "Parmaklarımı düz uzatıp soğanı sıkıca tutarım",
+         "dogru": false,
+         "aciklama": "Düz parmaklar bıçağın yolundadır; kesilme riski yüksek."
+        },
+        {
+         "metin": "Soğanı elimde tutup havada keserim",
+         "dogru": false,
+         "aciklama": "Kesim her zaman sabit bir tahta üzerinde yapılır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Elinden bıçak kaydı ve düşüyor. Ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Geri çekilir, düşmesine izin veririm",
+         "dogru": true,
+         "aciklama": "Düşen bıçak asla tutulmaya çalışılmaz. Sonra alınır, yıkanır."
+        },
+        {
+         "metin": "Havada yakalamaya çalışırım",
+         "dogru": false,
+         "aciklama": "Mutfak kazalarının en tehlikelilerinden. Bıçağı bırak, düşsün."
+        },
+        {
+         "metin": "Ayağımla durdurmaya çalışırım",
+         "dogru": false,
+         "aciklama": "Ayak da en az el kadar kolay yaralanır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Mutfakta ilk gün",
+      "maddeler": [
+       "Önce önlük, bone ve el yıkama.",
+       "Pençe tutuşu: parmak uçları içeride.",
+       "Düşen bıçak tutulmaz.",
+       "Bilmediğini sor."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Sıcak bir ortamda saatlerce ayakta çalışmak?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Hafta sonu, bayram ve akşamları çalışmak?",
+       "secenekler": [
+        [
+         "Olabilir",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Hiç istemem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Baskı altında hızlı ve düzenli çalışmak?",
+       "secenekler": [
+        [
+         "Heyecan verici",
+         2
+        ],
+        [
+         "Bazen olabilir",
+         1
+        ],
+        [
+         "Strese girerim",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Tarife, grama ve temizlik kuralına titizce uymak?",
+       "secenekler": [
+        [
+         "Tam bana göre",
+         2
+        ],
+        [
+         "Orta",
+         1
+        ],
+        [
+         "Sıkıcı bulurum",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Yeni tatlar denemek, yemekle uğraşmak?",
+       "secenekler": [
+        [
+         "Çok severim",
+         2
+        ],
+        [
+         "Ara sıra",
+         1
+        ],
+        [
+         "Pek ilgimi çekmez",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Mutfak senin yerin olabilir: tempoyu, düzeni ve yemeği seviyorsun. Çırak kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Çırak kademesini oynayıp mutfağı daha yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Lokanta mutfağı seni zorlayabilir ama denemeden bilemezsin. Pastacılık ya da işletme tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Çırak",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Çırak Aşçı",
+    "ikon": "🔪"
+   },
+   "sonraki": "Kalfa kademesi açıldı: pişirme yöntemleri, sıcaklık ve alerjenler.",
+   "gorevler": [
+    {
+     "id": "c1-hijyen",
+     "sablon": "bilgi",
+     "ikon": "🧼",
+     "baslik": "Hijyen ve gıda güvenliği",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🙌",
+       "baslik": "El yıkama",
+       "metin": "Eller sabunla en az 20 saniye yıkanır, tek kullanımlık kâğıt havluyla kurulanır. Tuvaletten, çiğ etten ve çöpten sonra mutlaka.",
+       "terim": "kişisel hijyen"
+      },
+      {
+       "ikon": "🌡️",
+       "baslik": "Tehlikeli sıcaklık aralığı",
+       "metin": "Mikroplar yaklaşık 5 °C ile 63 °C arasında en hızlı çoğalır. Yemek bu aralıkta uzun süre bekletilmez.",
+       "terim": "tehlikeli bölge"
+      },
+      {
+       "ikon": "❄️",
+       "baslik": "Soğuk zincir",
+       "metin": "Buzdolabı 0–4 °C, dondurucu −18 °C ve altında tutulur. Çözme işlemi tezgâhta değil, buzdolabında yapılır.",
+       "terim": "soğuk zincir"
+      },
+      {
+       "ikon": "♨️",
+       "baslik": "Sıcak tutma",
+       "metin": "Servise hazır sıcak yemek 63 °C'nin üstünde tutulur. Yeniden ısıtılan yemeğin her yeri iyice ısınmalı, bir kez ısıtılmalıdır.",
+       "terim": "sıcak tutma"
+      },
+      {
+       "ikon": "🔀",
+       "baslik": "Çapraz bulaşma",
+       "metin": "Çiğ et ile pişmiş ya da çiğ yenecek gıda aynı tahtada, aynı bıçakla hazırlanmaz. Buzdolabında çiğ et en alt rafta durur.",
+       "terim": "çapraz bulaşma"
+      },
+      {
+       "ikon": "📜",
+       "baslik": "Hijyen belgesi",
+       "metin": "Türkiye'de lokanta mutfağında çalışanların Hijyen Eğitimi Yönetmeliği'ne göre hijyen eğitimi alması zorunludur.",
+       "terim": "hijyen eğitimi"
+      }
+     ]
+    },
+    {
+     "id": "c2-depo",
+     "sablon": "siniflandirma",
+     "ikon": "📦",
+     "baslik": "Nereye koyarsın?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Mal kabulden gelen ürünleri doğru yere yerleştir. Her ürüne dokun, sonra dolabını seç.",
+     "kategoriler": [
+      {
+       "id": "buz",
+       "ad": "Buzdolabı",
+       "ikon": "🧊",
+       "not": "0–4 °C"
+      },
+      {
+       "id": "don",
+       "ad": "Dondurucu",
+       "ikon": "❄️",
+       "not": "−18 °C ve altı"
+      },
+      {
+       "id": "kuru",
+       "ad": "Kuru depo",
+       "ikon": "🗄️",
+       "not": "serin, kuru, karanlık"
+      },
+      {
+       "id": "sicak",
+       "ad": "Sıcak tutma",
+       "ikon": "♨️",
+       "not": "63 °C üstü"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Çiğ tavuk",
+       "ikon": "🍗",
+       "kategori": "buz",
+       "aciklama": "Buzdolabında ve en alt rafta; suyu başka gıdaya damlamasın."
+      },
+      {
+       "ad": "Dondurulmuş karides",
+       "ikon": "🦐",
+       "kategori": "don",
+       "aciklama": "Donuk ürün çözülmeden dondurucuya gider."
+      },
+      {
+       "ad": "Pirinç",
+       "ikon": "🍚",
+       "kategori": "kuru",
+       "aciklama": "Kuru gıda kapalı kapta, yerden yüksekte saklanır."
+      },
+      {
+       "ad": "Servise hazır mercimek çorbası",
+       "ikon": "🍲",
+       "kategori": "sicak",
+       "aciklama": "Servis boyunca 63 °C'nin üstünde tutulur."
+      },
+      {
+       "ad": "Açılmış süt",
+       "ikon": "🥛",
+       "kategori": "buz",
+       "aciklama": "Açılan süt hemen buzdolabına konur."
+      },
+      {
+       "ad": "Un",
+       "ikon": "🌾",
+       "kategori": "kuru",
+       "aciklama": "Kapalı kapta, nemden uzak."
+      },
+      {
+       "ad": "Yoğurt",
+       "ikon": "🥣",
+       "kategori": "buz",
+       "aciklama": "Süt ürünleri soğuk zincirde kalmalı."
+      },
+      {
+       "ad": "Dondurma",
+       "ikon": "🍨",
+       "kategori": "don",
+       "aciklama": "Erirse yeniden dondurulmaz."
+      },
+      {
+       "ad": "Açılmamış domates konservesi",
+       "ikon": "🥫",
+       "kategori": "kuru",
+       "aciklama": "Açılmamış konserve kuru depoda durur; açılınca kaba aktarılıp buzdolabına konur."
+      },
+      {
+       "ad": "Servisteki pilav",
+       "ikon": "🍛",
+       "kategori": "sicak",
+       "aciklama": "Sıcak serviste bekleyen yemek 63 °C üstünde kalır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Depolama kuralı",
+      "maddeler": [
+       "Buzdolabı 0–4 °C, dondurucu −18 °C ve altı.",
+       "Çiğ et en alt rafta.",
+       "Kuru gıda yerden yüksekte, kapalı kapta.",
+       "İlk giren ilk çıkar (FIFO)."
+      ]
+     }
+    },
+    {
+     "id": "c3-bicak",
+     "sablon": "bilgi",
+     "ikon": "🔪",
+     "baslik": "Bıçaklar ve kesimler",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔪",
+       "baslik": "Şef bıçağı",
+       "metin": "Mutfağın ana bıçağıdır. Doğrama, dilimleme ve kıyma işlerinin çoğu bununla yapılır.",
+       "terim": "şef bıçağı"
+      },
+      {
+       "ikon": "✋",
+       "baslik": "Pençe tutuşu",
+       "metin": "Tutan elin parmak uçları içe kıvrılır, bıçağın yan yüzü parmak boğumlarına yaslanır.",
+       "terim": "pençe tutuşu"
+      },
+      {
+       "ikon": "🥕",
+       "baslik": "Jülyen",
+       "metin": "Sebze ince, uzun kibrit çöpü gibi kesilir. Salata ve sote için.",
+       "terim": "julienne"
+      },
+      {
+       "ikon": "🧅",
+       "baslik": "Brunuaz",
+       "metin": "Jülyen kesilmiş sebze çok küçük küplere doğranır. Sos ve garnitür için.",
+       "terim": "brunoise"
+      },
+      {
+       "ikon": "🌿",
+       "baslik": "Şifonad",
+       "metin": "Yapraklar üst üste konup rulo yapılır, ince şeritler halinde kesilir. Fesleğen, nane, marul için.",
+       "terim": "chiffonade"
+      },
+      {
+       "ikon": "🪵",
+       "baslik": "Tahta ve bilme",
+       "metin": "Tahtanın altına nemli bez konur ki kaymasın. Kör bıçak keskin bıçaktan daha tehlikelidir: kayar.",
+       "terim": "güvenli kesim"
+      }
+     ]
+    },
+    {
+     "id": "c4-kesimsoru",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "Kesimleri tanı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Havuç ince, uzun kibrit çöpü gibi kesildi. Bu hangi kesim?",
+       "secenekler": [
+        "Brunuaz",
+        "Jülyen",
+        "Şifonad",
+        "Rondel"
+       ],
+       "dogru": 1,
+       "aciklama": "Jülyen ince ve uzun şeritlerdir."
+      },
+      {
+       "soru": "Fesleğen yaprakları rulo yapılıp ince şeritler halinde kesildi. Adı?",
+       "secenekler": [
+        "Şifonad",
+        "Jülyen",
+        "Brunuaz",
+        "Paysan"
+       ],
+       "dogru": 0,
+       "aciklama": "Şifonad yapraklı otlar ve sebzeler için kullanılır."
+      },
+      {
+       "soru": "Jülyen kesilmiş sebzeyi çok küçük küplere doğrarsan ne elde edersin?",
+       "secenekler": [
+        "Rondel",
+        "Şifonad",
+        "Brunuaz",
+        "Paysan"
+       ],
+       "dogru": 2,
+       "aciklama": "Brunuaz, jülyenin küçük küplere doğranmış hâlidir."
+      },
+      {
+       "soru": "Doğrarken kayan tahtayı ne sabitler?",
+       "secenekler": [
+        "Altına nemli bez koymak",
+        "Tahtayı elle tutmak",
+        "Daha sert bastırmak",
+        "Tahtayı ıslatmak"
+       ],
+       "dogru": 0,
+       "aciklama": "Altına serilen nemli bez ya da kaymaz örtü tahtayı sabitler."
+      },
+      {
+       "soru": "Hangisi daha tehlikelidir?",
+       "secenekler": [
+        "Keskin bıçak",
+        "Kör bıçak",
+        "İkisi aynı",
+        "Ekmek bıçağı"
+       ],
+       "dogru": 1,
+       "aciklama": "Kör bıçak daha çok güç ister, kayar ve kazaya yol açar."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hatırla",
+      "maddeler": [
+       "Jülyen: kibrit çöpü.",
+       "Brunuaz: minik küp.",
+       "Şifonad: yaprak şeritleri.",
+       "Tahta sabit, bıçak keskin."
+      ]
+     }
+    },
+    {
+     "id": "c5-corba",
+     "sablon": "siralama",
+     "ikon": "🍲",
+     "baslik": "Mercimek çorbası hazırla",
+     "aciklama": "Şef öğle servisi için mercimek çorbası istiyor. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "yika",
+       "ikon": "🙌",
+       "metin": "Ellerini yıka, malzemeyi tartıp tezgâha diz",
+       "neden": "Tartılmış ve hazırlanmış malzeme (mise en place) işi hızlandırır, hata yapmayı azaltır.",
+       "ipucu": "Her şeyden önce hijyen ve hazırlık."
+      },
+      {
+       "id": "mercimek",
+       "ikon": "💧",
+       "metin": "Mercimeği ayıklayıp suyu berraklaşana kadar yıka",
+       "neden": "Taş ve kum ayıklanır, yüzeydeki nişasta ve toz gider.",
+       "ipucu": "Tencereye girmeden önce temizlenmesi gereken bir malzeme var."
+      },
+      {
+       "id": "sogan",
+       "ikon": "🧅",
+       "metin": "Soğanı ve havucu doğrayıp yağda kavur",
+       "neden": "Kavrulan soğan ve havuç çorbaya tatlılık ve derinlik katar.",
+       "ipucu": "Tencerede önce lezzet tabanı hazırlanır."
+      },
+      {
+       "id": "pisir",
+       "ikon": "🔥",
+       "metin": "Mercimeği ve sıcak suyu ekleyip yumuşayana kadar pişir",
+       "neden": "Kırmızı mercimek pişince dağılır; çorbanın kıvamı buradan gelir.",
+       "ipucu": "Lezzet tabanı hazır; asıl malzemeyi ekle."
+      },
+      {
+       "id": "blender",
+       "ikon": "🌀",
+       "metin": "Çorbayı blenderdan geçirip pürüzsüz yap",
+       "neden": "Pürüzsüz kıvam, lokanta çorbasının imzasıdır.",
+       "ipucu": "Pişmiş çorbanın kıvamını düzeltmen gerekiyor."
+      },
+      {
+       "id": "tat",
+       "ikon": "🥄",
+       "metin": "Tuzunu, baharatını ayarla, temiz kaşıkla tadına bak",
+       "neden": "Tuz en sonda ayarlanır; tadım her seferinde temiz kaşıkla yapılır.",
+       "ipucu": "Son adım: lezzeti kontrol et."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Bilgi kartı: Mercimek çorbası",
+      "maddeler": [
+       "Önce hazırlık: malzeme tartılır, tezgâha dizilir.",
+       "Lezzet tabanı: kavrulmuş soğan ve havuç.",
+       "Tuz sona yakın ayarlanır.",
+       "Servise hazır çorba 63 °C üstünde tutulur."
+      ]
+     }
+    },
+    {
+     "id": "c6-ogle",
+     "sablon": "senaryo",
+     "ikon": "🍽️",
+     "baslik": "Yoğun öğle servisi",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Saat 12.30, salon dolu. Şef seni çorba ve salata bölümüne koydu.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Az önce çiğ tavuk doğradığın tahtada şimdi salata için domates doğraman gerekiyor. Ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Ayrı, temiz bir tahta ve bıçak alırım",
+         "dogru": true,
+         "aciklama": "Çiğ etten çiğ yenecek gıdaya bulaşma en ciddi hijyen hatalarındandır."
+        },
+        {
+         "metin": "Tahtayı peçeteyle silip devam ederim",
+         "dogru": false,
+         "aciklama": "Silmek mikrobu temizlemez; tahta yıkanıp dezenfekte edilmeli ya da değiştirilmeli."
+        },
+        {
+         "metin": "Tahtayı ters çevirip öbür yüzünde doğrarım",
+         "dogru": false,
+         "aciklama": "Tavuk suyu tahtanın altına da bulaşmış olabilir; risk sürer."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Garson: \"3 numaralı masada fıstık alerjisi olan bir müşteri var, salata güvenli mi?\"",
+       "secenekler": [
+        {
+         "metin": "Tarifteki malzemelere ve sosa bakar, şefe danışırım",
+         "dogru": true,
+         "aciklama": "Alerjen sorusuna tahminle değil, tarife ve şefe bakarak cevap verilir."
+        },
+        {
+         "metin": "\"Fıstık görmüyorum, güvenli\" derim",
+         "dogru": false,
+         "aciklama": "Sos ya da süslemede gizli alerjen olabilir. Göz kararı yetmez."
+        },
+        {
+         "metin": "Fıstıkları elle ayıklayıp gönderirim",
+         "dogru": false,
+         "aciklama": "Ayıklamak bulaşmayı gidermez; tabak baştan, temiz aletlerle hazırlanmalı."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Çorba tenceresinden ölçtüğünde sıcaklık 50 °C çıktı. Servis devam ediyor.",
+       "secenekler": [
+        {
+         "metin": "Çorbayı hemen kaynayana kadar ısıtır, sonra 63 °C üstünde tutarım",
+         "dogru": true,
+         "aciklama": "50 °C tehlikeli aralıkta. Yeniden iyice ısıtılıp sıcak tutulmalı."
+        },
+        {
+         "metin": "Biraz ılık olsun, müşteri yakılmasın",
+         "dogru": false,
+         "aciklama": "Ilık çorba mikropların en hızlı çoğaldığı aralıkta kalır."
+        },
+        {
+         "metin": "Üstüne sıcak su ekleyip servise devam ederim",
+         "dogru": false,
+         "aciklama": "Hem kıvam bozulur hem de çorbanın hepsi yeterince ısınmaz."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Servis kuralları",
+      "maddeler": [
+       "Çiğ ve pişmiş için ayrı tahta, ayrı bıçak.",
+       "Alerjen sorusunda tarife ve şefe bak.",
+       "Sıcak yemek 63 °C üstünde."
+      ]
+     }
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Çırak sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Mikroplar en hızlı hangi sıcaklık aralığında çoğalır?",
+       "secenekler": [
+        "0–4 °C",
+        "Yaklaşık 5–63 °C",
+        "−18 °C altı",
+        "100 °C üstü"
+       ],
+       "dogru": 1,
+       "aciklama": "Bu aralığa tehlikeli bölge denir."
+      },
+      {
+       "soru": "Buzdolabı kaç derecede olmalı?",
+       "secenekler": [
+        "0–4 °C",
+        "8–12 °C",
+        "−18 °C",
+        "15 °C"
+       ],
+       "dogru": 0,
+       "aciklama": "0–4 °C mikropların çoğalmasını yavaşlatır."
+      },
+      {
+       "soru": "Çiğ et buzdolabında hangi rafa konur?",
+       "secenekler": [
+        "En üst",
+        "Orta",
+        "En alt",
+        "Kapıya"
+       ],
+       "dogru": 2,
+       "aciklama": "Suyu damlarsa altında başka gıda olmasın diye."
+      },
+      {
+       "soru": "Donmuş et nasıl çözdürülür?",
+       "secenekler": [
+        "Tezgâhta bekleterek",
+        "Buzdolabında",
+        "Güneşte",
+        "Sıcak suda saatlerce"
+       ],
+       "dogru": 1,
+       "aciklama": "Buzdolabında çözdürmek et tehlikeli aralığa girmeden çözülmesini sağlar."
+      },
+      {
+       "soru": "Jülyen kesim nasıl görünür?",
+       "secenekler": [
+        "Minik küp",
+        "İnce uzun şerit",
+        "Yuvarlak dilim",
+        "Kaba parça"
+       ],
+       "dogru": 1,
+       "aciklama": "Kibrit çöpü gibi ince uzun şeritler."
+      },
+      {
+       "soru": "Düşen bıçağa ne yapılır?",
+       "secenekler": [
+        "Havada tutulur",
+        "Ayakla durdurulur",
+        "Bırakılır, düşünce alınır",
+        "Tekmelenir"
+       ],
+       "dogru": 2,
+       "aciklama": "Düşen bıçak asla tutulmaya çalışılmaz."
+      },
+      {
+       "soru": "Servise hazır sıcak yemek en az kaç derecede tutulur?",
+       "secenekler": [
+        "40 °C",
+        "50 °C",
+        "63 °C",
+        "30 °C"
+       ],
+       "dogru": 2,
+       "aciklama": "63 °C üstü güvenli sıcak tutma sıcaklığıdır."
+      },
+      {
+       "soru": "FIFO ne demektir?",
+       "secenekler": [
+        "İlk giren ilk çıkar",
+        "En taze önce kullanılır",
+        "Her şey dondurulur",
+        "Son giren ilk çıkar"
+       ],
+       "dogru": 0,
+       "aciklama": "Eski stok önce kullanılır, bozulma önlenir."
+      }
+     ]
+    }
+   ],
+   "acikBaslar": true
+  },
+  {
+   "ad": "Kalfa",
+   "hedefXp": 305,
+   "rozet": {
+    "ad": "Kalfa Aşçı",
+    "ikon": "🍳"
+   },
+   "sonraki": "Usta kademesi açıldı: ana soslar, mutfak ekibi ve komi yetiştirme.",
+   "gorevler": [
+    {
+     "id": "k1-pisirme",
+     "sablon": "bilgi",
+     "ikon": "🍳",
+     "baslik": "Pişirme yöntemleri",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔥",
+       "baslik": "Kuru ısı",
+       "metin": "Su kullanılmadan, sıcak hava, yağ ya da ateşle pişirilir: ızgara, fırın, sote, kızartma.",
+       "terim": "kuru ısı"
+      },
+      {
+       "ikon": "💧",
+       "baslik": "Nemli ısı",
+       "metin": "Su ya da buharla pişirilir: haşlama, buharda pişirme, poşe.",
+       "terim": "nemli ısı"
+      },
+      {
+       "ikon": "🍲",
+       "baslik": "Karma yöntem",
+       "metin": "Önce yüksek ateşte kızartılır, sonra az sıvıyla kapağı kapalı ağır ağır pişirilir. Sert etler yumuşar.",
+       "terim": "braize"
+      },
+      {
+       "ikon": "🟤",
+       "baslik": "Kızarma tepkimesi",
+       "metin": "Et ve sebze yüksek ateşte kızarınca kahverengileşir, yeni tat ve koku oluşur. Tava iyice ısınmadan malzeme konmaz.",
+       "terim": "Maillard tepkimesi"
+      },
+      {
+       "ikon": "🥚",
+       "baslik": "Poşe",
+       "metin": "Kaynamayan, hafifçe titreşen suda nazikçe pişirme. Yumurta ve balık için.",
+       "terim": "poşe"
+      },
+      {
+       "ikon": "🌡️",
+       "baslik": "Termometre",
+       "metin": "Etin pişip pişmediği gözle değil, iç sıcaklığı ölçülerek anlaşılır. Tavuk ve kıymanın içi en az 75 °C olmalı.",
+       "terim": "iç sıcaklık"
+      }
+     ]
+    },
+    {
+     "id": "k2-sicaklik",
+     "sablon": "zamanlama",
+     "ikon": "🌡️",
+     "baslik": "Doğru anda durdur",
+     "temelXp": 30,
+     "yildizBasinaXp": 15,
+     "aciklama": "Gösterge yükseliyor. Hedef aralığa girince DURDUR'a bas. Erken ya da geç kalırsan yemek bozulur.",
+     "turlar": [
+      {
+       "ad": "Kızartma yağını ısıt",
+       "not": "Patates kızartılacak.",
+       "birim": "°C",
+       "baslangic": 20,
+       "bitis": 230,
+       "hedef": [
+        170,
+        180
+       ],
+       "tehlike": 200,
+       "tehlikeMetni": "Yağ dumanlanıyor, yanmaya başladı!",
+       "sure": 5,
+       "erkenMetni": "Yağ yeterince sıcak değil; patates yağ çeker, yumuşak olur.",
+       "gecMetni": "Yağ fazla ısındı; dışı yanar, içi çiğ kalır."
+      },
+      {
+       "ad": "Tavuğun iç sıcaklığı",
+       "not": "Termometre tavuk göğsünün en kalın yerinde.",
+       "birim": "°C",
+       "baslangic": 20,
+       "bitis": 100,
+       "hedef": [
+        75,
+        80
+       ],
+       "tehlike": 90,
+       "tehlikeMetni": "Et kurudu, lif lif oldu.",
+       "sure": 4,
+       "erkenMetni": "Tavuk az pişmiş; içi en az 75 °C olmalı. Güvenli değil.",
+       "gecMetni": "Fazla pişti; tavuk kurur ve sertleşir."
+      },
+      {
+       "ad": "Poşe yumurta suyu",
+       "not": "Su kaynamadan, hafifçe titreşmeli.",
+       "birim": "°C",
+       "baslangic": 20,
+       "bitis": 100,
+       "hedef": [
+        80,
+        90
+       ],
+       "tehlike": 98,
+       "tehlikeMetni": "Su fokurdadı; yumurta dağılır.",
+       "sure": 3,
+       "erkenMetni": "Su soğuk; yumurta tutmadan dağılır.",
+       "gecMetni": "Su kaynamaya yaklaştı; yumurta sertleşir, dağılabilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Sıcaklık ustalığı",
+      "maddeler": [
+       "Kızartma yağı yaklaşık 170–180 °C.",
+       "Tavuk ve kıymanın içi en az 75 °C.",
+       "Poşe: su titreşir ama kaynamaz.",
+       "Göz değil, termometre karar verir."
+      ]
+     }
+    },
+    {
+     "id": "k3-alerjen",
+     "sablon": "soru",
+     "ikon": "⚠️",
+     "baslik": "Alerjenler",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Türkiye'de lokantalarda menüde hangi alerjenlerin bildirilmesi zorunludur?",
+       "secenekler": [
+        "Yalnızca fıstık",
+        "Gıda Kodeksi'ndeki 14 alerjen",
+        "Hiçbiri",
+        "Yalnızca gluten ve süt"
+       ],
+       "dogru": 1,
+       "aciklama": "Türk Gıda Kodeksi Etiketleme Yönetmeliği'ndeki 14 alerjen menü, tahta ya da broşürle bildirilir."
+      },
+      {
+       "soru": "Hangisi 14 alerjenden biri değildir?",
+       "secenekler": [
+        "Susam",
+        "Kereviz",
+        "Domates",
+        "Hardal"
+       ],
+       "dogru": 2,
+       "aciklama": "Domates listede yoktur. Susam, kereviz ve hardal vardır."
+      },
+      {
+       "soru": "Bulgur pilavında hangi alerjen vardır?",
+       "secenekler": [
+        "Gluten",
+        "Süt",
+        "Yumurta",
+        "Balık"
+       ],
+       "dogru": 0,
+       "aciklama": "Bulgur buğdaydan yapılır; buğday gluten içerir."
+      },
+      {
+       "soru": "Beşamel sosta hangi alerjenler bulunur?",
+       "secenekler": [
+        "Yalnızca süt",
+        "Süt ve gluten (un)",
+        "Yumurta",
+        "Hiçbiri"
+       ],
+       "dogru": 1,
+       "aciklama": "Beşamel süt, tereyağı ve undan yapılır."
+      },
+      {
+       "soru": "Alerjisi olan müşterinin yemeği nasıl hazırlanır?",
+       "secenekler": [
+        "Normal tabaktan alerjen ayıklanır",
+        "Temiz alet ve yüzeyle ayrı hazırlanır",
+        "Ne olursa olsun reddedilir",
+        "Garsona bırakılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Ayıklamak yetmez; bulaşmayı önlemek için ayrı ve temiz hazırlanır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Alerjen kuralı",
+      "maddeler": [
+       "14 alerjen menüde bildirilir.",
+       "Gizli alerjen: sos, un, süsleme.",
+       "Ayıklamak değil, ayrı hazırlamak.",
+       "Emin değilsen şefe sor."
+      ]
+     }
+    },
+    {
+     "id": "k4-aksam",
+     "sablon": "senaryo",
+     "ikon": "🌙",
+     "baslik": "Akşam servisi",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Cuma akşamı, tüm masalar dolu. Sen sıcak bölümdesin.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Tavaya etleri koydun ama tava yeterince ısınmamış, et kızarmıyor, suyunu bırakıyor. Ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Tavayı iyice ısıtır, etleri az az koyarım",
+         "dogru": true,
+         "aciklama": "Kızgın tava ve az malzeme kızarmayı sağlar; kalabalık tava haşlar."
+        },
+        {
+         "metin": "Hepsini bir kerede tavaya koyarım, zamanla kızarır",
+         "dogru": false,
+         "aciklama": "Tava soğur, et haşlanmış gibi olur."
+        },
+        {
+         "metin": "Kapağını kapatırım",
+         "dogru": false,
+         "aciklama": "Kapak buharı hapseder; et kızarmaz, haşlanır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Şef: \"7 numaraya iki tavuk sote, ne durumda?\" Termometre tavukta 68 °C gösteriyor.",
+       "secenekler": [
+        {
+         "metin": "\"Bir dakika şef, 75 °C'yi bekliyorum\" derim",
+         "dogru": true,
+         "aciklama": "Az pişmiş tavuk tehlikelidir. Doğru bilgiyi vermek ve beklemek gerekir."
+        },
+        {
+         "metin": "Dışı kızarmış, yeterli diye gönderirim",
+         "dogru": false,
+         "aciklama": "Dış görünüş iç sıcaklığı göstermez."
+        },
+        {
+         "metin": "\"Hazır şef\" deyip sessizce tavayı bırakırım",
+         "dogru": false,
+         "aciklama": "Şefe yanlış bilgi vermek tüm servisi aksatır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kızartma yağına su sıçradı, yağ alev aldı!",
+       "secenekler": [
+        {
+         "metin": "Ocağı kapatıp kapağı ya da yangın battaniyesini üstüne örterim",
+         "dogru": true,
+         "aciklama": "Yağ yangını havasız bırakılarak söndürülür."
+        },
+        {
+         "metin": "Üstüne bir kova su dökerim",
+         "dogru": false,
+         "aciklama": "Su yağ yangınını patlatır gibi büyütür. Asla!"
+        },
+        {
+         "metin": "Tavayı alıp lavaboya koşarım",
+         "dogru": false,
+         "aciklama": "Yanan yağı taşımak yangını yayar ve yanığa yol açar."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Sıcak bölüm",
+      "maddeler": [
+       "Tava kızgın, malzeme az.",
+       "Tavuk: iç sıcaklık en az 75 °C.",
+       "Yağ yangınına asla su dökülmez.",
+       "Şefe her zaman doğruyu söyle."
+      ]
+     }
+    },
+    {
+     "id": "k5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Kalfa sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Hangisi nemli ısı yöntemidir?",
+       "secenekler": [
+        "Izgara",
+        "Haşlama",
+        "Fırında kızartma",
+        "Sote"
+       ],
+       "dogru": 1,
+       "aciklama": "Haşlamada su kullanılır."
+      },
+      {
+       "soru": "Tavuğun içi en az kaç dereceye ulaşmalı?",
+       "secenekler": [
+        "50 °C",
+        "63 °C",
+        "75 °C",
+        "100 °C"
+       ],
+       "dogru": 2,
+       "aciklama": "En az 75 °C güvenli kabul edilir."
+      },
+      {
+       "soru": "Kızartma yağı yaklaşık kaç derecede olmalı?",
+       "secenekler": [
+        "100 °C",
+        "130 °C",
+        "170–180 °C",
+        "250 °C"
+       ],
+       "dogru": 2,
+       "aciklama": "Daha düşükse yağ çeker, daha yüksekse yanar."
+      },
+      {
+       "soru": "Et neden kalabalık tavada kızarmaz?",
+       "secenekler": [
+        "Yağ azalır",
+        "Tava soğur, et suyunu bırakır",
+        "Tuz eksik kalır",
+        "Et çok kalındır"
+       ],
+       "dogru": 1,
+       "aciklama": "Tava ısısını kaybeder, et haşlanır."
+      },
+      {
+       "soru": "Yağ yangını nasıl söndürülür?",
+       "secenekler": [
+        "Suyla",
+        "Kapak ya da yangın battaniyesiyle örterek",
+        "Üfleyerek",
+        "Tuz ve unla karıştırarak"
+       ],
+       "dogru": 1,
+       "aciklama": "Havasız kalan yangın söner."
+      },
+      {
+       "soru": "Poşe yumurta için su nasıl olmalı?",
+       "secenekler": [
+        "Fokur fokur kaynamalı",
+        "Hafif titreşmeli, kaynamamalı",
+        "Soğuk olmalı",
+        "Ilık olmalı"
+       ],
+       "dogru": 1,
+       "aciklama": "Kaynayan su yumurtayı dağıtır."
+      },
+      {
+       "soru": "Türkiye'de menüde kaç alerjen bildirilir?",
+       "secenekler": [
+        "5",
+        "8",
+        "14",
+        "20"
+       ],
+       "dogru": 2,
+       "aciklama": "Türk Gıda Kodeksi'ndeki 14 alerjen."
+      },
+      {
+       "soru": "Braize nedir?",
+       "secenekler": [
+        "Sadece fırında pişirme",
+        "Önce kızartıp sonra az sıvıda ağır ağır pişirme",
+        "Buharda pişirme",
+        "Çiğ servis"
+       ],
+       "dogru": 1,
+       "aciklama": "Karma yöntemdir, sert etleri yumuşatır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Usta",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Usta Aşçı",
+    "ikon": "🏆"
+   },
+   "sonraki": "İşletme sahibi kademesi açıldı: maliyet, fiyat, denetim ve müşteri.",
+   "gorevler": [
+    {
+     "id": "u1-soslar",
+     "sablon": "bilgi",
+     "ikon": "🥣",
+     "baslik": "Ana soslar",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🧈",
+       "baslik": "Meyane",
+       "metin": "Eşit miktarda tereyağı ve un birlikte kavrulur. Birçok sosun koyulaştırıcısıdır.",
+       "terim": "roux"
+      },
+      {
+       "ikon": "🥛",
+       "baslik": "Beşamel",
+       "metin": "Meyaneye süt eklenerek yapılır. Fırın makarna ve musakkanın sosudur.",
+       "terim": "béchamel"
+      },
+      {
+       "ikon": "🍗",
+       "baslik": "Velute",
+       "metin": "Meyaneye tavuk, balık ya da dana suyu eklenerek yapılan açık renkli sos.",
+       "terim": "velouté"
+      },
+      {
+       "ikon": "🥩",
+       "baslik": "Esponyol",
+       "metin": "Kavrulmuş kemik suyu ve koyu meyaneyle yapılan kahverengi sos. Demi-glace bundan türer.",
+       "terim": "espagnole"
+      },
+      {
+       "ikon": "🍅",
+       "baslik": "Domates sos",
+       "metin": "Domates, aromatik sebzeler ve otlarla pişirilen sos.",
+       "terim": "sauce tomate"
+      },
+      {
+       "ikon": "🍋",
+       "baslik": "Holandez",
+       "metin": "Yumurta sarısı ile eritilmiş tereyağının çırpılarak birleştirildiği emülsiyon sos.",
+       "terim": "hollandaise"
+      }
+     ]
+    },
+    {
+     "id": "u2-besamel",
+     "sablon": "siralama",
+     "ikon": "🥛",
+     "baslik": "Beşamel sos yap",
+     "aciklama": "Fırın makarna için beşamel sos hazırlıyorsun. Doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "eritt",
+       "ikon": "🧈",
+       "metin": "Tereyağını tencerede erit",
+       "neden": "Meyanenin yağ kısmı hazırlanır.",
+       "ipucu": "Önce yağ."
+      },
+      {
+       "id": "un",
+       "ikon": "🌾",
+       "metin": "Unu ekle, kokusu gidene kadar kavur",
+       "neden": "Çiğ un tadı gider; buna meyane denir.",
+       "ipucu": "Yağa koyulaştırıcı ekle."
+      },
+      {
+       "id": "sut",
+       "ikon": "🥛",
+       "metin": "Sütü azar azar ekle, sürekli çırp",
+       "neden": "Yavaş eklenen süt ve çırpma topaklanmayı önler.",
+       "ipucu": "Meyane hazır; sıvıyı ekle."
+      },
+      {
+       "id": "koyulas",
+       "ikon": "🔥",
+       "metin": "Kısık ateşte karıştırarak koyulaşana kadar pişir",
+       "neden": "Sos kaşığın sırtını kaplayacak kıvama gelir.",
+       "ipucu": "Kıvamı ateşte bul."
+      },
+      {
+       "id": "tat",
+       "ikon": "🧂",
+       "metin": "Tuz, karabiber ve muskatla tatlandır",
+       "neden": "Tatlandırma kıvam oturunca yapılır.",
+       "ipucu": "Son dokunuş."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 1
+     },
+     "bilgiKarti": {
+      "baslik": "Beşamelin sırrı",
+      "maddeler": [
+       "Meyane: eşit tereyağı ve un.",
+       "Süt azar azar, çırparak.",
+       "Kıvam: kaşığın sırtını kaplar.",
+       "Topak olursa süz."
+      ]
+     }
+    },
+    {
+     "id": "u3-brigad",
+     "sablon": "siniflandirma",
+     "ikon": "👨‍🍳",
+     "baslik": "Kim ne yapar?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Mutfak ekibindeki görevleri doğru kişiye ver.",
+     "kategoriler": [
+      {
+       "id": "sef",
+       "ad": "Şef",
+       "ikon": "👨‍🍳",
+       "not": "mutfağın yöneticisi"
+      },
+      {
+       "id": "sous",
+       "ad": "Şef yardımcısı",
+       "ikon": "🧑‍🍳",
+       "not": "sous şef"
+      },
+      {
+       "id": "bolum",
+       "ad": "Bölüm şefi",
+       "ikon": "🍳",
+       "not": "chef de partie"
+      },
+      {
+       "id": "komi",
+       "ad": "Komi",
+       "ikon": "🧑",
+       "not": "yardımcı aşçı"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Menüyü belirler",
+       "ikon": "📋",
+       "kategori": "sef",
+       "aciklama": "Menü ve mutfağın genel yönü şefin işidir."
+      },
+      {
+       "ad": "Maliyet ve satın almayı yönetir",
+       "ikon": "💰",
+       "kategori": "sef",
+       "aciklama": "Bütçe ve tedarikçiler şefin sorumluluğundadır."
+      },
+      {
+       "ad": "Şef yokken mutfağı yönetir",
+       "ikon": "🗝️",
+       "kategori": "sous",
+       "aciklama": "Şefin sağ kolu, onun yerine geçer."
+      },
+      {
+       "ad": "Servis sırasında siparişleri bölümlere dağıtır",
+       "ikon": "📣",
+       "kategori": "sous",
+       "aciklama": "Servisin akışını şef yardımcısı yönetir."
+      },
+      {
+       "ad": "Sıcak sos bölümünün sorumlusudur",
+       "ikon": "🥣",
+       "kategori": "bolum",
+       "aciklama": "Her bölümün başında bir bölüm şefi vardır."
+      },
+      {
+       "ad": "Kendi bölümünün hazırlık listesini çıkarır",
+       "ikon": "📝",
+       "kategori": "bolum",
+       "aciklama": "Bölüm şefi kendi tezgâhının hazırlığını planlar."
+      },
+      {
+       "ad": "Sebze soyar, doğrar",
+       "ikon": "🥕",
+       "kategori": "komi",
+       "aciklama": "Hazırlık işleri komiyle başlar."
+      },
+      {
+       "ad": "Bölüm şefine yardım eder, işi öğrenir",
+       "ikon": "🤝",
+       "kategori": "komi",
+       "aciklama": "Komi mesleği iş başında öğrenir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Mutfak brigadı",
+      "maddeler": [
+       "Şef: menü, ekip, maliyet.",
+       "Şef yardımcısı: servis ve düzen.",
+       "Bölüm şefi: kendi bölümü.",
+       "Komi: hazırlık ve öğrenme."
+      ]
+     }
+    },
+    {
+     "id": "u4-bilgi",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "Usta bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Meyane nedir?",
+       "secenekler": [
+        "Süt ve yumurta",
+        "Eşit tereyağı ve unun kavrulması",
+        "Et suyu",
+        "Domates püresi"
+       ],
+       "dogru": 1,
+       "aciklama": "Meyane birçok sosu koyulaştırır."
+      },
+      {
+       "soru": "Hangi sos bir emülsiyondur?",
+       "secenekler": [
+        "Beşamel",
+        "Holandez",
+        "Domates sos",
+        "Velute"
+       ],
+       "dogru": 1,
+       "aciklama": "Holandez, yumurta sarısı ve tereyağının çırpılarak birleşmesidir."
+      },
+      {
+       "soru": "Sos 'kaşığın sırtını kaplıyor'. Bu ne anlama gelir?",
+       "secenekler": [
+        "Sos yanmış",
+        "Doğru kıvama gelmiş",
+        "Çok sulu",
+        "Topaklanmış"
+       ],
+       "dogru": 1,
+       "aciklama": "Mutfakta kıvam böyle test edilir."
+      },
+      {
+       "soru": "Velute hangi sıvıyla yapılır?",
+       "secenekler": [
+        "Süt",
+        "Açık renkli et, tavuk ya da balık suyu",
+        "Domates suyu",
+        "Su"
+       ],
+       "dogru": 1,
+       "aciklama": "Beşamelde süt, velutede açık renkli et suyu kullanılır."
+      },
+      {
+       "soru": "Standart reçete neden kullanılır?",
+       "secenekler": [
+        "Şef öyle istediği için",
+        "Her tabağın aynı tat, porsiyon ve maliyette çıkması için",
+        "Müşteri görsün diye",
+        "Zorunlu olduğu için"
+       ],
+       "dogru": 1,
+       "aciklama": "Standart reçete kaliteyi ve maliyeti sabit tutar."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Usta notu",
+      "maddeler": [
+       "Meyane: tereyağı + un.",
+       "Emülsiyon: yağ ve suyun birleşmesi.",
+       "Kıvam testi: kaşığın sırtı.",
+       "Standart reçete her tabakta aynı sonucu verir."
+      ]
+     }
+    },
+    {
+     "id": "u5-komi",
+     "sablon": "senaryo",
+     "ikon": "🤝",
+     "baslik": "Komi yetiştir",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Bugün mutfağa yeni bir komi geldi. Onu yetiştirmek sana verildi.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Komi parmaklarını düz uzatarak domates doğruyor.",
+       "secenekler": [
+        {
+         "metin": "Durdurup pençe tutuşunu gösteririm, birlikte yavaş deneriz",
+         "dogru": true,
+         "aciklama": "Doğrusunu göstermek ve birlikte yapmak en kalıcı öğretimdir."
+        },
+        {
+         "metin": "\"Öyle değil!\" deyip bıçağı elinden alırım",
+         "dogru": false,
+         "aciklama": "Azarlamak öğretmez; komi korkar ve hata saklar."
+        },
+        {
+         "metin": "Görmezden gelirim, zamanla öğrenir",
+         "dogru": false,
+         "aciklama": "Zamanla parmağını keser. Güvenlik hemen düzeltilir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Komi gelen tavuk kolisini 2 saattir tezgâhta unutmuş.",
+       "secenekler": [
+        {
+         "metin": "Ürünün kullanılıp kullanılamayacağını şefle birlikte değerlendirir, komiye soğuk zinciri anlatırım",
+         "dogru": true,
+         "aciklama": "Tehlikeli aralıkta uzun bekleyen ürün atılabilir. Karar şefle verilir, kural öğretilir."
+        },
+        {
+         "metin": "Hemen buzdolabına koyar, kimseye söylemem",
+         "dogru": false,
+         "aciklama": "Riskli ürün gizlice kullanılırsa müşteri zehirlenebilir."
+        },
+        {
+         "metin": "Komiye bağırırım",
+         "dogru": false,
+         "aciklama": "Bağırmak sorunu çözmez; kuralı anlatmak çözer."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Komi: \"Şef, bu sosu neden azar azar ekliyoruz?\"",
+       "secenekler": [
+        {
+         "metin": "Nedenini anlatırım: topaklanmayı önlemek için",
+         "dogru": true,
+         "aciklama": "Nedenini bilen komi kuralı unutmaz."
+        },
+        {
+         "metin": "\"Öyle yapılır, sorma\" derim",
+         "dogru": false,
+         "aciklama": "Soru soran komi iyi komidir; merakı söndürme."
+        },
+        {
+         "metin": "Sonra anlatırım deyip unuturum",
+         "dogru": false,
+         "aciklama": "Öğrenme anı kaçar."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İyi usta",
+      "maddeler": [
+       "Göster, birlikte yap, sonra izle.",
+       "Güvenlik hatası hemen düzeltilir.",
+       "Nedenini anlat.",
+       "Bağırma, öğret."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Usta sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Beşamel hangi malzemeyle yapılır?",
+       "secenekler": [
+        "Et suyu",
+        "Süt",
+        "Domates",
+        "Su"
+       ],
+       "dogru": 1,
+       "aciklama": "Meyane ve süt."
+      },
+      {
+       "soru": "Meyane neden kavrulur?",
+       "secenekler": [
+        "Rengi koyulaşsın diye",
+        "Çiğ un tadı gitsin diye",
+        "Yağ azalsın diye",
+        "Tuz eriysin diye"
+       ],
+       "dogru": 1,
+       "aciklama": "Kavrulmamış un sosa çiğ tat verir."
+      },
+      {
+       "soru": "Servis sırasında siparişleri bölümlere kim dağıtır?",
+       "secenekler": [
+        "Komi",
+        "Garson",
+        "Şef yardımcısı",
+        "Bulaşıkçı"
+       ],
+       "dogru": 2,
+       "aciklama": "Sous şef servisi yönetir."
+      },
+      {
+       "soru": "Holandez sosun temeli nedir?",
+       "secenekler": [
+        "Un ve süt",
+        "Yumurta sarısı ve tereyağı",
+        "Domates ve soğan",
+        "Et suyu ve un"
+       ],
+       "dogru": 1,
+       "aciklama": "Bir emülsiyon sostur."
+      },
+      {
+       "soru": "Sosa süt neden azar azar eklenir?",
+       "secenekler": [
+        "Daha az süt harcamak için",
+        "Topaklanmayı önlemek için",
+        "Daha hızlı pişsin diye",
+        "Rengi açılsın diye"
+       ],
+       "dogru": 1,
+       "aciklama": "Yavaş eklenir, sürekli çırpılır."
+      },
+      {
+       "soru": "Tezgâhta 2 saat kalan çiğ tavukla ne yapılır?",
+       "secenekler": [
+        "Gizlice kullanılır",
+        "Şefle değerlendirilir; risk varsa atılır",
+        "Dondurulur",
+        "Hemen pişirilip servis edilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Tehlikeli aralıkta bekleyen ürün risklidir."
+      },
+      {
+       "soru": "Esponyol sos hangi renktedir?",
+       "secenekler": [
+        "Beyaz",
+        "Açık sarı",
+        "Kahverengi",
+        "Kırmızı"
+       ],
+       "dogru": 2,
+       "aciklama": "Kavrulmuş kemik suyundan gelen koyu renk."
+      },
+      {
+       "soru": "Komiye en iyi nasıl öğretilir?",
+       "secenekler": [
+        "Azarlayarak",
+        "Gösterip birlikte yaparak",
+        "Kitap vererek",
+        "Hiç karışmayarak"
+       ],
+       "dogru": 1,
+       "aciklama": "Göster, birlikte yap, sonra izle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "İşletme sahibi",
+   "hedefXp": 315,
+   "rozet": {
+    "ad": "Lokanta Sahibi",
+    "ikon": "🏪"
+   },
+   "sonraki": "Aşçılık mesleğinin tüm kademelerini bitirdin!",
+   "gorevler": [
+    {
+     "id": "i1-acilis",
+     "sablon": "bilgi",
+     "ikon": "🏪",
+     "baslik": "Lokanta açmanın temelleri",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📄",
+       "baslik": "İzinler",
+       "metin": "Belediyeden işyeri açma ve çalışma ruhsatı, Tarım ve Orman İl Müdürlüğünden gıda işletmesi kaydı alınır.",
+       "terim": "ruhsat ve kayıt"
+      },
+      {
+       "ikon": "🧼",
+       "baslik": "Hijyen belgeleri",
+       "metin": "Gıdayla çalışan herkesin hijyen eğitimi belgesi olmalıdır; denetimde istenir.",
+       "terim": "hijyen eğitimi"
+      },
+      {
+       "ikon": "⚠️",
+       "baslik": "Alerjen bildirimi",
+       "metin": "Menüde ya da görünür bir yerde 14 alerjen bildirilir.",
+       "terim": "alerjen bildirimi"
+      },
+      {
+       "ikon": "📋",
+       "baslik": "Standart reçete",
+       "metin": "Her yemeğin malzemesi grama kadar yazılır. Böylece tat ve maliyet sabit kalır.",
+       "terim": "standart reçete"
+      },
+      {
+       "ikon": "📦",
+       "baslik": "Stok kontrolü",
+       "metin": "İlk giren ilk çıkar kuralıyla stok döndürülür, israf ve bozulma azaltılır.",
+       "terim": "FIFO"
+      },
+      {
+       "ikon": "💰",
+       "baslik": "Maliyet",
+       "metin": "Bir tabağın malzeme maliyeti genellikle satış fiyatının yaklaşık %25–35'i civarında tutulur. Kalanı kira, personel, enerji, vergi ve kâra gider.",
+       "terim": "gıda maliyeti"
+      }
+     ]
+    },
+    {
+     "id": "i2-maliyet",
+     "sablon": "hesap",
+     "ikon": "🧮",
+     "baslik": "Tabak maliyeti",
+     "temelXp": 40,
+     "yildizBasinaXp": 15,
+     "aciklama": "Her tabağın malzeme maliyetini bul, sonra fiyatını belirle. Rakamlar örnektir; gerçek fiyatlar değişir.",
+     "hedefOran": [
+      25,
+      35
+     ],
+     "kural": "Lokantalarda sık kullanılan bir kural: bir tabağın malzeme maliyeti satış fiyatının yaklaşık %25–35'i olmalı. Kalan para kira, personel, enerji, vergi ve kâra gider.",
+     "urunler": [
+      {
+       "ad": "Mercimek çorbası",
+       "ikon": "🍲",
+       "kalemler": [
+        [
+         "Kırmızı mercimek (60 g)",
+         4.8
+        ],
+        [
+         "Soğan, havuç, patates",
+         3.0
+        ],
+        [
+         "Tereyağı ve yağ",
+         6.0
+        ],
+        [
+         "Baharat, tuz, limon",
+         2.5
+        ],
+        [
+         "Ekmek",
+         5.0
+        ]
+       ]
+      },
+      {
+       "ad": "Tavuk sote ve pilav",
+       "ikon": "🍗",
+       "kalemler": [
+        [
+         "Tavuk but (200 g)",
+         36.0
+        ],
+        [
+         "Biber, domates, soğan",
+         8.0
+        ],
+        [
+         "Yağ, salça, baharat",
+         6.0
+        ],
+        [
+         "Pirinç pilavı",
+         8.3
+        ]
+       ]
+      },
+      {
+       "ad": "Sütlaç",
+       "ikon": "🍮",
+       "kalemler": [
+        [
+         "Süt (200 ml)",
+         8.0
+        ],
+        [
+         "Pirinç ve nişasta",
+         2.6
+        ],
+        [
+         "Şeker",
+         1.1
+        ],
+        [
+         "Kase ve tarçın",
+         1.5
+        ]
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Fiyat nasıl belirlenir?",
+      "maddeler": [
+       "Önce standart reçeteyle maliyeti hesapla.",
+       "Malzeme, fiyatın yaklaşık %25–35'i olsun.",
+       "Kira, personel ve enerjiyi unutma.",
+       "Fiyatlar değiştikçe maliyeti yeniden hesapla."
+      ]
+     }
+    },
+    {
+     "id": "i3-isbilgi",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "İşletme bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Lokanta açmak için gıda işletmesi kaydı nereden alınır?",
+       "secenekler": [
+        "Noterden",
+        "Tarım ve Orman İl Müdürlüğünden",
+        "Bankadan",
+        "Muhtarlıktan"
+       ],
+       "dogru": 1,
+       "aciklama": "Gıda işletmeleri Tarım ve Orman Bakanlığı il müdürlüklerine kayıt olur."
+      },
+      {
+       "soru": "Gıda maliyeti oranı neyi gösterir?",
+       "secenekler": [
+        "Personel sayısını",
+        "Malzeme maliyetinin satış fiyatına oranını",
+        "Kira tutarını",
+        "Masa sayısını"
+       ],
+       "dogru": 1,
+       "aciklama": "Örneğin 30 TL malzemeli tabak 100 TL'ye satılırsa oran %30'dur."
+      },
+      {
+       "soru": "Standart reçetenin işletmeye en büyük faydası nedir?",
+       "secenekler": [
+        "Daha uzun menü",
+        "Sabit kalite ve maliyet",
+        "Daha az personel",
+        "Reklam"
+       ],
+       "dogru": 1,
+       "aciklama": "Her tabak aynı tat ve aynı maliyetle çıkar."
+      },
+      {
+       "soru": "Menüde alerjen bildirimi yapılmazsa ne olur?",
+       "secenekler": [
+        "Hiçbir şey",
+        "Yasal yükümlülük yerine getirilmemiş olur",
+        "Sadece uyarı",
+        "Müşteri sorarsa söylenir"
+       ],
+       "dogru": 1,
+       "aciklama": "Alerjen bildirimi toplu tüketim yerlerinde zorunludur."
+      },
+      {
+       "soru": "Malzeme fiyatları arttı. İlk ne yapılmalı?",
+       "secenekler": [
+        "Porsiyonu gizlice küçültmek",
+        "Maliyeti yeniden hesaplayıp fiyatı ve reçeteyi gözden geçirmek",
+        "Hiçbir şey",
+        "Kaliteyi düşürmek"
+       ],
+       "dogru": 1,
+       "aciklama": "Kararlar hesapla verilir; müşteriyi yanıltmak güveni bitirir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Patron notu",
+      "maddeler": [
+       "Ruhsat, kayıt, hijyen belgeleri tam olmalı.",
+       "Maliyeti bil, fiyatı ona göre koy.",
+       "Alerjen bildirimi zorunlu.",
+       "Müşteriyle dürüst ol."
+      ]
+     }
+    },
+    {
+     "id": "i4-patron",
+     "sablon": "senaryo",
+     "ikon": "👔",
+     "baslik": "Patronluk",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık lokanta senin. Bugün zor bir gün.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Gıda denetçisi geldi, personelin hijyen belgelerini istiyor. Yeni başlayan komininki yok.",
+       "secenekler": [
+        {
+         "metin": "Durumu dürüstçe anlatır, komiyi hemen hijyen eğitimine kaydederim",
+         "dogru": true,
+         "aciklama": "Eksik hemen tamamlanır; gizlemek cezayı ağırlaştırır."
+        },
+        {
+         "metin": "Komiyi arka kapıdan çıkarırım",
+         "dogru": false,
+         "aciklama": "Denetçiyi yanıltmak ciddi yaptırıma yol açar."
+        },
+        {
+         "metin": "\"Belgesi evde\" derim",
+         "dogru": false,
+         "aciklama": "Yalan söylemek sorunu büyütür."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri: \"Yemeğimden saç çıktı!\"",
+       "secenekler": [
+        {
+         "metin": "Özür diler, tabağı hemen yeniler, mutfakta bone kuralını kontrol ederim",
+         "dogru": true,
+         "aciklama": "Hem müşteriyi kazanırsın hem de sorunun kaynağını çözersin."
+        },
+        {
+         "metin": "\"Bizim mutfaktan çıkmaz\" derim",
+         "dogru": false,
+         "aciklama": "Müşteriyi suçlamak onu kaybettirir."
+        },
+        {
+         "metin": "Hesaptan biraz düşüp konuyu kapatırım",
+         "dogru": false,
+         "aciklama": "Müşteri memnun kalabilir ama mutfaktaki sorun sürer."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Tedarikçi etin kilosunu %20 artırdı. Ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Et yemeklerinin maliyetini yeniden hesaplar, gerekirse fiyatı ya da tedarikçiyi değiştiririm",
+         "dogru": true,
+         "aciklama": "Hesaba dayalı karar işletmeyi ayakta tutar."
+        },
+        {
+         "metin": "Porsiyonu sessizce küçültürüm",
+         "dogru": false,
+         "aciklama": "Müşteri fark eder; güven kaybedilir."
+        },
+        {
+         "metin": "Daha ucuz, kaynağı belli olmayan et alırım",
+         "dogru": false,
+         "aciklama": "Kaynağı belli olmayan et hem yasal hem sağlık riskidir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İyi patron",
+      "maddeler": [
+       "Belgeler tam, denetime hazır.",
+       "Şikâyette özür, çözüm ve kök neden.",
+       "Fiyat kararları hesapla verilir.",
+       "Kaliteden ve dürüstlükten taviz yok."
+      ]
+     }
+    },
+    {
+     "id": "i5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Final sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Bir tabağın malzemesi 40 TL. Hedef oran %30 ise fiyat yaklaşık ne olmalı?",
+       "secenekler": [
+        "60 TL",
+        "90 TL",
+        "Yaklaşık 135 TL",
+        "400 TL"
+       ],
+       "dogru": 2,
+       "aciklama": "40 ÷ 0,30 ≈ 133 TL; yuvarlanarak yaklaşık 135 TL."
+      },
+      {
+       "soru": "Gıdayla çalışan personelde hangi belge zorunludur?",
+       "secenekler": [
+        "Ehliyet",
+        "Hijyen eğitimi belgesi",
+        "Diploma",
+        "Pasaport"
+       ],
+       "dogru": 1,
+       "aciklama": "Hijyen Eğitimi Yönetmeliği gereği."
+      },
+      {
+       "soru": "FIFO kuralının amacı nedir?",
+       "secenekler": [
+        "Yeni ürünü önce kullanmak",
+        "Eski stoğu önce kullanıp bozulmayı azaltmak",
+        "Stoğu çoğaltmak",
+        "Fiyatı düşürmek"
+       ],
+       "dogru": 1,
+       "aciklama": "İlk giren ilk çıkar."
+      },
+      {
+       "soru": "Müşteri şikâyetinde ilk adım?",
+       "secenekler": [
+        "Tartışmak",
+        "Dinleyip özür dilemek ve çözüm sunmak",
+        "Görmezden gelmek",
+        "Faturayı iptal etmek"
+       ],
+       "dogru": 1,
+       "aciklama": "Dinle, özür dile, çöz."
+      },
+      {
+       "soru": "Menüde bildirilmesi gereken alerjen sayısı?",
+       "secenekler": [
+        "7",
+        "10",
+        "14",
+        "21"
+       ],
+       "dogru": 2,
+       "aciklama": "Türk Gıda Kodeksi'ne göre 14."
+      },
+      {
+       "soru": "Standart reçete neyi sağlar?",
+       "secenekler": [
+        "Sabit tat, porsiyon ve maliyet",
+        "Daha çok müşteri",
+        "Ruhsat",
+        "Reklam"
+       ],
+       "dogru": 0,
+       "aciklama": "İşletmenin temel kontrol aracıdır."
+      },
+      {
+       "soru": "Malzeme fiyatı arttığında doğru davranış?",
+       "secenekler": [
+        "Porsiyonu gizlice küçültmek",
+        "Maliyeti yeniden hesaplamak",
+        "Kaynağı belirsiz ürün almak",
+        "Hiçbir şey yapmamak"
+       ],
+       "dogru": 1,
+       "aciklama": "Karar hesapla verilir."
+      },
+      {
+       "soru": "Tavuğun güvenli iç sıcaklığı?",
+       "secenekler": [
+        "En az 75 °C",
+        "50 °C",
+        "60 °C",
+        "40 °C"
+       ],
+       "dogru": 0,
+       "aciklama": "Patron da olsan mutfak kuralları değişmez."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "kaynaklar": [
+  "MYK Aşçı (Seviye 3 ve 4) Ulusal Meslek Standardı ve Yeterlilikleri (kendi cümlelerimizle)",
+  "Hijyen Eğitimi Yönetmeliği (RG 05.07.2013, 28698)",
+  "Türk Gıda Kodeksi Gıda Etiketleme ve Tüketicileri Bilgilendirme Yönetmeliği, Ek-1 alerjenler",
+  "MEB Yiyecek İçecek Hizmetleri alanı modülleri",
+  "Aşçı uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false
+}
