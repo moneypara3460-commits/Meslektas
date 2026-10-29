@@ -24,6 +24,12 @@ export const FOTOLAR = {
     uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Espresso_shot.jpg/960px-Espresso_shot.jpg',
     yazar: 'Dorian Bodnariuc', lisans: 'CC BY-SA 3.0', kaynak: 'https://commons.wikimedia.org/wiki/File:Espresso_shot.jpg',
   },
+  tencere: { uri: 'https://pd.w.org/2026/10/1106adfe7fc0bee00.64550116-768x1024.jpg', yazar: 'Carlos Moreno', lisans: 'CC0', kaynak: 'https://wordpress.org/photos/photo/1106adfe7f/' },
+  'kizgin-yag': { uri: 'https://pd.w.org/2026/01/184696a6bc6c86f29.10430111-768x460.jpg', yazar: 'Bijay Kumal', lisans: 'CC0', kaynak: 'https://wordpress.org/photos/photo/184696a6bc/' },
+  corba: { uri: 'https://pd.w.org/2026/10/1276ac0b6695ceff3.34699452-768x1024.jpg', yazar: 'Dilip Modhavadiya', lisans: 'CC0', kaynak: 'https://wordpress.org/photos/photo/1276ac0b66/' },
+  ocak: { uri: 'https://pd.w.org/2025/08/444689cd1c1e142e0.99289815-768x421.jpeg', yazar: 'Topher', lisans: 'CC0', kaynak: 'https://wordpress.org/photos/photo/444689cd1c/' },
+  'kurulu-masa': { uri: 'https://pd.w.org/2025/03/8567dfc10bb53809.27261764-768x1024.jpg', yazar: 'WordPress Photo Directory katkıcısı', lisans: 'CC0', kaynak: 'https://wordpress.org/photos/photo/8567dfc10b/' },
+  'servis-tabagi': { uri: 'https://pd.w.org/2025/06/935685c7804df3132.65263741-768x1024.jpg', yazar: 'KafleG', lisans: 'CC0', kaynak: 'https://wordpress.org/photos/photo/935685c780/' },
 };
 
 export const gorselVar = (ad) => !!(ad && (FOTOLAR[ad] || CIZIMLER[ad]));

@@ -111,10 +111,93 @@ const Espresso = () => (<G>
   <Path d="M64 62 q8 -3 16 0 q8 3 16 0" stroke="#e0a978" strokeWidth="2" fill="none" />
 </G>);
 
+
+// ---------- Aşçı ----------
+const SefBicagi = () => (<G>
+  <Golge rx={64} />
+  <Path d="M14 92 Q60 70 118 74 L118 92 Z" fill="#dfe3e8" />
+  <Path d="M14 92 L118 92 L118 86 Q66 86 14 92 Z" fill={CELIK_KOYU} />
+  <Rect x="116" y="72" width="8" height="22" rx="2" fill={CELIK} />
+  <Rect x="122" y="76" width="34" height="14" rx="6" fill={KOYU} />
+  <Circle cx="132" cy="83" r="2" fill={CELIK} /><Circle cx="146" cy="83" r="2" fill={CELIK} />
+</G>);
+
+const KesmeTahtasi = () => (<G>
+  <Golge rx={66} />
+  <Rect x="18" y="76" width="96" height="44" rx="6" fill="#d8453a" transform="rotate(-8 66 98)" />
+  <Rect x="34" y="66" width="96" height="44" rx="6" fill="#2f9e5b" transform="rotate(4 82 88)" />
+  <Rect x="50" y="56" width="96" height="44" rx="6" fill="#3a7bd5" transform="rotate(10 98 78)" />
+  <Circle cx="132" cy="70" r="5" fill="#fffaf2" opacity="0.8" />
+</G>);
+
+const Termometre = () => (<G>
+  <Golge rx={40} />
+  <Path d="M78 36 L84 36 L84 122 L81 128 L78 122 Z" fill={CELIK} />
+  <Rect x="60" y="10" width="42" height="30" rx="8" fill="#2a6f97" />
+  <Rect x="66" y="16" width="30" height="16" rx="3" fill="#cfeaf7" />
+  <SvgText x="81" y="28" fontSize="11" fontWeight="bold" fill="#14452f" textAnchor="middle">75°C</SvgText>
+</G>);
+
+const Buzdolabi = () => (<G>
+  <Golge rx={46} />
+  <Rect x="44" y="8" width="72" height="116" rx="8" fill="#e8ebee" stroke={CELIK} strokeWidth="2" />
+  <Path d="M44 46 L116 46" stroke={CELIK} strokeWidth="2" />
+  <Rect x="104" y="18" width="5" height="18" rx="2" fill={CELIK_KOYU} /><Rect x="104" y="56" width="5" height="26" rx="2" fill={CELIK_KOYU} />
+  <SvgText x="72" y="32" fontSize="12" fontWeight="bold" fill="#2a6f97" textAnchor="middle">-18°</SvgText>
+  <SvgText x="72" y="90" fontSize="12" fontWeight="bold" fill="#2a6f97" textAnchor="middle">0–4°</SvgText>
+</G>);
+
+const Julyen = () => (<G>
+  <Golge rx={60} />
+  <Rect x="20" y="88" width="120" height="30" rx="5" fill="#c8a27a" />
+  {[0, 1, 2, 3, 4, 5, 6].map((i) => <Rect key={i} x={30 + i * 14} y={70 - (i % 2) * 4} width="5" height="40" rx="2" fill="#f08a24" transform={`rotate(${(i - 3) * 6} ${32 + i * 14} 90)`} />)}
+  <Path d="M118 80 L150 40 L156 46 L124 86 Z" fill="#3f8f3a" />
+</G>);
+
+// ---------- Salon servisi ----------
+const Tepsi = () => (<G>
+  <Golge rx={64} />
+  <Ellipse cx="80" cy="104" rx="66" ry="14" fill={CELIK_KOYU} />
+  <Ellipse cx="80" cy="100" rx="66" ry="14" fill={CELIK_ACIK} />
+  <Path d="M50 98 L50 64 Q50 60 54 60 L66 60 Q70 60 70 64 L70 98 Z" fill="#e8f4fb" stroke="#b9d6e6" />
+  <Path d="M86 100 L86 70 L104 70 L104 100 Z" fill="#e8f4fb" stroke="#b9d6e6" />
+  <Rect x="52" y="74" width="16" height="22" fill="#f2c94c" opacity="0.8" />
+</G>);
+
+const Menaj = () => (<G>
+  <Golge rx={44} />
+  <Path d="M48 120 L52 54 Q60 40 68 54 L72 120 Z" fill="#fffaf2" stroke="#e6dccd" />
+  <Rect x="50" y="40" width="20" height="10" rx="4" fill={CELIK} />
+  <Path d="M88 120 L92 54 Q100 40 108 54 L112 120 Z" fill="#3b2418" />
+  <Rect x="90" y="40" width="20" height="10" rx="4" fill={CELIK} />
+  <Circle cx="56" cy="43" r="1.2" fill={KOYU} /><Circle cx="62" cy="43" r="1.2" fill={KOYU} /><Circle cx="100" cy="43" r="1.2" fill={KOYU} />
+</G>);
+
+const MasaDuzeni = () => (<G>
+  <Rect x="4" y="20" width="152" height="112" rx="8" fill="#f4efe6" />
+  <Circle cx="80" cy="82" r="30" fill="#fff" stroke="#e6dccd" strokeWidth="2" />
+  <Circle cx="80" cy="82" r="20" fill="#fffaf2" stroke="#efe7da" />
+  <Rect x="38" y="56" width="5" height="52" rx="2" fill={CELIK_KOYU} /><Rect x="28" y="56" width="5" height="52" rx="2" fill={CELIK_KOYU} />
+  <Rect x="118" y="56" width="5" height="52" rx="2" fill={CELIK_KOYU} /><Rect x="128" y="56" width="5" height="52" rx="2" fill={CELIK_KOYU} />
+  <Rect x="62" y="42" width="40" height="4" rx="2" fill={CELIK_KOYU} />
+  <Circle cx="132" cy="40" r="10" fill="#e8f4fb" stroke="#b9d6e6" />
+  <Circle cx="22" cy="40" r="10" fill="#fff" stroke="#e6dccd" />
+</G>);
+
+const Adisyon = () => (<G>
+  <Golge rx={40} />
+  <Path d="M50 10 L110 10 L110 120 L104 114 L98 120 L92 114 L86 120 L80 114 L74 120 L68 114 L62 120 L56 114 L50 120 Z" fill="#fffaf2" stroke="#e6dccd" />
+  <Rect x="58" y="22" width="44" height="6" rx="2" fill={KOYU} />
+  {[38, 50, 62, 74, 86].map((y) => <Rect key={y} x="58" y={y} width={y % 24 ? 36 : 28} height="4" rx="2" fill="#c9bba8" />)}
+  <Rect x="58" y="98" width="44" height="5" rx="2" fill="#c8553d" />
+</G>);
+
 export const CIZIMLER = {
   portafiltre: Portafiltre, tamper: Tamper, 'sut-potu': SutPotu, terazi: Terazi, ogutucu: Ogutucu,
   'espresso-makinesi': EspressoMakinesi, 'telve-kutusu': TelveKutusu, 'buhar-cubugu': BuharCubugu,
   'cekirdek-kabi': CekirdekKabi, espresso: Espresso,
+  'sef-bicagi': SefBicagi, 'kesme-tahtasi': KesmeTahtasi, termometre: Termometre, buzdolabi: Buzdolabi, julyen: Julyen,
+  tepsi: Tepsi, menaj: Menaj, 'masa-duzeni': MasaDuzeni, adisyon: Adisyon,
 };
 
 export function Cizim({ ad, boyut = 160 }) {

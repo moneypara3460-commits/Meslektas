@@ -57,7 +57,8 @@
        "ikon": "🧹",
        "baslik": "Açılış hazırlığı",
        "metin": "Servisten önce salon temizlenir, masalar kurulur, servis istasyonu doldurulur: takımlar, peçeteler, tuzluklar, menüler.",
-       "terim": "mizanplas"
+       "terim": "mizanplas",
+       "gorsel": "kurulu-masa"
       },
       {
        "ikon": "📋",
@@ -75,13 +76,15 @@
        "ikon": "🍽️",
        "baslik": "Servis",
        "metin": "Sipariş alınır, mutfağa iletilir, yemekler doğru masaya, doğru kişiye ve sıcakken götürülür.",
-       "terim": "servis akışı"
+       "terim": "servis akışı",
+       "gorsel": "servis-tabagi"
       },
       {
        "ikon": "💳",
        "baslik": "Hesap ve uğurlama",
        "metin": "Hesap doğru hazırlanır, ödeme alınır, misafir teşekkürle uğurlanır.",
-       "terim": "uğurlama"
+       "terim": "uğurlama",
+       "gorsel": "adisyon"
       },
       {
        "ikon": "📈",
@@ -316,19 +319,22 @@
        "ikon": "🧂",
        "baslik": "Menaj",
        "metin": "Tuzluk, biberlik ve benzeri masa takımları. Dolu, temiz ve her masada aynı olmalı.",
-       "terim": "menaj"
+       "terim": "menaj",
+       "gorsel": "menaj"
       },
       {
        "ikon": "🍴",
        "baslik": "Takımlar",
        "metin": "Çatal, bıçak ve kaşıklar parmak izi kalmasın diye saplarından tutulur, temiz bezle parlatılır.",
-       "terim": "parlatma"
+       "terim": "parlatma",
+       "gorsel": "masa-duzeni"
       },
       {
        "ikon": "🫗",
        "baslik": "Tepsi taşıma",
        "metin": "Tepsi sol elin parmak uçlarında ve avuç içinde dengelenir. Ağır olanlar ortaya, tepsinin merkezine konur.",
-       "terim": "denge"
+       "terim": "denge",
+       "gorsel": "tepsi"
       },
       {
        "ikon": "🧼",
@@ -464,7 +470,8 @@
        "ikon": "🔥",
        "baslik": "Sıcak ve soğuk",
        "metin": "Sıcak yemek sıcak tabakta, soğuk yemek soğuk tabakta gider. Mutfakta bekleyen tabak bekletilmeden götürülür.",
-       "terim": "tabak sıcaklığı"
+       "terim": "tabak sıcaklığı",
+       "gorsel": "servis-tabagi"
       },
       {
        "ikon": "🤫",
@@ -530,7 +537,8 @@
         "Fark etmez"
        ],
        "dogru": 1,
-       "aciklama": "Ağırlık merkezde olursa tepsi dengede kalır."
+       "aciklama": "Ağırlık merkezde olursa tepsi dengede kalır.",
+       "gorsel": "tepsi"
       },
       {
        "soru": "Masada ilk kime servis yapılmaz?",
@@ -849,7 +857,8 @@
        "ikon": "🧾",
        "baslik": "Adisyon",
        "metin": "Sipariş masa numarası ve oturma yeriyle yazılır; böylece hangi tabağın kime gideceği bilinir.",
-       "terim": "adisyon"
+       "terim": "adisyon",
+       "gorsel": "adisyon"
       },
       {
        "ikon": "⏱️",

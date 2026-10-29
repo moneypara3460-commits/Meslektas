@@ -57,7 +57,8 @@
        "ikon": "🔪",
        "baslik": "Hazırlık",
        "metin": "Servisten saatler önce gelinir. Sebzeler doğranır, soslar ve çorbalar hazırlanır, her şey tezgâhta yerini alır.",
-       "terim": "mise en place"
+       "terim": "mise en place",
+       "gorsel": "sef-bicagi"
       },
       {
        "ikon": "📦",
@@ -69,7 +70,8 @@
        "ikon": "🔥",
        "baslik": "Servis",
        "metin": "Siparişler art arda gelir. Her tabak aynı lezzette, aynı sürede ve aynı görünüşte çıkmalıdır.",
-       "terim": "servis"
+       "terim": "servis",
+       "gorsel": "ocak"
       },
       {
        "ikon": "👥",
@@ -317,25 +319,29 @@
        "ikon": "🌡️",
        "baslik": "Tehlikeli sıcaklık aralığı",
        "metin": "Mikroplar yaklaşık 5 °C ile 63 °C arasında en hızlı çoğalır. Yemek bu aralıkta uzun süre bekletilmez.",
-       "terim": "tehlikeli bölge"
+       "terim": "tehlikeli bölge",
+       "gorsel": "termometre"
       },
       {
        "ikon": "❄️",
        "baslik": "Soğuk zincir",
        "metin": "Buzdolabı 0–4 °C, dondurucu −18 °C ve altında tutulur. Çözme işlemi tezgâhta değil, buzdolabında yapılır.",
-       "terim": "soğuk zincir"
+       "terim": "soğuk zincir",
+       "gorsel": "buzdolabi"
       },
       {
        "ikon": "♨️",
        "baslik": "Sıcak tutma",
        "metin": "Servise hazır sıcak yemek 63 °C'nin üstünde tutulur. Yeniden ısıtılan yemeğin her yeri iyice ısınmalı, bir kez ısıtılmalıdır.",
-       "terim": "sıcak tutma"
+       "terim": "sıcak tutma",
+       "gorsel": "corba"
       },
       {
        "ikon": "🔀",
        "baslik": "Çapraz bulaşma",
        "metin": "Çiğ et ile pişmiş ya da çiğ yenecek gıda aynı tahtada, aynı bıçakla hazırlanmaz. Buzdolabında çiğ et en alt rafta durur.",
-       "terim": "çapraz bulaşma"
+       "terim": "çapraz bulaşma",
+       "gorsel": "kesme-tahtasi"
       },
       {
        "ikon": "📜",
@@ -462,7 +468,8 @@
        "ikon": "🔪",
        "baslik": "Şef bıçağı",
        "metin": "Mutfağın ana bıçağıdır. Doğrama, dilimleme ve kıyma işlerinin çoğu bununla yapılır.",
-       "terim": "şef bıçağı"
+       "terim": "şef bıçağı",
+       "gorsel": "sef-bicagi"
       },
       {
        "ikon": "✋",
@@ -474,7 +481,8 @@
        "ikon": "🥕",
        "baslik": "Jülyen",
        "metin": "Sebze ince, uzun kibrit çöpü gibi kesilir. Salata ve sote için.",
-       "terim": "julienne"
+       "terim": "julienne",
+       "gorsel": "julyen"
       },
       {
        "ikon": "🧅",
@@ -492,7 +500,8 @@
        "ikon": "🪵",
        "baslik": "Tahta ve bilme",
        "metin": "Tahtanın altına nemli bez konur ki kaymasın. Kör bıçak keskin bıçaktan daha tehlikelidir: kayar.",
-       "terim": "güvenli kesim"
+       "terim": "güvenli kesim",
+       "gorsel": "kesme-tahtasi"
       }
      ]
     },
@@ -749,7 +758,8 @@
         "15 °C"
        ],
        "dogru": 0,
-       "aciklama": "0–4 °C mikropların çoğalmasını yavaşlatır."
+       "aciklama": "0–4 °C mikropların çoğalmasını yavaşlatır.",
+       "gorsel": "buzdolabi"
       },
       {
        "soru": "Çiğ et buzdolabında hangi rafa konur?",
@@ -842,13 +852,15 @@
        "ikon": "🔥",
        "baslik": "Kuru ısı",
        "metin": "Su kullanılmadan, sıcak hava, yağ ya da ateşle pişirilir: ızgara, fırın, sote, kızartma.",
-       "terim": "kuru ısı"
+       "terim": "kuru ısı",
+       "gorsel": "kizgin-yag"
       },
       {
        "ikon": "💧",
        "baslik": "Nemli ısı",
        "metin": "Su ya da buharla pişirilir: haşlama, buharda pişirme, poşe.",
-       "terim": "nemli ısı"
+       "terim": "nemli ısı",
+       "gorsel": "tencere"
       },
       {
        "ikon": "🍲",
@@ -872,7 +884,8 @@
        "ikon": "🌡️",
        "baslik": "Termometre",
        "metin": "Etin pişip pişmediği gözle değil, iç sıcaklığı ölçülerek anlaşılır. Tavuk ve kıymanın içi en az 75 °C olmalı.",
-       "terim": "iç sıcaklık"
+       "terim": "iç sıcaklık",
+       "gorsel": "termometre"
       }
      ]
     },
@@ -1132,7 +1145,8 @@
         "100 °C"
        ],
        "dogru": 2,
-       "aciklama": "En az 75 °C güvenli kabul edilir."
+       "aciklama": "En az 75 °C güvenli kabul edilir.",
+       "gorsel": "termometre"
       },
       {
        "soru": "Kızartma yağı yaklaşık kaç derecede olmalı?",
@@ -1143,7 +1157,8 @@
         "250 °C"
        ],
        "dogru": 2,
-       "aciklama": "Daha düşükse yağ çeker, daha yüksekse yanar."
+       "aciklama": "Daha düşükse yağ çeker, daha yüksekse yanar.",
+       "gorsel": "kizgin-yag"
       },
       {
        "soru": "Et neden kalabalık tavada kızarmaz?",
@@ -1230,7 +1245,8 @@
        "ikon": "🥛",
        "baslik": "Beşamel",
        "metin": "Meyaneye süt eklenerek yapılır. Fırın makarna ve musakkanın sosudur.",
-       "terim": "béchamel"
+       "terim": "béchamel",
+       "gorsel": "tencere"
       },
       {
        "ikon": "🍗",
@@ -1703,13 +1719,15 @@
        "ikon": "🚚",
        "baslik": "Mal kabul ve stok",
        "metin": "Gelen ürünlerin sıcaklığı, tarihi ve kalitesi kontrol edilir; stok ilk giren ilk çıkar kuralıyla döner.",
-       "terim": "mal kabul"
+       "terim": "mal kabul",
+       "gorsel": "buzdolabi"
       },
       {
        "ikon": "🛡️",
        "baslik": "Gıda güvenliği sistemi",
        "metin": "Riskli noktalar (pişirme, soğutma, saklama sıcaklıkları) belirlenir, düzenli ölçülür ve kayda geçirilir.",
-       "terim": "HACCP"
+       "terim": "HACCP",
+       "gorsel": "termometre"
       },
       {
        "ikon": "🧮",
@@ -2045,7 +2063,8 @@
         "40 °C"
        ],
        "dogru": 0,
-       "aciklama": "Şef olsan da kural değişmez."
+       "aciklama": "Şef olsan da kural değişmez.",
+       "gorsel": "termometre"
       },
       {
        "soru": "Etiketsiz, tarihi belli olmayan yemek?",

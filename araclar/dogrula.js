@@ -12,6 +12,9 @@ const SABLON = {
 const xp = (g) => ['bilgi', 'uyum', 'sinav'].includes(g.sablon) ? g.xp : g.sablon === 'siralama' ? g.puanlama.temelXp + 3 * g.puanlama.yildizBasinaXp : g.temelXp + 3 * g.yildizBasinaXp;
 const cizimDosya = fs.readFileSync(path.join(__dirname, '..', 'gorseller', 'cizimler.js'), 'utf8');
 const GORSELLER = new Set([...cizimDosya.slice(cizimDosya.indexOf('CIZIMLER = {')).matchAll(/'?([a-z-]+)'?\s*:/g)].map((m) => m[1]));
+const fotoDosya = fs.readFileSync(path.join(__dirname, '..', 'gorseller', 'index.js'), 'utf8');
+const fotoBlok = fotoDosya.slice(fotoDosya.indexOf('FOTOLAR = {'), fotoDosya.indexOf('export const gorselVar'));
+for (const m of fotoBlok.matchAll(/^\s+'?([a-z-]+)'?: \{/gm)) GORSELLER.add(m[1]);
 const gorselKontrol = (ad, yer, H) => { if (ad && !GORSELLER.has(ad)) H.push(`${yer}: "${ad}" adında görsel yok`); };
 let hataSay = 0;
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
