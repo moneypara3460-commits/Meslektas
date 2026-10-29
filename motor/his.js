@@ -3,14 +3,8 @@
 import * as Haptics from 'expo-haptics';
 import { createAudioPlayer } from 'expo-audio';
 
-const KAYNAK = {
-  tik: require('../sesler/tik.wav'),
-  dogru: require('../sesler/dogru.wav'),
-  yanlis: require('../sesler/yanlis.wav'),
-  basari: require('../sesler/basari.wav'),
-  akis: require('../sesler/akis.wav'),
-  ogutme: require('../sesler/ogutme.wav'),
-};
+import { SESLER } from '../sesler/veri';
+const KAYNAK = Object.fromEntries(Object.entries(SESLER).map(([k, uri]) => [k, { uri }]));
 const oynaticilar = {};
 
 export function ses(ad) {

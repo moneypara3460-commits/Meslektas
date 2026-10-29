@@ -36,5 +36,6 @@ Tamamlama belgeleri resmî sertifika değildir.
 
 ## Görseller
 - `gorseller/cizimler.js`: kendi çizimlerimiz (telif bize ait).
-- `gorseller/foto/`: gerçek fotoğraflar. **Yalnızca Pexels/Unsplash**, logo ve tanınabilir yüz yok, her fotoğrafın linki `gorseller/index.js` → `KAYNAKLAR`'a yazılır.
+- `gorseller/foto/`: (kullanılmıyor) Snack git içe aktarma ikili dosya (jpg, wav) yükleyemiyor; depoya yalnızca .js/.json/.md konur. Sesler `sesler/veri.js` içinde metin, fotoğraflar internet adresinden.
+- Eski not: gerçek fotoğraflar. **Yalnızca Pexels/Unsplash**, logo ve tanınabilir yüz yok, her fotoğrafın linki `gorseller/index.js` → `KAYNAKLAR`'a yazılır.
 - Fotoğraf varsa o gösterilir, yoksa çizim. İçerikte bilgi kartına `"gorsel": "portafiltre"`, soruya `"gorsel"` ya da resimli şıklar için `"secenekGorselleri"` yazılır.
