@@ -33,3 +33,8 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 | Salon Servisi (komi → salon şefi) | 26 görev · uzman onayı bekliyor |
 
 Tamamlama belgeleri resmî sertifika değildir.
+
+## Görseller
+- `gorseller/cizimler.js`: kendi çizimlerimiz (telif bize ait).
+- `gorseller/foto/`: gerçek fotoğraflar. **Yalnızca Pexels/Unsplash**, logo ve tanınabilir yüz yok, her fotoğrafın linki `gorseller/index.js` → `KAYNAKLAR`'a yazılır.
+- Fotoğraf varsa o gösterilir, yoksa çizim. İçerikte bilgi kartına `"gorsel": "portafiltre"`, soruya `"gorsel"` ya da resimli şıklar için `"secenekGorselleri"` yazılır.

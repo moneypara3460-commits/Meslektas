@@ -288,43 +288,50 @@
        "ikon": "☕",
        "baslik": "Espresso makinesi",
        "metin": "Sıcak suyu yaklaşık 9 bar basınçla sıkıştırılmış kahvenin içinden geçirir. Barın kalbidir.",
-       "terim": "grup başlığı = suyun çıktığı yer"
+       "terim": "grup başlığı = suyun çıktığı yer",
+       "gorsel": "espresso-makinesi"
       },
       {
        "ikon": "⚙️",
        "baslik": "Öğütücü",
        "metin": "Çekirdeği demlemeden hemen önce öğütür. İnce ya da kalın ayarı, espressonun ne hızla akacağını belirler.",
-       "terim": "öğütme ayarı"
+       "terim": "öğütme ayarı",
+       "gorsel": "ogutucu"
       },
       {
        "ikon": "🍳",
        "baslik": "Portafiltre",
        "metin": "Öğütülmüş kahvenin konduğu saplı sepet. Makineye takılır, espresso altından akar.",
-       "terim": "sepet / basket"
+       "terim": "sepet / basket",
+       "gorsel": "portafiltre"
       },
       {
        "ikon": "🔨",
        "baslik": "Tamper",
        "metin": "Sepetteki kahveyi düz ve sabit bastırır. Böylece su kahvenin her yerinden eşit geçer.",
-       "terim": "tamplamak = bastırmak"
+       "terim": "tamplamak = bastırmak",
+       "gorsel": "tamper"
       },
       {
        "ikon": "🥛",
        "baslik": "Süt potu ve buhar çubuğu",
        "metin": "Buhar çubuğu sütü ısıtıp köpürtür. Süt paslanmaz çelik potta köpürtülür. Çubuk her kullanımdan sonra hemen silinir.",
-       "terim": "mikro köpük"
+       "terim": "mikro köpük",
+       "gorsel": "sut-potu"
       },
       {
        "ikon": "⚖️",
        "baslik": "Hassas terazi",
        "metin": "Kahveyi ve akan espressoyu tartar. Her fincanın aynı lezzette olmasının sırrı ölçmektir.",
-       "terim": "doz = konan kahve miktarı"
+       "terim": "doz = konan kahve miktarı",
+       "gorsel": "terazi"
       },
       {
        "ikon": "🗑️",
        "baslik": "Telve kutusu",
        "metin": "Demlemeden sonra portafiltre bu kutunun çubuğuna vurularak boşaltılır. Telve lavaboya dökülmez, gideri tıkar.",
-       "terim": "telve = kullanılmış kahve"
+       "terim": "telve = kullanılmış kahve",
+       "gorsel": "telve-kutusu"
       }
      ]
     },
@@ -345,7 +352,30 @@
         "Öğütücü"
        ],
        "dogru": 0,
-       "aciklama": "Tamper ile düz ve sabit bastırılır. Eğri bastırılırsa su alçak taraftan kaçar."
+       "aciklama": "Tamper ile düz ve sabit bastırılır. Eğri bastırılırsa su alçak taraftan kaçar.",
+       "secenekGorselleri": [
+        "tamper",
+        "sut-potu",
+        "telve-kutusu",
+        "ogutucu"
+       ]
+      },
+      {
+       "soru": "Resimlerden hangisi portafiltre?",
+       "secenekler": [
+        "Portafiltre",
+        "Tamper",
+        "Süt potu",
+        "Öğütücü"
+       ],
+       "secenekGorselleri": [
+        "portafiltre",
+        "tamper",
+        "sut-potu",
+        "ogutucu"
+       ],
+       "dogru": 0,
+       "aciklama": "Portafiltre, içine kahvenin konduğu saplı sepettir; makineye takılır."
       },
       {
        "soru": "Demlemeden sonra portafiltredeki telve nereye atılır?",
@@ -356,7 +386,8 @@
         "Makinenin üstüne"
        ],
        "dogru": 1,
-       "aciklama": "Telve kutusunun çubuğuna hafifçe vurulur. Lavaboya dökülen telve gideri tıkar."
+       "aciklama": "Telve kutusunun çubuğuna hafifçe vurulur. Lavaboya dökülen telve gideri tıkar.",
+       "gorsel": "portafiltre"
       },
       {
        "soru": "Barda hassas terazi neden kullanılır?",
@@ -367,7 +398,8 @@
         "Fincanları saymak için"
        ],
        "dogru": 2,
-       "aciklama": "Konan kahveyi ve akan espressoyu tartmak, her fincanın aynı lezzette olmasını sağlar."
+       "aciklama": "Konan kahveyi ve akan espressoyu tartmak, her fincanın aynı lezzette olmasını sağlar.",
+       "gorsel": "terazi"
       },
       {
        "soru": "Buhar çubuğu ne işe yarar?",
@@ -378,7 +410,8 @@
         "Kahveyi öğütür"
        ],
        "dogru": 1,
-       "aciklama": "Buhar çubuğu sütü ısıtır ve içine hava katarak köpük yapar."
+       "aciklama": "Buhar çubuğu sütü ısıtır ve içine hava katarak köpük yapar.",
+       "gorsel": "buhar-cubugu"
       },
       {
        "soru": "Kahve çekirdeği nasıl saklanır?",
@@ -495,7 +528,8 @@
        "ikon": "☕",
        "baslik": "Espresso",
        "metin": "Her şeyin temeli. Küçük fincanda, üstü crema ile servis edilir.",
-       "terim": "tek shot / çift shot"
+       "terim": "tek shot / çift shot",
+       "gorsel": "espresso"
       },
       {
        "ikon": "🫖",
@@ -811,7 +845,8 @@
         "Telve"
        ],
        "dogru": 1,
-       "aciklama": "Crema taze kahvenin ve doğru demlemenin işaretidir."
+       "aciklama": "Crema taze kahvenin ve doğru demlemenin işaretidir.",
+       "gorsel": "espresso"
       }
      ]
     }
@@ -1424,7 +1459,8 @@
         "Marka logosuna"
        ],
        "dogru": 1,
-       "aciklama": "Kavrum tarihi kahvenin ne kadar taze olduğunu gösterir."
+       "aciklama": "Kavrum tarihi kahvenin ne kadar taze olduğunu gösterir.",
+       "gorsel": "cekirdek-kabi"
       },
       {
        "soru": "Espresso makinesinde neden filtreli su kullanılır?",

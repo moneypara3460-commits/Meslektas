@@ -1,7 +1,8 @@
 // Hem "soru" hem "sinav" şablonu
 import React, { useMemo, useState } from 'react';
-import { Text } from 'react-native';
-import { Ekran, Ust, Dugme, Secenek, Aciklama, Konusma } from '../ui';
+import { View, Pressable } from 'react-native';
+import { Ekran, Ust, Dugme, Secenek, Aciklama, Konusma, Giris, R } from '../ui';
+import { Gorsel, gorselVar } from '../gorseller';
 import { karistir, yildizHesap } from '../motor/kurallar';
 
 export default function Soru({ gorev, paket, onBitir, onKapat }) {
@@ -27,7 +28,20 @@ export default function Soru({ gorev, paket, onBitir, onKapat }) {
     <Ekran alt={cevaplandi ? <Dugme yazi={i === sorular.length - 1 ? 'Sonucu gör' : 'Devam'} onPress={devam} /> : null}>
       <Ust baslik={gorev.baslik} sayac={`${i + 1}/${sorular.length}`} onKapat={onKapat} ilerleme={i / sorular.length} />
       <Konusma kim="usta" ruh={!cevaplandi ? 'notr' : ok ? 'mutlu' : 'kizgin'} ad={ad} metin={s.soru} />
-      {s.sira.map(({ m, j }) => (
+      {gorselVar(s.gorsel) ? <Giris key={'g' + i} style={{ alignItems: 'center', marginBottom: 14 }}><Gorsel ad={s.gorsel} boyut={200} /></Giris> : null}
+      {s.secenekGorselleri ? (
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+          {s.sira.map(({ j }) => {
+            const d = !cevaplandi ? null : j === s.dogru ? 'dogru' : j === secim ? 'yanlis' : 'soluk';
+            return (
+              <Pressable key={i + '-' + j} disabled={cevaplandi} onPress={() => sec(j)} style={{ width: '48.5%', marginBottom: 10, borderRadius: 16, borderWidth: 3, alignItems: 'center', padding: 6, backgroundColor: '#fff',
+                borderColor: d === 'dogru' ? R.yesil : d === 'yanlis' ? R.kirmizi : R.cizgi, opacity: d === 'soluk' ? 0.5 : 1 }}>
+                <Gorsel ad={s.secenekGorselleri[j]} boyut={130} />
+              </Pressable>
+            );
+          })}
+        </View>
+      ) : s.sira.map(({ m, j }) => (
         <Secenek key={i + '-' + j} yazi={m} kapali={cevaplandi} onPress={() => sec(j)}
           durum={!cevaplandi ? null : j === s.dogru ? 'dogru' : j === secim ? 'yanlis' : 'soluk'} />
       ))}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, useWindowDimensions } from 'react-native';
 import { Ekran, Ust, Dugme, Kart, Giris, R, useTema } from '../ui';
+import { Gorsel, gorselVar } from '../gorseller';
 
 export default function Bilgi({ gorev, onBitir, onKapat }) {
   const t = useTema(); const { width } = useWindowDimensions();
@@ -15,7 +16,9 @@ export default function Bilgi({ gorev, onBitir, onKapat }) {
         {gorev.kartlar.map((c, j) => (
           <View key={j} style={{ width: kw }}>
             <Kart style={{ marginRight: 0, minHeight: 360, justifyContent: 'center' }}>
-              <Giris gecikme={j === 0 ? 0 : 0}><Text style={{ fontSize: 64, textAlign: 'center', marginBottom: 12 }}>{c.ikon}</Text></Giris>
+              <Giris>{gorselVar(c.gorsel)
+                ? <View style={{ alignItems: 'center', marginBottom: 12 }}><Gorsel ad={c.gorsel} boyut={Math.min(220, kw - 60)} /></View>
+                : <Text style={{ fontSize: 64, textAlign: 'center', marginBottom: 12 }}>{c.ikon}</Text>}</Giris>
               <Text style={{ fontSize: 22, fontWeight: '900', color: t.ana, textAlign: 'center', marginBottom: 10 }}>{c.baslik}</Text>
               <Text style={{ fontSize: 17, lineHeight: 25, color: R.yazi, textAlign: 'center' }}>{c.metin}</Text>
               {c.terim ? <View style={{ alignSelf: 'center', marginTop: 16, backgroundColor: t.vurgu + '33', borderRadius: 99, paddingHorizontal: 14, paddingVertical: 6 }}>
