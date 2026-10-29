@@ -36,7 +36,7 @@ export default function Soru({ gorev, paket, onBitir, onKapat }) {
             return (
               <Pressable key={i + '-' + j} disabled={cevaplandi} onPress={() => sec(j)} style={{ width: '48.5%', marginBottom: 10, borderRadius: 16, borderWidth: 3, alignItems: 'center', padding: 6, backgroundColor: '#fff',
                 borderColor: d === 'dogru' ? R.yesil : d === 'yanlis' ? R.kirmizi : R.cizgi, opacity: d === 'soluk' ? 0.5 : 1 }}>
-                <Gorsel ad={s.secenekGorselleri[j]} boyut={130} />
+                <Gorsel ad={s.secenekGorselleri[j]} boyut={130} sadeceCizim />
               </Pressable>
             );
           })}

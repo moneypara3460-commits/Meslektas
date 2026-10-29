@@ -10,6 +10,8 @@ import { TemaContext, Ekran, Ust, Dugme, Kart, Cubuk, Giris, Karakter, R, st } f
 import { ilerlemeOku, gorevBitti, esitle } from './motor/ilerleme';
 import { gorevAcik, kademeAcik, kademeBitti, kademeXp, toplamXp, aktifKademe, maxXp } from './motor/kurallar';
 import { supabase } from './motor/supabase';
+import { FOTOLAR } from './gorseller';
+import { Linking } from 'react-native';
 
 const VARSAYILAN_TEMA = { ana: '#1f3a5f', vurgu: '#e0a030', zemin: '#f3f1ec' };
 
@@ -31,7 +33,7 @@ export default function App() {
   useEffect(() => {
     const geri = BackHandler.addEventListener('hardwareBackPress', () => {
       if (ekran.ad === 'ana') return false;
-      setEkran(ekran.ad === 'harita' || ekran.ad === 'hesap' ? { ad: 'ana' } : { ad: 'harita' }); return true;
+      setEkran(ekran.ad === 'harita' || ekran.ad === 'hesap' || ekran.ad === 'kaynak' ? { ad: 'ana' } : { ad: 'harita' }); return true;
     });
     return () => geri.remove();
   }, [ekran]);
@@ -40,7 +42,8 @@ export default function App() {
   const tema = paket && ekran.ad !== 'ana' && ekran.ad !== 'hesap' ? { ...VARSAYILAN_TEMA, ...paket.meslek.renkler } : VARSAYILAN_TEMA;
 
   let icerik;
-  if (ekran.ad === 'ana') icerik = <AnaEkran hepsi={hepsi} oturum={oturum} onMeslek={meslekAc} onHesap={() => setEkran({ ad: 'hesap' })} />;
+  if (ekran.ad === 'ana') icerik = <AnaEkran hepsi={hepsi} oturum={oturum} onMeslek={meslekAc} onHesap={() => setEkran({ ad: 'hesap' })} onKaynak={() => setEkran({ ad: 'kaynak' })} />;
+  else if (ekran.ad === 'kaynak') icerik = <Kaynaklar onGeri={() => setEkran({ ad: 'ana' })} />;
   else if (ekran.ad === 'hesap') icerik = <HesapEkrani oturum={oturum} onGeri={() => { tumunuOku(); setEkran({ ad: 'ana' }); }} />;
   else if (ekran.ad === 'harita') icerik = <Harita paket={paket} sonuclar={sonuclar} kiBaslangic={ekran.ki}
     onGeri={() => { tumunuOku(); setEkran({ ad: 'ana' }); }} onGorev={(ki, gi) => setEkran({ ad: 'gorev', ki, gi, anahtar: Date.now() })} onBelge={() => setEkran({ ad: 'belge' })} />;
@@ -69,7 +72,7 @@ export default function App() {
 }
 
 // ---------------- Ana ekran: meslek seçimi ----------------
-function AnaEkran({ hepsi, oturum, onMeslek, onHesap }) {
+function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak }) {
   const sallan = useRef(new Animated.Value(0)).current;
   useEffect(() => { Animated.loop(Animated.sequence([
     Animated.timing(sallan, { toValue: 1, duration: 1600, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
@@ -106,6 +109,7 @@ function AnaEkran({ hepsi, oturum, onMeslek, onHesap }) {
         );
       })}
       <Text style={{ color: R.soluk, textAlign: 'center', marginTop: 8, fontSize: 13 }}>Yeni meslekler yolda. İçerikler uzman onayından geçecek.</Text>
+      <Pressable onPress={onKaynak} hitSlop={10}><Text style={{ color: R.soluk, textAlign: 'center', marginTop: 12, fontSize: 13, textDecorationLine: 'underline' }}>Görsel kaynakları</Text></Pressable>
     </Ekran>
   );
 }
@@ -270,6 +274,25 @@ function HesapEkrani({ oturum, onGeri }) {
         if (sifre.length < 8) throw new Error('Şifre en az 8 karakter olmalı.');
         const { data, error } = await supabase.auth.signUp({ email: eposta.trim(), password: sifre }); if (error) throw error;
         if (!data.session) setMesaj({ iyi: true, metin: 'Hesap açıldı. E-postana gelen onay bağlantısına dokun, sonra giriş yap.' }); else onGeri(); })} />
+    </Ekran>
+  );
+}
+
+// ---------------- Görsel kaynakları (lisans gereği atıf) ----------------
+function Kaynaklar({ onGeri }) {
+  return (
+    <Ekran>
+      <Ust baslik="Görsel kaynakları" onKapat={onGeri} />
+      <Text style={[st.alt, { marginBottom: 14 }]}>Oyundaki fotoğraflar ücretsiz lisanslı kaynaklardandır. Çizimler Meslektaş'a aittir.</Text>
+      {Object.entries(FOTOLAR).map(([ad, f]) => (
+        <Pressable key={ad} onPress={() => Linking.openURL(f.kaynak)}>
+          <Kart style={{ marginBottom: 10 }}>
+            <Text style={{ fontWeight: '800', color: R.yazi }}>{ad}</Text>
+            <Text style={{ color: R.soluk }}>Fotoğraf: {f.yazar} · Lisans: {f.lisans}</Text>
+            <Text style={{ color: '#5f8fb0', textDecorationLine: 'underline' }} numberOfLines={1}>{f.kaynak}</Text>
+          </Kart>
+        </Pressable>
+      ))}
     </Ekran>
   );
 }
