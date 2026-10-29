@@ -11,6 +11,7 @@ import { ilerlemeOku, gorevBitti, esitle } from './motor/ilerleme';
 import { gorevAcik, kademeAcik, kademeBitti, kademeXp, toplamXp, aktifKademe, maxXp } from './motor/kurallar';
 import { supabase } from './motor/supabase';
 import { FOTOLAR } from './gorseller';
+import { ses, titret } from './motor/his';
 import { Linking } from 'react-native';
 
 const VARSAYILAN_TEMA = { ana: '#1f3a5f', vurgu: '#e0a030', zemin: '#f3f1ec' };
@@ -182,6 +183,7 @@ function Sonuc({ paket, ekran, onHarita, onTekrar, onBelge }) {
   useEffect(() => {
     Animated.stagger(220, yildizlar.map((a) => Animated.spring(a, { toValue: 1, useNativeDriver: true, friction: 4 }))).start();
     if (rozet) Animated.spring(rozetA, { toValue: 1, useNativeDriver: true, friction: 3, tension: 40 }).start();
+    if (s.sinav && !s.gecti) { ses('yanlis'); titret('hata'); } else if (rozet || s.yildiz === 3) { ses('basari'); titret('basari'); } else ses('dogru');
   }, []);
   const basarisiz = s.sinav && !s.gecti;
   const sonKademe = ekran.ki === paket.kademeler.length - 1;

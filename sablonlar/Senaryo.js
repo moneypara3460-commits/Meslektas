@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Ekran, Ust, Dugme, Secenek, Aciklama, Konusma } from '../ui';
 import { karistir, yildizHesap } from '../motor/kurallar';
+import { ses, titret } from '../motor/his';
 
 export default function Senaryo({ gorev, paket, onBitir, onKapat }) {
   const m = paket.meslek.metinler || {}; const adlar = m.karakter || { usta: 'Usta', musteri: 'Müşteri' };
@@ -15,7 +16,7 @@ export default function Senaryo({ gorev, paket, onBitir, onKapat }) {
     );
   }
   const a = adimlar[i]; const cevaplandi = secim != null; const ok = cevaplandi && secim.dogru;
-  const sec = (o) => { if (cevaplandi) return; setSecim(o); if (o.dogru) setDogru((d) => d + 1); };
+  const sec = (o) => { if (cevaplandi) return; setSecim(o); if (o.dogru) { setDogru((d) => d + 1); ses('dogru'); titret('orta'); } else { ses('yanlis'); titret('hata'); } };
   const devam = () => {
     if (i < adimlar.length - 1) { setI(i + 1); setSecim(null); return; }
     const n = adimlar.length; const y = yildizHesap(dogru, n);

@@ -4,13 +4,14 @@ import { View, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Secenek, Aciklama, Konusma, Giris, R } from '../ui';
 import { Gorsel, gorselVar } from '../gorseller';
 import { karistir, yildizHesap } from '../motor/kurallar';
+import { ses, titret } from '../motor/his';
 
 export default function Soru({ gorev, paket, onBitir, onKapat }) {
   const sinav = gorev.sablon === 'sinav';
   const sorular = useMemo(() => karistir(gorev.sorular).map((s) => ({ ...s, sira: karistir(s.secenekler.map((m, j) => ({ m, j }))) })), [gorev]);
   const [i, setI] = useState(0); const [secim, setSecim] = useState(null); const [dogru, setDogru] = useState(0);
   const s = sorular[i]; const ad = paket.meslek.metinler?.karakter?.usta || 'Usta';
-  const sec = (j) => { if (secim != null) return; setSecim(j); if (j === s.dogru) setDogru((d) => d + 1); };
+  const sec = (j) => { if (secim != null) return; setSecim(j); if (j === s.dogru) { setDogru((d) => d + 1); ses('dogru'); titret('orta'); } else { ses('yanlis'); titret('hata'); } };
   const devam = () => {
     if (i < sorular.length - 1) { setI(i + 1); setSecim(null); return; }
     const n = sorular.length;

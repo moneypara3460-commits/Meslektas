@@ -3,6 +3,7 @@ import React, { useMemo, useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Aciklama, Kart, Giris, R, useTema } from '../ui';
 import { karistir } from '../motor/kurallar';
+import { ses, titret } from '../motor/his';
 
 export default function Siniflandirma({ gorev, onBitir, onKapat }) {
   const t = useTema();
@@ -10,7 +11,7 @@ export default function Siniflandirma({ gorev, onBitir, onKapat }) {
   const [i, setI] = useState(0); const [secim, setSecim] = useState(null); const [hata, setHata] = useState(0);
   const o = ogeler[i]; const cevaplandi = secim != null; const ok = secim === o?.kategori;
   const kat = (id) => gorev.kategoriler.find((k) => k.id === id);
-  const sec = (id) => { if (cevaplandi) return; setSecim(id); if (id !== o.kategori) setHata(hata + 1); };
+  const sec = (id) => { if (cevaplandi) return; setSecim(id); if (id !== o.kategori) { setHata(hata + 1); ses('yanlis'); titret('hata'); } else { ses('dogru'); titret('orta'); } };
   const devam = () => {
     if (i < ogeler.length - 1) { setI(i + 1); setSecim(null); return; }
     const y = hata === 0 ? 3 : hata <= 2 ? 2 : 1;
