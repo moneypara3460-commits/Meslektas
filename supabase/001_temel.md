@@ -1,3 +1,8 @@
+# 001_temel
+
+Supabase MESLEKTAS projesinde çalıştırıldı. Snack .sql dosyası kabul etmediği için SQL burada duruyor.
+
+```sql
 -- Meslektaş · temel veritabanı (30 Ekim 2026)
 -- Kural: oyuncu XP ve rozeti kendisi YAZAMAZ. Yalnızca gorev_tamamla() fonksiyonu yazar;
 -- XP miktarı ve kilit kontrolü sunucuda, meslek paketinden hesaplanır.
@@ -136,3 +141,4 @@ end;
 $$;
 revoke all on function public.gorev_tamamla(text,text,int) from public, anon;
 grant execute on function public.gorev_tamamla(text,text,int) to authenticated;
+```
