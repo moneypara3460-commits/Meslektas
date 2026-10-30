@@ -47,9 +47,9 @@ function Test({ onBitti, onGeri }) {
   };
   const s = SORULAR[i];
   return (
-    <Ekran kaydir={false}>
+    <Ekran>
       <Ust baslik="Meslek Pusulası" sayac={`${i + 1}/${SORULAR.length}`} ilerleme={i / SORULAR.length} onKapat={onGeri} />
-      <Animated.View style={{ flex: 1, opacity: kay, transform: [{ translateX: kay.interpolate({ inputRange: [0, 1], outputRange: [30, 0] }) }] }}>
+      <Animated.View style={{ opacity: kay, transform: [{ translateX: kay.interpolate({ inputRange: [0, 1], outputRange: [30, 0] }) }] }}>
         <Kart style={{ paddingVertical: 26, marginTop: 10, marginBottom: 22 }}>
           <Text style={{ fontSize: 21, lineHeight: 29, fontWeight: '700', color: R.yazi, textAlign: 'center' }}>{s.metin}</Text>
         </Kart>
@@ -67,7 +67,7 @@ function Test({ onBitti, onGeri }) {
           );
         })}
       </Animated.View>
-      {i > 0 ? <Pressable onPress={() => gec(i - 1)} hitSlop={10}><Text style={{ color: R.soluk, textAlign: 'center', fontWeight: '700' }}>← Önceki soru</Text></Pressable> : null}
+      {i > 0 ? <Pressable onPress={() => gec(i - 1)} hitSlop={10}><Text style={{ color: R.soluk, textAlign: 'center', fontWeight: '700', marginTop: 12, paddingVertical: 8 }}>← Önceki soru</Text></Pressable> : null}
     </Ekran>
   );
 }
