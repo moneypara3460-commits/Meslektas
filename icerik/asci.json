@@ -643,7 +643,8 @@
        "Tuz sona yakın ayarlanır.",
        "Servise hazır çorba 63 °C üstünde tutulur."
       ]
-     }
+     },
+     "sahne": "mutfak"
     },
     {
      "id": "c6-ogle",
@@ -1286,35 +1287,40 @@
        "ikon": "🧈",
        "metin": "Tereyağını tencerede erit",
        "neden": "Meyanenin yağ kısmı hazırlanır.",
-       "ipucu": "Önce yağ."
+       "ipucu": "Önce yağ.",
+       "animasyon": "b_eritt"
       },
       {
        "id": "un",
        "ikon": "🌾",
        "metin": "Unu ekle, kokusu gidene kadar kavur",
        "neden": "Çiğ un tadı gider; buna meyane denir.",
-       "ipucu": "Yağa koyulaştırıcı ekle."
+       "ipucu": "Yağa koyulaştırıcı ekle.",
+       "animasyon": "b_un"
       },
       {
        "id": "sut",
        "ikon": "🥛",
        "metin": "Sütü azar azar ekle, sürekli çırp",
        "neden": "Yavaş eklenen süt ve çırpma topaklanmayı önler.",
-       "ipucu": "Meyane hazır; sıvıyı ekle."
+       "ipucu": "Meyane hazır; sıvıyı ekle.",
+       "animasyon": "b_sut"
       },
       {
        "id": "koyulas",
        "ikon": "🔥",
        "metin": "Kısık ateşte karıştırarak koyulaşana kadar pişir",
        "neden": "Sos kaşığın sırtını kaplayacak kıvama gelir.",
-       "ipucu": "Kıvamı ateşte bul."
+       "ipucu": "Kıvamı ateşte bul.",
+       "animasyon": "b_koyulas"
       },
       {
        "id": "tat",
        "ikon": "🧂",
        "metin": "Tuz, karabiber ve muskatla tatlandır",
        "neden": "Tatlandırma kıvam oturunca yapılır.",
-       "ipucu": "Son dokunuş."
+       "ipucu": "Son dokunuş.",
+       "animasyon": "b_tat"
       }
      ],
      "puanlama": {
@@ -1331,7 +1337,8 @@
        "Kıvam: kaşığın sırtını kaplar.",
        "Topak olursa süz."
       ]
-     }
+     },
+     "sahne": "mutfak"
     },
     {
      "id": "u3-brigad",

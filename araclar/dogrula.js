@@ -16,6 +16,9 @@ const fotoDosya = fs.readFileSync(path.join(__dirname, '..', 'gorseller', 'index
 const fotoBlok = fotoDosya.slice(fotoDosya.indexOf('FOTOLAR = {'), fotoDosya.indexOf('export const gorselVar'));
 for (const m of fotoBlok.matchAll(/^\s+'?([a-z-]+)'?: \{/gm)) GORSELLER.add(m[1]);
 const gorselKontrol = (ad, yer, H) => { if (ad && !GORSELLER.has(ad)) H.push(`${yer}: "${ad}" adında görsel yok`); };
+const sahneDosya = fs.readFileSync(path.join(__dirname, '..', 'sahneler', 'index.js'), 'utf8');
+const SAHNE_HTML = {};
+for (const ad of ['espresso', 'mutfak', 'salon']) if (sahneDosya.includes(ad + ':')) SAHNE_HTML[ad] = fs.readFileSync(path.join(__dirname, '..', 'sahneler', ad + 'Html.js'), 'utf8');
 let hataSay = 0;
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   const P = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); const H = [];
@@ -40,6 +43,7 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       if (g.sorular && g.sablon !== 'uyum') g.sorular.forEach((s, i) => { if (!(s.dogru >= 0 && s.dogru < s.secenekler.length)) H.push(`${yer}: ${i + 1}. sorunun doğru cevabı geçersiz`); if (!s.aciklama) H.push(`${yer}: ${i + 1}. soruda açıklama yok`); });
       if (g.sablon === 'senaryo') g.adimlar.forEach((a, i) => { if (a.secenekler.filter((o) => o.dogru).length !== 1) H.push(`${yer}: ${i + 1}. adımda tam 1 doğru seçenek olmalı`); });
       if (g.sablon === 'siniflandirma') { const ks = new Set(g.kategoriler.map((k) => k.id)); g.ogeler.forEach((o) => { if (!ks.has(o.kategori)) H.push(`${yer}: "${o.ad}" kategorisi yok`); }); }
+      if (g.sahne) { const h = SAHNE_HTML[g.sahne]; if (!h) H.push(`${yer}: "${g.sahne}" sahnesi yok`); else g.adimlar.forEach((a) => { const ad = a.animasyon || a.id; if (!h.includes(ad + ': async')) H.push(`${yer}: sahnede "${ad}" animasyonu yok`); }); }
       if (g.sablon === 'zamanlama') g.turlar.forEach((t) => { if (!(t.baslangic < t.hedef[0] && t.hedef[0] < t.hedef[1] && t.hedef[1] < t.tehlike && t.tehlike <= t.bitis)) H.push(`${yer}: "${t.ad}" sıralaması başlangıç < hedef < tehlike ≤ bitiş olmalı`); });
     });
     if (top !== K.hedefXp) H.push(`${K.ad}: hedefXp ${K.hedefXp}, görevlerin toplamı ${top}`);
