@@ -3,6 +3,7 @@ import barista from './barista.json';
 import asci from './asci.json';
 import servis from './servis.json';
 import mimar from './mimar.json';
+import insaat from './insaat.json';
 
-export const MESLEKLER = [barista, asci, servis, mimar];
+export const MESLEKLER = [barista, asci, servis, mimar, insaat];
 export const meslekBul = (id) => MESLEKLER.find((p) => p.meslek.id === id);

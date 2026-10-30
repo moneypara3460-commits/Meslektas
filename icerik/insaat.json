@@ -1,0 +1,2064 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "insaat",
+  "ad": "İnşaat Teknisyeni",
+  "kategori": "Yapı & Şantiye",
+  "tanim": "Binanın projeye uygun yapılmasını sahada sağlayan meslek: ölçer, kontrol eder, hesaplar. Çıraklıktan kıdemli teknikerliğe.",
+  "calismaKosullari": [
+   "Açık havada, şantiyede",
+   "Toz, gürültü ve yüksekte çalışma",
+   "Sabah erken başlayan tempo"
+  ],
+  "kademeler": [
+   "Merak",
+   "Çırak",
+   "Teknisyen",
+   "Tekniker",
+   "Kıdemli tekniker"
+  ],
+  "renkler": {
+   "ana": "#2f3a40",
+   "vurgu": "#f2a900",
+   "zemin": "#f1efea"
+  },
+  "metinler": {
+   "senaryoBasla": "Sahaya çık",
+   "senaryoBitir": "Günü bitir",
+   "ucYildiz": "Kıdemli tekniker baretine vurdu: \"İşte şantiyeci!\"",
+   "karakter": {
+    "usta": "Kıdemli tekniker",
+    "musteri": "Saha ekibi"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "İnşaat Teknisyenliği Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Teknisyen olmak için meslek lisesinin inşaat teknolojisi alanı, tekniker olmak için 2 yıllık inşaat teknolojisi önlisans programı bitirilir."
+  }
+ },
+ "kaynaklar": [
+  "MEB Mesleki ve Teknik Eğitim: İnşaat Teknolojisi alanı (kendi cümlelerimizle)",
+  "Türkiye Bina Deprem Yönetmeliği (2018): en düşük beton sınıfı C25, nervürlü donatı",
+  "6331 sayılı İş Sağlığı ve Güvenliği Kanunu; Yapı İşlerinde İSG Yönetmeliği",
+  "4708 sayılı Yapı Denetimi Hakkında Kanun",
+  "Donatı birim ağırlıkları: Ø12 ≈ 0,888 kg/m",
+  "İnşaat teknikeri uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Şantiye Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Çırak kademesinde güvenliği, aletleri, proje okumayı ve kolon yapmayı öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir inşaat teknisyeninin günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "⛑️",
+       "baslik": "Sabah: güvenlik",
+       "metin": "Gün, şantiyede baret ve yelekle başlar. Ekip toplanır, günün işleri ve tehlikeli noktalar konuşulur.",
+       "terim": "iş güvenliği"
+      },
+      {
+       "ikon": "📜",
+       "baslik": "Projeye bakmak",
+       "metin": "Bugün hangi kolon, hangi döşeme yapılacak? Teknisyen çizimi okur, ölçüleri sahaya taşır.",
+       "terim": "proje okuma"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Ölçmek ve işaretlemek",
+       "metin": "Duvarın, kolonun yeri zemine işaretlenir; yükseklikler (kotlar) lazer nivo ile kontrol edilir.",
+       "terim": "aplikasyon"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Kontrol",
+       "metin": "Demirin sayısı, kalıbın düzgünlüğü, betonun cinsi projeye uygun mu diye bakılır.",
+       "terim": "saha kontrolü"
+      },
+      {
+       "ikon": "🧮",
+       "baslik": "Hesap",
+       "metin": "Ne kadar beton, ne kadar demir kullanıldı, ne kadar iş yapıldı hesaplanır ve kayda geçer.",
+       "terim": "metraj"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Meslek lisesinin inşaat teknolojisi alanını bitiren teknisyen, 2 yıllık meslek yüksekokulunun inşaat teknolojisi programını bitiren tekniker olur.",
+       "terim": "teknisyen / tekniker"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Şantiyede ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir apartman şantiyesinde deneme günündesin. Kıdemli tekniker seni kapıda karşıladı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kıdemli tekniker: \"Baretin nerede?\" Arabada unuttun.",
+       "secenekler": [
+        {
+         "metin": "Hemen gidip baret ve yeleğimi takar, öyle girerim",
+         "dogru": true,
+         "aciklama": "Kişisel koruyucu donanım olmadan şantiyeye girilmez; bir saniyelik kaza ömür boyu iz bırakır."
+        },
+        {
+         "metin": "Bugünlük idare ederim, dikkatli olurum",
+         "dogru": false,
+         "aciklama": "Düşen bir cıvata bile baretsiz kafaya ciddi zarar verir."
+        },
+        {
+         "metin": "Sadece zemin katta dolaşırım",
+         "dogru": false,
+         "aciklama": "Tehlike her katta vardır; kural herkes için geçerli."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Kıdemli tekniker sana bir çizim verdi: \"Bu kolonun yerini bul.\"",
+       "secenekler": [
+        {
+         "metin": "Aks harflerine ve numaralarına bakıp kesiştikleri yeri bulurum",
+         "dogru": true,
+         "aciklama": "Akslar binanın adresidir: B aksı ile 2 aksının kesişimi gibi."
+        },
+        {
+         "metin": "Gözüme uygun gelen yere işaret koyarım",
+         "dogru": false,
+         "aciklama": "Şantiyede tahminle iş yapılmaz; her şey ölçüyle."
+        },
+        {
+         "metin": "Ustaya sorarım, o bilir",
+         "dogru": false,
+         "aciklama": "Sormak iyidir ama önce çizimi okumayı öğrenmelisin."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Bir usta: \"Kalıbın içine biraz atık tahta atalım, beton az gider.\"",
+       "secenekler": [
+        {
+         "metin": "Bunun yapılamayacağını söyler, kıdemli teknikere haber veririm",
+         "dogru": true,
+         "aciklama": "Betonun içine giren yabancı madde kolonu zayıflatır; deprem ülkesinde bu hayati bir hatadır."
+        },
+        {
+         "metin": "Mantıklı, tasarruf olur",
+         "dogru": false,
+         "aciklama": "Bu tasarruf binanın güvenliğinden çalmaktır."
+        },
+        {
+         "metin": "Görmezden gelirim",
+         "dogru": false,
+         "aciklama": "Gördüğün hatayı bildirmek teknisyenin işidir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Şantiyede ilk gün",
+      "maddeler": [
+       "Baretsiz, yeleksiz girilmez.",
+       "Yer aksla bulunur, tahminle değil.",
+       "Betona yabancı madde girmez."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Gün boyu açık havada, ayakta çalışmak?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Ölçü, hesap ve rakamlarla uğraşmak?",
+       "secenekler": [
+        [
+         "Rahatım",
+         2
+        ],
+        [
+         "İdare ederim",
+         1
+        ],
+        [
+         "Zorlanırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Ustalara bir hatayı düzeltmesini söylemek?",
+       "secenekler": [
+        [
+         "Yapabilirim",
+         2
+        ],
+        [
+         "Çekinerek",
+         1
+        ],
+        [
+         "Çok zor",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Toz, gürültü ve çamur?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Katlanırım",
+         1
+        ],
+        [
+         "Hiç istemem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Bir şeyin yapılışını adım adım takip etmek?",
+       "secenekler": [
+        [
+         "Hoşuma gider",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Sıkılırım",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Sahayı ve hesabı seviyorsun. Şantiye seni bekliyor; Çırak kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Çırak kademesini oynayıp şantiyeyi daha yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Şantiye temposu seni zorlayabilir. Büroda metraj ve çizim tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Çırak",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Şantiye Çırağı",
+    "ikon": "⛑️"
+   },
+   "sonraki": "Teknisyen kademesi açıldı: beton günü, vibratör, metraj ve döşeme dökümü.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-guvenlik",
+     "sablon": "bilgi",
+     "ikon": "⛑️",
+     "baslik": "Önce güvenlik",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "⛑️",
+       "baslik": "Kişisel koruyucu donanım",
+       "metin": "Baret, yelek, çelik burunlu ayakkabı ve eldiven şantiyenin kıyafetidir. İşe göre gözlük ve kulaklık da takılır.",
+       "terim": "KKD"
+      },
+      {
+       "ikon": "🪢",
+       "baslik": "Yüksekte çalışma",
+       "metin": "Düşme tehlikesi olan yerde emniyet kemeri takılır ve sağlam bir noktaya bağlanır. Döşeme kenarlarında korkuluk olur.",
+       "terim": "düşmeye karşı koruma"
+      },
+      {
+       "ikon": "🏗️",
+       "baslik": "İskele",
+       "metin": "İskele kurulumu bitip kontrol edilmeden üzerine çıkılmaz. Eksik tahta, korkuluksuz kenar tehlikedir.",
+       "terim": "iskele"
+      },
+      {
+       "ikon": "⚡",
+       "baslik": "Elektrik",
+       "metin": "Şantiyede kablolar ezilmeyecek şekilde çekilir, ıslak zeminde dikkat edilir. Arızalı alete dokunulmaz, bildirilir.",
+       "terim": "elektrik güvenliği"
+      },
+      {
+       "ikon": "🚧",
+       "baslik": "Kazı",
+       "metin": "Kazı kenarına malzeme yığılmaz, kenarlar göçmeye karşı korunur, çevresi işaretlenir.",
+       "terim": "kazı güvenliği"
+      },
+      {
+       "ikon": "📕",
+       "baslik": "Kanun",
+       "metin": "İş Sağlığı ve Güvenliği Kanunu herkese görev verir: işveren önlem alır, çalışan kurallara uyar ve tehlikeyi bildirir.",
+       "terim": "6331 sayılı Kanun"
+      }
+     ]
+    },
+    {
+     "id": "c2-aletler",
+     "sablon": "siniflandirma",
+     "ikon": "🧰",
+     "baslik": "Aletleri tanı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Şantiye deposundasın. Her aleti doğru rafa koy.",
+     "kategoriler": [
+      {
+       "id": "olcu",
+       "ad": "Ölçü ve kontrol",
+       "ikon": "📏"
+      },
+      {
+       "id": "beton",
+       "ad": "Kalıp, demir, beton",
+       "ikon": "🧱"
+      },
+      {
+       "id": "kkd",
+       "ad": "Koruyucu donanım",
+       "ikon": "⛑️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Şerit metre",
+       "ikon": "📏",
+       "kategori": "olcu",
+       "aciklama": "Uzunluk ölçer."
+      },
+      {
+       "ad": "Lazer nivo",
+       "ikon": "🔴",
+       "kategori": "olcu",
+       "aciklama": "Yatay ve düşey çizgi atar, kotu kontrol eder."
+      },
+      {
+       "ad": "Şakül",
+       "ikon": "🪀",
+       "kategori": "olcu",
+       "aciklama": "İpin ucundaki ağırlık tam düşeyi gösterir; kolonun dikliği kontrol edilir."
+      },
+      {
+       "ad": "Su terazisi",
+       "ikon": "🫧",
+       "kategori": "olcu",
+       "aciklama": "Yüzeyin yatay olup olmadığını gösterir."
+      },
+      {
+       "ad": "Beton vibratörü",
+       "ikon": "〰️",
+       "kategori": "beton",
+       "aciklama": "Taze betondaki havayı alıp sıkıştırır."
+      },
+      {
+       "ad": "Demir bükme aleti",
+       "ikon": "🔧",
+       "kategori": "beton",
+       "aciklama": "Donatıyı projedeki şekle büker."
+      },
+      {
+       "ad": "Emniyet kemeri",
+       "ikon": "🪢",
+       "kategori": "kkd",
+       "aciklama": "Yüksekte düşmeye karşı korur."
+      },
+      {
+       "ad": "Çelik burunlu ayakkabı",
+       "ikon": "🥾",
+       "kategori": "kkd",
+       "aciklama": "Ayağı düşen yüke ve çiviye karşı korur."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Aletler",
+      "maddeler": [
+       "Ölçü: metre, nivo, şakül, su terazisi.",
+       "Beton işi: kalıp, demir, vibratör.",
+       "Koruyucu: baret, kemer, ayakkabı."
+      ]
+     }
+    },
+    {
+     "id": "c3-proje",
+     "sablon": "bilgi",
+     "ikon": "📜",
+     "baslik": "Proje okumak",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "➕",
+       "baslik": "Akslar",
+       "metin": "Binanın üzerine çizilmiş harfli ve numaralı çizgilerdir. Her kolonun adresi bir aks kesişimidir.",
+       "terim": "aks"
+      },
+      {
+       "ikon": "↕️",
+       "baslik": "Kot",
+       "metin": "Bir noktanın yüksekliğidir. ±0.00 kabul edilen noktaya göre +3.00 üç metre yukarı, -3.00 üç metre aşağı demektir.",
+       "terim": "kot"
+      },
+      {
+       "ikon": "🏛️",
+       "baslik": "Mimari proje",
+       "metin": "Odaları, duvarları, kapı ve pencereleri gösterir.",
+       "terim": "mimari proje"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Statik proje",
+       "metin": "Kolon, kiriş, döşeme ve temelin boyutlarını, içine konacak demirleri gösterir.",
+       "terim": "statik / betonarme proje"
+      },
+      {
+       "ikon": "⌀",
+       "baslik": "Demir yazısı",
+       "metin": "Projede \"4Ø16\" gibi yazılar görürsün: 4 adet, 16 mm çapında demir demektir.",
+       "terim": "donatı"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Ölçek",
+       "metin": "1/50 ölçekli çizimde kâğıttaki 1 cm sahada 50 cm'dir.",
+       "terim": "ölçek"
+      }
+     ]
+    },
+    {
+     "id": "c4-soru",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "Şantiye bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Projede \"6Ø14\" yazıyor. Ne demek?",
+       "secenekler": [
+        "6 metre, 14 cm",
+        "6 adet, 14 mm çapında demir",
+        "14 adet, 6 mm demir",
+        "6. kat, 14. kolon"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce adet, sonra Ø ve çap (mm)."
+      },
+      {
+       "soru": "Kot +3.00 nedir?",
+       "secenekler": [
+        "3 cm yukarı",
+        "Sıfır noktasından 3 m yukarı",
+        "3. kat",
+        "3 m aşağı"
+       ],
+       "dogru": 1,
+       "aciklama": "Kot metre cinsinden yüksekliktir."
+      },
+      {
+       "soru": "Kolonun boyutlarını ve demirlerini hangi proje gösterir?",
+       "secenekler": [
+        "Mimari proje",
+        "Statik proje",
+        "Elektrik projesi",
+        "Peyzaj projesi"
+       ],
+       "dogru": 1,
+       "aciklama": "Taşıyıcı elemanlar statik projededir."
+      },
+      {
+       "soru": "Kolonun düşey olup olmadığını en basit hangi aletle kontrol edersin?",
+       "secenekler": [
+        "Şakül",
+        "Şerit metre",
+        "Mala",
+        "Vibratör"
+       ],
+       "dogru": 0,
+       "aciklama": "Şakül tam düşeyi gösterir."
+      },
+      {
+       "soru": "Kazı kenarına toprak ve malzeme yığmak?",
+       "secenekler": [
+        "Yer kazandırır",
+        "Göçük riski yaratır, yapılmaz",
+        "Sadece gündüz olur",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Kenara gelen yük kazı duvarını çökertebilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hatırla",
+      "maddeler": [
+       "4Ø16 = 4 adet, 16 mm.",
+       "Kot = yükseklik (m).",
+       "Taşıyıcılar statik projede.",
+       "Düşey için şakül."
+      ]
+     }
+    },
+    {
+     "id": "c5-hafta",
+     "sablon": "senaryo",
+     "ikon": "🏗️",
+     "baslik": "İlk haftan",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Çırak olarak bir haftadır şantiyedesin. Kıdemli tekniker sana küçük işler veriyor.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir işçi korkuluğu olmayan döşeme kenarında çalışıyor.",
+       "secenekler": [
+        {
+         "metin": "Hemen uyarıp kenardan uzaklaştırır, durumu kıdemli teknikere bildiririm",
+         "dogru": true,
+         "aciklama": "Düşme şantiyelerde en çok can alan kazadır."
+        },
+        {
+         "metin": "Usta adam, düşmez",
+         "dogru": false,
+         "aciklama": "Deneyim düşmeyi engellemez; korkuluk ve kemer engeller."
+        },
+        {
+         "metin": "Mola bitince söylerim",
+         "dogru": false,
+         "aciklama": "Tehlike beklemez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kolon yerini işaretliyorsun, ölçün projeden 3 cm farklı çıktı.",
+       "secenekler": [
+        {
+         "metin": "Yeniden ölçer, yine farklıysa kıdemli teknikere gösteririm",
+         "dogru": true,
+         "aciklama": "Küçük kayma yukarı katlarda büyür; erken düzeltmek ucuzdur."
+        },
+        {
+         "metin": "3 cm önemsiz, devam ederim",
+         "dogru": false,
+         "aciklama": "Kolonlar üst üste oturmalı; kayma taşıyıcı sistemi bozar."
+        },
+        {
+         "metin": "Kendi kafama göre ortalarım",
+         "dogru": false,
+         "aciklama": "Ölçü projeye göre düzeltilir, tahmine göre değil."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Bir usta: \"Çırak çocuk bize akıl mı verecek?\" diyor.",
+       "secenekler": [
+        {
+         "metin": "Sakin kalıp projedeki ölçüyü gösterir, gerekirse kıdemli teknikeri çağırırım",
+         "dogru": true,
+         "aciklama": "Tartışma değil, ölçü ve proje konuşur."
+        },
+        {
+         "metin": "Ben de bağırırım",
+         "dogru": false,
+         "aciklama": "Kavga işi durdurur, güveni bozar."
+        },
+        {
+         "metin": "Haklı, susarım",
+         "dogru": false,
+         "aciklama": "Doğru bildiğin güvenlik ve ölçü konusunu kibarca savun."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Çırağın kuralları",
+      "maddeler": [
+       "Tehlikeyi gördüğün an söyle.",
+       "Ölçü tutmazsa tekrar ölç, sonra bildir.",
+       "Tartışmada projeyi göster."
+      ]
+     }
+    },
+    {
+     "id": "c6-kolon",
+     "sablon": "siralama",
+     "ikon": "🏛️",
+     "baslik": "Kolonu yap",
+     "aciklama": "Zemin katta bir kolon yapılacak. Kolonun yapım adımlarını doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "aplikasyon",
+       "ikon": "📍",
+       "metin": "Kolonun yerini projeden ölçüp zemine işaretle",
+       "neden": "Yanlış yere yapılan kolon geri alınamaz; her şey doğru yerle başlar.",
+       "ipucu": "Önce kolonun nerede olacağını bil."
+      },
+      {
+       "id": "donati",
+       "ikon": "🔩",
+       "metin": "Demir kafesi (boyuna demirler ve etriyeler) yerine koy, bağla",
+       "neden": "Betonu çekmeye karşı demir taşır; kafes kalıptan önce yerleştirilir.",
+       "ipucu": "Yer belli; kolonun iskeleti ne?"
+      },
+      {
+       "id": "paspayi",
+       "ikon": "⚪",
+       "metin": "Demirlere paspayı takozlarını tak",
+       "neden": "Demir kalıba değmemeli; çevresinde beton kalırsa paslanmaz ve betonla birlikte çalışır.",
+       "ipucu": "Demirle kalıp arasında boşluk kalmalı."
+      },
+      {
+       "id": "kalip",
+       "ikon": "🪵",
+       "metin": "Kalıbı kapat, şakülle düşeyliğini kontrol et",
+       "neden": "Eğri kalıp eğri kolon demektir; beton dökülünce düzeltilemez.",
+       "ipucu": "Demir hazır; beton neyin içine dökülecek?"
+      },
+      {
+       "id": "beton",
+       "ikon": "🚛",
+       "metin": "Betonu dök",
+       "neden": "Kalıp ve demir onaylandıktan sonra beton dökülür.",
+       "ipucu": "Her şey kontrol edildi; şimdi döküm."
+      },
+      {
+       "id": "vibrator",
+       "ikon": "〰️",
+       "metin": "Vibratörle sıkıştır",
+       "neden": "Taze betondaki hava boşlukları alınmazsa kolon içinde boşluk kalır.",
+       "ipucu": "Beton döküldü ama içinde hava var."
+      },
+      {
+       "id": "kur",
+       "ikon": "💧",
+       "metin": "Betonu ilk günlerde nemli tutarak koru (kür)",
+       "neden": "Beton kuruyarak değil, suyla sertleşir; erken kuruyan beton çatlar ve zayıf kalır.",
+       "ipucu": "Döküm bitti; beton nasıl güçlenecek?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Kolon yapım sırası",
+      "maddeler": [
+       "Yer → demir → paspayı → kalıp → beton → vibratör → kür.",
+       "Demir kalıba değmez.",
+       "Eğri kalıp sonradan düzelmez.",
+       "Beton suyla sertleşir; nemli tutulur."
+      ]
+     },
+     "sahne": "santiye"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Çırak sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Şantiyeye girmeden önce ne zorunludur?",
+       "secenekler": [
+        "Telefon",
+        "Baret ve koruyucu donanım",
+        "Kask kamerası",
+        "Hiçbiri"
+       ],
+       "dogru": 1,
+       "aciklama": "KKD olmadan girilmez."
+      },
+      {
+       "soru": "\"8Ø12\" ne demek?",
+       "secenekler": [
+        "8 adet 12 mm demir",
+        "12 adet 8 mm demir",
+        "8 metre demir",
+        "8. kat"
+       ],
+       "dogru": 0,
+       "aciklama": "Adet + çap."
+      },
+      {
+       "soru": "Paspayı ne işe yarar?",
+       "secenekler": [
+        "Kalıbı süsler",
+        "Demirin kalıba değmemesini, betonla örtülmesini sağlar",
+        "Betonu hızlandırır",
+        "Vibratörü tutar"
+       ],
+       "dogru": 1,
+       "aciklama": "Örtülmeyen demir paslanır."
+      },
+      {
+       "soru": "Kolon yapımında kalıp ne zaman kapatılır?",
+       "secenekler": [
+        "Demirden önce",
+        "Demir ve paspayı yerleşince",
+        "Betondan sonra",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce iskelet, sonra kalıp."
+      },
+      {
+       "soru": "Vibratör ne yapar?",
+       "secenekler": [
+        "Betonu soğutur",
+        "Taze betondaki havayı alır",
+        "Demiri büker",
+        "Kalıbı söker"
+       ],
+       "dogru": 1,
+       "aciklama": "Boşluksuz beton için."
+      },
+      {
+       "soru": "Kür nedir?",
+       "secenekler": [
+        "Betonu ilk günlerde nemli tutmak",
+        "Betonu boyamak",
+        "Kalıbı yağlamak",
+        "Demiri kesmek"
+       ],
+       "dogru": 0,
+       "aciklama": "Beton suyla sertleşir."
+      },
+      {
+       "soru": "Korkuluksuz döşeme kenarında çalışan birini görürsen?",
+       "secenekler": [
+        "Görmezden gelirim",
+        "Hemen uyarır, bildiririm",
+        "Fotoğraf çekerim",
+        "Mola beklerim"
+       ],
+       "dogru": 1,
+       "aciklama": "Düşme en ölümcül kazalardandır."
+      },
+      {
+       "soru": "Kolon boyutlarını hangi proje gösterir?",
+       "secenekler": [
+        "Mimari",
+        "Statik",
+        "Elektrik",
+        "Mekanik"
+       ],
+       "dogru": 1,
+       "aciklama": "Taşıyıcılar statik projede."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Teknisyen",
+   "hedefXp": 305,
+   "rozet": {
+    "ad": "İnşaat Teknisyeni",
+    "ikon": "🧱"
+   },
+   "sonraki": "Tekniker kademesi açıldı: aplikasyon, projeler, kontrol ve döküm hazırlığı.",
+   "gorevler": [
+    {
+     "id": "t1-beton",
+     "sablon": "bilgi",
+     "ikon": "🚛",
+     "baslik": "Beton günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🏷️",
+       "baslik": "Beton sınıfı",
+       "metin": "C25, C30 gibi yazılar betonun dayanımını gösterir. Deprem yönetmeliğine göre betonarme binalarda C25'ten düşük beton kullanılamaz.",
+       "terim": "beton sınıfı"
+      },
+      {
+       "ikon": "📄",
+       "baslik": "İrsaliye",
+       "metin": "Mikser gelince irsaliyesi okunur: beton sınıfı projedekiyle aynı mı, saat kaçta üretilmiş?",
+       "terim": "sevk irsaliyesi"
+      },
+      {
+       "ikon": "🚫",
+       "baslik": "Su eklenmez",
+       "metin": "Beton akışkan olsun diye şantiyede suyu artırmak dayanımı düşürür. Bu yapılmaz.",
+       "terim": "su/çimento oranı"
+      },
+      {
+       "ikon": "🧪",
+       "baslik": "Numune",
+       "metin": "Dökümden beton numuneleri alınır, laboratuvarda belli günlerde (ör. 7 ve 28. gün) kırılarak dayanımı ölçülür. Yapı denetim bunu takip eder.",
+       "terim": "numune"
+      },
+      {
+       "ikon": "〰️",
+       "baslik": "Sıkıştırma",
+       "metin": "Vibratör betona dik daldırılır, her noktada kısa süre tutulup yavaşça çekilir. Az da çok da zararlıdır.",
+       "terim": "vibrasyon"
+      },
+      {
+       "ikon": "🔩",
+       "baslik": "Donatı çeliği",
+       "metin": "Binalarda nervürlü (yüzeyi çıkıntılı) donatı kullanılır; çıkıntılar betonu kavrar.",
+       "terim": "nervürlü donatı"
+      }
+     ]
+    },
+    {
+     "id": "t2-vibrator",
+     "sablon": "zamanlama",
+     "ikon": "〰️",
+     "baslik": "Vibratörü doğru süre tut",
+     "temelXp": 30,
+     "yildizBasinaXp": 15,
+     "aciklama": "Vibratörü betona daldırdın. Süre ilerliyor. Hedef aralığa girince DURDUR'a bas. Erken çekersen içeride hava kalır, geç kalırsan beton ayrışır.",
+     "turlar": [
+      {
+       "ad": "Kolonda sıkıştırma",
+       "not": "Vibratör kolonun içinde. Yüzeyde kabarcık çıkışı azalıyor.",
+       "birim": "sn",
+       "baslangic": 0,
+       "bitis": 30,
+       "hedef": [
+        5,
+        15
+       ],
+       "tehlike": 22,
+       "tehlikeMetni": "Fazla titreştirildi; ağır taşlar dibe çöktü, üstte su ve şerbet toplandı.",
+       "sure": 5,
+       "erkenMetni": "Erken çektin; içeride hava boşlukları kaldı.",
+       "gecMetni": "Biraz fazla kaldı; ayrışma başlayabilir. Kabarcık bitince çek."
+      },
+      {
+       "ad": "Döşemede sıkıştırma",
+       "not": "Bir sonraki noktaya geçtin; aynı kural geçerli.",
+       "birim": "sn",
+       "baslangic": 0,
+       "bitis": 30,
+       "hedef": [
+        5,
+        15
+       ],
+       "tehlike": 22,
+       "tehlikeMetni": "Fazla titreştirildi; beton ayrıştı.",
+       "sure": 4,
+       "erkenMetni": "Erken çektin; yüzeyde hâlâ kabarcık vardı.",
+       "gecMetni": "Biraz fazla kaldı; kabarcık bitince çekmelisin."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Vibratör ustalığı",
+      "maddeler": [
+       "Dik daldır, kısa tut, yavaş çek.",
+       "Kabarcık çıkışı bitince yeter.",
+       "Az: boşluk kalır. Çok: beton ayrışır.",
+       "Süre betona göre değişir; genelde birkaç saniye ile 15 saniye arası."
+      ]
+     }
+    },
+    {
+     "id": "t3-metraj",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Metraj hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Kolon 30 cm × 60 cm, yüksekliği 3 m. Kaç m³ beton gider?",
+       "secenekler": [
+        "0,18 m³",
+        "0,54 m³",
+        "5,4 m³",
+        "1,8 m³"
+       ],
+       "dogru": 1,
+       "aciklama": "0,30 × 0,60 × 3 = 0,54 m³."
+      },
+      {
+       "soru": "Döşeme 10 m × 8 m, kalınlığı 15 cm. Kaç m³ beton gider?",
+       "secenekler": [
+        "8 m³",
+        "12 m³",
+        "15 m³",
+        "120 m³"
+       ],
+       "dogru": 1,
+       "aciklama": "10 × 8 × 0,15 = 12 m³."
+      },
+      {
+       "soru": "Ø12 demirin 1 metresi yaklaşık 0,888 kg'dır. 12 m'lik 10 demir kaç kg eder?",
+       "secenekler": [
+        "10,7 kg",
+        "88,8 kg",
+        "106,6 kg",
+        "1.066 kg"
+       ],
+       "dogru": 2,
+       "aciklama": "10 × 12 = 120 m; 120 × 0,888 ≈ 106,6 kg."
+      },
+      {
+       "soru": "Duvar 20 m uzun, 3 m yüksek; içinde toplam 6 m² pencere var. Örülecek duvar kaç m²?",
+       "secenekler": [
+        "54 m²",
+        "60 m²",
+        "66 m²",
+        "23 m²"
+       ],
+       "dogru": 0,
+       "aciklama": "20 × 3 = 60; 60 − 6 = 54 m²."
+      },
+      {
+       "soru": "Bir mikser 8 m³ taşıyor. 12 m³'lük döşeme için en az kaç mikser gerekir?",
+       "secenekler": [
+        "1",
+        "2",
+        "3",
+        "12"
+       ],
+       "dogru": 1,
+       "aciklama": "12 ÷ 8 = 1,5 → 2 mikser."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Metraj",
+      "maddeler": [
+       "Hacim = en × boy × yükseklik (metre).",
+       "Santimetreyi metreye çevir: 15 cm = 0,15 m.",
+       "Boşlukları (pencere) düş.",
+       "Demir ağırlığı = toplam boy × birim ağırlık."
+      ]
+     }
+    },
+    {
+     "id": "t4-dokum",
+     "sablon": "senaryo",
+     "ikon": "🚛",
+     "baslik": "Döşeme dökümü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Bugün döşeme betonu dökülecek. Teknisyen olarak dökümün başındasın.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Mikser şoförü: \"Beton koyu geldi, biraz su katayım mı?\"",
+       "secenekler": [
+        {
+         "metin": "Kesinlikle hayır derim; sorun varsa beton firmasını ve kıdemli teknikeri ararım",
+         "dogru": true,
+         "aciklama": "Fazla su betonun dayanımını düşürür."
+        },
+        {
+         "metin": "Biraz katsın, dökmesi kolaylaşır",
+         "dogru": false,
+         "aciklama": "Kolay dökülen ama zayıf beton olur."
+        },
+        {
+         "metin": "Pompacıya sorarım",
+         "dogru": false,
+         "aciklama": "Karar dayanımla ilgili; su eklenmez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "İrsaliyede C20 yazıyor, projede C30 isteniyor.",
+       "secenekler": [
+        {
+         "metin": "Dökümü durdurur, durumu kıdemli teknikere ve yapı denetime bildiririm",
+         "dogru": true,
+         "aciklama": "Yanlış sınıf beton bir kez dökülünce geri alınamaz."
+        },
+        {
+         "metin": "Az fark, dökeriz",
+         "dogru": false,
+         "aciklama": "Dayanım farkı binanın güvenliğini doğrudan etkiler."
+        },
+        {
+         "metin": "İrsaliyeyi değiştiririm",
+         "dogru": false,
+         "aciklama": "Belgeyi değiştirmek hem tehlikeli hem suçtur."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Döküm bitti, hava çok sıcak ve rüzgârlı.",
+       "secenekler": [
+        {
+         "metin": "Yüzeyi nemli tutmak için sulama ve örtü planlarım",
+         "dogru": true,
+         "aciklama": "Sıcakta su hızla buharlaşır; beton çatlar ve zayıf kalır."
+        },
+        {
+         "metin": "Güneş betonu çabuk kurutur, iyi olur",
+         "dogru": false,
+         "aciklama": "Beton kurumayla değil suyla sertleşir."
+        },
+        {
+         "metin": "Hemen kalıpları sökeriz",
+         "dogru": false,
+         "aciklama": "Erken sökülen kalıp çökmeye yol açabilir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Döküm günü",
+      "maddeler": [
+       "Betona su eklenmez.",
+       "İrsaliyeyi projeyle karşılaştır.",
+       "Sıcakta kür daha önemli."
+      ]
+     }
+    },
+    {
+     "id": "t5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Teknisyen sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Betonarme binada en düşük beton sınıfı hangisidir?",
+       "secenekler": [
+        "C16",
+        "C20",
+        "C25",
+        "C10"
+       ],
+       "dogru": 2,
+       "aciklama": "Deprem yönetmeliğine göre C25'ten düşük olamaz."
+      },
+      {
+       "soru": "Mikser geldi. İlk ne kontrol edilir?",
+       "secenekler": [
+        "Şoförün adı",
+        "İrsaliyedeki beton sınıfı ve saat",
+        "Mikserin rengi",
+        "Hava durumu"
+       ],
+       "dogru": 1,
+       "aciklama": "Yanlış beton dökülmeden fark edilmeli."
+      },
+      {
+       "soru": "Betona şantiyede su eklemek?",
+       "secenekler": [
+        "Dökümü kolaylaştırır, iyi",
+        "Dayanımı düşürür, yapılmaz",
+        "Sadece kışın",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Su/çimento oranı bozulur."
+      },
+      {
+       "soru": "Kolon 25 × 50 cm, 3 m. Kaç m³?",
+       "secenekler": [
+        "0,375",
+        "3,75",
+        "0,125",
+        "1,25"
+       ],
+       "dogru": 0,
+       "aciklama": "0,25 × 0,5 × 3 = 0,375 m³."
+      },
+      {
+       "soru": "Beton numuneleri neden alınır?",
+       "secenekler": [
+        "Süs için",
+        "Laboratuvarda dayanımı ölçmek için",
+        "Satmak için",
+        "Kalıp için"
+       ],
+       "dogru": 1,
+       "aciklama": "Belli günlerde kırılır."
+      },
+      {
+       "soru": "Vibratör ne kadar tutulur?",
+       "secenekler": [
+        "Dakikalarca",
+        "Kabarcık çıkışı bitene kadar, kısa süre",
+        "Hiç tutulmaz",
+        "Beton sertleşene kadar"
+       ],
+       "dogru": 1,
+       "aciklama": "Az da çok da zararlı."
+      },
+      {
+       "soru": "Binalarda hangi donatı kullanılır?",
+       "secenekler": [
+        "Düz yüzeyli",
+        "Nervürlü",
+        "Alüminyum",
+        "Plastik"
+       ],
+       "dogru": 1,
+       "aciklama": "Çıkıntılar betonu kavrar."
+      },
+      {
+       "soru": "Sıcak havada dökümden sonra?",
+       "secenekler": [
+        "Kür ve sulama artırılır",
+        "Hemen kalıp sökülür",
+        "Hiçbir şey",
+        "Beton boyanır"
+       ],
+       "dogru": 0,
+       "aciklama": "Erken kuruma çatlatır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Tekniker",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "İnşaat Teknikeri",
+    "ikon": "📐"
+   },
+   "sonraki": "Kıdemli tekniker kademesi açıldı: saha yönetimi, hakediş ve zor kararlar.",
+   "gorevler": [
+    {
+     "id": "k1-saha",
+     "sablon": "bilgi",
+     "ikon": "📐",
+     "baslik": "Sahada ölçü ve kontrol",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📍",
+       "baslik": "Aplikasyon",
+       "metin": "Projedeki noktaların sahaya taşınmasıdır. Binanın köşeleri ve akslar zemine işaretlenir.",
+       "terim": "aplikasyon"
+      },
+      {
+       "ikon": "🔴",
+       "baslik": "Nivelman",
+       "metin": "Noktaların yüksekliklerinin ölçülmesidir. Döşemenin her yeri aynı kotta mı, lazer nivo ile bakılır.",
+       "terim": "nivelman"
+      },
+      {
+       "ikon": "📡",
+       "baslik": "Total station",
+       "metin": "Açı ve mesafeyi birlikte ölçen elektronik alettir; büyük şantiyelerde aplikasyonda kullanılır.",
+       "terim": "total station"
+      },
+      {
+       "ikon": "🔩",
+       "baslik": "Donatı kontrolü",
+       "metin": "Demirlerin sayısı, çapı, aralığı ve etriyelerin sıklığı statik projeyle tek tek karşılaştırılır.",
+       "terim": "donatı kontrolü"
+      },
+      {
+       "ikon": "🔎",
+       "baslik": "Yapı denetim",
+       "metin": "Beton dökülmeden önce yapı denetim kuruluşu demir ve kalıbı kontrol eder. Onaysız döküm yapılmaz.",
+       "terim": "denetim"
+      },
+      {
+       "ikon": "📓",
+       "baslik": "Kayıt",
+       "metin": "Yapılan işler, gelen malzemeler, hava ve sorunlar şantiye günlüğüne yazılır.",
+       "terim": "şantiye günlüğü"
+      }
+     ]
+    },
+    {
+     "id": "k2-projeler",
+     "sablon": "siniflandirma",
+     "ikon": "🗂️",
+     "baslik": "Hangi proje?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Sahada bir soru çıktı. Cevabı hangi projede ararsın?",
+     "kategoriler": [
+      {
+       "id": "mimari",
+       "ad": "Mimari",
+       "ikon": "🏛️"
+      },
+      {
+       "id": "statik",
+       "ad": "Statik",
+       "ikon": "🧱"
+      },
+      {
+       "id": "elektrik",
+       "ad": "Elektrik",
+       "ikon": "⚡"
+      },
+      {
+       "id": "mekanik",
+       "ad": "Mekanik",
+       "ikon": "🔥"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Kapının genişliği",
+       "ikon": "🚪",
+       "kategori": "mimari",
+       "aciklama": "Kapı ve pencereler mimari projede."
+      },
+      {
+       "ad": "Banyo duvarının yeri",
+       "ikon": "🧱",
+       "kategori": "mimari",
+       "aciklama": "Bölme duvarlar mimari projede."
+      },
+      {
+       "ad": "Kirişteki demir sayısı",
+       "ikon": "🔩",
+       "kategori": "statik",
+       "aciklama": "Donatı statik projede."
+      },
+      {
+       "ad": "Temelin derinliği",
+       "ikon": "⬇️",
+       "kategori": "statik",
+       "aciklama": "Temel statik projede."
+      },
+      {
+       "ad": "Prizin yüksekliği",
+       "ikon": "🔌",
+       "kategori": "elektrik",
+       "aciklama": "Priz ve anahtarlar elektrik projesinde."
+      },
+      {
+       "ad": "Pano yeri",
+       "ikon": "🗄️",
+       "kategori": "elektrik",
+       "aciklama": "Elektrik panosu elektrik projesinde."
+      },
+      {
+       "ad": "Kalorifer borusunun güzergâhı",
+       "ikon": "🔥",
+       "kategori": "mekanik",
+       "aciklama": "Isıtma tesisatı mekanik projede."
+      },
+      {
+       "ad": "Pis su borusunun eğimi",
+       "ikon": "🚿",
+       "kategori": "mekanik",
+       "aciklama": "Sıhhi tesisat mekanik projede."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Projeler",
+      "maddeler": [
+       "Mimari: mekân, kapı, pencere.",
+       "Statik: taşıyıcı ve demir.",
+       "Elektrik: priz, pano, aydınlatma.",
+       "Mekanik: su, ısıtma, havalandırma."
+      ]
+     }
+    },
+    {
+     "id": "k3-kontrol",
+     "sablon": "soru",
+     "ikon": "✅",
+     "baslik": "Kontrol listesi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Döşeme betonu dökülmeden önce kim onay verir?",
+       "secenekler": [
+        "Mikser şoförü",
+        "Yapı denetim kuruluşu",
+        "Kat maliki",
+        "Komşu"
+       ],
+       "dogru": 1,
+       "aciklama": "Demir ve kalıp kontrolü yapı denetimin görevidir."
+      },
+      {
+       "soru": "Nivelman ne ölçer?",
+       "secenekler": [
+        "Uzunluk",
+        "Yükseklik farkı / kot",
+        "Ağırlık",
+        "Sıcaklık"
+       ],
+       "dogru": 1,
+       "aciklama": "Yükseklikler kontrol edilir."
+      },
+      {
+       "soru": "Etriye nedir?",
+       "secenekler": [
+        "Kalıp tahtası",
+        "Boyuna demirleri saran kapalı demir",
+        "Beton türü",
+        "İskele parçası"
+       ],
+       "dogru": 1,
+       "aciklama": "Etriyeler kolonu ve kirişi sarar, özellikle depremde önemlidir."
+      },
+      {
+       "soru": "Tesisat borusu kirişi delip geçmek zorunda kaldı. Ne yaparsın?",
+       "secenekler": [
+        "Ustaya deldiririm",
+        "Statik proje müellifine ve yapı denetime danışırım",
+        "Görmezden gelirim",
+        "Kirişi keserim"
+       ],
+       "dogru": 1,
+       "aciklama": "Taşıyıcıya izinsiz müdahale edilmez."
+      },
+      {
+       "soru": "Şantiye günlüğüne ne yazılır?",
+       "secenekler": [
+        "Yapılan işler, gelen malzeme, sorunlar",
+        "Sadece hava durumu",
+        "Kimsenin okumadığı notlar",
+        "Hiçbir şey"
+       ],
+       "dogru": 0,
+       "aciklama": "Kayıt anlaşmazlıkta en güçlü kanıttır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kontrol",
+      "maddeler": [
+       "Onaysız döküm yok.",
+       "Taşıyıcıya izinsiz delik yok.",
+       "Her işi günlüğe yaz."
+      ]
+     }
+    },
+    {
+     "id": "k4-doseme",
+     "sablon": "siralama",
+     "ikon": "📋",
+     "baslik": "Döşeme dökümüne hazırla",
+     "aciklama": "Yarın 3. kat döşemesi dökülecek. Hazırlık adımlarını doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "kalip",
+       "ikon": "🪵",
+       "metin": "Kalıbı, dikmeleri ve kotu kontrol et",
+       "neden": "Her şey sağlam bir kalıbın üstüne kurulur.",
+       "ipucu": "Önce altındaki taşıyıcı düzen."
+      },
+      {
+       "id": "donati",
+       "ikon": "🔩",
+       "metin": "Donatıyı statik projeyle tek tek karşılaştır",
+       "neden": "Eksik ya da yanlış demir betonla gömülür, sonra görülmez.",
+       "ipucu": "Kalıp tamam; demirlere bak."
+      },
+      {
+       "id": "bosluk",
+       "ikon": "🔌",
+       "metin": "Paspaylarını ve tesisat boşluklarını kontrol et",
+       "neden": "Unutulan boşluk sonradan beton kırmak demektir.",
+       "ipucu": "Demir tamam; küçük ama önemli ayrıntılar."
+      },
+      {
+       "id": "denetim",
+       "ikon": "🔎",
+       "metin": "Yapı denetimden kontrol ve onay al",
+       "neden": "Onaysız beton dökülemez.",
+       "ipucu": "Hazırsın; kim onaylamalı?"
+      },
+      {
+       "id": "siparis",
+       "ikon": "📞",
+       "metin": "Doğru sınıfta betonu ve pompayı sipariş et",
+       "neden": "Onay gelmeden sipariş verilirse beton boşa gidebilir.",
+       "ipucu": "Onay geldi; beton gelsin."
+      },
+      {
+       "id": "numune",
+       "ikon": "🧪",
+       "metin": "Döküm sırasında numune aldır, vibratör ve kürü takip et",
+       "neden": "Dayanım belgelenir, beton doğru yerleşir.",
+       "ipucu": "Döküm başladı; neyi takip edeceksin?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Döküm hazırlığı",
+      "maddeler": [
+       "Kalıp → demir → boşluklar → denetim onayı → sipariş → numune ve kür.",
+       "Onaysız sipariş ve döküm olmaz."
+      ]
+     }
+    },
+    {
+     "id": "k5-sorun",
+     "sablon": "senaryo",
+     "ikon": "⚠️",
+     "baslik": "Sahada sorun",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Tekniker olarak bir blokun sorumlusun. Gün sorunlarla dolu.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kolonların birinde etriyeler projeden seyrek bağlanmış.",
+       "secenekler": [
+        {
+         "metin": "Betonu durdurup etriyeleri projeye göre sıklaştırırım",
+         "dogru": true,
+         "aciklama": "Etriye aralığı depremde kolonun dayanmasını belirler."
+        },
+        {
+         "metin": "Bir kolon fark etmez",
+         "dogru": false,
+         "aciklama": "Deprem en zayıf noktadan başlar."
+        },
+        {
+         "metin": "Betonu dökelim, sonra bakarız",
+         "dogru": false,
+         "aciklama": "Beton dökülünce düzeltmek imkânsızlaşır."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müteahhit: \"Yapı denetim gelmeden dökelim, vakit kaybediyoruz.\"",
+       "secenekler": [
+        {
+         "metin": "Onaysız dökümün yapılamayacağını söyler, denetimi hızlıca çağırırım",
+         "dogru": true,
+         "aciklama": "Kurala uymak hem binayı hem seni korur."
+        },
+        {
+         "metin": "Patron o, dökeriz",
+         "dogru": false,
+         "aciklama": "Sorumluluk imzası olanların ve uygulayanların da üzerindedir."
+        },
+        {
+         "metin": "Döküp sonra onaylatırız",
+         "dogru": false,
+         "aciklama": "Gömülmüş demir kontrol edilemez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Yeni gelen çırak lazer nivoyu kullanamıyor.",
+       "secenekler": [
+        {
+         "metin": "Aleti birlikte kurup adım adım gösteririm",
+         "dogru": true,
+         "aciklama": "İyi tekniker bildiğini öğretir; ekip güçlenir."
+        },
+        {
+         "metin": "Ben yaparım, o izlesin",
+         "dogru": false,
+         "aciklama": "Öğrenmezse hep sana muhtaç kalır."
+        },
+        {
+         "metin": "\"Öğrenince gel\" derim",
+         "dogru": false,
+         "aciklama": "Şantiyede öğrenme birlikte olur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Tekniker gibi düşün",
+      "maddeler": [
+       "Etriye aralığı hayati.",
+       "Onaysız döküm yok.",
+       "Bildiğini öğret."
+      ]
+     }
+    },
+    {
+     "id": "k6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Tekniker sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Projedeki noktaları sahaya taşımaya ne denir?",
+       "secenekler": [
+        "Metraj",
+        "Aplikasyon",
+        "Kür",
+        "Hakediş"
+       ],
+       "dogru": 1,
+       "aciklama": "Aplikasyon."
+      },
+      {
+       "soru": "Prizin yeri hangi projededir?",
+       "secenekler": [
+        "Mimari",
+        "Statik",
+        "Elektrik",
+        "Mekanik"
+       ],
+       "dogru": 2,
+       "aciklama": "Elektrik projesi."
+      },
+      {
+       "soru": "Pis su borusu hangi projededir?",
+       "secenekler": [
+        "Mimari",
+        "Statik",
+        "Elektrik",
+        "Mekanik"
+       ],
+       "dogru": 3,
+       "aciklama": "Sıhhi tesisat mekanikte."
+      },
+      {
+       "soru": "Döküm öncesi son onay kimden?",
+       "secenekler": [
+        "Yapı denetim",
+        "Mikserci",
+        "Kapıcı",
+        "Komşu"
+       ],
+       "dogru": 0,
+       "aciklama": "Yapı denetim kuruluşu."
+      },
+      {
+       "soru": "Etriyeler seyrek bağlanmış. Ne yaparsın?",
+       "secenekler": [
+        "Dökerim",
+        "Projeye göre sıklaştırırım",
+        "Saklarım",
+        "Bir tane eklerim"
+       ],
+       "dogru": 1,
+       "aciklama": "Depremde hayati."
+      },
+      {
+       "soru": "Yükseklik ölçümüne ne denir?",
+       "secenekler": [
+        "Nivelman",
+        "Aplikasyon",
+        "Metraj",
+        "Kür"
+       ],
+       "dogru": 0,
+       "aciklama": "Nivelman."
+      },
+      {
+       "soru": "Kirişe delik açmak gerekirse?",
+       "secenekler": [
+        "Usta açar",
+        "Statikçiye ve denetime danışılır",
+        "Kimseye sorulmaz",
+        "Kiriş kesilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Taşıyıcıya izinsiz müdahale yok."
+      },
+      {
+       "soru": "Beton sipariş ne zaman verilir?",
+       "secenekler": [
+        "Denetim onayından sonra",
+        "Kalıptan önce",
+        "İlk gün",
+        "Hiç"
+       ],
+       "dogru": 0,
+       "aciklama": "Onay gelmeden döküm olmaz."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Kıdemli tekniker",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "Kıdemli Tekniker",
+    "ikon": "🏗️"
+   },
+   "sonraki": "Çıraklıktan kıdemli teknikerliğe tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "s1-yonetim",
+     "sablon": "bilgi",
+     "ikon": "🧑‍💼",
+     "baslik": "Sahayı yönetmek",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📅",
+       "baslik": "İş programı",
+       "metin": "Hangi işin hangi gün, hangi ekiple yapılacağı planlanır. Bir gecikme diğer ekipleri de bekletir.",
+       "terim": "iş programı"
+      },
+      {
+       "ikon": "🗒️",
+       "baslik": "Puantaj",
+       "metin": "Kimin hangi gün çalıştığı kaydedilir; ücretler ve maliyet buna göre çıkar.",
+       "terim": "puantaj"
+      },
+      {
+       "ikon": "📦",
+       "baslik": "Malzeme",
+       "metin": "Demir, beton, tuğla zamanında sipariş edilir; gelen malzeme sayılır ve kontrol edilir.",
+       "terim": "malzeme takibi"
+      },
+      {
+       "ikon": "💰",
+       "baslik": "Hakediş",
+       "metin": "Yapılan işin miktarı ölçülüp birim fiyatla çarpılarak taşerona ya da müteahhide ödenecek tutar hesaplanır.",
+       "terim": "hakediş"
+      },
+      {
+       "ikon": "🦺",
+       "baslik": "Güvenlik kültürü",
+       "metin": "Sabah kısa güvenlik konuşmaları yapılır, tehlikeli işler önceden planlanır.",
+       "terim": "İSG"
+      },
+      {
+       "ikon": "🤝",
+       "baslik": "Koordinasyon",
+       "metin": "Mühendis, mimar, yapı denetim ve ustalar arasında bilgi akışını sağlamak kıdemli teknikerin günlük işidir.",
+       "terim": "koordinasyon"
+      }
+     ]
+    },
+    {
+     "id": "s2-hakedis",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Hakediş hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Taşeron bu ay 300 m² sıva yaptı. Birim fiyat 150 ₺/m². Hakediş kaç ₺? (Rakamlar örnektir.)",
+       "secenekler": [
+        "4.500 ₺",
+        "45.000 ₺",
+        "450.000 ₺",
+        "30.000 ₺"
+       ],
+       "dogru": 1,
+       "aciklama": "300 × 150 = 45.000 ₺."
+      },
+      {
+       "soru": "Geçen ay 200 m² ödenmişti, toplam yapılan 500 m². Bu ay kaç m² ödenir?",
+       "secenekler": [
+        "200 m²",
+        "300 m²",
+        "500 m²",
+        "700 m²"
+       ],
+       "dogru": 1,
+       "aciklama": "Hakediş yeni yapılan iş üzerinden: 500 − 200 = 300 m²."
+      },
+      {
+       "soru": "Bir kat döşemesi 18 m³ beton istiyor; mikser 9 m³. Kaç mikser?",
+       "secenekler": [
+        "1",
+        "2",
+        "3",
+        "18"
+       ],
+       "dogru": 1,
+       "aciklama": "18 ÷ 9 = 2."
+      },
+      {
+       "soru": "Bir ekip günde 25 m² duvar örüyor. 150 m² kaç günde biter?",
+       "secenekler": [
+        "5",
+        "6",
+        "7",
+        "25"
+       ],
+       "dogru": 1,
+       "aciklama": "150 ÷ 25 = 6 gün."
+      },
+      {
+       "soru": "Puantaj neyi gösterir?",
+       "secenekler": [
+        "Beton sınıfını",
+        "Kimin hangi gün çalıştığını",
+        "Demir çapını",
+        "Hava durumunu"
+       ],
+       "dogru": 1,
+       "aciklama": "Ücret ve maliyetin temeli."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hakediş",
+      "maddeler": [
+       "Miktar × birim fiyat.",
+       "Sadece yeni yapılan iş ödenir.",
+       "Ölçü ve kayıt hakedişin temelidir."
+      ]
+     }
+    },
+    {
+     "id": "s3-risk",
+     "sablon": "siniflandirma",
+     "ikon": "🚨",
+     "baslik": "Riskli mi?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Sabah şantiye turundasın. Gördüğün her durumu doğru gruba koy.",
+     "kategoriler": [
+      {
+       "id": "dur",
+       "ad": "İşi durdur, düzelt",
+       "ikon": "🛑"
+      },
+      {
+       "id": "tamam",
+       "ad": "Uygun, devam",
+       "ikon": "✅"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Korkuluksuz döşeme kenarında çalışma",
+       "ikon": "⚠️",
+       "kategori": "dur",
+       "aciklama": "Düşme riski."
+      },
+      {
+       "ad": "Emniyet kemeri bağlanmadan iskelede çalışma",
+       "ikon": "🪢",
+       "kategori": "dur",
+       "aciklama": "Kemer bağlanmazsa işe yaramaz."
+      },
+      {
+       "ad": "Kazı kenarına yığılmış toprak",
+       "ikon": "🚧",
+       "kategori": "dur",
+       "aciklama": "Göçük riski."
+      },
+      {
+       "ad": "Su birikintisinden geçen ek yerli kablo",
+       "ikon": "⚡",
+       "kategori": "dur",
+       "aciklama": "Elektrik çarpması riski."
+      },
+      {
+       "ad": "Kontrolü yapılmış, korkuluklu iskele",
+       "ikon": "🏗️",
+       "kategori": "tamam",
+       "aciklama": "Güvenli çalışma yeri."
+      },
+      {
+       "ad": "Baret ve yelekli ekip",
+       "ikon": "⛑️",
+       "kategori": "tamam",
+       "aciklama": "Kurallara uygun."
+      },
+      {
+       "ad": "İşaretlenmiş ve çevrilmiş kazı alanı",
+       "ikon": "🚧",
+       "kategori": "tamam",
+       "aciklama": "Doğru önlem."
+      },
+      {
+       "ad": "Yüksekte kemerini sağlam noktaya bağlamış usta",
+       "ikon": "🪢",
+       "kategori": "tamam",
+       "aciklama": "Doğru kullanım."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Şantiye turu",
+      "maddeler": [
+       "Düşme, göçük, elektrik: en büyük üç tehlike.",
+       "Gördüğün riski hemen durdur.",
+       "Doğru uygulamayı takdir et; kültür böyle oluşur."
+      ]
+     }
+    },
+    {
+     "id": "s4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir gün",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Kıdemli tekniker olarak bütün şantiyenin günlük işinden sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Taşeron: \"Hakedişimi fazla yazın, aradaki farkı paylaşırız.\"",
+       "secenekler": [
+        {
+         "metin": "Reddeder, hakedişi gerçek ölçüye göre hazırlarım",
+         "dogru": true,
+         "aciklama": "Sahte hakediş hem etik dışıdır hem de suçtur."
+        },
+        {
+         "metin": "Az bir fark olursa kabul ederim",
+         "dogru": false,
+         "aciklama": "Az da olsa sahtecilik sahteciliktir."
+        },
+        {
+         "metin": "Düşünürüm derim",
+         "dogru": false,
+         "aciklama": "Net ol; belirsizlik baskıyı artırır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Demir geç geldi; döküm iki gün kayacak, beton ekibi boşta.",
+       "secenekler": [
+        {
+         "metin": "İş programını güncelleyip ekibi başka bir işe kaydırır, herkesi bilgilendiririm",
+         "dogru": true,
+         "aciklama": "İyi planlama gecikmenin zararını azaltır."
+        },
+        {
+         "metin": "Ekibi eve gönderir, kimseye söylemem",
+         "dogru": false,
+         "aciklama": "Bilgisiz kalan ekip ve işveren güvenini kaybeder."
+        },
+        {
+         "metin": "Eksik demirle dökeriz",
+         "dogru": false,
+         "aciklama": "Asla."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir işçi iskeleden düştü ama kalkıp \"bir şeyim yok\" diyor.",
+       "secenekler": [
+        {
+         "metin": "İlk yardım ve sağlık kontrolü sağlar, kazayı kayda geçirip nedenini araştırırım",
+         "dogru": true,
+         "aciklama": "Görünmeyen yaralanma olabilir; kaza kaydı tekrarını önler."
+        },
+        {
+         "metin": "Bir şeyi yoksa sorun yok",
+         "dogru": false,
+         "aciklama": "İç yaralanmalar sonradan ortaya çıkabilir."
+        },
+        {
+         "metin": "Gizli tutarım",
+         "dogru": false,
+         "aciklama": "Kaza gizlenmez; önlem alınır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Zor günde",
+      "maddeler": [
+       "Sahte belgeye imza yok.",
+       "Gecikmeyi planla ve bildir.",
+       "Her kaza kayda geçer ve incelenir."
+      ]
+     }
+    },
+    {
+     "id": "s5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Teknisyen ile tekniker farkı?",
+       "secenekler": [
+        "Fark yok",
+        "Teknisyen meslek lisesi, tekniker 2 yıllık önlisans mezunudur",
+        "Tekniker lise mezunudur",
+        "Teknisyen mühendistir"
+       ],
+       "dogru": 1,
+       "aciklama": "Eğitim düzeyi farklıdır."
+      },
+      {
+       "soru": "120 m² iş, birim fiyat 200 ₺. Hakediş? (örnek)",
+       "secenekler": [
+        "2.400 ₺",
+        "24.000 ₺",
+        "240.000 ₺",
+        "12.000 ₺"
+       ],
+       "dogru": 1,
+       "aciklama": "120 × 200 = 24.000 ₺."
+      },
+      {
+       "soru": "Döşeme 12 m × 10 m, 15 cm. Kaç m³ beton?",
+       "secenekler": [
+        "12",
+        "18",
+        "120",
+        "1,8"
+       ],
+       "dogru": 1,
+       "aciklama": "12 × 10 × 0,15 = 18 m³."
+      },
+      {
+       "soru": "Betonarmede en düşük beton sınıfı?",
+       "secenekler": [
+        "C20",
+        "C25",
+        "C16",
+        "C14"
+       ],
+       "dogru": 1,
+       "aciklama": "Deprem yönetmeliği: C25."
+      },
+      {
+       "soru": "Korkuluksuz kenarda çalışan işçi?",
+       "secenekler": [
+        "Devam",
+        "İşi durdur, önlem al",
+        "Sonra konuşuruz",
+        "Fotoğrafla"
+       ],
+       "dogru": 1,
+       "aciklama": "Düşme riski."
+      },
+      {
+       "soru": "Kolon yapım sırasında kalıptan hemen önce?",
+       "secenekler": [
+        "Beton",
+        "Demir ve paspayı",
+        "Kür",
+        "Vibratör"
+       ],
+       "dogru": 1,
+       "aciklama": "Kalıp, demir yerleşince kapatılır."
+      },
+      {
+       "soru": "Yapı denetim onayı olmadan döküm?",
+       "secenekler": [
+        "Yapılabilir",
+        "Yapılamaz",
+        "Gece yapılır",
+        "Küçükse olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Onaysız döküm yok."
+      },
+      {
+       "soru": "Sahte hakediş teklifi?",
+       "secenekler": [
+        "Kabul",
+        "Reddedilir",
+        "Pazarlık",
+        "Sessiz kal"
+       ],
+       "dogru": 1,
+       "aciklama": "Etik ve yasal sorumluluk."
+      },
+      {
+       "soru": "Etriye ne işe yarar?",
+       "secenekler": [
+        "Süs",
+        "Boyuna demirleri sarar, kolonu depremde güçlendirir",
+        "Kalıbı tutar",
+        "Betonu soğutur"
+       ],
+       "dogru": 1,
+       "aciklama": "Etriye sıklığı hayati."
+      },
+      {
+       "soru": "Bir kazadan sonra ilk yapılacak?",
+       "secenekler": [
+        "Saklamak",
+        "İlk yardım ve sağlık kontrolü",
+        "İşe devam",
+        "Suçlu aramak"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce insan."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
