@@ -13,6 +13,8 @@ import { supabase } from './motor/supabase';
 import { FOTOLAR } from './gorseller';
 import { ses, titret } from './motor/his';
 import { Linking } from 'react-native';
+import { Pusula } from './Pusula';
+import { pusulaOku, analiz, TIPLER } from './motor/pusula';
 
 const VARSAYILAN_TEMA = { ana: '#1f3a5f', vurgu: '#e0a030', zemin: '#f3f1ec' };
 
@@ -22,10 +24,11 @@ export default function App() {
   const [sonuclar, setSonuclar] = useState({});
   const [hepsi, setHepsi] = useState({});
   const [oturum, setOturum] = useState(null);
+  const [pusula, setPusula] = useState(null);
 
   const tumunuOku = async () => { const h = {}; for (const p of MESLEKLER) h[p.meslek.id] = await ilerlemeOku(p.meslek.id); setHepsi(h); return h; };
   useEffect(() => {
-    tumunuOku();
+    tumunuOku(); pusulaOku().then(setPusula);
     supabase.auth.getSession().then(({ data }) => setOturum(data.session));
     const { data: dinle } = supabase.auth.onAuthStateChange((_e, s) => { setOturum(s); if (s) esitle(MESLEKLER.map((p) => p.meslek.id)).then(tumunuOku); });
     return () => dinle.subscription.unsubscribe();
@@ -34,16 +37,19 @@ export default function App() {
   useEffect(() => {
     const geri = BackHandler.addEventListener('hardwareBackPress', () => {
       if (ekran.ad === 'ana') return false;
-      setEkran(ekran.ad === 'harita' || ekran.ad === 'hesap' || ekran.ad === 'kaynak' ? { ad: 'ana' } : { ad: 'harita' }); return true;
+      setEkran(ekran.ad === 'harita' || ekran.ad === 'hesap' || ekran.ad === 'kaynak' || ekran.ad === 'pusula' ? { ad: 'ana' } : { ad: 'harita' }); return true;
     });
     return () => geri.remove();
   }, [ekran]);
 
   const meslekAc = async (p) => { setPaket(p); setSonuclar(await ilerlemeOku(p.meslek.id)); setEkran({ ad: 'harita', ki: null }); };
-  const tema = paket && ekran.ad !== 'ana' && ekran.ad !== 'hesap' ? { ...VARSAYILAN_TEMA, ...paket.meslek.renkler } : VARSAYILAN_TEMA;
+  const tema = paket && ekran.ad !== 'ana' && ekran.ad !== 'hesap' && ekran.ad !== 'pusula' ? { ...VARSAYILAN_TEMA, ...paket.meslek.renkler } : VARSAYILAN_TEMA;
 
   let icerik;
-  if (ekran.ad === 'ana') icerik = <AnaEkran hepsi={hepsi} oturum={oturum} onMeslek={meslekAc} onHesap={() => setEkran({ ad: 'hesap' })} onKaynak={() => setEkran({ ad: 'kaynak' })} />;
+  if (ekran.ad === 'ana') icerik = <AnaEkran hepsi={hepsi} oturum={oturum} onMeslek={meslekAc} onHesap={() => setEkran({ ad: 'hesap' })} onKaynak={() => setEkran({ ad: 'kaynak' })}
+    pusula={pusula} onPusula={() => setEkran({ ad: 'pusula' })} />;
+  else if (ekran.ad === 'pusula') icerik = <Pusula kayit={pusula} onGeri={() => { pusulaOku().then(setPusula); setEkran({ ad: 'ana' }); }}
+    onMeslek={(p) => { pusulaOku().then(setPusula); meslekAc(p); }} />;
   else if (ekran.ad === 'kaynak') icerik = <Kaynaklar onGeri={() => setEkran({ ad: 'ana' })} />;
   else if (ekran.ad === 'hesap') icerik = <HesapEkrani oturum={oturum} onGeri={() => { tumunuOku(); setEkran({ ad: 'ana' }); }} />;
   else if (ekran.ad === 'harita') icerik = <Harita paket={paket} sonuclar={sonuclar} kiBaslangic={ekran.ki}
@@ -73,7 +79,7 @@ export default function App() {
 }
 
 // ---------------- Ana ekran: meslek seçimi ----------------
-function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak }) {
+function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak, pusula, onPusula }) {
   const sallan = useRef(new Animated.Value(0)).current;
   useEffect(() => { Animated.loop(Animated.sequence([
     Animated.timing(sallan, { toValue: 1, duration: 1600, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
@@ -88,6 +94,7 @@ function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak }) {
           <Text style={{ fontWeight: '800', color: VARSAYILAN_TEMA.ana }}>{oturum ? '👤 Hesabım' : 'Giriş yap'}</Text></Pressable>
       </View>
       <Text style={[st.alt, { marginBottom: 18 }]}>Bir meslek seç; meraktan ustalığa, oynayarak öğren.</Text>
+      <PusulaKarti pusula={pusula} onPress={onPusula} />
       {MESLEKLER.map((p, i) => {
         const s = hepsi[p.meslek.id] || {}; const xp = toplamXp(p, s);
         const max = p.kademeler.reduce((t, k) => t + k.gorevler.reduce((a, g) => a + maxXp(g), 0), 0);
@@ -109,9 +116,33 @@ function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak }) {
           </Giris>
         );
       })}
-      <Text style={{ color: R.soluk, textAlign: 'center', marginTop: 8, fontSize: 13 }}>Yeni meslekler yolda. İçerikler uzman onayından geçecek.</Text>
+      <Text style={{ color: R.soluk, textAlign: 'center', marginTop: 8, fontSize: 13 }}>Yeni meslekler yolda. Meslektaş kurslara ön hazırlık amaçlıdır; resmî eğitim veya sertifika yerine geçmez.</Text>
       <Pressable onPress={onKaynak} hitSlop={10}><Text style={{ color: R.soluk, textAlign: 'center', marginTop: 12, fontSize: 13, textDecorationLine: 'underline' }}>Görsel kaynakları</Text></Pressable>
     </Ekran>
+  );
+}
+
+// Ana ekrandaki Meslek Pusulası kartı: test çözülmediyse davet, çözüldüyse sonuç özeti.
+function PusulaKarti({ pusula, onPress }) {
+  let alt = '30 kısa soru · 4 dakika · ücretsiz'; let ust = 'Sana hangi meslek yakışır?';
+  if (pusula) {
+    const a = analiz(pusula.puanlar, MESLEKLER.map((p) => p.meslek.id));
+    const m = MESLEKLER.find((p) => p.meslek.id === a.meslekler[0]?.id);
+    ust = m ? `Sana en yakışan: ${m.meslek.ad}` : 'Pusulan hazır';
+    alt = `${TIPLER[a.kod[0]].ad} – ${TIPLER[a.kod[1]].ad} · sonucu gör`;
+  }
+  return (
+    <Giris>
+      <Pressable onPress={onPress} style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 20, backgroundColor: '#fff', borderWidth: 2, borderColor: VARSAYILAN_TEMA.vurgu, padding: 14, marginBottom: 16 }}>
+        <Text style={{ fontSize: 38, marginRight: 12 }}>🧭</Text>
+        <View style={{ flex: 1 }}>
+          <Text style={{ color: VARSAYILAN_TEMA.vurgu, fontWeight: '800', fontSize: 11, letterSpacing: 1 }}>MESLEK PUSULASI</Text>
+          <Text style={{ color: R.yazi, fontWeight: '900', fontSize: 17, marginTop: 2 }}>{ust}</Text>
+          <Text style={{ color: R.soluk, fontSize: 13, marginTop: 2 }}>{alt}</Text>
+        </View>
+        <Text style={{ color: VARSAYILAN_TEMA.ana, fontSize: 22, fontWeight: '900' }}>›</Text>
+      </Pressable>
+    </Giris>
   );
 }
 
