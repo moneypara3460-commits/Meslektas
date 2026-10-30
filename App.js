@@ -124,7 +124,7 @@ function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak, pusula, onPusula
 
 // Ana ekrandaki Meslek Pusulası kartı: test çözülmediyse davet, çözüldüyse sonuç özeti.
 function PusulaKarti({ pusula, onPress }) {
-  let alt = '30 kısa soru · 4 dakika · ücretsiz'; let ust = 'Sana hangi meslek yakışır?';
+  let alt = '30 kısa soru · 3 dakika · Evet ya da Hayır'; let ust = 'Sana hangi meslek yakışır?';
   if (pusula) {
     const a = analiz(pusula.puanlar, MESLEKLER.map((p) => p.meslek.id));
     const m = MESLEKLER.find((p) => p.meslek.id === a.meslekler[0]?.id);

@@ -20,44 +20,43 @@ export const TIPLER = {
 
 // Sıra karışık: aynı tipten sorular art arda gelmesin.
 export const SORULAR = [
-  { tip: 'R', metin: 'Bir şeyi elimle yapıp sonucunu hemen görmek hoşuma gider.' },
-  { tip: 'S', metin: 'Yeni insanlarla tanışıp sohbet etmek bana enerji verir.' },
-  { tip: 'A', metin: 'Bir şeyin göze güzel görünmesi benim için önemlidir.' },
-  { tip: 'C', metin: 'Çalıştığım yerin derli toplu ve düzenli olması benim için önemlidir.' },
-  { tip: 'E', metin: 'Bir ekipte sorumluluk almayı, gerekirse yönetmeyi severim.' },
-  { tip: 'I', metin: 'Bir şeyin neden öyle olduğunu merak eder, araştırırım.' },
-  { tip: 'S', metin: 'Birinin derdini dinleyip ona yardım etmekten mutlu olurum.' },
-  { tip: 'R', metin: 'Gün boyu ayakta, hareket ederek çalışmak bana iyi gelir.' },
-  { tip: 'I', metin: 'Bir sorunla karşılaşınca önce nedenini bulmaya çalışırım.' },
-  { tip: 'A', metin: 'Hazır kalıplar yerine kendi tarzımı katmayı severim.' },
-  { tip: 'E', metin: 'İnsanları bir fikre ikna etmekte iyiyimdir.' },
-  { tip: 'C', metin: 'Kurallara ve belirli bir düzene göre çalışmayı tercih ederim.' },
-  { tip: 'R', metin: 'Bir aletin ya da makinenin nasıl çalıştığını kurcalayarak öğrenirim.' },
-  { tip: 'A', metin: 'Renkler, tatlar, kokular ya da sesler konusunda hassasımdır.' },
-  { tip: 'S', metin: 'Bir müşterinin ya da misafirin memnun ayrılması beni çok sevindirir.' },
-  { tip: 'I', metin: 'Yeni bir konuyu derinlemesine öğrenmek beni heyecanlandırır.' },
-  { tip: 'C', metin: 'Rakamlara, ölçülere ve ayrıntılara dikkat ederim.' },
-  { tip: 'E', metin: 'Bir gün kendi işimi kurmayı ya da bir yeri yönetmeyi hayal ederim.' },
-  { tip: 'A', metin: 'Yeni bir fikir, tasarım ya da tarif uydurmak hoşuma gider.' },
-  { tip: 'R', metin: 'Masa başı iş yerine elle tutulur bir şey ürettiğim işi seçerim.' },
-  { tip: 'S', metin: 'Bir şeyi başkasına anlatıp öğretmeyi severim.' },
-  { tip: 'C', metin: 'Her şeyin yerli yerinde olduğunu kontrol etmek hoşuma gider.' },
-  { tip: 'I', metin: 'Farklı yöntemleri deneyip hangisinin daha iyi olduğunu karşılaştırırım.' },
-  { tip: 'E', metin: 'Baskı altında hızlı karar verebilirim.' },
-  { tip: 'S', metin: 'Kalabalık ve hareketli ortamlarda kendimi iyi hissederim.' },
-  { tip: 'A', metin: 'Yaptığım işle insanları şaşırtmak, etkilemek isterim.' },
-  { tip: 'R', metin: 'Bir tarifi ya da talimatı adım adım uygulamak bana keyif verir.' },
-  { tip: 'I', metin: 'Bir işi yaparken "bunu nasıl daha iyi yaparım" diye düşünürüm.' },
-  { tip: 'C', metin: 'Bir işi planlayıp sırasıyla, eksiksiz bitirmeyi severim.' },
-  { tip: 'E', metin: 'Hedef koyup o hedefe ulaşmak için yarışmak beni motive eder.' },
+  { tip: 'R', metin: 'Elinle bir şey yapmayı (tamir, yemek, montaj gibi) sever misin?' },
+  { tip: 'S', metin: 'Yeni insanlarla tanışmak hoşuna gider mi?' },
+  { tip: 'A', metin: 'Giydiğin ya da yaptığın şeylerin güzel görünmesine dikkat eder misin?' },
+  { tip: 'C', metin: 'Odan ya da çalıştığın yer genelde düzenli midir?' },
+  { tip: 'E', metin: 'Bir grupta liderliği üstlenmeyi sever misin?' },
+  { tip: 'I', metin: 'Bir şeyin neden öyle olduğunu merak eder misin?' },
+  { tip: 'S', metin: 'Birine yardım edince mutlu olur musun?' },
+  { tip: 'R', metin: 'Bütün gün oturmak yerine ayakta, hareket ederek çalışmak ister misin?' },
+  { tip: 'I', metin: 'Bir sorun çıkınca önce sebebini bulmaya çalışır mısın?' },
+  { tip: 'A', metin: 'İşleri kendi tarzınla yapmayı sever misin?' },
+  { tip: 'E', metin: 'İnsanları bir fikre ikna etmekte iyi misin?' },
+  { tip: 'C', metin: 'Kurallara uyarak çalışmak seni rahatlatır mı?' },
+  { tip: 'R', metin: 'Bozulan bir eşyayı açıp kurcalamak hoşuna gider mi?' },
+  { tip: 'A', metin: 'Renklere, tatlara ya da kokulara çok dikkat eder misin?' },
+  { tip: 'S', metin: 'Bir müşteriyi memnun etmek seni sevindirir mi?' },
+  { tip: 'I', metin: 'Yeni bir konuyu derinlemesine öğrenmek hoşuna gider mi?' },
+  { tip: 'C', metin: 'Rakamlara ve küçük ayrıntılara dikkat eder misin?' },
+  { tip: 'E', metin: 'Bir gün kendi işini kurmak ister misin?' },
+  { tip: 'A', metin: 'Yeni bir şey tasarlamak ya da kendi tarifini uydurmak hoşuna gider mi?' },
+  { tip: 'R', metin: 'Bilgisayar başında değil, elle tutulur bir şey ürettiğin bir iş ister misin?' },
+  { tip: 'S', metin: 'Bildiğin bir şeyi başkasına öğretmeyi sever misin?' },
+  { tip: 'C', metin: 'Bir işi bitirince her şeyi tek tek kontrol eder misin?' },
+  { tip: 'I', metin: 'Bir işi farklı yollarla deneyip en iyisini bulmayı sever misin?' },
+  { tip: 'E', metin: 'Acele bir durumda hızlıca karar verebilir misin?' },
+  { tip: 'S', metin: 'Kalabalık, hareketli yerlerde bulunmak hoşuna gider mi?' },
+  { tip: 'A', metin: 'Çizmek, süslemek ya da bir yeri dekore etmek hoşuna gider mi?' },
+  { tip: 'R', metin: 'Alet edevat (tornavida, bıçak, makine) kullanmak hoşuna gider mi?' },
+  { tip: 'I', metin: 'Bilim, deney ya da araştırma videoları ilgini çeker mi?' },
+  { tip: 'C', metin: 'Bir işe başlamadan önce plan yapar mısın?' },
+  { tip: 'E', metin: 'Bir hedef koyup ona ulaşmak için yarışmayı sever misin?' },
 ];
 
+// Üç basit cevap: Evet = 5, Kararsızım = 3, Hayır = 1 (puanlama aynı ölçekte kalır).
 export const CEVAPLAR = [
-  { deger: 1, yazi: 'Hiç bana göre değil' },
-  { deger: 2, yazi: 'Pek değil' },
-  { deger: 3, yazi: 'Kararsızım' },
-  { deger: 4, yazi: 'Bana uyuyor' },
-  { deger: 5, yazi: 'Tam bana göre' },
+  { deger: 5, yazi: 'Evet', ikon: '✓', renk: '#2f7d5b' },
+  { deger: 3, yazi: 'Kararsızım', ikon: '~', renk: '#8a7a6d' },
+  { deger: 1, yazi: 'Hayır', ikon: '✕', renk: '#c8553d' },
 ];
 
 // Oyundaki mesleklerin ilgi profili (0–1). Yeni meslek eklenince buraya bir satır.
@@ -79,7 +78,7 @@ export const YAKINDA = {
 
 const KODLAR = Object.keys(TIPLER);
 
-// cevaplar: soru sırasına göre 1–5 dizisi → her tip için 0–100 puan
+// cevaplar: soru sırasına göre 1/3/5 dizisi → her tip için 0–100 puan
 export function puanla(cevaplar) {
   const p = Object.fromEntries(KODLAR.map((k) => [k, 0]));
   SORULAR.forEach((s, i) => { p[s.tip] += cevaplar[i] || 3; });

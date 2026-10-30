@@ -25,9 +25,9 @@ function Tanitim({ onBasla, onGeri }) {
       <Giris><View style={{ alignItems: 'center', marginVertical: 18 }}><Text style={{ fontSize: 72 }}>🧭</Text></View></Giris>
       <Giris gecikme={80}><Text style={[st.baslik, { textAlign: 'center' }]}>Sana hangi meslek yakışır?</Text></Giris>
       <Giris gecikme={160}><Text style={[st.alt, { textAlign: 'center', marginTop: 8, marginBottom: 20 }]}>
-        30 kısa cümle, yaklaşık 4 dakika. Her cümle için sana ne kadar uyduğunu seç. Doğru ya da yanlış cevap yok; ilk aklına geleni seç.</Text></Giris>
+        30 kısa soru, yaklaşık 3 dakika. Her soruya Evet, Hayır ya da Kararsızım de. Doğru ya da yanlış cevap yok; ilk aklına geleni seç.</Text></Giris>
       <Giris gecikme={240}><Kart>
-        {[['30', 'soru'], ['6', 'ilgi tipi'], ['4 dk', 'süre']].map(([a, b]) => (
+        {[['30', 'soru'], ['6', 'ilgi tipi'], ['3 dk', 'süre']].map(([a, b]) => (
           <View key={b} style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 4 }}>
             <Text style={{ width: 60, fontSize: 20, fontWeight: '900', color: ANA }}>{a}</Text><Text style={{ color: R.yazi, fontSize: 15 }}>{b}</Text></View>))}
       </Kart></Giris>
@@ -58,11 +58,11 @@ function Test({ onBitti, onGeri }) {
           return (
             <Pressable key={c.deger} onPress={() => sec(c.deger)}
               style={[st.secenek, { flexDirection: 'row', alignItems: 'center', backgroundColor: secili ? '#fdf3dc' : '#fff', borderColor: secili ? VURGU : R.cizgi }]}>
-              <View style={{ flexDirection: 'row', marginRight: 12 }}>
-                {[1, 2, 3, 4, 5].map((n) => <View key={n} style={{ width: 7, height: 7 + n * 3, marginRight: 2, borderRadius: 2, alignSelf: 'flex-end',
-                  backgroundColor: n <= c.deger ? ANA : R.cizgi }} />)}
+              <View style={{ width: 34, height: 34, borderRadius: 17, marginRight: 14, alignItems: 'center', justifyContent: 'center',
+                backgroundColor: secili ? c.renk : '#fff', borderWidth: 2, borderColor: c.renk }}>
+                <Text style={{ fontSize: 17, fontWeight: '900', color: secili ? '#fff' : c.renk }}>{c.ikon}</Text>
               </View>
-              <Text style={{ fontSize: 16, color: R.yazi, fontWeight: secili ? '800' : '500' }}>{c.yazi}</Text>
+              <Text style={{ fontSize: 18, color: R.yazi, fontWeight: secili ? '800' : '600' }}>{c.yazi}</Text>
             </Pressable>
           );
         })}
