@@ -1,0 +1,2048 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "freze",
+  "ad": "Universal Freze Operatörü",
+  "kategori": "Üretim & İmalat",
+  "tanim": "Universal freze tezgâhında metali talaş kaldırarak çizimdeki parçaya dönüştüren meslek: çıraklıktan baş ustalığa.",
+  "calismaKosullari": [
+   "Atölyede, tezgâh başında ayakta",
+   "Gürültü, yağ ve talaş",
+   "Vardiyalı çalışma olabilir"
+  ],
+  "kademeler": [
+   "Merak",
+   "Çırak",
+   "Operatör",
+   "Usta",
+   "Baş usta"
+  ],
+  "renkler": {
+   "ana": "#263a47",
+   "vurgu": "#e8833a",
+   "zemin": "#eef0ee"
+  },
+  "metinler": {
+   "senaryoBasla": "Tezgâha geç",
+   "senaryoBitir": "Vardiyayı bitir",
+   "ucYildiz": "Usta parçayı mikrometreyle ölçtü: \"Tam ölçü!\"",
+   "karakter": {
+    "usta": "Usta",
+    "musteri": "Müşteri"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Universal Freze Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Resmî belge için meslek lisesi, usta-çırak eğitimi ya da MYK mesleki yeterlilik sınavları vardır."
+  }
+ },
+ "kaynaklar": [
+  "MEB Makine Teknolojisi alanı freze modülleri (kendi cümlelerimizle)",
+  "Kesme hızı ve devir formülü: n = 1000·V/(π·D) (genel mühendislik bilgisi)",
+  "Klasik divizör oranı 40:1 ve bölme plakası hesabı",
+  "6331 sayılı İş Sağlığı ve Güvenliği Kanunu",
+  "Kesme değerleri örnektir; gerçek değerler takım üreticisi tablolarından alınır",
+  "Freze ustası uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Freze Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Çırak kademesinde güvenliği, tezgâhı, ölçü okumayı ve kanal açmayı öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir freze operatörünün günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🏭",
+       "baslik": "Atölye",
+       "metin": "Freze operatörü talaşlı imalat atölyesinde çalışır. Metal bir bloktan, çizimdeki parçayı talaş kaldırarak çıkarır.",
+       "terim": "talaşlı imalat"
+      },
+      {
+       "ikon": "📜",
+       "baslik": "Teknik resim",
+       "metin": "Gün, iş emri ve teknik resimle başlar: parçanın ölçüleri, toleransları, malzemesi okunur.",
+       "terim": "teknik resim"
+      },
+      {
+       "ikon": "🔧",
+       "baslik": "Tezgâhı hazırlamak",
+       "metin": "Parça mengeneye bağlanır, uygun freze çakısı takılır, devir ve ilerleme ayarlanır.",
+       "terim": "tezgâh ayarı"
+      },
+      {
+       "ikon": "⚙️",
+       "baslik": "Kesme",
+       "metin": "Dönen çakı parçadan ince ince talaş kaldırır: yüzey düzeltilir, kanal ve cep açılır, dişli kesilir.",
+       "terim": "frezeleme"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Ölçmek",
+       "metin": "Bitince parça kumpas, mikrometre ve komparatörle ölçülür. Ölçü toleransın dışındaysa parça hurdadır.",
+       "terim": "kalite kontrol"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Meslek liselerinin makine teknolojisi alanında ya da kurslarda öğrenilir. Bazı talaşlı imalat işlerinde mesleki yeterlilik belgesi istenir.",
+       "terim": "MYK belgesi"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Atölyede ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir talaşlı imalat atölyesinde deneme günündesin. Usta seni universal freze tezgâhının yanına aldı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Usta: \"Tezgâhı çalıştırıyorum.\" Elinde iş eldiveni var.",
+       "secenekler": [
+        {
+         "metin": "Dönen çakının yanında eldiven kullanmam, eldiveni çıkarırım",
+         "dogru": true,
+         "aciklama": "Eldiven dönen takıma takılırsa eli içine çeker. Dönen tezgâhta eldivensiz çalışılır."
+        },
+        {
+         "metin": "Eldiven elimi korur, takarım",
+         "dogru": false,
+         "aciklama": "Dönen milde eldiven koruma değil tehlikedir."
+        },
+        {
+         "metin": "Tek elime takarım",
+         "dogru": false,
+         "aciklama": "Bir eldiven de aynı tehlikeyi taşır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Tezgâhın üstünde talaş birikmiş.",
+       "secenekler": [
+        {
+         "metin": "Tezgâh dururken fırça ya da talaş kancasıyla temizlerim",
+         "dogru": true,
+         "aciklama": "Talaş jilet gibi keskin ve sıcaktır; elle ve tezgâh dönerken temizlenmez."
+        },
+        {
+         "metin": "Elimle süpürürüm",
+         "dogru": false,
+         "aciklama": "Talaş eli keser."
+        },
+        {
+         "metin": "Basınçlı havayla üflerim",
+         "dogru": false,
+         "aciklama": "Talaş göze ve çevredekilere sıçrar."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Usta: \"Bu parçanın ölçüsünü nereden bilirsin?\"",
+       "secenekler": [
+        {
+         "metin": "Teknik resimden ve iş emrinden okurum",
+         "dogru": true,
+         "aciklama": "Her parça çizime göre yapılır; tahminle değil."
+        },
+        {
+         "metin": "Eski parçaya bakarım",
+         "dogru": false,
+         "aciklama": "Eski parça da hatalı olabilir; çizim esastır."
+        },
+        {
+         "metin": "Gözle tahmin ederim",
+         "dogru": false,
+         "aciklama": "Talaşlı imalatta ölçü milimetrenin yüzde biri kadar hassastır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Atölyede ilk gün",
+      "maddeler": [
+       "Dönen takımda eldiven yok.",
+       "Talaş elle temizlenmez.",
+       "Ölçü teknik resimden okunur."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Gün boyu ayakta, bir makinenin başında çalışmak?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Milimetrenin yüzde biri kadar küçük ölçülere dikkat etmek?",
+       "secenekler": [
+        [
+         "Hoşuma gider",
+         2
+        ],
+        [
+         "Yapabilirim",
+         1
+        ],
+        [
+         "Sıkılırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Gürültü, yağ ve talaş kokusu?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Katlanırım",
+         1
+        ],
+        [
+         "Hiç istemem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Basit hesaplar yapmak (devir, ilerleme)?",
+       "secenekler": [
+        [
+         "Rahatım",
+         2
+        ],
+        [
+         "İdare ederim",
+         1
+        ],
+        [
+         "Zorlanırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Bir parçayı sabırla, adım adım bitirmek?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Sabırsızım",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Eli işe yatkın ve dikkatlisin. Tezgâh seni bekliyor; Çırak kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Çırak kademesini oynayıp atölyeyi yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Atölye temposu seni zorlayabilir. Kalite kontrol ve ölçüm tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Çırak",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Freze Çırağı",
+    "ikon": "🥽"
+   },
+   "sonraki": "Operatör kademesi açıldı: devir, ilerleme ve seri üretim.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-guvenlik",
+     "sablon": "bilgi",
+     "ikon": "🥽",
+     "baslik": "Tezgâh başında güvenlik",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🥽",
+       "baslik": "Koruyucu gözlük",
+       "metin": "Talaş her yöne sıçrar. Tezgâh çalışırken gözlük takılır.",
+       "terim": "göz koruması"
+      },
+      {
+       "ikon": "🧤",
+       "baslik": "Eldiven yok",
+       "metin": "Dönen takım ve parçanın yanında eldiven, bol giysi, takı ve açık uzun saç tehlikelidir; takılıp çeker.",
+       "terim": "dönen parça tehlikesi"
+      },
+      {
+       "ikon": "🔒",
+       "baslik": "Sağlam bağlama",
+       "metin": "Parça mengeneye sıkıca bağlanır. Gevşek parça çakıyla birlikte fırlayabilir.",
+       "terim": "bağlama"
+      },
+      {
+       "ikon": "🛑",
+       "baslik": "Acil stop",
+       "metin": "Tezgâhın kırmızı acil durdurma düğmesinin yeri işe başlamadan bilinir.",
+       "terim": "acil durdurma"
+      },
+      {
+       "ikon": "🧹",
+       "baslik": "Talaş",
+       "metin": "Talaş keskin ve sıcaktır; tezgâh dururken fırça ya da kancayla alınır.",
+       "terim": "talaş temizliği"
+      },
+      {
+       "ikon": "⏹️",
+       "baslik": "Ölçüm ve ayar",
+       "metin": "Ölçüm, parça değiştirme ve takım değiştirme tezgâh tamamen durunca yapılır.",
+       "terim": "dur, sonra dokun"
+      }
+     ]
+    },
+    {
+     "id": "c2-tezgah",
+     "sablon": "bilgi",
+     "ikon": "🛠️",
+     "baslik": "Universal frezeyi tanı",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔄",
+       "baslik": "İş mili",
+       "metin": "Freze çakısını taşıyan ve döndüren mildir. Universal frezede yatay ve dikey kafa ile kullanılabilir.",
+       "terim": "iş mili / fener mili"
+      },
+      {
+       "ikon": "↔️",
+       "baslik": "Tabla",
+       "metin": "Parçanın bağlandığı tabladır. Boyuna (X), enine (Y) hareket eder.",
+       "terim": "tabla"
+      },
+      {
+       "ikon": "↕️",
+       "baslik": "Konsol",
+       "metin": "Tablayı aşağı yukarı (Z) hareket ettirir; kesme derinliği buradan verilir.",
+       "terim": "konsol"
+      },
+      {
+       "ikon": "🗜️",
+       "baslik": "Mengene",
+       "metin": "Parçayı tablaya sıkıca bağlar. Paralel takozlarla parça düz oturtulur.",
+       "terim": "mengene"
+      },
+      {
+       "ikon": "⚙️",
+       "baslik": "Divizör",
+       "metin": "Parçayı eşit parçalara bölerek döndüren aygıttır; dişli ve çokgen açmakta kullanılır.",
+       "terim": "divizör / bölme aygıtı"
+      },
+      {
+       "ikon": "💧",
+       "baslik": "Soğutma sıvısı",
+       "metin": "Çakıyı ve parçayı soğutur, talaşın atılmasına yardım eder, yüzeyi iyileştirir.",
+       "terim": "soğutma sıvısı"
+      }
+     ]
+    },
+    {
+     "id": "c3-olcu",
+     "sablon": "siniflandirma",
+     "ikon": "📏",
+     "baslik": "Hangi ölçü aleti?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her ölçme işini en uygun alete ver.",
+     "kategoriler": [
+      {
+       "id": "kumpas",
+       "ad": "Kumpas",
+       "ikon": "📏"
+      },
+      {
+       "id": "mikrometre",
+       "ad": "Mikrometre",
+       "ikon": "🔩"
+      },
+      {
+       "id": "komparator",
+       "ad": "Komparatör",
+       "ikon": "⏱️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Parçanın kabaca dış ölçüsü",
+       "ikon": "📦",
+       "kategori": "kumpas",
+       "aciklama": "Kumpas hızlıdır, genelde 0,02–0,05 mm okur."
+      },
+      {
+       "ad": "Kanalın genişliği",
+       "ikon": "▭",
+       "kategori": "kumpas",
+       "aciklama": "Kumpasın iç ölçme ağızları kullanılır."
+      },
+      {
+       "ad": "Kanal derinliği",
+       "ikon": "⬇️",
+       "kategori": "kumpas",
+       "aciklama": "Kumpasın derinlik çubuğu kullanılır."
+      },
+      {
+       "ad": "Milin çapını 0,01 mm hassasiyetle ölçmek",
+       "ikon": "🎯",
+       "kategori": "mikrometre",
+       "aciklama": "Mikrometre kumpastan daha hassastır."
+      },
+      {
+       "ad": "Toleransı çok dar bir kalınlık",
+       "ikon": "📐",
+       "kategori": "mikrometre",
+       "aciklama": "Dar toleranslarda mikrometre."
+      },
+      {
+       "ad": "Mengenenin tablaya paralelliği",
+       "ikon": "↔️",
+       "kategori": "komparator",
+       "aciklama": "Komparatör ibresi sapmayı gösterir."
+      },
+      {
+       "ad": "Dönen parçanın salgısı",
+       "ikon": "🔄",
+       "kategori": "komparator",
+       "aciklama": "Salgı komparatörle okunur."
+      },
+      {
+       "ad": "Yüzeyin düzlüğünü kontrol",
+       "ikon": "▬",
+       "kategori": "komparator",
+       "aciklama": "Komparatör yüzey boyunca gezdirilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ölçü aletleri",
+      "maddeler": [
+       "Kumpas: hızlı, genel ölçüm.",
+       "Mikrometre: 0,01 mm hassasiyet.",
+       "Komparatör: sapma, paralellik, salgı."
+      ]
+     }
+    },
+    {
+     "id": "c4-kumpas",
+     "sablon": "soru",
+     "ikon": "🔢",
+     "baslik": "Ölçü okuma",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Kumpasta sıfır çizgisi 23 ile 24 mm arasında, verniyerin 7. çizgisi (0,02'lik) tam çakışıyor. Ölçü?",
+       "secenekler": [
+        "23,07 mm",
+        "23,14 mm",
+        "23,7 mm",
+        "24,14 mm"
+       ],
+       "dogru": 1,
+       "aciklama": "23 + 7 × 0,02 = 23,14 mm."
+      },
+      {
+       "soru": "Mikrometrede kovanda 12,5 mm görünüyor, tamburda 18 çizgisi hizada. Ölçü?",
+       "secenekler": [
+        "12,18 mm",
+        "12,68 mm",
+        "30,5 mm",
+        "12,518 mm"
+       ],
+       "dogru": 1,
+       "aciklama": "12,5 + 18 × 0,01 = 12,68 mm."
+      },
+      {
+       "soru": "Çizimde 40 ±0,05 yazıyor. Hangisi kabul edilir?",
+       "secenekler": [
+        "39,90",
+        "40,03",
+        "40,08",
+        "39,94"
+       ],
+       "dogru": 1,
+       "aciklama": "Kabul aralığı 39,95–40,05."
+      },
+      {
+       "soru": "Ölçüm ne zaman yapılır?",
+       "secenekler": [
+        "Tezgâh dönerken",
+        "Tezgâh tamamen durunca",
+        "Kesme sırasında",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Dönen parçaya ölçü aleti yaklaştırılmaz."
+      },
+      {
+       "soru": "Kumpasın iç ağızları neyi ölçer?",
+       "secenekler": [
+        "Dış çap",
+        "Delik ve kanal genişliği",
+        "Derinlik",
+        "Açı"
+       ],
+       "dogru": 1,
+       "aciklama": "İç ölçüler."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ölçü okuma",
+      "maddeler": [
+       "Kumpas: ana cetvel + verniyer çizgisi × 0,02.",
+       "Mikrometre: kovan + tambur × 0,01.",
+       "Tolerans: ölçünün kabul edilen aralığı."
+      ]
+     }
+    },
+    {
+     "id": "c5-hafta",
+     "sablon": "senaryo",
+     "ikon": "🏭",
+     "baslik": "İlk haftan",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Bir haftadır çıraksın. Usta sana küçük işler veriyor.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bağladığın parça mengenede hafifçe oynuyor.",
+       "secenekler": [
+        {
+         "metin": "Tezgâhı çalıştırmadan önce yeniden ve sağlam bağlarım",
+         "dogru": true,
+         "aciklama": "Gevşek parça fırlayabilir ve çakıyı kırar."
+        },
+        {
+         "metin": "Hafif paso alırım, sorun olmaz",
+         "dogru": false,
+         "aciklama": "Hafif paso da parçayı çekebilir."
+        },
+        {
+         "metin": "Elimle tutarım",
+         "dogru": false,
+         "aciklama": "Dönen çakının yanında el ile parça tutulmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Usta: \"Bu çakı neden ısındı ve renk değiştirdi?\"",
+       "secenekler": [
+        {
+         "metin": "Devir çok yüksek ya da soğutma yetersiz olabilir; devri ve soğutmayı kontrol ederim",
+         "dogru": true,
+         "aciklama": "Fazla devir ve yetersiz soğutma takımı yakar."
+        },
+        {
+         "metin": "Normaldir",
+         "dogru": false,
+         "aciklama": "Renk değişimi takımın yandığını gösterir."
+        },
+        {
+         "metin": "Daha hızlı çeviririm",
+         "dogru": false,
+         "aciklama": "Isınmayı artırır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Ölçtüğün parça toleransın 0,1 mm dışında çıktı.",
+       "secenekler": [
+        {
+         "metin": "Ustaya gösterir, nedenini birlikte bulup kayda geçeriz",
+         "dogru": true,
+         "aciklama": "Hatalı parçayı saklamak montajda daha büyük sorun çıkarır."
+        },
+        {
+         "metin": "Kimse fark etmez, iyi parçaların arasına koyarım",
+         "dogru": false,
+         "aciklama": "Hatalı parça müşteriye gider, güven kaybolur."
+        },
+        {
+         "metin": "Atarım, söylemem",
+         "dogru": false,
+         "aciklama": "Hatanın nedeni bulunmazsa tekrar eder."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Çırağın kuralları",
+      "maddeler": [
+       "Parça sağlam bağlanmadan tezgâh çalışmaz.",
+       "Isınan takım: devir ve soğutmayı kontrol et.",
+       "Hatalı parçayı göster, saklama."
+      ]
+     }
+    },
+    {
+     "id": "c6-kanal",
+     "sablon": "siralama",
+     "ikon": "⚙️",
+     "baslik": "Kanal aç",
+     "aciklama": "Bir çelik bloğa parmak freze ile kanal açacaksın. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "bagla",
+       "ikon": "🗜️",
+       "metin": "Parçayı paralel takozlarla mengeneye sağlam bağla",
+       "neden": "Her şey sağlam ve düz bağlanmış parçayla başlar.",
+       "ipucu": "Önce parça yerinde olmalı."
+      },
+      {
+       "id": "takim",
+       "ikon": "🔩",
+       "metin": "Parmak freze çakısını pensli bağlayıcıya tak, sık",
+       "neden": "Takım sağlam oturmazsa titrer ya da düşer.",
+       "ipucu": "Parça hazır; neyle keseceksin?"
+      },
+      {
+       "id": "sifir",
+       "ikon": "📍",
+       "metin": "Çakıyı parçanın yüzeyine yavaşça değdirip sıfır noktasını al",
+       "neden": "Kesme derinliği bu noktadan ölçülür.",
+       "ipucu": "Takım hazır; ölçüye nereden başlayacaksın?"
+      },
+      {
+       "id": "devir",
+       "ikon": "🎛️",
+       "metin": "Devri ve ilerlemeyi ayarla, gözlüğünü tak",
+       "neden": "Doğru devir takımı korur, gözlük gözünü.",
+       "ipucu": "Sıfır alındı; tezgâhı neye göre çalıştıracaksın?"
+      },
+      {
+       "id": "kes",
+       "ikon": "💧",
+       "metin": "Soğutmayı açıp kanalı pasolarla kes",
+       "neden": "Talaş kontrollü kalkar, takım ısınmaz.",
+       "ipucu": "Her şey ayarlı; şimdi kesme."
+      },
+      {
+       "id": "olc",
+       "ikon": "📏",
+       "metin": "Tezgâhı durdur, çapağı al, kanalı kumpasla ölç",
+       "neden": "Ölçü durunca alınır; çapak ölçüyü bozar.",
+       "ipucu": "Kesme bitti; doğru mu?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Kanal açma sırası",
+      "maddeler": [
+       "Bağla → takım → sıfır → devir ve gözlük → kes → durdur, ölç.",
+       "Ölçü tezgâh dururken alınır.",
+       "Soğutma takımı ve yüzeyi korur."
+      ]
+     },
+     "sahne": "freze"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Çırak sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Dönen takımın yanında eldiven?",
+       "secenekler": [
+        "Takılır",
+        "Takılmaz",
+        "Tek el takılır",
+        "Kışın takılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Eldiven takılıp çeker."
+      },
+      {
+       "soru": "Talaş nasıl temizlenir?",
+       "secenekler": [
+        "Elle",
+        "Tezgâh dururken fırça/kancayla",
+        "Basınçlı havayla yüze doğru",
+        "Dönerken"
+       ],
+       "dogru": 1,
+       "aciklama": "Keskin ve sıcaktır."
+      },
+      {
+       "soru": "Kesme derinliğini hangi hareket verir?",
+       "secenekler": [
+        "Tabla boyuna (X)",
+        "Konsol (Z)",
+        "Divizör",
+        "Mengene"
+       ],
+       "dogru": 1,
+       "aciklama": "Konsol aşağı yukarı hareket eder."
+      },
+      {
+       "soru": "Dişli açmada parçayı eşit bölen aygıt?",
+       "secenekler": [
+        "Mengene",
+        "Divizör",
+        "Komparatör",
+        "Pens"
+       ],
+       "dogru": 1,
+       "aciklama": "Bölme aygıtı."
+      },
+      {
+       "soru": "0,02 kumpasta 15 mm + 9. çizgi çakışık?",
+       "secenekler": [
+        "15,09",
+        "15,18",
+        "15,9",
+        "16,8"
+       ],
+       "dogru": 1,
+       "aciklama": "15 + 9 × 0,02 = 15,18 mm."
+      },
+      {
+       "soru": "Kanal açarken sıfır noktası neden alınır?",
+       "secenekler": [
+        "Süs için",
+        "Kesme derinliğini doğru vermek için",
+        "Devri ölçmek için",
+        "Gerek yok"
+       ],
+       "dogru": 1,
+       "aciklama": "Derinlik oradan ölçülür."
+      },
+      {
+       "soru": "Ölçüm ne zaman?",
+       "secenekler": [
+        "Kesme sırasında",
+        "Tezgâh durunca",
+        "Dönerken",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Güvenlik ve doğruluk için."
+      },
+      {
+       "soru": "Soğutma sıvısı ne yapar?",
+       "secenekler": [
+        "Parçayı boyar",
+        "Takımı soğutur, talaşı atar",
+        "Devri artırır",
+        "Parçayı bağlar"
+       ],
+       "dogru": 1,
+       "aciklama": "Takım ömrü ve yüzey kalitesi."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Operatör",
+   "hedefXp": 305,
+   "rozet": {
+    "ad": "Freze Operatörü",
+    "ikon": "⚙️"
+   },
+   "sonraki": "Usta kademesi açıldı: divizör, dişli, çakı seçimi ve zor işler.",
+   "gorevler": [
+    {
+     "id": "o1-kesme",
+     "sablon": "bilgi",
+     "ikon": "🎛️",
+     "baslik": "Devir ve ilerleme",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "💨",
+       "baslik": "Kesme hızı (V)",
+       "metin": "Çakının kenarının dakikada kaç metre yol aldığıdır. Malzeme ve takım cinsine göre tablolardan seçilir.",
+       "terim": "m/dk"
+      },
+      {
+       "ikon": "🔄",
+       "baslik": "Devir (n)",
+       "metin": "Çakının dakikadaki dönüş sayısıdır. n = 1000 × V ÷ (π × D) ile bulunur; D çakı çapıdır (mm).",
+       "terim": "dev/dk"
+      },
+      {
+       "ikon": "📉",
+       "baslik": "Büyük çakı, düşük devir",
+       "metin": "Aynı kesme hızı için çap büyüdükçe devir düşer.",
+       "terim": "çap ve devir"
+      },
+      {
+       "ikon": "➡️",
+       "baslik": "İlerleme (F)",
+       "metin": "Tablanın dakikada kaç mm ilerlediğidir. F = diş başı ilerleme × diş sayısı × devir.",
+       "terim": "mm/dk"
+      },
+      {
+       "ikon": "⬇️",
+       "baslik": "Kesme derinliği",
+       "metin": "Bir pasoda kaldırılan talaş kalınlığıdır. Kaba işlemede fazla, son pasoda az alınır.",
+       "terim": "paso"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Malzemeye göre",
+       "metin": "Sert malzemede kesme hızı düşük, yumuşak malzemede (alüminyum gibi) yüksektir.",
+       "terim": "malzeme"
+      }
+     ]
+    },
+    {
+     "id": "o2-devir",
+     "sablon": "zamanlama",
+     "ikon": "🎛️",
+     "baslik": "Devri ayarla",
+     "temelXp": 30,
+     "yildizBasinaXp": 15,
+     "aciklama": "Devir göstergesi yükseliyor. Hesapladığın devre gelince DURDUR'a bas. Formül: n = 1000 × V ÷ (π × D). (Değerler örnek.)",
+     "turlar": [
+      {
+       "ad": "20 mm parmak freze, V = 25 m/dk",
+       "not": "Hesap: 25.000 ÷ (3,14 × 20) ≈ 400 dev/dk.",
+       "birim": "dev/dk",
+       "baslangic": 0,
+       "bitis": 1200,
+       "hedef": [
+        370,
+        430
+       ],
+       "tehlike": 700,
+       "tehlikeMetni": "Devir çok yüksek; takım ısındı ve köreldi.",
+       "sure": 4,
+       "erkenMetni": "Devir düşük; kesme verimsiz ve yüzey kötü.",
+       "gecMetni": "Devir biraz yüksek; takım fazla ısınır."
+      },
+      {
+       "ad": "50 mm alın freze, V = 25 m/dk",
+       "not": "Hesap: 25.000 ÷ (3,14 × 50) ≈ 160 dev/dk.",
+       "birim": "dev/dk",
+       "baslangic": 0,
+       "bitis": 600,
+       "hedef": [
+        145,
+        175
+       ],
+       "tehlike": 300,
+       "tehlikeMetni": "Büyük çakıda bu devir çok yüksek; kenarlar yandı.",
+       "sure": 4,
+       "erkenMetni": "Devir düşük kaldı.",
+       "gecMetni": "Devir biraz yüksek; büyük çakı daha yavaş döner."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Devir hesabı",
+      "maddeler": [
+       "n = 1000 × V ÷ (π × D).",
+       "Çap büyürse devir düşer.",
+       "Takım ısınıyorsa önce devri kontrol et.",
+       "Kesme hızlarını takım üreticisinin tablosundan al."
+      ]
+     }
+    },
+    {
+     "id": "o3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Atölye hesapları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "V = 30 m/dk, D = 10 mm. Devir yaklaşık kaç? (π ≈ 3,14)",
+       "secenekler": [
+        "95",
+        "300",
+        "955",
+        "3.000"
+       ],
+       "dogru": 2,
+       "aciklama": "30.000 ÷ 31,4 ≈ 955 dev/dk."
+      },
+      {
+       "soru": "Diş başı ilerleme 0,05 mm, 4 dişli çakı, 400 dev/dk. İlerleme (F)?",
+       "secenekler": [
+        "20 mm/dk",
+        "80 mm/dk",
+        "800 mm/dk",
+        "8 mm/dk"
+       ],
+       "dogru": 1,
+       "aciklama": "0,05 × 4 × 400 = 80 mm/dk."
+      },
+      {
+       "soru": "120 mm uzunluğunda kanal, ilerleme 80 mm/dk. Bir paso kaç dakika sürer?",
+       "secenekler": [
+        "0,67 dk",
+        "1,5 dk",
+        "15 dk",
+        "40 dk"
+       ],
+       "dogru": 1,
+       "aciklama": "120 ÷ 80 = 1,5 dk."
+      },
+      {
+       "soru": "Aynı kesme hızında çakı çapı iki katına çıkarsa devir?",
+       "secenekler": [
+        "İki katına çıkar",
+        "Yarıya iner",
+        "Değişmez",
+        "Dört katına çıkar"
+       ],
+       "dogru": 1,
+       "aciklama": "Devir çapla ters orantılıdır."
+      },
+      {
+       "soru": "6 mm derinlik, her pasoda en fazla 2 mm. Kaç paso?",
+       "secenekler": [
+        "2",
+        "3",
+        "6",
+        "12"
+       ],
+       "dogru": 1,
+       "aciklama": "6 ÷ 2 = 3 paso."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hesaplar",
+      "maddeler": [
+       "n = 1000V ÷ πD.",
+       "F = fz × z × n.",
+       "Süre = uzunluk ÷ ilerleme."
+      ]
+     }
+    },
+    {
+     "id": "o4-uretim",
+     "sablon": "senaryo",
+     "ikon": "🏭",
+     "baslik": "Seri üretim",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Operatör olarak 50 adetlik bir parti parça üretiyorsun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "İlk parçayı bitirdin. Ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Tüm ölçülerini kontrol edip onay aldıktan sonra seriye devam ederim",
+         "dogru": true,
+         "aciklama": "İlk parça onayı; hata 50 parçaya yayılmadan yakalanır."
+        },
+        {
+         "metin": "Hemen seriye devam ederim",
+         "dogru": false,
+         "aciklama": "İlk parçadaki hata bütün partiyi bozar."
+        },
+        {
+         "metin": "Sadece gözle bakarım",
+         "dogru": false,
+         "aciklama": "Göz 0,05 mm farkı göremez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "20. parçada yüzeyde titreşim izleri ve tırlama sesi başladı.",
+       "secenekler": [
+        {
+         "metin": "Durdurup takımı, bağlamayı ve devir/ilerlemeyi kontrol ederim",
+         "dogru": true,
+         "aciklama": "Tırlama körelmiş takım, gevşek bağlama ya da yanlış ayar işaretidir."
+        },
+        {
+         "metin": "Ses normaldir, devam",
+         "dogru": false,
+         "aciklama": "Tırlama takımı kırar ve yüzeyi bozar."
+        },
+        {
+         "metin": "İlerlemeyi artırıp çabuk bitiririm",
+         "dogru": false,
+         "aciklama": "Sorunu büyütür."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Vardiya bitti, işin yarısı kaldı.",
+       "secenekler": [
+        {
+         "metin": "Tezgâhı temizler, kalan işi ve ayarları sonraki vardiyaya not bırakırım",
+         "dogru": true,
+         "aciklama": "İyi devir teslimi zaman ve hata kaybını önler."
+        },
+        {
+         "metin": "Talaşı bırakıp çıkarım",
+         "dogru": false,
+         "aciklama": "Kirli tezgâh sonraki operatörü ve tezgâhı yorar."
+        },
+        {
+         "metin": "Ayarları bozup kapatırım",
+         "dogru": false,
+         "aciklama": "Sonraki kişi baştan ayar yapmak zorunda kalır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Seri üretim",
+      "maddeler": [
+       "İlk parça onayı şart.",
+       "Tırlama sesi = dur ve kontrol et.",
+       "Vardiyayı notla teslim et."
+      ]
+     }
+    },
+    {
+     "id": "o5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Operatör sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Devir formülü?",
+       "secenekler": [
+        "n = πD ÷ 1000V",
+        "n = 1000V ÷ πD",
+        "n = V × D",
+        "n = D ÷ V"
+       ],
+       "dogru": 1,
+       "aciklama": "Kesme hızı ve çaptan."
+      },
+      {
+       "soru": "V = 25 m/dk, D = 25 mm. Devir yaklaşık?",
+       "secenekler": [
+        "100",
+        "318",
+        "625",
+        "1.000"
+       ],
+       "dogru": 1,
+       "aciklama": "25.000 ÷ 78,5 ≈ 318."
+      },
+      {
+       "soru": "fz 0,1, z 3, n 500. F?",
+       "secenekler": [
+        "15",
+        "150",
+        "1.500",
+        "50"
+       ],
+       "dogru": 1,
+       "aciklama": "0,1 × 3 × 500 = 150 mm/dk."
+      },
+      {
+       "soru": "Çap büyürse aynı kesme hızı için devir?",
+       "secenekler": [
+        "Artar",
+        "Azalır",
+        "Aynı",
+        "Sıfır olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Ters orantı."
+      },
+      {
+       "soru": "İlk parça bitince?",
+       "secenekler": [
+        "Seriye devam",
+        "Ölçüp onay al",
+        "Paketle",
+        "Hiçbir şey"
+       ],
+       "dogru": 1,
+       "aciklama": "İlk parça onayı."
+      },
+      {
+       "soru": "Tırlama sesi neyi gösterir?",
+       "secenekler": [
+        "Her şey yolunda",
+        "Takım, bağlama ya da ayar sorunu",
+        "Soğutma fazla",
+        "Parça bitti"
+       ],
+       "dogru": 1,
+       "aciklama": "Durdur ve kontrol et."
+      },
+      {
+       "soru": "Sert malzemede kesme hızı?",
+       "secenekler": [
+        "Daha yüksek",
+        "Daha düşük",
+        "Aynı",
+        "Önemsiz"
+       ],
+       "dogru": 1,
+       "aciklama": "Sert malzeme yavaş kesilir."
+      },
+      {
+       "soru": "200 mm yol, F = 100 mm/dk. Süre?",
+       "secenekler": [
+        "0,5 dk",
+        "2 dk",
+        "20 dk",
+        "100 dk"
+       ],
+       "dogru": 1,
+       "aciklama": "200 ÷ 100 = 2 dk."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Usta",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Freze Ustası",
+    "ikon": "🦷"
+   },
+   "sonraki": "Baş usta kademesi açıldı: atölye yönetimi, süre hesabı ve zor kararlar.",
+   "gorevler": [
+    {
+     "id": "u1-ileri",
+     "sablon": "bilgi",
+     "ikon": "⚙️",
+     "baslik": "Ustalık konuları",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔁",
+       "baslik": "Karşı yönlü frezeleme",
+       "metin": "Çakı, tablanın ilerleme yönüne karşı döner. Vidalarında boşluk olan klasik tezgâhlarda daha güvenlidir.",
+       "terim": "karşı freze"
+      },
+      {
+       "ikon": "➰",
+       "baslik": "Aynı yönlü frezeleme",
+       "metin": "Çakı ilerleme yönünde döner; daha iyi yüzey verir ama tabla boşluğu varsa çakı tablayı çekebilir.",
+       "terim": "aynı yönlü freze"
+      },
+      {
+       "ikon": "⚙️",
+       "baslik": "Divizör oranı",
+       "metin": "Klasik divizörde kol 40 tur dönünce parça 1 tur döner. Bölme: 40 ÷ bölüm sayısı.",
+       "terim": "40:1"
+      },
+      {
+       "ikon": "🕳️",
+       "baslik": "Delik daireleri",
+       "metin": "Tam tur çıkmayan bölmeler için delikli bölme plakası kullanılır; kesirli kısım uygun delik dairesinde sayılır.",
+       "terim": "bölme plakası"
+      },
+      {
+       "ikon": "🦷",
+       "baslik": "Modül",
+       "metin": "Dişlinin büyüklüğünü gösteren sayıdır. Dişli, modülüne uygun modül freze çakısıyla açılır.",
+       "terim": "modül"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Salgı ve paralellik",
+       "metin": "Usta, bağlamayı komparatörle kontrol eder; birkaç yüzdelik sapma bile parçayı bozabilir.",
+       "terim": "komparatör kontrolü"
+      }
+     ]
+    },
+    {
+     "id": "u2-cakilar",
+     "sablon": "siniflandirma",
+     "ikon": "🔩",
+     "baslik": "Çakıyı işe göre seç",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her çakıyı en çok kullanıldığı işe koy.",
+     "kategoriler": [
+      {
+       "id": "yuzey",
+       "ad": "Yüzey düzeltme",
+       "ikon": "▬"
+      },
+      {
+       "id": "kanal",
+       "ad": "Kanal ve cep",
+       "ikon": "⊔"
+      },
+      {
+       "id": "profil",
+       "ad": "Dişli ve profil",
+       "ikon": "⚙️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Alın frezesi",
+       "ikon": "⭕",
+       "kategori": "yuzey",
+       "aciklama": "Geniş yüzeyleri düzeltir."
+      },
+      {
+       "ad": "Silindirik freze",
+       "ikon": "🛢️",
+       "kategori": "yuzey",
+       "aciklama": "Yatay milde düz yüzey keser."
+      },
+      {
+       "ad": "Parmak freze",
+       "ikon": "✏️",
+       "kategori": "kanal",
+       "aciklama": "Kanal, cep ve basamak açar."
+      },
+      {
+       "ad": "T kanal frezesi",
+       "ikon": "🅃",
+       "kategori": "kanal",
+       "aciklama": "T şeklinde kanal açar."
+      },
+      {
+       "ad": "Disk freze",
+       "ikon": "💿",
+       "kategori": "kanal",
+       "aciklama": "Yatay milde kanal ve yan yüz keser."
+      },
+      {
+       "ad": "Modül freze çakısı",
+       "ikon": "⚙️",
+       "kategori": "profil",
+       "aciklama": "Dişli dişlerini açar."
+      },
+      {
+       "ad": "Kırlangıç kuyruğu frezesi",
+       "ikon": "🕊️",
+       "kategori": "profil",
+       "aciklama": "Açılı kızak profili açar."
+      },
+      {
+       "ad": "Radüs (yarım daire) freze",
+       "ikon": "◠",
+       "kategori": "profil",
+       "aciklama": "Yuvarlak profil verir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Çakı seçimi",
+      "maddeler": [
+       "Yüzey: alın ve silindirik freze.",
+       "Kanal: parmak, T kanal, disk.",
+       "Profil: modül, kırlangıç, radüs."
+      ]
+     }
+    },
+    {
+     "id": "u3-divizor",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Divizör hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "40:1 divizörde 8 eşit bölüm için her bölmede kol kaç tur döner?",
+       "secenekler": [
+        "4",
+        "5",
+        "8",
+        "40"
+       ],
+       "dogru": 1,
+       "aciklama": "40 ÷ 8 = 5 tur."
+      },
+      {
+       "soru": "10 dişli bir parça için kaç tur?",
+       "secenekler": [
+        "2",
+        "4",
+        "10",
+        "40"
+       ],
+       "dogru": 1,
+       "aciklama": "40 ÷ 10 = 4 tur."
+      },
+      {
+       "soru": "24 diş için hesap?",
+       "secenekler": [
+        "1 tur + 15'lik dairede 10 delik",
+        "2 tur",
+        "1 tur + 15'likte 5 delik",
+        "24 tur"
+       ],
+       "dogru": 0,
+       "aciklama": "40 ÷ 24 = 1 2/3 → 1 tur ve 15 delikli dairede 10 delik (2/3 × 15 = 10)."
+      },
+      {
+       "soru": "30 diş için hesap?",
+       "secenekler": [
+        "1 tur + 15'lik dairede 5 delik",
+        "3 tur",
+        "1 tur + 30'luk dairede 3 delik",
+        "30 tur"
+       ],
+       "dogru": 0,
+       "aciklama": "40 ÷ 30 = 1 1/3 → 1 tur ve 15 delikli dairede 5 delik."
+      },
+      {
+       "soru": "Tabla vidasında boşluk olan klasik tezgâhta hangisi daha güvenlidir?",
+       "secenekler": [
+        "Aynı yönlü frezeleme",
+        "Karşı yönlü frezeleme",
+        "İkisi de aynı",
+        "Hiçbiri"
+       ],
+       "dogru": 1,
+       "aciklama": "Aynı yönlüde çakı tablayı çekebilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Divizör",
+      "maddeler": [
+       "Tur = 40 ÷ bölüm sayısı.",
+       "Kesirli kısım delik dairesinde sayılır.",
+       "Klasik tezgâhta karşı yönlü frezeleme."
+      ]
+     }
+    },
+    {
+     "id": "u4-disli",
+     "sablon": "siralama",
+     "ikon": "🦷",
+     "baslik": "Düz dişli aç",
+     "aciklama": "Bir düz dişli açacaksın. Hazırlık ve kesme adımlarını doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "divizor",
+       "ikon": "⚙️",
+       "metin": "Divizörü ve gezer puntayı tablaya bağla, eksenlerini hizala",
+       "neden": "Parça bu iki nokta arasında döner; hizasız olursa dişler bozulur.",
+       "ipucu": "Önce bölme düzeni kurulmalı."
+      },
+      {
+       "id": "parca",
+       "ikon": "🔩",
+       "metin": "Dişli taslağını mandrele tak, salgısını komparatörle kontrol et",
+       "neden": "Salgılı taslak eşit olmayan diş verir.",
+       "ipucu": "Düzen hazır; parçayı tak."
+      },
+      {
+       "id": "caki",
+       "ikon": "🛠️",
+       "metin": "Modüle ve diş sayısına uygun modül freze çakısını tak, ortala",
+       "neden": "Yanlış çakı yanlış diş profili verir.",
+       "ipucu": "Parça hazır; hangi çakı?"
+      },
+      {
+       "id": "bolme",
+       "ikon": "🧮",
+       "metin": "Bölme hesabını yap, delik dairesini ve kolu ayarla",
+       "neden": "Her diş arası eşit dönmeli.",
+       "ipucu": "Çakı hazır; her diş için ne kadar döneceksin?"
+      },
+      {
+       "id": "ilk",
+       "ikon": "📏",
+       "metin": "İlk diş boşluğunu açıp diş kalınlığını ölç",
+       "neden": "İlk ölçü doğruysa seri güvenle devam eder.",
+       "ipucu": "Ayar tamam; önce dene."
+      },
+      {
+       "id": "hepsi",
+       "ikon": "🔁",
+       "metin": "Kalan dişleri bölerek sırayla aç, sonunda tekrar ölç",
+       "neden": "Her bölmeden sonra kilitlemeyi unutma.",
+       "ipucu": "İlk diş doğru; devam."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Dişli açma",
+      "maddeler": [
+       "Divizör → parça ve salgı → çakı → bölme → ilk diş ölçümü → tüm dişler.",
+       "Her bölmeden sonra divizörü kilitle."
+      ]
+     }
+    },
+    {
+     "id": "u5-zor",
+     "sablon": "senaryo",
+     "ikon": "⚠️",
+     "baslik": "Ustanın günü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık ustasın. Atölyede zor işler sana geliyor.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri: \"Parça yarın lazım, toleransa o kadar bakmayın.\"",
+       "secenekler": [
+        {
+         "metin": "Teslim tarihini konuşur ama toleranstan taviz vermem",
+         "dogru": true,
+         "aciklama": "Toleransı tutmayan parça montajda işe yaramaz; güveni de bozar."
+        },
+        {
+         "metin": "Tamam, kabaca yaparız",
+         "dogru": false,
+         "aciklama": "Hatalı parça geri döner."
+        },
+        {
+         "metin": "Hiç cevap vermem",
+         "dogru": false,
+         "aciklama": "Gerçekçi bir teslim tarihini net söylemek gerekir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Çırağın bağladığı parçada komparatör 0,15 mm sapma gösteriyor.",
+       "secenekler": [
+        {
+         "metin": "Birlikte sökerek takozları ve mengeneyi temizletir, yeniden bağlatırım",
+         "dogru": true,
+         "aciklama": "Öğretirken düzeltmek çırağı ustalaştırır."
+        },
+        {
+         "metin": "Sapma küçük, devam",
+         "dogru": false,
+         "aciklama": "0,15 mm birçok parçada toleransın dışındadır."
+        },
+        {
+         "metin": "Çırağı işten alırım",
+         "dogru": false,
+         "aciklama": "Hata öğrenmenin parçası; nasıl düzeltileceğini göster."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Tezgâhın tabla vidasında boşluk arttı.",
+       "secenekler": [
+        {
+         "metin": "Bakım ekibine bildirir, o zamana kadar karşı yönlü frezelerim",
+         "dogru": true,
+         "aciklama": "Boşluk aynı yönlü frezede tablayı çekebilir."
+        },
+        {
+         "metin": "Aynı yönlü çalışıp hızlanırım",
+         "dogru": false,
+         "aciklama": "Çakı tablayı çekip kırılabilir."
+        },
+        {
+         "metin": "Görmezden gelirim",
+         "dogru": false,
+         "aciklama": "Bakım yapılmayan tezgâh hassasiyetini kaybeder."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ustanın tutumu",
+      "maddeler": [
+       "Toleranstan taviz yok.",
+       "Hatayı öğreterek düzelt.",
+       "Tezgâh bakımını takip et."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Usta sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "40:1 divizörde 20 bölüm?",
+       "secenekler": [
+        "1 tur",
+        "2 tur",
+        "4 tur",
+        "20 tur"
+       ],
+       "dogru": 1,
+       "aciklama": "40 ÷ 20 = 2."
+      },
+      {
+       "soru": "Dişli dişini hangi çakı açar?",
+       "secenekler": [
+        "Alın frezesi",
+        "Modül freze çakısı",
+        "T kanal",
+        "Matkap"
+       ],
+       "dogru": 1,
+       "aciklama": "Modül freze."
+      },
+      {
+       "soru": "Kırlangıç kuyruğu profili hangi çakıyla?",
+       "secenekler": [
+        "Parmak",
+        "Kırlangıç kuyruğu frezesi",
+        "Disk",
+        "Alın"
+       ],
+       "dogru": 1,
+       "aciklama": "Açılı profil çakısı."
+      },
+      {
+       "soru": "Boşluklu tablada güvenli yöntem?",
+       "secenekler": [
+        "Aynı yönlü",
+        "Karşı yönlü",
+        "Fark etmez",
+        "Hızlı ilerleme"
+       ],
+       "dogru": 1,
+       "aciklama": "Karşı yönlü."
+      },
+      {
+       "soru": "Salgı neyle kontrol edilir?",
+       "secenekler": [
+        "Kumpas",
+        "Komparatör",
+        "Şerit metre",
+        "Gönye"
+       ],
+       "dogru": 1,
+       "aciklama": "Komparatör."
+      },
+      {
+       "soru": "Dişlide her bölmeden sonra?",
+       "secenekler": [
+        "Divizör kilitlenir",
+        "Çakı değiştirilir",
+        "Soğutma kapatılır",
+        "Hiçbir şey"
+       ],
+       "dogru": 0,
+       "aciklama": "Kilitlenmezse parça döner."
+      },
+      {
+       "soru": "Geniş yüzey düzeltme?",
+       "secenekler": [
+        "Alın frezesi",
+        "Modül freze",
+        "T kanal",
+        "Radüs"
+       ],
+       "dogru": 0,
+       "aciklama": "Alın frezesi."
+      },
+      {
+       "soru": "Müşteri toleranstan taviz istiyor?",
+       "secenekler": [
+        "Kabul",
+        "Teslimi konuşur, toleranstan taviz vermem",
+        "Gizlice yaparım",
+        "Reddedip kapatırım"
+       ],
+       "dogru": 1,
+       "aciklama": "Kalite ve dürüstlük."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Baş usta",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "Baş Usta",
+    "ikon": "🏭"
+   },
+   "sonraki": "Çıraklıktan baş ustalığa tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "b1-atolye",
+     "sablon": "bilgi",
+     "ikon": "🏭",
+     "baslik": "Atölyeyi yönetmek",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📋",
+       "baslik": "İş planı",
+       "metin": "Hangi işin hangi tezgâhta, hangi operatörle yapılacağı planlanır.",
+       "terim": "iş planlama"
+      },
+      {
+       "ikon": "⏱️",
+       "baslik": "Süre tahmini",
+       "metin": "Bir parçanın bağlama, ayar ve kesme süreleri toplanarak teslim tarihi verilir.",
+       "terim": "süre hesabı"
+      },
+      {
+       "ikon": "🧰",
+       "baslik": "Takım yönetimi",
+       "metin": "Çakıların ömrü takip edilir, körelenler bilenir ya da değiştirilir.",
+       "terim": "takım ömrü"
+      },
+      {
+       "ikon": "🛢️",
+       "baslik": "Bakım",
+       "metin": "Tezgâhların yağlama, kızak temizliği ve vida boşluğu kontrolü düzenli yapılır.",
+       "terim": "koruyucu bakım"
+      },
+      {
+       "ikon": "✅",
+       "baslik": "Kalite",
+       "metin": "İlk parça onayı, ara kontroller ve kayıtlar düzenli tutulur.",
+       "terim": "kalite kayıtları"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Yetiştirmek",
+       "metin": "Çırak ve operatörler güvenlik ve beceri bakımından adım adım yetiştirilir.",
+       "terim": "usta-çırak"
+      }
+     ]
+    },
+    {
+     "id": "b2-sure",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Süre ve iş hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Bir parça: bağlama 4 dk, kesme 6 dk, ölçme 2 dk. 10 parça kaç dakika?",
+       "secenekler": [
+        "12 dk",
+        "60 dk",
+        "120 dk",
+        "100 dk"
+       ],
+       "dogru": 2,
+       "aciklama": "(4 + 6 + 2) × 10 = 120 dk."
+      },
+      {
+       "soru": "Tezgâh ayarı bir kez 30 dk, parça başı 12 dk. 10 parça?",
+       "secenekler": [
+        "120 dk",
+        "150 dk",
+        "300 dk",
+        "42 dk"
+       ],
+       "dogru": 1,
+       "aciklama": "30 + 12 × 10 = 150 dk."
+      },
+      {
+       "soru": "Bir çakı yaklaşık 40 parça dayanıyor. 200 parça için kaç çakı (ya da bileme) planlanır?",
+       "secenekler": [
+        "2",
+        "5",
+        "40",
+        "200"
+       ],
+       "dogru": 1,
+       "aciklama": "200 ÷ 40 = 5."
+      },
+      {
+       "soru": "Günde 7,5 saat net çalışma; parça başı 15 dk. Günde kaç parça?",
+       "secenekler": [
+        "15",
+        "30",
+        "45",
+        "60"
+       ],
+       "dogru": 1,
+       "aciklama": "450 ÷ 15 = 30 parça."
+      },
+      {
+       "soru": "Teslim tarihi verirken hangisi unutulmamalı?",
+       "secenekler": [
+        "Sadece kesme süresi",
+        "Ayar, kontrol ve olası aksaklık payı",
+        "Hiçbir şey",
+        "Sadece müşterinin isteği"
+       ],
+       "dogru": 1,
+       "aciklama": "Gerçekçi plan güven verir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Planlama",
+      "maddeler": [
+       "Toplam süre = ayar + parça sayısı × parça süresi.",
+       "Takım ömrünü hesaba kat.",
+       "Pay bırakmadan söz verme."
+      ]
+     }
+    },
+    {
+     "id": "b3-risk",
+     "sablon": "siniflandirma",
+     "ikon": "🚨",
+     "baslik": "Atölye turu",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Sabah atölye turundasın. Her durumu doğru gruba koy.",
+     "kategoriler": [
+      {
+       "id": "dur",
+       "ad": "Hemen durdur, düzelt",
+       "ikon": "🛑"
+      },
+      {
+       "id": "tamam",
+       "ad": "Uygun, devam",
+       "ikon": "✅"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Dönen tezgâhta eldivenle çalışan operatör",
+       "ikon": "🧤",
+       "kategori": "dur",
+       "aciklama": "Eldiven takılıp çeker."
+      },
+      {
+       "ad": "Gözlüksüz frezeleme",
+       "ikon": "🥽",
+       "kategori": "dur",
+       "aciklama": "Talaş göze sıçrar."
+      },
+      {
+       "ad": "Koruyucu kapağı sökülmüş tezgâh",
+       "ikon": "🛡️",
+       "kategori": "dur",
+       "aciklama": "Koruyucu yerinde olmalı."
+      },
+      {
+       "ad": "Yere dökülmüş soğutma sıvısı",
+       "ikon": "💧",
+       "kategori": "dur",
+       "aciklama": "Kayma tehlikesi."
+      },
+      {
+       "ad": "Saçını toplamış, gözlüklü operatör",
+       "ikon": "👷",
+       "kategori": "tamam",
+       "aciklama": "Doğru hazırlık."
+      },
+      {
+       "ad": "Tezgâh durunca fırçayla talaş alan çırak",
+       "ikon": "🧹",
+       "kategori": "tamam",
+       "aciklama": "Doğru yöntem."
+      },
+      {
+       "ad": "Acil stop düğmesi önü açık tezgâh",
+       "ikon": "🛑",
+       "kategori": "tamam",
+       "aciklama": "Acil durdurmaya hemen ulaşılır."
+      },
+      {
+       "ad": "Bakım kartı güncel tezgâh",
+       "ikon": "📋",
+       "kategori": "tamam",
+       "aciklama": "Düzenli bakım."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Atölye turu",
+      "maddeler": [
+       "Eldiven, gözlük, koruyucu kapak: ilk bakılanlar.",
+       "Islak zemin kaza demektir.",
+       "Doğruyu da takdir et."
+      ]
+     }
+    },
+    {
+     "id": "b4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir gün",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Baş usta olarak bütün atölyeden sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir operatörün parmağı hafif kesildi; \"önemli değil\" diyor.",
+       "secenekler": [
+        {
+         "metin": "İlk yardım yaptırır, kazayı kayda geçirir, nedenini inceleyip önlem alırım",
+         "dogru": true,
+         "aciklama": "Küçük kazalar büyüklerin habercisidir."
+        },
+        {
+         "metin": "Yara bandı yeter, devam",
+         "dogru": false,
+         "aciklama": "Neden bulunmazsa tekrar eder."
+        },
+        {
+         "metin": "Gizlerim",
+         "dogru": false,
+         "aciklama": "Kaza gizlenmez."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri: \"Ölçü raporuna parçaları ölçmeden 'uygun' yazın.\"",
+       "secenekler": [
+        {
+         "metin": "Reddeder, parçaları ölçüp gerçek raporu veririm",
+         "dogru": true,
+         "aciklama": "Sahte kalite kaydı hem etik dışı hem tehlikelidir."
+        },
+        {
+         "metin": "Bir seferlik yazarım",
+         "dogru": false,
+         "aciklama": "Bir sefer de sahteciliktir."
+        },
+        {
+         "metin": "Çırağa yazdırırım",
+         "dogru": false,
+         "aciklama": "Sorumluluk değişmez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "İki acil iş aynı tezgâhı istiyor.",
+       "secenekler": [
+        {
+         "metin": "Teslim tarihlerini ve süreleri karşılaştırıp planlar, müşterilere gerçekçi bilgi veririm",
+         "dogru": true,
+         "aciklama": "Planlı karar her iki müşteriyi de korur."
+        },
+        {
+         "metin": "Önce kim bağırırsa onun işi",
+         "dogru": false,
+         "aciklama": "Plan, bağırana göre yapılmaz."
+        },
+        {
+         "metin": "İkisini aynı anda yapmaya çalışırım",
+         "dogru": false,
+         "aciklama": "Ayar karışır, ikisi de gecikir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Baş usta",
+      "maddeler": [
+       "Her kaza kayda geçer ve incelenir.",
+       "Sahte rapora imza yok.",
+       "Önceliği planla belirle."
+      ]
+     }
+    },
+    {
+     "id": "b5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Dönen takımda eldiven?",
+       "secenekler": [
+        "Takılır",
+        "Takılmaz",
+        "Tek el",
+        "İnce olursa olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Takılıp çeker."
+      },
+      {
+       "soru": "V = 20 m/dk, D = 16 mm. Devir yaklaşık? (π ≈ 3,14)",
+       "secenekler": [
+        "40",
+        "398",
+        "1.000",
+        "125"
+       ],
+       "dogru": 1,
+       "aciklama": "20.000 ÷ 50,24 ≈ 398."
+      },
+      {
+       "soru": "fz 0,05, z 4, n 600. F?",
+       "secenekler": [
+        "12",
+        "120",
+        "1.200",
+        "24"
+       ],
+       "dogru": 1,
+       "aciklama": "0,05 × 4 × 600 = 120 mm/dk."
+      },
+      {
+       "soru": "40:1 divizörde 36 bölüm?",
+       "secenekler": [
+        "1 tur + 18'lik dairede 2 delik",
+        "36 tur",
+        "1 tur + 36'lıkta 1 delik",
+        "4 tur"
+       ],
+       "dogru": 0,
+       "aciklama": "40 ÷ 36 = 1 1/9 → 1 tur + 18 delikli dairede 2 delik."
+      },
+      {
+       "soru": "Kumpas 0,02: 42 mm + 13. çizgi?",
+       "secenekler": [
+        "42,13",
+        "42,26",
+        "43,3",
+        "42,026"
+       ],
+       "dogru": 1,
+       "aciklama": "42 + 13 × 0,02 = 42,26."
+      },
+      {
+       "soru": "İlk parça onayı neden?",
+       "secenekler": [
+        "Süs için",
+        "Hata seriye yayılmadan yakalamak",
+        "Zaman kaybı",
+        "Müşteri istemezse gerekmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Seriyi korur."
+      },
+      {
+       "soru": "Kanal ve cep için çakı?",
+       "secenekler": [
+        "Alın frezesi",
+        "Parmak freze",
+        "Modül freze",
+        "Silindirik"
+       ],
+       "dogru": 1,
+       "aciklama": "Parmak freze."
+      },
+      {
+       "soru": "Ayar 20 dk, parça başı 8 dk, 15 parça?",
+       "secenekler": [
+        "120 dk",
+        "140 dk",
+        "160 dk",
+        "300 dk"
+       ],
+       "dogru": 1,
+       "aciklama": "20 + 8 × 15 = 140 dk."
+      },
+      {
+       "soru": "Talaş temizliği?",
+       "secenekler": [
+        "Elle, dönerken",
+        "Dururken, fırça/kanca",
+        "Hava ile yüze",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Güvenli yöntem."
+      },
+      {
+       "soru": "Ölçmeden 'uygun' rapor yazmak?",
+       "secenekler": [
+        "Olur",
+        "Yapılmaz",
+        "Acil işte olur",
+        "Müşteri isterse"
+       ],
+       "dogru": 1,
+       "aciklama": "Sahte kayıt."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
