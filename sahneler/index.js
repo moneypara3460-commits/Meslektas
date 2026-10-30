@@ -10,6 +10,7 @@ import frezeHtml from './frezeHtml';
 import kaynakHtml from './kaynakHtml';
 import kodHtml from './kodHtml';
 import tasarimHtml from './tasarimHtml';
+import muhasebeHtml from './muhasebeHtml';
 
 export const SAHNELER = {
   espresso: webSahneYap(espressoHtml, {
@@ -52,5 +53,10 @@ export const SAHNELER = {
     brif: [['tik', 1500], ['tik', 1800], ['tik', 2100], ['tik', 2400], ['tik', 2700], ['tik', 3000]], eskiz: [['akis', 900]],
     izgara: [['tik', 1000], ['tik', 1700]], yerlestir: [['tik', 1100], ['tik', 1550], ['tik', 2000]],
     renk: [['tik', 800], ['akis', 1400], ['dogru', 2300]], teslim: [['tik', 900], ['dogru', 2900], ['basari', 4600]],
+  }),
+  muhasebe: webSahneYap(muhasebeHtml, {
+    kontrol: [['tik', 1300], ['tik', 1800], ['tik', 2300], ['tik', 2800], ['tik', 3300]], hesap: [['tik', 1700], ['tik', 2150], ['tik', 2600]],
+    kaydet: [['tik', 1300], ['tik', 2000], ['tik', 2700]], denge: [['akis', 1100], ['dogru', 2300]],
+    arsiv: [['tik', 1000], ['akis', 1700]], mizan: [['tik', 1300], ['dogru', 2900], ['basari', 3700]],
   }),
 };

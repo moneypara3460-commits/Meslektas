@@ -1,0 +1,2071 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "muhasebe",
+  "ad": "Muhasebe Elemanı",
+  "kategori": "Ofis & Finans",
+  "tanim": "Bir işletmenin parasal olaylarını belgeye dayanarak kaydeden, kontrol eden ve raporlayan meslek: stajyerlikten muhasebe şefliğine.",
+  "calismaKosullari": [
+   "Büro, şirket muhasebe birimi ya da mali müşavirlik ofisi",
+   "Masa başı, ekran ve belgeyle",
+   "Ay sonu ve beyan dönemlerinde yoğunluk"
+  ],
+  "renkler": {
+   "ana": "#1f4e79",
+   "vurgu": "#2f7d5b",
+   "zemin": "#eef3f7"
+  },
+  "metinler": {
+   "senaryoBasla": "Masana geç",
+   "senaryoBitir": "Günü kapat",
+   "ucYildiz": "Kıdemli mizana baktı: \"Kuruşu kuruşuna denk!\"",
+   "karakter": {
+    "usta": "Kıdemli",
+    "musteri": "İşletme sahibi"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Muhasebe Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Muhasebe alanında okul diplomaları ve MYK belgeleri vardır; serbest muhasebeci mali müşavirlik ayrıca ruhsat ister."
+  },
+  "kademeler": [
+   "Merak",
+   "Stajyer",
+   "Ön muhasebe",
+   "Uzman",
+   "Şef"
+  ]
+ },
+ "kaynaklar": [
+  "MEB Muhasebe ve Finansman alanı modülleri (kendi cümlelerimizle)",
+  "213 sayılı Vergi Usul Kanunu (fatura düzenleme süresi, belge saklama)",
+  "3065 sayılı KDV Kanunu ve yürürlükteki oranlar (%1, %10, %20; Ekim 2026'da kontrol edildi)",
+  "Tekdüzen Hesap Planı",
+  "3568 sayılı Kanun (SMMM)",
+  "Ücret, fiyat ve tutarlar örnektir; vergi oranları ve sınırlar değişebilir",
+  "Muhasebeci uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Muhasebe Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Stajyer kademesinde çift taraflı kaydı, belgeleri, KDV'yi ve ilk fatura kaydını öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir muhasebe elemanının günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🧾",
+       "baslik": "Ne yapar?",
+       "metin": "Muhasebe elemanı bir işletmenin parasal olaylarını belgeye dayanarak kaydeder: alışlar, satışlar, ödemeler, tahsilatlar, maaşlar.",
+       "terim": "kayıt"
+      },
+      {
+       "ikon": "📥",
+       "baslik": "Belgeler",
+       "metin": "Gün, gelen faturalar, banka hareketleri ve fişlerle başlar. Belgesi olmayan işlem kaydedilmez.",
+       "terim": "belge"
+      },
+      {
+       "ikon": "⌨️",
+       "baslik": "Programa giriş",
+       "metin": "Her işlem muhasebe programına doğru hesap koduyla, borç ve alacak olarak girilir.",
+       "terim": "yevmiye kaydı"
+      },
+      {
+       "ikon": "🤝",
+       "baslik": "Mutabakat",
+       "metin": "Kayıtlar banka hesap dökümü ve tedarikçilerin kayıtlarıyla karşılaştırılır; fark varsa nedeni bulunur.",
+       "terim": "mutabakat"
+      },
+      {
+       "ikon": "📅",
+       "baslik": "Takvim",
+       "metin": "Vergi ve sigorta bildirimlerinin süreleri vardır. Gecikme işletmeye ceza olarak döner.",
+       "terim": "beyan takvimi"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Meslek liselerinin muhasebe ve finansman alanı, meslek yüksekokulları ve kurslarla öğrenilir. Beyannameleri imzalamak ve bağımsız muhasebecilik yapmak ise ayrı bir meslektir: Serbest Muhasebeci Mali Müşavirlik (SMMM) ruhsat ister.",
+       "terim": "SMMM"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Büroda ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir muhasebe bürosunda deneme günündesin. Kıdemli muhasebeci seni yanına aldı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir müşteri: \"Bu harcamanın fişi yok ama gider olarak yazın.\"",
+       "secenekler": [
+        {
+         "metin": "Belgesi olmayan gideri kaydetmeyeceğimizi kibarca anlatırım",
+         "dogru": true,
+         "aciklama": "Muhasebede her kayıt belgeye dayanır. Belgesiz gider vergi incelemesinde kabul edilmez."
+        },
+        {
+         "metin": "Müşteri istiyor, yazarım",
+         "dogru": false,
+         "aciklama": "Belgesiz kayıt hem yanlış hem cezalıdır."
+        },
+        {
+         "metin": "Kendim bir fiş hazırlarım",
+         "dogru": false,
+         "aciklama": "Sahte belge suçtur."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Masanda müşterilerin maaş bordroları açık duruyor, ofise bir ziyaretçi geldi.",
+       "secenekler": [
+        {
+         "metin": "Belgeleri kapatır, ekranı kilitlerim",
+         "dogru": true,
+         "aciklama": "Maaş ve kimlik bilgileri kişisel veridir; KVKK'ya göre korunur."
+        },
+        {
+         "metin": "Ziyaretçi bakmaz, açık kalsın",
+         "dogru": false,
+         "aciklama": "Gizli bilgiyi korumak muhasebecinin temel görevidir."
+        },
+        {
+         "metin": "Merak ederse gösteririm",
+         "dogru": false,
+         "aciklama": "Kişisel veri paylaşılmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Hesap makinesinde topladığın sonuç programdakinden 10 TL farklı.",
+       "secenekler": [
+        {
+         "metin": "Farkın nedenini bulana kadar kalemleri tek tek karşılaştırırım",
+         "dogru": true,
+         "aciklama": "Muhasebede küçük fark bile bir hatanın işaretidir."
+        },
+        {
+         "metin": "10 TL önemsiz, geçerim",
+         "dogru": false,
+         "aciklama": "Küçük fark büyük bir hatayı saklayabilir."
+        },
+        {
+         "metin": "Programı düzeltip eşitlerim",
+         "dogru": false,
+         "aciklama": "Nedeni bulunmadan rakam değiştirilmez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Büroda ilk gün",
+      "maddeler": [
+       "Belgesiz kayıt olmaz.",
+       "Kişisel veri korunur.",
+       "Küçük farkın da nedeni bulunur."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Rakamlarla ve tablolarla çalışmak?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "İdare ederim",
+         1
+        ],
+        [
+         "Sıkılırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Küçük ayrıntılara dikkat etmek?",
+       "secenekler": [
+        [
+         "Gözümden kaçmaz",
+         2
+        ],
+        [
+         "Çalışırsam olur",
+         1
+        ],
+        [
+         "Zorlanırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Kurallara ve süreleri tam uymak?",
+       "secenekler": [
+        [
+         "Rahatım",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Gizli bilgiyi kimseye söylememek?",
+       "secenekler": [
+        [
+         "Elbette",
+         2
+        ],
+        [
+         "Dikkat ederim",
+         1
+        ],
+        [
+         "Zorlanırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Ay sonu ve yıl sonu yoğunluğu?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Katlanırım",
+         1
+        ],
+        [
+         "İstemem",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Düzenli ve dikkatlisin. Defterler seni bekliyor; Stajyer kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Stajyer kademesini oynayıp işi yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Rakam ve kural yoğunluğu seni zorlayabilir. Satış ya da müşteri hizmetleri tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Stajyer",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Muhasebe Stajyeri",
+    "ikon": "🧾"
+   },
+   "sonraki": "Ön muhasebe kademesi açıldı: kasa, banka, cari hesaplar, bordro ve ay sonu.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-temel",
+     "sablon": "bilgi",
+     "ikon": "⚖️",
+     "baslik": "Çift taraflı kayıt",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "⚖️",
+       "baslik": "Borç = Alacak",
+       "metin": "Her işlem en az iki hesabı etkiler. Bir kayıtta borç tarafının toplamı alacak tarafının toplamına her zaman eşittir.",
+       "terim": "çift taraflı kayıt"
+      },
+      {
+       "ikon": "🏦",
+       "baslik": "Varlıklar",
+       "metin": "Kasa, banka, mallar gibi varlıklar artınca borç, azalınca alacak tarafına yazılır.",
+       "terim": "aktif hesap"
+      },
+      {
+       "ikon": "📤",
+       "baslik": "Kaynaklar",
+       "metin": "Borçlar ve sermaye gibi kaynaklar artınca alacak, azalınca borç tarafına yazılır.",
+       "terim": "pasif hesap"
+      },
+      {
+       "ikon": "🔢",
+       "baslik": "Hesap planı",
+       "metin": "Türkiye'de Tekdüzen Hesap Planı kullanılır. Her hesabın bir kodu vardır: 100 Kasa, 102 Bankalar, 153 Ticari Mallar, 320 Satıcılar.",
+       "terim": "Tekdüzen Hesap Planı"
+      },
+      {
+       "ikon": "📒",
+       "baslik": "Yevmiye ve kebir",
+       "metin": "Kayıtlar önce tarih sırasıyla yevmiyeye yazılır, sonra her hesabın kendi sayfasında (büyük defter / kebir) toplanır.",
+       "terim": "yevmiye, kebir"
+      },
+      {
+       "ikon": "📊",
+       "baslik": "Mizan",
+       "metin": "Mizan, bütün hesapların borç ve alacak toplamlarının listesidir. Toplamlar eşit değilse bir yerde hata vardır.",
+       "terim": "mizan"
+      }
+     ]
+    },
+    {
+     "id": "c2-belge",
+     "sablon": "bilgi",
+     "ikon": "🧾",
+     "baslik": "Belgeler",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🧾",
+       "baslik": "Fatura",
+       "metin": "Mal satan ya da hizmet veren, alıcıya fatura düzenler. Fatura, mal teslimi ya da hizmetten itibaren en geç 7 gün içinde düzenlenir.",
+       "terim": "fatura"
+      },
+      {
+       "ikon": "💻",
+       "baslik": "e-Fatura ve e-Arşiv",
+       "metin": "Faturaların büyük kısmı artık elektronik düzenlenir ve Gelir İdaresi sistemine kaydedilir.",
+       "terim": "e-belge"
+      },
+      {
+       "ikon": "🚚",
+       "baslik": "İrsaliye",
+       "metin": "Mal taşınırken yanında sevk irsaliyesi bulunur.",
+       "terim": "sevk irsaliyesi"
+      },
+      {
+       "ikon": "🏧",
+       "baslik": "Banka dekontu",
+       "metin": "Bankadan yapılan ödeme ve tahsilatların belgesidir.",
+       "terim": "dekont"
+      },
+      {
+       "ikon": "🔎",
+       "baslik": "Faturada neye bakılır?",
+       "metin": "Satıcı ve alıcı unvanı, vergi numarası, tarih, mal ya da hizmet, tutar, KDV oranı ve toplam doğru olmalı.",
+       "terim": "fatura kontrolü"
+      },
+      {
+       "ikon": "🗄️",
+       "baslik": "Saklama",
+       "metin": "Defter ve belgeler Vergi Usul Kanunu'na göre 5 yıl, Türk Ticaret Kanunu'na göre 10 yıl saklanır.",
+       "terim": "saklama süresi"
+      }
+     ]
+    },
+    {
+     "id": "c3-hesap",
+     "sablon": "siniflandirma",
+     "ikon": "🔢",
+     "baslik": "Hangi hesap grubu?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her hesabı ait olduğu gruba ver.",
+     "kategoriler": [
+      {
+       "id": "varlik",
+       "ad": "Varlık (1–2)",
+       "ikon": "🏦"
+      },
+      {
+       "id": "kaynak",
+       "ad": "Borç ve sermaye (3–5)",
+       "ikon": "📤"
+      },
+      {
+       "id": "gelir",
+       "ad": "Gelir ve gider (6–7)",
+       "ikon": "📈"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "100 Kasa",
+       "ikon": "💵",
+       "kategori": "varlik",
+       "aciklama": "Elde tutulan para bir varlıktır."
+      },
+      {
+       "ad": "102 Bankalar",
+       "ikon": "🏧",
+       "kategori": "varlik",
+       "aciklama": "Bankadaki para."
+      },
+      {
+       "ad": "153 Ticari Mallar",
+       "ikon": "📦",
+       "kategori": "varlik",
+       "aciklama": "Satmak için alınan mallar."
+      },
+      {
+       "ad": "320 Satıcılar",
+       "ikon": "🧾",
+       "kategori": "kaynak",
+       "aciklama": "Tedarikçilere olan borç."
+      },
+      {
+       "ad": "360 Ödenecek Vergi ve Fonlar",
+       "ikon": "🏛️",
+       "kategori": "kaynak",
+       "aciklama": "Devlete ödenecek vergiler."
+      },
+      {
+       "ad": "500 Sermaye",
+       "ikon": "💼",
+       "kategori": "kaynak",
+       "aciklama": "İşletme sahibinin koyduğu kaynak."
+      },
+      {
+       "ad": "600 Yurt İçi Satışlar",
+       "ikon": "🛒",
+       "kategori": "gelir",
+       "aciklama": "Satış geliri."
+      },
+      {
+       "ad": "770 Genel Yönetim Giderleri",
+       "ikon": "💡",
+       "kategori": "gelir",
+       "aciklama": "Kira, elektrik gibi giderler."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hesap grupları",
+      "maddeler": [
+       "1–2: varlıklar.",
+       "3–4–5: borçlar ve sermaye.",
+       "6–7: gelirler, giderler ve maliyetler."
+      ]
+     }
+    },
+    {
+     "id": "c4-kdv",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "KDV hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "KDV hariç 1.000 TL, KDV %20. KDV dahil tutar?",
+       "secenekler": [
+        "1.020 TL",
+        "1.200 TL",
+        "1.002 TL",
+        "2.000 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "1.000 × 1,20 = 1.200 TL."
+      },
+      {
+       "soru": "KDV dahil 1.200 TL, oran %20. KDV hariç tutar?",
+       "secenekler": [
+        "960 TL",
+        "1.000 TL",
+        "1.180 TL",
+        "1.440 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "1.200 ÷ 1,20 = 1.000 TL. %20 düşmek yanlış olur (960)."
+      },
+      {
+       "soru": "KDV hariç 5.000 TL, oran %10. KDV tutarı?",
+       "secenekler": [
+        "50 TL",
+        "500 TL",
+        "5.500 TL",
+        "1.000 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "5.000 × 0,10 = 500 TL."
+      },
+      {
+       "soru": "Türkiye'de genel KDV oranı?",
+       "secenekler": [
+        "%1",
+        "%10",
+        "%18",
+        "%20"
+       ],
+       "dogru": 3,
+       "aciklama": "Genel oran %20; bazı mal ve hizmetlerde %10 ya da %1 uygulanır."
+      },
+      {
+       "soru": "Ekmek gibi bazı temel gıdalarda uygulanan oran?",
+       "secenekler": [
+        "%1",
+        "%10",
+        "%20",
+        "KDV yok"
+       ],
+       "dogru": 0,
+       "aciklama": "Temel gıdaların bir kısmında %1 uygulanır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "KDV hesabı",
+      "maddeler": [
+       "Dahil = hariç × (1 + oran).",
+       "Hariç = dahil ÷ (1 + oran).",
+       "Oranlar: %1, %10, %20 (genel)."
+      ]
+     }
+    },
+    {
+     "id": "c5-hafta",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "İlk haftan",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Stajyer olarak ilk haftandasın. Faturaları programa girmek sana verildi.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir faturada alıcı unvanı başka bir şirket olarak yazılmış.",
+       "secenekler": [
+        {
+         "metin": "Kaydetmem; kıdemliye bildirir, satıcıdan düzeltilmiş belge isteriz",
+         "dogru": true,
+         "aciklama": "Başka adına düzenlenmiş fatura işletmenin belgesi sayılmaz."
+        },
+        {
+         "metin": "Tutar doğru, kaydederim",
+         "dogru": false,
+         "aciklama": "Unvan yanlışsa belge geçersizdir."
+        },
+        {
+         "metin": "Unvanı kalemle düzeltirim",
+         "dogru": false,
+         "aciklama": "Belge üzerinde elle düzeltme yapılmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Aynı fatura masana ikinci kez gelmiş.",
+       "secenekler": [
+        {
+         "metin": "Fatura numarasını programda arar, daha önce girilmişse tekrar girmem",
+         "dogru": true,
+         "aciklama": "Çift kayıt gideri ve borcu iki kat gösterir."
+        },
+        {
+         "metin": "Gelen her faturayı girerim",
+         "dogru": false,
+         "aciklama": "Mükerrer kayıt sık yapılan bir hatadır."
+        },
+        {
+         "metin": "Çöpe atarım",
+         "dogru": false,
+         "aciklama": "Önce kontrol edilir, belge atılmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Kıdemli: \"Mizan tutmuyor, borç toplamı alacaktan 1.800 TL fazla!\"",
+       "secenekler": [
+        {
+         "metin": "Son girdiğim kayıtlarda borç ve alacağı tek tek kontrol ederim",
+         "dogru": true,
+         "aciklama": "Borç ile alacak eşit değilse bir kayıt eksik ya da yanlış girilmiştir."
+        },
+        {
+         "metin": "Farkı bir hesaba yazıp eşitlerim",
+         "dogru": false,
+         "aciklama": "Farkı kapatmak hatayı saklar."
+        },
+        {
+         "metin": "Program bozuk derim",
+         "dogru": false,
+         "aciklama": "Önce kendi kayıtların kontrol edilir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İlk hafta",
+      "maddeler": [
+       "Unvanı yanlış belge kaydedilmez.",
+       "Çift kayıt için fatura numarası kontrol edilir.",
+       "Mizan farkının nedeni bulunur, kapatılmaz."
+      ]
+     }
+    },
+    {
+     "id": "c6-fatura",
+     "sablon": "siralama",
+     "ikon": "🧾",
+     "baslik": "Alış faturasını kaydet",
+     "aciklama": "Bir züccaciye dükkânı satmak için 100 termos aldı. Gelen faturayı doğru sırayla kaydet.",
+     "adimlar": [
+      {
+       "id": "kontrol",
+       "ikon": "🔎",
+       "metin": "Faturayı kontrol et: unvan, vergi numarası, tarih, tutar, KDV",
+       "neden": "Yanlış belge kaydedilmez.",
+       "ipucu": "Önce belgeye bak."
+      },
+      {
+       "id": "hesap",
+       "ikon": "🔢",
+       "metin": "Hesap kodlarını belirle: 153 Ticari Mallar, 191 İndirilecek KDV, 320 Satıcılar",
+       "neden": "Doğru hesap, doğru rapor demektir.",
+       "ipucu": "Belge doğru; hangi hesaplar?"
+      },
+      {
+       "id": "kaydet",
+       "ikon": "⌨️",
+       "metin": "Yevmiye kaydını gir: mal ve KDV borca, satıcı alacağa",
+       "neden": "Mal ve KDV varlık olarak artar, satıcıya borçlanılır.",
+       "ipucu": "Hesaplar belli; rakamları gir."
+      },
+      {
+       "id": "denge",
+       "ikon": "⚖️",
+       "metin": "Borç ve alacak toplamlarının eşit olduğunu kontrol et",
+       "neden": "Eşit değilse kayıt yanlıştır.",
+       "ipucu": "Girdin; doğru mu?"
+      },
+      {
+       "id": "arsiv",
+       "ikon": "🗄️",
+       "metin": "Kaydı onayla, faturayı ayın klasörüne dosyala",
+       "neden": "Belge yıllarca saklanır ve istendiğinde bulunur.",
+       "ipucu": "Kayıt denk; belge nereye?"
+      },
+      {
+       "id": "mizan",
+       "ikon": "📊",
+       "metin": "Ay sonunda mizanı al ve toplamların denk olduğunu gör",
+       "neden": "Ayın bütün kayıtları birlikte kontrol edilir.",
+       "ipucu": "Ay bitti; büyük resim."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Alış faturası kaydı",
+      "maddeler": [
+       "153 Ticari Mallar (B) 10.000",
+       "191 İndirilecek KDV (B) 2.000",
+       "320 Satıcılar (A) 12.000",
+       "Kontrol → hesap → kayıt → denge → arşiv → mizan."
+      ]
+     },
+     "sahne": "muhasebe"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Stajyer sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Bir kayıtta borç ve alacak toplamı?",
+       "secenekler": [
+        "Farklı olabilir",
+        "Her zaman eşittir",
+        "Borç büyük olur",
+        "Alacak büyük olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Çift taraflı kayıt."
+      },
+      {
+       "soru": "100 numaralı hesap?",
+       "secenekler": [
+        "Bankalar",
+        "Kasa",
+        "Satıcılar",
+        "Sermaye"
+       ],
+       "dogru": 1,
+       "aciklama": "100 Kasa."
+      },
+      {
+       "soru": "320 Satıcılar hangi gruptadır?",
+       "secenekler": [
+        "Varlık",
+        "Kısa vadeli borç",
+        "Gelir",
+        "Gider"
+       ],
+       "dogru": 1,
+       "aciklama": "Tedarikçiye borç."
+      },
+      {
+       "soru": "KDV hariç 2.000 TL, %20. KDV dahil?",
+       "secenekler": [
+        "2.020",
+        "2.200",
+        "2.400",
+        "4.000"
+       ],
+       "dogru": 2,
+       "aciklama": "2.000 × 1,2 = 2.400."
+      },
+      {
+       "soru": "Fatura en geç ne zaman düzenlenir?",
+       "secenekler": [
+        "Teslimden itibaren 7 gün içinde",
+        "30 gün",
+        "Yıl sonunda",
+        "İstendiğinde"
+       ],
+       "dogru": 0,
+       "aciklama": "VUK 231."
+      },
+      {
+       "soru": "Belgesi olmayan gider?",
+       "secenekler": [
+        "Kaydedilir",
+        "Kaydedilmez",
+        "Yarısı kaydedilir",
+        "Müşteri isterse kaydedilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Kayıt belgeye dayanır."
+      },
+      {
+       "soru": "Mizan ne gösterir?",
+       "secenekler": [
+        "Sadece kasayı",
+        "Bütün hesapların borç ve alacak toplamlarını",
+        "Personel listesini",
+        "Satış fiyatlarını"
+       ],
+       "dogru": 1,
+       "aciklama": "Kontrol aracıdır."
+      },
+      {
+       "soru": "Varlık artışı hangi tarafa yazılır?",
+       "secenekler": [
+        "Borç",
+        "Alacak",
+        "İkisine",
+        "Hiçbirine"
+       ],
+       "dogru": 0,
+       "aciklama": "Aktif hesaplar borçla artar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Ön muhasebe",
+   "hedefXp": 280,
+   "rozet": {
+    "ad": "Ön Muhasebe Elemanı",
+    "ikon": "⌨️"
+   },
+   "sonraki": "Uzman kademesi açıldı: dönem sonu, mali tablolar ve kapanış.",
+   "gorevler": [
+    {
+     "id": "y1-is",
+     "sablon": "bilgi",
+     "ikon": "🗂️",
+     "baslik": "Ön muhasebenin işleri",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "💵",
+       "baslik": "Kasa",
+       "metin": "Kasadaki para her gün sayılır ve kayıtla karşılaştırılır. Kasa hesabı eksi (alacak) bakiye veremez: kasada olmayan para harcanamaz.",
+       "terim": "kasa sayımı"
+      },
+      {
+       "ikon": "🏦",
+       "baslik": "Banka mutabakatı",
+       "metin": "Programdaki banka hesabı, bankanın hesap dökümüyle karşılaştırılır; her fark açıklanır.",
+       "terim": "banka mutabakatı"
+      },
+      {
+       "ikon": "👥",
+       "baslik": "Cari hesaplar",
+       "metin": "Müşteri (120 Alıcılar) ve tedarikçi (320 Satıcılar) hesapları takip edilir; dönem sonunda karşı tarafla mutabakat yapılır.",
+       "terim": "cari hesap"
+      },
+      {
+       "ikon": "🧾",
+       "baslik": "KDV",
+       "metin": "Satışta hesaplanan KDV (391) ile alışta ödenen KDV (191) karşılaştırılır. Fark devlete ödenir ya da sonraki aya devreder.",
+       "terim": "KDV mahsubu"
+      },
+      {
+       "ikon": "💼",
+       "baslik": "Bordro",
+       "metin": "Çalışanın brüt ücretinden sigorta primi, işsizlik sigortası ve vergiler düşülerek net ücret bulunur.",
+       "terim": "bordro"
+      },
+      {
+       "ikon": "📆",
+       "baslik": "Takvim",
+       "metin": "KDV, muhtasar ve sigorta bildirimleri her ay belirli günlere kadar verilir. Takvimi takip etmek işin parçasıdır.",
+       "terim": "beyan takvimi"
+      }
+     ]
+    },
+    {
+     "id": "y2-kayit",
+     "sablon": "siniflandirma",
+     "ikon": "⚖️",
+     "baslik": "Borç mu, alacak mı?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her hesap hareketini doğru tarafa ver.",
+     "kategoriler": [
+      {
+       "id": "borc",
+       "ad": "Borç",
+       "ikon": "⬅️"
+      },
+      {
+       "id": "alacak",
+       "ad": "Alacak",
+       "ikon": "➡️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Mal satıldı: 600 Yurt İçi Satışlar",
+       "ikon": "🛒",
+       "kategori": "alacak",
+       "aciklama": "Gelir hesapları alacakla artar."
+      },
+      {
+       "ad": "Peşin satışta kasaya giren para (100 Kasa)",
+       "ikon": "💵",
+       "kategori": "borc",
+       "aciklama": "Varlık arttı."
+      },
+      {
+       "ad": "Satıcıya bankadan ödeme: 320 Satıcılar",
+       "ikon": "🧾",
+       "kategori": "borc",
+       "aciklama": "Borç azaldı."
+      },
+      {
+       "ad": "Satıcıya bankadan ödeme: 102 Bankalar",
+       "ikon": "🏧",
+       "kategori": "alacak",
+       "aciklama": "Bankadaki para azaldı."
+      },
+      {
+       "ad": "Satışta hesaplanan KDV (391)",
+       "ikon": "🏛️",
+       "kategori": "alacak",
+       "aciklama": "Devlete olan borç arttı."
+      },
+      {
+       "ad": "Alışta ödenen KDV (191)",
+       "ikon": "📥",
+       "kategori": "borc",
+       "aciklama": "İndirilecek KDV bir varlıktır."
+      },
+      {
+       "ad": "Kira gideri (770)",
+       "ikon": "💡",
+       "kategori": "borc",
+       "aciklama": "Giderler borçla artar."
+      },
+      {
+       "ad": "Veresiye satışta müşteri hesabı (120 Alıcılar)",
+       "ikon": "👤",
+       "kategori": "borc",
+       "aciklama": "Alacak hakkı (varlık) arttı."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Borç ve alacak",
+      "maddeler": [
+       "Varlık ve gider artışı: borç.",
+       "Borç, sermaye ve gelir artışı: alacak.",
+       "Azalışlar ters tarafa."
+      ]
+     }
+    },
+    {
+     "id": "y3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Günlük hesaplar",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Ay içinde satışta hesaplanan KDV 30.000 TL, alışta ödenen KDV 18.000 TL. Ödenecek KDV?",
+       "secenekler": [
+        "12.000 TL",
+        "18.000 TL",
+        "30.000 TL",
+        "48.000 TL"
+       ],
+       "dogru": 0,
+       "aciklama": "30.000 − 18.000 = 12.000 TL."
+      },
+      {
+       "soru": "Hesaplanan KDV 10.000, indirilecek KDV 14.000. Sonuç?",
+       "secenekler": [
+        "14.000 ödenir",
+        "4.000 ödenir",
+        "Ödenecek yok, 4.000 sonraki aya devreder",
+        "10.000 ödenir"
+       ],
+       "dogru": 2,
+       "aciklama": "İndirilecek fazla ise fark devreder."
+      },
+      {
+       "soru": "Kasa kaydı 8.450 TL, sayımda 8.400 TL çıktı. Fark?",
+       "secenekler": [
+        "50 TL fazla",
+        "50 TL eksik",
+        "Fark yok",
+        "850 TL eksik"
+       ],
+       "dogru": 1,
+       "aciklama": "Kasada kayda göre 50 TL eksik var; nedeni araştırılır."
+      },
+      {
+       "soru": "Brüt ücret 40.000 TL (örnek). İşçi sigorta primi %14 kaç TL?",
+       "secenekler": [
+        "400",
+        "4.000",
+        "5.600",
+        "14.000"
+       ],
+       "dogru": 2,
+       "aciklama": "40.000 × 0,14 = 5.600 TL."
+      },
+      {
+       "soru": "Aynı brütte işsizlik sigortası işçi payı %1?",
+       "secenekler": [
+        "40",
+        "400",
+        "4.000",
+        "1.000"
+       ],
+       "dogru": 1,
+       "aciklama": "40.000 × 0,01 = 400 TL."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Günlük hesaplar",
+      "maddeler": [
+       "Ödenecek KDV = hesaplanan − indirilecek.",
+       "Kasa farkı kapatılmaz, nedeni bulunur.",
+       "İşçi payları: sigorta %14, işsizlik %1 (vergiler ayrıca)."
+      ]
+     }
+    },
+    {
+     "id": "y4-ay",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "Ay sonu",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık kendi müşteri dosyaların olan bir ön muhasebe elemanısın. Ay sonu geldi.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Banka dökümünde programda olmayan 350 TL'lik bir kesinti var.",
+       "secenekler": [
+        {
+         "metin": "Bankadan ne olduğunu öğrenir, belgesine göre doğru hesaba kaydederim",
+         "dogru": true,
+         "aciklama": "Banka komisyonu ya da masraf olabilir; her kalem belgeyle açıklanır."
+        },
+        {
+         "metin": "Önemsiz, kaydetmem",
+         "dogru": false,
+         "aciklama": "Mutabakat tutmaz."
+        },
+        {
+         "metin": "Rastgele bir gider hesabına yazarım",
+         "dogru": false,
+         "aciklama": "Önce ne olduğu öğrenilir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "İşletme sahibi: \"Bu ay KDV çok çıktı, bazı satış faturalarını gelecek aya atalım.\"",
+       "secenekler": [
+        {
+         "metin": "Faturanın, işlemin yapıldığı dönemde kaydedilmesi gerektiğini açıklarım",
+         "dogru": true,
+         "aciklama": "Faturayı başka döneme kaydırmak vergi kurallarına aykırıdır."
+        },
+        {
+         "metin": "Müşteri ne derse o",
+         "dogru": false,
+         "aciklama": "Muhasebe elemanı da sorumludur."
+        },
+        {
+         "metin": "Faturaları hiç kaydetmem",
+         "dogru": false,
+         "aciklama": "Bu daha ağır bir ihlaldir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "KDV beyannamesinin son günü yarın ama iki belge eksik.",
+       "secenekler": [
+        {
+         "metin": "Eksik belgeleri hemen ister, durumu kıdemliye ve müşteriye bildiririm",
+         "dogru": true,
+         "aciklama": "Süre kaçarsa ceza ve gecikme faizi doğar; erken haber çözüm sağlar."
+        },
+        {
+         "metin": "Süre geçsin, sonra bakarız",
+         "dogru": false,
+         "aciklama": "Gecikme cezası işletmeye maliyettir."
+        },
+        {
+         "metin": "Belgeleri tahminle kaydederim",
+         "dogru": false,
+         "aciklama": "Belgesiz kayıt yapılmaz."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ay sonu",
+      "maddeler": [
+       "Banka farkları belgeyle açıklanır.",
+       "Fatura, işlemin dönemine kaydedilir.",
+       "Beyan süresi kaçırılmaz; eksik erken bildirilir."
+      ]
+     }
+    },
+    {
+     "id": "y5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Ön muhasebe sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Hesaplanan KDV 25.000, indirilecek 15.000. Ödenecek?",
+       "secenekler": [
+        "10.000",
+        "15.000",
+        "25.000",
+        "40.000"
+       ],
+       "dogru": 0,
+       "aciklama": "25.000 − 15.000."
+      },
+      {
+       "soru": "Kasa hesabı alacak bakiyesi verebilir mi?",
+       "secenekler": [
+        "Evet",
+        "Hayır",
+        "Ay sonunda evet",
+        "Bazen"
+       ],
+       "dogru": 1,
+       "aciklama": "Kasada olmayan para harcanamaz."
+      },
+      {
+       "soru": "Satış geliri hangi tarafa?",
+       "secenekler": [
+        "Borç",
+        "Alacak",
+        "İkisi",
+        "Hiçbiri"
+       ],
+       "dogru": 1,
+       "aciklama": "Gelirler alacakla artar."
+      },
+      {
+       "soru": "Veresiye satışta 120 Alıcılar?",
+       "secenekler": [
+        "Borç",
+        "Alacak",
+        "Kaydedilmez",
+        "Sermaye"
+       ],
+       "dogru": 0,
+       "aciklama": "Alacak hakkı arttı."
+      },
+      {
+       "soru": "Banka mutabakatı?",
+       "secenekler": [
+        "Programdaki banka ile banka dökümünü karşılaştırmak",
+        "Bankayı değiştirmek",
+        "Kredi çekmek",
+        "Kasa saymak"
+       ],
+       "dogru": 0,
+       "aciklama": "Her fark açıklanır."
+      },
+      {
+       "soru": "Brüt 30.000 TL, işçi sigorta primi %14?",
+       "secenekler": [
+        "300",
+        "3.000",
+        "4.200",
+        "14.000"
+       ],
+       "dogru": 2,
+       "aciklama": "30.000 × 0,14."
+      },
+      {
+       "soru": "Satış faturasını sonraki aya kaydırmak?",
+       "secenekler": [
+        "Serbest",
+        "Kurala aykırı",
+        "KDV çoksa serbest",
+        "Müşteri isterse serbest"
+       ],
+       "dogru": 1,
+       "aciklama": "İşlem dönemine kaydedilir."
+      },
+      {
+       "soru": "Kasa sayımında fark çıktı?",
+       "secenekler": [
+        "Kapatılır",
+        "Nedeni araştırılır",
+        "Görmezden gelinir",
+        "Ertesi aya bırakılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Fark açıklanır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Uzman",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Muhasebe Uzmanı",
+    "ikon": "📊"
+   },
+   "sonraki": "Şef kademesi açıldı: iç kontrol, nakit akışı ve ekip yönetimi.",
+   "gorevler": [
+    {
+     "id": "u1-donem",
+     "sablon": "bilgi",
+     "ikon": "📚",
+     "baslik": "Dönem sonu ve raporlar",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🏷️",
+       "baslik": "Amortisman",
+       "metin": "Bilgisayar, araç gibi uzun süre kullanılan varlıkların maliyeti tek seferde gider yazılmaz; faydalı ömrü boyunca yıllara bölünür.",
+       "terim": "amortisman"
+      },
+      {
+       "ikon": "📦",
+       "baslik": "Envanter",
+       "metin": "Yıl sonunda stoklar sayılır, kayıtlarla karşılaştırılır. Fark varsa nedeni belgelenir.",
+       "terim": "stok sayımı"
+      },
+      {
+       "ikon": "📈",
+       "baslik": "Gelir tablosu",
+       "metin": "Bir dönemde ne kadar satış yapıldığını, maliyetleri, giderleri ve sonunda kâr ya da zararı gösterir.",
+       "terim": "gelir tablosu"
+      },
+      {
+       "ikon": "🏛️",
+       "baslik": "Bilanço",
+       "metin": "Belli bir günde işletmenin varlıklarını ve bunların kaynaklarını (borçlar ve sermaye) gösterir. Varlıklar = Kaynaklar.",
+       "terim": "bilanço"
+      },
+      {
+       "ikon": "💻",
+       "baslik": "e-Defter",
+       "metin": "Defterler artık birçok işletmede elektronik tutulur ve onaylanır.",
+       "terim": "e-defter"
+      },
+      {
+       "ikon": "🔒",
+       "baslik": "Etik",
+       "metin": "Muhasebeci gerçeği kaydeder; kâr ya da zararı olduğundan farklı göstermez.",
+       "terim": "meslek ahlakı"
+      }
+     ]
+    },
+    {
+     "id": "u2-tablo",
+     "sablon": "siniflandirma",
+     "ikon": "📊",
+     "baslik": "Hangi tabloda?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her kalemi gösterildiği mali tabloya ver.",
+     "kategoriler": [
+      {
+       "id": "bilanco",
+       "ad": "Bilanço",
+       "ikon": "🏛️"
+      },
+      {
+       "id": "gelir",
+       "ad": "Gelir tablosu",
+       "ikon": "📈"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Kasadaki para",
+       "ikon": "💵",
+       "kategori": "bilanco",
+       "aciklama": "Varlıktır, bilançoda."
+      },
+      {
+       "ad": "Bankaya olan kredi borcu",
+       "ikon": "🏦",
+       "kategori": "bilanco",
+       "aciklama": "Kaynak tarafında."
+      },
+      {
+       "ad": "Sermaye",
+       "ikon": "💼",
+       "kategori": "bilanco",
+       "aciklama": "Özkaynak."
+      },
+      {
+       "ad": "Depodaki mallar",
+       "ikon": "📦",
+       "kategori": "bilanco",
+       "aciklama": "Stok bir varlıktır."
+      },
+      {
+       "ad": "Yıl içindeki satışlar",
+       "ikon": "🛒",
+       "kategori": "gelir",
+       "aciklama": "Gelir tablosunda."
+      },
+      {
+       "ad": "Satılan malın maliyeti",
+       "ikon": "🧮",
+       "kategori": "gelir",
+       "aciklama": "Brüt kârı bulmak için düşülür."
+      },
+      {
+       "ad": "Kira ve elektrik giderleri",
+       "ikon": "💡",
+       "kategori": "gelir",
+       "aciklama": "Faaliyet giderleri."
+      },
+      {
+       "ad": "Dönem net kârı",
+       "ikon": "✅",
+       "kategori": "gelir",
+       "aciklama": "Gelir tablosunun sonucu; bilançoya da özkaynak olarak geçer."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Mali tablolar",
+      "maddeler": [
+       "Bilanço: belli bir günde varlıklar ve kaynaklar.",
+       "Gelir tablosu: bir dönemin gelir, gider ve kârı."
+      ]
+     }
+    },
+    {
+     "id": "u3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Dönem sonu hesapları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "30.000 TL'lik bilgisayar, faydalı ömür 4 yıl, eşit amortisman (örnek). Yıllık amortisman?",
+       "secenekler": [
+        "3.000",
+        "7.500",
+        "12.000",
+        "30.000"
+       ],
+       "dogru": 1,
+       "aciklama": "30.000 ÷ 4 = 7.500 TL. Gerçek ömürler resmî tablolardan alınır."
+      },
+      {
+       "soru": "Satışlar 500.000, satılan malın maliyeti 320.000. Brüt kâr?",
+       "secenekler": [
+        "180.000",
+        "320.000",
+        "500.000",
+        "820.000"
+       ],
+       "dogru": 0,
+       "aciklama": "500.000 − 320.000 = 180.000."
+      },
+      {
+       "soru": "Brüt kâr 180.000, faaliyet giderleri 110.000. Faaliyet kârı?",
+       "secenekler": [
+        "70.000",
+        "110.000",
+        "180.000",
+        "290.000"
+       ],
+       "dogru": 0,
+       "aciklama": "180.000 − 110.000 = 70.000."
+      },
+      {
+       "soru": "Varlıklar 900.000, borçlar 550.000. Özkaynak?",
+       "secenekler": [
+        "350.000",
+        "550.000",
+        "900.000",
+        "1.450.000"
+       ],
+       "dogru": 0,
+       "aciklama": "Varlıklar = borçlar + özkaynak; 900.000 − 550.000 = 350.000."
+      },
+      {
+       "soru": "Kayıtta 240 termos var, sayımda 236 çıktı. Termos başı 100 TL. Eksik tutar?",
+       "secenekler": [
+        "4 TL",
+        "400 TL",
+        "2.360 TL",
+        "24.000 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "4 × 100 = 400 TL; nedeni araştırılır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Dönem sonu",
+      "maddeler": [
+       "Amortisman: maliyet ömre bölünür.",
+       "Brüt kâr = satış − satılan malın maliyeti.",
+       "Varlıklar = borçlar + özkaynak."
+      ]
+     }
+    },
+    {
+     "id": "u4-kapanis",
+     "sablon": "siralama",
+     "ikon": "📕",
+     "baslik": "Ay sonu kapanışı",
+     "aciklama": "Bir müşterinin ay sonunu kapatacaksın. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "belgeler",
+       "ikon": "📥",
+       "metin": "Ayın bütün belgelerinin geldiğini ve kaydedildiğini kontrol et",
+       "neden": "Eksik belge eksik sonuç demektir.",
+       "ipucu": "Önce her şey içeride mi?"
+      },
+      {
+       "id": "banka",
+       "ikon": "🏦",
+       "metin": "Banka ve kasa mutabakatını yap",
+       "neden": "Para hesapları gerçekle uyuşmalı.",
+       "ipucu": "Belgeler tamam; para hesapları?"
+      },
+      {
+       "id": "cari",
+       "ikon": "👥",
+       "metin": "Müşteri ve tedarikçi bakiyelerini kontrol et",
+       "neden": "Kime ne borçlu ya da alacaklı olunduğu net olmalı.",
+       "ipucu": "Para tamam; cariler?"
+      },
+      {
+       "id": "kdv",
+       "ikon": "🧾",
+       "metin": "KDV hesaplarını karşılaştır, ödenecek ya da devreden KDV'yi bul",
+       "neden": "Beyannameye doğru rakam gider.",
+       "ipucu": "Cariler tamam; vergi?"
+      },
+      {
+       "id": "mizan",
+       "ikon": "📊",
+       "metin": "Mizanı al, toplamların denkliğini ve tuhaf bakiyeleri kontrol et",
+       "neden": "Kasa alacak bakiyesi gibi hatalar burada görülür.",
+       "ipucu": "Vergi hesaplandı; genel kontrol."
+      },
+      {
+       "id": "rapor",
+       "ikon": "📨",
+       "metin": "Raporları hazırlayıp kıdemliye ve müşteriye gönder",
+       "neden": "Kapanış raporla tamamlanır.",
+       "ipucu": "Her şey denk; paylaş."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Ay sonu kapanışı",
+      "maddeler": [
+       "Belgeler → banka ve kasa → cariler → KDV → mizan → rapor.",
+       "Mizanda tuhaf bakiye bir hatanın işaretidir."
+      ]
+     }
+    },
+    {
+     "id": "u5-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Uzmanın günü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Muhasebe uzmanı olarak zor dosyalar ve stajyerler senin sorumluluğunda.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Banka kredisi için işletme sahibi: \"Kârı olduğundan yüksek gösterin.\"",
+       "secenekler": [
+        {
+         "metin": "Kayıtları gerçeğe aykırı değiştiremeyeceğimi açıklarım",
+         "dogru": true,
+         "aciklama": "Gerçeğe aykırı mali tablo hem etik dışı hem hukuken ciddi sonuçları olan bir eylemdir."
+        },
+        {
+         "metin": "Bir kerelik yaparım",
+         "dogru": false,
+         "aciklama": "Sahte tablo bir kez de yapılmaz."
+        },
+        {
+         "metin": "Başka bir muhasebeciye yaptırın derim ama yardım ederim",
+         "dogru": false,
+         "aciklama": "Dolaylı yardım da sorumluluk doğurur."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Stajyer aynı faturayı iki kez girmiş, mizan şişmiş.",
+       "secenekler": [
+        {
+         "metin": "Hatayı birlikte bulur, ters kayıtla düzeltmeyi ve çift kaydı önleme yolunu gösteririm",
+         "dogru": true,
+         "aciklama": "Hatalar silinmez, düzeltme kaydıyla giderilir; stajyer de öğrenir."
+        },
+        {
+         "metin": "Kaydı sessizce silerim",
+         "dogru": false,
+         "aciklama": "İz bırakmadan silmek denetimde sorun çıkarır."
+        },
+        {
+         "metin": "Stajyeri azarlarım",
+         "dogru": false,
+         "aciklama": "Öğretmek, azarlamaktan daha etkilidir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Müşterinin işi büyüdü, beyannamenin imzalanması gerekiyor.",
+       "secenekler": [
+        {
+         "metin": "Beyanname imzası ve sorumluluğu ruhsatlı mali müşavire aittir; ona yönlendiririm",
+         "dogru": true,
+         "aciklama": "Muhasebe elemanı hazırlar; imza ve yasal sorumluluk SMMM'nindir."
+        },
+        {
+         "metin": "Ben imzalarım",
+         "dogru": false,
+         "aciklama": "Yetkin olmadığın belgeyi imzalayamazsın."
+        },
+        {
+         "metin": "İmzasız gönderirim",
+         "dogru": false,
+         "aciklama": "Beyanname usulüne uygun verilmelidir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Uzman olmak",
+      "maddeler": [
+       "Gerçeğe aykırı kayıt yapılmaz.",
+       "Hata ters kayıtla düzeltilir.",
+       "İmza yetkisi mali müşavirdedir."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Uzman sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Bilanço neyi gösterir?",
+       "secenekler": [
+        "Bir dönemin kârını",
+        "Belli bir günde varlıkları ve kaynakları",
+        "Personel listesini",
+        "Satış fiyatlarını"
+       ],
+       "dogru": 1,
+       "aciklama": "Varlıklar = Kaynaklar."
+      },
+      {
+       "soru": "Satışlar 200.000, SMM 120.000. Brüt kâr?",
+       "secenekler": [
+        "80.000",
+        "120.000",
+        "200.000",
+        "320.000"
+       ],
+       "dogru": 0,
+       "aciklama": "200.000 − 120.000."
+      },
+      {
+       "soru": "20.000 TL varlık, 5 yıl eşit amortisman?",
+       "secenekler": [
+        "2.000",
+        "4.000",
+        "5.000",
+        "20.000"
+       ],
+       "dogru": 1,
+       "aciklama": "20.000 ÷ 5."
+      },
+      {
+       "soru": "Varlıklar 600.000, borçlar 400.000. Özkaynak?",
+       "secenekler": [
+        "200.000",
+        "400.000",
+        "600.000",
+        "1.000.000"
+       ],
+       "dogru": 0,
+       "aciklama": "600.000 − 400.000."
+      },
+      {
+       "soru": "Hatalı kayıt nasıl düzeltilir?",
+       "secenekler": [
+        "Silinir",
+        "Düzeltme (ters) kaydıyla",
+        "Bırakılır",
+        "Kalemle çizilir"
+       ],
+       "dogru": 1,
+       "aciklama": "İz bırakılarak düzeltilir."
+      },
+      {
+       "soru": "Beyannameyi kim imzalar?",
+       "secenekler": [
+        "Stajyer",
+        "Ruhsatlı mali müşavir",
+        "Müşterinin akrabası",
+        "Banka"
+       ],
+       "dogru": 1,
+       "aciklama": "SMMM."
+      },
+      {
+       "soru": "Kârı yüksek gösterme isteği?",
+       "secenekler": [
+        "Kabul",
+        "Ret",
+        "Kredi içinse kabul",
+        "Bir kere kabul"
+       ],
+       "dogru": 1,
+       "aciklama": "Gerçeğe aykırı kayıt yapılmaz."
+      },
+      {
+       "soru": "Ay sonu kapanışında mizandan önce?",
+       "secenekler": [
+        "Rapor göndermek",
+        "Banka, kasa, cari ve KDV kontrolü",
+        "Tatile çıkmak",
+        "Hiçbir şey"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce hesaplar kontrol edilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Şef",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "Muhasebe Şefi",
+    "ikon": "🏛️"
+   },
+   "sonraki": "Stajyerlikten muhasebe şefliğine tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "b1-yonetim",
+     "sablon": "bilgi",
+     "ikon": "🧭",
+     "baslik": "Muhasebe şefliği",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "👥",
+       "baslik": "Ekip",
+       "metin": "Muhasebe şefi işleri ekipte paylaştırır, takvimi takip eder ve kayıtları kontrol eder.",
+       "terim": "ekip yönetimi"
+      },
+      {
+       "ikon": "🔐",
+       "baslik": "İç kontrol",
+       "metin": "Ödemeyi onaylayan ile ödemeyi yapan aynı kişi olmamalıdır. Görevler ayrılır, yetkiler sınırlandırılır.",
+       "terim": "görevler ayrılığı"
+      },
+      {
+       "ikon": "💰",
+       "baslik": "Nakit akışı",
+       "metin": "Hangi gün ne kadar para girip çıkacağı önceden planlanır. Kârlı işletme bile nakit yetmezse zor durumda kalır.",
+       "terim": "nakit akışı"
+      },
+      {
+       "ikon": "📊",
+       "baslik": "Yönetime rapor",
+       "metin": "Rakamlar yöneticinin anlayacağı dilde, kısa ve karşılaştırmalı sunulur.",
+       "terim": "yönetim raporu"
+      },
+      {
+       "ikon": "🕵️",
+       "baslik": "Denetim",
+       "metin": "Vergi incelemesi ya da bağımsız denetimde istenen belge ve açıklamalar düzenli arşiv sayesinde hızla verilir.",
+       "terim": "denetim"
+      },
+      {
+       "ikon": "📚",
+       "baslik": "Mevzuat takibi",
+       "metin": "Vergi oranları, sınırlar ve süreler sık değişir. Resmî duyurular düzenli takip edilir.",
+       "terim": "mevzuat"
+      }
+     ]
+    },
+    {
+     "id": "b2-kontrol",
+     "sablon": "siniflandirma",
+     "ikon": "🔐",
+     "baslik": "İç kontrol: doğru mu?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her uygulamayı doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "iyi",
+       "ad": "Doğru uygulama",
+       "ikon": "✅"
+      },
+      {
+       "id": "risk",
+       "ad": "Risk",
+       "ikon": "⚠️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Ödemeyi onaylayan ve bankadan gönderen farklı kişiler",
+       "ikon": "👥",
+       "kategori": "iyi",
+       "aciklama": "Görevler ayrılığı hatayı ve suistimali önler."
+      },
+      {
+       "ad": "Belirli tutarın üstündeki ödemelere ikinci onay",
+       "ikon": "✍️",
+       "kategori": "iyi",
+       "aciklama": "Büyük riskler çift kontrol edilir."
+      },
+      {
+       "ad": "Her ay banka mutabakatı",
+       "ikon": "🏦",
+       "kategori": "iyi",
+       "aciklama": "Farklar erken yakalanır."
+      },
+      {
+       "ad": "Program şifrelerinin kişiye özel olması",
+       "ikon": "🔑",
+       "kategori": "iyi",
+       "aciklama": "Kim neyi yaptı izlenebilir."
+      },
+      {
+       "ad": "Herkesin aynı şifreyle programa girmesi",
+       "ikon": "🔓",
+       "kategori": "risk",
+       "aciklama": "Kimin ne yaptığı bilinemez."
+      },
+      {
+       "ad": "Kasayı sayan ile kasayı tutan aynı kişi",
+       "ikon": "💵",
+       "kategori": "risk",
+       "aciklama": "Hata ya da açık gizlenebilir."
+      },
+      {
+       "ad": "Tedarikçi banka bilgisinin e-postayla gelen tek bir mesajla değiştirilmesi",
+       "ikon": "📧",
+       "kategori": "risk",
+       "aciklama": "Sahte e-posta dolandırıcılığının klasik yolu; telefonla teyit edilir."
+      },
+      {
+       "ad": "Belgesiz avans ödemesi",
+       "ikon": "🧾",
+       "kategori": "risk",
+       "aciklama": "Belgesiz ödeme izlenemez."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İç kontrol",
+      "maddeler": [
+       "Görevler ayrılır, yetkiler kişiye özel.",
+       "Büyük ödemeye ikinci onay.",
+       "Banka bilgisi değişikliği telefonla teyit edilir."
+      ]
+     }
+    },
+    {
+     "id": "b3-nakit",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Nakit ve bütçe hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Bankada 150.000 TL var. Bu hafta 90.000 tahsilat, 210.000 ödeme bekleniyor. Hafta sonu bakiye?",
+       "secenekler": [
+        "30.000",
+        "−30.000",
+        "60.000",
+        "450.000"
+       ],
+       "dogru": 0,
+       "aciklama": "150.000 + 90.000 − 210.000 = 30.000 TL."
+      },
+      {
+       "soru": "Aynı hafta ödeme 260.000 olsaydı?",
+       "secenekler": [
+        "−20.000; önceden önlem gerekir",
+        "20.000",
+        "0",
+        "260.000"
+       ],
+       "dogru": 0,
+       "aciklama": "240.000 − 260.000 = −20.000; ödeme planı ya da finansman gerekir."
+      },
+      {
+       "soru": "Geçen ay gider 80.000, bu ay 92.000. Artış yüzde kaç?",
+       "secenekler": [
+        "%12",
+        "%15",
+        "%92",
+        "%8"
+       ],
+       "dogru": 1,
+       "aciklama": "12.000 ÷ 80.000 = %15."
+      },
+      {
+       "soru": "Yıllık bütçede kira 240.000 TL. Aylık?",
+       "secenekler": [
+        "2.000",
+        "20.000",
+        "24.000",
+        "240.000"
+       ],
+       "dogru": 1,
+       "aciklama": "240.000 ÷ 12 = 20.000 TL."
+      },
+      {
+       "soru": "Ekip 4 kişi, ay sonu kapanışında kişi başı 6 dosya. Toplam dosya?",
+       "secenekler": [
+        "10",
+        "24",
+        "46",
+        "64"
+       ],
+       "dogru": 1,
+       "aciklama": "4 × 6 = 24 dosya."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Nakit ve bütçe",
+      "maddeler": [
+       "Bakiye = mevcut + tahsilat − ödeme.",
+       "Eksi çıkan hafta önceden planlanır.",
+       "Artış oranı = fark ÷ eski değer."
+      ]
+     }
+    },
+    {
+     "id": "b4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir dönem",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Muhasebe şefi olarak bütün muhasebe biriminden sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir tedarikçiden e-posta geldi: \"Banka hesabımız değişti, bundan sonra şu hesaba ödeyin.\"",
+       "secenekler": [
+        {
+         "metin": "Tedarikçiyi kayıtlı telefonundan arayıp teyit etmeden değişiklik yapmam",
+         "dogru": true,
+         "aciklama": "Sahte e-postayla ödeme yönlendirme yaygın bir dolandırıcılıktır."
+        },
+        {
+         "metin": "E-posta onların adresinden, değiştiririm",
+         "dogru": false,
+         "aciklama": "Adresler taklit edilebilir."
+        },
+        {
+         "metin": "Bu seferlik iki hesaba da öderim",
+         "dogru": false,
+         "aciklama": "Para kaybı riski büyür."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Vergi incelemesi başladı, istenen belgelerin bir kısmı bulunamıyor.",
+       "secenekler": [
+        {
+         "metin": "Arşivi düzenli tarar, eksikleri karşı taraflardan resmî kopyayla temin eder, durumu dürüstçe bildiririm",
+         "dogru": true,
+         "aciklama": "Düzenli arşiv ve dürüst iletişim incelemenin en güçlü dayanağıdır."
+        },
+        {
+         "metin": "Eksik belgeleri yeniden üretirim",
+         "dogru": false,
+         "aciklama": "Sahte belge suçtur."
+        },
+        {
+         "metin": "İncelemeyi geciktirmeye çalışırım",
+         "dogru": false,
+         "aciklama": "Sorun büyür."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Ekipte biri sürekli fazla mesaiye kalıyor ve hata sayısı artıyor.",
+       "secenekler": [
+        {
+         "metin": "İş dağılımını gözden geçirir, birebir konuşur, gerekirse süreçleri sadeleştiririm",
+         "dogru": true,
+         "aciklama": "Yorgunluk hata demektir; şef iş yükünü dengeler."
+        },
+        {
+         "metin": "Daha dikkatli ol derim",
+         "dogru": false,
+         "aciklama": "Kök neden çözülmez."
+        },
+        {
+         "metin": "Hatalarını herkesin önünde sayarım",
+         "dogru": false,
+         "aciklama": "Ekip morali bozulur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Şef olmak",
+      "maddeler": [
+       "Banka bilgisi değişikliği telefonla teyit edilir.",
+       "İncelemede dürüstlük ve düzenli arşiv.",
+       "İş yükü dengelenir."
+      ]
+     }
+    },
+    {
+     "id": "b5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Borç ve alacak toplamı?",
+       "secenekler": [
+        "Eşit",
+        "Farklı",
+        "Borç büyük",
+        "Alacak büyük"
+       ],
+       "dogru": 0,
+       "aciklama": "Çift taraflı kayıt."
+      },
+      {
+       "soru": "KDV dahil 2.400 TL, %20. KDV hariç?",
+       "secenekler": [
+        "1.920",
+        "2.000",
+        "2.380",
+        "2.880"
+       ],
+       "dogru": 1,
+       "aciklama": "2.400 ÷ 1,2."
+      },
+      {
+       "soru": "Genel KDV oranı?",
+       "secenekler": [
+        "%1",
+        "%10",
+        "%18",
+        "%20"
+       ],
+       "dogru": 3,
+       "aciklama": "Güncel genel oran %20."
+      },
+      {
+       "soru": "Belge saklama (VUK)?",
+       "secenekler": [
+        "1 yıl",
+        "5 yıl",
+        "Süresiz",
+        "6 ay"
+       ],
+       "dogru": 1,
+       "aciklama": "VUK'a göre 5 yıl; TTK'ya göre 10 yıl."
+      },
+      {
+       "soru": "Hesaplanan KDV 40.000, indirilecek 52.000?",
+       "secenekler": [
+        "12.000 ödenir",
+        "12.000 devreder",
+        "40.000 ödenir",
+        "92.000 ödenir"
+       ],
+       "dogru": 1,
+       "aciklama": "İndirilecek fazla; devreder."
+      },
+      {
+       "soru": "Varlıklar 1.000.000, borçlar 700.000. Özkaynak?",
+       "secenekler": [
+        "300.000",
+        "700.000",
+        "1.700.000",
+        "1.000.000"
+       ],
+       "dogru": 0,
+       "aciklama": "1.000.000 − 700.000."
+      },
+      {
+       "soru": "Ödemeyi onaylayan ile gönderen aynı kişi?",
+       "secenekler": [
+        "İyi uygulama",
+        "Risk",
+        "Zorunlu",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Görevler ayrılır."
+      },
+      {
+       "soru": "Tedarikçinin banka bilgisi e-postayla değişti?",
+       "secenekler": [
+        "Hemen değiştir",
+        "Telefonla teyit et",
+        "İki hesaba öde",
+        "Görmezden gel"
+       ],
+       "dogru": 1,
+       "aciklama": "Dolandırıcılık riski."
+      },
+      {
+       "soru": "Bankada 50.000, tahsilat 30.000, ödeme 70.000. Bakiye?",
+       "secenekler": [
+        "10.000",
+        "−10.000",
+        "150.000",
+        "90.000"
+       ],
+       "dogru": 0,
+       "aciklama": "50.000 + 30.000 − 70.000."
+      },
+      {
+       "soru": "Beyanname imzası?",
+       "secenekler": [
+        "Stajyer",
+        "Ruhsatlı mali müşavir",
+        "Herkes",
+        "Müşteri yakını"
+       ],
+       "dogru": 1,
+       "aciklama": "SMMM."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
