@@ -8,6 +8,7 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 - Görevler **şablonlarla** oynanır (`sablonlar/`):
   - Genel (her meslek kullanır): bilgi, soru, sınav, senaryo, uyum, sıralama, hesap, **sınıflandırma**, **zamanlama**
   - Mesleğe özel beceri: ayar ve köpürtme (Barista)
+- Animasyonlu sahneler (`sahneler/`): espresso, mutfak, salon, çizim (Mimar: kat planı çizimi)
 
 ## Klasörler
 | Yol | İçerik |
@@ -31,6 +32,7 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 | Barista | 26 görev · uzman onayı bekliyor |
 | Aşçı | 26 görev · uzman onayı bekliyor |
 | Salon Servisi (komi → salon şefi) | 26 görev · uzman onayı bekliyor |
+| Mimar (stajyer → proje lideri) | 26 görev · uzman onayı bekliyor |
 
 Tamamlama belgeleri resmî sertifika değildir.
 

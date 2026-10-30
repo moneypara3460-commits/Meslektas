@@ -1,0 +1,2100 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "mimar",
+  "ad": "Mimar",
+  "kategori": "Tasarım & Yapı",
+  "tanim": "Binaları tasarlayan, çizen ve yapılırken takip eden meslek: stajyerlikten proje liderliğine.",
+  "calismaKosullari": [
+   "Ofiste bilgisayar başında çizim",
+   "Şantiye ve arsa ziyaretleri",
+   "Teslim dönemlerinde yoğun tempo"
+  ],
+  "kademeler": [
+   "Merak",
+   "Stajyer",
+   "Mimar",
+   "Uygulama mimarı",
+   "Proje lideri"
+  ],
+  "renkler": {
+   "ana": "#24384f",
+   "vurgu": "#e07b39",
+   "zemin": "#eef1f4"
+  },
+  "metinler": {
+   "senaryoBasla": "Masaya geç",
+   "senaryoBitir": "Toplantıyı bitir",
+   "ucYildiz": "Kıdemli mimar gülümsedi: \"Çizgin temiz, kafan net!\"",
+   "karakter": {
+    "usta": "Kıdemli mimar",
+    "musteri": "İşveren"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Mimarlık Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Mimar unvanı için 4 yıllık mimarlık lisansı gerekir; serbest çalışmak için Mimarlar Odası'na kayıt olunur."
+  }
+ },
+ "kaynaklar": [
+  "3194 sayılı İmar Kanunu (yapı ruhsatı, yapı kullanma izni) — kendi cümlelerimizle",
+  "Planlı Alanlar İmar Yönetmeliği (RG 03.07.2017 ve değişiklikleri): TAKS, KAKS, bahçe mesafeleri",
+  "4708 sayılı Yapı Denetimi Hakkında Kanun",
+  "Türkiye Bina Deprem Yönetmeliği (2018, yürürlük 2019)",
+  "TS 825 Binalarda Isı Yalıtım Kuralları; TS 9111 erişilebilirlik standardı",
+  "6235 sayılı TMMOB Kanunu (Mimarlar Odası)",
+  "Mimar uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Mimarlık Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Stajyer kademesinde çizimin dilini, ölçeği ve plan çizmeyi öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir mimarın günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "☕",
+       "baslik": "Sabah: masa başı",
+       "metin": "Gün genelde e-postalar ve çizimlerle başlar. Bilgisayarda planlar, kesitler ve 3 boyutlu modeller üzerinde çalışılır.",
+       "terim": "proje ofisi"
+      },
+      {
+       "ikon": "🤝",
+       "baslik": "İşverenle toplantı",
+       "metin": "İşverenin ne istediği dinlenir: kaç oda, ne kadar bütçe, nasıl bir hayat. İyi mimar önce iyi dinler.",
+       "terim": "ihtiyaç programı"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Arsaya bakmak",
+       "metin": "Bina yapılacak arsa yerinde görülür: güneş nereden geliyor, manzara nerede, komşu binalar ne kadar yakın, arazi eğimli mi.",
+       "terim": "yer analizi"
+      },
+      {
+       "ikon": "🧮",
+       "baslik": "Kurallara uymak",
+       "metin": "Her binanın uyması gereken kurallar vardır: imar planı, yönetmelikler, deprem ve yangın kuralları. Mimar bu kuralların içinde en iyi tasarımı arar.",
+       "terim": "imar"
+      },
+      {
+       "ikon": "🦺",
+       "baslik": "Şantiye ziyareti",
+       "metin": "Bina yapılırken mimar şantiyeye gider, çizimdeki şeylerin doğru yapılıp yapılmadığına bakar.",
+       "terim": "uygulama"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl mimar olunur?",
+       "metin": "Üniversitede 4 yıllık mimarlık bölümü okunur. Serbest çalışan mimarın Mimarlar Odası'na kayıtlı olması gerekir. Bu oyun o yola ön hazırlıktır.",
+       "terim": "mimarlık lisansı"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "İlk işverenin",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir mimarlık ofisinde deneme günündesin. Kıdemli mimar seni ilk toplantıya aldı.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "İşveren: \"Bize bir ev çizin.\" İlk ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Kaç kişi yaşayacak, neye ihtiyaçları var, bütçeleri ne, sorarak dinlerim",
+         "dogru": true,
+         "aciklama": "Tasarım soruyla başlar. İhtiyacı bilmeden çizilen ev kimseye uymaz."
+        },
+        {
+         "metin": "Hemen kâğıda en güzel evi çizerim",
+         "dogru": false,
+         "aciklama": "Güzel ama işe yaramayan bir ev olabilir. Önce ihtiyacı öğren."
+        },
+        {
+         "metin": "İnternette beğendiğim bir evi gösteririm",
+         "dogru": false,
+         "aciklama": "Her aile ve her arsa farklıdır; hazır ev her yere uymaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kıdemli mimar: \"Arsaya gidiyoruz. Ne not alırsın?\"",
+       "secenekler": [
+        {
+         "metin": "Güneşin yönünü, manzarayı, eğimi ve komşu binaları",
+         "dogru": true,
+         "aciklama": "Bunlar odaların nereye konacağını belirler."
+        },
+        {
+         "metin": "Sadece arsanın fotoğrafını çekerim",
+         "dogru": false,
+         "aciklama": "Fotoğraf yardımcı olur ama yön ve ölçü bilgisi gerekir."
+        },
+        {
+         "metin": "Hiçbir şey, ofiste hallederiz",
+         "dogru": false,
+         "aciklama": "Yerinde görülmeyen arsa sürpriz çıkarır."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "İşveren: \"Arsanın tamamına bina yapalım, bahçe istemem.\"",
+       "secenekler": [
+        {
+         "metin": "İmar kurallarına göre binanın arsanın ne kadarını kaplayabileceğine bakmamız gerektiğini anlatırım",
+         "dogru": true,
+         "aciklama": "Her arsada binanın kaplayabileceği alan ve sınıra uzaklığı kurallarla belirlenir."
+        },
+        {
+         "metin": "\"Tamam\" deyip öyle çizerim",
+         "dogru": false,
+         "aciklama": "Kurala aykırı proje onaylanmaz, işveren zarar görür."
+        },
+        {
+         "metin": "Konuyu değiştiririm",
+         "dogru": false,
+         "aciklama": "Kuralları dürüstçe anlatmak mimarın işidir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Mimarlıkta ilk gün",
+      "maddeler": [
+       "Önce dinle, sonra çiz.",
+       "Arsayı yerinde gör.",
+       "Kuralları dürüstçe anlat."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Saatlerce bilgisayar başında çizim yapmak?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Sıkılırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Bir binaya bakıp nasıl yapıldığını merak etmek?",
+       "secenekler": [
+        [
+         "Hep yaparım",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Hiç düşünmem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Matematik ve ölçü hesabı?",
+       "secenekler": [
+        [
+         "Rahatım",
+         2
+        ],
+        [
+         "İdare ederim",
+         1
+        ],
+        [
+         "Zorlanırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Fikrin beğenilmeyince yeniden çizmek?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Biraz canım sıkılır",
+         1
+        ],
+        [
+         "Çok zor",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Yazın sıcakta, kışın soğukta şantiyeye gitmek?",
+       "secenekler": [
+        [
+         "Olabilir",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Hiç istemem",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Hem hayal kuruyor hem hesap yapıyorsun. Çizim masası seni bekliyor; Stajyer kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Stajyer kademesini oynayıp mesleği daha yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Mimarlık seni zorlayabilir ama denemeden bilemezsin. Görselleştirme ve maket tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Stajyer",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Stajyer Mimar",
+    "ikon": "📐"
+   },
+   "sonraki": "Mimar kademesi açıldı: proje süreci, imar hesabı, güneş ve işverenle çalışmak.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "st1-cizim",
+     "sablon": "bilgi",
+     "ikon": "📐",
+     "baslik": "Çizimin dili",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🗺️",
+       "baslik": "Vaziyet planı",
+       "metin": "Binayı arsanın içinde, yukarıdan gösterir: yollar, komşu sınırları, bahçe ve binanın arsadaki yeri.",
+       "terim": "vaziyet planı"
+      },
+      {
+       "ikon": "🏠",
+       "baslik": "Kat planı",
+       "metin": "Binayı yaklaşık 1 metre yükseklikten yatay kesip yukarıdan bakmaktır. Duvarlar, kapılar, pencereler ve odalar görünür.",
+       "terim": "plan"
+      },
+      {
+       "ikon": "🔪",
+       "baslik": "Kesit",
+       "metin": "Binayı dikey olarak ikiye bölüp içine yandan bakmaktır. Kat yükseklikleri, merdiven ve döşemeler görünür.",
+       "terim": "kesit"
+      },
+      {
+       "ikon": "🖼️",
+       "baslik": "Görünüş",
+       "metin": "Binanın dışarıdan, bir yönden düz bakılınca görünen yüzüdür. Cephe de denir.",
+       "terim": "görünüş / cephe"
+      },
+      {
+       "ikon": "🔍",
+       "baslik": "Detay",
+       "metin": "Küçük bir parçanın (pencere kenarı, çatı birleşimi) büyük ölçekte, nasıl yapılacağını gösteren çizimidir.",
+       "terim": "detay"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Ölçek",
+       "metin": "Gerçek ölçünün kâğıtta kaç kat küçültüldüğüdür. 1/50 ölçekte kâğıttaki 1 cm, gerçekte 50 cm demektir.",
+       "terim": "ölçek"
+      }
+     ]
+    },
+    {
+     "id": "st2-olcek",
+     "sablon": "soru",
+     "ikon": "📏",
+     "baslik": "Ölçek hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "1/100 ölçekte kâğıtta 4 cm olan duvar gerçekte kaç metredir?",
+       "secenekler": [
+        "40 cm",
+        "4 m",
+        "40 m",
+        "0,4 m"
+       ],
+       "dogru": 1,
+       "aciklama": "1 cm = 100 cm = 1 m. 4 cm = 4 m."
+      },
+      {
+       "soru": "1/50 ölçekte 3 m genişliğindeki oda kâğıtta kaç cm çizilir?",
+       "secenekler": [
+        "3 cm",
+        "6 cm",
+        "15 cm",
+        "1,5 cm"
+       ],
+       "dogru": 1,
+       "aciklama": "300 cm ÷ 50 = 6 cm."
+      },
+      {
+       "soru": "Hangisi daha ayrıntılı bir çizimdir?",
+       "secenekler": [
+        "1/500",
+        "1/200",
+        "1/100",
+        "1/20"
+       ],
+       "dogru": 3,
+       "aciklama": "Payda küçüldükçe çizim büyür ve ayrıntı artar."
+      },
+      {
+       "soru": "1/200 ölçekte kâğıtta 5 cm olan bahçe gerçekte kaç metredir?",
+       "secenekler": [
+        "5 m",
+        "10 m",
+        "20 m",
+        "100 m"
+       ],
+       "dogru": 1,
+       "aciklama": "5 × 200 = 1000 cm = 10 m."
+      },
+      {
+       "soru": "Vaziyet planı genelde hangi ölçekte çizilir?",
+       "secenekler": [
+        "1/1",
+        "1/5",
+        "1/500 gibi küçük bir ölçekte",
+        "1/2"
+       ],
+       "dogru": 2,
+       "aciklama": "Arsanın tamamını göstermek için küçük ölçek kullanılır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ölçek pratiği",
+      "maddeler": [
+       "Gerçek ölçü ÷ ölçek paydası = kâğıttaki ölçü.",
+       "Kâğıttaki ölçü × payda = gerçek ölçü.",
+       "Payda küçüldükçe ayrıntı artar."
+      ]
+     }
+    },
+    {
+     "id": "st3-cizimler",
+     "sablon": "siniflandirma",
+     "ikon": "🗂️",
+     "baslik": "Hangi çizim?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Kıdemli mimar senden bazı bilgileri gösterecek çizimi bulmanı istiyor. Her bilgiyi doğru çizime koy.",
+     "kategoriler": [
+      {
+       "id": "plan",
+       "ad": "Kat planı",
+       "ikon": "🏠"
+      },
+      {
+       "id": "kesit",
+       "ad": "Kesit",
+       "ikon": "🔪"
+      },
+      {
+       "id": "gorunus",
+       "ad": "Görünüş",
+       "ikon": "🖼️"
+      },
+      {
+       "id": "vaziyet",
+       "ad": "Vaziyet planı",
+       "ikon": "🗺️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Odaların yerleşimi",
+       "ikon": "🛏️",
+       "kategori": "plan",
+       "aciklama": "Odaları yukarıdan plan gösterir."
+      },
+      {
+       "ad": "Kapıların açılma yönü",
+       "ikon": "🚪",
+       "kategori": "plan",
+       "aciklama": "Kapı yayı planda çizilir."
+      },
+      {
+       "ad": "Kat yüksekliği",
+       "ikon": "↕️",
+       "kategori": "kesit",
+       "aciklama": "Yükseklikler kesitte okunur."
+      },
+      {
+       "ad": "Merdivenin katlar arası çıkışı",
+       "ikon": "🪜",
+       "kategori": "kesit",
+       "aciklama": "Merdivenin yükselişi kesitte görünür."
+      },
+      {
+       "ad": "Dış cephe malzemesi ve renkleri",
+       "ikon": "🎨",
+       "kategori": "gorunus",
+       "aciklama": "Binanın dış yüzü görünüşte."
+      },
+      {
+       "ad": "Pencerelerin dıştan görünümü",
+       "ikon": "🪟",
+       "kategori": "gorunus",
+       "aciklama": "Cephe düzeni görünüşte."
+      },
+      {
+       "ad": "Binanın komşu sınırına uzaklığı",
+       "ikon": "📍",
+       "kategori": "vaziyet",
+       "aciklama": "Arsa ve sınırlar vaziyet planında."
+      },
+      {
+       "ad": "Bahçe girişi ve yol",
+       "ikon": "🛣️",
+       "kategori": "vaziyet",
+       "aciklama": "Yol ve giriş vaziyet planında."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Çizim rehberi",
+      "maddeler": [
+       "Plan: odalar, kapılar, yerleşim.",
+       "Kesit: yükseklikler, merdiven, döşeme.",
+       "Görünüş: dış yüz.",
+       "Vaziyet: bina arsanın neresinde."
+      ]
+     }
+    },
+    {
+     "id": "st4-plan",
+     "sablon": "siralama",
+     "ikon": "✏️",
+     "baslik": "Kat planını çiz",
+     "aciklama": "Küçük bir evin kat planını çizeceksin. Çizim adımlarını doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "arsa",
+       "ikon": "🗺️",
+       "metin": "Arsa sınırlarını ve bahçe çekme mesafelerini işaretle",
+       "neden": "Bina ancak bu sınırların içinde kalabilir; önce nereye çizeceğini bil.",
+       "ipucu": "Önce binanın nereye sığacağını bilmen gerek."
+      },
+      {
+       "id": "aks",
+       "ikon": "➕",
+       "metin": "Aksları çiz: binayı taşıyacak ızgara çizgileri",
+       "neden": "Akslar kolonların yerini belirler; her şey bu düzene oturur.",
+       "ipucu": "Sınırlar belli; şimdi binanın iskelet çizgileri."
+      },
+      {
+       "id": "kolon",
+       "ikon": "⬛",
+       "metin": "Aksların kesiştiği yerlere kolonları yerleştir",
+       "neden": "Taşıyıcı sistem önce gelir; duvarlar ona göre şekillenir.",
+       "ipucu": "Izgara hazır; taşıyıcıları koy."
+      },
+      {
+       "id": "duvar",
+       "ikon": "🧱",
+       "metin": "Dış ve iç duvarları çizerek odaları oluştur",
+       "neden": "Kolonlar yerinde olunca odalar güvenle bölünür.",
+       "ipucu": "İskelet tamam; şimdi odaları ayır."
+      },
+      {
+       "id": "aciklik",
+       "ikon": "🚪",
+       "metin": "Kapı ve pencereleri yerleştir",
+       "neden": "Duvar olmadan kapı ve pencere konamaz.",
+       "ipucu": "Duvarlar çizildi; içeri nasıl girilecek?"
+      },
+      {
+       "id": "olcu",
+       "ikon": "📏",
+       "metin": "Ölçüleri, oda adlarını ve kuzey okunu yaz",
+       "neden": "Ölçüsüz plan uygulanamaz; son adım ölçülendirmedir.",
+       "ipucu": "Çizim bitti; usta neyi okuyacak?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Plan çizim sırası",
+      "maddeler": [
+       "Sınır → aks → kolon → duvar → kapı/pencere → ölçü.",
+       "Taşıyıcı sistem duvarlardan önce düşünülür.",
+       "Ölçüsüz çizim uygulanamaz."
+      ]
+     },
+     "sahne": "cizim"
+    },
+    {
+     "id": "st5-ofis",
+     "sablon": "senaryo",
+     "ikon": "🏢",
+     "baslik": "Ofiste ilk hafta",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Stajyer olarak bir mimarlık ofisindesin. Proje teslimine iki gün var.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kıdemli mimar: \"Bu planın ölçülerini kontrol et.\" Bir ölçünün tutmadığını buldun.",
+       "secenekler": [
+        {
+         "metin": "Hatayı işaretleyip kıdemli mimara gösteririm",
+         "dogru": true,
+         "aciklama": "Hatayı erken bulmak şantiyede büyük zararı önler."
+        },
+        {
+         "metin": "Görmezden gelirim, nasılsa küçük",
+         "dogru": false,
+         "aciklama": "Küçük ölçü hatası şantiyede duvarın yanlış yere örülmesi demektir."
+        },
+        {
+         "metin": "Kimseye sormadan çizimi baştan değiştiririm",
+         "dogru": false,
+         "aciklama": "Projeyi sorumlu mimarla konuşmadan değiştirme."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Kıdemli mimar: \"Maket için bir öneri lazım.\" Ne yaparsın?",
+       "secenekler": [
+        {
+         "metin": "Basit bir kütle maketiyle güneş ve gölgeyi gösteririm",
+         "dogru": true,
+         "aciklama": "Kütle maketi fikri hızlıca anlatmanın güçlü yoludur."
+        },
+        {
+         "metin": "Her pencereyi işleyen detaylı maket yapmaya başlarım",
+         "dogru": false,
+         "aciklama": "İki günde bitmez; önce amacı anlatan basit maket."
+        },
+        {
+         "metin": "Maket gereksiz derim",
+         "dogru": false,
+         "aciklama": "İşverenin çoğu planı değil maketi anlar."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Telefonda işveren, projeyle ilgili bir karar soruyor. Sen stajyersin.",
+       "secenekler": [
+        {
+         "metin": "Notunu alıp sorumlu mimara ileteceğimi söylerim",
+         "dogru": true,
+         "aciklama": "Projede söz verme yetkisi sorumlu mimardadır."
+        },
+        {
+         "metin": "Kendi fikrime göre \"olur\" derim",
+         "dogru": false,
+         "aciklama": "Verdiğin söz ofisi bağlar; yetkin olmadan söz verme."
+        },
+        {
+         "metin": "Telefonu kapatırım",
+         "dogru": false,
+         "aciklama": "İşvereni kibarca doğru kişiye yönlendir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Stajyerin altın kuralları",
+      "maddeler": [
+       "Hatayı sakla değil, göster.",
+       "Fikri basit maketle anlat.",
+       "Yetkin olmayan konuda söz verme."
+      ]
+     }
+    },
+    {
+     "id": "st6-araclar",
+     "sablon": "bilgi",
+     "ikon": "🖥️",
+     "baslik": "Mimarın araçları",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "✏️",
+       "baslik": "Eskiz",
+       "metin": "Fikir önce elle, hızlıca kâğıda çizilir. Kalem ve eskiz kâğıdı hâlâ mimarın ilk aracıdır.",
+       "terim": "eskiz"
+      },
+      {
+       "ikon": "💻",
+       "baslik": "Çizim programları",
+       "metin": "Planlar bilgisayarda çizilir. Ofislerde 2 boyutlu çizim programları çok yaygındır.",
+       "terim": "CAD"
+      },
+      {
+       "ikon": "🧊",
+       "baslik": "Bina bilgi modeli",
+       "metin": "Bina 3 boyutlu modellenir; plan, kesit ve görünüş aynı modelden çıkar. Bir yer değişince hepsi güncellenir.",
+       "terim": "BIM"
+      },
+      {
+       "ikon": "🌇",
+       "baslik": "Görselleştirme",
+       "metin": "İşverene binanın bitince nasıl görüneceğini gösteren gerçekçi resimler hazırlanır.",
+       "terim": "render"
+      },
+      {
+       "ikon": "📦",
+       "baslik": "Maket",
+       "metin": "Karton, köpük ya da 3B yazıcıyla binanın küçük modeli yapılır.",
+       "terim": "maket"
+      },
+      {
+       "ikon": "📡",
+       "baslik": "Ölçüm aletleri",
+       "metin": "Mevcut bina ölçülürken şerit metre ve lazer metre kullanılır. Mevcut binanın ölçülüp çizilmesine rölöve denir.",
+       "terim": "rölöve"
+      }
+     ]
+    },
+    {
+     "id": "st7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Stajyer sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Kesit nedir?",
+       "secenekler": [
+        "Binaya yukarıdan bakış",
+        "Binayı dikey bölüp içine yandan bakış",
+        "Dış cephe görünümü",
+        "Arsa planı"
+       ],
+       "dogru": 1,
+       "aciklama": "Kesit, yükseklikleri gösterir."
+      },
+      {
+       "soru": "1/50 ölçekte 2 cm gerçekte kaç cm?",
+       "secenekler": [
+        "25 cm",
+        "50 cm",
+        "100 cm",
+        "200 cm"
+       ],
+       "dogru": 2,
+       "aciklama": "2 × 50 = 100 cm."
+      },
+      {
+       "soru": "Planda önce ne çizilir?",
+       "secenekler": [
+        "Kapılar",
+        "Aks ve taşıyıcı düzen",
+        "Mobilyalar",
+        "Ölçüler"
+       ],
+       "dogru": 1,
+       "aciklama": "Taşıyıcı düzen her şeyin temelidir."
+      },
+      {
+       "soru": "Binanın arsadaki yerini hangi çizim gösterir?",
+       "secenekler": [
+        "Detay",
+        "Kesit",
+        "Vaziyet planı",
+        "Görünüş"
+       ],
+       "dogru": 2,
+       "aciklama": "Vaziyet planı arsa ile binayı birlikte gösterir."
+      },
+      {
+       "soru": "Mevcut bir binayı ölçüp çizmeye ne denir?",
+       "secenekler": [
+        "Render",
+        "Rölöve",
+        "Eskiz",
+        "Kesit"
+       ],
+       "dogru": 1,
+       "aciklama": "Restorasyon ve tadilatın ilk işidir."
+      },
+      {
+       "soru": "Görünüş çizimi neyi gösterir?",
+       "secenekler": [
+        "Odaların yerleşimini",
+        "Binanın dış yüzünü",
+        "Temeli",
+        "Tesisatı"
+       ],
+       "dogru": 1,
+       "aciklama": "Görünüş = cephe."
+      },
+      {
+       "soru": "Planda bir ölçü hatası buldun. Ne yaparsın?",
+       "secenekler": [
+        "Saklarım",
+        "Sorumlu mimara gösteririm",
+        "Şantiyede düzeltilir derim",
+        "Silip yeniden çizerim"
+       ],
+       "dogru": 1,
+       "aciklama": "Erken bulunan hata ucuza düzelir."
+      },
+      {
+       "soru": "Hangi ölçek daha ayrıntılıdır?",
+       "secenekler": [
+        "1/1000",
+        "1/100",
+        "1/50",
+        "1/10"
+       ],
+       "dogru": 3,
+       "aciklama": "Paydası en küçük olan."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Mimar",
+   "hedefXp": 280,
+   "rozet": {
+    "ad": "Mimar",
+    "ikon": "🏛️"
+   },
+   "sonraki": "Uygulama mimarı kademesi açıldı: şantiye, yapım sırası ve ekip işi.",
+   "gorevler": [
+    {
+     "id": "mi1-surec",
+     "sablon": "bilgi",
+     "ikon": "🧭",
+     "baslik": "Bir projenin yolculuğu",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📋",
+       "baslik": "İhtiyaç programı",
+       "metin": "Kaç oda, kaç metrekare, hangi işlevler: işverenle birlikte listelenir.",
+       "terim": "program"
+      },
+      {
+       "ikon": "📄",
+       "baslik": "İmar durumu",
+       "metin": "Belediyeden arsanın kurallarını gösteren belge alınır: kaç kat yapılabilir, bina arsanın ne kadarını kaplayabilir, sınırlara ne kadar uzak olmalı.",
+       "terim": "imar durumu"
+      },
+      {
+       "ikon": "✏️",
+       "baslik": "Ön tasarım",
+       "metin": "Eskizler ve basit modellerle farklı fikirler denenir, işverenle en iyisi seçilir.",
+       "terim": "konsept / eskiz"
+      },
+      {
+       "ikon": "📐",
+       "baslik": "Avan proje",
+       "metin": "Seçilen fikir ölçekli çizimlere dönüşür. Planlar, kesitler ve görünüşler netleşir.",
+       "terim": "avan proje"
+      },
+      {
+       "ikon": "🏗️",
+       "baslik": "Uygulama projesi",
+       "metin": "Ustaların bakıp yapabileceği kadar ayrıntılı, ölçülü çizimler hazırlanır. Statik, elektrik ve tesisat projeleriyle birlikte belediyeye sunulur.",
+       "terim": "uygulama projesi"
+      },
+      {
+       "ikon": "✅",
+       "baslik": "Ruhsat",
+       "metin": "Belediye projeyi inceler, uygunsa yapı ruhsatı verir. Ruhsatsız bina yapılamaz.",
+       "terim": "yapı ruhsatı"
+      }
+     ]
+    },
+    {
+     "id": "mi2-imar",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "İmar hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "TAKS neyi gösterir?",
+       "secenekler": [
+        "Bina yüksekliğini",
+        "Binanın zemine oturan alanının parsele oranını",
+        "Toplam kat alanını",
+        "Bahçe mesafesini"
+       ],
+       "dogru": 1,
+       "aciklama": "Taban Alanı Kat Sayısı: zemine oturan alan ÷ parsel alanı."
+      },
+      {
+       "soru": "Parsel 500 m², TAKS 0,30. Bina zemine en fazla kaç m² oturabilir?",
+       "secenekler": [
+        "30 m²",
+        "150 m²",
+        "300 m²",
+        "500 m²"
+       ],
+       "dogru": 1,
+       "aciklama": "500 × 0,30 = 150 m²."
+      },
+      {
+       "soru": "KAKS (emsal) neyi gösterir?",
+       "secenekler": [
+        "Toplam kat alanının parsel alanına oranını",
+        "Kat sayısını",
+        "Pencere sayısını",
+        "Yol genişliğini"
+       ],
+       "dogru": 0,
+       "aciklama": "Kat Alanları Kat Sayısı: tüm katların alanı ÷ parsel alanı."
+      },
+      {
+       "soru": "Parsel 500 m², KAKS 1,20. Toplam en fazla kaç m² kat alanı yapılabilir?",
+       "secenekler": [
+        "120 m²",
+        "500 m²",
+        "600 m²",
+        "1.200 m²"
+       ],
+       "dogru": 2,
+       "aciklama": "500 × 1,20 = 600 m²."
+      },
+      {
+       "soru": "Planda aksine bir not yoksa ayrık nizamda yan bahçe mesafesi en az kaç metredir?",
+       "secenekler": [
+        "1 m",
+        "3 m",
+        "5 m",
+        "10 m"
+       ],
+       "dogru": 1,
+       "aciklama": "Genel kural 3 m'dir; 4 kattan fazla binalarda her ilave kat için 0,50 m artar."
+      },
+      {
+       "soru": "Planda aksine bir not yoksa ön bahçe mesafesi genelde kaç metredir?",
+       "secenekler": [
+        "1 m",
+        "2 m",
+        "5 m",
+        "15 m"
+       ],
+       "dogru": 2,
+       "aciklama": "Genel kural 5 m'dir; imar planı farklı bir değer verebilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İmar dili",
+      "maddeler": [
+       "TAKS × parsel = zemine oturan en çok alan.",
+       "KAKS × parsel = toplam en çok kat alanı.",
+       "Bahçe mesafeleri imar durumunda yazar.",
+       "Önce imar planı ve plan notları okunur."
+      ]
+     }
+    },
+    {
+     "id": "mi3-gunes",
+     "sablon": "siniflandirma",
+     "ikon": "☀️",
+     "baslik": "Odaları güneşe göre yerleştir",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Türkiye'de güney cephesi gün boyu en çok güneşi alır. Her mekânı genelde en uygun cepheye yerleştir.",
+     "kategoriler": [
+      {
+       "id": "guney",
+       "ad": "Güney: bol güneş",
+       "ikon": "☀️"
+      },
+      {
+       "id": "kuzey",
+       "ad": "Kuzey: az güneş",
+       "ikon": "🌥️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Oturma odası",
+       "ikon": "🛋️",
+       "kategori": "guney",
+       "aciklama": "En çok vakit geçirilen yer güneşi en çok alan cepheye konur."
+      },
+      {
+       "ad": "Çocuk odası",
+       "ikon": "🧸",
+       "kategori": "guney",
+       "aciklama": "Gün boyu kullanılır; güneş ve ışık ister."
+      },
+      {
+       "ad": "Kış bahçesi",
+       "ikon": "🪴",
+       "kategori": "guney",
+       "aciklama": "Güneşi toplamak için güneye bakar."
+      },
+      {
+       "ad": "Kiler",
+       "ikon": "🥫",
+       "kategori": "kuzey",
+       "aciklama": "Serin kalması istenir."
+      },
+      {
+       "ad": "Merdiven evi",
+       "ikon": "🪜",
+       "kategori": "kuzey",
+       "aciklama": "Kısa süre kullanılır; güneşli cepheyi yaşam alanlarına bırakır."
+      },
+      {
+       "ad": "Banyo ve tuvalet",
+       "ikon": "🚿",
+       "kategori": "kuzey",
+       "aciklama": "Kısa süre kullanılan ıslak hacimler kuzeye konabilir."
+      },
+      {
+       "ad": "Resim atölyesi",
+       "ikon": "🎨",
+       "kategori": "kuzey",
+       "aciklama": "Kuzey ışığı gün boyu yumuşak ve sabittir; ressamlar sever."
+      },
+      {
+       "ad": "Yaşam balkonu",
+       "ikon": "🌞",
+       "kategori": "guney",
+       "aciklama": "Kışın güneşlenmek için güneye bakar."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Güneş ve yön",
+      "maddeler": [
+       "Güney: yaşam alanları.",
+       "Kuzey: kiler, merdiven, ıslak hacimler, atölye.",
+       "Batı cephesi yazın öğleden sonra çok ısınır; gölgelik düşün.",
+       "Bunlar genel ilkelerdir; manzara ve iklim de kararı etkiler."
+      ]
+     }
+    },
+    {
+     "id": "mi4-musteri",
+     "sablon": "senaryo",
+     "ikon": "💬",
+     "baslik": "İşverenin hayali",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık mimarsın. Bir aile için iki katlı bir ev tasarlıyorsun.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "İşveren: \"Salon kuzeyde olsun, manzara orada.\"",
+       "secenekler": [
+        {
+         "metin": "Manzaraya bakan büyük bir pencere ve güneyden ışık alan bir köşe öneririm",
+         "dogru": true,
+         "aciklama": "İyi tasarım iki isteği birleştirir: manzara da güneş de."
+        },
+        {
+         "metin": "\"Kural bu, salon güneyde olur\" derim",
+         "dogru": false,
+         "aciklama": "Güneş ilkesi bir kural değil öneridir; işverenin isteği önemlidir."
+        },
+        {
+         "metin": "Sorgusuz kuzeye koyarım, ışık önemsiz",
+         "dogru": false,
+         "aciklama": "Karanlık salon zamanla şikâyet olur; seçenekleri anlat."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "İşveren: \"Bütçe yetmiyor ama hiçbir şeyden vazgeçmem.\"",
+       "secenekler": [
+        {
+         "metin": "Öncelikleri birlikte sıralayıp, sonradan eklenebilecekleri ayırırım",
+         "dogru": true,
+         "aciklama": "Bütçe gerçektir; mimar dürüst seçenek sunar."
+        },
+        {
+         "metin": "Ucuz malzeme kullanıp söylemem",
+         "dogru": false,
+         "aciklama": "Gizli kalite düşürmek güveni ve binayı bozar."
+        },
+        {
+         "metin": "Projeyi bırakırım",
+         "dogru": false,
+         "aciklama": "Çözüm aramak mimarın işidir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "İnşaat mühendisi: \"Salonun ortasına bir kolon gelmesi gerekiyor.\"",
+       "secenekler": [
+        {
+         "metin": "Mühendisle birlikte kolonu tasarıma katacak bir çözüm ararım",
+         "dogru": true,
+         "aciklama": "Taşıyıcı sistem güvenlik içindir; mimar ve mühendis birlikte çalışır."
+        },
+        {
+         "metin": "\"Kolonu kaldır\" diye ısrar ederim",
+         "dogru": false,
+         "aciklama": "Deprem ülkesindeyiz; taşıyıcı kararı mühendisle birlikte verilir."
+        },
+        {
+         "metin": "Kolonu çizimde göstermem",
+         "dogru": false,
+         "aciklama": "Gizlenen kolon şantiyede sorun olur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İyi mimar",
+      "maddeler": [
+       "İsteği dinle, seçenek sun.",
+       "Bütçeyi dürüstçe yönet.",
+       "Taşıyıcı sistemi mühendisle birlikte çöz."
+      ]
+     }
+    },
+    {
+     "id": "mi5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Mimar sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Belediyeden arsanın yapılaşma kurallarını gösteren belgeye ne denir?",
+       "secenekler": [
+        "Tapu",
+        "İmar durumu",
+        "İskan",
+        "Ruhsat"
+       ],
+       "dogru": 1,
+       "aciklama": "İmar durumu tasarımın başlangıç verisidir."
+      },
+      {
+       "soru": "Parsel 400 m², TAKS 0,40. Bina zemine en fazla kaç m² oturur?",
+       "secenekler": [
+        "40",
+        "100",
+        "160",
+        "400"
+       ],
+       "dogru": 2,
+       "aciklama": "400 × 0,40 = 160 m²."
+      },
+      {
+       "soru": "Parsel 400 m², KAKS 1,50. Toplam en fazla kaç m² yapılır?",
+       "secenekler": [
+        "150",
+        "400",
+        "600",
+        "1.500"
+       ],
+       "dogru": 2,
+       "aciklama": "400 × 1,50 = 600 m²."
+      },
+      {
+       "soru": "Ustaların bakıp yapabileceği ayrıntılı çizimlere ne denir?",
+       "secenekler": [
+        "Eskiz",
+        "Avan proje",
+        "Uygulama projesi",
+        "Render"
+       ],
+       "dogru": 2,
+       "aciklama": "Uygulama projesi ölçülü ve ayrıntılıdır."
+      },
+      {
+       "soru": "Ruhsatsız bina yapılabilir mi?",
+       "secenekler": [
+        "Evet",
+        "Küçükse evet",
+        "Hayır",
+        "Komşu izin verirse"
+       ],
+       "dogru": 2,
+       "aciklama": "İmar Kanunu'na göre yapı ruhsatı alınmadan bina yapılamaz."
+      },
+      {
+       "soru": "Türkiye'de en çok güneşi hangi cephe alır?",
+       "secenekler": [
+        "Kuzey",
+        "Güney",
+        "Doğu",
+        "Batı"
+       ],
+       "dogru": 1,
+       "aciklama": "Kuzey yarımkürede güney cephesi."
+      },
+      {
+       "soru": "Kolonun yerini kim ile birlikte belirlersin?",
+       "secenekler": [
+        "Komşu",
+        "İnşaat mühendisi",
+        "Emlakçı",
+        "Tek başıma"
+       ],
+       "dogru": 1,
+       "aciklama": "Taşıyıcı sistem statik projeyle belirlenir."
+      },
+      {
+       "soru": "Avan projeden önce hangisi gelir?",
+       "secenekler": [
+        "Ruhsat",
+        "Uygulama projesi",
+        "İhtiyaç programı ve ön tasarım",
+        "İskan"
+       ],
+       "dogru": 2,
+       "aciklama": "Önce ne istendiği ve fikir netleşir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Uygulama mimarı",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Uygulama Mimarı",
+    "ikon": "🦺"
+   },
+   "sonraki": "Proje lideri kademesi açıldı: koordinasyon, ruhsat süreci ve zor kararlar.",
+   "gorevler": [
+    {
+     "id": "ua1-santiye",
+     "sablon": "bilgi",
+     "ikon": "🦺",
+     "baslik": "Şantiyede mimar",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "⛑️",
+       "baslik": "Önce güvenlik",
+       "metin": "Şantiyeye baret, yelek ve çelik burunlu ayakkabıyla girilir. Kişisel koruyucu donanım olmadan içeri girilmez.",
+       "terim": "KKD"
+      },
+      {
+       "ikon": "📐",
+       "baslik": "Projeye uygunluk",
+       "metin": "Duvar, kapı ve pencerelerin çizimdeki yere ve ölçüye göre yapıldığı kontrol edilir.",
+       "terim": "uygulama denetimi"
+      },
+      {
+       "ikon": "🔎",
+       "baslik": "Yapı denetimi",
+       "metin": "Binanın projeye ve kurallara uygun yapılmasını bağımsız yapı denetim kuruluşları da kontrol eder.",
+       "terim": "yapı denetim"
+      },
+      {
+       "ikon": "📊",
+       "baslik": "Metraj",
+       "metin": "Kaç metrekare duvar, kaç adet pencere gerektiği hesaplanır. Maliyet buna göre çıkar.",
+       "terim": "metraj"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Malzeme seçimi",
+       "metin": "Cephe kaplaması, döşeme, doğrama gibi malzemelerin numuneleri görülür ve onaylanır.",
+       "terim": "numune"
+      },
+      {
+       "ikon": "🏠",
+       "baslik": "Teslim",
+       "metin": "Bina bitince yapı kullanma izin belgesi (iskan) alınır ve bina kullanıma açılır.",
+       "terim": "iskan"
+      }
+     ]
+    },
+    {
+     "id": "ua2-ekip",
+     "sablon": "siniflandirma",
+     "ikon": "👷",
+     "baslik": "Kim ne yapar?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Bir bina tek kişiyle yapılmaz. Her işi doğru meslektaşa ver.",
+     "kategoriler": [
+      {
+       "id": "mimar",
+       "ad": "Mimar",
+       "ikon": "📐"
+      },
+      {
+       "id": "insaat",
+       "ad": "İnşaat mühendisi",
+       "ikon": "🏗️"
+      },
+      {
+       "id": "tesisat",
+       "ad": "Makine / elektrik mühendisi",
+       "ikon": "⚡"
+      },
+      {
+       "id": "denetim",
+       "ad": "Yapı denetim",
+       "ikon": "🔎"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Odaların düzeni ve cephe tasarımı",
+       "ikon": "🏠",
+       "kategori": "mimar",
+       "aciklama": "Mekân ve görünüm mimarın işidir."
+      },
+      {
+       "ad": "Malzeme ve renk seçimi",
+       "ikon": "🎨",
+       "kategori": "mimar",
+       "aciklama": "Mimar tasarıma uygun malzemeyi önerir."
+      },
+      {
+       "ad": "Kolon ve kirişlerin boyutları",
+       "ikon": "⬛",
+       "kategori": "insaat",
+       "aciklama": "Taşıyıcı sistemi statik proje belirler."
+      },
+      {
+       "ad": "Depreme dayanım hesabı",
+       "ikon": "📉",
+       "kategori": "insaat",
+       "aciklama": "Deprem hesabı inşaat mühendisinin işidir."
+      },
+      {
+       "ad": "Isıtma ve su tesisatı",
+       "ikon": "🔥",
+       "kategori": "tesisat",
+       "aciklama": "Mekanik tesisatı makine mühendisi çizer."
+      },
+      {
+       "ad": "Priz, aydınlatma ve pano",
+       "ikon": "💡",
+       "kategori": "tesisat",
+       "aciklama": "Elektrik projesini elektrik mühendisi çizer."
+      },
+      {
+       "ad": "Betonun projeye uygun dökülmesinin kontrolü",
+       "ikon": "🧪",
+       "kategori": "denetim",
+       "aciklama": "Yapı denetim kuruluşu kontrol eder."
+      },
+      {
+       "ad": "Yapının projeye uygunluğunu bağımsız denetlemek",
+       "ikon": "📋",
+       "kategori": "denetim",
+       "aciklama": "Yapı denetim bağımsız çalışır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ekip işi",
+      "maddeler": [
+       "Mimar: mekân ve görünüm.",
+       "İnşaat mühendisi: taşıyıcı sistem.",
+       "Makine ve elektrik: tesisat.",
+       "Yapı denetim: bağımsız kontrol."
+      ]
+     }
+    },
+    {
+     "id": "ua3-yapim",
+     "sablon": "siralama",
+     "ikon": "🏗️",
+     "baslik": "Bir binanın yapım sırası",
+     "aciklama": "Ruhsat alındı, inşaat başlıyor. Yapım aşamalarını doğru sırayla diz.",
+     "adimlar": [
+      {
+       "id": "kazi",
+       "ikon": "🚜",
+       "metin": "Kazıyı yap, zemini hazırla",
+       "neden": "Bina sağlam zemine oturmalı; önce toprak kazılır.",
+       "ipucu": "Önce yer hazırlanmalı."
+      },
+      {
+       "id": "temel",
+       "ikon": "🧱",
+       "metin": "Temeli ve temel su yalıtımını yap",
+       "neden": "Bütün bina yükünü temel taşır; su yalıtımı sonradan yapılamaz.",
+       "ipucu": "Zemin hazır; binayı ne taşıyacak?"
+      },
+      {
+       "id": "karkas",
+       "ikon": "🏗️",
+       "metin": "Kolon, kiriş ve döşemeleri (kaba yapı) yükselt",
+       "neden": "Taşıyıcı iskelet katlar boyunca yükselir.",
+       "ipucu": "Temel hazır; iskelet yükselsin."
+      },
+      {
+       "id": "duvar",
+       "ikon": "🧱",
+       "metin": "Duvarları ör, çatıyı kapat",
+       "neden": "Bina dış etkilere kapanınca içeride çalışılabilir.",
+       "ipucu": "İskelet tamam; binayı kapat."
+      },
+      {
+       "id": "tesisat",
+       "ikon": "🔌",
+       "metin": "Elektrik ve su tesisatını döşe",
+       "neden": "Tesisat sıva ve kaplamadan önce yerleştirilir.",
+       "ipucu": "Kaplamadan önce gizli kalacak işler."
+      },
+      {
+       "id": "ince",
+       "ikon": "🎨",
+       "metin": "Sıva, boya, döşeme ve doğrama gibi ince işleri yap",
+       "neden": "Bitirme işleri en sonda, kirlenmesin diye yapılır.",
+       "ipucu": "Son dokunuşlar."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Yapım sırası",
+      "maddeler": [
+       "Kazı → temel → kaba yapı → duvar ve çatı → tesisat → ince işler.",
+       "Su yalıtımı temelde yapılır, sonradan yapılamaz.",
+       "Gizli kalacak tesisat kaplamadan önce döşenir."
+      ]
+     }
+    },
+    {
+     "id": "ua4-yapi",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "Yapı bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Bir daire sahibi salonu büyütmek için kolonu kaldırmak istiyor. Doğru cevap?",
+       "secenekler": [
+        "Kaldırılabilir",
+        "İncelterek olur",
+        "Taşıyıcı eleman kesilemez, kaldırılamaz",
+        "Komşu izin verirse olur"
+       ],
+       "dogru": 2,
+       "aciklama": "Kolon, kiriş ve perdeler binayı ayakta tutar; kesmek can güvenliğini tehlikeye atar."
+      },
+      {
+       "soru": "Türkiye'de binaların depreme göre tasarlanmasını hangi yönetmelik belirler?",
+       "secenekler": [
+        "Otopark Yönetmeliği",
+        "Türkiye Bina Deprem Yönetmeliği",
+        "Trafik Yönetmeliği",
+        "Hijyen Yönetmeliği"
+       ],
+       "dogru": 1,
+       "aciklama": "Türkiye Bina Deprem Yönetmeliği 2019'dan beri yürürlüktedir."
+      },
+      {
+       "soru": "Binanın enerji verimliliğini A'dan G'ye gösteren belge hangisidir?",
+       "secenekler": [
+        "Tapu",
+        "Enerji Kimlik Belgesi",
+        "İskan",
+        "Ruhsat"
+       ],
+       "dogru": 1,
+       "aciklama": "Enerji Kimlik Belgesi binanın enerji sınıfını gösterir."
+      },
+      {
+       "soru": "Bina bitince kullanılabilmesi için alınan belge?",
+       "secenekler": [
+        "Yapı ruhsatı",
+        "Yapı kullanma izin belgesi (iskan)",
+        "İmar durumu",
+        "Avan proje"
+       ],
+       "dogru": 1,
+       "aciklama": "İskan, bina projeye uygun bitince alınır."
+      },
+      {
+       "soru": "Binaların ısı yalıtımı kurallarını hangi standart belirler?",
+       "secenekler": [
+        "TS 825",
+        "TS 9111",
+        "ISO 9001",
+        "TS EN 71"
+       ],
+       "dogru": 0,
+       "aciklama": "TS 825 binalarda ısı yalıtımı kurallarıdır; TS 9111 erişilebilirlikle ilgilidir."
+      },
+      {
+       "soru": "Şantiyeye girerken ne zorunludur?",
+       "secenekler": [
+        "Takım elbise",
+        "Baret ve koruyucu donanım",
+        "Tablet",
+        "Hiçbir şey"
+       ],
+       "dogru": 1,
+       "aciklama": "Kişisel koruyucu donanımsız şantiyeye girilmez."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Unutma",
+      "maddeler": [
+       "Taşıyıcıya dokunulmaz.",
+       "Deprem yönetmeliği her binada geçerli.",
+       "Bitince iskan alınır.",
+       "Şantiyede önce baret."
+      ]
+     }
+    },
+    {
+     "id": "ua5-sorun",
+     "sablon": "senaryo",
+     "ikon": "⚠️",
+     "baslik": "Şantiyede sorun",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Uygulama mimarı olarak şantiyedesin. Gün boyu sorunlar çıkıyor.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir işçi baretsiz iskelede çalışıyor.",
+       "secenekler": [
+        {
+         "metin": "İşi durdurup baret ve emniyet kemeri takmasını sağlarım, şantiye şefine bildiririm",
+         "dogru": true,
+         "aciklama": "İş güvenliği her şeyden önce gelir."
+        },
+        {
+         "metin": "Birazdan iner nasılsa derim",
+         "dogru": false,
+         "aciklama": "Kaza bir saniyede olur."
+        },
+        {
+         "metin": "Fotoğrafını çekip giderim",
+         "dogru": false,
+         "aciklama": "Gördüğün tehlikeye hemen müdahale et."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Duvarcı ustası pencereyi çizimden 40 cm farklı yere koymuş.",
+       "secenekler": [
+        {
+         "metin": "Çizime göre düzeltilmesini ister, nedenini konuşur, kayıt altına alırım",
+         "dogru": true,
+         "aciklama": "Projeye uygunluk mimarın sorumluluğudur; hata kaydı tekrarı önler."
+        },
+        {
+         "metin": "Olsun, kimse fark etmez derim",
+         "dogru": false,
+         "aciklama": "Cephe düzeni bozulur, iç düzen de etkilenir."
+        },
+        {
+         "metin": "Ustaya bağırırım",
+         "dogru": false,
+         "aciklama": "Sakin ve net olmak sorunu daha hızlı çözer."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "İşveren: \"Ucuz olsun, temeldeki su yalıtımını yapmayalım.\"",
+       "secenekler": [
+        {
+         "metin": "Sonradan yapılamayacağını, rutubet ve hasar riskini anlatıp yapılmasında ısrar ederim",
+         "dogru": true,
+         "aciklama": "Bazı tasarruflar binaya ömür boyu zarar verir."
+        },
+        {
+         "metin": "İşveren ne derse o olur",
+         "dogru": false,
+         "aciklama": "Mimar binanın sağlığından da sorumludur."
+        },
+        {
+         "metin": "Yapılmış gibi rapor yazarım",
+         "dogru": false,
+         "aciklama": "Sahte kayıt hem etik dışıdır hem de hukuki sorumluluk doğurur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Şantiye kuralları",
+      "maddeler": [
+       "Önce güvenlik.",
+       "Projeden sapmayı düzelt ve kaydet.",
+       "Sonradan yapılamayacak işten tasarruf edilmez."
+      ]
+     }
+    },
+    {
+     "id": "ua6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Uygulama mimarı sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Kaba yapıdan hemen sonra hangisi gelir?",
+       "secenekler": [
+        "Boya",
+        "Duvar ve çatı",
+        "Kazı",
+        "Temel"
+       ],
+       "dogru": 1,
+       "aciklama": "İskeletten sonra bina kapatılır."
+      },
+      {
+       "soru": "Taşıyıcı sistemi kim tasarlar?",
+       "secenekler": [
+        "Mimar tek başına",
+        "İnşaat mühendisi",
+        "Elektrik mühendisi",
+        "Usta"
+       ],
+       "dogru": 1,
+       "aciklama": "Statik proje inşaat mühendisinindir."
+      },
+      {
+       "soru": "Bağımsız denetimi kim yapar?",
+       "secenekler": [
+        "İşveren",
+        "Komşular",
+        "Yapı denetim kuruluşu",
+        "Emlakçı"
+       ],
+       "dogru": 2,
+       "aciklama": "Yapı denetim kuruluşları bağımsızdır."
+      },
+      {
+       "soru": "Tesisat ne zaman döşenir?",
+       "secenekler": [
+        "Boyadan sonra",
+        "Sıva ve kaplamadan önce",
+        "Temelden önce",
+        "İskandan sonra"
+       ],
+       "dogru": 1,
+       "aciklama": "Gizli kalacak işler önce yapılır."
+      },
+      {
+       "soru": "Hangisi kişisel koruyucu donanımdır?",
+       "secenekler": [
+        "Metre",
+        "Baret",
+        "Kalem",
+        "Tablet"
+       ],
+       "dogru": 1,
+       "aciklama": "Baret, yelek, çelik burunlu ayakkabı."
+      },
+      {
+       "soru": "Kaç metrekare duvar gerektiğinin hesabına ne denir?",
+       "secenekler": [
+        "Metraj",
+        "Rölöve",
+        "Kesit",
+        "Emsal"
+       ],
+       "dogru": 0,
+       "aciklama": "Metraj maliyetin temelidir."
+      },
+      {
+       "soru": "Bina bitince hangi belge alınır?",
+       "secenekler": [
+        "İmar durumu",
+        "Yapı ruhsatı",
+        "Yapı kullanma izin belgesi",
+        "Tapu iptali"
+       ],
+       "dogru": 2,
+       "aciklama": "İskan."
+      },
+      {
+       "soru": "Kolon kesilebilir mi?",
+       "secenekler": [
+        "Evet",
+        "Küçük bir kısmı",
+        "Hayır",
+        "Usta isterse"
+       ],
+       "dogru": 2,
+       "aciklama": "Taşıyıcı elemanlara dokunulmaz."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Proje lideri",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Proje Lideri",
+    "ikon": "🏙️"
+   },
+   "sonraki": "Stajyerlikten proje liderliğine tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "pl1-lider",
+     "sablon": "bilgi",
+     "ikon": "🧑‍💼",
+     "baslik": "Projeyi yönetmek",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "👥",
+       "baslik": "Ekip",
+       "metin": "Proje lideri mimarlar, stajyerler ve dışarıdaki mühendislerle birlikte çalışan bir ekibi yönetir.",
+       "terim": "proje ekibi"
+      },
+      {
+       "ikon": "📅",
+       "baslik": "Takvim",
+       "metin": "Hangi çizimin ne zaman biteceği planlanır. Bir gecikme bütün işi kaydırır.",
+       "terim": "iş programı"
+      },
+      {
+       "ikon": "🔗",
+       "baslik": "Koordinasyon",
+       "metin": "Mimari, statik, elektrik ve mekanik projeler birbiriyle çakışmamalı. Örneğin bir boru kirişin içinden geçemez.",
+       "terim": "koordinasyon"
+      },
+      {
+       "ikon": "💰",
+       "baslik": "Bütçe",
+       "metin": "Tasarım kararlarının maliyeti izlenir; işveren her adımda bilgilendirilir.",
+       "terim": "maliyet"
+      },
+      {
+       "ikon": "🎤",
+       "baslik": "Sunum",
+       "metin": "Proje işverene, belediyeye ya da jüriye anlaşılır biçimde anlatılır.",
+       "terim": "sunum"
+      },
+      {
+       "ikon": "🏆",
+       "baslik": "Yarışmalar",
+       "metin": "Mimarlar kamu binaları gibi işler için proje yarışmalarına katılabilir.",
+       "terim": "mimari yarışma"
+      }
+     ]
+    },
+    {
+     "id": "pl2-ruhsat",
+     "sablon": "siralama",
+     "ikon": "📑",
+     "baslik": "Projeyi ruhsata hazırla",
+     "aciklama": "Yeni bir apartman projesinin başındasın. Ruhsata giden adımları doğru sırayla diz.",
+     "adimlar": [
+      {
+       "id": "imar",
+       "ikon": "📄",
+       "metin": "Belediyeden imar durumunu al",
+       "neden": "Kurallar bilinmeden tasarım yapılmaz.",
+       "ipucu": "Önce arsanın kurallarını öğren."
+      },
+      {
+       "id": "zemin",
+       "ikon": "🪨",
+       "metin": "Zemin etüdü yaptır",
+       "neden": "Zeminin özellikleri temel ve taşıyıcı sistem tasarımını belirler.",
+       "ipucu": "Kurallar belli; zemin nasıl?"
+      },
+      {
+       "id": "avan",
+       "ikon": "✏️",
+       "metin": "Avan projeyi hazırla ve işverenle onayla",
+       "neden": "Fikir netleşmeden ayrıntıya girilmez.",
+       "ipucu": "Veriler hazır; tasarım zamanı."
+      },
+      {
+       "id": "uygulama",
+       "ikon": "📐",
+       "metin": "Mimari, statik ve tesisat projelerini koordineli hazırla",
+       "neden": "Projeler birbiriyle uyumlu olmalı.",
+       "ipucu": "Fikir onaylandı; ayrıntılı projeler."
+      },
+      {
+       "id": "basvuru",
+       "ikon": "🏛️",
+       "metin": "Projelerle belediyeye başvur",
+       "neden": "Belediye projeleri inceleyip ruhsat verir.",
+       "ipucu": "Projeler tamam; kime gidiyorsun?"
+      },
+      {
+       "id": "ruhsat",
+       "ikon": "✅",
+       "metin": "Yapı ruhsatını al ve inşaatı başlat",
+       "neden": "Ruhsat olmadan inşaat başlayamaz.",
+       "ipucu": "Son adım."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Ruhsata giden yol",
+      "maddeler": [
+       "İmar durumu → zemin etüdü → avan → uygulama projeleri → başvuru → ruhsat.",
+       "Projeler arası çakışma önceden çözülür.",
+       "Ruhsatsız inşaat başlamaz."
+      ]
+     }
+    },
+    {
+     "id": "pl3-yonetim",
+     "sablon": "soru",
+     "ikon": "❓",
+     "baslik": "Yönetim bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Bir havalandırma kanalı kirişin içinden geçecek gibi çizilmiş. Ne yaparsın?",
+       "secenekler": [
+        "Şantiyede delinir",
+        "Mekanik ve statik ekiple koordinasyon toplantısı yaparım",
+        "Görmezden gelirim",
+        "Kirişi kaldırırım"
+       ],
+       "dogru": 1,
+       "aciklama": "Çakışmalar çizimde çözülür, şantiyede değil."
+      },
+      {
+       "soru": "Teslim tarihi yaklaşıyor ve gecikme var. İlk adım?",
+       "secenekler": [
+        "Saklamak",
+        "İşvereni dürüstçe bilgilendirip yeni bir plan sunmak",
+        "Ekibi suçlamak",
+        "Projeyi bırakmak"
+       ],
+       "dogru": 1,
+       "aciklama": "Erken ve dürüst iletişim güveni korur."
+      },
+      {
+       "soru": "Serbest çalışan bir mimarın hangi meslek kuruluşuna kayıtlı olması gerekir?",
+       "secenekler": [
+        "Barolar Birliği",
+        "Mimarlar Odası",
+        "Tabip Odası",
+        "Ticaret Odası"
+       ],
+       "dogru": 1,
+       "aciklama": "Mimarlar Odası TMMOB'a bağlı meslek kuruluşudur."
+      },
+      {
+       "soru": "Engelli erişimine uygun bina tasarımını hangi standart anlatır?",
+       "secenekler": [
+        "TS 825",
+        "TS 9111",
+        "TS EN 71",
+        "ISO 14001"
+       ],
+       "dogru": 1,
+       "aciklama": "TS 9111 binalarda erişilebilirlik standardıdır."
+      },
+      {
+       "soru": "Stajyerin çiziminde hata var. İyi lider ne yapar?",
+       "secenekler": [
+        "Herkesin önünde azarlar",
+        "Hatayı gösterip nasıl düzeltileceğini öğretir",
+        "Kendisi sessizce düzeltir, söylemez",
+        "Stajyeri projeden alır"
+       ],
+       "dogru": 1,
+       "aciklama": "Öğretmek ekibi büyütür."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Lider gibi düşün",
+      "maddeler": [
+       "Çakışmayı çizimde çöz.",
+       "Gecikmeyi erken söyle.",
+       "Hatayı öğreterek düzelt."
+      ]
+     }
+    },
+    {
+     "id": "pl4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir toplantı",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Proje lideri olarak büyük bir konut projesini yönetiyorsun. Bugün kritik bir toplantı var.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "İşveren: \"Bir kat daha ekleyin, kimse fark etmez.\"",
+       "secenekler": [
+        {
+         "metin": "İmar durumunun buna izin vermediğini, kaçak katın ruhsatı ve alıcıları riske atacağını anlatırım",
+         "dogru": true,
+         "aciklama": "Mimar kurallara aykırı projeye imza atmaz."
+        },
+        {
+         "metin": "Ekleriz ama projede göstermeyiz",
+         "dogru": false,
+         "aciklama": "Kaçak yapı hem yasa dışıdır hem de deprem güvenliğini tehlikeye atar."
+        },
+        {
+         "metin": "Ekstra ücret karşılığında kabul ederim",
+         "dogru": false,
+         "aciklama": "Kurala aykırılık parayla düzelmez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Ekipten bir mimar: \"Teslime yetişmiyoruz, herkes çok yorgun.\"",
+       "secenekler": [
+        {
+         "metin": "İşleri yeniden önceliklendirir, gerekirse işverenle teslimi konuşurum",
+         "dogru": true,
+         "aciklama": "Yorgun ekip hata yapar; gerçekçi plan herkesi korur."
+        },
+        {
+         "metin": "Herkes bu hafta sabaha kadar çalışacak derim",
+         "dogru": false,
+         "aciklama": "Sürekli fazla mesai hatayı ve ayrılmayı artırır."
+        },
+        {
+         "metin": "Hiçbir şey yapmam",
+         "dogru": false,
+         "aciklama": "Lider sorunu görür ve yönetir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Belediye projede bir düzeltme istedi.",
+       "secenekler": [
+        {
+         "metin": "İsteği ekiple inceleyip düzeltir, değişikliği tüm projelere işlerim",
+         "dogru": true,
+         "aciklama": "Bir değişiklik statik ve tesisatı da etkileyebilir; koordinasyon şart."
+        },
+        {
+         "metin": "Sadece mimari çizimi değiştiririm",
+         "dogru": false,
+         "aciklama": "Diğer projeler eski kalırsa çakışma çıkar."
+        },
+        {
+         "metin": "Belediyeyle tartışırım",
+         "dogru": false,
+         "aciklama": "Önce gerekçeyi anla, sonra çözüm üret."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Zor günde lider",
+      "maddeler": [
+       "Kurala aykırı işe imza atma.",
+       "Ekibin yükünü gerçekçi planla.",
+       "Değişikliği tüm projelere yansıt."
+      ]
+     }
+    },
+    {
+     "id": "pl5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Ruhsata giden yolda ilk adım?",
+       "secenekler": [
+        "Belediyeye başvuru",
+        "İmar durumunu almak",
+        "Uygulama projesi",
+        "İskan"
+       ],
+       "dogru": 1,
+       "aciklama": "Kurallar önce öğrenilir."
+      },
+      {
+       "soru": "Parsel 600 m², KAKS 2,00. Toplam en fazla kaç m²?",
+       "secenekler": [
+        "300",
+        "600",
+        "1.200",
+        "2.000"
+       ],
+       "dogru": 2,
+       "aciklama": "600 × 2 = 1.200 m²."
+      },
+      {
+       "soru": "Parsel 600 m², TAKS 0,25. Zemine en fazla kaç m² oturur?",
+       "secenekler": [
+        "25",
+        "150",
+        "250",
+        "600"
+       ],
+       "dogru": 1,
+       "aciklama": "600 × 0,25 = 150 m²."
+      },
+      {
+       "soru": "Projeler arası çakışma nerede çözülmeli?",
+       "secenekler": [
+        "Şantiyede",
+        "Çizim aşamasında",
+        "İskandan sonra",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Çizimde çözmek ucuzdur."
+      },
+      {
+       "soru": "İşveren kaçak kat istiyor. Doğru tutum?",
+       "secenekler": [
+        "Kabul",
+        "Gizli kabul",
+        "Kurallara aykırı olduğu için reddetmek",
+        "Komşuya sormak"
+       ],
+       "dogru": 2,
+       "aciklama": "Mimar kurallara aykırı projeye imza atmaz."
+      },
+      {
+       "soru": "1/50 ölçekte 7 cm gerçekte kaç metre?",
+       "secenekler": [
+        "0,35 m",
+        "3,5 m",
+        "35 m",
+        "7 m"
+       ],
+       "dogru": 1,
+       "aciklama": "7 × 50 = 350 cm = 3,5 m."
+      },
+      {
+       "soru": "Hangisi taşıyıcı elemandır?",
+       "secenekler": [
+        "Bölme duvarı",
+        "Kolon",
+        "Kapı",
+        "Parke"
+       ],
+       "dogru": 1,
+       "aciklama": "Kolon, kiriş, perde ve döşeme taşıyıcıdır."
+      },
+      {
+       "soru": "Engelli erişimi hangi standartla ilgilidir?",
+       "secenekler": [
+        "TS 825",
+        "TS 9111",
+        "TBDY",
+        "ISO 9001"
+       ],
+       "dogru": 1,
+       "aciklama": "TS 9111."
+      },
+      {
+       "soru": "Bina bitince alınan belge?",
+       "secenekler": [
+        "Ruhsat",
+        "İmar durumu",
+        "Yapı kullanma izin belgesi",
+        "Zemin etüdü"
+       ],
+       "dogru": 2,
+       "aciklama": "İskan."
+      },
+      {
+       "soru": "Mimar olmak için en temel şart?",
+       "secenekler": [
+        "Ehliyet",
+        "4 yıllık mimarlık lisansı",
+        "Sürücü belgesi",
+        "Hiçbiri"
+       ],
+       "dogru": 1,
+       "aciklama": "Mimarlık bölümü bitirilir; serbest çalışmak için Mimarlar Odası'na kayıt gerekir."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

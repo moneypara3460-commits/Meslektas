@@ -64,6 +64,7 @@ export const MESLEK_PROFIL = {
   barista: { R: 0.8, I: 0.35, A: 0.6, S: 0.9, E: 0.3, C: 0.6 },
   asci: { R: 1, I: 0.4, A: 0.9, S: 0.3, E: 0.35, C: 0.7 },
   servis: { R: 0.5, I: 0.1, A: 0.3, S: 1, E: 0.7, C: 0.7 },
+  mimar: { R: 0.5, I: 0.7, A: 1, S: 0.35, E: 0.5, C: 0.7 },
 };
 
 // Henüz oyunda olmayan, tipe göre önerilecek meslekler.
