@@ -6,6 +6,7 @@ import mimar from './mimar.json';
 import insaat from './insaat.json';
 import freze from './freze.json';
 import kaynak from './kaynak.json';
+import yazilim from './yazilim.json';
 
-export const MESLEKLER = [barista, asci, servis, mimar, insaat, freze, kaynak];
+export const MESLEKLER = [barista, asci, servis, mimar, insaat, freze, kaynak, yazilim];
 export const meslekBul = (id) => MESLEKLER.find((p) => p.meslek.id === id);

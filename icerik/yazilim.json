@@ -1,0 +1,2086 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "yazilim",
+  "ad": "Yazılımcı",
+  "kategori": "Bilişim & Teknoloji",
+  "tanim": "Uygulamaları, web sitelerini ve programları kodla tasarlayıp yazan, test eden ve yayına alan meslek: stajyerlikten teknik liderliğe.",
+  "calismaKosullari": [
+   "Ofiste ya da uzaktan, masa başında",
+   "Ekiple, sürekli öğrenerek",
+   "Teslim tarihleri ve zaman zaman nöbet olabilir"
+  ],
+  "kademeler": [
+   "Merak",
+   "Stajyer",
+   "Yazılımcı",
+   "Kıdemli",
+   "Teknik lider"
+  ],
+  "renkler": {
+   "ana": "#1d2b4a",
+   "vurgu": "#8250df",
+   "zemin": "#f1f0f6"
+  },
+  "metinler": {
+   "senaryoBasla": "Bilgisayarı aç",
+   "senaryoBitir": "Günü bitir",
+   "ucYildiz": "Kıdemli yazılımcı kodu inceledi: \"Tertemiz, onaylandı!\"",
+   "karakter": {
+    "usta": "Kıdemli",
+    "musteri": "Yönetici"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Yazılımcılık Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Yazılımcılık için yasal zorunlu bir belge yoktur; üniversite, meslek yüksekokulu ve kurs diplomaları ile yaptığın projeler (portföy) önemlidir."
+  }
+ },
+ "kaynaklar": [
+  "MEB Bilişim Teknolojileri alanı yazılım geliştirme modülleri (kendi cümlelerimizle)",
+  "Örnek kodlar JavaScript benzeri sade bir dille yazıldı; Türkçe adlar öğretim amaçlıdır",
+  "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)",
+  "OWASP Top 10 güvenlik başlıkları (genel bilgi)",
+  "Sunucu ücretleri ve süreler örnektir",
+  "Yazılımcı uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Kod Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Stajyer kademesinde kodun yapı taşlarını, ekip çalışmasını ve ilk hata düzeltmeni öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir yazılımcının günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "💻",
+       "baslik": "Ne yapar?",
+       "metin": "Yazılımcı bilgisayara ne yapacağını adım adım anlatan kodu yazar. Telefon uygulamaları, web siteleri, oyunlar ve kasadaki programlar böyle yapılır.",
+       "terim": "kod"
+      },
+      {
+       "ikon": "☕",
+       "baslik": "Günlük toplantı",
+       "metin": "Gün çoğu zaman kısa bir ekip toplantısıyla başlar: dün ne yaptım, bugün ne yapacağım, nerede takıldım.",
+       "terim": "günlük toplantı"
+      },
+      {
+       "ikon": "🧩",
+       "baslik": "İşi parçalara bölmek",
+       "metin": "Büyük bir istek küçük, yapılabilir işlere bölünür. Kodun büyük kısmı yazılmadan önce düşünülür.",
+       "terim": "planlama"
+      },
+      {
+       "ikon": "🐞",
+       "baslik": "Hata ayıklamak",
+       "metin": "Yazılımcının zamanının önemli bir kısmı hataları bulmak ve düzeltmekle geçer. Sabır ve merak bu işin yarısıdır.",
+       "terim": "hata ayıklama"
+      },
+      {
+       "ikon": "👀",
+       "baslik": "Kod incelemesi",
+       "metin": "Yazılan kodu ekipten biri okur, soru sorar, öneri yapar. Kod onaylanınca ortak koda eklenir.",
+       "terim": "kod incelemesi"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Üniversitede bilgisayar ya da yazılım mühendisliği, meslek yüksekokulunda bilgisayar programcılığı okunabilir; kurslarla ve kendi kendine öğrenen de çoktur. Yasal zorunlu bir belge yoktur; yaptığın projeler (portföy) çok önemlidir.",
+       "terim": "portföy"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Ofiste ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir yazılım şirketinde deneme günündesin. Kıdemli bir yazılımcı seni yanına aldı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Programı çalıştırdın, ekranda kırmızı bir hata mesajı çıktı.",
+       "secenekler": [
+        {
+         "metin": "Mesajı dikkatle okurum; hangi dosya ve satırda olduğuna bakarım",
+         "dogru": true,
+         "aciklama": "Hata mesajı çoğu zaman sorunun nerede olduğunu söyler. İlk iş onu okumaktır."
+        },
+        {
+         "metin": "Paniğe kapılıp bilgisayarı yeniden başlatırım",
+         "dogru": false,
+         "aciklama": "Hata mesajını okumadan çözüm bulunmaz."
+        },
+        {
+         "metin": "Mesajı kapatıp hiçbir şey olmamış gibi devam ederim",
+         "dogru": false,
+         "aciklama": "Görmezden gelinen hata büyür."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Kıdemli: \"Şirketin kodunu evde de çalışmak için kendi açık GitHub hesabına koyabilir misin?\"",
+       "secenekler": [
+        {
+         "metin": "Hayır; şirket kodu ve bilgileri yalnızca şirketin izin verdiği yerde tutulur",
+         "dogru": true,
+         "aciklama": "Şirket kodu ve içindeki bilgiler şirketindir. İzinsiz paylaşmak hem güvenlik hem hukuk sorunudur."
+        },
+        {
+         "metin": "Evet, herkes yapıyor",
+         "dogru": false,
+         "aciklama": "Açık depo herkese açıktır; kod ve gizli bilgiler sızar."
+        },
+        {
+         "metin": "Gizli yaparsam sorun yok",
+         "dogru": false,
+         "aciklama": "Yine de şirketin izni olmadan dışarı çıkarılmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Sana verilen işte bir şeyi anlamadın.",
+       "secenekler": [
+        {
+         "metin": "Önce biraz araştırır, denediklerimi not alır, sonra net bir soruyla sorarım",
+         "dogru": true,
+         "aciklama": "Ne denediğini anlatan net bir soru hem sana hem ekibe zaman kazandırır."
+        },
+        {
+         "metin": "Hiç sormam, günlerce tek başıma uğraşırım",
+         "dogru": false,
+         "aciklama": "Takılınca sormak bu meslekte normaldir."
+        },
+        {
+         "metin": "Her küçük şeyi hemen sorarım, hiç denemem",
+         "dogru": false,
+         "aciklama": "Önce biraz kendin denemelisin."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ofiste ilk gün",
+      "maddeler": [
+       "Hata mesajı okunur.",
+       "Şirket kodu dışarı çıkarılmaz.",
+       "Denediğini anlatan net soru sorulur."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Saatlerce bir bilmece ya da bulmaca üzerinde düşünmek?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Sıkılırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Uzun süre ekran başında oturarak çalışmak?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Bir şey çalışmayınca nedenini bulana kadar uğraşmak?",
+       "secenekler": [
+        [
+         "Tam bana göre",
+         2
+        ],
+        [
+         "Bir süre uğraşırım",
+         1
+        ],
+        [
+         "Hemen bırakırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Sürekli yeni şeyler öğrenmek zorunda olmak?",
+       "secenekler": [
+        [
+         "Hoşuma gider",
+         2
+        ],
+        [
+         "İdare ederim",
+         1
+        ],
+        [
+         "Yorucu bulurum",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Yaptığın işin başkaları tarafından eleştirilmesi?",
+       "secenekler": [
+        [
+         "Öğrenirim",
+         2
+        ],
+        [
+         "Biraz bozulurum",
+         1
+        ],
+        [
+         "Hiç sevmem",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Meraklı ve sabırlısın. Klavye seni bekliyor; Stajyer kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Stajyer kademesini oynayıp işi yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Masa başı ve sürekli hata ayıklamak seni zorlayabilir. Yazılım test uzmanlığı ya da tasarım tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Stajyer",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Stajyer Yazılımcı",
+    "ikon": "💻"
+   },
+   "sonraki": "Yazılımcı kademesi açıldı: iyi kod, hata türleri ve sprint.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-temel",
+     "sablon": "bilgi",
+     "ikon": "🧱",
+     "baslik": "Kodun yapı taşları",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📦",
+       "baslik": "Değişken",
+       "metin": "Değişken, bir değeri saklayan isimli kutudur. let fiyat = 40; dersen fiyat kutusunda 40 durur.",
+       "terim": "değişken"
+      },
+      {
+       "ikon": "🔀",
+       "baslik": "Koşul",
+       "metin": "if ile program karar verir: koşul doğruysa bir şey, değilse başka bir şey yapar.",
+       "terim": "if / else"
+      },
+      {
+       "ikon": "🔁",
+       "baslik": "Döngü",
+       "metin": "for ve while aynı işi defalarca yapar. Örneğin sepetteki her ürünü tek tek toplamak.",
+       "terim": "döngü"
+      },
+      {
+       "ikon": "🧰",
+       "baslik": "Fonksiyon",
+       "metin": "Fonksiyon, bir işi yapan ve isim verilmiş kod parçasıdır. Bir kez yazılır, istenen yerde çağrılır.",
+       "terim": "fonksiyon"
+      },
+      {
+       "ikon": "📚",
+       "baslik": "Dizi",
+       "metin": "Dizi, birden fazla değeri sırayla tutar. Sıra numarası (indeks) 0'dan başlar: ilk eleman dizi[0]'dır.",
+       "terim": "dizi ve indeks"
+      },
+      {
+       "ikon": "🐞",
+       "baslik": "Hata",
+       "metin": "Bilgisayar ne yazarsan onu yapar, ne demek istediğini değil. Küçük bir yanlış bile programı bozabilir.",
+       "terim": "bug"
+      }
+     ]
+    },
+    {
+     "id": "c2-ekip",
+     "sablon": "bilgi",
+     "ikon": "🧑‍💻",
+     "baslik": "Ekipte çalışmak",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🌳",
+       "baslik": "Sürüm kontrolü",
+       "metin": "Git, kodun her değişikliğini kaydeder. Hata olursa eski hâle dönülebilir, birçok kişi aynı kod üzerinde çalışabilir.",
+       "terim": "Git"
+      },
+      {
+       "ikon": "📝",
+       "baslik": "Commit",
+       "metin": "Her anlamlı değişiklik, ne yaptığını anlatan kısa bir mesajla kaydedilir. İyi mesaj, aylar sonra bile neden yapıldığını anlatır.",
+       "terim": "commit"
+      },
+      {
+       "ikon": "🌿",
+       "baslik": "Dal (branch)",
+       "metin": "Yeni iş ana koddan ayrılan bir dalda yapılır. İş bitince incelemeye gönderilir ve ana koda eklenir.",
+       "terim": "branch"
+      },
+      {
+       "ikon": "👀",
+       "baslik": "Kod incelemesi",
+       "metin": "Ekipten biri kodu okur. Amaç kişiyi değil kodu iyileştirmektir.",
+       "terim": "pull request"
+      },
+      {
+       "ikon": "✅",
+       "baslik": "Test",
+       "metin": "Testler, kodun beklenen sonucu verip vermediğini otomatik kontrol eden küçük programlardır.",
+       "terim": "otomatik test"
+      },
+      {
+       "ikon": "📖",
+       "baslik": "Belgeler",
+       "metin": "Bir şeyi kullanmadan önce resmî belgelerini okumak, rastgele kod kopyalamaktan daha güvenlidir.",
+       "terim": "dokümantasyon"
+      }
+     ]
+    },
+    {
+     "id": "c3-katman",
+     "sablon": "siniflandirma",
+     "ikon": "🗂️",
+     "baslik": "Hangi katmanın işi?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her işi uygulamanın ilgili katmanına ver.",
+     "kategoriler": [
+      {
+       "id": "on",
+       "ad": "Ön yüz (ekran)",
+       "ikon": "📱"
+      },
+      {
+       "id": "arka",
+       "ad": "Arka uç (sunucu)",
+       "ikon": "🖥️"
+      },
+      {
+       "id": "veri",
+       "ad": "Veritabanı",
+       "ikon": "🗄️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Düğmenin rengi ve yeri",
+       "ikon": "🎨",
+       "kategori": "on",
+       "aciklama": "Kullanıcının gördüğü her şey ön yüzdür."
+      },
+      {
+       "ad": "Formda eksik alan için ekranda kırmızı uyarı",
+       "ikon": "⚠️",
+       "kategori": "on",
+       "aciklama": "Uyarıyı göstermek ön yüzün işi. (Asıl kontrol sunucuda da yapılır.)"
+      },
+      {
+       "ad": "Ekranın telefona sığması",
+       "ikon": "📏",
+       "kategori": "on",
+       "aciklama": "Yerleşim ön yüzde yapılır."
+      },
+      {
+       "ad": "Kullanıcının şifresini doğrulamak",
+       "ikon": "🔐",
+       "kategori": "arka",
+       "aciklama": "Güvenlik kararları sunucuda verilir."
+      },
+      {
+       "ad": "Ödeme isteğini işlemek",
+       "ikon": "💳",
+       "kategori": "arka",
+       "aciklama": "Para işlemleri sunucuda yürür."
+      },
+      {
+       "ad": "Kayıt olunca hoş geldin e-postası göndermek",
+       "ikon": "✉️",
+       "kategori": "arka",
+       "aciklama": "E-posta sunucudan gönderilir."
+      },
+      {
+       "ad": "Kullanıcı kayıtlarını saklamak",
+       "ikon": "👥",
+       "kategori": "veri",
+       "aciklama": "Kalıcı bilgiler veritabanında durur."
+      },
+      {
+       "ad": "Geçmiş siparişleri tarihe göre listelemek",
+       "ikon": "🧾",
+       "kategori": "veri",
+       "aciklama": "Veritabanından sorgulanır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Uygulamanın katmanları",
+      "maddeler": [
+       "Ön yüz: kullanıcının gördüğü ekran.",
+       "Arka uç: kurallar, güvenlik, işlemler.",
+       "Veritabanı: kalıcı bilgiler."
+      ]
+     }
+    },
+    {
+     "id": "c4-oku",
+     "sablon": "soru",
+     "ikon": "🔎",
+     "baslik": "Kodu oku",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "let x = 5; x = x + 3; Sonunda x kaçtır?",
+       "secenekler": [
+        "5",
+        "3",
+        "8",
+        "53"
+       ],
+       "dogru": 2,
+       "aciklama": "x önce 5'tir, sonra 5 + 3 = 8 olur."
+      },
+      {
+       "soru": "for (let i = 0; i < 3; i++) döngüsü kaç kez çalışır?",
+       "secenekler": [
+        "2",
+        "3",
+        "4",
+        "Sonsuz"
+       ],
+       "dogru": 1,
+       "aciklama": "i = 0, 1, 2 için çalışır; i = 3 olunca durur."
+      },
+      {
+       "soru": "let dizi = [10, 20, 30]; dizi[1] nedir?",
+       "secenekler": [
+        "10",
+        "20",
+        "30",
+        "Hata"
+       ],
+       "dogru": 1,
+       "aciklama": "İndeks 0'dan başlar: dizi[0] = 10, dizi[1] = 20."
+      },
+      {
+       "soru": "function kare(n) { return n * n; } kare(4) nedir?",
+       "secenekler": [
+        "8",
+        "16",
+        "44",
+        "4"
+       ],
+       "dogru": 1,
+       "aciklama": "4 × 4 = 16."
+      },
+      {
+       "soru": "let yas = 18; if (yas >= 18) \"yetişkin\" değilse \"çocuk\". Sonuç?",
+       "secenekler": [
+        "yetişkin",
+        "çocuk",
+        "Hata",
+        "İkisi de"
+       ],
+       "dogru": 0,
+       "aciklama": "18 >= 18 doğrudur."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kod okuma",
+      "maddeler": [
+       "Değişkenin son değerini adım adım izle.",
+       "i < 3 döngüsü 0, 1, 2'de çalışır.",
+       "Dizi indeksi 0'dan başlar."
+      ]
+     }
+    },
+    {
+     "id": "c5-hafta",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "İlk haftan",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Stajyer olarak ilk haftandasın. Sana küçük bir görev verildi.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "İnternette sorununu çözen bir kod parçası buldun.",
+       "secenekler": [
+        {
+         "metin": "Ne yaptığını anlayana kadar okur, lisansına bakar, sonra uyarlarım",
+         "dogru": true,
+         "aciklama": "Anlamadığın kodu projeye koymak yeni hatalar ve güvenlik açıkları getirir. Lisansı da kullanıma izin vermeli."
+        },
+        {
+         "metin": "Hemen kopyalayıp yapıştırırım",
+         "dogru": false,
+         "aciklama": "Anlamadan kopyalanan kod en sık hata kaynaklarından biridir."
+        },
+        {
+         "metin": "Çalışıyorsa nasıl çalıştığı önemli değil",
+         "dogru": false,
+         "aciklama": "Kodun sorumluluğu artık sende."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kodu ana dala doğrudan yükleyebileceğini fark ettin.",
+       "secenekler": [
+        {
+         "metin": "Kendi dalımda çalışır, incelemeye gönderirim",
+         "dogru": true,
+         "aciklama": "Ana kod incelemeden geçmeden değiştirilmez."
+        },
+        {
+         "metin": "Küçük bir değişiklik, doğrudan ana dala atarım",
+         "dogru": false,
+         "aciklama": "Küçük değişiklikler de herkesi bozabilir."
+        },
+        {
+         "metin": "Kimse görmeden atarım",
+         "dogru": false,
+         "aciklama": "Ekip kurallarını gizlice çiğnemek güveni bozar."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "İncelemede kodunda üç hata bulundu ve yorum yazıldı.",
+       "secenekler": [
+        {
+         "metin": "Yorumları okur, düzeltir, anlamadığımı sorarım",
+         "dogru": true,
+         "aciklama": "İnceleme kişiye değil koda yapılır; en hızlı öğrenme yoludur."
+        },
+        {
+         "metin": "Kişisel algılayıp savunmaya geçerim",
+         "dogru": false,
+         "aciklama": "Eleştiri öğrenmenin parçasıdır."
+        },
+        {
+         "metin": "Yorumları görmezden gelirim",
+         "dogru": false,
+         "aciklama": "Kod onaylanmadan eklenmez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İlk hafta",
+      "maddeler": [
+       "Anlamadığın kodu kopyalama.",
+       "Kendi dalında çalış, incelemeye gönder.",
+       "İnceleme kişiye değil koda yapılır."
+      ]
+     }
+    },
+    {
+     "id": "c6-hata",
+     "sablon": "siralama",
+     "ikon": "🐞",
+     "baslik": "Hatayı düzelt",
+     "aciklama": "Müşteri sepet toplamının yanlış çıktığını bildirdi. Hatayı doğru sırayla düzelt.",
+     "adimlar": [
+      {
+       "id": "yeniden",
+       "ikon": "🔁",
+       "metin": "Hata raporunu oku, hatayı kendi bilgisayarında tekrar oluştur",
+       "neden": "Göremediğin hatayı düzeltemezsin.",
+       "ipucu": "Önce hatayı kendi gözünle gör."
+      },
+      {
+       "id": "bul",
+       "ikon": "🔍",
+       "metin": "Kodu adım adım izleyip hatalı satırı bul",
+       "neden": "Tahminle değil kanıtla düzeltilir.",
+       "ipucu": "Hata göründü; nerede?"
+      },
+      {
+       "id": "test",
+       "ikon": "🧪",
+       "metin": "Hatayı yakalayan bir test yaz, kırmızı yandığını gör",
+       "neden": "Test, hatanın bir daha geri gelmesini önler.",
+       "ipucu": "Yer bulundu; düzeltmeden önce neyi kanıtlarsın?"
+      },
+      {
+       "id": "duzelt",
+       "ikon": "✏️",
+       "metin": "Kodu düzelt",
+       "neden": "Artık neyi düzelttiğini biliyorsun.",
+       "ipucu": "Test kırmızı; şimdi düzelt."
+      },
+      {
+       "id": "calistir",
+       "ikon": "▶️",
+       "metin": "Bütün testleri çalıştır, hepsinin geçtiğini gör",
+       "neden": "Düzeltme başka bir yeri bozmamalı.",
+       "ipucu": "Düzelttin; başka yer bozuldu mu?"
+      },
+      {
+       "id": "gonder",
+       "ikon": "📤",
+       "metin": "Açıklayıcı bir commit mesajıyla incelemeye gönder",
+       "neden": "Ekip neyi neden değiştirdiğini görmeli.",
+       "ipucu": "Testler yeşil; paylaş."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Hata düzeltme sırası",
+      "maddeler": [
+       "Tekrar oluştur → bul → test yaz → düzelt → tüm testler → incelemeye gönder.",
+       "Önce kırmızı test, sonra düzeltme.",
+       "Dizi indeksi 0'dan başlar: i = 1 ilk ürünü atlar."
+      ]
+     },
+     "sahne": "kod"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Stajyer sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Değişken nedir?",
+       "secenekler": [
+        "Bir değeri saklayan isimli kutu",
+        "Bir bilgisayar parçası",
+        "Bir hata türü",
+        "Bir dosya"
+       ],
+       "dogru": 0,
+       "aciklama": "Değişken değer saklar."
+      },
+      {
+       "soru": "[5, 6, 7] dizisinin ilk elemanı hangi indekstedir?",
+       "secenekler": [
+        "1",
+        "0",
+        "-1",
+        "5"
+       ],
+       "dogru": 1,
+       "aciklama": "İndeks 0'dan başlar."
+      },
+      {
+       "soru": "for (let i = 0; i < 5; i++) kaç kez çalışır?",
+       "secenekler": [
+        "4",
+        "5",
+        "6",
+        "0"
+       ],
+       "dogru": 1,
+       "aciklama": "0, 1, 2, 3, 4."
+      },
+      {
+       "soru": "Git ne işe yarar?",
+       "secenekler": [
+        "Kodu çalıştırır",
+        "Kodun değişikliklerini kaydeder ve ekip çalışmasını sağlar",
+        "Tasarım yapar",
+        "İnternete bağlar"
+       ],
+       "dogru": 1,
+       "aciklama": "Sürüm kontrol sistemidir."
+      },
+      {
+       "soru": "Kullanıcının şifresini doğrulamak hangi katmanın işi?",
+       "secenekler": [
+        "Ön yüz",
+        "Arka uç",
+        "Klavye",
+        "Ekran kartı"
+       ],
+       "dogru": 1,
+       "aciklama": "Güvenlik kararları sunucuda verilir."
+      },
+      {
+       "soru": "Hata düzeltirken ilk adım?",
+       "secenekler": [
+        "Kodu silmek",
+        "Hatayı tekrar oluşturmak",
+        "Hemen yayına almak",
+        "Müşteriyi engellemek"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce hatayı görmelisin."
+      },
+      {
+       "soru": "İnternetten bulduğun kodu?",
+       "secenekler": [
+        "Anlamadan yapıştırırım",
+        "Anlar, lisansına bakar, uyarlarım",
+        "Hiç kullanmam",
+        "Adımı yazarım"
+       ],
+       "dogru": 1,
+       "aciklama": "Kodun sorumluluğu sende."
+      },
+      {
+       "soru": "Kod incelemesinde eleştiri?",
+       "secenekler": [
+        "Kişiseldir",
+        "Kodu iyileştirmek içindir",
+        "Gereksizdir",
+        "Yalnızca stajyere yapılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Herkesin kodu incelenir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Yazılımcı",
+   "hedefXp": 280,
+   "rozet": {
+    "ad": "Yazılımcı",
+    "ikon": "⌨️"
+   },
+   "sonraki": "Kıdemli kademesi açıldı: güvenlik, performans ve canlıya alma.",
+   "gorevler": [
+    {
+     "id": "y1-kalite",
+     "sablon": "bilgi",
+     "ikon": "✨",
+     "baslik": "İyi kod",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🏷️",
+       "baslik": "Anlamlı isimler",
+       "metin": "x yerine sepetToplami gibi ne olduğunu anlatan isimler kullanılır. Kod bir kez yazılır, defalarca okunur.",
+       "terim": "okunabilirlik"
+      },
+      {
+       "ikon": "🧩",
+       "baslik": "Küçük fonksiyonlar",
+       "metin": "Her fonksiyon tek bir iş yapar. Kısa ve odaklı kod daha kolay test edilir.",
+       "terim": "tek sorumluluk"
+      },
+      {
+       "ikon": "♻️",
+       "baslik": "Tekrar etme",
+       "metin": "Aynı kodu üç yere kopyalamak yerine bir fonksiyon yazılır. Düzeltme gerektiğinde tek yeri değiştirirsin.",
+       "terim": "DRY"
+      },
+      {
+       "ikon": "🧪",
+       "baslik": "Test",
+       "metin": "Birim testleri küçük parçaları, uçtan uca testler kullanıcının yaptığı işi baştan sona kontrol eder.",
+       "terim": "birim testi"
+      },
+      {
+       "ikon": "📊",
+       "baslik": "Kayıt (log)",
+       "metin": "Program önemli olayları ve hataları kayda geçirir. Canlıdaki sorun çoğu zaman kayıtlardan bulunur.",
+       "terim": "log"
+      },
+      {
+       "ikon": "🗓️",
+       "baslik": "Tahmin",
+       "metin": "Bir işin süresini tahmin ederken test, inceleme ve beklenmedik sorunlar için de pay bırakılır.",
+       "terim": "efor tahmini"
+      }
+     ]
+    },
+    {
+     "id": "y2-hatalar",
+     "sablon": "siniflandirma",
+     "ikon": "🐛",
+     "baslik": "Hata türleri",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her hatayı türüne göre ayır.",
+     "kategoriler": [
+      {
+       "id": "soz",
+       "ad": "Sözdizimi hatası",
+       "ikon": "✍️"
+      },
+      {
+       "id": "calisma",
+       "ad": "Çalışma anı hatası",
+       "ikon": "💥"
+      },
+      {
+       "id": "mantik",
+       "ad": "Mantık hatası",
+       "ikon": "🧠"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Kapanmayan parantez",
+       "ikon": "(",
+       "kategori": "soz",
+       "aciklama": "Program hiç başlamaz; kod dil kurallarına uymuyor."
+      },
+      {
+       "ad": "Kapanmamış tırnak işareti",
+       "ikon": "❝",
+       "kategori": "soz",
+       "aciklama": "Yazım kuralı bozuk."
+      },
+      {
+       "ad": "function kelimesini funtion yazmak",
+       "ikon": "🔤",
+       "kategori": "soz",
+       "aciklama": "Dil anahtar kelimeyi tanımaz."
+      },
+      {
+       "ad": "Var olmayan bir kaydın adını okumaya çalışmak",
+       "ikon": "❓",
+       "kategori": "calisma",
+       "aciklama": "Kod doğru yazılmış ama çalışırken beklenmeyen durumla karşılaşıyor."
+      },
+      {
+       "ad": "İnternet yokken sunucuya istek atmak",
+       "ikon": "📡",
+       "kategori": "calisma",
+       "aciklama": "Bu durum ele alınmazsa program çöker."
+      },
+      {
+       "ad": "Döngü ilk elemanı atlıyor",
+       "ikon": "⏭️",
+       "kategori": "mantik",
+       "aciklama": "Program çalışır ama yanlış sonuç verir."
+      },
+      {
+       "ad": "İndirim için > yerine >= kullanılmalıydı",
+       "ikon": "⚖️",
+       "kategori": "mantik",
+       "aciklama": "Sınır değer yanlış hesaplanır."
+      },
+      {
+       "ad": "KDV iki kez ekleniyor",
+       "ikon": "🧾",
+       "kategori": "mantik",
+       "aciklama": "Hata mesajı yok, sonuç yanlış."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hata türleri",
+      "maddeler": [
+       "Sözdizimi: kod hiç çalışmaz.",
+       "Çalışma anı: beklenmeyen durumda çöker.",
+       "Mantık: çalışır ama yanlış sonuç verir; en sinsi olanı."
+      ]
+     }
+    },
+    {
+     "id": "y3-oku",
+     "sablon": "soru",
+     "ikon": "🔎",
+     "baslik": "Kodu oku: ileri",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "let t = 0; for (let i = 1; i <= 4; i++) t = t + i; Sonunda t?",
+       "secenekler": [
+        "4",
+        "6",
+        "10",
+        "15"
+       ],
+       "dogru": 2,
+       "aciklama": "1 + 2 + 3 + 4 = 10."
+      },
+      {
+       "soru": "let d = [3, 8, 2]; d.length nedir?",
+       "secenekler": [
+        "2",
+        "3",
+        "8",
+        "13"
+       ],
+       "dogru": 1,
+       "aciklama": "Dizide 3 eleman var."
+      },
+      {
+       "soru": "let a = 10; if (a > 5 && a < 8) \"evet\" değilse \"hayır\". Sonuç?",
+       "secenekler": [
+        "evet",
+        "hayır",
+        "Hata",
+        "İkisi"
+       ],
+       "dogru": 1,
+       "aciklama": "10 > 5 doğru ama 10 < 8 yanlış; && için ikisi de doğru olmalı."
+      },
+      {
+       "soru": "let n = 7; n % 2 nedir? (% kalan demektir)",
+       "secenekler": [
+        "0",
+        "1",
+        "3,5",
+        "7"
+       ],
+       "dogru": 1,
+       "aciklama": "7'nin 2'ye bölümünden kalan 1'dir; tek sayıdır."
+      },
+      {
+       "soru": "function ilk(d) { return d[d.length - 1]; } ilk([4, 5, 6]) neyi döndürür?",
+       "secenekler": [
+        "4",
+        "5",
+        "6",
+        "Hata"
+       ],
+       "dogru": 2,
+       "aciklama": "d.length - 1 = 2; d[2] = 6. Fonksiyonun adı ilk ama son elemanı döndürüyor: bu bir isim hatası!"
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İleri kod okuma",
+      "maddeler": [
+       "&& : iki koşul da doğru olmalı.",
+       "% : bölümden kalan.",
+       "Son eleman: d[d.length - 1].",
+       "İsim ile yaptığı iş uyuşmalı."
+      ]
+     }
+    },
+    {
+     "id": "y4-sprint",
+     "sablon": "senaryo",
+     "ikon": "🏃",
+     "baslik": "Sprint haftası",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık kendi işlerini alan bir yazılımcısın. Ekip iki haftalık bir çalışma döneminde (sprint).",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "İşin bitmek üzere ama test yazmaya vaktin kalmadı gibi.",
+       "secenekler": [
+        {
+         "metin": "Testleri yazarım; yetişmeyecekse durumu ekibe erkenden söylerim",
+         "dogru": true,
+         "aciklama": "Testsiz kod sonra çok daha pahalıya patlar. Gecikmeyi erken söylemek ekibin planını kurtarır."
+        },
+        {
+         "metin": "Testleri atlarım, kimse fark etmez",
+         "dogru": false,
+         "aciklama": "Hata canlıda fark edilir; o zaman maliyeti büyüktür."
+        },
+        {
+         "metin": "Son gün söylerim",
+         "dogru": false,
+         "aciklama": "Geç gelen kötü haber planı bozar."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Proje yöneticisi: \"Müşteri yarın istiyor, şifreyi düz metin kaydedelim, sonra düzeltiriz.\"",
+       "secenekler": [
+        {
+         "metin": "Şifreyi güvenli şekilde (karma/hash) saklamanın az iş olduğunu anlatır, doğrusunu yaparım",
+         "dogru": true,
+         "aciklama": "Düz metin şifre sızarsa kullanıcıların başka hesapları da tehlikeye girer. Güvenlik \"sonra\"ya bırakılmaz."
+        },
+        {
+         "metin": "Tamam, sonra düzeltiriz",
+         "dogru": false,
+         "aciklama": "\"Sonra\" çoğu zaman hiç gelmez."
+        },
+        {
+         "metin": "Şifreleri gizli bir dosyaya yazarım",
+         "dogru": false,
+         "aciklama": "Dosyada düz metin yine düz metindir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Cuma akşamı 18.00. Büyük bir değişikliği canlıya almak istiyorsun.",
+       "secenekler": [
+        {
+         "metin": "Ekip yokken risk almam; pazartesi, izlenebilecek bir saatte alırım",
+         "dogru": true,
+         "aciklama": "Sorun çıkarsa müdahale edecek kimse olmaz. Yayına alma, izlenebilecek saatlerde yapılır."
+        },
+        {
+         "metin": "Hafta sonu kimse kullanmaz, alırım",
+         "dogru": false,
+         "aciklama": "Kullanıcılar hafta sonu da var; sen yoksun."
+        },
+        {
+         "metin": "Alır, telefonu kapatırım",
+         "dogru": false,
+         "aciklama": "Sorumluluk yayına almakla bitmez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Sprint",
+      "maddeler": [
+       "Gecikme erken söylenir.",
+       "Şifre düz metin saklanmaz.",
+       "Riskli yayın, ekip başındayken yapılır."
+      ]
+     }
+    },
+    {
+     "id": "y5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Yazılımcı sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Program çalışıyor ama yanlış sonuç veriyor. Bu hangi hata?",
+       "secenekler": [
+        "Sözdizimi",
+        "Mantık",
+        "Donanım",
+        "Yazım"
+       ],
+       "dogru": 1,
+       "aciklama": "Mantık hatası."
+      },
+      {
+       "soru": "Kapanmayan parantez?",
+       "secenekler": [
+        "Mantık hatası",
+        "Sözdizimi hatası",
+        "Çalışma anı hatası",
+        "Hata değil"
+       ],
+       "dogru": 1,
+       "aciklama": "Kod dil kuralına uymuyor."
+      },
+      {
+       "soru": "1'den 3'e kadar toplayan döngünün sonucu?",
+       "secenekler": [
+        "3",
+        "5",
+        "6",
+        "9"
+       ],
+       "dogru": 2,
+       "aciklama": "1 + 2 + 3 = 6."
+      },
+      {
+       "soru": "Şifreler nasıl saklanır?",
+       "secenekler": [
+        "Düz metin",
+        "Güvenli bir karma (hash) olarak",
+        "Excel'de",
+        "E-postada"
+       ],
+       "dogru": 1,
+       "aciklama": "Düz metin saklanmaz."
+      },
+      {
+       "soru": "Değişken adı için hangisi daha iyi?",
+       "secenekler": [
+        "x",
+        "a1",
+        "sepetToplami",
+        "deger"
+       ],
+       "dogru": 2,
+       "aciklama": "Ne olduğunu anlatır."
+      },
+      {
+       "soru": "Aynı kod üç yerde tekrar ediyor?",
+       "secenekler": [
+        "Sorun yok",
+        "Bir fonksiyona taşırım",
+        "Dördüncüyü eklerim",
+        "Silerim"
+       ],
+       "dogru": 1,
+       "aciklama": "Tekrar etme."
+      },
+      {
+       "soru": "Cuma akşamı büyük yayın?",
+       "secenekler": [
+        "Hemen",
+        "Ekip başındayken, izlenebilir saatte",
+        "Gece yarısı",
+        "Kimseye söylemeden"
+       ],
+       "dogru": 1,
+       "aciklama": "Risk yönetimi."
+      },
+      {
+       "soru": "İş yetişmeyecek gibi?",
+       "secenekler": [
+        "Son gün söylerim",
+        "Erkenden ekibe söylerim",
+        "Testleri silerim",
+        "Hiç söylemem"
+       ],
+       "dogru": 1,
+       "aciklama": "Erken haber planı kurtarır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Kıdemli",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Kıdemli Yazılımcı",
+    "ikon": "🧠"
+   },
+   "sonraki": "Teknik lider kademesi açıldı: öncelik, plan ve ekip yönetimi.",
+   "gorevler": [
+    {
+     "id": "u1-guvenlik",
+     "sablon": "bilgi",
+     "ikon": "🛡️",
+     "baslik": "Güvenli ve hızlı yazılım",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "💉",
+       "baslik": "SQL enjeksiyonu",
+       "metin": "Kullanıcıdan gelen yazı doğrudan veritabanı sorgusuna eklenirse saldırgan sorguyu değiştirebilir. Parametreli sorgu kullanılır.",
+       "terim": "parametreli sorgu"
+      },
+      {
+       "ikon": "🔑",
+       "baslik": "Gizli anahtarlar",
+       "metin": "API anahtarı ve şifreler koda yazılmaz, depoya yüklenmez. Ortam değişkenlerinde ya da gizli bilgi kasasında tutulur.",
+       "terim": "gizli anahtar"
+      },
+      {
+       "ikon": "🚪",
+       "baslik": "Yetki sunucuda",
+       "metin": "Ekranda düğmeyi gizlemek güvenlik değildir. Kimin neyi yapabileceği her istekte sunucuda kontrol edilir.",
+       "terim": "yetkilendirme"
+      },
+      {
+       "ikon": "🧍",
+       "baslik": "Kişisel veri",
+       "metin": "Yalnızca gereken kişisel veri toplanır ve korunur. Türkiye'de bu konuda KVKK uygulanır.",
+       "terim": "KVKK"
+      },
+      {
+       "ikon": "⚡",
+       "baslik": "Performans",
+       "metin": "İç içe döngüler veri büyüdükçe çok yavaşlar. Önbellek ve doğru veri yapıları hızı artırır.",
+       "terim": "karmaşıklık"
+      },
+      {
+       "ikon": "🏛️",
+       "baslik": "Mimari",
+       "metin": "Kıdemli yazılımcı yalnızca kod yazmaz; sistemin parçalarının nasıl konuşacağını tasarlar ve ekibe yol gösterir.",
+       "terim": "yazılım mimarisi"
+      }
+     ]
+    },
+    {
+     "id": "u2-guvenli",
+     "sablon": "siniflandirma",
+     "ikon": "🔐",
+     "baslik": "Güvenli mi, riskli mi?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her uygulamayı doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "guvenli",
+       "ad": "Güvenli",
+       "ikon": "✅"
+      },
+      {
+       "id": "riskli",
+       "ad": "Riskli",
+       "ikon": "⛔"
+      },
+      {
+       "id": "eksik",
+       "ad": "Yetmez, ek önlem gerekir",
+       "ikon": "⚠️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Sorguda parametre kullanmak",
+       "ikon": "🧷",
+       "kategori": "guvenli",
+       "aciklama": "Kullanıcı girdisi sorgudan ayrı tutulur."
+      },
+      {
+       "ad": "Şifreleri güçlü bir karma algoritmasıyla saklamak",
+       "ikon": "🔒",
+       "kategori": "guvenli",
+       "aciklama": "Sızsa bile şifre doğrudan okunamaz."
+      },
+      {
+       "ad": "Gizli anahtarı ortam değişkeninde tutmak",
+       "ikon": "🗝️",
+       "kategori": "guvenli",
+       "aciklama": "Kod deposuna girmez."
+      },
+      {
+       "ad": "Kullanıcı yazısını sorguya doğrudan eklemek",
+       "ikon": "💉",
+       "kategori": "riskli",
+       "aciklama": "SQL enjeksiyonuna açık."
+      },
+      {
+       "ad": "API anahtarını koda yazıp GitHub'a yüklemek",
+       "ikon": "📤",
+       "kategori": "riskli",
+       "aciklama": "Anahtar herkesin eline geçebilir."
+      },
+      {
+       "ad": "Şifreyi düz metin saklamak",
+       "ikon": "📝",
+       "kategori": "riskli",
+       "aciklama": "Sızıntıda bütün şifreler okunur."
+      },
+      {
+       "ad": "Yönetici düğmesini sadece ekranda gizlemek",
+       "ikon": "🙈",
+       "kategori": "eksik",
+       "aciklama": "Sunucu yetkiyi kontrol etmezse istek yine gönderilebilir."
+      },
+      {
+       "ad": "Formu sadece telefonda kontrol etmek",
+       "ikon": "📱",
+       "kategori": "eksik",
+       "aciklama": "Aynı kontrol sunucuda da yapılmalı."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Güvenlik",
+      "maddeler": [
+       "Girdi sorgudan ayrılır (parametre).",
+       "Şifre karma ile saklanır, anahtar koda yazılmaz.",
+       "Ekrandaki kontrol yetmez; sunucu da kontrol eder."
+      ]
+     }
+    },
+    {
+     "id": "u3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Performans hesapları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "1.000 elemanlı listede tek döngü kaç adım atar?",
+       "secenekler": [
+        "100",
+        "1.000",
+        "10.000",
+        "1.000.000"
+       ],
+       "dogru": 1,
+       "aciklama": "Her eleman için bir adım: 1.000."
+      },
+      {
+       "soru": "Aynı listede iç içe iki döngü (her eleman, her elemanla) kaç adım?",
+       "secenekler": [
+        "2.000",
+        "10.000",
+        "100.000",
+        "1.000.000"
+       ],
+       "dogru": 3,
+       "aciklama": "1.000 × 1.000 = 1.000.000. Veri büyüdükçe çok yavaşlar."
+      },
+      {
+       "soru": "Sıralı 1.000.000 elemanlı listede ikili arama en fazla yaklaşık kaç adım?",
+       "secenekler": [
+        "20",
+        "1.000",
+        "500.000",
+        "1.000.000"
+       ],
+       "dogru": 0,
+       "aciklama": "Her adımda yarıya iner; 2 üzeri 20 ≈ 1.000.000."
+      },
+      {
+       "soru": "İsteklerin %80'i önbellekten 5 ms'de, %20'si veritabanından 100 ms'de gelir. Ortalama?",
+       "secenekler": [
+        "24 ms",
+        "52,5 ms",
+        "80 ms",
+        "105 ms"
+       ],
+       "dogru": 0,
+       "aciklama": "0,8 × 5 + 0,2 × 100 = 4 + 20 = 24 ms."
+      },
+      {
+       "soru": "Bir sayfa sırayla 5 sorgu yapıyor, her biri 30 ms. Sorgulara giden süre?",
+       "secenekler": [
+        "30 ms",
+        "35 ms",
+        "150 ms",
+        "300 ms"
+       ],
+       "dogru": 2,
+       "aciklama": "5 × 30 = 150 ms. Sorgular birleştirilirse ya da aynı anda yapılırsa kısalır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Performans",
+      "maddeler": [
+       "Tek döngü: n adım; iç içe: n × n.",
+       "İkili arama: her adımda yarıya.",
+       "Önbellek ortalama süreyi ciddi düşürür."
+      ]
+     }
+    },
+    {
+     "id": "u4-yayin",
+     "sablon": "siralama",
+     "ikon": "🚀",
+     "baslik": "Canlıya al",
+     "aciklama": "Yeni bir özelliği kullanıcılara açacaksın. Adımları güvenli sırayla yap.",
+     "adimlar": [
+      {
+       "id": "inceleme",
+       "ikon": "👀",
+       "metin": "Kod incelemesinden onay al",
+       "neden": "İki göz bir gözden iyidir.",
+       "ipucu": "Önce kod onaylanmalı."
+      },
+      {
+       "id": "testler",
+       "ikon": "✅",
+       "metin": "Otomatik testlerin geçtiğini gör",
+       "neden": "Bozulan bir yer varsa burada yakalanır.",
+       "ipucu": "Onay geldi; makine ne diyor?"
+      },
+      {
+       "id": "deneme",
+       "ikon": "🧪",
+       "metin": "Önce test ortamında gerçeğe yakın verilerle dene",
+       "neden": "Canlıya benzeyen ortamda sorunlar erken çıkar.",
+       "ipucu": "Testler yeşil; gerçeğe benzer yerde dene."
+      },
+      {
+       "id": "yedek",
+       "ikon": "💾",
+       "metin": "Veritabanının yedeğini al, geri dönüş planını hazırla",
+       "neden": "Bir şey ters giderse dakikalar içinde dönebilmelisin.",
+       "ipucu": "Denendi; ya ters giderse?"
+      },
+      {
+       "id": "canli",
+       "ikon": "🚀",
+       "metin": "Canlıya al, mümkünse önce küçük bir kullanıcı grubuna aç",
+       "neden": "Sorun varsa az kişiyi etkiler.",
+       "ipucu": "Yedek hazır; şimdi yayın."
+      },
+      {
+       "id": "izle",
+       "ikon": "📈",
+       "metin": "Kayıtları ve hata oranını izle, sorun varsa geri al",
+       "neden": "Yayın, izlemeyle tamamlanır.",
+       "ipucu": "Yayındasın; her şey yolunda mı?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Güvenli yayın",
+      "maddeler": [
+       "İnceleme → testler → test ortamı → yedek → aşamalı yayın → izleme.",
+       "Geri dönüş planı olmadan yayına alınmaz."
+      ]
+     }
+    },
+    {
+     "id": "u5-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Kıdemlinin günü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Kıdemli yazılımcı olarak zor sorunlar ve genç yazılımcılar senin sorumluluğunda.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Genç bir yazılımcı yanlışlıkla bir API anahtarını açık depoya yüklemiş.",
+       "secenekler": [
+        {
+         "metin": "Anahtarı hemen iptal edip yenisini oluştururum, depodan temizler, ekibe bildiririm",
+         "dogru": true,
+         "aciklama": "Silmek yetmez; anahtar görülmüş olabilir. İlk iş onu geçersiz kılmaktır."
+        },
+        {
+         "metin": "Dosyadan silmek yeter",
+         "dogru": false,
+         "aciklama": "Eski kayıtlarda anahtar hâlâ duruyor olabilir."
+        },
+        {
+         "metin": "Kimse görmemiştir, bir şey yapmam",
+         "dogru": false,
+         "aciklama": "Botlar açık depoları sürekli tarar."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Gece canlı sistem çöktü. Son yayından sonra başladı.",
+       "secenekler": [
+        {
+         "metin": "Önce son yayını geri alıp sistemi ayağa kaldırırım, sonra nedenini incelerim",
+         "dogru": true,
+         "aciklama": "Önce kullanıcıyı kurtar, sonra sorunu çöz."
+        },
+        {
+         "metin": "Canlıda hatayı bulana kadar düzeltmeye çalışırım",
+         "dogru": false,
+         "aciklama": "Kullanıcılar beklerken canlıda deneme yapılmaz."
+        },
+        {
+         "metin": "Sabahı beklerim",
+         "dogru": false,
+         "aciklama": "Kesinti büyür."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Ertesi gün toplantıda \"bunu kim yaptı?\" diye suçlu aranıyor.",
+       "secenekler": [
+        {
+         "metin": "Kişiyi değil süreci konuşuruz: neden oldu, nasıl önleriz",
+         "dogru": true,
+         "aciklama": "Suçlamasız değerlendirme insanların hatayı saklamamasını sağlar."
+        },
+        {
+         "metin": "Hatayı yapanı herkesin önünde uyarırım",
+         "dogru": false,
+         "aciklama": "Korkan ekip hatayı saklar."
+        },
+        {
+         "metin": "Hiç konuşmayız",
+         "dogru": false,
+         "aciklama": "Ders çıkarılmayan hata tekrar eder."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kıdemli olmak",
+      "maddeler": [
+       "Sızan anahtar önce iptal edilir.",
+       "Çökmede önce geri al, sonra incele.",
+       "Suçlu değil, neden aranır."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Kıdemli sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "SQL enjeksiyonuna karşı?",
+       "secenekler": [
+        "Parametreli sorgu",
+        "Uzun şifre",
+        "Hızlı sunucu",
+        "Renkli ekran"
+       ],
+       "dogru": 0,
+       "aciklama": "Girdi sorgudan ayrılır."
+      },
+      {
+       "soru": "API anahtarı nerede durur?",
+       "secenekler": [
+        "Kodun içinde",
+        "Ortam değişkeninde ya da gizli kasada",
+        "README dosyasında",
+        "E-postada"
+       ],
+       "dogru": 1,
+       "aciklama": "Depoya girmez."
+      },
+      {
+       "soru": "Yönetici düğmesini ekranda gizlemek yeterli mi?",
+       "secenekler": [
+        "Evet",
+        "Hayır, sunucu da yetkiyi kontrol etmeli",
+        "Bazen",
+        "Gizli renkle evet"
+       ],
+       "dogru": 1,
+       "aciklama": "Asıl kontrol sunucuda."
+      },
+      {
+       "soru": "500 elemanda iç içe iki döngü kaç adım?",
+       "secenekler": [
+        "1.000",
+        "25.000",
+        "250.000",
+        "500"
+       ],
+       "dogru": 2,
+       "aciklama": "500 × 500 = 250.000."
+      },
+      {
+       "soru": "Canlı çöktü, son yayından sonra başladı. İlk iş?",
+       "secenekler": [
+        "Geri almak",
+        "Yeni özellik eklemek",
+        "Beklemek",
+        "Sunucuyu kapatmak"
+       ],
+       "dogru": 0,
+       "aciklama": "Önce sistemi ayağa kaldır."
+      },
+      {
+       "soru": "Sızan anahtar için ilk adım?",
+       "secenekler": [
+        "Dosyadan silmek",
+        "Anahtarı iptal edip yenilemek",
+        "Beklemek",
+        "Depoyu yeniden adlandırmak"
+       ],
+       "dogru": 1,
+       "aciklama": "Anahtar geçersiz kılınır."
+      },
+      {
+       "soru": "Yayından önce yedek neden alınır?",
+       "secenekler": [
+        "Süs",
+        "Ters giderse geri dönebilmek için",
+        "Hız için",
+        "Gerek yok"
+       ],
+       "dogru": 1,
+       "aciklama": "Geri dönüş planı."
+      },
+      {
+       "soru": "Kişisel veri için Türkiye'de uygulanan kanun?",
+       "secenekler": [
+        "KVKK",
+        "Vergi Usul Kanunu",
+        "Trafik Kanunu",
+        "Tapu Kanunu"
+       ],
+       "dogru": 0,
+       "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Teknik lider",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "Teknik Lider",
+    "ikon": "🧭"
+   },
+   "sonraki": "Stajyerlikten teknik liderliğe tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "b1-ekip",
+     "sablon": "bilgi",
+     "ikon": "🧭",
+     "baslik": "Ekibi yönetmek",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🗺️",
+       "baslik": "Teknik yön",
+       "metin": "Teknik lider hangi teknolojinin, hangi mimarinin kullanılacağına ekiple birlikte karar verir ve gerekçesini yazar.",
+       "terim": "teknik karar"
+      },
+      {
+       "ikon": "📋",
+       "baslik": "Önceliklendirme",
+       "metin": "Her iş aynı anda yapılamaz. Kullanıcıya ve güvenliğe etkisi en büyük olan önce gelir.",
+       "terim": "öncelik"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Teknik borç",
+       "metin": "Aceleyle yazılan kod zamanla bakımı zorlaştırır. Her dönemde bu borcu azaltmaya da zaman ayrılır.",
+       "terim": "teknik borç"
+      },
+      {
+       "ikon": "🧑‍🏫",
+       "baslik": "Yetiştirmek",
+       "metin": "Liderin başarısı ekibin büyümesidir. Kod incelemesi, eşli programlama ve açıklayıcı geri bildirim en iyi araçlardır.",
+       "terim": "mentorluk"
+      },
+      {
+       "ikon": "🚨",
+       "baslik": "Olay yönetimi",
+       "metin": "Canlıda büyük bir sorun olunca kim ne yapacak, bellidir. Sorundan sonra suçlamasız bir değerlendirme yazılır.",
+       "terim": "olay sonrası değerlendirme"
+      },
+      {
+       "ikon": "⚖️",
+       "baslik": "Sürdürülebilir tempo",
+       "metin": "Sürekli fazla mesai hatayı ve tükenmişliği artırır. İyi lider takvimi gerçekçi kurar.",
+       "terim": "tükenmişlik"
+      }
+     ]
+    },
+    {
+     "id": "b2-oncelik",
+     "sablon": "siniflandirma",
+     "ikon": "📋",
+     "baslik": "Önce hangisi?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her işi doğru önceliğe ver.",
+     "kategoriler": [
+      {
+       "id": "hemen",
+       "ad": "Hemen",
+       "ikon": "🚨"
+      },
+      {
+       "id": "sprint",
+       "ad": "Bu dönemde",
+       "ikon": "📅"
+      },
+      {
+       "id": "sonra",
+       "ad": "Sonra",
+       "ikon": "🗂️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Canlıda ödeme sayfası çöktü",
+       "ikon": "💳",
+       "kategori": "hemen",
+       "aciklama": "Kullanıcı ve gelir kaybı sürüyor."
+      },
+      {
+       "ad": "Kullanıcı verilerini açığa çıkaran güvenlik açığı",
+       "ikon": "🔓",
+       "kategori": "hemen",
+       "aciklama": "Veri sızıntısı beklemez."
+      },
+      {
+       "ad": "Açık depoya sızmış bir şifre",
+       "ikon": "🗝️",
+       "kategori": "hemen",
+       "aciklama": "Hemen iptal edilir."
+      },
+      {
+       "ad": "Müşteriye söz verilmiş yeni rapor ekranı",
+       "ikon": "📊",
+       "kategori": "sprint",
+       "aciklama": "Planlı ve önemli iş."
+      },
+      {
+       "ad": "Şikâyetleri artan yavaş arama sayfası",
+       "ikon": "🐢",
+       "kategori": "sprint",
+       "aciklama": "Kullanıcıyı etkiliyor, planlanır."
+      },
+      {
+       "ad": "Bir düğmenin renginin değişmesi isteği",
+       "ikon": "🎨",
+       "kategori": "sonra",
+       "aciklama": "Önemli ama acil değil."
+      },
+      {
+       "ad": "Çalışan ama okunması zor eski kodu düzenlemek",
+       "ikon": "🧹",
+       "kategori": "sonra",
+       "aciklama": "Teknik borç; planlı bir zamanda azaltılır."
+      },
+      {
+       "ad": "\"Belki bir gün\" denen yeni özellik fikri",
+       "ikon": "💭",
+       "kategori": "sonra",
+       "aciklama": "Listeye yazılır, sonra değerlendirilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Önceliklendirme",
+      "maddeler": [
+       "Hemen: kesinti, güvenlik, sızıntı.",
+       "Bu dönem: söz verilen ve kullanıcıyı etkileyen işler.",
+       "Sonra: iyileştirmeler ve fikirler."
+      ]
+     }
+    },
+    {
+     "id": "b3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Plan ve maliyet hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Ekip bir sprintte ortalama 30 puanlık iş bitiriyor. 90 puanlık proje kaç sprint sürer?",
+       "secenekler": [
+        "2",
+        "3",
+        "4",
+        "9"
+       ],
+       "dogru": 1,
+       "aciklama": "90 ÷ 30 = 3 sprint."
+      },
+      {
+       "soru": "Sprint 2 hafta. 3 sprint kaç hafta eder?",
+       "secenekler": [
+        "3",
+        "5",
+        "6",
+        "9"
+       ],
+       "dogru": 2,
+       "aciklama": "3 × 2 = 6 hafta."
+      },
+      {
+       "soru": "%99,9 çalışma hedefinde 30 günlük ayda en fazla ne kadar kesinti olabilir?",
+       "secenekler": [
+        "Yaklaşık 4 dk",
+        "Yaklaşık 43 dk",
+        "Yaklaşık 7 saat",
+        "1 gün"
+       ],
+       "dogru": 1,
+       "aciklama": "30 × 24 × 60 = 43.200 dk; binde biri ≈ 43 dk."
+      },
+      {
+       "soru": "10.000 istekten 50'si hata verdi. Hata oranı?",
+       "secenekler": [
+        "%0,05",
+        "%0,5",
+        "%5",
+        "%50"
+       ],
+       "dogru": 1,
+       "aciklama": "50 ÷ 10.000 = 0,005 = %0,5."
+      },
+      {
+       "soru": "Bir sunucunun saatlik ücreti 2 TL (örnek). 30 günlük aylık maliyet?",
+       "secenekler": [
+        "60 TL",
+        "720 TL",
+        "1.440 TL",
+        "2.880 TL"
+       ],
+       "dogru": 2,
+       "aciklama": "2 × 24 × 30 = 1.440 TL."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Plan hesapları",
+      "maddeler": [
+       "Süre ≈ toplam iş ÷ ekip hızı.",
+       "%99,9 çalışma ≈ ayda 43 dk kesinti hakkı.",
+       "Hata oranı = hatalı istek ÷ toplam istek."
+      ]
+     }
+    },
+    {
+     "id": "b4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir dönem",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Teknik lider olarak ekibin hem işinden hem insanlarından sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Yönetici, 6 haftalık işi 2 haftada istiyor.",
+       "secenekler": [
+        {
+         "metin": "Gerçek tahmini gerekçesiyle anlatır, 2 haftada çıkabilecek küçük bir ilk sürüm öneririm",
+         "dogru": true,
+         "aciklama": "Kapsamı daraltmak, kaliteyi feda etmekten iyidir."
+        },
+        {
+         "metin": "Kabul eder, ekibe gece gündüz çalışmasını söylerim",
+         "dogru": false,
+         "aciklama": "Tükenmiş ekip daha çok hata yapar."
+        },
+        {
+         "metin": "Testleri ve incelemeyi kaldırırız",
+         "dogru": false,
+         "aciklama": "Kaliteden kısılan zaman, hata olarak geri döner."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Ekipten biri haftalardır geç saate kadar çalışıyor ve yorgun görünüyor.",
+       "secenekler": [
+        {
+         "metin": "Birebir konuşur, iş yükünü dengeler, gerekirse planı değiştiririm",
+         "dogru": true,
+         "aciklama": "Tükenmişlik ekibin en büyük riskidir."
+        },
+        {
+         "metin": "Çok çalışkan, ödüllendiririm, devam etsin",
+         "dogru": false,
+         "aciklama": "Sürekli fazla mesai sürdürülemez."
+        },
+        {
+         "metin": "Bu onun sorunu",
+         "dogru": false,
+         "aciklama": "Ekibin sağlığı liderin işidir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir yazılımcı, testleri gerçek müşteri verisiyle yapmak için canlı veritabanını test ortamına kopyalamak istiyor.",
+       "secenekler": [
+        {
+         "metin": "Kişisel verileri anonimleştirmeden kopyalanmasına izin vermem",
+         "dogru": true,
+         "aciklama": "Test ortamı genellikle daha az korunur. Gerçek kişisel veri KVKK'ya göre korunmalıdır."
+        },
+        {
+         "metin": "Daha gerçekçi olur, kopyalasın",
+         "dogru": false,
+         "aciklama": "Kişisel veri gereksiz yere çoğaltılmaz."
+        },
+        {
+         "metin": "Sadece kendi bilgisayarına kopyalasın",
+         "dogru": false,
+         "aciklama": "Bu daha da risklidir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Liderlik",
+      "maddeler": [
+       "Takvim baskısında kapsam küçültülür, kalite değil.",
+       "Tükenmişlik erken fark edilir.",
+       "Test ortamına gerçek kişisel veri taşınmaz."
+      ]
+     }
+    },
+    {
+     "id": "b5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "[2, 4, 6] dizisinde dizi[2]?",
+       "secenekler": [
+        "2",
+        "4",
+        "6",
+        "Hata"
+       ],
+       "dogru": 2,
+       "aciklama": "İndeks 0'dan başlar."
+      },
+      {
+       "soru": "Döngü ilk elemanı atlıyor. Bu hangi hata?",
+       "secenekler": [
+        "Sözdizimi",
+        "Mantık",
+        "Donanım",
+        "Ağ"
+       ],
+       "dogru": 1,
+       "aciklama": "Çalışır ama yanlış sonuç verir."
+      },
+      {
+       "soru": "Hata düzeltmede doğru sıra?",
+       "secenekler": [
+        "Düzelt, sonra bak",
+        "Tekrar oluştur, bul, test yaz, düzelt, testleri çalıştır",
+        "Yayına al, sonra düzelt",
+        "Testleri sil"
+       ],
+       "dogru": 1,
+       "aciklama": "Kanıtla ilerlenir."
+      },
+      {
+       "soru": "Şifreler?",
+       "secenekler": [
+        "Düz metin",
+        "Karma (hash) ile",
+        "Excel'de",
+        "Kodda"
+       ],
+       "dogru": 1,
+       "aciklama": "Düz metin saklanmaz."
+      },
+      {
+       "soru": "Canlıda ödeme çöktü. Öncelik?",
+       "secenekler": [
+        "Hemen",
+        "Bu sprint",
+        "Sonra",
+        "Hiç"
+       ],
+       "dogru": 0,
+       "aciklama": "Kesinti hemen çözülür."
+      },
+      {
+       "soru": "Ekip hızı 25 puan, iş 100 puan. Kaç sprint?",
+       "secenekler": [
+        "2",
+        "4",
+        "5",
+        "25"
+       ],
+       "dogru": 1,
+       "aciklama": "100 ÷ 25 = 4."
+      },
+      {
+       "soru": "İsteklerin %90'ı önbellekten 2 ms, %10'u 50 ms. Ortalama?",
+       "secenekler": [
+        "6,8 ms",
+        "26 ms",
+        "45,2 ms",
+        "52 ms"
+       ],
+       "dogru": 0,
+       "aciklama": "0,9 × 2 + 0,1 × 50 = 1,8 + 5 = 6,8 ms."
+      },
+      {
+       "soru": "Sızan anahtar?",
+       "secenekler": [
+        "Silinir, yeter",
+        "İptal edilir, yenilenir",
+        "Beklenir",
+        "Gizlenir"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce geçersiz kılınır."
+      },
+      {
+       "soru": "Takvim baskısında en iyi çözüm?",
+       "secenekler": [
+        "Testleri kaldırmak",
+        "Kapsamı daraltmak",
+        "Fazla mesai",
+        "İncelemeyi atlamak"
+       ],
+       "dogru": 1,
+       "aciklama": "Kalite korunur."
+      },
+      {
+       "soru": "Kişisel verinin test ortamına kopyalanması?",
+       "secenekler": [
+        "Serbest",
+        "Anonimleştirilmeden yapılmaz",
+        "Hafta sonu serbest",
+        "Küçük veride serbest"
+       ],
+       "dogru": 1,
+       "aciklama": "KVKK'ya göre korunur."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

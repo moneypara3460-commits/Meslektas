@@ -105,7 +105,7 @@ function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak, pusula, onPusula
             <Pressable onPress={() => onMeslek(p)} style={{ borderRadius: 22, backgroundColor: renk.ana, padding: 18, marginBottom: 14, overflow: 'hidden' }}>
               <Animated.Text style={{ position: 'absolute', right: 14, top: 10, fontSize: 64, opacity: 0.9, transform: [{ rotate: sallan.interpolate({ inputRange: [0, 1], outputRange: ['-6deg', '6deg'] }) }] }}>
                 {p.kademeler[1]?.rozet?.ikon || '⭐'}</Animated.Text>
-              <Text style={{ color: renk.vurgu, fontWeight: '800', fontSize: 12, letterSpacing: 1 }}>{p.meslek.kategori.toUpperCase()}</Text>
+              <Text style={{ color: renk.vurgu, fontWeight: '800', fontSize: 12, letterSpacing: 1 }}>{p.meslek.kategori.replace(/i/g, 'İ').toUpperCase()}</Text>
               <Text style={{ color: '#fff', fontSize: 28, fontWeight: '900', marginTop: 2 }}>{p.meslek.ad}</Text>
               <Text style={{ color: '#ffffffcc', marginTop: 4, marginRight: 70 }} numberOfLines={2}>{p.meslek.tanim}</Text>
               <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 14 }}>

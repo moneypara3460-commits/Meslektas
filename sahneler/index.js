@@ -8,6 +8,7 @@ import cizimHtml from './cizimHtml';
 import santiyeHtml from './santiyeHtml';
 import frezeHtml from './frezeHtml';
 import kaynakHtml from './kaynakHtml';
+import kodHtml from './kodHtml';
 
 export const SAHNELER = {
   espresso: webSahneYap(espressoHtml, {
@@ -40,5 +41,10 @@ export const SAHNELER = {
     temizle: [['ogutme', 1100], ['ogutme', 2800]], hizala: [['tik', 1700], ['tik', 2700]],
     ayar: [['tik', 1000], ['tik', 2900], ['tik', 5300], ['tik', 5650]], punta: [['tik', 1650], ['tik', 3400]],
     kaynak: [['akis', 1600]], kontrol: [['ogutme', 700], ['basari', 2600]],
+  }),
+  kod: webSahneYap(kodHtml, {
+    yeniden: [['tik', 900], ['yanlis', 2200]], bul: [['tik', 900], ['tik', 1300]],
+    test: [['tik', 1000], ['tik', 1600], ['tik', 2300], ['tik', 3300], ['yanlis', 3500]], duzelt: [['tik', 1600], ['tik', 2050], ['dogru', 2300]],
+    calistir: [['tik', 1000], ['akis', 1300], ['dogru', 2500]], gonder: [['tik', 1100], ['tik', 1700], ['dogru', 3200], ['basari', 4000]],
   }),
 };
