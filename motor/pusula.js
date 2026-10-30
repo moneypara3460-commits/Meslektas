@@ -69,13 +69,14 @@ export const MESLEK_PROFIL = {
   freze: { R: 1, I: 0.55, A: 0.15, S: 0.15, E: 0.25, C: 0.95 },
   kaynak: { R: 1, I: 0.35, A: 0.3, S: 0.15, E: 0.2, C: 0.8 },
   yazilim: { R: 0.2, I: 1, A: 0.5, S: 0.25, E: 0.3, C: 0.75 },
+  grafik: { R: 0.35, I: 0.45, A: 1, S: 0.45, E: 0.45, C: 0.55 },
 };
 
 // Henüz oyunda olmayan, tipe göre önerilecek meslekler.
 export const YAKINDA = {
   R: ['Elektrikçi', 'Kuaför', 'Mobilya ustası'],
   I: ['Laborant', 'Eczane teknisyeni', 'Veri analisti'],
-  A: ['Pastacı', 'Grafik tasarımcı', 'Fotoğrafçı'],
+  A: ['Pastacı', 'İç mimar', 'Fotoğrafçı'],
   S: ['Hemşire', 'Çocuk gelişimci', 'Satış danışmanı'],
   E: ['Emlak danışmanı', 'Mağaza müdürü', 'Etkinlik organizatörü'],
   C: ['Muhasebe elemanı', 'Depo sorumlusu', 'Banka gişe görevlisi'],

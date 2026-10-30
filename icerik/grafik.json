@@ -1,0 +1,2062 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "grafik",
+  "ad": "Grafik Tasarımcı",
+  "kategori": "Sanat & Tasarım",
+  "tanim": "Bir mesajı logo, afiş, ambalaj ve ekran tasarımlarıyla görsel olarak anlatan meslek: stajyerlikten sanat yönetmenliğine.",
+  "calismaKosullari": [
+   "Stüdyo, ajans ya da serbest çalışma",
+   "Ekran başında, teslim tarihleriyle",
+   "Müşteri ve ekip iletişimi yoğun"
+  ],
+  "renkler": {
+   "ana": "#1f5f5b",
+   "vurgu": "#e9b44c",
+   "zemin": "#f3ead9"
+  },
+  "metinler": {
+   "senaryoBasla": "Çizim masasına geç",
+   "senaryoBitir": "Günü bitir",
+   "ucYildiz": "Kıdemli tasarımcı afişe baktı: \"Tek kelimeyle temiz!\"",
+   "karakter": {
+    "usta": "Kıdemli",
+    "musteri": "Müşteri"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Grafik Tasarım Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Grafik tasarım için yasal zorunlu bir belge yoktur; okul diplomaları ve portföy önemlidir."
+  },
+  "kademeler": [
+   "Merak",
+   "Stajyer",
+   "Tasarımcı",
+   "Kıdemli",
+   "Sanat yönetmeni"
+  ]
+ },
+ "kaynaklar": [
+  "MEB Grafik ve Fotoğraf alanı modülleri (kendi cümlelerimizle)",
+  "5846 sayılı Fikir ve Sanat Eserleri Kanunu",
+  "6769 sayılı Sınai Mülkiyet Kanunu (marka)",
+  "WCAG kontrast önerileri (genel bilgi)",
+  "Satır aralığı ve çözünürlük değerleri genel kuraldır; ücretler örnektir",
+  "Grafik tasarımcı uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Tasarım Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Stajyer kademesinde tasarım ilkelerini, ekran-baskı farkını ve ilk afişini öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir grafik tasarımcının günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🎨",
+       "baslik": "Ne yapar?",
+       "metin": "Grafik tasarımcı bir mesajı görselle anlatır: logo, afiş, ambalaj, kitap kapağı, web ve uygulama ekranları, sosyal medya görselleri.",
+       "terim": "görsel iletişim"
+      },
+      {
+       "ikon": "📋",
+       "baslik": "Brif",
+       "metin": "İş, müşterinin ne istediğini anlatan brifle başlar: mesaj ne, kime söylenecek, nerede kullanılacak, ne zaman teslim edilecek.",
+       "terim": "brif"
+      },
+      {
+       "ikon": "✏️",
+       "baslik": "Eskiz",
+       "metin": "Bilgisayara geçmeden önce kâğıda hızlı küçük eskizler çizilir. Fikir kâğıtta bulunur, ekranda güzelleşir.",
+       "terim": "eskiz"
+      },
+      {
+       "ikon": "🖥️",
+       "baslik": "Tasarım programları",
+       "metin": "Vektör çizim, fotoğraf düzenleme ve sayfa düzeni programlarıyla çalışılır. Program bir araçtır; asıl iş fikir ve düzendir.",
+       "terim": "tasarım yazılımı"
+      },
+      {
+       "ikon": "🔁",
+       "baslik": "Sunum ve revizyon",
+       "metin": "Tasarım müşteriye sunulur, geri bildirimle düzeltilir ve onaylanınca doğru dosya türlerinde teslim edilir.",
+       "terim": "revizyon"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Güzel sanatlar fakültelerinin grafik tasarım bölümleri, meslek yüksekokulları ve kurslarla öğrenilir. Yasal zorunlu bir belge yoktur; işini gösteren portföy çok önemlidir.",
+       "terim": "portföy"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Stüdyoda ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir tasarım stüdyosunda deneme günündesin. Kıdemli tasarımcı seni yanına aldı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kıdemli: \"Afiş için internetten güzel bir fotoğraf buldum diyorsun, nereden?\"",
+       "secenekler": [
+        {
+         "metin": "Arama motorundan buldum; lisansına bakmadan kullanmam",
+         "dogru": true,
+         "aciklama": "İnternetteki görsellerin çoğu birine aittir. İzinsiz kullanmak telif hakkı ihlalidir."
+        },
+        {
+         "metin": "İnternette olan herkesindir",
+         "dogru": false,
+         "aciklama": "İnternette olması serbest olduğu anlamına gelmez."
+        },
+        {
+         "metin": "Biraz değiştirirsem sorun olmaz",
+         "dogru": false,
+         "aciklama": "Küçük değişiklik telif sorununu ortadan kaldırmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Kıdemli senin eskizlerine bakıp üç öneri yaptı.",
+       "secenekler": [
+        {
+         "metin": "Notlarımı alır, nedenlerini sorar, eskizleri güncellerim",
+         "dogru": true,
+         "aciklama": "Eleştiri tasarımın doğal parçasıdır; iyi tasarımcı geri bildirimle büyür."
+        },
+        {
+         "metin": "Benim tarzım bu, değiştirmem",
+         "dogru": false,
+         "aciklama": "Tasarım sanatçının değil müşterinin derdini çözer."
+        },
+        {
+         "metin": "Üzülür, eskizleri atarım",
+         "dogru": false,
+         "aciklama": "Geri bildirim işe yönelik, kişiye değil."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Masaüstünde \"son_son_GERCEKSON2.psd\" diye dosyalar görüyorsun.",
+       "secenekler": [
+        {
+         "metin": "Dosyaları müşteri, iş ve tarihe göre düzenli klasör ve adlarla tutarım",
+         "dogru": true,
+         "aciklama": "Düzenli dosya, aylar sonra işi bulabilmek ve ekiple çalışabilmek demektir."
+        },
+        {
+         "metin": "Nasılsa ben biliyorum",
+         "dogru": false,
+         "aciklama": "Ekipte başkası da dosyayı bulabilmeli."
+        },
+        {
+         "metin": "Hepsini tek klasöre atarım",
+         "dogru": false,
+         "aciklama": "Doğru sürümü bulmak imkânsızlaşır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Stüdyoda ilk gün",
+      "maddeler": [
+       "İnternetteki görsel izinsiz kullanılmaz.",
+       "Geri bildirim tasarımı büyütür.",
+       "Dosyalar düzenli adlandırılır."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Renkler, yazılar ve düzen gözüne takılır mı?",
+       "secenekler": [
+        [
+         "Hep takılır",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "Pek dikkat etmem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Uzun süre ekran başında ayrıntıyla uğraşmak?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Müşterinin beğenmediği işi baştan düzeltmek?",
+       "secenekler": [
+        [
+         "Normal karşılarım",
+         2
+        ],
+        [
+         "Biraz bozulurum",
+         1
+        ],
+        [
+         "Hiç sevmem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Başkasının derdini görselle anlatmak?",
+       "secenekler": [
+        [
+         "Heyecanlandırır",
+         2
+        ],
+        [
+         "İlginç",
+         1
+        ],
+        [
+         "Sıkıcı",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Teslim tarihine yetişmek için planlı çalışmak?",
+       "secenekler": [
+        [
+         "İyiyim",
+         2
+        ],
+        [
+         "Çalışırım",
+         1
+        ],
+        [
+         "Zorlanırım",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Gözün ve sabrın yerinde. Çizim masası seni bekliyor; Stajyer kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Stajyer kademesini oynayıp işi yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Revizyon ve teslim temposu seni zorlayabilir. Fotoğrafçılık ya da çizim tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Stajyer",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Stajyer Tasarımcı",
+    "ikon": "✏️"
+   },
+   "sonraki": "Tasarımcı kademesi açıldı: yazı, renk ve müşteriyle çalışmak.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-ilke",
+     "sablon": "bilgi",
+     "ikon": "📐",
+     "baslik": "Tasarımın ilkeleri",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔝",
+       "baslik": "Hiyerarşi",
+       "metin": "En önemli bilgi en dikkat çekici olmalı. Göz önce başlığa, sonra görsele, en son ayrıntılara gitmeli.",
+       "terim": "hiyerarşi"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Hizalama",
+       "metin": "Öğeler görünmez çizgilere hizalanır. Rastgele yerleştirilmiş öğe dağınık görünür.",
+       "terim": "hizalama"
+      },
+      {
+       "ikon": "🧲",
+       "baslik": "Yakınlık",
+       "metin": "Birbiriyle ilgili bilgiler yakın, ilgisizler uzak durur. Tarih ile saat yan yana olmalı.",
+       "terim": "yakınlık"
+      },
+      {
+       "ikon": "🌗",
+       "baslik": "Kontrast",
+       "metin": "Büyük-küçük, koyu-açık, kalın-ince farkı okunurluğu ve vurguyu sağlar.",
+       "terim": "kontrast"
+      },
+      {
+       "ikon": "🔁",
+       "baslik": "Tekrar",
+       "metin": "Aynı renkleri, yazı tiplerini ve biçimleri tekrar etmek tasarımı bütün gösterir.",
+       "terim": "tutarlılık"
+      },
+      {
+       "ikon": "⬜",
+       "baslik": "Beyaz alan",
+       "metin": "Boşluk israf değildir. Nefes alan tasarım daha kolay okunur ve daha kaliteli görünür.",
+       "terim": "beyaz alan"
+      }
+     ]
+    },
+    {
+     "id": "c2-teknik",
+     "sablon": "bilgi",
+     "ikon": "🖨️",
+     "baslik": "Ekran ve baskı",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔷",
+       "baslik": "Vektör",
+       "metin": "Vektör çizimler matematiksel çizgilerden oluşur; ne kadar büyütülse de bozulmaz. Logolar vektör çizilir.",
+       "terim": "vektör"
+      },
+      {
+       "ikon": "🟦",
+       "baslik": "Piksel",
+       "metin": "Fotoğraflar küçük karelerden (pikselden) oluşur. Fazla büyütülünce bulanıklaşır.",
+       "terim": "piksel / raster"
+      },
+      {
+       "ikon": "💡",
+       "baslik": "RGB",
+       "metin": "Ekranlar renkleri kırmızı, yeşil ve mavi ışıkla oluşturur. Ekran için tasarım RGB'dir.",
+       "terim": "RGB"
+      },
+      {
+       "ikon": "🖨️",
+       "baslik": "CMYK",
+       "metin": "Matbaa camgöbeği, macenta, sarı ve siyah mürekkep kullanır. Baskı işleri CMYK hazırlanır; bazı parlak ekran renkleri baskıda çıkmaz.",
+       "terim": "CMYK"
+      },
+      {
+       "ikon": "🔍",
+       "baslik": "Çözünürlük",
+       "metin": "Baskıda görseller genellikle 300 dpi istenir; ekranda piksel boyutu önemlidir.",
+       "terim": "dpi"
+      },
+      {
+       "ikon": "✂️",
+       "baslik": "Taşma payı",
+       "metin": "Kesimde beyaz kenar kalmasın diye zemin, kesim çizgisinin dışına genellikle 3 mm taşırılır.",
+       "terim": "taşma payı"
+      }
+     ]
+    },
+    {
+     "id": "c3-dosya",
+     "sablon": "siniflandirma",
+     "ikon": "🗂️",
+     "baslik": "Hangi dosya türü?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her işi en uygun dosya türüne ver.",
+     "kategoriler": [
+      {
+       "id": "pdf",
+       "ad": "PDF (baskı)",
+       "ikon": "🖨️"
+      },
+      {
+       "id": "png",
+       "ad": "PNG / SVG (ekran, saydam)",
+       "ikon": "🖼️"
+      },
+      {
+       "id": "jpg",
+       "ad": "JPG (fotoğraf)",
+       "ikon": "📷"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Matbaaya gidecek afiş",
+       "ikon": "📰",
+       "kategori": "pdf",
+       "aciklama": "Baskı için yazı tipleri ve taşma payıyla PDF hazırlanır."
+      },
+      {
+       "ad": "Kartvizit baskısı",
+       "ikon": "🪪",
+       "kategori": "pdf",
+       "aciklama": "Matbaa baskı PDF'i ister."
+      },
+      {
+       "ad": "Katlanan broşür",
+       "ikon": "📄",
+       "kategori": "pdf",
+       "aciklama": "Çok sayfalı baskı işi."
+      },
+      {
+       "ad": "Web sitesinde saydam zeminli logo",
+       "ikon": "🔷",
+       "kategori": "png",
+       "aciklama": "Saydamlık PNG ya da SVG ile korunur."
+      },
+      {
+       "ad": "Uygulama içindeki ikon seti",
+       "ikon": "🧩",
+       "kategori": "png",
+       "aciklama": "Keskin kenarlı, saydam grafikler."
+      },
+      {
+       "ad": "Sitede her boyutta keskin görünecek çizim",
+       "ikon": "📐",
+       "kategori": "png",
+       "aciklama": "SVG vektördür, her boyutta keskindir."
+      },
+      {
+       "ad": "Web sitesindeki ürün fotoğrafı",
+       "ikon": "👟",
+       "kategori": "jpg",
+       "aciklama": "Fotoğraflar JPG ile küçük boyutta saklanır."
+      },
+      {
+       "ad": "Sosyal medyada paylaşılacak fotoğraf",
+       "ikon": "📱",
+       "kategori": "jpg",
+       "aciklama": "Fotoğraf için yaygın biçim."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Dosya türleri",
+      "maddeler": [
+       "PDF: baskı.",
+       "PNG / SVG: saydam grafik, logo, ikon.",
+       "JPG: fotoğraf."
+      ]
+     }
+    },
+    {
+     "id": "c4-temel",
+     "sablon": "soru",
+     "ikon": "🎯",
+     "baslik": "Temel bilgiler",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Logo hangi yöntemle çizilmeli?",
+       "secenekler": [
+        "Piksel",
+        "Vektör",
+        "Fotoğraf",
+        "Ekran görüntüsü"
+       ],
+       "dogru": 1,
+       "aciklama": "Vektör, her boyutta bozulmadan kullanılır."
+      },
+      {
+       "soru": "Baskıya gidecek afiş hangi renk modelinde hazırlanır?",
+       "secenekler": [
+        "RGB",
+        "CMYK",
+        "Gri",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Matbaa CMYK mürekkeple basar."
+      },
+      {
+       "soru": "Baskıda görseller genellikle kaç dpi istenir?",
+       "secenekler": [
+        "72",
+        "150",
+        "300",
+        "1.200"
+       ],
+       "dogru": 2,
+       "aciklama": "Yaygın baskı standardı 300 dpi'dir."
+      },
+      {
+       "soru": "Taşma payı neden bırakılır?",
+       "secenekler": [
+        "Süs için",
+        "Kesimde kenarda beyaz şerit kalmasın diye",
+        "Dosya büyüsün diye",
+        "Renk parlasın diye"
+       ],
+       "dogru": 1,
+       "aciklama": "Kesim makinesi milimetrik kayabilir."
+      },
+      {
+       "soru": "Bir afişte göz önce neyi görmeli?",
+       "secenekler": [
+        "En küçük yazıyı",
+        "En önemli bilgiyi",
+        "Kenar çizgisini",
+        "Matbaa adını"
+       ],
+       "dogru": 1,
+       "aciklama": "Hiyerarşi budur."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Temel bilgiler",
+      "maddeler": [
+       "Logo vektör.",
+       "Baskı CMYK, 300 dpi, 3 mm taşma.",
+       "En önemli bilgi en görünür."
+      ]
+     }
+    },
+    {
+     "id": "c5-hafta",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "İlk haftan",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Stajyer olarak ilk haftandasın. Küçük işler sana veriliyor.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir broşürün metnini müşteri henüz göndermedi.",
+       "secenekler": [
+        {
+         "metin": "Geçici metinle yerleşimi kurar, gerçek metin gelince değiştirip yeniden kontrol ederim",
+         "dogru": true,
+         "aciklama": "Gerçek metin geldiğinde uzunluğu değişebilir; düzen yeniden kontrol edilmelidir."
+        },
+        {
+         "metin": "Metni kendim uydururum, öyle kalsın",
+         "dogru": false,
+         "aciklama": "Müşterinin söylemediği bilgi basılmaz."
+        },
+        {
+         "metin": "Hiçbir şey yapmadan beklerim",
+         "dogru": false,
+         "aciklama": "Yerleşim metin beklenmeden kurulabilir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Kıdemli: \"Matbaaya gidecek dosyada yazım hatası var!\"",
+       "secenekler": [
+        {
+         "metin": "Teslimden önce her metni harf harf okur, tarih ve telefonları kontrol ederim",
+         "dogru": true,
+         "aciklama": "Basıldıktan sonra fark edilen hata binlerce kâğıt demektir."
+        },
+        {
+         "metin": "Yazım kontrolü müşterinin işi",
+         "dogru": false,
+         "aciklama": "Tasarımcı da son kontrolden sorumludur."
+        },
+        {
+         "metin": "Küçük hata, kimse görmez",
+         "dogru": false,
+         "aciklama": "Yanlış telefon numarası tüm işi boşa çıkarır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Afişte beş farklı yazı tipi kullandın.",
+       "secenekler": [
+        {
+         "metin": "Bir başlık, bir de metin yazı tipiyle sadeleştiririm",
+         "dogru": true,
+         "aciklama": "Çok sayıda yazı tipi dağınık görünür. Genellikle 2, en fazla 3 yeterlidir."
+        },
+        {
+         "metin": "Ne kadar çeşit o kadar renkli",
+         "dogru": false,
+         "aciklama": "Tutarlılık bozulur."
+        },
+        {
+         "metin": "Hepsini aynı boyutta yaparım",
+         "dogru": false,
+         "aciklama": "Hiyerarşi kaybolur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İlk hafta",
+      "maddeler": [
+       "Gerçek metin gelince düzen kontrol edilir.",
+       "Baskıdan önce harf harf okunur.",
+       "2–3 yazı tipi yeter."
+      ]
+     }
+    },
+    {
+     "id": "c6-afis",
+     "sablon": "siralama",
+     "ikon": "🖼️",
+     "baslik": "Afiş tasarla",
+     "aciklama": "Bir kafenin kampanyası için baskıya gidecek bir afiş tasarlayacaksın. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "brif",
+       "ikon": "📋",
+       "metin": "Brifi oku: mesaj, hedef kitle, ölçü, teslim tarihi",
+       "neden": "Ne istendiğini bilmeden tasarım başlamaz.",
+       "ipucu": "Önce işi anla."
+      },
+      {
+       "id": "eskiz",
+       "ikon": "✏️",
+       "metin": "Kâğıda birkaç hızlı eskiz çiz, en iyisini seç",
+       "neden": "Fikir kâğıtta hızlı denenir.",
+       "ipucu": "İş anlaşıldı; fikir nerede doğar?"
+      },
+      {
+       "id": "izgara",
+       "ikon": "📐",
+       "metin": "Belgeyi doğru ölçü ve çözünürlükte aç, ızgara ve taşma payını kur",
+       "neden": "Yanlış ölçüde başlayan iş baştan yapılır.",
+       "ipucu": "Fikir seçildi; ekranda ilk ne yapılır?"
+      },
+      {
+       "id": "yerlestir",
+       "ikon": "🧩",
+       "metin": "Başlığı, görseli ve bilgileri hiyerarşiyle yerleştir",
+       "neden": "Göz önce en önemli bilgiye gitmeli.",
+       "ipucu": "Belge hazır; içerik."
+      },
+      {
+       "id": "renk",
+       "ikon": "🎨",
+       "metin": "Renk ve yazı tipini seç, okunurluğu (kontrastı) kontrol et",
+       "neden": "Güzel ama okunmayan afiş işe yaramaz.",
+       "ipucu": "Düzen tamam; şimdi renk."
+      },
+      {
+       "id": "teslim",
+       "ikon": "📤",
+       "metin": "Müşteriye sun, düzeltmeleri yap, baskı PDF'ini teslim et",
+       "neden": "Onaylanmadan basılmaz.",
+       "ipucu": "Tasarım bitti; ne kaldı?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Afiş tasarlama sırası",
+      "maddeler": [
+       "Brif → eskiz → belge ve ızgara → yerleşim → renk ve kontrast → sunum ve teslim.",
+       "Baskı: CMYK, 300 dpi, taşma payı."
+      ]
+     },
+     "sahne": "tasarim"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Stajyer sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Ne kadar büyütülse de bozulmayan çizim türü?",
+       "secenekler": [
+        "Piksel",
+        "Vektör",
+        "JPG",
+        "Ekran görüntüsü"
+       ],
+       "dogru": 1,
+       "aciklama": "Vektör."
+      },
+      {
+       "soru": "Ekran için renk modeli?",
+       "secenekler": [
+        "CMYK",
+        "RGB",
+        "Pantone",
+        "Gri"
+       ],
+       "dogru": 1,
+       "aciklama": "Ekran ışıkla renk üretir."
+      },
+      {
+       "soru": "Matbaa için genellikle hangi dosya?",
+       "secenekler": [
+        "JPG",
+        "PDF",
+        "GIF",
+        "TXT"
+       ],
+       "dogru": 1,
+       "aciklama": "Baskı PDF'i."
+      },
+      {
+       "soru": "Saydam zeminli logo web için?",
+       "secenekler": [
+        "JPG",
+        "PNG ya da SVG",
+        "BMP",
+        "DOC"
+       ],
+       "dogru": 1,
+       "aciklama": "JPG saydamlık desteklemez."
+      },
+      {
+       "soru": "İlgili bilgileri yan yana koymak hangi ilke?",
+       "secenekler": [
+        "Yakınlık",
+        "Tekrar",
+        "Kontrast",
+        "Taşma"
+       ],
+       "dogru": 0,
+       "aciklama": "Yakınlık."
+      },
+      {
+       "soru": "Bir afişte kaç yazı tipi genelde yeterlidir?",
+       "secenekler": [
+        "1",
+        "2–3",
+        "6–7",
+        "10"
+       ],
+       "dogru": 1,
+       "aciklama": "Sade ve tutarlı."
+      },
+      {
+       "soru": "İnternetten bulunan fotoğraf?",
+       "secenekler": [
+        "Serbesttir",
+        "Lisansı yoksa kullanılmaz",
+        "Değiştirilirse serbest",
+        "Küçükse serbest"
+       ],
+       "dogru": 1,
+       "aciklama": "Telif hakkı vardır."
+      },
+      {
+       "soru": "Afiş tasarımında ilk adım?",
+       "secenekler": [
+        "Renk seçmek",
+        "Brifi okumak",
+        "PDF almak",
+        "Yazı tipi indirmek"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce işi anla."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Tasarımcı",
+   "hedefXp": 305,
+   "rozet": {
+    "ad": "Grafik Tasarımcı",
+    "ikon": "🎨"
+   },
+   "sonraki": "Kıdemli kademesi açıldı: logo, kurumsal kimlik, telif ve çözünürlük hesabı.",
+   "gorevler": [
+    {
+     "id": "y1-tipo",
+     "sablon": "bilgi",
+     "ikon": "🔤",
+     "baslik": "Yazı ve renk",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🅰️",
+       "baslik": "Tırnaklı ve tırnaksız",
+       "metin": "Tırnaklı (serif) yazılar klasik ve ağırbaşlı, tırnaksız (sans-serif) yazılar sade ve moderndir.",
+       "terim": "serif / sans-serif"
+      },
+      {
+       "ikon": "↕️",
+       "baslik": "Satır aralığı",
+       "metin": "Metinde satır aralığı genellikle yazı boyutunun %120–140'ı kadardır. Büyük başlıklarda daha sıkı tutulur.",
+       "terim": "satır aralığı"
+      },
+      {
+       "ikon": "↔️",
+       "baslik": "Satır uzunluğu",
+       "metin": "Okunması rahat satır yaklaşık 45–75 karakterdir. Çok uzun satırda göz kaybolur.",
+       "terim": "satır uzunluğu"
+      },
+      {
+       "ikon": "🎡",
+       "baslik": "Renk çarkı",
+       "metin": "Karşı karşıya renkler (tamamlayıcı) güçlü kontrast, yan yana renkler (komşu) uyum verir.",
+       "terim": "renk çarkı"
+      },
+      {
+       "ikon": "🌡️",
+       "baslik": "Sıcak ve soğuk",
+       "metin": "Kırmızı, turuncu, sarı enerjik ve sıcak; mavi, yeşil, mor sakin ve soğuk hissettirir.",
+       "terim": "renk psikolojisi"
+      },
+      {
+       "ikon": "👓",
+       "baslik": "Okunurluk",
+       "metin": "Yazı ile zemin arasında yeterli kontrast olmalı. Web için normal metinde en az 4,5:1 oran önerilir.",
+       "terim": "erişilebilirlik"
+      }
+     ]
+    },
+    {
+     "id": "y2-satir",
+     "sablon": "zamanlama",
+     "ikon": "↕️",
+     "baslik": "Satır aralığını ayarla",
+     "temelXp": 30,
+     "yildizBasinaXp": 15,
+     "aciklama": "Satır aralığı göstergesi yükseliyor. Uygun değere gelince DURDUR'a bas. Değerler genel kuraldır; yazı tipine göre değişebilir.",
+     "turlar": [
+      {
+       "ad": "Broşür metni, 10 pt",
+       "not": "Metinde yaklaşık %120–140: 12–14 pt.",
+       "birim": "pt",
+       "baslangic": 6,
+       "bitis": 30,
+       "hedef": [
+        12,
+        14
+       ],
+       "tehlike": 20,
+       "tehlikeMetni": "Satırlar birbirinden koptu; paragraf dağıldı.",
+       "sure": 4,
+       "erkenMetni": "Satırlar birbirine yapıştı, okunmuyor.",
+       "gecMetni": "Biraz fazla açık; metin seyrek duruyor."
+      },
+      {
+       "ad": "Afiş başlığı, 40 pt",
+       "not": "Büyük başlıklarda daha sıkı: yaklaşık 40–46 pt.",
+       "birim": "pt",
+       "baslangic": 20,
+       "bitis": 100,
+       "hedef": [
+        40,
+        46
+       ],
+       "tehlike": 64,
+       "tehlikeMetni": "Başlığın iki satırı ayrı başlık gibi göründü.",
+       "sure": 4,
+       "erkenMetni": "Harfler üst üste bindi.",
+       "gecMetni": "Başlık biraz dağınık."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Satır aralığı",
+      "maddeler": [
+       "Metin: yazı boyutunun yaklaşık %120–140'ı.",
+       "Büyük başlık: daha sıkı.",
+       "Gözle son kontrol şart."
+      ]
+     }
+    },
+    {
+     "id": "y3-renk",
+     "sablon": "siniflandirma",
+     "ikon": "🎡",
+     "baslik": "Renk uyumu",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her renk grubunu doğru uyum türüne ver.",
+     "kategoriler": [
+      {
+       "id": "tamamlayici",
+       "ad": "Tamamlayıcı (karşıt)",
+       "ikon": "☯️"
+      },
+      {
+       "id": "komsu",
+       "ad": "Komşu (analog)",
+       "ikon": "🌈"
+      },
+      {
+       "id": "tek",
+       "ad": "Tek renk (monokrom)",
+       "ikon": "🔵"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Mavi ve turuncu",
+       "ikon": "🟦",
+       "kategori": "tamamlayici",
+       "aciklama": "Çarkta karşı karşıyadırlar."
+      },
+      {
+       "ad": "Mor ve sarı",
+       "ikon": "🟪",
+       "kategori": "tamamlayici",
+       "aciklama": "Güçlü karşıtlık."
+      },
+      {
+       "ad": "Kırmızı ve yeşil",
+       "ikon": "🟥",
+       "kategori": "tamamlayici",
+       "aciklama": "Karşıt renkler."
+      },
+      {
+       "ad": "Sarı, sarı-turuncu, turuncu",
+       "ikon": "🟨",
+       "kategori": "komsu",
+       "aciklama": "Çarkta yan yana."
+      },
+      {
+       "ad": "Mavi, mavi-yeşil, yeşil",
+       "ikon": "🟩",
+       "kategori": "komsu",
+       "aciklama": "Yan yana, uyumlu."
+      },
+      {
+       "ad": "Kırmızı, kırmızı-turuncu, turuncu",
+       "ikon": "🟧",
+       "kategori": "komsu",
+       "aciklama": "Sıcak komşular."
+      },
+      {
+       "ad": "Lacivert, mavi, açık mavi",
+       "ikon": "🔷",
+       "kategori": "tek",
+       "aciklama": "Aynı rengin tonları."
+      },
+      {
+       "ad": "Koyu yeşil, yeşil, açık yeşil",
+       "ikon": "🌿",
+       "kategori": "tek",
+       "aciklama": "Tek renk, farklı açıklık."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Renk uyumu",
+      "maddeler": [
+       "Tamamlayıcı: karşıt, güçlü vurgu.",
+       "Komşu: yan yana, uyumlu.",
+       "Monokrom: tek rengin tonları."
+      ]
+     }
+    },
+    {
+     "id": "y4-musteri",
+     "sablon": "senaryo",
+     "ikon": "🤝",
+     "baslik": "Müşteriyle çalışmak",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık kendi müşterilerine iş yapan bir tasarımcısın.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri: \"Şu ünlü markanın logosunun aynısını yapın, sadece adımızı yazın.\"",
+       "secenekler": [
+        {
+         "metin": "Başka markayı kopyalayamayacağımızı anlatır, ona özgü bir logo öneririm",
+         "dogru": true,
+         "aciklama": "Kopya logo hem telif hem marka hakkı ihlalidir; müşteri de tescil alamaz."
+        },
+        {
+         "metin": "Müşteri istedi, yaparım",
+         "dogru": false,
+         "aciklama": "Sorumluluk tasarımcıya da düşer."
+        },
+        {
+         "metin": "Renklerini değiştirip yaparım",
+         "dogru": false,
+         "aciklama": "Benzerlik yine ihlal sayılabilir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Müşteri on beşinci kez \"bir de şöyle deneyelim\" diyor.",
+       "secenekler": [
+        {
+         "metin": "İşin başında revizyon sayısını yazılı belirlerim; aşanı ek ücrete bağlarım",
+         "dogru": true,
+         "aciklama": "Kapsamı baştan konuşmak iki tarafı da korur."
+        },
+        {
+         "metin": "Bitmeyecek, sonsuza kadar devam ederim",
+         "dogru": false,
+         "aciklama": "Diğer işler ve gelir zarar görür."
+        },
+        {
+         "metin": "Telefonlarına çıkmam",
+         "dogru": false,
+         "aciklama": "İletişimi koparmak çözüm değil."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Teslime bir saat kaldı, ekranda her şey güzel görünüyor.",
+       "secenekler": [
+        {
+         "metin": "Metni, ölçüyü, renk modelini, taşma payını ve yazı tiplerini son kez kontrol ederim",
+         "dogru": true,
+         "aciklama": "Ekranda güzel görünen iş baskıda hata verebilir."
+        },
+        {
+         "metin": "Güzel görünüyor, gönderirim",
+         "dogru": false,
+         "aciklama": "Kontrol listesi olmadan teslim edilmez."
+        },
+        {
+         "metin": "Kontrolü matbaa yapar",
+         "dogru": false,
+         "aciklama": "Matbaa dosyayı olduğu gibi basabilir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Müşteriyle çalışmak",
+      "maddeler": [
+       "Başka marka kopyalanmaz.",
+       "Revizyon sayısı baştan yazılır.",
+       "Teslimden önce kontrol listesi."
+      ]
+     }
+    },
+    {
+     "id": "y5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Tasarımcı sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "10 pt metin için uygun satır aralığı?",
+       "secenekler": [
+        "8 pt",
+        "12–14 pt",
+        "24 pt",
+        "30 pt"
+       ],
+       "dogru": 1,
+       "aciklama": "Yaklaşık %120–140."
+      },
+      {
+       "soru": "Mavi ile turuncu?",
+       "secenekler": [
+        "Komşu",
+        "Tamamlayıcı",
+        "Monokrom",
+        "Gri"
+       ],
+       "dogru": 1,
+       "aciklama": "Çarkta karşıt."
+      },
+      {
+       "soru": "Rahat okunan satır uzunluğu yaklaşık?",
+       "secenekler": [
+        "10–20 karakter",
+        "45–75 karakter",
+        "150 karakter",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Göz satırı kaybetmez."
+      },
+      {
+       "soru": "Web'de normal metin için önerilen en düşük kontrast?",
+       "secenekler": [
+        "1,5:1",
+        "2:1",
+        "4,5:1",
+        "20:1"
+       ],
+       "dogru": 2,
+       "aciklama": "Erişilebilirlik önerisi."
+      },
+      {
+       "soru": "Başka markanın logosunu kopyalamak?",
+       "secenekler": [
+        "Serbest",
+        "Hak ihlali",
+        "Renk değişirse serbest",
+        "Küçükse serbest"
+       ],
+       "dogru": 1,
+       "aciklama": "Telif ve marka hakkı."
+      },
+      {
+       "soru": "Sonsuz revizyona karşı?",
+       "secenekler": [
+        "Baştan revizyon sayısını yazılı belirlemek",
+        "Müşteriyi engellemek",
+        "Hiç revizyon yapmamak",
+        "Ücretsiz devam"
+       ],
+       "dogru": 0,
+       "aciklama": "Kapsam belirlenir."
+      },
+      {
+       "soru": "Tırnaksız yazı tipi genelde nasıl hissettirir?",
+       "secenekler": [
+        "Klasik",
+        "Sade ve modern",
+        "El yazısı",
+        "Gotik"
+       ],
+       "dogru": 1,
+       "aciklama": "Sans-serif."
+      },
+      {
+       "soru": "Teslimden önce?",
+       "secenekler": [
+        "Hiçbir şey",
+        "Kontrol listesi",
+        "Sadece renk",
+        "Sadece logo"
+       ],
+       "dogru": 1,
+       "aciklama": "Metin, ölçü, renk, taşma, yazı tipi."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Kıdemli",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Kıdemli Tasarımcı",
+    "ikon": "🔷"
+   },
+   "sonraki": "Sanat yönetmeni kademesi açıldı: ekip, bütçe ve geri bildirim.",
+   "gorevler": [
+    {
+     "id": "u1-kimlik",
+     "sablon": "bilgi",
+     "ikon": "🏷️",
+     "baslik": "Kurumsal kimlik ve haklar",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔷",
+       "baslik": "Logo",
+       "metin": "İyi logo sade, akılda kalıcıdır; küçükte de, siyah-beyazda da çalışır.",
+       "terim": "logo"
+      },
+      {
+       "ikon": "📘",
+       "baslik": "Kullanım kılavuzu",
+       "metin": "Logonun boşluk payı, en küçük boyutu, renk kodları ve yazı tipleri bir kılavuzda toplanır. Böylece herkes markayı aynı kullanır.",
+       "terim": "kurumsal kimlik kılavuzu"
+      },
+      {
+       "ikon": "⚖️",
+       "baslik": "Telif hakkı",
+       "metin": "Fotoğraf, çizim, yazı tipi ve tasarımlar eser sahibinindir. Türkiye'de 5846 sayılı Fikir ve Sanat Eserleri Kanunu korur.",
+       "terim": "telif"
+      },
+      {
+       "ikon": "®️",
+       "baslik": "Marka tescili",
+       "metin": "Logo marka olarak TÜRKPATENT'e tescil ettirilebilir. Başkasının markasına benzeyen logo tescil alamaz, dava konusu olabilir.",
+       "terim": "marka"
+      },
+      {
+       "ikon": "🔤",
+       "baslik": "Yazı tipi lisansı",
+       "metin": "Yazı tipleri de yazılımdır ve lisanslıdır. Ücretsiz olan bir yazı tipinin ticari kullanıma izin verip vermediğine bakılır.",
+       "terim": "font lisansı"
+      },
+      {
+       "ikon": "♿",
+       "baslik": "Herkes için tasarım",
+       "metin": "Renk körlüğü olan biri de anlayabilmeli; bilgi yalnızca renkle verilmez. Uygulamalarda dokunma alanları parmak boyutuna uygun olmalıdır.",
+       "terim": "erişilebilirlik"
+      }
+     ]
+    },
+    {
+     "id": "u2-hak",
+     "sablon": "siniflandirma",
+     "ikon": "⚖️",
+     "baslik": "Kullanabilir misin?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her görseli ya da kaynağı doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "evet",
+       "ad": "Kullanılabilir",
+       "ikon": "✅"
+      },
+      {
+       "id": "hayir",
+       "ad": "Kullanılamaz",
+       "ikon": "⛔"
+      },
+      {
+       "id": "lisans",
+       "ad": "Önce lisansına bak",
+       "ikon": "📜"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Kendi çizdiğin illüstrasyon",
+       "ikon": "✏️",
+       "kategori": "evet",
+       "aciklama": "Eser senin."
+      },
+      {
+       "ad": "Müşterinin hakkı kendisine ait logosu",
+       "ikon": "🏷️",
+       "kategori": "evet",
+       "aciklama": "Müşteri verir, onun işi için kullanılır."
+      },
+      {
+       "ad": "Arama motorundan indirilen fotoğraf",
+       "ikon": "🔎",
+       "kategori": "hayir",
+       "aciklama": "Sahibinin izni yok."
+      },
+      {
+       "ad": "Ünlü bir çizgi film karakteri",
+       "ikon": "🐭",
+       "kategori": "hayir",
+       "aciklama": "Karakterler korunur."
+      },
+      {
+       "ad": "Başka bir firmanın logosuna benzetilmiş logo",
+       "ikon": "🪞",
+       "kategori": "hayir",
+       "aciklama": "Marka ve telif ihlali."
+      },
+      {
+       "ad": "\"Ücretsiz\" diye paylaşılmış yazı tipi",
+       "ikon": "🔤",
+       "kategori": "lisans",
+       "aciklama": "Ticari kullanım ayrıca izin isteyebilir."
+      },
+      {
+       "ad": "Stok görsel sitesinden alınan fotoğraf",
+       "ikon": "🖼️",
+       "kategori": "lisans",
+       "aciklama": "Lisans türü kullanım alanını belirler."
+      },
+      {
+       "ad": "Açık lisanslı ikon seti",
+       "ikon": "🧩",
+       "kategori": "lisans",
+       "aciklama": "Atıf gibi şartları olabilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Telif ve lisans",
+      "maddeler": [
+       "Kendi eserin ve müşterinin hakları: kullanılabilir.",
+       "İzinsiz görsel, karakter, benzer logo: kullanılamaz.",
+       "Ücretsiz ve stok kaynaklar: önce lisans."
+      ]
+     }
+    },
+    {
+     "id": "u3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Ölçü ve çözünürlük hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "1 inç kaç cm'dir?",
+       "secenekler": [
+        "1",
+        "2,54",
+        "10",
+        "25,4"
+       ],
+       "dogru": 1,
+       "aciklama": "1 inç = 2,54 cm."
+      },
+      {
+       "soru": "A4 (210 mm) genişliği 300 dpi'de kaç piksel? (210 mm ≈ 8,27 inç)",
+       "secenekler": [
+        "630",
+        "1.240",
+        "2.480",
+        "8.270"
+       ],
+       "dogru": 2,
+       "aciklama": "8,27 × 300 ≈ 2.480 piksel."
+      },
+      {
+       "soru": "10 cm genişliğindeki bir görsel 300 dpi baskı için kaç piksel olmalı?",
+       "secenekler": [
+        "300",
+        "Yaklaşık 750",
+        "Yaklaşık 1.181",
+        "3.000"
+       ],
+       "dogru": 2,
+       "aciklama": "10 ÷ 2,54 × 300 ≈ 1.181 piksel."
+      },
+      {
+       "soru": "A4 (210 × 297 mm) her kenarda 3 mm taşma payıyla kaç mm olur?",
+       "secenekler": [
+        "213 × 300",
+        "216 × 303",
+        "210 × 297",
+        "220 × 310"
+       ],
+       "dogru": 1,
+       "aciklama": "Her iki yana 3 mm: 210 + 6 = 216, 297 + 6 = 303."
+      },
+      {
+       "soru": "1.200 piksel genişliğindeki fotoğraf 300 dpi'de en fazla kaç cm basılır?",
+       "secenekler": [
+        "4",
+        "Yaklaşık 10",
+        "Yaklaşık 20",
+        "30"
+       ],
+       "dogru": 1,
+       "aciklama": "1.200 ÷ 300 = 4 inç; 4 × 2,54 ≈ 10,2 cm."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ölçü hesabı",
+      "maddeler": [
+       "Piksel = inç × dpi.",
+       "İnç = cm ÷ 2,54.",
+       "Taşma payı her kenara eklenir."
+      ]
+     }
+    },
+    {
+     "id": "u4-logo",
+     "sablon": "siralama",
+     "ikon": "🔷",
+     "baslik": "Logo tasarla",
+     "aciklama": "Yeni açılan bir fırın için logo tasarlayacaksın. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "brif",
+       "ikon": "📋",
+       "metin": "Müşteriyle konuş, brifi ve rakiplerin logolarını incele",
+       "neden": "Benzer logolardan uzak durmak için rakipleri bilmelisin.",
+       "ipucu": "Önce markayı tanı."
+      },
+      {
+       "id": "eskiz",
+       "ikon": "✏️",
+       "metin": "Onlarca eskizle fikir üret, en iyi birkaçını seç",
+       "neden": "İlk fikir nadiren en iyisidir.",
+       "ipucu": "Marka tanındı; fikir."
+      },
+      {
+       "id": "vektor",
+       "ikon": "🔷",
+       "metin": "Seçilen fikri vektör olarak temiz çiz",
+       "neden": "Logo her boyutta keskin olmalı.",
+       "ipucu": "Fikir seçildi; ekrana geçir."
+      },
+      {
+       "id": "test",
+       "ikon": "⚫",
+       "metin": "Siyah-beyazda ve çok küçük boyutta dene",
+       "neden": "Renksiz ve küçükken de tanınmalı.",
+       "ipucu": "Çizildi; her yerde çalışır mı?"
+      },
+      {
+       "id": "renk",
+       "ikon": "🎨",
+       "metin": "Renk ve yazı tipini belirle",
+       "neden": "Renk, biçim sağlam olduktan sonra eklenir.",
+       "ipucu": "Biçim sağlam; şimdi renk."
+      },
+      {
+       "id": "kilavuz",
+       "ikon": "📘",
+       "metin": "Kullanım kılavuzunu hazırla, logoyu farklı biçimlerde teslim et",
+       "neden": "Herkes logoyu aynı ve doğru kullanmalı.",
+       "ipucu": "Logo hazır; teslim."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Logo süreci",
+      "maddeler": [
+       "Brif ve rakipler → eskiz → vektör → siyah-beyaz ve küçük boyut testi → renk → kılavuz ve teslim.",
+       "Logo önce renksiz çalışmalı."
+      ]
+     }
+    },
+    {
+     "id": "u5-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Kıdemlinin günü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Kıdemli tasarımcı olarak zor işler ve genç tasarımcılar senin sorumluluğunda.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Matbaadan gelen afişlerde renkler ekrandakinden çok soluk çıkmış.",
+       "secenekler": [
+        {
+         "metin": "Dosyanın RGB hazırlandığını fark eder, CMYK'ya çevirip renk provası isterim",
+         "dogru": true,
+         "aciklama": "Parlak ekran renklerinin bir kısmı mürekkeple basılamaz. Önemli işlerde baskıdan önce prova alınır."
+        },
+        {
+         "metin": "Matbaayı suçlarım",
+         "dogru": false,
+         "aciklama": "Önce dosyayı kontrol etmek gerekir."
+        },
+        {
+         "metin": "Ekranın parlaklığını kısarım",
+         "dogru": false,
+         "aciklama": "Sorun ekran değil dosya."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Genç tasarımcı açık gri zemine çok ince, açık gri yazı koymuş: \"Böyle şık duruyor.\"",
+       "secenekler": [
+        {
+         "metin": "Kontrastı ölçüp gösterir, okunur bir renk ve kalınlık öneririm",
+         "dogru": true,
+         "aciklama": "Okunmayan yazı ne kadar şık görünse de işini yapmaz."
+        },
+        {
+         "metin": "Şık duruyorsa kalsın",
+         "dogru": false,
+         "aciklama": "Yaşlılar ve görme güçlüğü olanlar okuyamaz."
+        },
+        {
+         "metin": "Kendim hiçbir şey söylemeden düzeltirim",
+         "dogru": false,
+         "aciklama": "Nedenini anlatmazsan öğrenemez."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Müşteri, hiç izin almadan bir fotoğrafçının fotoğrafını afişe koymanızı istiyor.",
+       "secenekler": [
+        {
+         "metin": "Fotoğrafçıdan izin ve lisans almayı ya da lisanslı başka görsel kullanmayı öneririm",
+         "dogru": true,
+         "aciklama": "İzinsiz kullanım tazminat davasına yol açabilir."
+        },
+        {
+         "metin": "Küçük basılacak, sorun olmaz",
+         "dogru": false,
+         "aciklama": "Boyut, hakkı değiştirmez."
+        },
+        {
+         "metin": "Kaynak yazarsam yeter",
+         "dogru": false,
+         "aciklama": "Kaynak göstermek izin yerine geçmez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kıdemli olmak",
+      "maddeler": [
+       "Baskı CMYK; önemli işte renk provası.",
+       "Şıklık okunurluktan önce gelmez.",
+       "Kaynak göstermek izin değildir."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Kıdemli sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "İyi logo siyah-beyazda?",
+       "secenekler": [
+        "Çalışmaz",
+        "Çalışmalı",
+        "Önemsiz",
+        "Sadece renkli kullanılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Renksiz de tanınmalı."
+      },
+      {
+       "soru": "Türkiye'de eserleri koruyan kanun?",
+       "secenekler": [
+        "5846 sayılı FSEK",
+        "Trafik Kanunu",
+        "KDV Kanunu",
+        "Tapu Kanunu"
+       ],
+       "dogru": 0,
+       "aciklama": "Fikir ve Sanat Eserleri Kanunu."
+      },
+      {
+       "soru": "Logo marka tescili nereye yapılır?",
+       "secenekler": [
+        "Belediye",
+        "TÜRKPATENT",
+        "Noter",
+        "Vergi dairesi"
+       ],
+       "dogru": 1,
+       "aciklama": "Türk Patent ve Marka Kurumu."
+      },
+      {
+       "soru": "15 cm genişlik, 300 dpi kaç piksel?",
+       "secenekler": [
+        "Yaklaşık 590",
+        "Yaklaşık 1.772",
+        "4.500",
+        "15.000"
+       ],
+       "dogru": 1,
+       "aciklama": "15 ÷ 2,54 × 300 ≈ 1.772."
+      },
+      {
+       "soru": "Baskıda renkler soluk çıktı. Olası neden?",
+       "secenekler": [
+        "Dosya RGB hazırlanmış",
+        "Yazı tipi",
+        "Dosya adı",
+        "Kâğıt rengi her zaman"
+       ],
+       "dogru": 0,
+       "aciklama": "RGB renklerin bir kısmı basılamaz."
+      },
+      {
+       "soru": "Kaynak göstermek izin yerine geçer mi?",
+       "secenekler": [
+        "Evet",
+        "Hayır",
+        "Bazen",
+        "Küçükse evet"
+       ],
+       "dogru": 1,
+       "aciklama": "İzin ayrıca alınır."
+      },
+      {
+       "soru": "\"Ücretsiz\" yazı tipi için?",
+       "secenekler": [
+        "Her yerde serbest",
+        "Ticari kullanım lisansına bakılır",
+        "Asla kullanılmaz",
+        "Sadece başlıkta serbest"
+       ],
+       "dogru": 1,
+       "aciklama": "Lisans şartı."
+      },
+      {
+       "soru": "Logo sürecinde renk ne zaman eklenir?",
+       "secenekler": [
+        "İlk adımda",
+        "Biçim sağlamlaşınca",
+        "Hiç",
+        "Teslimden sonra"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce biçim."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Sanat yönetmeni",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "Sanat Yönetmeni",
+    "ikon": "🎬"
+   },
+   "sonraki": "Stajyerlikten sanat yönetmenliğine tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "b1-yonetim",
+     "sablon": "bilgi",
+     "ikon": "🎬",
+     "baslik": "Sanat yönetmenliği",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🧭",
+       "baslik": "Yaratıcı yön",
+       "metin": "Sanat yönetmeni bir kampanyanın görsel dilini belirler ve ekibin işlerinin bu dile uymasını sağlar.",
+       "terim": "konsept"
+      },
+      {
+       "ikon": "🗣️",
+       "baslik": "Geri bildirim",
+       "metin": "İyi geri bildirim net ve uygulanabilirdir: neyin neden değişmesi gerektiğini söyler, kişiyi değil işi konuşur.",
+       "terim": "yapıcı eleştiri"
+      },
+      {
+       "ikon": "💰",
+       "baslik": "Bütçe ve süre",
+       "metin": "Fotoğraf çekimi, illüstrasyon, baskı ve ekip saatleri bütçeye göre planlanır.",
+       "terim": "bütçe"
+      },
+      {
+       "ikon": "🤝",
+       "baslik": "Müşteri ilişkisi",
+       "metin": "Sunumda yalnızca tasarım değil, tasarımın neden işe yarayacağı anlatılır.",
+       "terim": "sunum"
+      },
+      {
+       "ikon": "🧑‍🎨",
+       "baslik": "Ekip",
+       "metin": "Sanat yönetmeni tasarımcıları, fotoğrafçıları ve illüstratörleri bir araya getirir; herkesin güçlü yanını kullanır.",
+       "terim": "ekip yönetimi"
+      },
+      {
+       "ikon": "📜",
+       "baslik": "Sözleşme",
+       "metin": "Kimin hangi hakları alacağı, kaç revizyon yapılacağı ve teslim tarihi yazılı olarak belirlenir.",
+       "terim": "sözleşme"
+      }
+     ]
+    },
+    {
+     "id": "b2-geri",
+     "sablon": "siniflandirma",
+     "ikon": "🗣️",
+     "baslik": "Bu geri bildirim nasıl?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her geri bildirimi doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "net",
+       "ad": "Net ve uygulanabilir",
+       "ikon": "✅"
+      },
+      {
+       "id": "belirsiz",
+       "ad": "Belirsiz",
+       "ikon": "❓"
+      },
+      {
+       "id": "kirici",
+       "ad": "Kişisel ve kırıcı",
+       "ikon": "⛔"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Tarih ilk bakışta okunsun diye başlığın yarısı kadar büyüt",
+       "ikon": "📏",
+       "kategori": "net",
+       "aciklama": "Ne ve neden belli."
+      },
+      {
+       "ad": "Logo ile metin arasında daha fazla boşluk bırak",
+       "ikon": "↔️",
+       "kategori": "net",
+       "aciklama": "Uygulanabilir."
+      },
+      {
+       "ad": "Kontrast düşük, yazıyı açık renge çevir",
+       "ikon": "🌗",
+       "kategori": "net",
+       "aciklama": "Gerekçesi var."
+      },
+      {
+       "ad": "Biraz daha vurucu olsun",
+       "ikon": "💥",
+       "kategori": "belirsiz",
+       "aciklama": "Neyin değişeceği belli değil."
+      },
+      {
+       "ad": "Bir şey eksik ama ne bilmiyorum",
+       "ikon": "🤷",
+       "kategori": "belirsiz",
+       "aciklama": "Soru sorarak netleştirilmeli."
+      },
+      {
+       "ad": "Daha modern yap",
+       "ikon": "✨",
+       "kategori": "belirsiz",
+       "aciklama": "Modernin ne demek olduğu sorulmalı."
+      },
+      {
+       "ad": "Bu çok amatörce, sen bu işi bilmiyorsun",
+       "ikon": "👎",
+       "kategori": "kirici",
+       "aciklama": "İşi değil kişiyi hedef alıyor."
+      },
+      {
+       "ad": "Senden daha iyisini beklerdim",
+       "ikon": "😞",
+       "kategori": "kirici",
+       "aciklama": "Yol göstermiyor, kırıyor."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Geri bildirim",
+      "maddeler": [
+       "Net: ne, neden, nasıl.",
+       "Belirsiz: soru sorarak netleştir.",
+       "İşi konuş, kişiyi değil."
+      ]
+     }
+    },
+    {
+     "id": "b3-butce",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Proje bütçesi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Bir iş 12 saat sürüyor, saat ücreti 400 TL (örnek). İşçilik?",
+       "secenekler": [
+        "412 TL",
+        "3.600 TL",
+        "4.800 TL",
+        "12.000 TL"
+       ],
+       "dogru": 2,
+       "aciklama": "12 × 400 = 4.800 TL."
+      },
+      {
+       "soru": "1.000 afişin baskısı 3.000 TL. Afiş başı maliyet?",
+       "secenekler": [
+        "0,3 TL",
+        "3 TL",
+        "30 TL",
+        "300 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "3.000 ÷ 1.000 = 3 TL."
+      },
+      {
+       "soru": "Toplam maliyet 8.000 TL, %25 kâr eklenecek. Teklif?",
+       "secenekler": [
+        "8.025 TL",
+        "8.250 TL",
+        "10.000 TL",
+        "12.000 TL"
+       ],
+       "dogru": 2,
+       "aciklama": "8.000 × 1,25 = 10.000 TL."
+      },
+      {
+       "soru": "Anlaşma 2 revizyon. Müşteri 5 revizyon istedi, ek revizyon başı 500 TL. Ek ücret?",
+       "secenekler": [
+        "500 TL",
+        "1.000 TL",
+        "1.500 TL",
+        "2.500 TL"
+       ],
+       "dogru": 2,
+       "aciklama": "5 − 2 = 3; 3 × 500 = 1.500 TL."
+      },
+      {
+       "soru": "Ekipte 3 tasarımcı var, her biri haftada 40 saat. 90 saatlik iş en erken kaç haftada biter?",
+       "secenekler": [
+        "Yaklaşık 0,75 hafta",
+        "2 hafta",
+        "3 hafta",
+        "90 hafta"
+       ],
+       "dogru": 0,
+       "aciklama": "Haftalık kapasite 120 saat; 90 ÷ 120 = 0,75 hafta (işi bölmek mümkünse)."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Bütçe",
+      "maddeler": [
+       "İşçilik = saat × saat ücreti.",
+       "Teklif = maliyet × (1 + kâr oranı).",
+       "Revizyon sınırı ve ek ücret baştan yazılır."
+      ]
+     }
+    },
+    {
+     "id": "b4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir dönem",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Sanat yönetmeni olarak hem ekibin hem kampanyanın sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri, yarın sabaha bütün kampanyanın değişmesini istiyor.",
+       "secenekler": [
+        {
+         "metin": "Neyin acil olduğunu ayırır, gerçekçi bir takvim ve ek bütçe öneririm",
+         "dogru": true,
+         "aciklama": "Her şeyi bir gecede değiştirmek kaliteyi düşürür; öncelik belirlemek çözümdür."
+        },
+        {
+         "metin": "Ekibe sabaha kadar çalışmasını söylerim",
+         "dogru": false,
+         "aciklama": "Tükenmiş ekip hata yapar."
+        },
+        {
+         "metin": "Hiçbir şey söylemeden reddederim",
+         "dogru": false,
+         "aciklama": "Konuşup çözüm önerilir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Ekibe yeni katılan tasarımcının işi kampanyanın diline uymuyor.",
+       "secenekler": [
+        {
+         "metin": "Kampanya kılavuzunu birlikte inceler, örnekler üzerinden net geri bildirim veririm",
+         "dogru": true,
+         "aciklama": "Yol göstermek, işi kendin baştan yapmaktan iyidir."
+        },
+        {
+         "metin": "İşini çöpe atar, kendim yaparım",
+         "dogru": false,
+         "aciklama": "Ekip öğrenmez, sen tükenirsin."
+        },
+        {
+         "metin": "Herkesin önünde eleştiririm",
+         "dogru": false,
+         "aciklama": "Kırıcı eleştiri ekibi küstürür."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir yarışmada ekibinin işi, senin adınla gönderilmek isteniyor.",
+       "secenekler": [
+        {
+         "metin": "İşe emeği geçenlerin adlarını da yazarım",
+         "dogru": true,
+         "aciklama": "Emeği görünür kılmak hem dürüstlük hem ekip moralidir."
+        },
+        {
+         "metin": "Sadece benim adım yeter",
+         "dogru": false,
+         "aciklama": "Başkasının emeği sahiplenilmez."
+        },
+        {
+         "metin": "Hiç kimsenin adını yazmam",
+         "dogru": false,
+         "aciklama": "Emek görünmez olur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Sanat yönetmeni olmak",
+      "maddeler": [
+       "Acil istekte öncelik ve takvim konuşulur.",
+       "Yeni ekip üyesine kılavuzla yol gösterilir.",
+       "Emeği geçenlerin adı yazılır."
+      ]
+     }
+    },
+    {
+     "id": "b5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Baskı için renk modeli?",
+       "secenekler": [
+        "RGB",
+        "CMYK",
+        "HEX",
+        "Gri"
+       ],
+       "dogru": 1,
+       "aciklama": "Mürekkep CMYK."
+      },
+      {
+       "soru": "Logo hangi yöntemle çizilir?",
+       "secenekler": [
+        "Piksel",
+        "Vektör",
+        "JPG",
+        "Ekran görüntüsü"
+       ],
+       "dogru": 1,
+       "aciklama": "Vektör."
+      },
+      {
+       "soru": "Afişte ilk adım?",
+       "secenekler": [
+        "Renk",
+        "Brif",
+        "PDF",
+        "Baskı"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce işi anla."
+      },
+      {
+       "soru": "20 cm, 300 dpi kaç piksel?",
+       "secenekler": [
+        "Yaklaşık 600",
+        "Yaklaşık 2.362",
+        "6.000",
+        "20.000"
+       ],
+       "dogru": 1,
+       "aciklama": "20 ÷ 2,54 × 300 ≈ 2.362."
+      },
+      {
+       "soru": "Kırmızı ve yeşil?",
+       "secenekler": [
+        "Komşu",
+        "Tamamlayıcı",
+        "Monokrom",
+        "Nötr"
+       ],
+       "dogru": 1,
+       "aciklama": "Karşıt renkler."
+      },
+      {
+       "soru": "\"Daha vurucu olsun\" geri bildirimi?",
+       "secenekler": [
+        "Net",
+        "Belirsiz",
+        "Kırıcı",
+        "Teknik"
+       ],
+       "dogru": 1,
+       "aciklama": "Soruyla netleştirilir."
+      },
+      {
+       "soru": "Maliyet 6.000 TL, %20 kâr. Teklif?",
+       "secenekler": [
+        "6.020 TL",
+        "6.200 TL",
+        "7.200 TL",
+        "12.000 TL"
+       ],
+       "dogru": 2,
+       "aciklama": "6.000 × 1,2 = 7.200 TL."
+      },
+      {
+       "soru": "İnternetten bulunan fotoğrafa kaynak yazmak?",
+       "secenekler": [
+        "İzin yerine geçer",
+        "İzin yerine geçmez",
+        "Küçükse geçer",
+        "Siyah-beyazsa geçer"
+       ],
+       "dogru": 1,
+       "aciklama": "İzin ayrıca alınır."
+      },
+      {
+       "soru": "Taşma payı genellikle?",
+       "secenekler": [
+        "0 mm",
+        "3 mm",
+        "3 cm",
+        "10 cm"
+       ],
+       "dogru": 1,
+       "aciklama": "Kenarda beyaz kalmasın diye."
+      },
+      {
+       "soru": "Ekibin işini kendi adınla göndermek?",
+       "secenekler": [
+        "Doğru",
+        "Yanlış; emeği geçenler yazılır",
+        "Bazen",
+        "Ödülse doğru"
+       ],
+       "dogru": 1,
+       "aciklama": "Emek sahiplenilmez."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
