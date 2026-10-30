@@ -6,7 +6,7 @@ import { SORULAR, CEVAPLAR, TIPLER, puanla, analiz, pusulaYaz } from './motor/pu
 import { MESLEKLER, meslekBul } from './icerik';
 import { ses, titret } from './motor/his';
 
-const ANA = '#1f3a5f'; const VURGU = '#e0a030';
+const ANA = '#0a1f44'; const VURGU = '#3b82f6';
 const NOT = 'Bu test ilgi alanlarını gösterir; bilimsel bir tanı veya kariyer danışmanlığı yerine geçmez.';
 
 export function Pusula({ kayit, onGeri, onMeslek }) {
@@ -57,7 +57,7 @@ function Test({ onBitti, onGeri }) {
           const secili = cevaplar[i] === c.deger;
           return (
             <Pressable key={c.deger} onPress={() => sec(c.deger)}
-              style={[st.secenek, { flexDirection: 'row', alignItems: 'center', backgroundColor: secili ? '#fdf3dc' : '#fff', borderColor: secili ? VURGU : R.cizgi }]}>
+              style={[st.secenek, { flexDirection: 'row', alignItems: 'center', backgroundColor: secili ? '#eef5ff' : '#fff', borderColor: secili ? VURGU : R.cizgi }]}>
               <View style={{ width: 34, height: 34, borderRadius: 17, marginRight: 14, alignItems: 'center', justifyContent: 'center',
                 backgroundColor: secili ? c.renk : '#fff', borderWidth: 2, borderColor: c.renk }}>
                 <Text style={{ fontSize: 17, fontWeight: '900', color: secili ? '#fff' : c.renk }}>{c.ikon}</Text>
@@ -82,7 +82,7 @@ function Sonuc({ puanlar, onGeri, onMeslek, onTekrar }) {
       <Giris><Text style={{ color: R.soluk, fontWeight: '800', fontSize: 12, letterSpacing: 1 }}>SENİN İLGİ TİPİN</Text>
         <Text style={[st.baslik, { marginTop: 4 }]}>{TIPLER[t1].ad} – {TIPLER[t2].ad}</Text>
         <Text style={[st.alt, { marginTop: 6 }]}>{TIPLER[t1].tanim} {TIPLER[t2].tanim}</Text></Giris>
-      {a.dengeli ? <View style={[st.aciklama, { backgroundColor: '#fdf3dc', borderColor: VURGU }]}>
+      {a.dengeli ? <View style={[st.aciklama, { backgroundColor: '#eef5ff', borderColor: VURGU }]}>
         <Text style={{ color: R.yazi, fontSize: 14 }}>Cevapların birbirine çok yakın çıktı, bu yüzden sonuç net değil. Testi daha kararlı cevaplarla yeniden çözebilirsin.</Text></View> : null}
 
       {paket ? <Giris gecikme={120}>

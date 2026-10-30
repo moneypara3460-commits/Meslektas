@@ -1,12 +1,12 @@
 // Meslektaş — her mesleği aynı motorla oynatan oyun.
 // Bir meslek = icerik/ klasöründe bir JSON paketi. Motor paketi okur, şablonlar görevleri oynatır.
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { View, Text, Pressable, TextInput, Animated, Easing, BackHandler, ActivityIndicator } from 'react-native';
+import { View, Text, Pressable, TextInput, Animated, Easing, BackHandler, ActivityIndicator, ScrollView, useWindowDimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MESLEKLER } from './icerik';
 import { SABLONLAR, SABLON_ETIKET } from './sablonlar';
-import { TemaContext, Ekran, Ust, Dugme, Kart, Cubuk, Giris, Karakter, R, st } from './ui';
+import { TemaContext, Ekran, Ust, Dugme, Kart, Cubuk, Giris, Karakter, R, st, MARKA, Logo, Gradyan } from './ui';
 import { ilerlemeOku, gorevBitti, esitle } from './motor/ilerleme';
 import { gorevAcik, kademeAcik, kademeBitti, kademeXp, toplamXp, aktifKademe, maxXp } from './motor/kurallar';
 import { supabase } from './motor/supabase';
@@ -16,10 +16,14 @@ import { Linking } from 'react-native';
 import { Pusula } from './Pusula';
 import { pusulaOku, analiz, TIPLER } from './motor/pusula';
 
-const VARSAYILAN_TEMA = { ana: '#1f3a5f', vurgu: '#e0a030', zemin: '#f3f1ec' };
+const VARSAYILAN_TEMA = { ana: MARKA.lacivert, vurgu: MARKA.mavi2, zemin: MARKA.zemin };
+// Her mesleğin simgesi (tanıtım sitesiyle aynı)
+const IKON = { barista: '☕', asci: '🍳', servis: '🍽️', mimar: '📐', insaat: '🏗️', freze: '⚙️', kaynak: '🔥', yazilim: '💻', grafik: '🎨', muhasebe: '📊', itfaiye: '🚒', satis: '🛒' };
+const ikonu = (p) => IKON[p.meslek.id] || p.kademeler[1]?.rozet?.ikon || '⭐';
+const kategori = (p) => p.meslek.kategori.replace(/i/g, 'İ').toUpperCase();
 
 export default function App() {
-  const [ekran, setEkran] = useState({ ad: 'ana' });
+  const [ekran, setEkran] = useState({ ad: 'acilis' });
   const [paket, setPaket] = useState(null);
   const [sonuclar, setSonuclar] = useState({});
   const [hepsi, setHepsi] = useState({});
@@ -36,17 +40,19 @@ export default function App() {
 
   useEffect(() => {
     const geri = BackHandler.addEventListener('hardwareBackPress', () => {
-      if (ekran.ad === 'ana') return false;
+      if (ekran.ad === 'ana' || ekran.ad === 'acilis') return false;
       setEkran(ekran.ad === 'harita' || ekran.ad === 'hesap' || ekran.ad === 'kaynak' || ekran.ad === 'pusula' ? { ad: 'ana' } : { ad: 'harita' }); return true;
     });
     return () => geri.remove();
   }, [ekran]);
 
   const meslekAc = async (p) => { setPaket(p); setSonuclar(await ilerlemeOku(p.meslek.id)); setEkran({ ad: 'harita', ki: null }); };
-  const tema = paket && ekran.ad !== 'ana' && ekran.ad !== 'hesap' && ekran.ad !== 'pusula' ? { ...VARSAYILAN_TEMA, ...paket.meslek.renkler } : VARSAYILAN_TEMA;
+  const tema = VARSAYILAN_TEMA; // Uygulamanın tamamı marka renklerinde
+  const koyuUst = ['acilis', 'ana', 'hesap', 'harita'].includes(ekran.ad);
 
   let icerik;
-  if (ekran.ad === 'ana') icerik = <AnaEkran hepsi={hepsi} oturum={oturum} onMeslek={meslekAc} onHesap={() => setEkran({ ad: 'hesap' })} onKaynak={() => setEkran({ ad: 'kaynak' })}
+  if (ekran.ad === 'acilis') icerik = <Acilis onBasla={() => setEkran({ ad: 'ana' })} onHesap={() => setEkran({ ad: 'hesap' })} oturum={oturum} />;
+  else if (ekran.ad === 'ana') icerik = <AnaEkran hepsi={hepsi} oturum={oturum} onMeslek={meslekAc} onHesap={() => setEkran({ ad: 'hesap' })} onKaynak={() => setEkran({ ad: 'kaynak' })}
     pusula={pusula} onPusula={() => setEkran({ ad: 'pusula' })} />;
   else if (ekran.ad === 'pusula') icerik = <Pusula kayit={pusula} onGeri={() => { pusulaOku().then(setPusula); setEkran({ ad: 'ana' }); }}
     onMeslek={(p) => { pusulaOku().then(setPusula); meslekAc(p); }} />;
@@ -71,54 +77,178 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <TemaContext.Provider value={tema}>
-        <StatusBar style="dark" />
+        <StatusBar style={koyuUst ? "light" : "dark"} />
         {icerik}
       </TemaContext.Provider>
     </SafeAreaProvider>
   );
 }
 
+// ---------------- Açılış ekranı ----------------
+function Acilis({ onBasla, onHesap, oturum }) {
+  const ins = useSafeAreaInsets();
+  const yuz = useRef(new Animated.Value(0)).current; const gir = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    Animated.timing(gir, { toValue: 1, duration: 700, easing: Easing.out(Easing.cubic), useNativeDriver: true }).start();
+    Animated.loop(Animated.sequence([
+      Animated.timing(yuz, { toValue: 1, duration: 2200, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
+      Animated.timing(yuz, { toValue: 0, duration: 2200, easing: Easing.inOut(Easing.sin), useNativeDriver: true })])).start();
+  }, []);
+  const kay = (d) => ({ transform: [{ translateY: yuz.interpolate({ inputRange: [0, 1], outputRange: [0, d] }) }] });
+  const cip = (ik, ust, alt, stil, d, beyaz) => (
+    <Animated.View style={[{ position: 'absolute', flexDirection: 'row', alignItems: 'center', paddingVertical: 9, paddingHorizontal: 12, borderRadius: 16,
+      backgroundColor: beyaz ? '#fff' : 'rgba(255,255,255,0.12)', borderWidth: 1, borderColor: beyaz ? '#fff' : 'rgba(255,255,255,0.28)' }, stil, kay(d)]}>
+      <Text style={{ fontSize: 20, marginRight: 8 }}>{ik}</Text>
+      <View><Text style={{ fontWeight: '900', fontSize: 13, color: beyaz ? MARKA.lacivert : '#fff' }}>{ust}</Text>
+        <Text style={{ fontSize: 10.5, fontWeight: '600', color: beyaz ? R.soluk : '#bcd3f3' }}>{alt}</Text></View>
+    </Animated.View>
+  );
+  return (
+    <View style={{ flex: 1, backgroundColor: MARKA.lacivert }}>
+      <Gradyan renkler={['#1f4fa3', MARKA.lacivert2, MARKA.lacivert]} />
+      <View style={{ flex: 1, paddingTop: ins.top + 16, paddingHorizontal: 22 }}>
+        <View style={{ height: 320, alignItems: 'center', justifyContent: 'center' }}>
+          <View style={{ position: 'absolute', width: 300, height: 300, borderRadius: 150, borderWidth: 1, borderColor: 'rgba(124,196,255,0.25)', borderStyle: 'dashed' }} />
+          <View style={{ position: 'absolute', width: 220, height: 220, borderRadius: 110, backgroundColor: 'rgba(59,130,246,0.30)' }} />
+          <Animated.View style={{ opacity: gir, transform: [{ scale: gir.interpolate({ inputRange: [0, 1], outputRange: [0.85, 1] }) }] }}>
+            <Logo yukseklik={130} yazi={false} />
+          </Animated.View>
+          {cip('🏅', 'Çırak Barista', 'Rozet kazandın!', { top: 4, left: 0 }, 8, true)}
+          {cip('⚡', '+20 XP', 'Mükemmel sıralama', { top: 70, right: 0 }, -10)}
+          {cip('⭐', '3 / 3 yıldız', 'Kademe sınavı', { bottom: 40, left: 0 }, -8)}
+          {cip('🧭', 'Pusula', 'Sana en yakın: Aşçı', { bottom: 0, right: 4 }, 10, true)}
+        </View>
+        <Animated.View style={{ opacity: gir, alignItems: 'center', marginTop: 14 }}>
+          <Text style={{ fontSize: 42, fontWeight: '900', color: '#fff', letterSpacing: -1 }}>Meslek<Text style={{ color: MARKA.gok }}>taş</Text></Text>
+          <Text style={{ fontSize: 24, fontWeight: '900', color: '#fff', textAlign: 'center', marginTop: 8, lineHeight: 30 }}>
+            Bir mesleği <Text style={{ color: MARKA.gok }}>oynayarak</Text> öğren.</Text>
+          <View style={{ flexDirection: 'row', marginTop: 16 }}>
+            {[[String(MESLEKLER.length), 'meslek'], ['5', 'kademe'], ['30', 'soruluk Pusula']].map(([a, b], j) => (
+              <View key={j} style={{ alignItems: 'center', marginHorizontal: 12 }}>
+                <Text style={{ color: '#fff', fontSize: 24, fontWeight: '900' }}>{a}</Text>
+                <Text style={{ color: '#a9c2e6', fontSize: 12 }}>{b}</Text>
+              </View>))}
+          </View>
+        </Animated.View>
+        <View style={{ flex: 1, minHeight: 20 }} />
+        <View style={{ paddingBottom: ins.bottom + 22 }}>
+          <Pressable onPress={onBasla} style={({ pressed }) => ({ backgroundColor: '#fff', borderRadius: 18, paddingVertical: 17, alignItems: 'center', borderBottomWidth: 4, borderColor: '#c9dbf6', transform: [{ scale: pressed ? 0.97 : 1 }] })}>
+            <Text style={{ fontSize: 18, fontWeight: '900', color: MARKA.lacivert }}>Hadi başlayalım  →</Text>
+          </Pressable>
+          <Pressable onPress={oturum ? onBasla : onHesap} hitSlop={10} style={{ marginTop: 16, alignItems: 'center' }}>
+            <Text style={{ color: '#c8d9f2', fontWeight: '700' }}>{oturum ? `👤 ${oturum.user.email}` : 'Hesabın var mı? Giriş yap'}</Text>
+          </Pressable>
+        </View>
+      </View>
+    </View>
+  );
+}
+
 // ---------------- Ana ekran: meslek seçimi ----------------
 function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak, pusula, onPusula }) {
-  const sallan = useRef(new Animated.Value(0)).current;
-  useEffect(() => { Animated.loop(Animated.sequence([
-    Animated.timing(sallan, { toValue: 1, duration: 1600, easing: Easing.inOut(Easing.sin), useNativeDriver: true }),
-    Animated.timing(sallan, { toValue: 0, duration: 1600, easing: Easing.inOut(Easing.sin), useNativeDriver: true })])).start(); }, []);
+  const ins = useSafeAreaInsets(); const { width } = useWindowDimensions();
+  const kartG = (Math.min(width, 520) - 18 * 2 - 12) / 2;
+  const veriler = MESLEKLER.map((p) => {
+    const s = hepsi[p.meslek.id] || {}; const xp = toplamXp(p, s);
+    const max = p.kademeler.reduce((t, k) => t + k.gorevler.reduce((a, g) => a + maxXp(g), 0), 0);
+    const rozet = p.kademeler.filter((_, j) => kademeBitti(p, j, s)).length;
+    return { p, s, xp, max, rozet, ki: aktifKademe(p, s) };
+  });
+  const toplamXpHepsi = veriler.reduce((t, v) => t + v.xp, 0); const toplamRozet = veriler.reduce((t, v) => t + v.rozet, 0);
+  const devam = veriler.filter((v) => v.xp > 0 && v.xp < v.max).sort((a, b) => b.xp / b.max - a.xp / a.max)[0];
   return (
-    <Ekran>
-      <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 6 }}>
-        <View style={{ width: 46, height: 46, borderRadius: 14, backgroundColor: VARSAYILAN_TEMA.ana, alignItems: 'center', justifyContent: 'center', marginRight: 12 }}>
-          <Text style={{ color: VARSAYILAN_TEMA.vurgu, fontSize: 26, fontWeight: '900' }}>M</Text></View>
-        <Text style={[st.baslik, { flex: 1 }]}>Meslektaş</Text>
-        <Pressable onPress={onHesap} hitSlop={10} style={{ paddingHorizontal: 12, paddingVertical: 8, borderRadius: 99, backgroundColor: '#fff', borderWidth: 1, borderColor: R.cizgi }}>
-          <Text style={{ fontWeight: '800', color: VARSAYILAN_TEMA.ana }}>{oturum ? '👤 Hesabım' : 'Giriş yap'}</Text></Pressable>
+    <View style={{ flex: 1, backgroundColor: MARKA.zemin }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 30 + ins.bottom }}>
+        <View style={{ paddingTop: ins.top + 10, paddingHorizontal: 18, paddingBottom: 70, borderBottomLeftRadius: 30, borderBottomRightRadius: 30, overflow: 'hidden', backgroundColor: MARKA.lacivert }}>
+          <Gradyan renkler={['#1f4fa3', MARKA.lacivert2, MARKA.lacivert]} />
+          <View style={{ position: 'absolute', width: 260, height: 260, borderRadius: 130, backgroundColor: 'rgba(59,130,246,0.25)', top: -90, right: -70 }} />
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ flex: 1 }}><Logo yukseklik={46} /></View>
+            <Pressable onPress={onHesap} hitSlop={10} style={{ paddingHorizontal: 12, paddingVertical: 8, borderRadius: 12, backgroundColor: 'rgba(255,255,255,0.1)', borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.35)' }}>
+              <Text style={{ fontWeight: '800', color: '#fff' }}>{oturum ? '👤 Hesabım' : 'Giriş yap'}</Text></Pressable>
+          </View>
+          <Text style={{ color: '#fff', fontSize: 26, fontWeight: '900', marginTop: 18, letterSpacing: -0.5, lineHeight: 31 }}>Bugün hangi mesleği{'\n'}deneyeceksin?</Text>
+          <Text style={{ color: '#c8d9f2', fontSize: 14, marginTop: 6 }}>Meraktan ustalığa, oynayarak öğren.</Text>
+        </View>
+
+        <View style={{ flexDirection: 'row', marginHorizontal: 18, marginTop: -46, backgroundColor: '#fff', borderRadius: 20, paddingVertical: 14, borderWidth: 1, borderColor: R.cizgi,
+          shadowColor: MARKA.lacivert, shadowOpacity: 0.15, shadowRadius: 18, shadowOffset: { width: 0, height: 8 }, elevation: 6 }}>
+          {[[String(MESLEKLER.length), 'meslek', '🧰'], [String(toplamXpHepsi), 'toplam XP', '⚡'], [String(toplamRozet), 'rozet', '🏅']].map(([a, b, ik], j) => (
+            <View key={j} style={{ flex: 1, alignItems: 'center', borderLeftWidth: j ? 1 : 0, borderColor: R.cizgi }}>
+              <Text style={{ fontSize: 22, fontWeight: '900', color: MARKA.lacivert }}>{a}</Text>
+              <Text style={{ fontSize: 12, color: R.soluk, fontWeight: '700' }}>{ik} {b}</Text>
+            </View>))}
+        </View>
+
+        <View style={{ paddingHorizontal: 18, paddingTop: 18 }}>
+          {devam ? <Giris><DevamKarti v={devam} onPress={() => onMeslek(devam.p)} /></Giris> : null}
+          <PusulaKarti pusula={pusula} onPress={onPusula} />
+          <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 8, marginBottom: 12 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: MARKA.mavi, borderRadius: 99, paddingVertical: 5, paddingLeft: 5, paddingRight: 14, borderWidth: 1.5, borderColor: MARKA.mavi2 }}>
+              <View style={{ width: 28, height: 28, borderRadius: 14, backgroundColor: MARKA.lacivert, alignItems: 'center', justifyContent: 'center', marginRight: 8 }}><Text style={{ fontSize: 14 }}>🧰</Text></View>
+              <Text style={{ color: '#fff', fontWeight: '900', letterSpacing: 2, fontSize: 13 }}>MESLEKLER</Text>
+            </View>
+            <View style={{ flex: 1, height: 1, backgroundColor: R.cizgi, marginLeft: 12 }} />
+          </View>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+            {veriler.map((v, i) => <Giris key={v.p.meslek.id} gecikme={i * 60}><MeslekKarti v={v} genislik={kartG} onPress={() => onMeslek(v.p)} /></Giris>)}
+          </View>
+          <View style={{ marginTop: 6, padding: 14, borderRadius: 16, borderWidth: 1.5, borderStyle: 'dashed', borderColor: '#b9d0f0', alignItems: 'center' }}>
+            <Text style={{ fontSize: 22 }}>✨</Text>
+            <Text style={{ fontWeight: '900', color: MARKA.lacivert, marginTop: 4 }}>Yeni meslekler yolda</Text>
+            <Text style={{ color: R.soluk, fontSize: 12, textAlign: 'center', marginTop: 4 }}>Meslektaş kurslara ön hazırlık amaçlıdır; resmî eğitim veya sertifika yerine geçmez.</Text>
+          </View>
+          <Pressable onPress={onKaynak} hitSlop={10}><Text style={{ color: R.soluk, textAlign: 'center', marginTop: 14, fontSize: 13, textDecorationLine: 'underline' }}>Görsel kaynakları</Text></Pressable>
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
+// İki sütunlu düzenli meslek kartı — hepsi aynı boyda, aynı renk ailesinde
+function MeslekKarti({ v, genislik, onPress }) {
+  const { p, xp, max, rozet, ki } = v; const basladi = xp > 0;
+  return (
+    <Pressable onPress={onPress} style={({ pressed }) => ({ width: genislik, height: 196, marginBottom: 12, borderRadius: 22, backgroundColor: '#fff', padding: 14,
+      borderWidth: 1, borderColor: R.cizgi, borderBottomWidth: 4, borderBottomColor: '#c7d9f3', transform: [{ scale: pressed ? 0.97 : 1 }],
+      shadowColor: MARKA.lacivert, shadowOpacity: 0.08, shadowRadius: 10, shadowOffset: { width: 0, height: 5 }, elevation: 2 })}>
+      <View style={{ flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+        <View style={{ width: 54, height: 54, borderRadius: 17, overflow: 'hidden', alignItems: 'center', justifyContent: 'center', borderBottomWidth: 3, borderColor: '#1749a8' }}>
+          <Gradyan renkler={[MARKA.mavi2, MARKA.mavi]} yon="capraz" />
+          <Text style={{ fontSize: 28 }}>{ikonu(p)}</Text>
+        </View>
+        {rozet ? <View style={{ backgroundColor: '#fff6d6', borderRadius: 99, paddingHorizontal: 8, paddingVertical: 3 }}><Text style={{ fontSize: 11, fontWeight: '900', color: '#a16207' }}>🏅 {rozet}/{p.kademeler.length}</Text></View> : null}
       </View>
-      <Text style={[st.alt, { marginBottom: 18 }]}>Bir meslek seç; meraktan ustalığa, oynayarak öğren.</Text>
-      <PusulaKarti pusula={pusula} onPress={onPusula} />
-      {MESLEKLER.map((p, i) => {
-        const s = hepsi[p.meslek.id] || {}; const xp = toplamXp(p, s);
-        const max = p.kademeler.reduce((t, k) => t + k.gorevler.reduce((a, g) => a + maxXp(g), 0), 0);
-        const ki = aktifKademe(p, s); const renk = p.meslek.renkler || VARSAYILAN_TEMA;
-        const rozet = p.kademeler.filter((_, j) => kademeBitti(p, j, s)).length;
-        return (
-          <Giris key={p.meslek.id} gecikme={i * 90}>
-            <Pressable onPress={() => onMeslek(p)} style={{ borderRadius: 22, backgroundColor: renk.ana, padding: 18, marginBottom: 14, overflow: 'hidden' }}>
-              <Animated.Text style={{ position: 'absolute', right: 14, top: 10, fontSize: 64, opacity: 0.9, transform: [{ rotate: sallan.interpolate({ inputRange: [0, 1], outputRange: ['-6deg', '6deg'] }) }] }}>
-                {p.kademeler[1]?.rozet?.ikon || '⭐'}</Animated.Text>
-              <Text style={{ color: renk.vurgu, fontWeight: '800', fontSize: 12, letterSpacing: 1 }}>{p.meslek.kategori.replace(/i/g, 'İ').toUpperCase()}</Text>
-              <Text style={{ color: '#fff', fontSize: 28, fontWeight: '900', marginTop: 2 }}>{p.meslek.ad}</Text>
-              <Text style={{ color: '#ffffffcc', marginTop: 4, marginRight: 70 }} numberOfLines={2}>{p.meslek.tanim}</Text>
-              <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 14 }}>
-                <View style={{ flex: 1, marginRight: 12 }}><Cubuk oran={xp / max} renk={renk.vurgu} /></View>
-                <Text style={{ color: '#fff', fontWeight: '800' }}>{xp ? `${p.kademeler[ki].ad} · ${rozet}/${p.kademeler.length} rozet` : 'Başla →'}</Text>
-              </View>
-            </Pressable>
-          </Giris>
-        );
-      })}
-      <Text style={{ color: R.soluk, textAlign: 'center', marginTop: 8, fontSize: 13 }}>Yeni meslekler yolda. Meslektaş kurslara ön hazırlık amaçlıdır; resmî eğitim veya sertifika yerine geçmez.</Text>
-      <Pressable onPress={onKaynak} hitSlop={10}><Text style={{ color: R.soluk, textAlign: 'center', marginTop: 12, fontSize: 13, textDecorationLine: 'underline' }}>Görsel kaynakları</Text></Pressable>
-    </Ekran>
+      <Text style={{ color: MARKA.mavi, fontWeight: '800', fontSize: 9.5, letterSpacing: 0.8, marginTop: 12 }} numberOfLines={1}>{kategori(p)}</Text>
+      <Text style={{ color: MARKA.lacivert, fontSize: 17, fontWeight: '900', marginTop: 3, lineHeight: 21 }} numberOfLines={2}>{p.meslek.ad}</Text>
+      <View style={{ flex: 1 }} />
+      <Cubuk oran={xp / max} renk={MARKA.mavi2} yukseklik={6} />
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 }}>
+        <Text style={{ fontSize: 12, fontWeight: '800', color: basladi ? MARKA.lacivert : R.soluk, flexShrink: 1 }} numberOfLines={1}>{basladi ? p.kademeler[ki].ad : '5 kademe'}</Text>
+        <View style={{ backgroundColor: basladi ? MARKA.lacivert : MARKA.buz, borderRadius: 99, paddingHorizontal: 10, paddingVertical: 4, marginLeft: 4 }}>
+          <Text style={{ fontSize: 12, fontWeight: '900', color: basladi ? '#fff' : MARKA.mavi }}>{basladi ? 'Devam' : 'Başla'} →</Text></View>
+      </View>
+    </Pressable>
+  );
+}
+
+// Yarım kalan meslek: büyük "devam et" kartı
+function DevamKarti({ v, onPress }) {
+  const { p, xp, max, ki } = v;
+  return (
+    <Pressable onPress={onPress} style={{ borderRadius: 22, overflow: 'hidden', padding: 16, marginBottom: 14, backgroundColor: MARKA.mavi }}>
+      <Gradyan renkler={[MARKA.mavi2, MARKA.mavi, MARKA.lacivert2]} yon="capraz" />
+      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <View style={{ width: 58, height: 58, borderRadius: 18, backgroundColor: 'rgba(255,255,255,0.18)', alignItems: 'center', justifyContent: 'center', marginRight: 12 }}><Text style={{ fontSize: 30 }}>{ikonu(p)}</Text></View>
+        <View style={{ flex: 1 }}>
+          <Text style={{ color: MARKA.gok, fontWeight: '900', fontSize: 11, letterSpacing: 1.2 }}>KALDIĞIN YERDEN DEVAM ET</Text>
+          <Text style={{ color: '#fff', fontWeight: '900', fontSize: 19, marginTop: 2 }} numberOfLines={1}>{p.meslek.ad}</Text>
+          <Text style={{ color: '#dbe8fb', fontSize: 13, marginTop: 2 }}>{p.kademeler[ki].ad} kademesi · %{Math.round(xp / max * 100)}</Text>
+        </View>
+        <View style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }}><Text style={{ color: MARKA.mavi, fontSize: 16, fontWeight: '900' }}>▶</Text></View>
+      </View>
+      <Cubuk oran={xp / max} renk="#fff" yukseklik={6} style={{ marginTop: 14, backgroundColor: 'rgba(255,255,255,0.25)' }} />
+    </Pressable>
   );
 }
 
@@ -133,16 +263,70 @@ function PusulaKarti({ pusula, onPress }) {
   }
   return (
     <Giris>
-      <Pressable onPress={onPress} style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 20, backgroundColor: '#fff', borderWidth: 2, borderColor: VARSAYILAN_TEMA.vurgu, padding: 14, marginBottom: 16 }}>
-        <Text style={{ fontSize: 38, marginRight: 12 }}>🧭</Text>
+      <Pressable onPress={onPress} style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 22, overflow: 'hidden', padding: 16, marginBottom: 16, backgroundColor: MARKA.lacivert }}>
+        <Gradyan renkler={[MARKA.lacivert, MARKA.lacivert2, '#1f4fa3']} yon="yatay" />
+        <View style={{ position: 'absolute', right: -30, top: -30, width: 130, height: 130, borderRadius: 65, borderWidth: 1, borderColor: 'rgba(124,196,255,0.3)', borderStyle: 'dashed' }} />
+        <View style={{ width: 58, height: 58, borderRadius: 29, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center', marginRight: 12, borderWidth: 3, borderColor: MARKA.gok }}><Text style={{ fontSize: 30 }}>🧭</Text></View>
         <View style={{ flex: 1 }}>
-          <Text style={{ color: VARSAYILAN_TEMA.vurgu, fontWeight: '800', fontSize: 11, letterSpacing: 1 }}>MESLEK PUSULASI</Text>
-          <Text style={{ color: R.yazi, fontWeight: '900', fontSize: 17, marginTop: 2 }}>{ust}</Text>
-          <Text style={{ color: R.soluk, fontSize: 13, marginTop: 2 }}>{alt}</Text>
+          <Text style={{ color: MARKA.gok, fontWeight: '900', fontSize: 11, letterSpacing: 1.2 }}>MESLEK PUSULASI</Text>
+          <Text style={{ color: '#fff', fontWeight: '900', fontSize: 17, marginTop: 2 }}>{ust}</Text>
+          <Text style={{ color: '#bcd3f3', fontSize: 13, marginTop: 2 }}>{alt}</Text>
         </View>
-        <Text style={{ color: VARSAYILAN_TEMA.ana, fontSize: 22, fontWeight: '900' }}>›</Text>
+        <Text style={{ color: '#fff', fontSize: 26, fontWeight: '900' }}>›</Text>
       </Pressable>
     </Giris>
+  );
+}
+
+// Harita için koyu üst bant + açık içerik
+function HaritaKabuk({ paket, sonuclar, onGeri, children }) {
+  const ins = useSafeAreaInsets();
+  const max = paket.kademeler.reduce((t, k) => t + k.gorevler.reduce((a, g) => a + maxXp(g), 0), 0); const xp = toplamXp(paket, sonuclar);
+  const rozet = paket.kademeler.filter((_, j) => kademeBitti(paket, j, sonuclar)).length;
+  return (
+    <View style={{ flex: 1, backgroundColor: MARKA.zemin }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 30 + ins.bottom }}>
+        <View style={{ paddingTop: ins.top + 10, paddingHorizontal: 18, paddingBottom: 22, borderBottomLeftRadius: 28, borderBottomRightRadius: 28, overflow: 'hidden', backgroundColor: MARKA.lacivert }}>
+          <Gradyan renkler={['#1f4fa3', MARKA.lacivert2, MARKA.lacivert]} />
+          <View style={{ position: 'absolute', width: 220, height: 220, borderRadius: 110, backgroundColor: 'rgba(59,130,246,0.25)', top: -70, right: -60 }} />
+          <Pressable onPress={onGeri} hitSlop={12} style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: 'rgba(255,255,255,0.12)', borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.3)', alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ color: '#fff', fontSize: 18, fontWeight: '900' }}>←</Text></Pressable>
+          <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 14 }}>
+            <View style={{ width: 66, height: 66, borderRadius: 20, overflow: 'hidden', alignItems: 'center', justifyContent: 'center', marginRight: 14, borderBottomWidth: 4, borderColor: '#1749a8' }}>
+              <Gradyan renkler={[MARKA.mavi2, MARKA.mavi]} yon="capraz" /><Text style={{ fontSize: 34 }}>{ikonu(paket)}</Text></View>
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: MARKA.gok, fontWeight: '900', fontSize: 11, letterSpacing: 1 }}>{kategori(paket)}</Text>
+              <Text style={{ color: '#fff', fontSize: 24, fontWeight: '900', letterSpacing: -0.5 }} numberOfLines={2}>{paket.meslek.ad}</Text>
+            </View>
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 14 }}>
+            <View style={{ flex: 1, marginRight: 12 }}><Cubuk oran={xp / max} renk={MARKA.gok} yukseklik={8} style={{ backgroundColor: 'rgba(255,255,255,0.18)' }} /></View>
+            <Text style={{ color: '#fff', fontWeight: '800', fontSize: 13 }}>⚡ {xp} XP · 🏅 {rozet}/{paket.kademeler.length}</Text>
+          </View>
+        </View>
+        <View style={{ padding: 18 }}>{children}</View>
+      </ScrollView>
+    </View>
+  );
+}
+
+// Giriş / hesap ekranları için logolu koyu üst bant
+function GirisKabuk({ onGeri, children }) {
+  const ins = useSafeAreaInsets();
+  return (
+    <View style={{ flex: 1, backgroundColor: MARKA.zemin }}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: 30 + ins.bottom }} keyboardShouldPersistTaps="handled">
+        <View style={{ paddingTop: ins.top + 10, paddingHorizontal: 18, paddingBottom: 70, borderBottomLeftRadius: 30, borderBottomRightRadius: 30, overflow: 'hidden', backgroundColor: MARKA.lacivert, alignItems: 'center' }}>
+          <Gradyan renkler={['#1f4fa3', MARKA.lacivert2, MARKA.lacivert]} />
+          <Pressable onPress={onGeri} hitSlop={12} style={{ alignSelf: 'flex-start', width: 40, height: 40, borderRadius: 12, backgroundColor: 'rgba(255,255,255,0.12)', borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.3)', alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ color: '#fff', fontSize: 16, fontWeight: '900' }}>✕</Text></Pressable>
+          <Logo yukseklik={92} yazi={false} />
+          <Text style={{ fontSize: 30, fontWeight: '900', color: '#fff', marginTop: 6, letterSpacing: -0.5 }}>Meslek<Text style={{ color: MARKA.gok }}>taş</Text></Text>
+        </View>
+        <View style={{ marginHorizontal: 18, marginTop: -46, backgroundColor: '#fff', borderRadius: 24, padding: 20, borderWidth: 1, borderColor: R.cizgi,
+          shadowColor: MARKA.lacivert, shadowOpacity: 0.15, shadowRadius: 18, shadowOffset: { width: 0, height: 8 }, elevation: 6 }}>{children}</View>
+      </ScrollView>
+    </View>
   );
 }
 
@@ -152,19 +336,18 @@ function Harita({ paket, sonuclar, kiBaslangic, onGeri, onGorev, onBelge }) {
   const K = paket.kademeler[ki]; const acik = kademeAcik(paket, ki, sonuclar);
   const xp = kademeXp(paket, ki, sonuclar); const hepsiBitti = paket.kademeler.every((_, j) => kademeBitti(paket, j, sonuclar));
   return (
-    <Ekran>
-      <Ust baslik={paket.meslek.ad} onKapat={onGeri} />
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginBottom: 14 }}>
+    <HaritaKabuk paket={paket} sonuclar={sonuclar} onGeri={onGeri}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginHorizontal: -18, marginBottom: 14 }} contentContainerStyle={{ paddingHorizontal: 18 }}>
         {paket.kademeler.map((k, j) => {
           const a = kademeAcik(paket, j, sonuclar); const b = kademeBitti(paket, j, sonuclar); const sec = j === ki;
           return (
-            <Pressable key={j} onPress={() => setKi(j)} style={{ paddingHorizontal: 12, paddingVertical: 8, borderRadius: 99, marginRight: 8, marginBottom: 8,
-              backgroundColor: sec ? paket.meslek.renkler?.ana || '#333' : '#fff', borderWidth: 1, borderColor: R.cizgi, opacity: a ? 1 : 0.5 }}>
-              <Text style={{ fontWeight: '800', color: sec ? '#fff' : R.yazi }}>{b ? k.rozet.ikon + ' ' : a ? '' : '🔒 '}{k.ad}</Text>
+            <Pressable key={j} onPress={() => setKi(j)} style={{ paddingHorizontal: 14, paddingVertical: 9, borderRadius: 14, marginRight: 8,
+              backgroundColor: sec ? MARKA.mavi : '#fff', borderWidth: 1.5, borderColor: sec ? MARKA.mavi2 : R.cizgi, borderBottomWidth: 3, borderBottomColor: sec ? '#1749a8' : '#c7d9f3', opacity: a ? 1 : 0.55 }}>
+              <Text style={{ fontWeight: '900', color: sec ? '#fff' : MARKA.lacivert }}>{b ? k.rozet.ikon + ' ' : a ? `${j + 1}. ` : '🔒 '}{k.ad}</Text>
             </Pressable>
           );
         })}
-      </View>
+      </ScrollView>
       <Kart style={{ marginBottom: 16 }}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Text style={{ fontSize: 40, marginRight: 12, opacity: kademeBitti(paket, ki, sonuclar) ? 1 : 0.35 }}>{K.rozet.ikon}</Text>
@@ -184,13 +367,13 @@ function Harita({ paket, sonuclar, kiBaslangic, onGeri, onGorev, onBelge }) {
           <Giris key={g.id} gecikme={gi * 50}>
             <View style={{ flexDirection: 'row', alignItems: 'stretch' }}>
               <View style={{ width: 30, alignItems: 'center' }}>
-                <View style={{ width: 4, flex: 1, backgroundColor: gi === 0 ? 'transparent' : s || a ? paket.meslek.renkler?.vurgu || R.altin : R.cizgi }} />
-                <View style={{ width: 18, height: 18, borderRadius: 9, backgroundColor: s ? R.yesil : a ? paket.meslek.renkler?.vurgu || R.altin : R.cizgi, borderWidth: 3, borderColor: '#fff' }} />
-                <View style={{ width: 4, flex: 1, backgroundColor: gi === K.gorevler.length - 1 ? 'transparent' : s ? paket.meslek.renkler?.vurgu || R.altin : R.cizgi }} />
+                <View style={{ width: 4, flex: 1, backgroundColor: gi === 0 ? 'transparent' : s || a ? MARKA.mavi2 : R.cizgi }} />
+                <View style={{ width: 18, height: 18, borderRadius: 9, backgroundColor: s ? R.yesil : a ? MARKA.mavi2 : R.cizgi, borderWidth: 3, borderColor: '#fff' }} />
+                <View style={{ width: 4, flex: 1, backgroundColor: gi === K.gorevler.length - 1 ? 'transparent' : s ? MARKA.mavi2 : R.cizgi }} />
               </View>
-              <Pressable disabled={!a} onPress={() => onGorev(ki, gi)} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: sinav ? (paket.meslek.renkler?.vurgu || R.altin) + '22' : '#fff',
-                borderRadius: 16, borderWidth: sinav ? 2 : 1, borderColor: sinav ? paket.meslek.renkler?.vurgu || R.altin : R.cizgi, padding: 12, marginVertical: 5, opacity: a ? 1 : 0.5 }}>
-                <Text style={{ fontSize: 28, marginRight: 12 }}>{a ? g.ikon : '🔒'}</Text>
+              <Pressable disabled={!a} onPress={() => onGorev(ki, gi)} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: sinav ? MARKA.buz : '#fff',
+                borderRadius: 16, borderWidth: sinav ? 2 : 1, borderColor: sinav ? MARKA.mavi2 : R.cizgi, borderBottomWidth: 3, borderBottomColor: sinav ? '#1749a8' : '#c7d9f3', padding: 12, marginVertical: 5, opacity: a ? 1 : 0.55 }}>
+                <View style={{ width: 44, height: 44, borderRadius: 13, backgroundColor: a ? MARKA.buz : '#eef1f5', alignItems: 'center', justifyContent: 'center', marginRight: 12 }}><Text style={{ fontSize: 24 }}>{a ? g.ikon : '🔒'}</Text></View>
                 <View style={{ flex: 1 }}>
                   <Text style={{ fontWeight: '800', fontSize: 16, color: R.yazi }}>{g.baslik}</Text>
                   <Text style={{ color: R.soluk, fontSize: 13 }}>{SABLON_ETIKET[g.sablon] || g.sablon}{sinav ? ` · %${g.gecmeYuzde}` : ''} · {maxXp(g)} XP</Text>
@@ -202,7 +385,7 @@ function Harita({ paket, sonuclar, kiBaslangic, onGeri, onGorev, onBelge }) {
         );
       })}
       {hepsiBitti ? <Dugme yazi="🎓 Tamamlama belgemi göster" onPress={onBelge} style={{ marginTop: 16 }} /> : null}
-    </Ekran>
+    </HaritaKabuk>
   );
 }
 
@@ -265,10 +448,10 @@ function Belge({ paket, sonuclar, onGeri }) {
       <Ust baslik="Tamamlama belgesi" onKapat={onGeri} />
       <TextInput value={ad} onChangeText={setAd} placeholder="Belgede görünecek adın" maxLength={40}
         style={{ backgroundColor: '#fff', borderWidth: 1, borderColor: R.cizgi, borderRadius: 12, padding: 12, fontSize: 16, marginBottom: 16 }} />
-      <Kart style={{ alignItems: 'center', padding: 24, borderWidth: 3, borderColor: paket.meslek.renkler?.vurgu || R.altin }}>
+      <Kart style={{ alignItems: 'center', padding: 24, borderWidth: 3, borderColor: MARKA.mavi2 }}>
         <Text style={{ fontWeight: '900', color: R.soluk, letterSpacing: 2 }}>MESLEKTAŞ</Text>
         <Text style={{ fontSize: 22, fontWeight: '900', textAlign: 'center', color: R.yazi, marginTop: 8 }}>{B.baslik}</Text>
-        <Text style={{ fontSize: 26, fontWeight: '900', color: paket.meslek.renkler?.ana, marginVertical: 16 }}>{ad || 'Adını yaz'}</Text>
+        <Text style={{ fontSize: 26, fontWeight: '900', color: MARKA.lacivert, marginVertical: 16 }}>{ad || 'Adını yaz'}</Text>
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           {paket.kademeler.map((k, j) => <View key={j} style={{ alignItems: 'center', margin: 6 }}><Text style={{ fontSize: 30 }}>{k.rozet.ikon}</Text><Text style={{ fontSize: 11, color: R.soluk }}>{k.ad}</Text></View>)}
         </View>
@@ -284,19 +467,19 @@ function HesapEkrani({ oturum, onGeri }) {
   const [eposta, setEposta] = useState(''); const [sifre, setSifre] = useState('');
   const [mesaj, setMesaj] = useState(null); const [bekle, setBekle] = useState(false);
   const calistir = async (f) => { setBekle(true); setMesaj(null); try { await f(); } catch (e) { setMesaj({ iyi: false, metin: e.message }); } setBekle(false); };
-  const girdi = { backgroundColor: '#fff', borderWidth: 1, borderColor: R.cizgi, borderRadius: 12, padding: 12, fontSize: 16, marginBottom: 10 };
+  const girdi = { backgroundColor: MARKA.zemin, borderWidth: 1.5, borderColor: R.cizgi, borderRadius: 14, padding: 14, fontSize: 16, marginBottom: 12, color: R.yazi };
   if (oturum) return (
-    <Ekran>
-      <Ust baslik="Hesabım" onKapat={onGeri} />
+    <GirisKabuk onGeri={onGeri}>
+      <Text style={{ fontSize: 24, fontWeight: '900', color: MARKA.lacivert, marginBottom: 12 }}>Hesabım</Text>
       <Kart><Text style={{ color: R.soluk }}>Giriş yapılan e-posta</Text><Text style={{ fontSize: 18, fontWeight: '800', color: R.yazi }}>{oturum.user.email}</Text>
         <Text style={{ color: R.soluk, marginTop: 10 }}>İlerlemen sunucuya kaydediliyor; telefon değiştirsen de kaybolmaz.</Text></Kart>
       <Dugme yazi="Çıkış yap" ikincil style={{ marginTop: 16 }} onPress={() => calistir(async () => { await supabase.auth.signOut(); })} />
-    </Ekran>
+    </GirisKabuk>
   );
   return (
-    <Ekran>
-      <Ust baslik="Giriş yap" onKapat={onGeri} />
-      <Text style={[st.alt, { marginBottom: 14 }]}>Hesapsız da oynayabilirsin. Hesap açarsan ilerlemen ve rozetlerin sunucuda saklanır.</Text>
+    <GirisKabuk onGeri={onGeri}>
+      <Text style={{ fontSize: 24, fontWeight: '900', color: MARKA.lacivert }}>Hoş geldin 👋</Text>
+      <Text style={[st.alt, { marginBottom: 16, marginTop: 4 }]}>Hesapsız da oynayabilirsin. Hesap açarsan ilerlemen ve rozetlerin sunucuda saklanır, telefon değişse de kaybolmaz.</Text>
       <TextInput value={eposta} onChangeText={setEposta} placeholder="E-posta" autoCapitalize="none" keyboardType="email-address" style={girdi} />
       <TextInput value={sifre} onChangeText={setSifre} placeholder="Şifre (en az 8 karakter)" secureTextEntry style={girdi} />
       {bekle ? <ActivityIndicator style={{ marginVertical: 10 }} /> : null}
@@ -307,7 +490,7 @@ function HesapEkrani({ oturum, onGeri }) {
         if (sifre.length < 8) throw new Error('Şifre en az 8 karakter olmalı.');
         const { data, error } = await supabase.auth.signUp({ email: eposta.trim(), password: sifre }); if (error) throw error;
         if (!data.session) setMesaj({ iyi: true, metin: 'Hesap açıldı. E-postana gelen onay bağlantısına dokun, sonra giriş yap.' }); else onGeri(); })} />
-    </Ekran>
+    </GirisKabuk>
   );
 }
 
