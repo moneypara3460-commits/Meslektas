@@ -1,0 +1,2061 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "itfaiye",
+  "ad": "İtfaiyeci",
+  "kategori": "Kamu & Acil Durum",
+  "tanim": "Yangın söndüren, kazada, depremde ve selde insan kurtaran, yangınları önlemek için halkı eğiten meslek: adaylıktan istasyon amirliğine.",
+  "calismaKosullari": [
+   "İstasyonda vardiyalı nöbet",
+   "Sıcak, duman, yükseklik ve dar alan",
+   "Ağır ekipman, sıkı disiplin ve ekip çalışması"
+  ],
+  "renkler": {
+   "ana": "#8f1711",
+   "vurgu": "#f2a024",
+   "zemin": "#f4ece6"
+  },
+  "metinler": {
+   "senaryoBasla": "Ekipmanını kuşan",
+   "senaryoBitir": "Nöbeti devret",
+   "ucYildiz": "Çavuş başını salladı: \"Tam kitabına göre!\"",
+   "karakter": {
+    "usta": "Çavuş",
+    "musteri": "Vatandaş"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "İtfaiyecilik Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir ve yangına müdahale yetkisi vermez. İtfaiye eri olmak için belediyelerin ilanlarındaki şartlar (eğitim, KPSS, sürücü belgesi, fiziki yeterlilik) aranır. Gerçek bir yangında önce 112'yi ara."
+  },
+  "kademeler": [
+   "Merak",
+   "Aday",
+   "İtfaiye eri",
+   "Çavuş",
+   "İstasyon amiri"
+  ]
+ },
+ "kaynaklar": [
+  "MEB ve üniversitelerin Sivil Savunma ve İtfaiyecilik ders içerikleri (kendi cümlelerimizle)",
+  "TS EN 2 yangın sınıfları; F sınıfı (pişirme yağları) EN 3-7'de tanımlıdır",
+  "Binaların Yangından Korunması Hakkında Yönetmelik",
+  "Belediye İtfaiye Yönetmeliği ve itfaiye eri alım ilanları (Ekim 2026'da kontrol edildi)",
+  "Temel yaşam desteği değerleri: güncel Avrupa Resüsitasyon Konseyi kılavuzu",
+  "Hava, su ve merdiven hesapları eğitim amaçlı örnektir",
+  "İtfaiye amiri uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "İtfaiye Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Aday kademesinde yangının nasıl oluştuğunu, ekipmanı ve söndürücü kullanmayı öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir itfaiyecinin günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🚒",
+       "baslik": "Ne yapar?",
+       "metin": "İtfaiyeci yangın söndürür; trafik kazası, deprem, sel ve asansörde mahsur kalma gibi olaylarda insan kurtarır.",
+       "terim": "yangın ve kurtarma"
+      },
+      {
+       "ikon": "🕒",
+       "baslik": "Nöbet",
+       "metin": "İtfaiye istasyonları gece gündüz açıktır. Ekipler vardiyalı nöbet tutar; alarm geldiğinde dakikalar içinde yola çıkılır.",
+       "terim": "nöbet"
+      },
+      {
+       "ikon": "🧰",
+       "baslik": "Araç ve ekipman kontrolü",
+       "metin": "Nöbetin başında araç, hortum, solunum setleri ve kurtarma aletleri tek tek kontrol edilir.",
+       "terim": "ekipman kontrolü"
+      },
+      {
+       "ikon": "💪",
+       "baslik": "Eğitim ve spor",
+       "metin": "İtfaiyeci her gün antrenman ve tatbikat yapar. Ağır ekipmanla çalışmak güç ve kondisyon ister.",
+       "terim": "tatbikat"
+      },
+      {
+       "ikon": "📞",
+       "baslik": "112",
+       "metin": "Türkiye'de yangın, sağlık ve güvenlik için tek acil numara 112'dir.",
+       "terim": "112 Acil Çağrı"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Belediyeler itfaiye eri alımını ilanla yapar. Genellikle itfaiyecilik ya da sivil savunma ön lisans programı mezuniyeti, KPSS puanı, sürücü belgesi ve fiziki yeterlilik istenir; şartlar ilana göre değişir.",
+       "terim": "itfaiye eri alımı"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "İstasyonda ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir itfaiye istasyonunda tanışma günündesin. Bir itfaiye eri seni gezdiriyor.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Alarm çaldı. Ekip hızla araca koşuyor.",
+       "secenekler": [
+        {
+         "metin": "Yolu açar, kimsenin önüne çıkmadan söylenen yerde beklerim",
+         "dogru": true,
+         "aciklama": "Alarmda her saniye önemlidir. Eğitimsiz biri ekibin önüne çıkmamalıdır."
+        },
+        {
+         "metin": "Ben de araca binerim",
+         "dogru": false,
+         "aciklama": "Eğitimsiz kişi olay yerine gitmez."
+        },
+        {
+         "metin": "Ekipmanları elime alıp yardım ederim",
+         "dogru": false,
+         "aciklama": "Her şeyin yeri ve sırası bellidir; karıştırmamak gerekir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "İtfaiye eri: \"Yangında ilk kural ne sence?\"",
+       "secenekler": [
+        {
+         "metin": "Önce can güvenliği: insanlar ve ekibin kendisi",
+         "dogru": true,
+         "aciklama": "Mal kurtarılabilir ya da yeniden alınabilir; can geri gelmez."
+        },
+        {
+         "metin": "Önce eşyaları kurtarmak",
+         "dogru": false,
+         "aciklama": "Eşya, can güvenliğinden sonra gelir."
+        },
+        {
+         "metin": "Önce fotoğraf çekmek",
+         "dogru": false,
+         "aciklama": "Olay yerinde görev önceliklidir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Asılı duran itfaiye elbisesini merak edip dokunmak istiyorsun.",
+       "secenekler": [
+        {
+         "metin": "İzin isterim; ekipmanın yerini ve düzenini bozmam",
+         "dogru": true,
+         "aciklama": "Elbise ve ekipman, saniyeler içinde giyilecek şekilde düzenlenmiştir."
+        },
+        {
+         "metin": "Deneyip yerine koyarım",
+         "dogru": false,
+         "aciklama": "Düzen bozulursa alarmda zaman kaybedilir."
+        },
+        {
+         "metin": "Başka bir yere asarım",
+         "dogru": false,
+         "aciklama": "Her şeyin sabit bir yeri vardır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İstasyonda ilk gün",
+      "maddeler": [
+       "Alarmda yolu aç, ekibin önüne çıkma.",
+       "Önce can güvenliği.",
+       "Ekipmanın düzeni bozulmaz."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Ağır ekipmanla fiziksel güç isteyen işler?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "Hazırlanırım",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Gece yarısı uyanıp hemen işe koşmak?",
+       "secenekler": [
+        [
+         "Yaparım",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Korkutucu bir durumda sakin kalmak?",
+       "secenekler": [
+        [
+         "Sakin kalırım",
+         2
+        ],
+        [
+         "Çalışırım",
+         1
+        ],
+        [
+         "Panik olurum",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Ekiple, kurallara tam uyarak çalışmak?",
+       "secenekler": [
+        [
+         "Tam bana göre",
+         2
+        ],
+        [
+         "Uyum sağlarım",
+         1
+        ],
+        [
+         "Tek başıma severim",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Yüksekte ya da dar alanda çalışmak?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Biraz zorlanırım",
+         1
+        ],
+        [
+         "Hiç istemem",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Güçlü ve soğukkanlısın. İstasyon seni bekliyor; Aday kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Aday kademesini oynayıp mesleği yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Fiziksel tempo ve tehlike seni zorlayabilir. Yangın güvenliği danışmanlığı ya da ilk yardım eğitmenliği ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Aday",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "İtfaiye Adayı",
+    "ikon": "🧯"
+   },
+   "sonraki": "İtfaiye eri kademesi açıldı: bina yangını, kalp masajı ve sahada olaylar.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-yangin",
+     "sablon": "bilgi",
+     "ikon": "🔥",
+     "baslik": "Yangını tanı",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔺",
+       "baslik": "Yangın üçgeni",
+       "metin": "Yanma için üç şey gerekir: yanıcı madde, ısı ve oksijen. Biri ortadan kalkarsa yangın söner.",
+       "terim": "yangın üçgeni"
+      },
+      {
+       "ikon": "💧",
+       "baslik": "Soğutma",
+       "metin": "Su gibi maddeler ısıyı düşürerek söndürür.",
+       "terim": "soğutma"
+      },
+      {
+       "ikon": "🫙",
+       "baslik": "Boğma",
+       "metin": "Köpük, battaniye, kapak ya da karbondioksit yangının havayla temasını keserek söndürür.",
+       "terim": "boğma"
+      },
+      {
+       "ikon": "🪵",
+       "baslik": "Yakıtı uzaklaştırmak",
+       "metin": "Yanıcı maddeyi alevden uzaklaştırmak ya da gaz vanasını kapatmak da yangını söndürür.",
+       "terim": "yakıtı kesmek"
+      },
+      {
+       "ikon": "🔠",
+       "baslik": "Yangın sınıfları",
+       "metin": "A: katı maddeler (odun, kâğıt). B: sıvılar (benzin, boya). C: gazlar (LPG, doğalgaz). D: metaller (magnezyum). Pişirme yağı yangınları ayrıca F sınıfı olarak anılır.",
+       "terim": "TS EN 2"
+      },
+      {
+       "ikon": "☠️",
+       "baslik": "Duman",
+       "metin": "Yangında ölümlerin çoğu alevden değil dumandan olur. Duman zehirli gazlar taşır ve göz açıp kapayıncaya kadar odayı doldurur.",
+       "terim": "duman zehirlenmesi"
+      }
+     ]
+    },
+    {
+     "id": "c2-ekipman",
+     "sablon": "bilgi",
+     "ikon": "🧯",
+     "baslik": "Ekipmanı tanı",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🪖",
+       "baslik": "Koruyucu kıyafet",
+       "metin": "Isıya dayanıklı elbise, kask, başlık, eldiven ve botlar itfaiyeciyi alev ve sıcaktan korur.",
+       "terim": "kişisel koruyucu donanım"
+      },
+      {
+       "ikon": "🫁",
+       "baslik": "Solunum seti",
+       "metin": "Sırtta taşınan temiz hava tüplü solunum seti dumanlı ortamda nefes almayı sağlar. Hava sınırlıdır; süre takip edilir.",
+       "terim": "solunum seti"
+      },
+      {
+       "ikon": "🧯",
+       "baslik": "Yangın söndürücüler",
+       "metin": "Kuru kimyevi tozlu (KKT, ABC), karbondioksitli, köpüklü ve sulu söndürücüler vardır. Üzerindeki etiket hangi sınıfa uygun olduğunu söyler.",
+       "terim": "söndürücü türleri"
+      },
+      {
+       "ikon": "🌊",
+       "baslik": "Hortum ve lans",
+       "metin": "Araçtaki pompa suyu hortumlara basar. Lans ucu suyu düz jet ya da sis (pulvarize) şeklinde verebilir.",
+       "terim": "lans"
+      },
+      {
+       "ikon": "🪜",
+       "baslik": "Merdiven",
+       "metin": "Seyyar merdivenler ve merdivenli araçlar yükseğe ulaşmayı ve kurtarmayı sağlar.",
+       "terim": "merdiven"
+      },
+      {
+       "ikon": "✂️",
+       "baslik": "Kurtarma aletleri",
+       "metin": "Hidrolik kesici ve ayırıcılar kazada sıkışan kişiyi araçtan çıkarmak için kullanılır.",
+       "terim": "hidrolik kurtarma seti"
+      }
+     ]
+    },
+    {
+     "id": "c3-sinif",
+     "sablon": "siniflandirma",
+     "ikon": "🔠",
+     "baslik": "Hangi yangın sınıfı?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her yanan maddeyi ait olduğu yangın sınıfına ver.",
+     "kategoriler": [
+      {
+       "id": "a",
+       "ad": "A: katı",
+       "ikon": "🪵"
+      },
+      {
+       "id": "b",
+       "ad": "B: sıvı",
+       "ikon": "🛢️"
+      },
+      {
+       "id": "c",
+       "ad": "C: gaz",
+       "ikon": "💨"
+      },
+      {
+       "id": "df",
+       "ad": "D: metal / F: pişirme yağı",
+       "ikon": "⚠️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Odun ve kâğıt",
+       "ikon": "🪵",
+       "kategori": "a",
+       "aciklama": "Katı maddeler A sınıfıdır."
+      },
+      {
+       "ad": "Karton kutular",
+       "ikon": "📦",
+       "kategori": "a",
+       "aciklama": "Katı madde."
+      },
+      {
+       "ad": "Benzin",
+       "ikon": "⛽",
+       "kategori": "b",
+       "aciklama": "Yanıcı sıvı."
+      },
+      {
+       "ad": "Boya ve tiner",
+       "ikon": "🎨",
+       "kategori": "b",
+       "aciklama": "Yanıcı sıvılar."
+      },
+      {
+       "ad": "LPG tüpü",
+       "ikon": "🧪",
+       "kategori": "c",
+       "aciklama": "Yanıcı gaz."
+      },
+      {
+       "ad": "Doğalgaz",
+       "ikon": "🔥",
+       "kategori": "c",
+       "aciklama": "Yanıcı gaz."
+      },
+      {
+       "ad": "Magnezyum talaşı",
+       "ikon": "⚙️",
+       "kategori": "df",
+       "aciklama": "Metal yangını D sınıfıdır, özel toz ister."
+      },
+      {
+       "ad": "Tavada kızgın yemeklik yağ",
+       "ikon": "🍳",
+       "kategori": "df",
+       "aciklama": "Pişirme yağı (F) yangınına asla su dökülmez."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Yangın sınıfları",
+      "maddeler": [
+       "A katı, B sıvı, C gaz, D metal.",
+       "Pişirme yağı yangınları F sınıfı olarak ayrıca anılır.",
+       "Söndürücünün etiketine bakılır."
+      ]
+     }
+    },
+    {
+     "id": "c4-sondurucu",
+     "sablon": "soru",
+     "ikon": "🧯",
+     "baslik": "Söndürücü bilgisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Yangın söndürücüyü kullanırken ilk adım?",
+       "secenekler": [
+        "Tetiğe basmak",
+        "Pimi çekmek",
+        "Hortumu kesmek",
+        "Tüpü sallamak"
+       ],
+       "dogru": 1,
+       "aciklama": "Pim çekilmeden tetik çalışmaz."
+      },
+      {
+       "soru": "Hortum nereye tutulur?",
+       "secenekler": [
+        "Alevin tepesine",
+        "Alevin dibine, yanan maddeye",
+        "Duvara",
+        "Dumanın içine"
+       ],
+       "dogru": 1,
+       "aciklama": "Yangın, yanan maddenin olduğu yerden söndürülür."
+      },
+      {
+       "soru": "Söndürücü kullanırken çıkış nerede olmalı?",
+       "secenekler": [
+        "Önünde",
+        "Arkanda",
+        "Yangının arkasında",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Kontrol edemezsen hemen geri çekilebilmelisin."
+      },
+      {
+       "soru": "KKT (ABC) söndürücü hangi sınıflarda kullanılır?",
+       "secenekler": [
+        "Sadece A",
+        "A, B ve C",
+        "Sadece D",
+        "Sadece F"
+       ],
+       "dogru": 1,
+       "aciklama": "Etiketindeki harfler bunu gösterir."
+      },
+      {
+       "soru": "Basınç göstergesinin ibresi nerede olmalı?",
+       "secenekler": [
+        "Kırmızıda",
+        "Yeşil bölgede",
+        "Sıfırda",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Yeşil, kullanıma hazır demektir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Söndürücü kullanımı",
+      "maddeler": [
+       "Pimi çek → hortumu alevin dibine tut → tetiğe bas → süpürerek söndür.",
+       "Çıkış arkanda olsun.",
+       "İbre yeşilde olmalı."
+      ]
+     }
+    },
+    {
+     "id": "c5-tatbikat",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "İlk tatbikatın",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Aday olarak bir okulda yangın tatbikatına katılıyorsun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Öğrenciler çıkarken bir grup asansöre yöneliyor.",
+       "secenekler": [
+        {
+         "metin": "Asansörü kullanmamalarını söyler, merdivenlere yönlendiririm",
+         "dogru": true,
+         "aciklama": "Yangında asansör durabilir ya da dumanla dolabilir."
+        },
+        {
+         "metin": "Asansör hızlıdır, kullansınlar",
+         "dogru": false,
+         "aciklama": "Yangında asansör tehlikelidir."
+        },
+        {
+         "metin": "Karışmam",
+         "dogru": false,
+         "aciklama": "Tatbikat doğru davranışı öğretmek içindir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir öğretmen, sınıftaki çantaları almak için geri dönmek istiyor.",
+       "secenekler": [
+        {
+         "metin": "Geri dönmemesini, eşyanın değil canın önemli olduğunu söylerim",
+         "dogru": true,
+         "aciklama": "Gerçek yangında geri dönmek en sık ölüm nedenlerinden biridir."
+        },
+        {
+         "metin": "Hızlıca alsın",
+         "dogru": false,
+         "aciklama": "Saniyeler içinde duman yolu kapatabilir."
+        },
+        {
+         "metin": "Onunla birlikte giderim",
+         "dogru": false,
+         "aciklama": "İki kişiyi tehlikeye atarsın."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Herkes toplanma alanında. Sırada ne var?",
+       "secenekler": [
+        {
+         "metin": "Sınıf listeleriyle sayım yapılmasını sağlarım",
+         "dogru": true,
+         "aciklama": "Eksik biri varsa içeride kalmış olabilir; ilk iş sayımdır."
+        },
+        {
+         "metin": "Herkes eve gidebilir",
+         "dogru": false,
+         "aciklama": "Önce sayım yapılır."
+        },
+        {
+         "metin": "Binaya geri dönülür",
+         "dogru": false,
+         "aciklama": "Tatbikat bitmeden dönülmez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Tatbikat",
+      "maddeler": [
+       "Yangında asansör kullanılmaz.",
+       "Eşya için geri dönülmez.",
+       "Toplanma alanında sayım yapılır."
+      ]
+     }
+    },
+    {
+     "id": "c6-sondur",
+     "sablon": "siralama",
+     "ikon": "🧯",
+     "baslik": "Söndürücüyle yangını söndür",
+     "aciklama": "Bir depoda kartonlar yanmaya başladı ve yangın henüz küçük. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "alarm",
+       "ikon": "🔔",
+       "metin": "Alarmı ver, 112'yi ara",
+       "neden": "Küçük görünen yangın dakikalar içinde büyüyebilir; yardım hemen çağrılır.",
+       "ipucu": "Önce herkesi uyar."
+      },
+      {
+       "id": "sinif",
+       "ikon": "🚪",
+       "metin": "Yangının sınıfına uygun söndürücüyü seç, kaçış yolunun arkanda olduğundan emin ol",
+       "neden": "Yanlış söndürücü yangını büyütebilir; çıkış önünde değil arkanda olmalı.",
+       "ipucu": "Yardım çağrıldı; yangını ve çıkışı tanı."
+      },
+      {
+       "id": "pim",
+       "ikon": "📌",
+       "metin": "Söndürücünün pimini çek",
+       "neden": "Pim çekilmeden tetik çalışmaz.",
+       "ipucu": "Söndürücü elinde; ilk hareket?"
+      },
+      {
+       "id": "hortum",
+       "ikon": "🎯",
+       "metin": "Hortumu alevin dibine, yanan maddeye yönelt",
+       "neden": "Alevin tepesine sıkılan toz boşa gider.",
+       "ipucu": "Pim çekildi; nereye nişan alacaksın?"
+      },
+      {
+       "id": "sik",
+       "ikon": "💨",
+       "metin": "Tetiğe bas, yanlara süpürerek söndür",
+       "neden": "Süpürme hareketi yanan yüzeyin tamamını kaplar.",
+       "ipucu": "Nişan alındı; şimdi söndür."
+      },
+      {
+       "id": "kontrol",
+       "ikon": "👀",
+       "metin": "Yeniden alevlenmeye karşı izle, alanı havalandır, ekibe bilgi ver",
+       "neden": "Söndü sanılan kartonlar içten için yanabilir.",
+       "ipucu": "Alev görünmüyor; bitti mi?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Söndürücü sırası",
+      "maddeler": [
+       "Alarm ve 112 → sınıf ve çıkış → pim → alevin dibi → bas ve süpür → izle.",
+       "Yangın büyükse söndürmeye çalışma, çık ve kapıyı kapat."
+      ]
+     },
+     "sahne": "itfaiye"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Aday sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Yangın üçgeninin parçaları?",
+       "secenekler": [
+        "Su, toprak, hava",
+        "Yanıcı madde, ısı, oksijen",
+        "Duman, alev, kül",
+        "Rüzgâr, güneş, nem"
+       ],
+       "dogru": 1,
+       "aciklama": "Biri ortadan kalkarsa yangın söner."
+      },
+      {
+       "soru": "Türkiye'de acil numara?",
+       "secenekler": [
+        "110",
+        "155",
+        "112",
+        "177"
+       ],
+       "dogru": 2,
+       "aciklama": "112 Acil Çağrı."
+      },
+      {
+       "soru": "Benzin yangını hangi sınıf?",
+       "secenekler": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "dogru": 1,
+       "aciklama": "Yanıcı sıvı."
+      },
+      {
+       "soru": "LPG yangını hangi sınıf?",
+       "secenekler": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "dogru": 2,
+       "aciklama": "Yanıcı gaz."
+      },
+      {
+       "soru": "Söndürücüde ilk adım?",
+       "secenekler": [
+        "Tetik",
+        "Pim",
+        "Hortum",
+        "Sallamak"
+       ],
+       "dogru": 1,
+       "aciklama": "Pimi çek."
+      },
+      {
+       "soru": "Hortum nereye?",
+       "secenekler": [
+        "Alevin tepesine",
+        "Alevin dibine",
+        "Dumana",
+        "Tavana"
+       ],
+       "dogru": 1,
+       "aciklama": "Yanan maddeye."
+      },
+      {
+       "soru": "Yangında ölümlerin çoğu neden?",
+       "secenekler": [
+        "Alev",
+        "Duman",
+        "Su",
+        "Gürültü"
+       ],
+       "dogru": 1,
+       "aciklama": "Duman zehirlidir."
+      },
+      {
+       "soru": "Yangında asansör?",
+       "secenekler": [
+        "Kullanılır",
+        "Kullanılmaz",
+        "Hızlıysa kullanılır",
+        "Gece kullanılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Merdiven kullanılır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "İtfaiye eri",
+   "hedefXp": 305,
+   "rozet": {
+    "ad": "İtfaiye Eri",
+    "ikon": "🚒"
+   },
+   "sonraki": "Çavuş kademesi açıldı: ani parlama, hava yönetimi ve arama.",
+   "gorevler": [
+    {
+     "id": "y1-bina",
+     "sablon": "bilgi",
+     "ikon": "🏠",
+     "baslik": "Bina yangını ve kurtarma",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🚪",
+       "baslik": "Kapıyı kontrol et",
+       "metin": "Kapalı bir kapıyı açmadan önce elin tersiyle sıcaklığına bakılır. Sıcaksa arkasında yangın vardır; kapı kontrollü ve yan tarafta durarak açılır.",
+       "terim": "kapı kontrolü"
+      },
+      {
+       "ikon": "⬇️",
+       "baslik": "Alçak dur",
+       "metin": "Sıcak duman yukarıda toplanır. Dumanlı ortamda alçakta hareket edilir.",
+       "terim": "alçak pozisyon"
+      },
+      {
+       "ikon": "👥",
+       "baslik": "Eşli çalış",
+       "metin": "İtfaiyeci dumanlı binaya asla tek başına girmez. Ekip arkadaşıyla birlikte girer, birlikte çıkar.",
+       "terim": "eş sistemi"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Duvarı takip et",
+       "metin": "Görüş sıfıra düştüğünde duvarı takip etmek yolu kaybetmemeyi sağlar.",
+       "terim": "arama tekniği"
+      },
+      {
+       "ikon": "❤️",
+       "baslik": "İlk yardım",
+       "metin": "İtfaiyeci kurtardığı kişiye sağlık ekibi gelene kadar temel yaşam desteği verebilir.",
+       "terim": "temel yaşam desteği"
+      },
+      {
+       "ikon": "⚡",
+       "baslik": "Elektrik ve gaz",
+       "metin": "Müdahaleden önce binanın elektriği ve gazı mümkünse kesilir.",
+       "terim": "enerji kesme"
+      }
+     ]
+    },
+    {
+     "id": "y2-kalp",
+     "sablon": "zamanlama",
+     "ikon": "❤️",
+     "baslik": "Kalp masajı",
+     "temelXp": 30,
+     "yildizBasinaXp": 15,
+     "aciklama": "Gösterge yükseliyor. Doğru değere gelince DURDUR'a bas. Değerler yetişkinler için güncel ilk yardım kılavuzlarına göredir.",
+     "turlar": [
+      {
+       "ad": "Göğüs basısı derinliği (yetişkin)",
+       "not": "Doğru derinlik yaklaşık 5–6 cm.",
+       "birim": "cm",
+       "baslangic": 0,
+       "bitis": 10,
+       "hedef": [
+        5,
+        6
+       ],
+       "tehlike": 8,
+       "tehlikeMetni": "Çok derin; yaralanma riski arttı.",
+       "sure": 4,
+       "erkenMetni": "Yetersiz derinlik; kan yeterince pompalanmıyor.",
+       "gecMetni": "Biraz fazla derin."
+      },
+      {
+       "ad": "Bası hızı",
+       "not": "Dakikada 100–120 bası.",
+       "birim": "bası/dk",
+       "baslangic": 60,
+       "bitis": 180,
+       "hedef": [
+        100,
+        120
+       ],
+       "tehlike": 150,
+       "tehlikeMetni": "Çok hızlı; kalp dolmaya fırsat bulamıyor.",
+       "sure": 4,
+       "erkenMetni": "Çok yavaş.",
+       "gecMetni": "Biraz hızlı."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kalp masajı (yetişkin)",
+      "maddeler": [
+       "Önce kendi güvenliğin, sonra 112.",
+       "30 bası, 2 soluk.",
+       "Derinlik 5–6 cm, hız dakikada 100–120.",
+       "Varsa otomatik şok cihazını (OED) kullan."
+      ]
+     }
+    },
+    {
+     "id": "y3-su",
+     "sablon": "siniflandirma",
+     "ikon": "💧",
+     "baslik": "Su kullanılır mı?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her yangını doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "evet",
+       "ad": "Su kullanılabilir",
+       "ikon": "💧"
+      },
+      {
+       "id": "hayir",
+       "ad": "Su kesinlikle kullanılmaz",
+       "ikon": "⛔"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Yanan odun yığını",
+       "ikon": "🪵",
+       "kategori": "evet",
+       "aciklama": "A sınıfı yangın; su soğutur."
+      },
+      {
+       "ad": "Kâğıt ve karton deposu",
+       "ikon": "📦",
+       "kategori": "evet",
+       "aciklama": "Katı maddeler suyla söner."
+      },
+      {
+       "ad": "Çöp konteyneri yangını",
+       "ikon": "🗑️",
+       "kategori": "evet",
+       "aciklama": "Genellikle katı atıklar."
+      },
+      {
+       "ad": "Ot ve çalı yangını",
+       "ikon": "🌾",
+       "kategori": "evet",
+       "aciklama": "Su ile söndürülür, çevre ıslatılır."
+      },
+      {
+       "ad": "Tavada yanan kızgın yağ",
+       "ikon": "🍳",
+       "kategori": "hayir",
+       "aciklama": "Su anında buharlaşır, yanan yağı her yere sıçratır."
+      },
+      {
+       "ad": "Enerjisi kesilmemiş elektrik panosu",
+       "ikon": "⚡",
+       "kategori": "hayir",
+       "aciklama": "Su elektriği iletir; önce enerji kesilir."
+      },
+      {
+       "ad": "Magnezyum gibi metal yangını",
+       "ikon": "⚙️",
+       "kategori": "hayir",
+       "aciklama": "Su metal yangınını şiddetlendirebilir."
+      },
+      {
+       "ad": "Yere yayılmış benzine düz su jeti",
+       "ikon": "⛽",
+       "kategori": "hayir",
+       "aciklama": "Benzin suyun üstünde yüzer ve yangın yayılır; köpük kullanılır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Su ne zaman kullanılmaz?",
+      "maddeler": [
+       "Kızgın yağ: kapak ya da yangın battaniyesi.",
+       "Elektrik: önce enerjiyi kes.",
+       "Metal: özel toz.",
+       "Benzin: köpük."
+      ]
+     }
+    },
+    {
+     "id": "y4-vaka",
+     "sablon": "senaryo",
+     "ikon": "🚒",
+     "baslik": "Vardiyada üç olay",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık sahaya çıkan bir itfaiye erisin. Bugün üç farklı çağrı geldi.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Bir apartmanda yoğun doğalgaz kokusu var. Bir komşu ışığı yakmak üzere.",
+       "secenekler": [
+        {
+         "metin": "Işığa ve hiçbir elektrikli düğmeye dokunmamasını söyler, vanayı kapatıp havalandırırız",
+         "dogru": true,
+         "aciklama": "Düğmedeki küçük kıvılcım bile patlamaya yol açabilir. Doğalgaz acil hattı 187 de aranır."
+        },
+        {
+         "metin": "Işık yakarsa kaçağı daha iyi görürüz",
+         "dogru": false,
+         "aciklama": "Kıvılcım patlama demektir."
+        },
+        {
+         "metin": "Çakmakla kaçağın yerini buluruz",
+         "dogru": false,
+         "aciklama": "Asla açık alev kullanılmaz."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Bir lokantada tavadaki yağ alev aldı, aşçı su kovasıyla koşuyor.",
+       "secenekler": [
+        {
+         "metin": "Durdururum; ocağı kapatıp tavayı kapak ya da yangın battaniyesiyle örteriz",
+         "dogru": true,
+         "aciklama": "Suyla temas eden kızgın yağ patlar gibi sıçrar."
+        },
+        {
+         "metin": "Su döksün, hızlı söner",
+         "dogru": false,
+         "aciklama": "Su, yağ yangınını büyütür."
+        },
+        {
+         "metin": "Tavayı dışarı taşırız",
+         "dogru": false,
+         "aciklama": "Yanan yağ taşınırken dökülebilir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir dükkânın elektrik panosundan duman ve kıvılcım çıkıyor.",
+       "secenekler": [
+        {
+         "metin": "Önce enerjiyi keser, sonra karbondioksitli ya da KKT söndürücü kullanırım",
+         "dogru": true,
+         "aciklama": "Elektrikli yangında su iletkendir; önce enerji kesilir."
+        },
+        {
+         "metin": "Hortumla su sıkarım",
+         "dogru": false,
+         "aciklama": "Elektrik çarpabilir."
+        },
+        {
+         "metin": "Panoyu elimle kapatırım",
+         "dogru": false,
+         "aciklama": "Elektrik çarpması riski."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Vaka bilgisi",
+      "maddeler": [
+       "Gaz kokusu: düğmeye dokunma, vanayı kapat, havalandır (187).",
+       "Yağ yangını: su yok, örterek boğ.",
+       "Elektrik: önce enerjiyi kes."
+      ]
+     }
+    },
+    {
+     "id": "y5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "İtfaiye eri sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Kalp masajında bası derinliği (yetişkin)?",
+       "secenekler": [
+        "1–2 cm",
+        "5–6 cm",
+        "10 cm",
+        "15 cm"
+       ],
+       "dogru": 1,
+       "aciklama": "Yaklaşık 5–6 cm."
+      },
+      {
+       "soru": "Bası hızı?",
+       "secenekler": [
+        "Dakikada 40–60",
+        "Dakikada 100–120",
+        "Dakikada 200",
+        "Saniyede 1"
+       ],
+       "dogru": 1,
+       "aciklama": "Dakikada 100–120."
+      },
+      {
+       "soru": "Yağ tavası yangını?",
+       "secenekler": [
+        "Su dökülür",
+        "Kapak ya da battaniyeyle boğulur",
+        "Üflenir",
+        "Taşınır"
+       ],
+       "dogru": 1,
+       "aciklama": "Su asla dökülmez."
+      },
+      {
+       "soru": "Doğalgaz kokusunda?",
+       "secenekler": [
+        "Işık yakılır",
+        "Düğmelere dokunulmaz, vana kapatılır",
+        "Çakmakla bakılır",
+        "Beklenir"
+       ],
+       "dogru": 1,
+       "aciklama": "Kıvılcım tehlikesi."
+      },
+      {
+       "soru": "Sıcak kapı?",
+       "secenekler": [
+        "Hemen açılır",
+        "Arkasında yangın olabilir; kontrollü ve yandan açılır",
+        "Tekmelenir",
+        "Önemsizdir"
+       ],
+       "dogru": 1,
+       "aciklama": "Elin tersiyle kontrol edilir."
+      },
+      {
+       "soru": "Dumanlı binaya?",
+       "secenekler": [
+        "Tek başına girilir",
+        "Ekip arkadaşıyla girilir",
+        "Koşarak girilir",
+        "Solunum setsiz girilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Eş sistemi."
+      },
+      {
+       "soru": "Elektrik panosu yangını?",
+       "secenekler": [
+        "Su",
+        "Önce enerji kesilir",
+        "Battaniye",
+        "Kum"
+       ],
+       "dogru": 1,
+       "aciklama": "Sonra uygun söndürücü."
+      },
+      {
+       "soru": "Benzin birikintisine?",
+       "secenekler": [
+        "Düz su jeti",
+        "Köpük",
+        "Üflemek",
+        "Kâğıt"
+       ],
+       "dogru": 1,
+       "aciklama": "Su yangını yayar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Çavuş",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "İtfaiye Çavuşu",
+    "ikon": "🪖"
+   },
+   "sonraki": "İstasyon amiri kademesi açıldı: olay yönetimi, öncelikler ve ekip sağlığı.",
+   "gorevler": [
+    {
+     "id": "u1-tehlike",
+     "sablon": "bilgi",
+     "ikon": "🌡️",
+     "baslik": "İleri yangın bilgisi",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "💥",
+       "baslik": "Ani parlama (flashover)",
+       "metin": "Kapalı bir odada sıcaklık yükseldikçe her şey aynı anda tutuşabilir. Tavanda yoğun sıcak duman ve tavanda yuvarlanan alevler uyarı işaretidir.",
+       "terim": "flashover"
+      },
+      {
+       "ikon": "🌬️",
+       "baslik": "Geri tepme (backdraft)",
+       "metin": "Oksijeni azalmış kapalı bir yangına aniden hava girerse patlama gibi bir alevlenme olabilir. Kapalı alan kontrolsüz açılmaz.",
+       "terim": "backdraft"
+      },
+      {
+       "ikon": "🫁",
+       "baslik": "Hava yönetimi",
+       "metin": "Solunum setindeki hava sınırlıdır. Ekip, hava azalınca dönüş için yeterli hava kalacak şekilde planlama yapar.",
+       "terim": "hava yönetimi"
+      },
+      {
+       "ikon": "📡",
+       "baslik": "Haberleşme",
+       "metin": "Telsizle kısa, net ve sırayla konuşulur. Acil çağrı her şeyin önüne geçer.",
+       "terim": "telsiz"
+      },
+      {
+       "ikon": "🏚️",
+       "baslik": "Yapı çökmesi",
+       "metin": "Uzun süre yanan binalarda tavan ve döşeme çökebilir. Çatlaklar, sarkmalar ve tuhaf sesler izlenir.",
+       "terim": "yapısal tehlike"
+      },
+      {
+       "ikon": "🧑‍🚒",
+       "baslik": "Ekip lideri",
+       "metin": "Çavuş ekibini olay yerinde yönetir: kimin nereye gireceğini, ne zaman çıkacağını belirler.",
+       "terim": "ekip liderliği"
+      }
+     ]
+    },
+    {
+     "id": "u2-isaret",
+     "sablon": "siniflandirma",
+     "ikon": "🚨",
+     "baslik": "Hangi tehlikenin işareti?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her işareti doğru tehlikeye ver.",
+     "kategoriler": [
+      {
+       "id": "flash",
+       "ad": "Ani parlama yaklaşıyor",
+       "ikon": "💥"
+      },
+      {
+       "id": "back",
+       "ad": "Geri tepme riski",
+       "ikon": "🌬️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Tavanın altında hızla kalınlaşan, çok sıcak duman katmanı",
+       "ikon": "☁️",
+       "kategori": "flash",
+       "aciklama": "Isı odadaki her şeyi tutuşma sıcaklığına getiriyor."
+      },
+      {
+       "ad": "Tavanda duman içinde yuvarlanan alev dilleri",
+       "ikon": "🔥",
+       "kategori": "flash",
+       "aciklama": "Gazlar tavanda yanmaya başlamış."
+      },
+      {
+       "ad": "Eşyalardan kendiliğinden duman çıkması",
+       "ikon": "🛋️",
+       "kategori": "flash",
+       "aciklama": "Eşyalar tutuşmak üzere."
+      },
+      {
+       "ad": "Diz çökmüş hâlde bile dayanılmaz ısı",
+       "ikon": "🌡️",
+       "kategori": "flash",
+       "aciklama": "Hemen geri çekilmek gerekir."
+      },
+      {
+       "ad": "Kapalı odanın camlarının kurumla kararmış olması",
+       "ikon": "🪟",
+       "kategori": "back",
+       "aciklama": "Yangın oksijensiz kalmış olabilir."
+      },
+      {
+       "ad": "Kapı aralığından duman çekilip yeniden itilmesi",
+       "ikon": "🌀",
+       "kategori": "back",
+       "aciklama": "Yangın hava arıyor."
+      },
+      {
+       "ad": "Kapının çok sıcak, içeride az alev görünmesi",
+       "ikon": "🚪",
+       "kategori": "back",
+       "aciklama": "İçerisi çok sıcak ama oksijen az."
+      },
+      {
+       "ad": "Kapı aralıklarından ıslık gibi ses",
+       "ikon": "🎐",
+       "kategori": "back",
+       "aciklama": "Hava emiliyor."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Tehlike işaretleri",
+      "maddeler": [
+       "Parlama: tavanda kalın sıcak duman, yuvarlanan alev, dayanılmaz ısı.",
+       "Geri tepme: kurumlu camlar, nefes alan duman, sıcak kapı, ıslık sesi.",
+       "Şüphede geri çekil ve amire bildir."
+      ]
+     }
+    },
+    {
+     "id": "u3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Saha hesapları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Solunum setinde kullanılabilir 1.600 L hava var, ağır çalışmada dakikada 50 L harcanıyor. Yaklaşık kaç dakika?",
+       "secenekler": [
+        "16",
+        "32",
+        "50",
+        "80"
+       ],
+       "dogru": 1,
+       "aciklama": "1.600 ÷ 50 = 32 dakika. Gerçekte dönüş için pay bırakılır."
+      },
+      {
+       "soru": "Yaygın eğitim kuralı: havanın üçte biri gidiş, üçte biri dönüş, üçte biri yedek. 1.800 L'de gidiş için en fazla?",
+       "secenekler": [
+        "300 L",
+        "600 L",
+        "900 L",
+        "1.800 L"
+       ],
+       "dogru": 1,
+       "aciklama": "1.800 ÷ 3 = 600 L."
+      },
+      {
+       "soru": "Araç tankında 3.000 L su var, hortum dakikada 300 L basıyor. Su kaç dakika yeter?",
+       "secenekler": [
+        "3",
+        "10",
+        "30",
+        "300"
+       ],
+       "dogru": 1,
+       "aciklama": "3.000 ÷ 300 = 10 dakika; hidranta erkenden bağlanılır."
+      },
+      {
+       "soru": "Merdiven için yaygın kural: ayağın duvardan uzaklığı yüksekliğin dörtte biri. 8 m için?",
+       "secenekler": [
+        "1 m",
+        "2 m",
+        "4 m",
+        "8 m"
+       ],
+       "dogru": 1,
+       "aciklama": "8 ÷ 4 = 2 m."
+      },
+      {
+       "soru": "İki hortum dakikada 250'şer litre basıyor. Toplam?",
+       "secenekler": [
+        "250 L/dk",
+        "500 L/dk",
+        "625 L/dk",
+        "2.500 L/dk"
+       ],
+       "dogru": 1,
+       "aciklama": "250 × 2 = 500 L/dk."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Saha hesapları",
+      "maddeler": [
+       "Hava süresi = hava ÷ dakikalık tüketim.",
+       "Su süresi = tank ÷ debi.",
+       "Merdiven ayağı ≈ yüksekliğin dörtte biri.",
+       "Değerler örnektir."
+      ]
+     }
+    },
+    {
+     "id": "u4-arama",
+     "sablon": "siralama",
+     "ikon": "🔦",
+     "baslik": "Dumanlı evde arama",
+     "aciklama": "İçeride biri olabileceği bildirildi. Ekibinle dumanlı bir dairede arama yapacaksın. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "hazirlik",
+       "ikon": "🫁",
+       "metin": "Ekip arkadaşınla eşleş, solunum setinin havasını ve telsizi kontrol et",
+       "neden": "Eksik hava ya da çalışmayan telsizle girilmez.",
+       "ipucu": "Önce ekipman ve eş."
+      },
+      {
+       "id": "kapi",
+       "ikon": "🚪",
+       "metin": "Kapıyı açmadan önce elin tersiyle sıcaklığını kontrol et, yan tarafta dur",
+       "neden": "Kapının arkasındaki tehlike böyle anlaşılır.",
+       "ipucu": "Hazırsın; kapı."
+      },
+      {
+       "id": "giris",
+       "ikon": "⬇️",
+       "metin": "Alçak pozisyonda gir, bir duvarı takip et",
+       "neden": "Sıcak duman yukarıdadır; duvar yolu kaybettirmez.",
+       "ipucu": "Kapı güvenli; içeri."
+      },
+      {
+       "id": "tara",
+       "ikon": "🛏️",
+       "metin": "Odaları sistemli tara: yatak altı, dolap, banyo; aranan odayı işaretle",
+       "neden": "İnsanlar korkunca saklanır; aynı oda iki kez aranmaz.",
+       "ipucu": "İçerdesin; nerelere bakacaksın?"
+      },
+      {
+       "id": "cikar",
+       "ikon": "🧑‍🚒",
+       "metin": "Bulduğun kişiyi en yakın güvenli çıkıştan çıkar, sağlık ekibine teslim et",
+       "neden": "Kurtarılan kişiye hemen tıbbi yardım gerekir.",
+       "ipucu": "Birini buldun; şimdi?"
+      },
+      {
+       "id": "bildir",
+       "ikon": "📡",
+       "metin": "Arama sonucunu ve kalan havanı ekip amirine bildir",
+       "neden": "Amir hangi bölgenin arandığını bilmeli.",
+       "ipucu": "Dışarıdasın; ne kaldı?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Arama sırası",
+      "maddeler": [
+       "Eş ve ekipman → kapı kontrolü → alçak giriş, duvar → sistemli tarama → çıkarma → bildirme.",
+       "Asla tek başına girilmez."
+      ]
+     }
+    },
+    {
+     "id": "u5-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Çavuşun günü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "İtfaiye çavuşu olarak bir ekibi yönetiyorsun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "İçeride mahsur biri olabilir ama odada tavanda yuvarlanan alevler görülüyor.",
+       "secenekler": [
+        {
+         "metin": "Ekibi geri çekip suyla tavanı soğutur, koşullar düzelince aramaya devam ederim",
+         "dogru": true,
+         "aciklama": "Ani parlama anında ekibi de kaybedebilirsin. Önce ortam kontrol altına alınır."
+        },
+        {
+         "metin": "Hemen içeri dalarız",
+         "dogru": false,
+         "aciklama": "Parlama işaretleri varken girmek ekibi öldürebilir."
+        },
+        {
+         "metin": "Hiçbir şey yapmadan beklerim",
+         "dogru": false,
+         "aciklama": "Soğutma ve kontrol hemen başlar."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Genç bir er, hava uyarısı çalmasına rağmen \"bir oda daha bakayım\" diyor.",
+       "secenekler": [
+        {
+         "metin": "Hemen çıkmasını emreder, yerine havası dolu bir ekip gönderirim",
+         "dogru": true,
+         "aciklama": "Hava biterse kurtarıcı da kurtarılması gereken kişi olur."
+        },
+        {
+         "metin": "Cesaretini takdir eder, devam ettiririm",
+         "dogru": false,
+         "aciklama": "Kahramanlık kuralları çiğnemek değildir."
+        },
+        {
+         "metin": "Kendi havamı veririm",
+         "dogru": false,
+         "aciklama": "Bu iki kişiyi tehlikeye atar."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Olay yerinde biri yaralıların fotoğrafını çekip paylaşmak istiyor.",
+       "secenekler": [
+        {
+         "metin": "Güvenlik şeridinin dışına alınmasını sağlar, yaralıların mahremiyetini korurum",
+         "dogru": true,
+         "aciklama": "Mağdurların görüntüsü onların ve ailelerinin haklarıdır."
+        },
+        {
+         "metin": "Paylaşsın, haber olsun",
+         "dogru": false,
+         "aciklama": "Mahremiyet ihlalidir."
+        },
+        {
+         "metin": "Ben de çekerim",
+         "dogru": false,
+         "aciklama": "Görev sırasında olmaz."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Çavuş olmak",
+      "maddeler": [
+       "Parlama işaretinde geri çekil, soğut.",
+       "Hava uyarısında çıkılır.",
+       "Mağdurların mahremiyeti korunur."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Çavuş sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Tavanda yuvarlanan alevler neyin işareti?",
+       "secenekler": [
+        "Yangın sönüyor",
+        "Ani parlama yaklaşıyor",
+        "Geri tepme bitti",
+        "Önemsiz"
+       ],
+       "dogru": 1,
+       "aciklama": "Flashover riski."
+      },
+      {
+       "soru": "Kurumla kararmış camlar ve nefes alan duman?",
+       "secenekler": [
+        "Geri tepme riski",
+        "Güvenli",
+        "Su azaldı",
+        "Parlama bitti"
+       ],
+       "dogru": 0,
+       "aciklama": "Backdraft işaretleri."
+      },
+      {
+       "soru": "1.500 L hava, dakikada 50 L tüketim?",
+       "secenekler": [
+        "15 dk",
+        "30 dk",
+        "50 dk",
+        "75 dk"
+       ],
+       "dogru": 1,
+       "aciklama": "1.500 ÷ 50."
+      },
+      {
+       "soru": "12 m yükseklikte merdiven ayağı yaklaşık?",
+       "secenekler": [
+        "1 m",
+        "3 m",
+        "6 m",
+        "12 m"
+       ],
+       "dogru": 1,
+       "aciklama": "12 ÷ 4."
+      },
+      {
+       "soru": "Aramada aynı oda iki kez aranmasın diye?",
+       "secenekler": [
+        "Oda işaretlenir",
+        "Kapı kilitlenir",
+        "Işık yakılır",
+        "Bağırılır"
+       ],
+       "dogru": 0,
+       "aciklama": "İşaretleme."
+      },
+      {
+       "soru": "Hava uyarısı çaldı?",
+       "secenekler": [
+        "Devam",
+        "Çıkılır",
+        "Biraz daha",
+        "Havayı paylaş"
+       ],
+       "dogru": 1,
+       "aciklama": "Dönüş havası korunur."
+      },
+      {
+       "soru": "Arama sonunda?",
+       "secenekler": [
+        "Eve gidilir",
+        "Sonuç ve kalan hava amire bildirilir",
+        "Fotoğraf çekilir",
+        "Hiçbir şey"
+       ],
+       "dogru": 1,
+       "aciklama": "Amir bilgilendirilir."
+      },
+      {
+       "soru": "Dumanlı alanda nasıl ilerlenir?",
+       "secenekler": [
+        "Ayakta koşarak",
+        "Alçakta, duvarı takip ederek",
+        "Gözler kapalı",
+        "Tek başına"
+       ],
+       "dogru": 1,
+       "aciklama": "Duman yukarıdadır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "İstasyon amiri",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "İstasyon Amiri",
+    "ikon": "🏢"
+   },
+   "sonraki": "Adaylıktan istasyon amirliğine tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "b1-yonetim",
+     "sablon": "bilgi",
+     "ikon": "🏢",
+     "baslik": "İstasyon amirliği",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🧭",
+       "baslik": "Olay yönetimi",
+       "metin": "Büyük olayda bir kişi komutayı alır, görevleri dağıtır ve diğer kurumlarla (sağlık, emniyet, AFAD) koordinasyonu sağlar.",
+       "terim": "olay komutası"
+      },
+      {
+       "ikon": "🎯",
+       "baslik": "Öncelikler",
+       "metin": "Önce can güvenliği, sonra olayı kontrol altına almak ve yayılmayı önlemek, en son malı korumak.",
+       "terim": "öncelik sırası"
+      },
+      {
+       "ikon": "🧑‍🤝‍🧑",
+       "baslik": "Ekip sağlığı",
+       "metin": "Uzun olaylarda ekipler dinlendirilir, su içmeleri ve tıbbi kontrolleri sağlanır.",
+       "terim": "rehabilitasyon"
+      },
+      {
+       "ikon": "🔍",
+       "baslik": "Önleme",
+       "metin": "Binalarda yangın denetimi, halka eğitim ve tatbikatlar yangınları baştan önler.",
+       "terim": "yangın önleme"
+      },
+      {
+       "ikon": "📋",
+       "baslik": "Olay sonrası",
+       "metin": "Her olaydan sonra ne iyi gitti, ne geliştirilmeli konuşulur ve rapor yazılır.",
+       "terim": "olay sonrası değerlendirme"
+      },
+      {
+       "ikon": "🧠",
+       "baslik": "Ruh sağlığı",
+       "metin": "Ağır olaylar itfaiyecileri de etkiler. Konuşmak ve destek almak güçsüzlük değil, mesleğin parçasıdır.",
+       "terim": "psikolojik destek"
+      }
+     ]
+    },
+    {
+     "id": "b2-oncelik",
+     "sablon": "siniflandirma",
+     "ikon": "🎯",
+     "baslik": "Hangi öncelik?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her işi doğru önceliğe ver.",
+     "kategoriler": [
+      {
+       "id": "can",
+       "ad": "Can güvenliği",
+       "ikon": "❤️"
+      },
+      {
+       "id": "yayilma",
+       "ad": "Kontrol ve yayılmayı önleme",
+       "ikon": "🧱"
+      },
+      {
+       "id": "mal",
+       "ad": "Malı koruma",
+       "ikon": "📦"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Mahsur kalan kişiyi kurtarmak",
+       "ikon": "🧑",
+       "kategori": "can",
+       "aciklama": "İlk öncelik."
+      },
+      {
+       "ad": "Ekiplerin hava ve konumunu takip etmek",
+       "ikon": "📡",
+       "kategori": "can",
+       "aciklama": "Ekip de korunması gereken canlardır."
+      },
+      {
+       "ad": "Yaralıyı sağlık ekibine teslim etmek",
+       "ikon": "🚑",
+       "kategori": "can",
+       "aciklama": "Tıbbi yardım hemen başlamalı."
+      },
+      {
+       "ad": "Komşu binaya geçişi su perdesiyle önlemek",
+       "ikon": "🏘️",
+       "kategori": "yayilma",
+       "aciklama": "Yangının büyümesi önlenir."
+      },
+      {
+       "ad": "Binanın gazını ve elektriğini kesmek",
+       "ikon": "⚡",
+       "kategori": "yayilma",
+       "aciklama": "Yeni tehlikeler önlenir."
+      },
+      {
+       "ad": "Yangına yakın kimyasal varilleri uzaklaştırmak",
+       "ikon": "🛢️",
+       "kategori": "yayilma",
+       "aciklama": "Patlama ve yayılma önlenir."
+      },
+      {
+       "ad": "Su hasarına karşı eşyaları örtmek",
+       "ikon": "🛋️",
+       "kategori": "mal",
+       "aciklama": "Can ve kontrol sağlandıktan sonra."
+      },
+      {
+       "ad": "Değerli belgeleri güvenli yere almak",
+       "ikon": "🗂️",
+       "kategori": "mal",
+       "aciklama": "Son öncelik."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Öncelik sırası",
+      "maddeler": [
+       "1. Can güvenliği (ekip dahil).",
+       "2. Olayı kontrol ve yayılmayı önleme.",
+       "3. Malı koruma."
+      ]
+     }
+    },
+    {
+     "id": "b3-plan",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Planlama hesapları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "İstasyonda 24 itfaiyeci 3 vardiyaya eşit bölünecek. Vardiya başına?",
+       "secenekler": [
+        "6",
+        "8",
+        "12",
+        "24"
+       ],
+       "dogru": 1,
+       "aciklama": "24 ÷ 3 = 8."
+      },
+      {
+       "soru": "Bir olayda 4 ekip 45'er dakika çalışıp dinlenmeye çıkıyor. Toplam ekip-çalışma süresi?",
+       "secenekler": [
+        "45 dk",
+        "90 dk",
+        "180 dk",
+        "4 saat"
+       ],
+       "dogru": 2,
+       "aciklama": "4 × 45 = 180 dakika."
+      },
+      {
+       "soru": "İstasyon yılda 1.200 çağrıya gitti. Aylık ortalama?",
+       "secenekler": [
+        "10",
+        "100",
+        "120",
+        "1.200"
+       ],
+       "dogru": 1,
+       "aciklama": "1.200 ÷ 12 = 100."
+      },
+      {
+       "soru": "Hedef: çağrıların %90'ında 10 dakika içinde varmak. 200 çağrının kaçında?",
+       "secenekler": [
+        "20",
+        "90",
+        "180",
+        "200"
+       ],
+       "dogru": 2,
+       "aciklama": "200 × 0,9 = 180."
+      },
+      {
+       "soru": "Geçen yıl 80 yangın, bu yıl 60. Azalış yüzde kaç?",
+       "secenekler": [
+        "%20",
+        "%25",
+        "%33",
+        "%60"
+       ],
+       "dogru": 1,
+       "aciklama": "20 ÷ 80 = %25. Önleme çalışmaları işe yarıyor olabilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Planlama",
+      "maddeler": [
+       "Kaynaklar vardiyalara dengeli bölünür.",
+       "Varış süresi hedefi izlenir.",
+       "Değişim oranı = fark ÷ eski değer."
+      ]
+     }
+    },
+    {
+     "id": "b4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir gece",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "İstasyon amiri olarak büyük bir olayın komutasındasın.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Aynı anda iki büyük çağrı geldi, istasyonda tek bir ekip boşta.",
+       "secenekler": [
+        {
+         "metin": "Can riski daha yüksek olana ekibi gönderir, komşu istasyonlardan hemen destek isterim",
+         "dogru": true,
+         "aciklama": "Kaynak yetmediğinde can riskine göre öncelik verilir ve destek çağrılır."
+        },
+        {
+         "metin": "İlk geleni seçerim",
+         "dogru": false,
+         "aciklama": "Sıra değil risk belirler."
+        },
+        {
+         "metin": "Ekibi ikiye bölüp ikisine de gönderirim",
+         "dogru": false,
+         "aciklama": "Yetersiz ekip ikisinde de başarısız olabilir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Ekipler 3 saattir çalışıyor, biri baş dönmesinden şikâyet ediyor.",
+       "secenekler": [
+        {
+         "metin": "Dinlenme ve sağlık kontrolüne alır, yerine taze ekip koyarım",
+         "dogru": true,
+         "aciklama": "Yorgun itfaiyeci kaza yapar; ekibin sağlığı da can güvenliğidir."
+        },
+        {
+         "metin": "Biraz daha dayansın",
+         "dogru": false,
+         "aciklama": "Bitkinlik ciddi kazalara yol açar."
+        },
+        {
+         "metin": "Su içsin, devam etsin",
+         "dogru": false,
+         "aciklama": "Sağlık kontrolü gerekir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Olay bitti, ekip çok ağır bir sahne gördü.",
+       "secenekler": [
+        {
+         "metin": "Ekiple konuşma toplantısı yapar, gerekirse psikolojik destek ayarlarım",
+         "dogru": true,
+         "aciklama": "Ağır olayların etkisi görmezden gelinirse birikir."
+        },
+        {
+         "metin": "Bu meslekte alışırsınız derim",
+         "dogru": false,
+         "aciklama": "Destek ihtiyacı küçümsenmez."
+        },
+        {
+         "metin": "Hemen yeni nöbete başlatırım",
+         "dogru": false,
+         "aciklama": "Önce toparlanma."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Amir olmak",
+      "maddeler": [
+       "Kaynak yetmezse can riskine göre öncelik, hemen destek.",
+       "Yorgun ekip dinlendirilir.",
+       "Ağır olaylardan sonra destek sağlanır."
+      ]
+     }
+    },
+    {
+     "id": "b5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Yangın üçgeni?",
+       "secenekler": [
+        "Yanıcı madde, ısı, oksijen",
+        "Su, toprak, hava",
+        "Alev, duman, kül",
+        "Gaz, sıvı, katı"
+       ],
+       "dogru": 0,
+       "aciklama": "Biri kalkarsa söner."
+      },
+      {
+       "soru": "Kızgın yağ yangını?",
+       "secenekler": [
+        "Su",
+        "Kapak ya da battaniye",
+        "Üfleme",
+        "Kum fırlatma"
+       ],
+       "dogru": 1,
+       "aciklama": "Su yok."
+      },
+      {
+       "soru": "Elektrik yangını?",
+       "secenekler": [
+        "Önce enerji kesilir",
+        "Su sıkılır",
+        "Elle kapatılır",
+        "Beklenir"
+       ],
+       "dogru": 0,
+       "aciklama": "Sonra uygun söndürücü."
+      },
+      {
+       "soru": "Kalp masajı hızı?",
+       "secenekler": [
+        "Dakikada 60",
+        "Dakikada 100–120",
+        "Dakikada 200",
+        "Saniyede 3"
+       ],
+       "dogru": 1,
+       "aciklama": "Güncel kılavuz."
+      },
+      {
+       "soru": "Ani parlama işareti?",
+       "secenekler": [
+        "Tavanda yuvarlanan alev",
+        "Serin oda",
+        "Açık pencere",
+        "Az duman"
+       ],
+       "dogru": 0,
+       "aciklama": "Flashover riski."
+      },
+      {
+       "soru": "Öncelik sırası?",
+       "secenekler": [
+        "Mal, can, kontrol",
+        "Can, kontrol, mal",
+        "Kontrol, mal, can",
+        "Hepsi eşit"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce can."
+      },
+      {
+       "soru": "Doğalgaz kokusunda?",
+       "secenekler": [
+        "Işık yakılır",
+        "Düğmeye dokunulmaz, vana kapatılır",
+        "Çakmak",
+        "Asansör"
+       ],
+       "dogru": 1,
+       "aciklama": "Kıvılcım tehlikesi."
+      },
+      {
+       "soru": "Solunum seti uyarısı çaldı?",
+       "secenekler": [
+        "Devam",
+        "Çıkılır",
+        "Havayı paylaş",
+        "Maske çıkar"
+       ],
+       "dogru": 1,
+       "aciklama": "Dönüş havası korunur."
+      },
+      {
+       "soru": "Söndürücüde hortum nereye?",
+       "secenekler": [
+        "Alevin dibine",
+        "Tepesine",
+        "Dumana",
+        "Tavana"
+       ],
+       "dogru": 0,
+       "aciklama": "Yanan maddeye."
+      },
+      {
+       "soru": "Ağır bir olaydan sonra ekip?",
+       "secenekler": [
+        "Hemen yeni işe",
+        "Konuşma ve gerekirse destek",
+        "Görmezden gelinir",
+        "Tatbikata"
+       ],
+       "dogru": 1,
+       "aciklama": "Ruh sağlığı da önemlidir."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

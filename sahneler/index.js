@@ -11,6 +11,7 @@ import kaynakHtml from './kaynakHtml';
 import kodHtml from './kodHtml';
 import tasarimHtml from './tasarimHtml';
 import muhasebeHtml from './muhasebeHtml';
+import itfaiyeHtml from './itfaiyeHtml';
 
 export const SAHNELER = {
   espresso: webSahneYap(espressoHtml, {
@@ -58,5 +59,10 @@ export const SAHNELER = {
     kontrol: [['tik', 1300], ['tik', 1800], ['tik', 2300], ['tik', 2800], ['tik', 3300]], hesap: [['tik', 1700], ['tik', 2150], ['tik', 2600]],
     kaydet: [['tik', 1300], ['tik', 2000], ['tik', 2700]], denge: [['akis', 1100], ['dogru', 2300]],
     arsiv: [['tik', 1000], ['akis', 1700]], mizan: [['tik', 1300], ['dogru', 2900], ['basari', 3700]],
+  }),
+  itfaiye: webSahneYap(itfaiyeHtml, {
+    alarm: [['tik', 900], ['yanlis', 1100], ['yanlis', 1540], ['yanlis', 1980], ['tik', 3000]], sinif: [['tik', 1000], ['tik', 2400]],
+    pim: [['tik', 1000], ['tik', 2400]], hortum: [['tik', 900], ['tik', 1700]],
+    sik: [['akis', 600]], kontrol: [['dogru', 900], ['basari', 3000]],
   }),
 };

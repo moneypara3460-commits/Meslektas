@@ -71,6 +71,7 @@ export const MESLEK_PROFIL = {
   yazilim: { R: 0.2, I: 1, A: 0.5, S: 0.25, E: 0.3, C: 0.75 },
   grafik: { R: 0.35, I: 0.45, A: 1, S: 0.45, E: 0.45, C: 0.55 },
   muhasebe: { R: 0.15, I: 0.5, A: 0.1, S: 0.35, E: 0.35, C: 1 },
+  itfaiye: { R: 1, I: 0.35, A: 0.1, S: 0.85, E: 0.45, C: 0.7 },
 };
 
 // Henüz oyunda olmayan, tipe göre önerilecek meslekler.
