@@ -18,7 +18,7 @@ for (const m of fotoBlok.matchAll(/^\s+'?([a-z-]+)'?: \{/gm)) GORSELLER.add(m[1]
 const gorselKontrol = (ad, yer, H) => { if (ad && !GORSELLER.has(ad)) H.push(`${yer}: "${ad}" adında görsel yok`); };
 const sahneDosya = fs.readFileSync(path.join(__dirname, '..', 'sahneler', 'index.js'), 'utf8');
 const SAHNE_HTML = {};
-for (const ad of ['espresso', 'mutfak', 'salon', 'cizim', 'santiye', 'freze', 'kaynak', 'kod', 'tasarim', 'muhasebe', 'itfaiye']) if (sahneDosya.includes(ad + ':')) SAHNE_HTML[ad] = fs.readFileSync(path.join(__dirname, '..', 'sahneler', ad + 'Html.js'), 'utf8');
+for (const ad of ['espresso', 'mutfak', 'salon', 'cizim', 'santiye', 'freze', 'kaynak', 'kod', 'tasarim', 'muhasebe', 'itfaiye', 'kasa']) if (sahneDosya.includes(ad + ':')) SAHNE_HTML[ad] = fs.readFileSync(path.join(__dirname, '..', 'sahneler', ad + 'Html.js'), 'utf8');
 let hataSay = 0;
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   const P = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); const H = [];

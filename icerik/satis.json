@@ -1,0 +1,2073 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "satis",
+  "ad": "Satış Danışmanı ve Kasiyer",
+  "kategori": "Ticaret & Hizmet",
+  "tanim": "Mağazada müşteriye doğru ürünü bulmasında yardım eden, kasada satışı tamamlayan ve mağazanın düzenini sağlayan meslek: stajyerlikten mağaza müdürlüğüne.",
+  "calismaKosullari": [
+   "Mağaza, market ve alışveriş merkezlerinde",
+   "Ayakta, müşteriyle yoğun temas",
+   "Vardiyalı; hafta sonu ve bayramlarda yoğunluk"
+  ],
+  "renkler": {
+   "ana": "#2f7d5b",
+   "vurgu": "#e8a33a",
+   "zemin": "#f5f1ea"
+  },
+  "metinler": {
+   "senaryoBasla": "Kasanı aç",
+   "senaryoBitir": "Vardiyayı kapat",
+   "ucYildiz": "Mağaza müdürü gülümsedi: \"Müşteri memnun ayrıldı!\"",
+   "karakter": {
+    "usta": "Kıdemli",
+    "musteri": "Müşteri"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Satış ve Kasa Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Perakende alanında meslek lisesi diplomaları ve MYK mesleki yeterlilik belgeleri vardır."
+  },
+  "kademeler": [
+   "Merak",
+   "Stajyer",
+   "Satış danışmanı",
+   "Reyon sorumlusu",
+   "Mağaza müdürü"
+  ]
+ },
+ "kaynaklar": [
+  "MEB Pazarlama ve Perakende alanı modülleri (kendi cümlelerimizle)",
+  "6502 sayılı Tüketicinin Korunması Hakkında Kanun (etiket-kasa farkı, ayıplı mal, mesafeli satışta 14 gün cayma; Ekim 2026'da kontrol edildi)",
+  "Fiyat Etiketi Yönetmeliği",
+  "4250 ve 4207 sayılı kanunlar (18 yaş altına alkol ve tütün satış yasağı)",
+  "6698 sayılı KVKK",
+  "Fiyatlar ve hedefler örnektir",
+  "Perakende uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Satış Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Stajyer kademesinde kasa kurallarını, müşteriyle iletişimi ve ilk satışını öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir satış danışmanının günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🏬",
+       "baslik": "Ne yapar?",
+       "metin": "Satış danışmanı mağazada müşteriye doğru ürünü bulmasında yardım eder; kasiyer ödemeyi alır, fişi verir. Çoğu mağazada aynı kişi ikisini de yapar.",
+       "terim": "perakende"
+      },
+      {
+       "ikon": "🌅",
+       "baslik": "Açılış",
+       "metin": "Gün mağazanın açılışıyla başlar: raflar düzenlenir, etiketler kontrol edilir, kasa açılır.",
+       "terim": "açılış hazırlığı"
+      },
+      {
+       "ikon": "🙋",
+       "baslik": "Müşteri",
+       "metin": "Müşteriyi güler yüzle karşılamak, ne aradığını dinlemek ve dürüstçe yönlendirmek işin kalbidir.",
+       "terim": "müşteri ilişkisi"
+      },
+      {
+       "ikon": "🧾",
+       "baslik": "Kasa",
+       "metin": "Ürünler okutulur, ödeme alınır, para üstü sayılarak verilir ve her satışta fiş düzenlenir.",
+       "terim": "kasa işlemleri"
+      },
+      {
+       "ikon": "📦",
+       "baslik": "Depo ve raf",
+       "metin": "Gelen ürünler depoya alınır, rafa dizilir; son kullanma tarihi yakın olanlar öne konur.",
+       "terim": "stok"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Meslek liselerinin pazarlama ve perakende alanında, kurslarla ya da işbaşında öğrenilir. Deneyimle reyon sorumlusu ve mağaza müdürü olunur.",
+       "terim": "perakende kariyeri"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Mağazada ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir mağazada deneme günündesin. Deneyimli bir satış danışmanı seni yanına aldı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir müşteri bir ürünün yerini soruyor ama sen bilmiyorsun.",
+       "secenekler": [
+        {
+         "metin": "\"Hemen öğrenip size yardımcı olayım\" der, bilen birine sorarım",
+         "dogru": true,
+         "aciklama": "Bilmemek sorun değil; müşteriyi yalnız bırakmamak önemli."
+        },
+        {
+         "metin": "\"Bilmiyorum\" deyip işime dönerim",
+         "dogru": false,
+         "aciklama": "Müşteri yardım bulamazsa mağazadan çıkar."
+        },
+        {
+         "metin": "Rastgele bir reyonu gösteririm",
+         "dogru": false,
+         "aciklama": "Yanlış bilgi müşteriyi daha çok üzer."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Danışman: \"Bu müşteri pahalı olanı alsın diye ucuz olanın kötü olduğunu söyleyelim mi?\"",
+       "secenekler": [
+        {
+         "metin": "Hayır; iki ürünün farkını dürüstçe anlatırım, karar müşterinin",
+         "dogru": true,
+         "aciklama": "Yanıltarak satış hem etik değil hem müşteriyi kaybettirir."
+        },
+        {
+         "metin": "Evet, satış satıştır",
+         "dogru": false,
+         "aciklama": "Kandırılan müşteri bir daha gelmez."
+        },
+        {
+         "metin": "Hiçbir şey söylemem",
+         "dogru": false,
+         "aciklama": "Müşteri bilgi bekliyor."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Rafta etiketi olmayan bir ürün gördün.",
+       "secenekler": [
+        {
+         "metin": "Reyon sorumlusuna bildiririm ya da etiketini basıp koyarım",
+         "dogru": true,
+         "aciklama": "Satıştaki her ürünün fiyat etiketi olmak zorundadır."
+        },
+        {
+         "metin": "Kasada fiyat çıkar, sorun değil",
+         "dogru": false,
+         "aciklama": "Etiket yasal bir zorunluluktur."
+        },
+        {
+         "metin": "Ürünü saklarım",
+         "dogru": false,
+         "aciklama": "Doğrusu etiketi düzeltmek."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Mağazada ilk gün",
+      "maddeler": [
+       "Bilmediğini öğrenip yardım et.",
+       "Müşteriyi yanıltarak satış yapılmaz.",
+       "Etiketsiz ürün bildirilir."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Gün boyu insanlarla konuşmak?",
+       "secenekler": [
+        [
+         "Severim",
+         2
+        ],
+        [
+         "İdare ederim",
+         1
+        ],
+        [
+         "Yorulurum",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Uzun süre ayakta çalışmak?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Sinirli bir müşteriye sakin kalmak?",
+       "secenekler": [
+        [
+         "Sakin kalırım",
+         2
+        ],
+        [
+         "Çalışırım",
+         1
+        ],
+        [
+         "Zorlanırım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Para sayarken dikkatli olmak?",
+       "secenekler": [
+        [
+         "Çok dikkatliyim",
+         2
+        ],
+        [
+         "Çalışırım",
+         1
+        ],
+        [
+         "Dalgınım",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Hafta sonu ve bayramlarda çalışmak?",
+       "secenekler": [
+        [
+         "Olur",
+         2
+        ],
+        [
+         "Bazen",
+         1
+        ],
+        [
+         "İstemem",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Güler yüzlü ve dikkatlisin. Mağaza seni bekliyor; Stajyer kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Stajyer kademesini oynayıp işi yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Yoğun müşteri teması seni yorabilir. Depo ve stok yönetimi tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Stajyer",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Stajyer Satış Danışmanı",
+    "ikon": "🧾"
+   },
+   "sonraki": "Satış danışmanı kademesi açıldı: satış teknikleri ve tüketici hakları.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-kasa",
+     "sablon": "bilgi",
+     "ikon": "🧾",
+     "baslik": "Kasa temelleri",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔎",
+       "baslik": "Okutma",
+       "metin": "Her ürün tek tek okutulur; ekrandaki ad ve fiyat ürünle karşılaştırılır.",
+       "terim": "barkod"
+      },
+      {
+       "ikon": "🏷️",
+       "baslik": "Etiket ve kasa",
+       "metin": "Raf etiketindeki fiyat ile kasa fiyatı farklıysa tüketici lehine olan, yani düşük fiyat uygulanır. Fark reyon sorumlusuna bildirilir.",
+       "terim": "6502 sayılı Kanun"
+      },
+      {
+       "ikon": "💵",
+       "baslik": "Nakit",
+       "metin": "Alınan para, para üstü verilene kadar kasaya konmaz; böylece \"100 vermiştim\" tartışması çıkmaz. Para üstü sayılarak verilir.",
+       "terim": "nakit kuralı"
+      },
+      {
+       "ikon": "🔍",
+       "baslik": "Sahte para",
+       "metin": "Filigran, güvenlik şeridi, kabartma ve renk değiştiren mürekkep kontrol edilir. Şüpheli banknotta yönetici çağrılır.",
+       "terim": "banknot güvenliği"
+      },
+      {
+       "ikon": "🧾",
+       "baslik": "Fiş",
+       "metin": "Her satışta yazarkasa ya da elektronik fiş düzenlenir ve müşteriye verilir.",
+       "terim": "fiş"
+      },
+      {
+       "ikon": "🔞",
+       "baslik": "Yaş sınırı",
+       "metin": "Alkollü içki ve tütün ürünleri 18 yaşından küçüklere satılamaz. Şüphede kimlik istenir.",
+       "terim": "yaş kontrolü"
+      }
+     ]
+    },
+    {
+     "id": "c2-musteri",
+     "sablon": "bilgi",
+     "ikon": "🙋",
+     "baslik": "Müşteriyle iletişim",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "😊",
+       "baslik": "Karşılama",
+       "metin": "Göz teması, selam ve gülümseme ilk izlenimi belirler.",
+       "terim": "karşılama"
+      },
+      {
+       "ikon": "👂",
+       "baslik": "Dinleme",
+       "metin": "Müşteriye ne aradığını açık uçlu sorularla sor: \"Nerede kullanacaksınız?\" gibi.",
+       "terim": "ihtiyaç analizi"
+      },
+      {
+       "ikon": "💬",
+       "baslik": "Dürüstlük",
+       "metin": "Ürünün artısını da eksisini de dürüstçe anlat. Güven, bir sonraki satışı getirir.",
+       "terim": "güven"
+      },
+      {
+       "ikon": "🧯",
+       "baslik": "Şikâyet",
+       "metin": "Sinirli müşteriyi sözünü kesmeden dinle, özür dile, çözüm sun; yapamıyorsan yöneticini çağır.",
+       "terim": "şikâyet yönetimi"
+      },
+      {
+       "ikon": "♿",
+       "baslik": "Herkese erişim",
+       "metin": "Yaşlı, engelli ya da yardıma ihtiyacı olan müşteriye sabırla ve saygıyla yardım edilir.",
+       "terim": "erişilebilirlik"
+      },
+      {
+       "ikon": "🔒",
+       "baslik": "Mahremiyet",
+       "metin": "Müşterinin telefonu, adresi ve kart bilgisi kişisel veridir; kimseyle paylaşılmaz.",
+       "terim": "KVKK"
+      }
+     ]
+    },
+    {
+     "id": "c3-kasada",
+     "sablon": "siniflandirma",
+     "ikon": "🧾",
+     "baslik": "Kasada ne yaparsın?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her durumu doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "normal",
+       "ad": "Satışa devam",
+       "ikon": "✅"
+      },
+      {
+       "id": "yasak",
+       "ad": "Satış yapılmaz",
+       "ikon": "⛔"
+      },
+      {
+       "id": "yonetici",
+       "ad": "Yöneticiye danış",
+       "ikon": "📞"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Kartla 90 TL ödeme",
+       "ikon": "💳",
+       "kategori": "normal",
+       "aciklama": "Olağan satış."
+      },
+      {
+       "ad": "Raf etiketi 40 TL, kasada 45 TL çıktı",
+       "ikon": "🏷️",
+       "kategori": "normal",
+       "aciklama": "Düşük olan etiket fiyatı uygulanır; fark bildirilir."
+      },
+      {
+       "ad": "Kimliğini gösteren 25 yaşında müşteriye sigara",
+       "ikon": "🪪",
+       "kategori": "normal",
+       "aciklama": "Yaş şartı sağlanıyor."
+      },
+      {
+       "ad": "Kimlik göstermeyen, 18 yaşından küçük görünen birine sigara",
+       "ikon": "🚭",
+       "kategori": "yasak",
+       "aciklama": "Yaş kanıtlanmadan satılmaz."
+      },
+      {
+       "ad": "Son kullanma tarihi geçmiş ürün",
+       "ikon": "📅",
+       "kategori": "yasak",
+       "aciklama": "Satıştan hemen çekilir."
+      },
+      {
+       "ad": "Şüpheli görünen banknot",
+       "ikon": "💵",
+       "kategori": "yonetici",
+       "aciklama": "Tek başına karar verilmez."
+      },
+      {
+       "ad": "Yazarkasa arızalandı, fiş kesilemiyor",
+       "ikon": "🖨️",
+       "kategori": "yonetici",
+       "aciklama": "Fişsiz satış yapılmaz; çözüm yönetimde."
+      },
+      {
+       "ad": "Müşteri biten bir satışın iptalini istiyor",
+       "ikon": "↩️",
+       "kategori": "yonetici",
+       "aciklama": "İptal ve iade yetki ister."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kasada karar",
+      "maddeler": [
+       "Etiket-kasa farkında düşük fiyat.",
+       "Yaş şüphesinde kimlik; yoksa satış yok.",
+       "Şüpheli para, fişsiz satış ve iptal: yönetici."
+      ]
+     }
+    },
+    {
+     "id": "c4-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Kasa hesapları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Toplam 90 TL, müşteri 100 TL verdi. Para üstü?",
+       "secenekler": [
+        "5 TL",
+        "10 TL",
+        "90 TL",
+        "110 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "100 − 90 = 10 TL."
+      },
+      {
+       "soru": "Toplam 137,50 TL, müşteri 200 TL verdi. Para üstü?",
+       "secenekler": [
+        "62,50 TL",
+        "63,50 TL",
+        "72,50 TL",
+        "337,50 TL"
+       ],
+       "dogru": 0,
+       "aciklama": "200 − 137,50 = 62,50 TL."
+      },
+      {
+       "soru": "400 TL'lik üründe %25 indirim. Yeni fiyat?",
+       "secenekler": [
+        "100 TL",
+        "300 TL",
+        "375 TL",
+        "425 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "400 × 0,75 = 300 TL."
+      },
+      {
+       "soru": "\"3 al 2 öde\": tanesi 30 TL. 3 ürüne ne ödenir?",
+       "secenekler": [
+        "30 TL",
+        "60 TL",
+        "90 TL",
+        "120 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "2 × 30 = 60 TL."
+      },
+      {
+       "soru": "Ürüne önce %10, sonra %10 daha indirim. Toplam indirim?",
+       "secenekler": [
+        "%20",
+        "%19",
+        "%10",
+        "%21"
+       ],
+       "dogru": 1,
+       "aciklama": "100 → 90 → 81: toplam %19."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kasa hesapları",
+      "maddeler": [
+       "Para üstü = alınan − toplam.",
+       "İndirimli fiyat = fiyat × (1 − oran).",
+       "Art arda indirimler toplanmaz, çarpılır."
+      ]
+     }
+    },
+    {
+     "id": "c5-hafta",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "İlk haftan",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Stajyer olarak ilk haftandasın. Kasada da çalışmaya başladın.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri: \"Rafta 40 yazıyordu, kasada 45 çıktı!\"",
+       "secenekler": [
+        {
+         "metin": "Özür diler, raf etiketindeki düşük fiyatı uygular, farkı reyona bildiririm",
+         "dogru": true,
+         "aciklama": "Kanuna göre etiket ile kasa farkında tüketici lehine fiyat uygulanır."
+        },
+        {
+         "metin": "Kasadaki fiyat geçerli derim",
+         "dogru": false,
+         "aciklama": "Bu kanuna aykırıdır."
+        },
+        {
+         "metin": "Ürünü almasın derim",
+         "dogru": false,
+         "aciklama": "Müşterinin hakkı düşük fiyattır."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Müşteri 200 TL verdi, sen para üstünü sayarken \"500 vermiştim\" diyor.",
+       "secenekler": [
+        {
+         "metin": "Parayı kasaya koymadan tezgâhta tuttuğum için gösteririm; anlaşamazsak yönetici kasayı sayar",
+         "dogru": true,
+         "aciklama": "Alınan parayı para üstü verilene kadar ortada tutmak bu tartışmayı önler."
+        },
+        {
+         "metin": "Hemen 500 TL'nin üstünü veririm",
+         "dogru": false,
+         "aciklama": "Kasa açığı oluşur."
+        },
+        {
+         "metin": "Müşteriyle tartışırım",
+         "dogru": false,
+         "aciklama": "Sakin kalıp kuralla çözülür."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir müşteri cebine ürün koydu gibi geldi.",
+       "secenekler": [
+        {
+         "metin": "Kendim müdahale etmem, sessizce güvenliğe ya da yöneticiye bildiririm",
+         "dogru": true,
+         "aciklama": "Çalışan müşteriyi arayamaz, suçlayamaz; bunu yetkililer yapar."
+        },
+        {
+         "metin": "Müşteriyi kapıda durdurup üstünü ararım",
+         "dogru": false,
+         "aciklama": "Arama yetkin yok; yanılırsan çok ağır olur."
+        },
+        {
+         "metin": "Herkesin önünde \"hırsız\" diye bağırırım",
+         "dogru": false,
+         "aciklama": "Suçlama yanlışsa büyük haksızlık olur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İlk hafta",
+      "maddeler": [
+       "Etiket-kasa farkında düşük fiyat.",
+       "Alınan para üstü verilene kadar ortada kalır.",
+       "Hırsızlık şüphesi yetkiliye bildirilir."
+      ]
+     }
+    },
+    {
+     "id": "c6-kasa",
+     "sablon": "siralama",
+     "ikon": "🛒",
+     "baslik": "Kasada satışı tamamla",
+     "aciklama": "Bir müşteri süt, ekmek ve elma ile kasana geldi. Satışı doğru sırayla tamamla.",
+     "adimlar": [
+      {
+       "id": "selam",
+       "ikon": "😊",
+       "metin": "Müşteriyi güler yüzle karşıla",
+       "neden": "İlk izlenim bütün satışı etkiler.",
+       "ipucu": "Önce müşteri."
+      },
+      {
+       "id": "okut",
+       "ikon": "🔎",
+       "metin": "Ürünleri tek tek okut, fiyatı etiketle karşılaştır",
+       "neden": "Yanlış fiyat müşteriyi de mağazayı da zarara sokar.",
+       "ipucu": "Selamlaştınız; ürünler."
+      },
+      {
+       "id": "poset",
+       "ikon": "🛍️",
+       "metin": "Poşet isteyip istemediğini sor",
+       "neden": "Plastik poşet ücretlidir; müşteriye sorulur.",
+       "ipucu": "Ürünler okundu; neye koyacak?"
+      },
+      {
+       "id": "odeme",
+       "ikon": "💵",
+       "metin": "Ödemeyi al, nakitse parayı kontrol et ve kasaya koymadan tezgâhta tut",
+       "neden": "Sahte para ve para üstü tartışması önlenir.",
+       "ipucu": "Toplam belli; ödeme."
+      },
+      {
+       "id": "fis",
+       "ikon": "🧾",
+       "metin": "Para üstünü sayarak ver, fişi uzat",
+       "neden": "Fiş zorunludur; sayarak vermek hatayı önler.",
+       "ipucu": "Ödeme alındı; şimdi?"
+      },
+      {
+       "id": "tesekkur",
+       "ikon": "🙏",
+       "metin": "Teşekkür et, yine bekle",
+       "neden": "Memnun müşteri geri gelir.",
+       "ipucu": "Her şey tamam; uğurla."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Kasa sırası",
+      "maddeler": [
+       "Selam → okut → poşet → ödeme ve para kontrolü → para üstü ve fiş → teşekkür.",
+       "Alınan para, para üstü verilene kadar kasaya konmaz."
+      ]
+     },
+     "sahne": "kasa"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Stajyer sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Etiket 40, kasa 45 TL. Hangisi uygulanır?",
+       "secenekler": [
+        "45",
+        "40",
+        "Ortalaması",
+        "Müşteri seçemez"
+       ],
+       "dogru": 1,
+       "aciklama": "Tüketici lehine olan."
+      },
+      {
+       "soru": "Alınan nakit para ne zaman kasaya konur?",
+       "secenekler": [
+        "Hemen",
+        "Para üstü verildikten sonra",
+        "Gün sonunda",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Tartışmayı önler."
+      },
+      {
+       "soru": "18 yaşından küçük olduğu düşünülen birine sigara?",
+       "secenekler": [
+        "Satılır",
+        "Kimlik istenir; kanıtlanmazsa satılmaz",
+        "Yarım paket satılır",
+        "Ailesi gelirse satılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Yaş sınırı 18."
+      },
+      {
+       "soru": "Toplam 72 TL, 100 TL verildi. Para üstü?",
+       "secenekler": [
+        "18",
+        "28",
+        "38",
+        "172"
+       ],
+       "dogru": 1,
+       "aciklama": "100 − 72 = 28."
+      },
+      {
+       "soru": "200 TL'lik ürüne %15 indirim?",
+       "secenekler": [
+        "170",
+        "185",
+        "30",
+        "215"
+       ],
+       "dogru": 0,
+       "aciklama": "200 × 0,85 = 170."
+      },
+      {
+       "soru": "Hırsızlık şüphesinde?",
+       "secenekler": [
+        "Üstünü ararım",
+        "Yetkiliye bildiririm",
+        "Bağırırım",
+        "Kapıyı kilitlerim"
+       ],
+       "dogru": 1,
+       "aciklama": "Arama yetkisi yok."
+      },
+      {
+       "soru": "Her satışta?",
+       "secenekler": [
+        "Fiş verilir",
+        "Müşteri isterse fiş",
+        "Fiş gerekmez",
+        "Ayda bir fiş"
+       ],
+       "dogru": 0,
+       "aciklama": "Fiş zorunlu."
+      },
+      {
+       "soru": "Müşteriyi yanıltarak pahalı ürün satmak?",
+       "secenekler": [
+        "Doğru",
+        "Yanlış",
+        "Kampanyada doğru",
+        "Bazen"
+       ],
+       "dogru": 1,
+       "aciklama": "Dürüstlük esastır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Satış danışmanı",
+   "hedefXp": 280,
+   "rozet": {
+    "ad": "Satış Danışmanı",
+    "ikon": "🤝"
+   },
+   "sonraki": "Reyon sorumlusu kademesi açıldı: raf düzeni, stok ve fire.",
+   "gorevler": [
+    {
+     "id": "y1-satis",
+     "sablon": "bilgi",
+     "ikon": "🤝",
+     "baslik": "Satış ve tüketici hakları",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "❓",
+       "baslik": "İhtiyacı anla",
+       "metin": "Önce dinle, sonra öner. \"Kimin için, nerede, ne kadar sıklıkla kullanacaksınız?\" gibi sorular doğru ürünü bulur.",
+       "terim": "ihtiyaç analizi"
+      },
+      {
+       "ikon": "✨",
+       "baslik": "Özellik ve fayda",
+       "metin": "\"Su geçirmez\" bir özelliktir; \"yağmurda ayakların kuru kalır\" faydadır. Müşteri faydayı satın alır.",
+       "terim": "fayda satışı"
+      },
+      {
+       "ikon": "➕",
+       "baslik": "Tamamlayıcı ürün",
+       "metin": "Ayakkabıya bakım spreyi, telefona kılıf önermek müşteriye de yararlıysa iyi bir öneridir; zorlamak değildir.",
+       "terim": "çapraz satış"
+      },
+      {
+       "ikon": "🧾",
+       "baslik": "Ayıplı mal",
+       "metin": "Ürün kusurlu çıkarsa tüketici ücretsiz onarım, değişim, bedel indirimi ya da iade isteyebilir.",
+       "terim": "seçimlik haklar"
+      },
+      {
+       "ikon": "🏬",
+       "baslik": "Mağaza iadesi",
+       "metin": "Mağazada görerek alınan sağlam üründe yasal iade hakkı yoktur; iade ve değişim mağazanın politikasına bağlıdır. Politika açıkça söylenmeli ve uygulanmalıdır.",
+       "terim": "iade politikası"
+      },
+      {
+       "ikon": "🌐",
+       "baslik": "İnternet satışı",
+       "metin": "İnternetten ya da telefonla alınan ürünlerde tüketicinin 14 gün içinde gerekçesiz cayma hakkı vardır.",
+       "terim": "cayma hakkı"
+      }
+     ]
+    },
+    {
+     "id": "y2-hak",
+     "sablon": "siniflandirma",
+     "ikon": "⚖️",
+     "baslik": "Yasal hak mı, mağaza politikası mı?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her talebi doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "yasal",
+       "ad": "Yasal hak",
+       "ikon": "⚖️"
+      },
+      {
+       "id": "politika",
+       "ad": "Mağaza politikasına bağlı",
+       "ikon": "🏬"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Bozuk çıkan ütünün onarımı ya da değişimi",
+       "ikon": "🔧",
+       "kategori": "yasal",
+       "aciklama": "Ayıplı mal."
+      },
+      {
+       "ad": "Etiket-kasa farkında düşük fiyat",
+       "ikon": "🏷️",
+       "kategori": "yasal",
+       "aciklama": "Kanunda yazılı."
+      },
+      {
+       "ad": "İnternetten alınan ayakkabıyı 14 gün içinde gerekçesiz iade",
+       "ikon": "🌐",
+       "kategori": "yasal",
+       "aciklama": "Mesafeli satışta cayma hakkı."
+      },
+      {
+       "ad": "Alışverişte fiş almak",
+       "ikon": "🧾",
+       "kategori": "yasal",
+       "aciklama": "Fiş zorunludur."
+      },
+      {
+       "ad": "Mağazadan alınan sağlam kazağı \"beğenmedim\" diye iade",
+       "ikon": "🧥",
+       "kategori": "politika",
+       "aciklama": "Ayıp yoksa yasal zorunluluk yok."
+      },
+      {
+       "ad": "Sağlam ürünün bedenini değiştirmek",
+       "ikon": "📏",
+       "kategori": "politika",
+       "aciklama": "Mağazanın değişim kuralı."
+      },
+      {
+       "ad": "Fişsiz hediye ürünü değiştirmek",
+       "ikon": "🎁",
+       "kategori": "politika",
+       "aciklama": "Mağaza karar verir."
+      },
+      {
+       "ad": "İndirimli sağlam üründe para iadesi",
+       "ikon": "💸",
+       "kategori": "politika",
+       "aciklama": "Politikaya bağlı."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Haklar",
+      "maddeler": [
+       "Ayıplı mal, etiket farkı, internette 14 gün cayma, fiş: yasal.",
+       "Mağazadan alınan sağlam üründe iade ve değişim: mağaza politikası."
+      ]
+     }
+    },
+    {
+     "id": "y3-teknik",
+     "sablon": "soru",
+     "ikon": "💬",
+     "baslik": "Satış durumları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Müşterinin ihtiyacını anlamak için en iyi soru?",
+       "secenekler": [
+        "\"Bunu alacak mısınız?\"",
+        "\"Ne amaçla kullanacaksınız?\"",
+        "\"Bütçeniz yok mu?\"",
+        "\"Acele eder misiniz?\""
+       ],
+       "dogru": 1,
+       "aciklama": "Açık uçlu soru konuşturur."
+      },
+      {
+       "soru": "Hangisi fayda?",
+       "secenekler": [
+        "2.000 mAh batarya",
+        "Gün boyu şarj dert etmezsin",
+        "Siyah renk",
+        "200 gram"
+       ],
+       "dogru": 1,
+       "aciklama": "Müşterinin kazancı."
+      },
+      {
+       "soru": "Müşteri \"pahalı\" dedi. İlk ne yaparsın?",
+       "secenekler": [
+        "Hemen indirim",
+        "Neyle karşılaştırdığını sorup dinlerim",
+        "Tartışırım",
+        "Konuyu değiştiririm"
+       ],
+       "dogru": 1,
+       "aciklama": "İtiraz anlaşılmadan yanıtlanmaz."
+      },
+      {
+       "soru": "Telefon alan müşteriye kılıf önermek?",
+       "secenekler": [
+        "Zorla satış",
+        "İhtiyacına uygunsa yerinde bir öneri",
+        "Yasak",
+        "Kaba"
+       ],
+       "dogru": 1,
+       "aciklama": "Faydalıysa öneri, zorlamaysa yanlış."
+      },
+      {
+       "soru": "Müşteri bir şey almadan çıkıyor.",
+       "secenekler": [
+        "Arkasından söylenirim",
+        "Teşekkür eder, yine beklerim",
+        "Görmezden gelirim",
+        "Kapıda dururum"
+       ],
+       "dogru": 1,
+       "aciklama": "Bugün almayan yarın gelir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Satış durumları",
+      "maddeler": [
+       "Açık uçlu soru sor.",
+       "Özelliği faydaya çevir.",
+       "İtirazı önce dinle."
+      ]
+     }
+    },
+    {
+     "id": "y4-gun",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "Yoğun bir cumartesi",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık deneyimli bir satış danışmanısın. Mağaza tıklım tıklım.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri 3 gün önce aldığı ütüyle geldi: \"Hiç ısınmıyor!\"",
+       "secenekler": [
+        {
+         "metin": "Özür diler, ürünü kontrol eder; ayıplıysa seçimlik hakkını sorup uygularım",
+         "dogru": true,
+         "aciklama": "Ayıplı malda tüketicinin onarım, değişim, indirim ya da iade hakkı vardır."
+        },
+        {
+         "metin": "\"Kullanım hatasıdır\" deyip geri çeviririm",
+         "dogru": false,
+         "aciklama": "Kontrol etmeden suçlamak yanlıştır."
+        },
+        {
+         "metin": "\"İade yok\" tabelasını gösteririm",
+         "dogru": false,
+         "aciklama": "Ayıplı malda yasal haklar tabeladan önce gelir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Yönetici: \"Bu hafta kampanya ürününü herkese satmamız lazım.\"",
+       "secenekler": [
+        {
+         "metin": "İhtiyacı olan müşterilere tanıtırım, ihtiyacı olmayana zorlamam",
+         "dogru": true,
+         "aciklama": "Zorla satılan ürün iade ve şikâyet olarak döner."
+        },
+        {
+         "metin": "Herkese ısrar ederim",
+         "dogru": false,
+         "aciklama": "Müşteri kaçar."
+        },
+        {
+         "metin": "Hiç bahsetmem",
+         "dogru": false,
+         "aciklama": "Uygun müşteriye tanıtmak işin parçası."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Tekerlekli sandalyedeki bir müşteri üst raftaki ürüne ulaşamıyor.",
+       "secenekler": [
+        {
+         "metin": "Yardım teklif eder, ürünü indirip gerekirse kasaya kadar eşlik ederim",
+         "dogru": true,
+         "aciklama": "Herkese eşit hizmet mağazanın sorumluluğudur."
+        },
+        {
+         "metin": "Başkası yardım eder diye beklerim",
+         "dogru": false,
+         "aciklama": "Sen oradasın."
+        },
+        {
+         "metin": "Ürünü gösterir geçerim",
+         "dogru": false,
+         "aciklama": "Ulaşamıyor; yardım gerekir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Yoğun gün",
+      "maddeler": [
+       "Ayıplı malda yasal haklar uygulanır.",
+       "Kampanya ihtiyacı olana tanıtılır.",
+       "Herkese erişilebilir hizmet."
+      ]
+     }
+    },
+    {
+     "id": "y5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Satış danışmanı sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Ayıplı malda tüketicinin hakları?",
+       "secenekler": [
+        "Yok",
+        "Onarım, değişim, bedel indirimi, iade",
+        "Sadece onarım",
+        "Sadece mağaza puanı"
+       ],
+       "dogru": 1,
+       "aciklama": "Dört seçimlik hak."
+      },
+      {
+       "soru": "Mağazadan alınan sağlam ürün \"beğenmedim\" diye iade?",
+       "secenekler": [
+        "Yasal zorunluluk",
+        "Mağaza politikasına bağlı",
+        "Her zaman yasak",
+        "Sadece kartla ödendiyse"
+       ],
+       "dogru": 1,
+       "aciklama": "Ayıp yoksa politika."
+      },
+      {
+       "soru": "İnternetten alışverişte cayma süresi?",
+       "secenekler": [
+        "3 gün",
+        "7 gün",
+        "14 gün",
+        "30 gün"
+       ],
+       "dogru": 2,
+       "aciklama": "14 gün."
+      },
+      {
+       "soru": "Hangisi fayda cümlesi?",
+       "secenekler": [
+        "Pamuklu",
+        "Terletmez, rahat edersin",
+        "Mavi",
+        "M beden"
+       ],
+       "dogru": 1,
+       "aciklama": "Müşterinin kazancı."
+      },
+      {
+       "soru": "\"Pahalı\" itirazında ilk adım?",
+       "secenekler": [
+        "İndirim",
+        "Dinlemek ve sormak",
+        "Tartışmak",
+        "Susmak"
+       ],
+       "dogru": 1,
+       "aciklama": "Anla, sonra yanıtla."
+      },
+      {
+       "soru": "Kampanya ürünü?",
+       "secenekler": [
+        "Herkese zorla",
+        "İhtiyacı olana tanıt",
+        "Gizle",
+        "Kasada ekle"
+       ],
+       "dogru": 1,
+       "aciklama": "Zorlama yok."
+      },
+      {
+       "soru": "Müşterinin telefon numarası?",
+       "secenekler": [
+        "Paylaşılabilir",
+        "Kişisel veridir, korunur",
+        "Arkadaşa verilir",
+        "Sosyal medyada paylaşılır"
+       ],
+       "dogru": 1,
+       "aciklama": "KVKK."
+      },
+      {
+       "soru": "İade politikası?",
+       "secenekler": [
+        "Gizli tutulur",
+        "Açıkça söylenir ve uygulanır",
+        "Kişiye göre değişir",
+        "Hiç olmaz"
+       ],
+       "dogru": 1,
+       "aciklama": "Şeffaflık güven verir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Reyon sorumlusu",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Reyon Sorumlusu",
+    "ikon": "🗂️"
+   },
+   "sonraki": "Mağaza müdürü kademesi açıldı: göstergeler, kasa güvenliği ve ekip.",
+   "gorevler": [
+    {
+     "id": "u1-reyon",
+     "sablon": "bilgi",
+     "ikon": "🗂️",
+     "baslik": "Reyon yönetimi",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "👁️",
+       "baslik": "Göz hizası",
+       "metin": "Göz hizasındaki raflar en çok dikkat çeken yerlerdir; öne çıkarılmak istenen ürünler buraya konur.",
+       "terim": "raf yerleşimi"
+      },
+      {
+       "ikon": "⬇️",
+       "baslik": "Alt raflar",
+       "metin": "Ağır ve büyük paketler güvenlik için alt raflara konur.",
+       "terim": "güvenli yerleşim"
+      },
+      {
+       "ikon": "📅",
+       "baslik": "İlk giren ilk çıkar",
+       "metin": "Son kullanma tarihi yakın olan ürün öne, yeni gelen arkaya dizilir. Tarihi geçen hemen raftan kaldırılır.",
+       "terim": "FIFO / SKT"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Yüzleme",
+       "metin": "Ürünlerin ön yüzü dışa, sıralar düzgün ve boşluksuz olmalı. Düzenli raf güven verir.",
+       "terim": "yüzleme"
+      },
+      {
+       "ikon": "📉",
+       "baslik": "Fire",
+       "metin": "Kırılan, bozulan, çalınan ya da tarihi geçen ürünler fire olarak kaydedilir; fire nedenleri incelenir.",
+       "terim": "fire"
+      },
+      {
+       "ikon": "📊",
+       "baslik": "Sipariş",
+       "metin": "Satış hızı ve stok miktarı takip edilerek eksilen ürünler zamanında sipariş edilir.",
+       "terim": "stok takibi"
+      }
+     ]
+    },
+    {
+     "id": "u2-raf",
+     "sablon": "siniflandirma",
+     "ikon": "🧺",
+     "baslik": "Hangi rafa?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her ürünü en uygun yere ver.",
+     "kategoriler": [
+      {
+       "id": "goz",
+       "ad": "Göz hizası",
+       "ikon": "👁️"
+      },
+      {
+       "id": "alt",
+       "ad": "Alt raf",
+       "ikon": "⬇️"
+      },
+      {
+       "id": "kasa",
+       "ad": "Kasa önü",
+       "ikon": "🧾"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Bu hafta tanıtılan yeni ürün",
+       "ikon": "✨",
+       "kategori": "goz",
+       "aciklama": "En çok görülen yer."
+      },
+      {
+       "ad": "Kampanyadaki öne çıkan ürün",
+       "ikon": "🏷️",
+       "kategori": "goz",
+       "aciklama": "Dikkat çekmesi istenir."
+      },
+      {
+       "ad": "6'lı su kolisi",
+       "ikon": "💧",
+       "kategori": "alt",
+       "aciklama": "Ağır ürün aşağıda olmalı."
+      },
+      {
+       "ad": "Büyük boy deterjan",
+       "ikon": "🧴",
+       "kategori": "alt",
+       "aciklama": "Ağır ve hacimli."
+      },
+      {
+       "ad": "Çuval pirinç",
+       "ikon": "🌾",
+       "kategori": "alt",
+       "aciklama": "Düşerse tehlikeli."
+      },
+      {
+       "ad": "Sakız ve şeker",
+       "ikon": "🍬",
+       "kategori": "kasa",
+       "aciklama": "Anlık alınan küçük ürün."
+      },
+      {
+       "ad": "Pil",
+       "ikon": "🔋",
+       "kategori": "kasa",
+       "aciklama": "Akla son anda gelen ürün."
+      },
+      {
+       "ad": "Islak mendil (küçük paket)",
+       "ikon": "🧻",
+       "kategori": "kasa",
+       "aciklama": "Küçük, sık alınan ürün."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Raf yerleşimi",
+      "maddeler": [
+       "Göz hizası: öne çıkarılan ürün.",
+       "Alt raf: ağır ve büyük ürün.",
+       "Kasa önü: küçük, anlık alınan ürün."
+      ]
+     }
+    },
+    {
+     "id": "u3-stok",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Stok ve fire hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Rafta 120 süt vardı, gün içinde 85 satıldı, 50 geldi. Akşam stok?",
+       "secenekler": [
+        "35",
+        "85",
+        "155",
+        "255"
+       ],
+       "dogru": 1,
+       "aciklama": "120 − 85 + 50 = 85."
+      },
+      {
+       "soru": "Ayda 2.000 ürün satılıyor, 40'ı fire oluyor. Fire oranı?",
+       "secenekler": [
+        "%0,2",
+        "%2",
+        "%20",
+        "%40"
+       ],
+       "dogru": 1,
+       "aciklama": "40 ÷ 2.000 = %2."
+      },
+      {
+       "soru": "Günde ortalama 30 adet satılıyor, sipariş 4 günde geliyor. Sipariş en geç kaç adet kalınca verilmeli?",
+       "secenekler": [
+        "30",
+        "60",
+        "120",
+        "240"
+       ],
+       "dogru": 2,
+       "aciklama": "30 × 4 = 120; bu seviyeye inmeden sipariş ver."
+      },
+      {
+       "soru": "Kayıtta 250, sayımda 238 ürün. Fark?",
+       "secenekler": [
+        "12 eksik",
+        "12 fazla",
+        "Fark yok",
+        "488"
+       ],
+       "dogru": 0,
+       "aciklama": "250 − 238 = 12 eksik; nedeni araştırılır."
+      },
+      {
+       "soru": "Aynı üründen 3 paket: SKT 5 Kasım, 20 Kasım, 12 Aralık. En öne hangisi?",
+       "secenekler": [
+        "12 Aralık",
+        "20 Kasım",
+        "5 Kasım",
+        "Fark etmez"
+       ],
+       "dogru": 2,
+       "aciklama": "Tarihi en yakın olan öne."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Stok",
+      "maddeler": [
+       "Stok = önceki − satış + gelen.",
+       "Fire oranı = fire ÷ satış.",
+       "Sipariş noktası = günlük satış × teslim süresi."
+      ]
+     }
+    },
+    {
+     "id": "u4-raf",
+     "sablon": "siralama",
+     "ikon": "📦",
+     "baslik": "Rafa ürün diz",
+     "aciklama": "Depodan yeni gelen sütleri rafa dizeceksin. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "kontrol",
+       "ikon": "🔎",
+       "metin": "Raftaki ürünlerin son kullanma tarihlerini kontrol et, tarihi geçeni ayır",
+       "neden": "Tarihi geçen ürün satılamaz.",
+       "ipucu": "Önce raftakilere bak."
+      },
+      {
+       "id": "one",
+       "ikon": "⬅️",
+       "metin": "Tarihi yakın olanları öne al",
+       "neden": "İlk giren ilk çıkar.",
+       "ipucu": "Raf temiz; eskiler nereye?"
+      },
+      {
+       "id": "arka",
+       "ikon": "➡️",
+       "metin": "Yeni gelen ürünleri arkaya diz",
+       "neden": "Taze ürün sırasını bekler.",
+       "ipucu": "Eskiler önde; yeniler?"
+      },
+      {
+       "id": "etiket",
+       "ikon": "🏷️",
+       "metin": "Fiyat etiketini kontrol et, eksikse koy",
+       "neden": "Etiketsiz ürün satışa konamaz.",
+       "ipucu": "Dizildi; fiyat?"
+      },
+      {
+       "id": "yuzle",
+       "ikon": "🧱",
+       "metin": "Ön yüzleri dışa çevir, sıraları düzelt",
+       "neden": "Düzenli raf satışı artırır.",
+       "ipucu": "Etiket tamam; görünüm."
+      },
+      {
+       "id": "temizle",
+       "ikon": "🧹",
+       "metin": "Boş kolileri ve ambalajları kaldır, koridoru aç",
+       "neden": "Koridordaki koli kazaya yol açar.",
+       "ipucu": "Raf hazır; çevre?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Raf dizme",
+      "maddeler": [
+       "SKT kontrolü → eskiler öne → yeniler arkaya → etiket → yüzleme → temizlik."
+      ]
+     }
+    },
+    {
+     "id": "u5-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Reyon sorumlusunun günü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Reyon sorumlusu olarak bir bölümün ve birkaç çalışanın sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir çalışan, tarihi geçmiş yoğurtların etiketini değiştirip satmayı öneriyor.",
+       "secenekler": [
+        {
+         "metin": "Kesinlikle hayır; ürünleri raftan kaldırıp fire kaydederim",
+         "dogru": true,
+         "aciklama": "Tarih değiştirmek halk sağlığını tehlikeye atar ve suçtur."
+        },
+        {
+         "metin": "Sadece birkaç gün geçmiş, olur",
+         "dogru": false,
+         "aciklama": "Tarihi geçmiş ürün satılmaz."
+        },
+        {
+         "metin": "İndirimle satarım",
+         "dogru": false,
+         "aciklama": "Tarihi geçmişse indirimle de satılmaz."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Raftaki etiket eski kalmış, birçok müşteri kasada itiraz ediyor.",
+       "secenekler": [
+        {
+         "metin": "Bütün etiketleri hemen günceller, kasaya düşük fiyatın uygulanacağını bildiririm",
+         "dogru": true,
+         "aciklama": "Etiketin doğru olması reyonun sorumluluğudur."
+        },
+        {
+         "metin": "Kasiyerler halletsin",
+         "dogru": false,
+         "aciklama": "Sorun reyondan çıkıyor."
+        },
+        {
+         "metin": "Etiketleri tamamen kaldırırım",
+         "dogru": false,
+         "aciklama": "Etiketsiz ürün de yasaya aykırı."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir çalışan, ağır kolileri tek başına üst rafa kaldırmaya çalışıyor.",
+       "secenekler": [
+        {
+         "metin": "Durdurur, merdiven ya da ikinci kişiyle güvenli kaldırmayı gösteririm",
+         "dogru": true,
+         "aciklama": "Sırt sakatlanmaları ve düşen koliler sık iş kazalarıdır."
+        },
+        {
+         "metin": "Güçlü, yapsın",
+         "dogru": false,
+         "aciklama": "Kaza riski."
+        },
+        {
+         "metin": "Kendim yaparım",
+         "dogru": false,
+         "aciklama": "Doğru yöntemi öğretmek daha kalıcı."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Reyon sorumlusu",
+      "maddeler": [
+       "Tarihi geçen ürün satılmaz, fire kaydedilir.",
+       "Etiket doğruluğu reyonun işi.",
+       "Güvenli kaldırma öğretilir."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Reyon sorumlusu sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "SKT yakın ürün rafta nereye?",
+       "secenekler": [
+        "Arkaya",
+        "Öne",
+        "Üste",
+        "Depoya"
+       ],
+       "dogru": 1,
+       "aciklama": "İlk giren ilk çıkar."
+      },
+      {
+       "soru": "Ağır ürünler?",
+       "secenekler": [
+        "Üst raf",
+        "Alt raf",
+        "Kasa önü",
+        "Göz hizası"
+       ],
+       "dogru": 1,
+       "aciklama": "Güvenlik."
+      },
+      {
+       "soru": "Ayda 5.000 satış, 100 fire. Oran?",
+       "secenekler": [
+        "%0,2",
+        "%2",
+        "%20",
+        "%50"
+       ],
+       "dogru": 1,
+       "aciklama": "100 ÷ 5.000."
+      },
+      {
+       "soru": "Günlük 20 satış, 5 gün teslim. Sipariş noktası?",
+       "secenekler": [
+        "20",
+        "25",
+        "100",
+        "500"
+       ],
+       "dogru": 2,
+       "aciklama": "20 × 5."
+      },
+      {
+       "soru": "Tarihi geçmiş ürünün etiketini değiştirmek?",
+       "secenekler": [
+        "Olur",
+        "Suçtur",
+        "İndirimle olur",
+        "Gece olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Halk sağlığı."
+      },
+      {
+       "soru": "Kasa önüne en uygun ürün?",
+       "secenekler": [
+        "Su kolisi",
+        "Sakız",
+        "Pirinç çuvalı",
+        "Deterjan"
+       ],
+       "dogru": 1,
+       "aciklama": "Anlık alım."
+      },
+      {
+       "soru": "Etiketsiz ürün?",
+       "secenekler": [
+        "Satılır",
+        "Etiket konmadan satışa sunulmaz",
+        "Kasa fiyatı yeter",
+        "Önemsiz"
+       ],
+       "dogru": 1,
+       "aciklama": "Etiket zorunlu."
+      },
+      {
+       "soru": "Kayıt 300, sayım 291?",
+       "secenekler": [
+        "9 eksik",
+        "9 fazla",
+        "Fark yok",
+        "591"
+       ],
+       "dogru": 0,
+       "aciklama": "Nedeni araştırılır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Mağaza müdürü",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "Mağaza Müdürü",
+    "ikon": "🏢"
+   },
+   "sonraki": "Stajyerlikten mağaza müdürlüğüne tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "b1-magaza",
+     "sablon": "bilgi",
+     "ikon": "🏢",
+     "baslik": "Mağaza müdürlüğü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🎯",
+       "baslik": "Hedefler",
+       "metin": "Müdür satış hedeflerini, bütçeyi ve personel planını yönetir.",
+       "terim": "hedef yönetimi"
+      },
+      {
+       "ikon": "🔄",
+       "baslik": "Dönüşüm oranı",
+       "metin": "Mağazaya giren müşterilerden kaçının alışveriş yaptığını gösterir.",
+       "terim": "dönüşüm oranı"
+      },
+      {
+       "ikon": "🧺",
+       "baslik": "Sepet ortalaması",
+       "metin": "Toplam satışın fiş sayısına bölünmesidir; müşterinin bir alışverişte ne kadar harcadığını gösterir.",
+       "terim": "sepet ortalaması"
+      },
+      {
+       "ikon": "👥",
+       "baslik": "Ekip",
+       "metin": "Vardiyalar yoğunluğa göre planlanır, çalışanlar eğitilir ve dinlenme hakları korunur.",
+       "terim": "personel planı"
+      },
+      {
+       "ikon": "🔐",
+       "baslik": "Kasa güvenliği",
+       "metin": "Kasalar vardiya değişiminde sayılır, iptal ve iadeler yetkiyle yapılır, fazla nakit ara toplamayla kasadan alınır.",
+       "terim": "kasa kontrolü"
+      },
+      {
+       "ikon": "📹",
+       "baslik": "Kamera ve veri",
+       "metin": "Güvenlik kameraları için bilgilendirme yapılır, kayıtlar KVKK'ya uygun saklanır ve yetkisiz kişilere verilmez.",
+       "terim": "KVKK"
+      }
+     ]
+    },
+    {
+     "id": "b2-kontrol",
+     "sablon": "siniflandirma",
+     "ikon": "🔐",
+     "baslik": "Doğru mu, riskli mi?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her uygulamayı doğru gruba ver.",
+     "kategoriler": [
+      {
+       "id": "dogru",
+       "ad": "Doğru uygulama",
+       "ikon": "✅"
+      },
+      {
+       "id": "risk",
+       "ad": "Risk",
+       "ikon": "⚠️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Vardiya değişiminde kasanın iki kişiyle sayılması",
+       "ikon": "👥",
+       "kategori": "dogru",
+       "aciklama": "Fark anında ortaya çıkar."
+      },
+      {
+       "ad": "Her kasiyerin kendine özel şifresi",
+       "ikon": "🔑",
+       "kategori": "dogru",
+       "aciklama": "Kim ne yaptı izlenir."
+      },
+      {
+       "ad": "İptal ve iadelerde yönetici onayı",
+       "ikon": "✍️",
+       "kategori": "dogru",
+       "aciklama": "Suistimal önlenir."
+      },
+      {
+       "ad": "Kamera için girişte bilgilendirme levhası",
+       "ikon": "📹",
+       "kategori": "dogru",
+       "aciklama": "Kişisel veri kurallarına uygun."
+      },
+      {
+       "ad": "Bütün kasiyerlerin tek şifre kullanması",
+       "ikon": "🔓",
+       "kategori": "risk",
+       "aciklama": "Sorumluluk belirsizleşir."
+      },
+      {
+       "ad": "Kasada gün boyu yüksek nakit birikmesi",
+       "ikon": "💰",
+       "kategori": "risk",
+       "aciklama": "Ara toplama yapılmalı."
+      },
+      {
+       "ad": "Çalışanın kendi alışverişini kendi kasasında okutması",
+       "ikon": "🧾",
+       "kategori": "risk",
+       "aciklama": "Başka bir kasiyer okutmalı."
+      },
+      {
+       "ad": "Kamera kayıtlarını isteyen herkese vermek",
+       "ikon": "📼",
+       "kategori": "risk",
+       "aciklama": "Kayıtlar yalnızca yetkili makamlara verilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Mağaza kontrolü",
+      "maddeler": [
+       "Kasa iki kişiyle sayılır, şifreler kişiye özel.",
+       "İptal ve iade onayla.",
+       "Kamera kayıtları korunur."
+      ]
+     }
+    },
+    {
+     "id": "b3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Mağaza göstergeleri",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Günde 800 kişi girdi, 240'ı alışveriş yaptı. Dönüşüm oranı?",
+       "secenekler": [
+        "%24",
+        "%30",
+        "%33",
+        "%240"
+       ],
+       "dogru": 1,
+       "aciklama": "240 ÷ 800 = %30."
+      },
+      {
+       "soru": "Günlük satış 72.000 TL, 240 fiş. Sepet ortalaması?",
+       "secenekler": [
+        "240 TL",
+        "300 TL",
+        "720 TL",
+        "3.000 TL"
+       ],
+       "dogru": 1,
+       "aciklama": "72.000 ÷ 240 = 300 TL."
+      },
+      {
+       "soru": "Aylık hedef 2.400.000 TL, 30 gün. Günlük hedef?",
+       "secenekler": [
+        "24.000",
+        "80.000",
+        "240.000",
+        "800.000"
+       ],
+       "dogru": 1,
+       "aciklama": "2.400.000 ÷ 30 = 80.000 TL."
+      },
+      {
+       "soru": "Dönüşüm %30'dan %35'e çıkarsa 800 ziyaretçide kaç ek müşteri?",
+       "secenekler": [
+        "5",
+        "40",
+        "280",
+        "35"
+       ],
+       "dogru": 1,
+       "aciklama": "800 × 0,35 = 280; 280 − 240 = 40."
+      },
+      {
+       "soru": "Kasa sayımında 18.450 TL olması gereken yerde 18.250 TL var. Fark?",
+       "secenekler": [
+        "200 TL fazla",
+        "200 TL açık",
+        "Fark yok",
+        "2.000 TL açık"
+       ],
+       "dogru": 1,
+       "aciklama": "200 TL açık; nedeni araştırılır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Göstergeler",
+      "maddeler": [
+       "Dönüşüm = alışveriş yapan ÷ giren.",
+       "Sepet ortalaması = satış ÷ fiş.",
+       "Günlük hedef = aylık ÷ gün."
+      ]
+     }
+    },
+    {
+     "id": "b4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir dönem",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Mağaza müdürü olarak bütün mağazadan sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Ticaret Bakanlığı denetçileri etiket kontrolüne geldi.",
+       "secenekler": [
+        {
+         "metin": "İşbirliği yapar, istenenleri gösterir, eksik varsa hemen düzeltip süreci iyileştiririm",
+         "dogru": true,
+         "aciklama": "Denetim bir fırsattır; eksik saklanmaz, düzeltilir."
+        },
+        {
+         "metin": "Eksik etiketleri hızlıca saklarım",
+         "dogru": false,
+         "aciklama": "Gizlemek durumu ağırlaştırır."
+        },
+        {
+         "metin": "Denetçileri bekletirim",
+         "dogru": false,
+         "aciklama": "Denetime engel olunmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Bayram yoğunluğunda çalışanlar molasız çalıştırılmak isteniyor.",
+       "secenekler": [
+        {
+         "metin": "Vardiyaları ve molaları planlı tutar, gerekirse ek personel ayarlarım",
+         "dogru": true,
+         "aciklama": "Dinlenme hakkı kanunla korunur; yorgun ekip hata yapar."
+        },
+        {
+         "metin": "Bu hafta mola yok",
+         "dogru": false,
+         "aciklama": "Hem kanuna aykırı hem tehlikeli."
+        },
+        {
+         "metin": "Sadece benim molam olsun",
+         "dogru": false,
+         "aciklama": "Adil değil."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Bir müşteri sosyal medyada mağazayı haklı olarak eleştirdi: kasada uzun kuyruk.",
+       "secenekler": [
+        {
+         "metin": "Özür diler, nedeni inceler, kasa planını değiştirip sonucu paylaşırım",
+         "dogru": true,
+         "aciklama": "Haklı eleştiriyi kabul edip çözmek güveni geri kazandırır."
+        },
+        {
+         "metin": "Yorumu sildiririm",
+         "dogru": false,
+         "aciklama": "Sorunu çözmez, büyütür."
+        },
+        {
+         "metin": "Müşteriyle tartışırım",
+         "dogru": false,
+         "aciklama": "İtibar zarar görür."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Müdür olmak",
+      "maddeler": [
+       "Denetimde işbirliği ve düzeltme.",
+       "Mola ve dinlenme hakkı korunur.",
+       "Haklı eleştiri çözümle yanıtlanır."
+      ]
+     }
+    },
+    {
+     "id": "b5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Etiket 25, kasa 28 TL?",
+       "secenekler": [
+        "28",
+        "25",
+        "26,5",
+        "Müşteri öder"
+       ],
+       "dogru": 1,
+       "aciklama": "Tüketici lehine."
+      },
+      {
+       "soru": "İnternetten alışverişte cayma?",
+       "secenekler": [
+        "7 gün",
+        "14 gün",
+        "30 gün",
+        "Yok"
+       ],
+       "dogru": 1,
+       "aciklama": "14 gün."
+      },
+      {
+       "soru": "Mağazadan alınan sağlam üründe iade?",
+       "secenekler": [
+        "Yasal hak",
+        "Mağaza politikası",
+        "Yasak",
+        "Her zaman"
+       ],
+       "dogru": 1,
+       "aciklama": "Ayıp yoksa politika."
+      },
+      {
+       "soru": "1.000 ziyaretçi, 250 alışveriş. Dönüşüm?",
+       "secenekler": [
+        "%2,5",
+        "%25",
+        "%40",
+        "%250"
+       ],
+       "dogru": 1,
+       "aciklama": "250 ÷ 1.000."
+      },
+      {
+       "soru": "Satış 45.000 TL, 150 fiş. Sepet ortalaması?",
+       "secenekler": [
+        "150",
+        "300",
+        "450",
+        "3.000"
+       ],
+       "dogru": 1,
+       "aciklama": "45.000 ÷ 150."
+      },
+      {
+       "soru": "SKT yakın ürün?",
+       "secenekler": [
+        "Arkaya",
+        "Öne",
+        "Depoya",
+        "Üste"
+       ],
+       "dogru": 1,
+       "aciklama": "İlk giren ilk çıkar."
+      },
+      {
+       "soru": "Alkol ve tütün yaş sınırı?",
+       "secenekler": [
+        "16",
+        "18",
+        "21",
+        "Yok"
+       ],
+       "dogru": 1,
+       "aciklama": "18 yaş."
+      },
+      {
+       "soru": "Hırsızlık şüphesi?",
+       "secenekler": [
+        "Üstünü ara",
+        "Yetkiliye bildir",
+        "Bağır",
+        "Kilitle"
+       ],
+       "dogru": 1,
+       "aciklama": "Arama yetkisi yok."
+      },
+      {
+       "soru": "Kasa sayımı?",
+       "secenekler": [
+        "Tek kişi",
+        "Vardiya değişiminde iki kişi",
+        "Ayda bir",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Kontrol."
+      },
+      {
+       "soru": "Haklı müşteri eleştirisi?",
+       "secenekler": [
+        "Sil",
+        "Özür ve çözüm",
+        "Tartış",
+        "Görmezden gel"
+       ],
+       "dogru": 1,
+       "aciklama": "Güven kazanılır."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

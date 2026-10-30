@@ -8,7 +8,7 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 - Görevler **şablonlarla** oynanır (`sablonlar/`):
   - Genel (her meslek kullanır): bilgi, soru, sınav, senaryo, uyum, sıralama, hesap, **sınıflandırma**, **zamanlama**
   - Mesleğe özel beceri: ayar ve köpürtme (Barista)
-- Animasyonlu sahneler (`sahneler/`): espresso, mutfak, salon, çizim (Mimar: kat planı çizimi), şantiye (İnşaat Teknisyeni: kolon yapımı), freze (Universal Freze: kanal açma), kaynak (Kaynakçı: gazaltı alın kaynağı), kod (Yazılımcı: hata düzeltme), tasarim (Grafik Tasarımcı: afiş tasarlama), muhasebe (Muhasebe Elemanı: fatura kaydı ve mizan), itfaiye (İtfaiyeci: söndürücüyle yangın söndürme)
+- Animasyonlu sahneler (`sahneler/`): espresso, mutfak, salon, çizim (Mimar: kat planı çizimi), şantiye (İnşaat Teknisyeni: kolon yapımı), freze (Universal Freze: kanal açma), kaynak (Kaynakçı: gazaltı alın kaynağı), kod (Yazılımcı: hata düzeltme), tasarim (Grafik Tasarımcı: afiş tasarlama), muhasebe (Muhasebe Elemanı: fatura kaydı ve mizan), itfaiye (İtfaiyeci: söndürücüyle yangın söndürme), kasa (Satış Danışmanı ve Kasiyer: kasada satış)
 
 ## Klasörler
 | Yol | İçerik |
@@ -40,6 +40,7 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 | Grafik Tasarımcı (stajyer → sanat yönetmeni) | 26 görev · uzman onayı bekliyor |
 | Muhasebe Elemanı (stajyer → muhasebe şefi) | 26 görev · uzman onayı bekliyor |
 | İtfaiyeci (aday → istasyon amiri) | 26 görev · uzman onayı bekliyor |
+| Satış Danışmanı ve Kasiyer (stajyer → mağaza müdürü) | 26 görev · uzman onayı bekliyor |
 
 Tamamlama belgeleri resmî sertifika değildir.
 

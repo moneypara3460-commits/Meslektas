@@ -10,6 +10,7 @@ import yazilim from './yazilim.json';
 import grafik from './grafik.json';
 import muhasebe from './muhasebe.json';
 import itfaiye from './itfaiye.json';
+import satis from './satis.json';
 
-export const MESLEKLER = [barista, asci, servis, mimar, insaat, freze, kaynak, yazilim, grafik, muhasebe, itfaiye];
+export const MESLEKLER = [barista, asci, servis, mimar, insaat, freze, kaynak, yazilim, grafik, muhasebe, itfaiye, satis];
 export const meslekBul = (id) => MESLEKLER.find((p) => p.meslek.id === id);

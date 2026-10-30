@@ -72,6 +72,7 @@ export const MESLEK_PROFIL = {
   grafik: { R: 0.35, I: 0.45, A: 1, S: 0.45, E: 0.45, C: 0.55 },
   muhasebe: { R: 0.15, I: 0.5, A: 0.1, S: 0.35, E: 0.35, C: 1 },
   itfaiye: { R: 1, I: 0.35, A: 0.1, S: 0.85, E: 0.45, C: 0.7 },
+  satis: { R: 0.35, I: 0.15, A: 0.25, S: 1, E: 0.8, C: 0.65 },
 };
 
 // Henüz oyunda olmayan, tipe göre önerilecek meslekler.
@@ -79,7 +80,7 @@ export const YAKINDA = {
   R: ['Elektrikçi', 'Kuaför', 'Mobilya ustası'],
   I: ['Laborant', 'Eczane teknisyeni', 'Veri analisti'],
   A: ['Pastacı', 'İç mimar', 'Fotoğrafçı'],
-  S: ['Hemşire', 'Çocuk gelişimci', 'Satış danışmanı'],
+  S: ['Hemşire', 'Çocuk gelişimci', 'Sosyal hizmet uzmanı'],
   E: ['Emlak danışmanı', 'Mağaza müdürü', 'Etkinlik organizatörü'],
   C: ['İnsan kaynakları uzmanı', 'Depo sorumlusu', 'Banka gişe görevlisi'],
 };
