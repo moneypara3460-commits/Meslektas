@@ -8,7 +8,7 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 - Görevler **şablonlarla** oynanır (`sablonlar/`):
   - Genel (her meslek kullanır): bilgi, soru, sınav, senaryo, uyum, sıralama, hesap, **sınıflandırma**, **zamanlama**
   - Mesleğe özel beceri: ayar ve köpürtme (Barista)
-- Animasyonlu sahneler (`sahneler/`): espresso, mutfak, salon, çizim (Mimar: kat planı çizimi), şantiye (İnşaat Teknisyeni: kolon yapımı), freze (Universal Freze: kanal açma)
+- Animasyonlu sahneler (`sahneler/`): espresso, mutfak, salon, çizim (Mimar: kat planı çizimi), şantiye (İnşaat Teknisyeni: kolon yapımı), freze (Universal Freze: kanal açma), kaynak (Kaynakçı: gazaltı alın kaynağı)
 
 ## Klasörler
 | Yol | İçerik |
@@ -35,6 +35,7 @@ Her mesleği meraktan ustalığa kadar oynayarak öğreten mobil oyun. Expo (SDK
 | Mimar (stajyer → proje lideri) | 26 görev · uzman onayı bekliyor |
 | İnşaat Teknisyeni (çırak → kıdemli tekniker) | 26 görev · uzman onayı bekliyor |
 | Universal Freze Operatörü (çırak → baş usta) | 26 görev · uzman onayı bekliyor |
+| Kaynakçı (çırak → ustabaşı) | 26 görev · uzman onayı bekliyor |
 
 Tamamlama belgeleri resmî sertifika değildir.
 

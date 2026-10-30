@@ -67,6 +67,7 @@ export const MESLEK_PROFIL = {
   mimar: { R: 0.5, I: 0.7, A: 1, S: 0.35, E: 0.5, C: 0.7 },
   insaat: { R: 1, I: 0.45, A: 0.2, S: 0.4, E: 0.5, C: 0.9 },
   freze: { R: 1, I: 0.55, A: 0.15, S: 0.15, E: 0.25, C: 0.95 },
+  kaynak: { R: 1, I: 0.35, A: 0.3, S: 0.15, E: 0.2, C: 0.8 },
 };
 
 // Henüz oyunda olmayan, tipe göre önerilecek meslekler.

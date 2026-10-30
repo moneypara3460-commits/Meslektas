@@ -1,0 +1,2066 @@
+{
+ "paketSurumu": 1,
+ "meslek": {
+  "id": "kaynak",
+  "ad": "Kaynakçı",
+  "kategori": "Üretim & İmalat",
+  "tanim": "Metal parçaları elektrik arkı ya da alevle eriterek birleştiren meslek: çıraklıktan ustabaşılığa.",
+  "calismaKosullari": [
+   "Atölye, tersane, şantiye ve sahada",
+   "Sıcak, kıvılcım, duman ve ark ışığı",
+   "Bazen yüksekte ya da dar alanda"
+  ],
+  "kademeler": [
+   "Merak",
+   "Çırak",
+   "Kaynakçı",
+   "Usta",
+   "Ustabaşı"
+  ],
+  "renkler": {
+   "ana": "#22313d",
+   "vurgu": "#f2a024",
+   "zemin": "#eef0f2"
+  },
+  "metinler": {
+   "senaryoBasla": "Maskeyi indir",
+   "senaryoBitir": "Vardiyayı bitir",
+   "ucYildiz": "Usta dikişe baktı: \"Tırtıl gibi düzgün!\"",
+   "karakter": {
+    "usta": "Usta",
+    "musteri": "Müşteri"
+   }
+  },
+  "tamamlamaBelgesi": {
+   "baslik": "Kaynakçılık Yolu Tamamlama Belgesi",
+   "not": "Bu belge Meslektaş oyununda tamamlanan eğitim içeriğini gösterir; resmî bir sertifika değildir. Resmî belge için meslek lisesi, kurslar, MYK mesleki yeterlilik sınavları ve kaynakçı sertifikası sınavları vardır."
+  }
+ },
+ "kaynaklar": [
+  "MEB Metal Teknolojisi alanı kaynak modülleri (kendi cümlelerimizle)",
+  "6331 sayılı İş Sağlığı ve Güvenliği Kanunu",
+  "Kaynak pozisyonları: TS EN ISO 6947 adlandırması",
+  "Kaynakçı belgelendirme: TS EN ISO 9606-1 ve MYK Kaynakçı ulusal yeterliliği",
+  "Akım, gaz debisi ve fiyatlar örnektir; gerçek değerler elektrot/tel üreticisinin tablolarından ve kaynak prosedüründen alınır",
+  "Kaynak ustası uzman görüşü: bekleniyor"
+ ],
+ "uzmanOnayi": false,
+ "kademeler": [
+  {
+   "ad": "Merak",
+   "hedefXp": 85,
+   "rozet": {
+    "ad": "Kaynak Meraklısı",
+    "ikon": "🔍"
+   },
+   "sonraki": "Çırak kademesinde güvenliği, kaynak yöntemlerini ve ilk alın kaynağını öğreneceksin.",
+   "gorevler": [
+    {
+     "id": "m1-gun",
+     "sablon": "bilgi",
+     "ikon": "🌅",
+     "baslik": "Bir kaynakçının günü",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🏭",
+       "baslik": "Nerede çalışır?",
+       "metin": "Kaynakçı metal parçaları ısıyla eriterek birleştirir. Atölyede, fabrikada, tersanede, şantiyede ve boru hatlarında çalışır.",
+       "terim": "kaynak"
+      },
+      {
+       "ikon": "📜",
+       "baslik": "İş emri ve çizim",
+       "metin": "Gün, iş emri ve teknik resimle başlar: hangi parçalar, hangi dikiş, hangi yöntemle kaynatılacak, okunur.",
+       "terim": "teknik resim"
+      },
+      {
+       "ikon": "🧰",
+       "baslik": "Hazırlık",
+       "metin": "Parça ağızları taşlanır, pas ve yağ temizlenir, parçalar hizalanıp puntalanır. İyi kaynağın yarısı hazırlıktır.",
+       "terim": "ağız hazırlığı"
+      },
+      {
+       "ikon": "⚡",
+       "baslik": "Kaynak",
+       "metin": "Elektrik arkı metali eritir. Kaynakçı torcu ya da elektrodu doğru açıda, doğru hızda ilerletip düzgün bir dikiş çeker.",
+       "terim": "ark"
+      },
+      {
+       "ikon": "🔍",
+       "baslik": "Kontrol",
+       "metin": "Dikiş temizlenir ve gözle kontrol edilir: gözenek, çatlak, yanma oluğu var mı? Önemli işlerde özel muayene yapılır.",
+       "terim": "kalite kontrol"
+      },
+      {
+       "ikon": "🎓",
+       "baslik": "Nasıl olunur?",
+       "metin": "Meslek liselerinin metal teknolojisi alanında, kurslarda ve usta yanında öğrenilir. Türkiye'de kaynakçılık için MYK mesleki yeterlilik belgesi istenir; birçok projede ayrıca kaynakçı sertifikası aranır.",
+       "terim": "MYK belgesi"
+      }
+     ]
+    },
+    {
+     "id": "m2-ilk",
+     "sablon": "senaryo",
+     "ikon": "👋",
+     "baslik": "Atölyede ilk gün",
+     "temelXp": 10,
+     "yildizBasinaXp": 5,
+     "giris": "Bir kaynak atölyesinde deneme günündesin. Usta seni kaynak kabininin yanına aldı.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Usta kaynağa başlamak üzere. Sen yanında, maskesiz duruyorsun.",
+       "secenekler": [
+        {
+         "metin": "Arkı çıplak gözle izlemem; arkamı döner ya da maske takarım",
+         "dogru": true,
+         "aciklama": "Ark ışığı morötesi ışın yayar. Birkaç saniye bakmak bile gözü yakabilir; buna \"kaynak gözü\" denir."
+        },
+        {
+         "metin": "Bir saniye bakmak bir şey yapmaz",
+         "dogru": false,
+         "aciklama": "Kısa süre de göze zarar verir; ağrı çoğu zaman saatler sonra başlar."
+        },
+        {
+         "metin": "Güneş gözlüğü yeter",
+         "dogru": false,
+         "aciklama": "Güneş gözlüğü ark ışığına karşı korumaz; kaynak filtresi gerekir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "mutlu",
+       "metin": "Usta: \"Az önce kaynattığım parçayı tezgâha koy.\"",
+       "secenekler": [
+        {
+         "metin": "Pense ya da kaynak eldiveniyle tutarım",
+         "dogru": true,
+         "aciklama": "Kaynaklı parça soğumuş gibi görünse de uzun süre çok sıcak kalır."
+        },
+        {
+         "metin": "Rengi normal, elimle alırım",
+         "dogru": false,
+         "aciklama": "Çelik kararmış hâlde bile yüzlerce derece sıcak olabilir."
+        },
+        {
+         "metin": "Üstüne su döküp hemen alırım",
+         "dogru": false,
+         "aciklama": "Ani soğutma bazı çeliklerde çatlak yapabilir; usta söylemeden yapılmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kabinin yanında boş bir karton kutu ve yağlı bezler var.",
+       "secenekler": [
+        {
+         "metin": "Ustaya söyler, kaynak alanından uzaklaştırırım",
+         "dogru": true,
+         "aciklama": "Kıvılcım metrelerce uzağa sıçrar. Kaynak alanında yanıcı malzeme bırakılmaz."
+        },
+        {
+         "metin": "Kaynak kartonu yakmaz",
+         "dogru": false,
+         "aciklama": "Sıçrayan kıvılcım ve cüruf kartonu, bezi kolayca tutuşturur."
+        },
+        {
+         "metin": "Üstüne su dökerim",
+         "dogru": false,
+         "aciklama": "Doğrusu yanıcıyı alandan kaldırmaktır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Atölyede ilk gün",
+      "maddeler": [
+       "Arka maskesiz bakılmaz.",
+       "Kaynaklı parça elle tutulmaz.",
+       "Kaynak alanında yanıcı bırakılmaz."
+      ]
+     }
+    },
+    {
+     "id": "m3-uyum",
+     "sablon": "uyum",
+     "ikon": "🧭",
+     "baslik": "Bu meslek sana uygun mu?",
+     "xp": 40,
+     "aciklama": "Doğru ya da yanlış cevap yok. Kendine en yakın olanı seç.",
+     "sorular": [
+      {
+       "soru": "Maske altında, sıcak bir ortamda çalışmak?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Alışabilirim",
+         1
+        ],
+        [
+         "Zor gelir",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Elini uzun süre sabit ve dengeli tutmak?",
+       "secenekler": [
+        [
+         "İyiyim",
+         2
+        ],
+        [
+         "Çalışırsam olur",
+         1
+        ],
+        [
+         "Elim titrer",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Bazen eğilerek, diz çökerek ya da yüksekte çalışmak?",
+       "secenekler": [
+        [
+         "Yaparım",
+         2
+        ],
+        [
+         "Bazen olur",
+         1
+        ],
+        [
+         "İstemem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Kıvılcım, duman ve gürültü?",
+       "secenekler": [
+        [
+         "Sorun değil",
+         2
+        ],
+        [
+         "Katlanırım",
+         1
+        ],
+        [
+         "Hiç istemem",
+         0
+        ]
+       ]
+      },
+      {
+       "soru": "Güvenlik kurallarına hiç taviz vermeden uymak?",
+       "secenekler": [
+        [
+         "Her zaman",
+         2
+        ],
+        [
+         "Çoğu zaman",
+         1
+        ],
+        [
+         "Sıkılırım",
+         0
+        ]
+       ]
+      }
+     ],
+     "sonuclar": [
+      {
+       "min": 8,
+       "baslik": "Yüksek uyum",
+       "metin": "Elin sağlam, dikkatin yerinde. Kaynak kabini seni bekliyor; Çırak kademesine geç!"
+      },
+      {
+       "min": 5,
+       "baslik": "Orta uyum",
+       "metin": "Bazı yanları sana uygun. Çırak kademesini oynayıp mesleği yakından tanı."
+      },
+      {
+       "min": 0,
+       "baslik": "Düşük uyum",
+       "metin": "Atölye şartları seni zorlayabilir. Kaynak muayenesi ve kalite kontrol tarafı ilgini çekebilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Çırak",
+   "hedefXp": 360,
+   "rozet": {
+    "ad": "Kaynak Çırağı",
+    "ikon": "🧤"
+   },
+   "sonraki": "Kaynakçı kademesi açıldı: akım ayarı, kaynak hataları ve saha işleri.",
+   "acikBaslar": true,
+   "gorevler": [
+    {
+     "id": "c1-guvenlik",
+     "sablon": "bilgi",
+     "ikon": "🥽",
+     "baslik": "Kaynakta güvenlik",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🎭",
+       "baslik": "Kaynak maskesi",
+       "metin": "Ark ışığı gözü ve cildi yakar. Kaynak, uygun koyulukta filtresi olan maskeyle yapılır. Otomatik kararan maskeler ark yanınca kendiliğinden kararır.",
+       "terim": "filtre camı"
+      },
+      {
+       "ikon": "🧤",
+       "baslik": "Kaynakta eldiven şart",
+       "metin": "Torna ve frezenin aksine kaynakta deri kaynak eldiveni takılır: sıcak metal, kıvılcım ve ark ışığı eli korunmasız bırakmaz.",
+       "terim": "deri eldiven"
+      },
+      {
+       "ikon": "👕",
+       "baslik": "Giysi",
+       "metin": "Alev geciktirici iş elbisesi, deri önlük ve iş ayakkabısı giyilir. Sentetik giysi kıvılcımla erir ve cilde yapışır.",
+       "terim": "koruyucu giysi"
+      },
+      {
+       "ikon": "💨",
+       "baslik": "Duman",
+       "metin": "Kaynak dumanı sağlığa zararlıdır. Duman emiş kolu ya da iyi havalandırma kullanılır; baş dumanın içine sokulmaz.",
+       "terim": "duman emişi"
+      },
+      {
+       "ikon": "🔥",
+       "baslik": "Yangın",
+       "metin": "Kaynak alanının yaklaşık 10 metre çevresindeki yanıcılar kaldırılır ya da yanmaz örtüyle örtülür. Yangın söndürücü hazır bulunur.",
+       "terim": "yangın önlemi"
+      },
+      {
+       "ikon": "⚡",
+       "baslik": "Elektrik",
+       "metin": "Kablolar sağlam, eldiven ve ayakkabı kuru olmalıdır. Islak zeminde ve yırtık kabloyla kaynak yapılmaz.",
+       "terim": "elektrik çarpması"
+      }
+     ]
+    },
+    {
+     "id": "c2-yontemler",
+     "sablon": "bilgi",
+     "ikon": "⚡",
+     "baslik": "Kaynak yöntemlerini tanı",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🪵",
+       "baslik": "Örtülü elektrot",
+       "metin": "Örtülü çubuk elektrot hem ark verir hem eriyerek dolgu olur. Örtü yanarken kaynağı korur ve üstünde cüruf bırakır. Makinesi basit, açık havada da çalışır.",
+       "terim": "elektrik ark kaynağı"
+      },
+      {
+       "ikon": "🌀",
+       "baslik": "MAG (gazaltı)",
+       "metin": "Tel makaradan sürekli beslenir; Ar+CO₂ ya da CO₂ gazı kaynağı havadan korur. Hızlıdır, atölyede çelik işlerin çoğu bununla yapılır.",
+       "terim": "MAG kaynağı"
+      },
+      {
+       "ikon": "🫧",
+       "baslik": "MIG",
+       "metin": "MAG ile aynı makine, ama koruyucu gaz argon gibi asal bir gazdır. Alüminyum gibi metallerde kullanılır.",
+       "terim": "MIG kaynağı"
+      },
+      {
+       "ikon": "✨",
+       "baslik": "TIG",
+       "metin": "Erimeyen tungsten elektrotla ark yanar, dolgu teli elle verilir, gaz argondur. Yavaştır ama çok temiz ve hassas dikiş verir.",
+       "terim": "TIG kaynağı"
+      },
+      {
+       "ikon": "🔥",
+       "baslik": "Oksi-gaz",
+       "metin": "Oksijen ve asetilen alevi metali eritir. Bugün daha çok kesme, ısıtma ve tamirde kullanılır.",
+       "terim": "oksi-asetilen"
+      },
+      {
+       "ikon": "🧲",
+       "baslik": "Şase",
+       "metin": "Kaynak devresi şase pensesiyle tamamlanır. Pense parçaya ya da kaynak masasına, temiz bir yere sıkıca bağlanır.",
+       "terim": "şase"
+      }
+     ]
+    },
+    {
+     "id": "c3-koruma",
+     "sablon": "siniflandirma",
+     "ikon": "🦺",
+     "baslik": "Hangi koruyucu neyi korur?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her koruyucuyu koruduğu yere ver.",
+     "kategoriler": [
+      {
+       "id": "goz",
+       "ad": "Göz ve yüz",
+       "ikon": "👁️"
+      },
+      {
+       "id": "vucut",
+       "ad": "El ve vücut",
+       "ikon": "🧤"
+      },
+      {
+       "id": "solunum",
+       "ad": "Solunum",
+       "ikon": "💨"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Otomatik kararan kaynak maskesi",
+       "ikon": "🎭",
+       "kategori": "goz",
+       "aciklama": "Ark ışığından gözü ve yüzü korur."
+      },
+      {
+       "ad": "Taşlama yaparken koruyucu gözlük",
+       "ikon": "🥽",
+       "kategori": "goz",
+       "aciklama": "Taşlama kıvılcımı ve çapak göze sıçrar."
+      },
+      {
+       "ad": "Kaynak perdesi",
+       "ikon": "🟧",
+       "kategori": "goz",
+       "aciklama": "Yakında çalışanların gözünü ark ışığından korur."
+      },
+      {
+       "ad": "Deri kaynak eldiveni",
+       "ikon": "🧤",
+       "kategori": "vucut",
+       "aciklama": "Sıcak metal ve kıvılcımdan eli korur."
+      },
+      {
+       "ad": "Deri önlük",
+       "ikon": "🦺",
+       "kategori": "vucut",
+       "aciklama": "Gövdeyi kıvılcım ve cüruftan korur."
+      },
+      {
+       "ad": "Alev geciktirici iş elbisesi",
+       "ikon": "👕",
+       "kategori": "vucut",
+       "aciklama": "Kıvılcımla tutuşmaz, erimez."
+      },
+      {
+       "ad": "Duman emiş kolu",
+       "ikon": "🌀",
+       "kategori": "solunum",
+       "aciklama": "Dumanı daha nefese ulaşmadan çeker."
+      },
+      {
+       "ad": "Duman için uygun filtreli maske",
+       "ikon": "😷",
+       "kategori": "solunum",
+       "aciklama": "Havalandırmanın yetmediği yerlerde kullanılır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Koruyucu donanım",
+      "maddeler": [
+       "Göz: kaynak maskesi, taşlamada gözlük, çevre için perde.",
+       "Vücut: deri eldiven, önlük, alev geciktirici giysi.",
+       "Solunum: önce emiş ve havalandırma, gerekirse maske."
+      ]
+     }
+    },
+    {
+     "id": "c4-elektrot",
+     "sablon": "soru",
+     "ikon": "🪵",
+     "baslik": "Elektrot ve ark",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Elektrot kaynağında dikişin üstündeki kabuğa ne denir?",
+       "secenekler": [
+        "Pas",
+        "Cüruf",
+        "Çapak",
+        "Gözenek"
+       ],
+       "dogru": 1,
+       "aciklama": "Elektrot örtüsünden kalan kabuk cüruftur; dikiş soğuyunca çekiçle ve tel fırçayla temizlenir."
+      },
+      {
+       "soru": "Doğru ark boyu kabaca ne kadardır?",
+       "secenekler": [
+        "Elektrot çapı kadar",
+        "Elektrot çapının 5 katı",
+        "Elektrot parçaya yapışık",
+        "Ne kadar uzunsa o kadar iyi"
+       ],
+       "dogru": 0,
+       "aciklama": "Ark boyu yaklaşık elektrot çapı kadardır. Ark uzarsa sıçrantı ve gözenek artar, çok kısalırsa elektrot yapışır."
+      },
+      {
+       "soru": "Nem kapmış bazik elektrotla ne yapılır?",
+       "secenekler": [
+        "Olduğu gibi kullanılır",
+        "Üreticinin söylediği şekilde fırında kurutulur",
+        "Suya batırılır",
+        "Güneşte bekletilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Nem kaynağa hidrojen taşır, gözenek ve çatlak yapar. Bazik elektrotlar fırında kurutulup sıcak tutulur."
+      },
+      {
+       "soru": "Elektrot kutusunda yazan akım aralığı neye göre seçilir?",
+       "secenekler": [
+        "Rengine",
+        "Elektrot çapına ve kaynak pozisyonuna",
+        "Kaynakçının boyuna",
+        "Günün saatine"
+       ],
+       "dogru": 1,
+       "aciklama": "Çap büyüdükçe akım artar. Dik ve tavan pozisyonlarında genelde biraz düşük akım seçilir."
+      },
+      {
+       "soru": "Kaynak sırasında elektrot sürekli parçaya yapışıyor. Olası neden?",
+       "secenekler": [
+        "Akım çok düşük ya da ark çok kısa",
+        "Akım çok yüksek",
+        "Maske koyu",
+        "Eldiven kalın"
+       ],
+       "dogru": 0,
+       "aciklama": "Düşük akımda ya da çok kısa arkta elektrot yapışır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Elektrot ve ark",
+      "maddeler": [
+       "Ark boyu ≈ elektrot çapı.",
+       "Cüruf her pasodan sonra temizlenir.",
+       "Bazik elektrot kuru tutulur.",
+       "Akım değeri kutuda yazar."
+      ]
+     }
+    },
+    {
+     "id": "c5-hafta",
+     "sablon": "senaryo",
+     "ikon": "📅",
+     "baslik": "İlk haftan",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Çırak olarak ilk haftandasın. Usta sana basit puntalama ve hazırlık işleri veriyor.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kaynatacağın sacların ağzında pas ve yağ var.",
+       "secenekler": [
+        {
+         "metin": "Taşlayıp temizlerim, sonra kaynatırım",
+         "dogru": true,
+         "aciklama": "Pas, yağ ve boya kaynakta gözenek ve kötü erime yapar."
+        },
+        {
+         "metin": "Ark nasılsa yakar, olduğu gibi kaynatırım",
+         "dogru": false,
+         "aciklama": "Kirli yüzey kaynağı bozar."
+        },
+        {
+         "metin": "Üstüne biraz su döker silerim",
+         "dogru": false,
+         "aciklama": "Su da kaynağa nem ve hidrojen taşır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Taşlama makinesinin koruyucu kapağı çıkarılmış.",
+       "secenekler": [
+        {
+         "metin": "Kapak takılmadan kullanmam, ustaya haber veririm",
+         "dogru": true,
+         "aciklama": "Kapaksız taşlamada disk kırılırsa parçalar yüze ve gövdeye fırlar."
+        },
+        {
+         "metin": "Dikkatli olursam sorun olmaz",
+         "dogru": false,
+         "aciklama": "Disk kırılması dikkatle önlenemez; kapak şarttır."
+        },
+        {
+         "metin": "Gözlük takarım, yeter",
+         "dogru": false,
+         "aciklama": "Gözlük şart ama kapağın yerini tutmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Usta: \"Tüp devrilmiş gibi duruyor, düzelt.\" Gaz tüpü duvara zincirsiz yaslanmış.",
+       "secenekler": [
+        {
+         "metin": "Tüpü dik tutup zincirle sabitlerim",
+         "dogru": true,
+         "aciklama": "Devrilen tüpün vanası kırılırsa tüp tehlikeli bir mermi gibi fırlayabilir."
+        },
+        {
+         "metin": "Yere yatırırım, daha güvenli",
+         "dogru": false,
+         "aciklama": "Tüpler dik ve sabitlenmiş olarak kullanılır."
+        },
+        {
+         "metin": "Duvara yaslı kalsın",
+         "dogru": false,
+         "aciklama": "Zincirsiz tüp devrilebilir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İlk hafta",
+      "maddeler": [
+       "Kaynaktan önce yüzey temizlenir.",
+       "Taşlama koruyucu kapakla kullanılır.",
+       "Gaz tüpü dik ve zincirli durur."
+      ]
+     }
+    },
+    {
+     "id": "c6-alin",
+     "sablon": "siralama",
+     "ikon": "🔥",
+     "baslik": "Alın kaynağı yap",
+     "aciklama": "İki çelik sacı gazaltı (MAG) kaynağıyla uç uca birleştireceksin. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "temizle",
+       "ikon": "🪚",
+       "metin": "Gözlüğünü tak, sac ağızlarını taşlayıp pas ve yağdan temizle",
+       "neden": "Temiz metal düzgün erir; pas ve yağ gözenek yapar.",
+       "ipucu": "Önce yüzey hazır olmalı."
+      },
+      {
+       "id": "hizala",
+       "ikon": "📐",
+       "metin": "Sacları kök aralığı bırakarak hizala, şase pensesini bağla",
+       "neden": "Aralık erimenin dibe ulaşmasını sağlar; şase devreyi tamamlar.",
+       "ipucu": "Parçalar temiz; şimdi yerleştir."
+      },
+      {
+       "id": "ayar",
+       "ikon": "🎛️",
+       "metin": "Gazı aç, gaz debisini ve akımı ayarla, maskeni ve eldivenini tak",
+       "neden": "Gaz kaynağı havadan korur; ayar dikişin kalitesini belirler.",
+       "ipucu": "Parçalar yerinde; makineyi hazırla."
+      },
+      {
+       "id": "punta",
+       "ikon": "📍",
+       "metin": "İki ucu puntala",
+       "neden": "Punta parçaları tutar, kaynakta aralık kapanmaz ve sac çarpılmaz.",
+       "ipucu": "Her şey ayarlı; önce parçaları sabitle."
+      },
+      {
+       "id": "kaynak",
+       "ikon": "⚡",
+       "metin": "Torcu doğru açıda tutup dikişi eşit hızla çek",
+       "neden": "Sabit hız ve açı eşit, düzgün dikiş verir.",
+       "ipucu": "Parçalar puntalı; şimdi asıl dikiş."
+      },
+      {
+       "id": "kontrol",
+       "ikon": "🔍",
+       "metin": "Dikişi tel fırçayla temizleyip gözle kontrol et",
+       "neden": "Gözenek, çatlak ve yanma oluğu temiz yüzeyde görülür.",
+       "ipucu": "Kaynak bitti; iyi mi?"
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Alın kaynağı sırası",
+      "maddeler": [
+       "Temizle → hizala ve şase → gaz, akım, maske → punta → kaynak → kontrol.",
+       "Kök aralığı dikişin dibe kadar erimesini sağlar.",
+       "Punta çarpılmayı önler."
+      ]
+     },
+     "sahne": "kaynak"
+    },
+    {
+     "id": "c7-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Çırak sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Arka maskesiz bakmak neye yol açar?",
+       "secenekler": [
+        "Hiçbir şeye",
+        "Göz yanmasına (kaynak gözü)",
+        "Sadece baş ağrısına",
+        "Görmenin keskinleşmesine"
+       ],
+       "dogru": 1,
+       "aciklama": "Ark ışığı morötesi ışın yayar ve gözü yakar."
+      },
+      {
+       "soru": "Kaynakta eldiven?",
+       "secenekler": [
+        "Takılmaz",
+        "Deri kaynak eldiveni takılır",
+        "İnce bez eldiven takılır",
+        "Tek el takılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Kaynakta deri kaynak eldiveni şarttır."
+      },
+      {
+       "soru": "Gazaltı (MAG) kaynağında koruyucu gaz ne işe yarar?",
+       "secenekler": [
+        "Dikişi soğutur",
+        "Erimiş metali havadan korur",
+        "Akımı artırır",
+        "Kıvılcımı söndürür"
+       ],
+       "dogru": 1,
+       "aciklama": "Hava erimiş metale karışırsa gözenek olur."
+      },
+      {
+       "soru": "TIG kaynağında elektrot?",
+       "secenekler": [
+        "Erir, dolgu olur",
+        "Tungstendir, erimez",
+        "Örtülüdür",
+        "Bakırdır"
+       ],
+       "dogru": 1,
+       "aciklama": "Dolgu teli ayrıca elle verilir."
+      },
+      {
+       "soru": "Kaynaktan önce sac ağızları neden taşlanır?",
+       "secenekler": [
+        "Parlasın diye",
+        "Pas, yağ ve boya kaynağı bozar",
+        "Ağırlığı azalsın",
+        "Gerek yok"
+       ],
+       "dogru": 1,
+       "aciklama": "Kirli yüzey gözenek yapar."
+      },
+      {
+       "soru": "Punta ne işe yarar?",
+       "secenekler": [
+        "Süs",
+        "Parçaları tutar, çarpılmayı ve aralığın kapanmasını önler",
+        "Kaynağı bitirir",
+        "Gazı açar"
+       ],
+       "dogru": 1,
+       "aciklama": "Asıl dikişten önce parçaları sabitler."
+      },
+      {
+       "soru": "Gaz tüpü nasıl durur?",
+       "secenekler": [
+        "Yere yatık",
+        "Dik ve zincirle sabit",
+        "Duvara yaslı",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Devrilen tüp çok tehlikelidir."
+      },
+      {
+       "soru": "Kaynak alanında karton kutu var. Ne yaparsın?",
+       "secenekler": [
+        "Bırakırım",
+        "Alanın dışına çıkarırım",
+        "Üstüne kaynak yaparım",
+        "Islatırım, kalsın"
+       ],
+       "dogru": 1,
+       "aciklama": "Kıvılcım yanıcıları tutuşturur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Kaynakçı",
+   "hedefXp": 305,
+   "rozet": {
+    "ad": "Kaynakçı",
+    "ikon": "⚡"
+   },
+   "sonraki": "Usta kademesi açıldı: pozisyonlar, çok pasolu kaynak ve zor işler.",
+   "gorevler": [
+    {
+     "id": "k1-ayar",
+     "sablon": "bilgi",
+     "ikon": "🎛️",
+     "baslik": "Ayar ve el becerisi",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🔌",
+       "baslik": "Akım",
+       "metin": "Akım metalin ne kadar eriyeceğini belirler. Düşük akımda metal iyi erimez, yüksek akımda kenarlar yanar ve sıçrantı artar.",
+       "terim": "kaynak akımı"
+      },
+      {
+       "ikon": "📏",
+       "baslik": "Elektrot çapı",
+       "metin": "Kaba bir kural: elektrot çapının her milimetresi için yaklaşık 30–40 amper. Asıl değer elektrot kutusunda yazar.",
+       "terim": "akım aralığı"
+      },
+      {
+       "ikon": "📐",
+       "baslik": "Açı",
+       "metin": "Elektrot ya da torç, ilerleme yönüne göre hafif eğik tutulur. Açı bozulursa dikiş bir tarafa kayar.",
+       "terim": "torç açısı"
+      },
+      {
+       "ikon": "🐢",
+       "baslik": "Hız",
+       "metin": "Çok hızlı gidersen dikiş ince kalır ve dibe erimez; çok yavaş gidersen fazla yığılır ve taşar.",
+       "terim": "kaynak hızı"
+      },
+      {
+       "ikon": "〰️",
+       "baslik": "Dikiş görünümü",
+       "metin": "İyi bir dikiş eşit genişlikte, düzgün tırtıllıdır; kenarlarda oyuk ve üstünde delik yoktur.",
+       "terim": "dikiş"
+      },
+      {
+       "ikon": "🧪",
+       "baslik": "Deneme parçası",
+       "metin": "Ayarı önce aynı kalınlıktaki bir hurda parçada dene. İşi deneme olarak kullanma.",
+       "terim": "deneme kaynağı"
+      }
+     ]
+    },
+    {
+     "id": "k2-akim",
+     "sablon": "zamanlama",
+     "ikon": "🔌",
+     "baslik": "Akımı ayarla",
+     "temelXp": 30,
+     "yildizBasinaXp": 15,
+     "aciklama": "Akım göstergesi yükseliyor. Elektroda uygun akıma gelince DURDUR'a bas. Değerler örnektir; asıl değer elektrot kutusunda yazar.",
+     "turlar": [
+      {
+       "ad": "2,5 mm rutil elektrot, düz pozisyon",
+       "not": "Kaba hesap: 2,5 × 35 ≈ 85 A. Uygun aralık yaklaşık 75–100 A.",
+       "birim": "A",
+       "baslangic": 0,
+       "bitis": 250,
+       "hedef": [
+        75,
+        100
+       ],
+       "tehlike": 140,
+       "tehlikeMetni": "Akım çok yüksek: sac delindi, kenarlar yandı.",
+       "sure": 4,
+       "erkenMetni": "Akım düşük: elektrot yapışıyor, metal erimiyor.",
+       "gecMetni": "Akım biraz yüksek: sıçrantı arttı."
+      },
+      {
+       "ad": "3,25 mm rutil elektrot, düz pozisyon",
+       "not": "Kaba hesap: 3,25 × 38 ≈ 125 A. Uygun aralık yaklaşık 110–140 A.",
+       "birim": "A",
+       "baslangic": 0,
+       "bitis": 300,
+       "hedef": [
+        110,
+        140
+       ],
+       "tehlike": 185,
+       "tehlikeMetni": "Akım çok yüksek: elektrot kızardı, kenarlarda oyuk oluştu.",
+       "sure": 4,
+       "erkenMetni": "Akım düşük: dikiş dibe erimedi.",
+       "gecMetni": "Akım biraz yüksek: kenarlar yanmaya başladı."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Akım ayarı",
+      "maddeler": [
+       "Kaba kural: her 1 mm çap için 30–40 A.",
+       "Asıl değer elektrot kutusunda yazar.",
+       "Dik ve tavan pozisyonunda genelde biraz düşük akım.",
+       "Önce hurda parçada dene."
+      ]
+     }
+    },
+    {
+     "id": "k3-hatalar",
+     "sablon": "siniflandirma",
+     "ikon": "🩻",
+     "baslik": "Hatanın sebebi ne?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her sebebi yol açtığı kaynak hatasına ver.",
+     "kategoriler": [
+      {
+       "id": "gozenek",
+       "ad": "Gözenek",
+       "ikon": "🫧"
+      },
+      {
+       "id": "yanma",
+       "ad": "Yanma oluğu",
+       "ikon": "〰️"
+      },
+      {
+       "id": "nufuziyet",
+       "ad": "Yetersiz nüfuziyet",
+       "ikon": "⬇️"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Rüzgâr koruyucu gazı dağıttı",
+       "ikon": "🌬️",
+       "kategori": "gozenek",
+       "aciklama": "Gaz koruması bozulunca hava erimiş metale karışır."
+      },
+      {
+       "ad": "Elektrot nem kapmış",
+       "ikon": "💧",
+       "kategori": "gozenek",
+       "aciklama": "Nem kaynakta gaz kabarcığı yapar."
+      },
+      {
+       "ad": "Yüzeyde yağ ve pas kalmış",
+       "ikon": "🛢️",
+       "kategori": "gozenek",
+       "aciklama": "Kir yanarken gaz çıkarır."
+      },
+      {
+       "ad": "Gaz tüpü bitmiş ya da gaz açılmamış",
+       "ikon": "🧯",
+       "kategori": "gozenek",
+       "aciklama": "Gazsız gazaltı kaynağı süngerimsi ve delik delik olur."
+      },
+      {
+       "ad": "Akım çok yüksek",
+       "ikon": "🔺",
+       "kategori": "yanma",
+       "aciklama": "Kenarlar fazla erir, dolmadan oyuk kalır."
+      },
+      {
+       "ad": "Torç açısı bir kenara fazla ısı veriyor",
+       "ikon": "📐",
+       "kategori": "yanma",
+       "aciklama": "Fazla ısınan kenarda oyuk oluşur."
+      },
+      {
+       "ad": "Akım çok düşük",
+       "ikon": "🔻",
+       "kategori": "nufuziyet",
+       "aciklama": "Metal dibe kadar erimez."
+      },
+      {
+       "ad": "Kök aralığı çok dar bırakılmış",
+       "ikon": "↔️",
+       "kategori": "nufuziyet",
+       "aciklama": "Ark kökün dibine ulaşamaz."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Sık görülen hatalar",
+      "maddeler": [
+       "Gözenek: gaz koruması, nem, kir.",
+       "Yanma oluğu: yüksek akım, yanlış açı.",
+       "Yetersiz nüfuziyet: düşük akım, dar aralık, aşırı hız."
+      ]
+     }
+    },
+    {
+     "id": "k4-is",
+     "sablon": "senaryo",
+     "ikon": "🏗️",
+     "baslik": "Sahada bir gün",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Artık kendi işlerini yapan bir kaynakçısın. Bugün bir çelik konstrüksiyon işindesin.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Açık alanda, rüzgârlı bir günde gazaltı kaynağı yapacaksın.",
+       "secenekler": [
+        {
+         "metin": "Rüzgâra paravan kurarım ya da işe uygun başka yöntem için ustaya danışırım",
+         "dogru": true,
+         "aciklama": "Rüzgâr koruyucu gazı dağıtır ve gözenek yapar. Açık havada elektrot kaynağı ya da paravan kullanılır."
+        },
+        {
+         "metin": "Gaz debisini sonuna kadar açarım",
+         "dogru": false,
+         "aciklama": "Rüzgârda gazı artırmak çoğu zaman yetmez, gaz da boşa gider."
+        },
+        {
+         "metin": "Hızlı kaynak yaparsam rüzgâr etkilemez",
+         "dogru": false,
+         "aciklama": "Hız gaz korumasını düzeltmez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kaynatacağın parçalar galvanizli (çinko kaplı).",
+       "secenekler": [
+        {
+         "metin": "Kaynak bölgesindeki kaplamayı temizler, güçlü duman emişiyle çalışırım",
+         "dogru": true,
+         "aciklama": "Çinko dumanı solununca ateşli, gribe benzer bir hastalık yapar; gözenek de artar."
+        },
+        {
+         "metin": "Kaplama ince, bir şey olmaz",
+         "dogru": false,
+         "aciklama": "Çinko dumanı sağlığa zararlıdır."
+        },
+        {
+         "metin": "Maskemi biraz kaldırıp dumanı görerek kaynatırım",
+         "dogru": false,
+         "aciklama": "Hem göz hem solunum tehlikeye girer."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri: \"Geç kaldık, cürufu temizlemeden ikinci pasoyu at.\"",
+       "secenekler": [
+        {
+         "metin": "Her pasodan sonra cürufu temizlerim, nedenini anlatırım",
+         "dogru": true,
+         "aciklama": "Temizlenmeyen cüruf dikişin içinde kalır ve kaynağı zayıflatır."
+        },
+        {
+         "metin": "Müşteri istiyor, temizlemem",
+         "dogru": false,
+         "aciklama": "Cüruf kalıntısı ciddi bir kaynak hatasıdır."
+        },
+        {
+         "metin": "Sadece görünen yerleri temizlerim",
+         "dogru": false,
+         "aciklama": "Paso arası temizlik her yerde yapılır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Sahada kaynak",
+      "maddeler": [
+       "Rüzgâr gaz korumasını bozar.",
+       "Galvanizli parçada kaplama temizlenir, duman emilir.",
+       "Paso arası cüruf temizlenir."
+      ]
+     }
+    },
+    {
+     "id": "k5-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Kaynakçı sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "3,25 mm elektrot için kaba akım tahmini?",
+       "secenekler": [
+        "30 A",
+        "Yaklaşık 110–140 A",
+        "300 A",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "3,25 × 30–40 ≈ 100–130 A; asıl değer kutuda."
+      },
+      {
+       "soru": "Dikişte küçük delikler var. Olası sebep?",
+       "secenekler": [
+        "Gaz koruması bozuk ya da yüzey kirli",
+        "Maske koyu",
+        "Eldiven kalın",
+        "Hız normal"
+       ],
+       "dogru": 0,
+       "aciklama": "Gözenek çoğunlukla gaz, nem ve kirden olur."
+      },
+      {
+       "soru": "Dikiş kenarında oyuk (yanma oluğu) var. Ne değiştirirsin?",
+       "secenekler": [
+        "Akımı düşürür, açıyı düzeltirim",
+        "Akımı artırırım",
+        "Daha hızlı giderim",
+        "Gazı kapatırım"
+       ],
+       "dogru": 0,
+       "aciklama": "Yüksek akım ve yanlış açı yanma oluğu yapar."
+      },
+      {
+       "soru": "Çok hızlı kaynak yaparsan?",
+       "secenekler": [
+        "Dikiş taşar",
+        "Dikiş ince kalır, dibe erimez",
+        "Hiçbir şey olmaz",
+        "Gözenek kaybolur"
+       ],
+       "dogru": 1,
+       "aciklama": "Hız yüksekse ısı yetmez."
+      },
+      {
+       "soru": "Rüzgârlı açık alanda gazaltı kaynağı?",
+       "secenekler": [
+        "Sorunsuz",
+        "Gaz dağılır, paravan gerekir",
+        "Gazı kapatmak gerekir",
+        "Daha kaliteli olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Gaz koruması bozulur."
+      },
+      {
+       "soru": "Galvanizli sac kaynağında en önemli önlem?",
+       "secenekler": [
+        "Kaplamayı temizlemek ve dumanı emmek",
+        "Akımı sonuna açmak",
+        "Eldiveni çıkarmak",
+        "Maskesiz çalışmak"
+       ],
+       "dogru": 0,
+       "aciklama": "Çinko dumanı zararlıdır."
+      },
+      {
+       "soru": "Paso arası cüruf?",
+       "secenekler": [
+        "Kalır",
+        "Her pasodan sonra temizlenir",
+        "Son pasoda temizlenir",
+        "Hiç temizlenmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Cüruf kalıntısı hatadır."
+      },
+      {
+       "soru": "Ayarı nerede denersin?",
+       "secenekler": [
+        "Asıl parçada",
+        "Aynı kalınlıkta hurda parçada",
+        "Masada",
+        "Hiç denemem"
+       ],
+       "dogru": 1,
+       "aciklama": "İş parçası deneme için kullanılmaz."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Usta",
+   "hedefXp": 340,
+   "rozet": {
+    "ad": "Kaynak Ustası",
+    "ikon": "🔥"
+   },
+   "sonraki": "Ustabaşı kademesi açıldı: muayene, ekip ve atölye yönetimi.",
+   "gorevler": [
+    {
+     "id": "u1-ileri",
+     "sablon": "bilgi",
+     "ikon": "🔥",
+     "baslik": "Ustalık konuları",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "🧭",
+       "baslik": "Kaynak pozisyonları",
+       "metin": "Düz (PA), yatay iç köşe (PB), korniş (PC), dikey yukarı (PF), dikey aşağı (PG), tavan (PE). Zor pozisyonlarda erimiş metal akmak ister; usta bunu kontrol eder.",
+       "terim": "pozisyon"
+      },
+      {
+       "ikon": "📐",
+       "baslik": "Kaynak ağzı",
+       "metin": "Kalın saclar tek pasoda dibe erimez. Kenarlara V şeklinde ağız açılır; kök aralığı ve kök yüzü bırakılır.",
+       "terim": "V ağız"
+      },
+      {
+       "ikon": "🧱",
+       "baslik": "Çok pasolu kaynak",
+       "metin": "Önce kök pasosu, sonra dolgu pasoları, en son kapak pasosu atılır. Her pasodan sonra temizlenir.",
+       "terim": "kök, dolgu, kapak"
+      },
+      {
+       "ikon": "🌡️",
+       "baslik": "Ön tavlama",
+       "metin": "Kalın ya da bazı alaşımlı çeliklerde parça kaynaktan önce ısıtılır. Böylece hızlı soğuma ve çatlak riski azalır.",
+       "terim": "ön tavlama"
+      },
+      {
+       "ikon": "🌀",
+       "baslik": "Çarpılma",
+       "metin": "Isınan metal genleşir, soğurken çeker ve parçayı eğer. Puntalama, dengeli kaynak sırası ve kısa dikişler çarpılmayı azaltır.",
+       "terim": "çarpılma"
+      },
+      {
+       "ikon": "📄",
+       "baslik": "Kaynak prosedürü",
+       "metin": "Önemli işlerde her şey yazılıdır: yöntem, malzeme, akım, paso sırası. Buna kaynak prosedür şartnamesi (WPS) denir.",
+       "terim": "WPS"
+      }
+     ]
+    },
+    {
+     "id": "u2-yontem",
+     "sablon": "siniflandirma",
+     "ikon": "🧰",
+     "baslik": "İşe göre yöntem seç",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her işi en uygun kaynak yöntemine ver.",
+     "kategoriler": [
+      {
+       "id": "elektrot",
+       "ad": "Örtülü elektrot",
+       "ikon": "🪵"
+      },
+      {
+       "id": "mag",
+       "ad": "MAG gazaltı",
+       "ikon": "🌀"
+      },
+      {
+       "id": "tig",
+       "ad": "TIG",
+       "ikon": "✨"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Rüzgârlı şantiyede çelik kiriş tamiri",
+       "ikon": "🏗️",
+       "kategori": "elektrot",
+       "aciklama": "Gaz gerekmez, rüzgârdan az etkilenir."
+      },
+      {
+       "ad": "Elektriği zor ulaşan sahada, taşınabilir makineyle tamir",
+       "ikon": "🚚",
+       "kategori": "elektrot",
+       "aciklama": "Basit ve taşınabilir donanım."
+      },
+      {
+       "ad": "Tarlada kırılan tarım aletinin tamiri",
+       "ikon": "🚜",
+       "kategori": "elektrot",
+       "aciklama": "Kirli ortama ve açık havaya dayanıklı."
+      },
+      {
+       "ad": "Atölyede yüzlerce çelik parçanın seri kaynağı",
+       "ikon": "🏭",
+       "kategori": "mag",
+       "aciklama": "Sürekli tel beslemesi hızlıdır."
+      },
+      {
+       "ad": "Kalın çelik konstrüksiyonda uzun dolgu pasoları",
+       "ikon": "🧱",
+       "kategori": "mag",
+       "aciklama": "Yüksek dolgu hızı."
+      },
+      {
+       "ad": "İnce paslanmaz sacta temiz, estetik dikiş",
+       "ikon": "✨",
+       "kategori": "tig",
+       "aciklama": "Hassas ısı kontrolü, sıçrantısız dikiş."
+      },
+      {
+       "ad": "İnce alüminyum parça",
+       "ikon": "🥫",
+       "kategori": "tig",
+       "aciklama": "Alüminyum TIG'de alternatif akımla kaynatılır."
+      },
+      {
+       "ad": "Paslanmaz boruda kaliteli kök pasosu",
+       "ikon": "🔧",
+       "kategori": "tig",
+       "aciklama": "Kontrollü, temiz kök."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Yöntem seçimi",
+      "maddeler": [
+       "Elektrot: açık hava, saha, tamir.",
+       "MAG: atölye, hız, seri iş.",
+       "TIG: ince, paslanmaz, alüminyum, hassas iş."
+      ]
+     }
+    },
+    {
+     "id": "u3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "Kaynak hesapları",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "2,4 metre dikiş çekeceksin. Bir elektrot yaklaşık 20 cm dikiş veriyor. Kaç elektrot gerekir?",
+       "secenekler": [
+        "8",
+        "12",
+        "20",
+        "24"
+       ],
+       "dogru": 1,
+       "aciklama": "240 ÷ 20 = 12 elektrot. Pratikte birkaç tane yedek alınır."
+      },
+      {
+       "soru": "Gaz debisi 15 L/dk, toplam ark süresi 40 dakika. Ne kadar gaz harcanır?",
+       "secenekler": [
+        "55 L",
+        "400 L",
+        "600 L",
+        "1.500 L"
+       ],
+       "dogru": 2,
+       "aciklama": "15 × 40 = 600 litre."
+      },
+      {
+       "soru": "Isı girdisi (verim hariç) = V × A × 60 ÷ (hız × 1000) kJ/mm. 24 V, 200 A, hız 300 mm/dk ise?",
+       "secenekler": [
+        "0,48",
+        "0,96",
+        "1,6",
+        "9,6"
+       ],
+       "dogru": 1,
+       "aciklama": "24 × 200 × 60 = 288.000; 300 × 1000 = 300.000; 288.000 ÷ 300.000 = 0,96 kJ/mm."
+      },
+      {
+       "soru": "Aynı ayarda kaynak hızını iki katına çıkarırsan ısı girdisi?",
+       "secenekler": [
+        "İki katına çıkar",
+        "Yarıya iner",
+        "Değişmez",
+        "Sıfır olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Hız paydadadır; hız iki katına çıkınca ısı girdisi yarıya iner."
+      },
+      {
+       "soru": "8 saatlik vardiyada kaynakçının ark süresi oranı %30. Toplam ark süresi?",
+       "secenekler": [
+        "30 dk",
+        "144 dk",
+        "240 dk",
+        "300 dk"
+       ],
+       "dogru": 1,
+       "aciklama": "480 × 0,30 = 144 dakika. Gerisi hazırlık, temizlik ve taşımadır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kaynak hesapları",
+      "maddeler": [
+       "Elektrot sayısı = dikiş boyu ÷ elektrot başına dikiş.",
+       "Gaz = debi × ark süresi.",
+       "Isı girdisi ≈ V × A × 60 ÷ (hız × 1000)."
+      ]
+     }
+    },
+    {
+     "id": "u4-kok",
+     "sablon": "siralama",
+     "ikon": "🧱",
+     "baslik": "Kalın saca V alın kaynağı",
+     "aciklama": "12 mm kalın iki sacı çok pasolu kaynakla birleştireceksin. Adımları doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "wps",
+       "ikon": "📄",
+       "metin": "Kaynak prosedürünü (WPS) oku: yöntem, akım, paso sırası",
+       "neden": "Önemli işte her şey yazılı prosedüre göre yapılır.",
+       "ipucu": "Önce ne yapacağını bil."
+      },
+      {
+       "id": "agiz",
+       "ikon": "📐",
+       "metin": "Kenarlara V ağız açıp taşla, kök aralığı ve kök yüzü bırak",
+       "neden": "Kalın sac tek pasoda dibe erimez.",
+       "ipucu": "Prosedür okundu; parçayı hazırla."
+      },
+      {
+       "id": "punta",
+       "ikon": "📍",
+       "metin": "Parçaları hizalayıp puntala, gerekiyorsa ön tavlama yap",
+       "neden": "Punta aralığı korur; ön tavlama çatlağı önler.",
+       "ipucu": "Ağızlar hazır; sabitle."
+      },
+      {
+       "id": "kok",
+       "ikon": "⬇️",
+       "metin": "Kök pasosunu at, dibe tam erittiğini kontrol et",
+       "neden": "Kök kaynağın temelidir.",
+       "ipucu": "Parçalar sabit; ilk paso hangisi?"
+      },
+      {
+       "id": "dolgu",
+       "ikon": "🧱",
+       "metin": "Her pasodan sonra temizleyerek dolgu pasolarını at",
+       "neden": "Paso arasında kalan cüruf hata olur.",
+       "ipucu": "Kök tamam; ağzı doldur."
+      },
+      {
+       "id": "kapak",
+       "ikon": "🎯",
+       "metin": "Kapak pasosunu at, dikişi temizleyip gözle muayene et",
+       "neden": "Kapak dikişin yüzeyidir; son kontrol burada.",
+       "ipucu": "Ağız doldu; bitir."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Çok pasolu kaynak",
+      "maddeler": [
+       "Prosedür → ağız → punta ve ön tavlama → kök → dolgu → kapak.",
+       "Her pasodan sonra temizlik.",
+       "Kök dibe tam erimeli."
+      ]
+     }
+    },
+    {
+     "id": "u5-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Ustanın günü",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Usta kaynakçı olarak zor işler ve çıraklar senin sorumluluğunda.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir tankın içinde kaynak yapılması gerekiyor.",
+       "secenekler": [
+        {
+         "metin": "İzin alınmadan, gaz ölçümü ve dışarıda bir gözcü olmadan girmem",
+         "dogru": true,
+         "aciklama": "Kapalı alanda zehirli gaz, oksijen azlığı ve yangın riski vardır. Kapalı alan çalışması izin ve gözcüyle yapılır."
+        },
+        {
+         "metin": "Kısa sürecek, hemen girip çıkarım",
+         "dogru": false,
+         "aciklama": "Kapalı alan kazaları çoğu zaman \"kısa iş\"te olur."
+        },
+        {
+         "metin": "Kapağı açık bırakmak yeter",
+         "dogru": false,
+         "aciklama": "Havalandırma tek başına yetmez; ölçüm ve gözcü gerekir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Çırak dik pozisyonda sürekli eriyik akıtıyor ve sinirleniyor.",
+       "secenekler": [
+        {
+         "metin": "Akımı biraz düşürmesini, kısa ark ve küçük salınımla çalışmasını gösteririm",
+         "dogru": true,
+         "aciklama": "Dik pozisyonda düşük akım ve kontrollü salınım eriyiğin akmasını önler."
+        },
+        {
+         "metin": "Akımı artırmasını söylerim",
+         "dogru": false,
+         "aciklama": "Yüksek akım daha çok eriyik ve akma demektir."
+        },
+        {
+         "metin": "Bu iş sana göre değil derim",
+         "dogru": false,
+         "aciklama": "Çırak gösterilerek ve denetlenerek öğrenir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Müşteri: \"Kaynak çatladı, üstünden bir paso daha geçin.\"",
+       "secenekler": [
+        {
+         "metin": "Çatlağı sonuna kadar taşlayıp çıkarır, nedenini bulur, sonra yeniden kaynatırım",
+         "dogru": true,
+         "aciklama": "Üstünden geçilen çatlak içeride kalır ve büyür."
+        },
+        {
+         "metin": "Üstünden kalın bir paso atarım",
+         "dogru": false,
+         "aciklama": "Çatlak kapanmaz, sadece gizlenir."
+        },
+        {
+         "metin": "Boyayıp kapatırım",
+         "dogru": false,
+         "aciklama": "Kusur gizlenmez, giderilir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ustalık",
+      "maddeler": [
+       "Kapalı alanda izin, ölçüm ve gözcü.",
+       "Dik pozisyonda düşük akım, kısa ark.",
+       "Çatlak taşlanıp çıkarılır, üstünden geçilmez."
+      ]
+     }
+    },
+    {
+     "id": "u6-sinav",
+     "sablon": "sinav",
+     "ikon": "🎓",
+     "baslik": "Usta sınavı",
+     "xp": 100,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "PF pozisyonu hangisidir?",
+       "secenekler": [
+        "Düz",
+        "Dikey yukarı",
+        "Tavan",
+        "Yatay iç köşe"
+       ],
+       "dogru": 1,
+       "aciklama": "PF dikey yukarı, PG dikey aşağıdır."
+      },
+      {
+       "soru": "Kalın sacda V ağız neden açılır?",
+       "secenekler": [
+        "Görünüş için",
+        "Kaynağın dibe kadar erimesi için",
+        "Ağırlık için",
+        "Gaz tasarrufu için"
+       ],
+       "dogru": 1,
+       "aciklama": "Tek pasoda dibe erimez."
+      },
+      {
+       "soru": "Çok pasolu kaynakta sıra?",
+       "secenekler": [
+        "Kapak, dolgu, kök",
+        "Kök, dolgu, kapak",
+        "Dolgu, kök, kapak",
+        "Sadece kapak"
+       ],
+       "dogru": 1,
+       "aciklama": "Kökten yüzeye doğru."
+      },
+      {
+       "soru": "Ön tavlama ne işe yarar?",
+       "secenekler": [
+        "Boyayı kurutur",
+        "Hızlı soğumayı ve çatlak riskini azaltır",
+        "Akımı düşürür",
+        "Gazı ısıtır"
+       ],
+       "dogru": 1,
+       "aciklama": "Kalın ve bazı alaşımlı çeliklerde kullanılır."
+      },
+      {
+       "soru": "İnce paslanmaz sacta temiz dikiş için en uygun yöntem?",
+       "secenekler": [
+        "Örtülü elektrot",
+        "TIG",
+        "Oksi-gaz",
+        "Hiçbiri"
+       ],
+       "dogru": 1,
+       "aciklama": "TIG hassas ve temizdir."
+      },
+      {
+       "soru": "2 m dikiş, elektrot başına 25 cm. Kaç elektrot?",
+       "secenekler": [
+        "6",
+        "8",
+        "10",
+        "25"
+       ],
+       "dogru": 1,
+       "aciklama": "200 ÷ 25 = 8."
+      },
+      {
+       "soru": "Çatlak bulunan kaynakta doğru yol?",
+       "secenekler": [
+        "Üstünden paso",
+        "Taşlayıp çıkarmak, nedenini bulmak, yeniden kaynatmak",
+        "Boyamak",
+        "Bırakmak"
+       ],
+       "dogru": 1,
+       "aciklama": "Çatlak tamamen çıkarılır."
+      },
+      {
+       "soru": "Kapalı alanda kaynaktan önce?",
+       "secenekler": [
+        "Hiçbir şey",
+        "İzin, gaz ölçümü, gözcü",
+        "Sadece eldiven",
+        "Sadece lamba"
+       ],
+       "dogru": 1,
+       "aciklama": "Kapalı alan çok tehlikelidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Ustabaşı",
+   "hedefXp": 330,
+   "rozet": {
+    "ad": "Kaynak Ustabaşı",
+    "ikon": "🏭"
+   },
+   "sonraki": "Çıraklıktan ustabaşılığa tüm yolu tamamladın!",
+   "gorevler": [
+    {
+     "id": "b1-atolye",
+     "sablon": "bilgi",
+     "ikon": "🏭",
+     "baslik": "Kaynak atölyesini yönetmek",
+     "xp": 20,
+     "kartlar": [
+      {
+       "ikon": "📄",
+       "baslik": "Prosedür ve onay",
+       "metin": "Önemli işlerde kaynak prosedürü (WPS) yazılır ve deneme kaynağıyla onaylanır. Ekip bu prosedüre göre çalışır.",
+       "terim": "WPS"
+      },
+      {
+       "ikon": "🪪",
+       "baslik": "Kaynakçı belgeleri",
+       "metin": "Her kaynakçının yaptığı işe uygun belgesi olmalı ve süresi takip edilmeli. Belge, yöntem, malzeme ve pozisyona göre verilir.",
+       "terim": "kaynakçı sertifikası"
+      },
+      {
+       "ikon": "👁️",
+       "baslik": "Gözle muayene",
+       "metin": "Her kaynak önce gözle muayene edilir: boyut, yüzey, yanma oluğu, gözenek, çatlak.",
+       "terim": "VT"
+      },
+      {
+       "ikon": "🧴",
+       "baslik": "Yüzey muayeneleri",
+       "metin": "Penetrant (renkli sıvı) ve manyetik parçacık yöntemleri gözle görülmeyen yüzey çatlaklarını ortaya çıkarır.",
+       "terim": "PT ve MT"
+      },
+      {
+       "ikon": "📡",
+       "baslik": "İç muayene",
+       "metin": "Ultrasonik ve radyografik muayene dikişin içindeki gözenek, cüruf ve erime eksikliğini gösterir.",
+       "terim": "UT ve RT"
+      },
+      {
+       "ikon": "🧯",
+       "baslik": "İş güvenliği",
+       "metin": "Sıcak iş izni, yangın gözcüsü, tüp depolama, duman emişi ve koruyucu donanım ustabaşının günlük kontrolündedir.",
+       "terim": "sıcak iş izni"
+      }
+     ]
+    },
+    {
+     "id": "b2-muayene",
+     "sablon": "siniflandirma",
+     "ikon": "🔬",
+     "baslik": "Hangi muayene?",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Her kontrol işini en uygun muayene yöntemine ver.",
+     "kategoriler": [
+      {
+       "id": "vt",
+       "ad": "Gözle muayene",
+       "ikon": "👁️"
+      },
+      {
+       "id": "pt",
+       "ad": "Penetrant",
+       "ikon": "🧴"
+      },
+      {
+       "id": "ic",
+       "ad": "Ultrasonik / radyografi",
+       "ikon": "📡"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Dikiş boyutu ve yüzey düzgünlüğü",
+       "ikon": "📏",
+       "kategori": "vt",
+       "aciklama": "Her kaynakta ilk adım gözle muayenedir."
+      },
+      {
+       "ad": "Kenarda yanma oluğu ve taşma",
+       "ikon": "〰️",
+       "kategori": "vt",
+       "aciklama": "Yüzeyde görülür."
+      },
+      {
+       "ad": "Kaynaktan hemen sonraki ilk kontrol",
+       "ikon": "🔦",
+       "kategori": "vt",
+       "aciklama": "Basit ve hızlıdır."
+      },
+      {
+       "ad": "Paslanmaz parçada gözle görülmeyen kılcal yüzey çatlağı",
+       "ikon": "🧴",
+       "kategori": "pt",
+       "aciklama": "Renkli sıvı çatlağa işler ve görünür olur."
+      },
+      {
+       "ad": "Alüminyum parçada yüzey çatlağı şüphesi",
+       "ikon": "🥫",
+       "kategori": "pt",
+       "aciklama": "Manyetik olmayan metallerde penetrant kullanılır."
+      },
+      {
+       "ad": "Kalın dikişin içinde erime eksikliği",
+       "ikon": "⬇️",
+       "kategori": "ic",
+       "aciklama": "İçerideki hata dışarıdan görünmez."
+      },
+      {
+       "ad": "Dikiş içindeki gözenek ve cüruf",
+       "ikon": "🫧",
+       "kategori": "ic",
+       "aciklama": "Ultrasonik ya da film ile görülür."
+      },
+      {
+       "ad": "Basınçlı kabın alın kaynağının iç kontrolü",
+       "ikon": "🛢️",
+       "kategori": "ic",
+       "aciklama": "Kritik işlerde iç muayene istenir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Muayene yöntemleri",
+      "maddeler": [
+       "Gözle: her kaynakta ilk kontrol.",
+       "Penetrant: yüzey çatlağı.",
+       "Ultrasonik ve radyografi: dikişin içi."
+      ]
+     }
+    },
+    {
+     "id": "b3-hesap",
+     "sablon": "soru",
+     "ikon": "🧮",
+     "baslik": "İş ve maliyet hesabı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Bir işte 30 metre dikiş var. Bir kaynakçı saatte ortalama 3 metre dikiş çekiyor. Kaç saat sürer?",
+       "secenekler": [
+        "3",
+        "10",
+        "30",
+        "90"
+       ],
+       "dogru": 1,
+       "aciklama": "30 ÷ 3 = 10 saat."
+      },
+      {
+       "soru": "Aynı işe 2 kaynakçı verirsen yaklaşık kaç saat sürer?",
+       "secenekler": [
+        "5",
+        "10",
+        "20",
+        "2"
+       ],
+       "dogru": 0,
+       "aciklama": "10 ÷ 2 = 5 saat (hazırlık ve taşıma hariç)."
+      },
+      {
+       "soru": "İş 4 kg tel harcıyor, telin kilosu 80 TL (örnek fiyat). Tel maliyeti?",
+       "secenekler": [
+        "84 TL",
+        "240 TL",
+        "320 TL",
+        "400 TL"
+       ],
+       "dogru": 2,
+       "aciklama": "4 × 80 = 320 TL."
+      },
+      {
+       "soru": "Bir gaz tüpünden 9.000 L gaz çıkıyor, debi 15 L/dk. Tüp kaç dakikalık ark süresi verir?",
+       "secenekler": [
+        "135",
+        "450",
+        "600",
+        "900"
+       ],
+       "dogru": 2,
+       "aciklama": "9.000 ÷ 15 = 600 dakika, yani 10 saat ark."
+      },
+      {
+       "soru": "100 kaynaktan 4'ü muayenede tamir gerektirdi. Tamir oranı?",
+       "secenekler": [
+        "%4",
+        "%40",
+        "%0,4",
+        "%96"
+       ],
+       "dogru": 0,
+       "aciklama": "4 ÷ 100 = %4. Oran yükselirse nedeni araştırılır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İş hesabı",
+      "maddeler": [
+       "Süre = toplam dikiş ÷ saatlik dikiş.",
+       "Gaz süresi = tüp hacmi ÷ debi.",
+       "Tamir oranı kaliteyi izlemenin en basit yoludur."
+      ]
+     }
+    },
+    {
+     "id": "b4-zor",
+     "sablon": "senaryo",
+     "ikon": "🌪️",
+     "baslik": "Zor bir gün",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Ustabaşı olarak bütün kaynak ekibinden ve kaliteden sorumlusun.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Bir kaynakçının belgesinin süresi dolmuş ama iş acil.",
+       "secenekler": [
+        {
+         "metin": "Belgesi yenilenene kadar o işe belgeli bir kaynakçı veririm",
+         "dogru": true,
+         "aciklama": "Belge isteyen işte belgesiz kaynakçı çalıştırılmaz."
+        },
+        {
+         "metin": "Acil iş, bu sefer olsun",
+         "dogru": false,
+         "aciklama": "Belgesiz kaynak hem kurala aykırı hem risklidir."
+        },
+        {
+         "metin": "Başka bir kaynakçının adına kayıt yaparım",
+         "dogru": false,
+         "aciklama": "Sahte kayıt kabul edilemez."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri: \"Muayeneyi atlayın, raporu uygun diye imzalayın.\"",
+       "secenekler": [
+        {
+         "metin": "Reddeder, muayeneyi yaptırıp gerçek raporu veririm",
+         "dogru": true,
+         "aciklama": "Sahte kalite kaydı hem etik dışıdır hem insan hayatını tehlikeye atar."
+        },
+        {
+         "metin": "Bir seferlik imzalarım",
+         "dogru": false,
+         "aciklama": "Kaynak hatası yıllar sonra kazaya dönüşebilir."
+        },
+        {
+         "metin": "Rapor yazmam, ama iş gitsin",
+         "dogru": false,
+         "aciklama": "Muayenesiz kaynak teslim edilmez."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kaynak bitti, vardiya sona eriyor. Alanda hâlâ duman var.",
+       "secenekler": [
+        {
+         "metin": "İş bitince bir süre yangın kontrolü yaptırır, alan soğuyunca kapatırım",
+         "dogru": true,
+         "aciklama": "Sıçrayan kıvılcım saklı bir yerde içten için yanabilir."
+        },
+        {
+         "metin": "Herkes çıksın, ışıkları kapatalım",
+         "dogru": false,
+         "aciklama": "Yangın çoğu zaman iş bittikten sonra başlar."
+        },
+        {
+         "metin": "Duman normal, bir şey olmaz",
+         "dogru": false,
+         "aciklama": "Kontrol edilmeden alan terk edilmez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ustabaşının sorumluluğu",
+      "maddeler": [
+       "Belgesiz kaynakçı belge isteyen işte çalışmaz.",
+       "Sahte muayene raporu yazılmaz.",
+       "Kaynaktan sonra yangın kontrolü yapılır."
+      ]
+     }
+    },
+    {
+     "id": "b5-sinav",
+     "sablon": "sinav",
+     "ikon": "🏆",
+     "baslik": "Final sınavı",
+     "xp": 150,
+     "gecmeYuzde": 70,
+     "sorular": [
+      {
+       "soru": "Arka maskesiz bakmak?",
+       "secenekler": [
+        "Zararsız",
+        "Gözü yakar",
+        "Sadece gece zararlı",
+        "Gözü güçlendirir"
+       ],
+       "dogru": 1,
+       "aciklama": "Morötesi ışın gözü yakar."
+      },
+      {
+       "soru": "Kaynakta eldiven?",
+       "secenekler": [
+        "Takılmaz",
+        "Deri kaynak eldiveni takılır",
+        "Bez eldiven",
+        "Tek el"
+       ],
+       "dogru": 1,
+       "aciklama": "Kaynakta eldiven şart."
+      },
+      {
+       "soru": "Gözeneğin en sık sebebi?",
+       "secenekler": [
+        "Gaz koruması, nem, kir",
+        "Koyu maske",
+        "Düşük hız",
+        "Uzun kablo"
+       ],
+       "dogru": 0,
+       "aciklama": "Gaz, nem ve kir."
+      },
+      {
+       "soru": "Yetersiz nüfuziyet için ne değiştirirsin?",
+       "secenekler": [
+        "Akımı uygun artırır, aralığı ve hızı düzeltirim",
+        "Akımı düşürürüm",
+        "Gazı kapatırım",
+        "Daha hızlı giderim"
+       ],
+       "dogru": 0,
+       "aciklama": "Dibe erime için yeterli ısı gerekir."
+      },
+      {
+       "soru": "Isı girdisi: 22 V, 150 A, hız 220 mm/dk (verim hariç)?",
+       "secenekler": [
+        "0,45 kJ/mm",
+        "0,9 kJ/mm",
+        "1,5 kJ/mm",
+        "9 kJ/mm"
+       ],
+       "dogru": 1,
+       "aciklama": "22 × 150 × 60 = 198.000; 220 × 1000 = 220.000; 198.000 ÷ 220.000 = 0,9 kJ/mm."
+      },
+      {
+       "soru": "Dikiş içindeki cürufu hangi muayene gösterir?",
+       "secenekler": [
+        "Gözle",
+        "Ultrasonik ya da radyografi",
+        "Tartı",
+        "Penetrant"
+       ],
+       "dogru": 1,
+       "aciklama": "İç hatalar iç muayeneyle görülür."
+      },
+      {
+       "soru": "Alüminyum TIG kaynağı genelde hangi akımla yapılır?",
+       "secenekler": [
+        "Doğru akım",
+        "Alternatif akım",
+        "Akımsız",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Alternatif akım alüminyumun oksit tabakasını kırmaya yardım eder."
+      },
+      {
+       "soru": "Tankın içinde kaynak?",
+       "secenekler": [
+        "Hemen girilir",
+        "İzin, ölçüm ve gözcüyle",
+        "Kapak açıksa olur",
+        "Kısa sürerse olur"
+       ],
+       "dogru": 1,
+       "aciklama": "Kapalı alan kuralları uygulanır."
+      },
+      {
+       "soru": "Gaz tüpü 9.000 L, debi 18 L/dk. Kaç dakika ark?",
+       "secenekler": [
+        "162",
+        "500",
+        "900",
+        "1.800"
+       ],
+       "dogru": 1,
+       "aciklama": "9.000 ÷ 18 = 500 dakika."
+      },
+      {
+       "soru": "Müşteri muayenesiz 'uygun' rapor istiyor?",
+       "secenekler": [
+        "Yazılır",
+        "Yazılmaz",
+        "Acilse yazılır",
+        "Bir kez yazılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Sahte kayıt yazılmaz."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
