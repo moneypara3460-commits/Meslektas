@@ -1,5 +1,5 @@
 {
- "paketSurumu": 1,
+ "paketSurumu": 2,
  "meslek": {
   "id": "mimar",
   "ad": "Mimar",
@@ -302,7 +302,7 @@
   },
   {
    "ad": "Stajyer",
-   "hedefXp": 360,
+   "hedefXp": 460,
    "rozet": {
     "ad": "Stajyer Mimar",
     "ikon": "📐"
@@ -715,6 +715,182 @@
      ]
     },
     {
+     "id": "st-pafta",
+     "sablon": "soru",
+     "ikon": "📄",
+     "baslik": "Paftayı oku",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Planda \"±0.00\" yazan işaret neyi gösterir?",
+       "secenekler": [
+        "Odanın alanını",
+        "Binanın sıfır kotunu, yani yükseklikler için başlangıç seviyesini",
+        "Duvar kalınlığını",
+        "Ölçeği"
+       ],
+       "dogru": 1,
+       "aciklama": "Kot, bir noktanın sıfır seviyesine göre yüksekliğidir. +3.00 sıfırdan 3 m yukarı, −2.80 ise 2,80 m aşağı demektir."
+      },
+      {
+       "soru": "Planda kesilen duvarlar neden kalın çizgiyle çizilir?",
+       "secenekler": [
+        "Süs için",
+        "Kesilen elemanlar en kalın, uzaktaki görünen çizgiler ince çizilir; böylece çizim kolay okunur",
+        "Programın ayarı öyle",
+        "Kalın çizgi beton demektir"
+       ],
+       "dogru": 1,
+       "aciklama": "Çizgi kalınlığı derinliği anlatır: kesilen kalın, görünen ince, gizli olan kesikli."
+      },
+      {
+       "soru": "Paftanın köşesindeki \"antet\" kutusunda ne yazar?",
+       "secenekler": [
+        "Sadece mimarın imzası",
+        "Proje adı, çizim adı, ölçek, tarih, pafta numarası, çizen ve onaylayan",
+        "Malzeme fiyatları",
+        "Hiçbir şey, boş bırakılır"
+       ],
+       "dogru": 1,
+       "aciklama": "Antet paftanın kimliğidir; şantiyedeki usta hangi çizime baktığını oradan anlar."
+      },
+      {
+       "soru": "Çizimde bir değişiklik yaptın. Paftaya ne işlenir?",
+       "secenekler": [
+        "Hiçbir şey",
+        "Revizyon numarası, tarihi ve neyin değiştiği",
+        "Sadece yeni tarih",
+        "Eski pafta çöpe atılır, iz kalmaz"
+       ],
+       "dogru": 1,
+       "aciklama": "Şantiyede eski çizimle çalışmak pahalı hatalara yol açar. Revizyon kaydı herkesin son çizimi kullanmasını sağlar."
+      },
+      {
+       "soru": "Ölçü zincirinde parça ölçülerin toplamı genel ölçüyü tutmuyor. Ne yaparsın?",
+       "secenekler": [
+        "Genel ölçüyü silerim",
+        "Hatanın nerede olduğunu bulup düzeltir, sorumlu mimara bildiririm",
+        "Usta yerinde halleder",
+        "Fark küçükse bırakırım"
+       ],
+       "dogru": 1,
+       "aciklama": "Tutmayan ölçü şantiyede yanlış duvar demektir. Ölçüler her zaman toplanarak kontrol edilir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Pafta okuma",
+      "maddeler": [
+       "Kot: sıfıra göre yükseklik.",
+       "Kesilen kalın, görünen ince, gizli kesikli.",
+       "Antet paftanın kimliğidir.",
+       "Her değişiklik revizyon olarak işlenir."
+      ]
+     }
+    },
+    {
+     "id": "st-malzeme",
+     "sablon": "siniflandirma",
+     "ikon": "🧱",
+     "baslik": "Malzemeyi tanı",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Bir binada her malzemenin bir görevi var. Her malzemeye dokun, ne işe yaradığını seç.",
+     "kategoriler": [
+      {
+       "id": "tasiyici",
+       "ad": "Taşıyıcı",
+       "ikon": "🏗️"
+      },
+      {
+       "id": "duvar",
+       "ad": "Duvar / bölme",
+       "ikon": "🧱"
+      },
+      {
+       "id": "yalitim",
+       "ad": "Yalıtım",
+       "ikon": "🧣"
+      },
+      {
+       "id": "kaplama",
+       "ad": "Kaplama",
+       "ikon": "🎨"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Betonarme kolon",
+       "ikon": "🏛️",
+       "kategori": "tasiyici",
+       "aciklama": "Binanın yükünü temele taşır; delinmez, kesilmez."
+      },
+      {
+       "ad": "Çelik kiriş",
+       "ikon": "🔩",
+       "kategori": "tasiyici",
+       "aciklama": "Döşeme yükünü kolonlara aktarır."
+      },
+      {
+       "ad": "Gazbeton blok",
+       "ikon": "⬜",
+       "kategori": "duvar",
+       "aciklama": "Hafif ve ısı tutan duvar bloğudur; betonarme binada yük taşımaz."
+      },
+      {
+       "ad": "Tuğla",
+       "ikon": "🧱",
+       "kategori": "duvar",
+       "aciklama": "Betonarme iskelette dolgu duvar olarak örülür."
+      },
+      {
+       "ad": "Alçı levha bölme",
+       "ikon": "📋",
+       "kategori": "duvar",
+       "aciklama": "Hafif, hızlı kurulan iç bölmedir."
+      },
+      {
+       "ad": "Taş yünü",
+       "ikon": "🧶",
+       "kategori": "yalitim",
+       "aciklama": "Isı ve ses yalıtır, yanmaz."
+      },
+      {
+       "ad": "XPS köpük levha",
+       "ikon": "🟦",
+       "kategori": "yalitim",
+       "aciklama": "Isı yalıtır; neme dayanıklı olduğu için temel ve toprak altı yüzeylerde de kullanılır."
+      },
+      {
+       "ad": "Bitümlü su yalıtım örtüsü",
+       "ikon": "🌧️",
+       "kategori": "yalitim",
+       "aciklama": "Temeli ve çatıyı sudan korur."
+      },
+      {
+       "ad": "Seramik karo",
+       "ikon": "🔲",
+       "kategori": "kaplama",
+       "aciklama": "Islak hacimlerde duvar ve zemini kaplar."
+      },
+      {
+       "ad": "Laminat parke",
+       "ikon": "🪵",
+       "kategori": "kaplama",
+       "aciklama": "Kuru mekânlarda zemin kaplamasıdır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Malzemenin görevi",
+      "maddeler": [
+       "Taşıyıcı: kolon, kiriş, döşeme; kesilmez.",
+       "Duvar: tuğla, gazbeton, alçı levha.",
+       "Yalıtım: ısı, ses ve suya karşı.",
+       "Kaplama: mekâna göre seçilir."
+      ]
+     }
+    },
+    {
      "id": "st7-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -809,6 +985,28 @@
        ],
        "dogru": 3,
        "aciklama": "Paydası en küçük olan."
+      },
+      {
+       "soru": "Planda \"+3.00\" ne anlama gelir?",
+       "secenekler": [
+        "3 m genişlik",
+        "Sıfır kotundan 3 m yukarı",
+        "3. revizyon",
+        "1/300 ölçek"
+       ],
+       "dogru": 1,
+       "aciklama": "Kot, sıfır seviyesine göre yüksekliği gösterir."
+      },
+      {
+       "soru": "Hangisi yalıtım malzemesidir?",
+       "secenekler": [
+        "Seramik",
+        "Taş yünü",
+        "Betonarme kolon",
+        "Laminat"
+       ],
+       "dogru": 1,
+       "aciklama": "Taş yünü ısı ve ses yalıtır, yanmaz."
       }
      ]
     }
@@ -816,7 +1014,7 @@
   },
   {
    "ad": "Mimar",
-   "hedefXp": 280,
+   "hedefXp": 390,
    "rozet": {
     "ad": "Mimar",
     "ikon": "🏛️"
@@ -1119,6 +1317,210 @@
      }
     },
     {
+     "id": "mi-olcu",
+     "sablon": "soru",
+     "ikon": "📏",
+     "baslik": "İnsan ölçüsü",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Merdivende yaygın konfor kuralı nedir?",
+       "secenekler": [
+        "Basamak = rıht",
+        "2 × rıht + basamak ≈ 60–64 cm",
+        "Rıht ne kadar yüksekse o kadar iyi",
+        "Kural yoktur"
+       ],
+       "dogru": 1,
+       "aciklama": "Bu formül insan adım uzunluğuna dayanır. Kesin sınırlar için her projede yürürlükteki yönetmeliğe bakılır."
+      },
+      {
+       "soru": "Rıht 17 cm. 2 × rıht + basamak = 62 cm kuralına göre basamak kaç cm olur?",
+       "secenekler": [
+        "24 cm",
+        "28 cm",
+        "34 cm",
+        "45 cm"
+       ],
+       "dogru": 1,
+       "aciklama": "62 − (2 × 17) = 28 cm."
+      },
+      {
+       "soru": "Kat yüksekliği 306 cm. Rıhtı 17 cm alırsan kaç rıht gerekir?",
+       "secenekler": [
+        "15",
+        "18",
+        "20",
+        "31"
+       ],
+       "dogru": 1,
+       "aciklama": "306 ÷ 17 = 18 rıht. Bütün rıhtlar eşit olmalı; tek bir farklı basamak insanları tökezletir."
+      },
+      {
+       "soru": "Mutfak tezgâhının yaygın yüksekliği yaklaşık kaçtır?",
+       "secenekler": [
+        "50 cm",
+        "70 cm",
+        "85–90 cm",
+        "120 cm"
+       ],
+       "dogru": 2,
+       "aciklama": "Ayakta çalışırken bel eğilmeden kullanılacak yüksekliktir; yemek masası ise oturarak kullanıldığı için 75 cm civarıdır."
+      },
+      {
+       "soru": "Tekerlekli sandalye kullanan biri için tasarımda hangisi önemlidir?",
+       "secenekler": [
+        "Girişte basamak olması",
+        "Geniş kapılar, eşiksiz geçişler, dönüş alanı ve rampa",
+        "Dar koridor",
+        "Yüksek tezgâh"
+       ],
+       "dogru": 1,
+       "aciklama": "Erişilebilir tasarımın ölçüleri TS 9111'de anlatılır; iyi tasarım herkes için kolaylıktır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Ölçü insandan gelir",
+      "maddeler": [
+       "Merdiven: 2 rıht + basamak ≈ 60–64 cm.",
+       "Bütün rıhtlar eşit olur.",
+       "Tezgâh 85–90 cm, masa 75 cm civarı.",
+       "Kesin sınırlar için yönetmeliğe bak."
+      ]
+     }
+    },
+    {
+     "id": "mi-yangin",
+     "sablon": "senaryo",
+     "ikon": "🔥",
+     "baslik": "Yangına karşı tasarım",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Bir apartman projesi üzerinde çalışıyorsun. Binada yangın çıkarsa herkes güvenle dışarı çıkabilmeli.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "İşveren: \"Merdiveni daraltalım, daireler büyüsün.\"",
+       "secenekler": [
+        {
+         "metin": "Kabul ederim, satılabilir alan önemli",
+         "dogru": false,
+         "aciklama": "Merdiven yangında kaçış yoludur; genişliği yönetmelikle belirlenir ve pazarlık konusu değildir."
+        },
+        {
+         "metin": "Kaçış yolu genişliğinin yönetmelikle belirlendiğini anlatır, alanı başka yerden kazanmayı öneririm",
+         "dogru": true,
+         "aciklama": "İşvereni dinle ama güvenlikten ödün verme; çözüm başka yerde aranır."
+        },
+        {
+         "metin": "Daraltırım, kimse ölçmez",
+         "dogru": false,
+         "aciklama": "Proje belediyede ve yapı denetimde kontrol edilir; asıl önemlisi insan hayatıdır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kıdemli mimar: \"Merdiven kovasının kapıları nasıl olmalı?\"",
+       "secenekler": [
+        {
+         "metin": "Yangına dayanıklı, kendiliğinden kapanan kapılar",
+         "dogru": true,
+         "aciklama": "Kapalı ve korunan merdiven, duman girmediği sürece güvenli bir kaçış yoludur."
+        },
+        {
+         "metin": "Kapıya gerek yok, açık merdiven daha ferah",
+         "dogru": false,
+         "aciklama": "Açık merdiven yangında bacaya dönüşür ve dumanı yukarı taşır."
+        },
+        {
+         "metin": "En ucuz ahşap kapı",
+         "dogru": false,
+         "aciklama": "Kapının yangına dayanım süresi yönetmelikte bellidir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kaçış kapısı hangi yöne açılmalı?",
+       "secenekler": [
+        {
+         "metin": "İçeri doğru",
+         "dogru": false,
+         "aciklama": "Panikte kalabalık kapıya yığılır; içe açılan kapı açılamaz."
+        },
+        {
+         "metin": "Kaçış yönüne, yani dışarı doğru",
+         "dogru": true,
+         "aciklama": "Kaçış yönüne açılan kapı itilerek hemen açılır."
+        },
+        {
+         "metin": "Sürgülü kapı yeterli",
+         "dogru": false,
+         "aciklama": "Kaçış yolunda sürgülü kapı panikte sıkışabilir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "İşveren: \"Yangında herkes asansörle iner, merdivene gerek yok.\"",
+       "secenekler": [
+        {
+         "metin": "Doğru, asansör daha hızlı",
+         "dogru": false,
+         "aciklama": "Yangında elektrik kesilebilir, asansör boşluğu duman doldurabilir."
+        },
+        {
+         "metin": "Normal asansörün yangında kaçış için kullanılmadığını, merdivenin zorunlu olduğunu açıklarım",
+         "dogru": true,
+         "aciklama": "Asansörlerin yanına \"Yangında kullanmayınız\" uyarısı konmasının sebebi budur."
+        },
+        {
+         "metin": "İki asansör koyarız, olur",
+         "dogru": false,
+         "aciklama": "Asansör sayısı merdivenin yerini tutmaz."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Bina sakinleri merdiven sahanlığına bisiklet ve dolap koymak istiyor.",
+       "secenekler": [
+        {
+         "metin": "Yer varsa sorun yok",
+         "dogru": false,
+         "aciklama": "Kaçış yolundaki her eşya dumanda engel ve yangın yüküdür."
+        },
+        {
+         "metin": "Kaçış yollarının boş kalması gerektiğini söyler, bina içinde ayrı bir depo alanı öneririm",
+         "dogru": true,
+         "aciklama": "İyi mimar sorunu yasaklamakla bırakmaz, çözüm de sunar."
+        },
+        {
+         "metin": "Sadece bisiklete izin veririm",
+         "dogru": false,
+         "aciklama": "Kural eşyanın türüne göre değil, yolun boş kalmasına göredir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Yangın güvenliği",
+      "maddeler": [
+       "Kaçış yolu genişliği pazarlık konusu değil.",
+       "Merdiven korunur, kapıları kendiliğinden kapanır.",
+       "Kaçış kapısı dışarı açılır, asansör kullanılmaz.",
+       "Kurallar: Binaların Yangından Korunması Hakkında Yönetmelik."
+      ]
+     }
+    },
+    {
      "id": "mi5-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -1213,6 +1615,28 @@
        ],
        "dogru": 2,
        "aciklama": "Önce ne istendiği ve fikir netleşir."
+      },
+      {
+       "soru": "Kaçış kapısı hangi yöne açılır?",
+       "secenekler": [
+        "İçeri",
+        "Kaçış yönüne",
+        "Fark etmez",
+        "Sürgülü olmalı"
+       ],
+       "dogru": 1,
+       "aciklama": "Panikte itilerek açılabilmesi için."
+      },
+      {
+       "soru": "Rıht 16 cm ise 2 × rıht + basamak = 62 kuralına göre basamak?",
+       "secenekler": [
+        "26 cm",
+        "30 cm",
+        "32 cm",
+        "46 cm"
+       ],
+       "dogru": 1,
+       "aciklama": "62 − 32 = 30 cm."
       }
      ]
     }
