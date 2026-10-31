@@ -233,4 +233,12 @@ const S = {
   'Bana en yakışan meslek: {0}': ['My best-fit profession: {0}', 'Der Beruf, der am besten zu mir passt: {0}', 'المهنة الأنسب لي: {0}'],
   'Meslek Pusulam: {0}. Bana en yakışan meslek: {1} (%{2} uyum) 🧭': ['My Career Compass: {0}. My best-fit profession: {1} ({2}% match) 🧭', 'Mein Berufskompass: {0}. Der Beruf, der am besten zu mir passt: {1} ({2} % Übereinstimmung) 🧭', 'بوصلتي المهنية: {0}. المهنة الأنسب لي: {1} (توافق {2}%) 🧭'],
   'Meslek Pusulam: {0} 🧭': ['My Career Compass: {0} 🧭', 'Mein Berufskompass: {0} 🧭', 'بوصلتي المهنية: {0} 🧭'],
+  // ---- meslek tanıtımı ----
+  'Geç ⏭': ['Skip ⏭', 'Überspringen ⏭', 'تخطٍّ ⏭'],
+  'MESLEK TANITIMI': ['PROFESSION PREVIEW', 'BERUFSVORSTELLUNG', 'تعريف بالمهنة'],
+  'NE YAPAR?': ['WHAT DO THEY DO?', 'WAS MACHT MAN?', 'ماذا يفعل؟'],
+  'ÇALIŞMA ORTAMI': ['WORKPLACE', 'ARBEITSUMFELD', 'بيئة العمل'],
+  'NASIL BİR TEMPO?': ['WHAT IS THE PACE LIKE?', 'WIE IST DAS TEMPO?', 'ما طبيعة الإيقاع؟'],
+  'Hadi başlayalım! →': ["Let's get started! →", 'Los geht’s! →', 'هيا نبدأ! ←'],
+  '▶ Tanıtımı izle': ['▶ Watch preview', '▶ Vorstellung ansehen', '▶ شاهد التعريف'],
 };

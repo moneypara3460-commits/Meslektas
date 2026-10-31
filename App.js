@@ -15,6 +15,7 @@ import { ses, titret } from './motor/his';
 import { Linking } from 'react-native';
 import { Pusula } from './Pusula';
 import { PaylasModal } from './paylas';
+import { MeslekTanitim, tanitimGoruldu } from './Tanitim';
 import { t, dilNe, dilOku, dilYaz, DilContext, DILLER } from './dil';
 import { Modal } from 'react-native';
 import { pusulaOku, analiz, TIPLER } from './motor/pusula';
@@ -51,9 +52,9 @@ export default function App() {
     return () => geri.remove();
   }, [ekran]);
 
-  const meslekAc = async (p) => { setPaket(p); setSonuclar(await ilerlemeOku(p.meslek.id)); setEkran({ ad: 'harita', ki: null }); };
+  const meslekAc = async (p) => { setPaket(p); setSonuclar(await ilerlemeOku(p.meslek.id)); setEkran(await tanitimGoruldu(p.meslek.id) ? { ad: 'harita', ki: null } : { ad: 'tanitim' }); };
   const tema = VARSAYILAN_TEMA; // Uygulamanın tamamı marka renklerinde
-  const koyuUst = ['acilis', 'ana', 'hesap', 'harita'].includes(ekran.ad);
+  const koyuUst = ['acilis', 'ana', 'hesap', 'harita', 'tanitim'].includes(ekran.ad);
 
   let icerik;
   if (ekran.ad === 'acilis') icerik = <Acilis onBasla={() => setEkran({ ad: 'ana' })} onHesap={() => setEkran({ ad: 'hesap' })} oturum={oturum} />;
@@ -63,7 +64,8 @@ export default function App() {
     onMeslek={(p) => { pusulaOku().then(setPusula); meslekAc(p); }} />;
   else if (ekran.ad === 'kaynak') icerik = <Kaynaklar onGeri={() => setEkran({ ad: 'ana' })} />;
   else if (ekran.ad === 'hesap') icerik = <HesapEkrani oturum={oturum} onGeri={() => { tumunuOku(); setEkran({ ad: 'ana' }); }} />;
-  else if (ekran.ad === 'harita') icerik = <Harita paket={paket} sonuclar={sonuclar} kiBaslangic={ekran.ki}
+  else if (ekran.ad === 'tanitim') icerik = <MeslekTanitim paket={paket} ikon={ikonu(paket)} onBitti={() => setEkran({ ad: 'harita', ki: null })} />;
+  else if (ekran.ad === 'harita') icerik = <Harita paket={paket} sonuclar={sonuclar} kiBaslangic={ekran.ki} onTanitim={() => setEkran({ ad: 'tanitim' })}
     onGeri={() => { tumunuOku(); setEkran({ ad: 'ana' }); }} onGorev={(ki, gi) => setEkran({ ad: 'gorev', ki, gi, anahtar: Date.now() })} onBelge={() => setEkran({ ad: 'belge' })} />;
   else if (ekran.ad === 'gorev') {
     const k = paket.kademeler[ekran.ki]; const g = k.gorevler[ekran.gi]; const S = SABLONLAR[g.sablon];
@@ -317,7 +319,7 @@ function PusulaKarti({ pusula, onPress }) {
 }
 
 // Harita için koyu üst bant + açık içerik
-function HaritaKabuk({ paket, sonuclar, onGeri, children }) {
+function HaritaKabuk({ paket, sonuclar, onGeri, onTanitim, children }) {
   const ins = useSafeAreaInsets();
   const max = paket.kademeler.reduce((t, k) => t + k.gorevler.reduce((a, g) => a + maxXp(g), 0), 0); const xp = toplamXp(paket, sonuclar);
   const rozet = paket.kademeler.filter((_, j) => kademeBitti(paket, j, sonuclar)).length;
@@ -329,6 +331,8 @@ function HaritaKabuk({ paket, sonuclar, onGeri, children }) {
           <View style={{ position: 'absolute', width: 220, height: 220, borderRadius: 110, backgroundColor: 'rgba(59,130,246,0.25)', top: -70, right: -60 }} />
           <Pressable onPress={onGeri} hitSlop={12} style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: 'rgba(255,255,255,0.12)', borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.3)', alignItems: 'center', justifyContent: 'center' }}>
             <Text style={{ color: '#fff', fontSize: 18, fontWeight: '900' }}>←</Text></Pressable>
+          {onTanitim ? <Pressable onPress={onTanitim} hitSlop={10} style={{ position: 'absolute', top: ins.top + 14, right: 18, flexDirection: 'row', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.12)', borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.3)', borderRadius: 99, paddingHorizontal: 12, paddingVertical: 8 }}>
+            <Text style={{ color: '#fff', fontWeight: '800', fontSize: 12.5 }}>{t('▶ Tanıtımı izle')}</Text></Pressable> : null}
           <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 14 }}>
             <View style={{ width: 66, height: 66, borderRadius: 20, overflow: 'hidden', alignItems: 'center', justifyContent: 'center', marginRight: 14, borderBottomWidth: 4, borderColor: '#1749a8' }}>
               <Gradyan renkler={[MARKA.mavi2, MARKA.mavi]} yon="capraz" /><Text style={{ fontSize: 34 }}>{ikonu(paket)}</Text></View>
@@ -370,12 +374,12 @@ function GirisKabuk({ onGeri, children }) {
 }
 
 // ---------------- Harita: kademeler ve görevler ----------------
-function Harita({ paket, sonuclar, kiBaslangic, onGeri, onGorev, onBelge }) {
+function Harita({ paket, sonuclar, kiBaslangic, onGeri, onGorev, onBelge, onTanitim }) {
   const [ki, setKi] = useState(kiBaslangic ?? aktifKademe(paket, sonuclar));
   const K = paket.kademeler[ki]; const acik = kademeAcik(paket, ki, sonuclar);
   const xp = kademeXp(paket, ki, sonuclar); const hepsiBitti = paket.kademeler.every((_, j) => kademeBitti(paket, j, sonuclar));
   return (
-    <HaritaKabuk paket={paket} sonuclar={sonuclar} onGeri={onGeri}>
+    <HaritaKabuk paket={paket} sonuclar={sonuclar} onGeri={onGeri} onTanitim={onTanitim}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginHorizontal: -18, marginBottom: 14 }} contentContainerStyle={{ paddingHorizontal: 18 }}>
         {paket.kademeler.map((k, j) => {
           const a = kademeAcik(paket, j, sonuclar); const b = kademeBitti(paket, j, sonuclar); const sec = j === ki;
