@@ -1,5 +1,5 @@
 {
- "paketSurumu": 5,
+ "paketSurumu": 6,
  "meslek": {
   "id": "barista",
   "ad": "Barista",
@@ -270,7 +270,7 @@
   },
   {
    "ad": "Çırak",
-   "hedefXp": 360,
+   "hedefXp": 460,
    "rozet": {
     "ad": "Çırak Barista",
     "ikon": "☕"
@@ -560,6 +560,12 @@
        "baslik": "Flat white",
        "metin": "Espresso + az süt + çok ince, ipeksi köpük. Latteden küçük, kahve tadı daha belirgin.",
        "terim": "mikro köpük"
+      },
+      {
+       "ikon": "🥃",
+       "baslik": "Cortado",
+       "metin": "Espresso + yaklaşık aynı miktarda sıcak süt, çok az köpük. Küçük bardakta (yaklaşık 100–130 ml); kahve tadı güçlü ama yumuşatılmış.",
+       "terim": "espresso + eşit süt"
       }
      ]
     },
@@ -634,6 +640,187 @@
        "Macchiato = espresso + biraz köpük.",
        "Cappuccino = kalın köpük, latte = bol süt.",
        "Süt 55–65 °C, asla kaynatma."
+      ]
+     }
+    },
+    {
+     "id": "c-oranlar",
+     "sablon": "soru",
+     "ikon": "📏",
+     "baslik": "Fincan ve oranlar",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Cortado nedir?",
+       "secenekler": [
+        "Espresso + yaklaşık aynı miktarda sıcak süt, çok az köpük",
+        "Espresso + bol süt + kalın köpük",
+        "Espresso + sıcak su",
+        "Soğuk demlenmiş kahve"
+       ],
+       "dogru": 0,
+       "aciklama": "Cortado, İspanyolca \"kesilmiş\" demek: espressonun sertliği eşit miktarda sıcak sütle kesilir."
+      },
+      {
+       "soru": "Aynı espressoyla yapılan içecekleri küçükten büyüğe sırala.",
+       "secenekler": [
+        "Latte → Cappuccino → Cortado",
+        "Cortado → Cappuccino → Latte",
+        "Cappuccino → Cortado → Latte",
+        "Hepsi aynı boydur"
+       ],
+       "dogru": 1,
+       "aciklama": "Espresso aynı kalır, süt miktarı artar: cortado yaklaşık 100–130 ml, cappuccino 150–180 ml, latte genelde 240 ml ve üstü."
+      },
+      {
+       "soru": "Cappuccinonun köpüğü ile flat white'ın köpüğü arasındaki fark nedir?",
+       "secenekler": [
+        "Fark yoktur",
+        "Flat white'ta köpük daha kalındır",
+        "Cappuccinoda köpük kalın (yaklaşık 1–2 cm), flat white'ta ince ve ipeksidir",
+        "Flat white'ta hiç süt yoktur"
+       ],
+       "dogru": 2,
+       "aciklama": "Cappuccinoya daha çok hava katılır. Flat white'ta az hava katılır, süt kahveyle karışıp ipeksi kalır."
+      },
+      {
+       "soru": "Müşteri: \"Sütlü olsun ama küçük olsun, kahve tadı kaybolmasın.\" Ne önerirsin?",
+       "secenekler": [
+        "Büyük latte",
+        "Cortado",
+        "Americano",
+        "Sıcak çikolata"
+       ],
+       "dogru": 1,
+       "aciklama": "Cortado küçük ve sütlüdür; süt az olduğu için kahve tadı öne çıkar. Flat white da benzer bir seçenektir."
+      },
+      {
+       "soru": "Cappuccinoyu büyük latte bardağında yaparsan ne olur?",
+       "secenekler": [
+        "Hiçbir şey değişmez",
+        "Daha sert olur",
+        "Süt oranı artar, kahve tadı zayıflar; artık cappuccino olmaz",
+        "Köpük daha iyi olur"
+       ],
+       "dogru": 2,
+       "aciklama": "İçeceği tanımlayan şey oranıdır. Fincan büyürse aynı espressoya daha çok süt gider."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Oranları hatırla",
+      "maddeler": [
+       "Cortado = espresso + eşit sıcak süt, küçük bardak.",
+       "Cappuccino = kalın köpük, 150–180 ml.",
+       "Flat white = az süt, ince ipeksi köpük.",
+       "Latte = bol süt, büyük bardak.",
+       "Ölçüler kafeden kafeye değişir; çalıştığın yerin tarif kartı esastır."
+      ]
+     }
+    },
+    {
+     "id": "c-hijyen",
+     "sablon": "siniflandirma",
+     "ikon": "🧼",
+     "baslik": "Temiz bar",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Barda temizlik işin kendisidir. Her işe dokun, sonra ne zaman yapılacağını seç: her kullanımda mı, gün sonunda mı, yoksa asla mı?",
+     "kategoriler": [
+      {
+       "id": "her",
+       "ad": "Her kullanımda",
+       "ikon": "⏱️",
+       "not": "içecekten hemen sonra"
+      },
+      {
+       "id": "gun",
+       "ad": "Gün sonunda",
+       "ikon": "🌙",
+       "not": "kapanış temizliği"
+      },
+      {
+       "id": "asla",
+       "ad": "Asla yapılmaz",
+       "ikon": "🚫",
+       "not": "hijyen hatası"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Buhar çubuğunu nemli bezle silip kısa buhar vermek",
+       "ikon": "♨️",
+       "kategori": "her",
+       "aciklama": "Süt çubukta saniyeler içinde kurur. Her köpürtmeden hemen sonra silinir ve içi kısa buharla boşaltılır."
+      },
+      {
+       "ad": "Shottan sonra telveyi atıp sepeti silmek ve grup başlığından kısa su akıtmak",
+       "ikon": "☕",
+       "kategori": "her",
+       "aciklama": "Eski telve ve kahve yağı bir sonraki shotu acılaştırır. Kısa su akıtmak (flush) duş başlığını temizler."
+      },
+      {
+       "ad": "Kullanılan süt potunu durulamak",
+       "ikon": "🥛",
+       "kategori": "her",
+       "aciklama": "Her içecek temiz, soğuk potla başlar. Potta kalan süt yeni sütün tadını ve köpüğünü bozar."
+      },
+      {
+       "ad": "Kör sepet ve makine deterjanıyla geri yıkama yapmak",
+       "ikon": "🧴",
+       "kategori": "gun",
+       "aciklama": "Deterjanla geri yıkama gün sonunda yapılır, ardından mutlaka suyla durulanır. Yalnızca üç yollu valfli makinelerde yapılır."
+      },
+      {
+       "ad": "Sepet ve portafiltreleri deterjanlı suda bekletmek",
+       "ikon": "🪣",
+       "kategori": "gun",
+       "aciklama": "Biriken kahve yağı ancak bekletilince çözülür. Portafiltrenin plastik sapı suya girmemelidir."
+      },
+      {
+       "ad": "Öğütücü haznesini boşaltıp silmek",
+       "ikon": "⚙️",
+       "kategori": "gun",
+       "aciklama": "Haznede kalan çekirdek gece boyunca bayatlar ve yağı hazneye yapışır. Çekirdekler kapalı kaba alınır."
+      },
+      {
+       "ad": "Damlama tepsisini boşaltıp yıkamak",
+       "ikon": "🗑️",
+       "kategori": "gun",
+       "aciklama": "Gün içinde dolunca boşaltılır, gün sonunda ise mutlaka yıkanır; içinde kalan süt ve kahve kokar."
+      },
+      {
+       "ad": "Artan köpürtülmüş sütü yeniden köpürtmek",
+       "ikon": "🔁",
+       "kategori": "asla",
+       "aciklama": "Yeniden ısıtılan süt yanık tat verir ve iyi köpürmez; bekleyen ılık süt bakteri için de risklidir. Her içecek için taze süt kullanılır."
+      },
+      {
+       "ad": "Buhar çubuğu beziyle tezgâhı silmek",
+       "ikon": "🧽",
+       "kategori": "asla",
+       "aciklama": "Bezler ayrıdır: biri yalnızca buhar çubuğu için, biri tezgâh için, biri portafiltre için. Karışırsa kir ve süt kalıntısı taşınır."
+      },
+      {
+       "ad": "Açık sütü tezgâhta bekletmek",
+       "ikon": "🌡️",
+       "kategori": "asla",
+       "aciklama": "Süt soğuk zincirde kalmalı: kullandıktan hemen sonra buzdolabına (0–4 °C) geri konur."
+      },
+      {
+       "ad": "Para aldıktan sonra el yıkamadan fincan ağzına ya da kapağa dokunmak",
+       "ikon": "💵",
+       "kategori": "asla",
+       "aciklama": "Para en kirli şeylerden biridir. Kasadan sonra el yıkanır; fincan her zaman gövdesinden ya da kulpundan tutulur."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Temiz bar kuralları",
+      "maddeler": [
+       "Buhar çubuğu her köpürtmeden sonra silinir ve boşaltılır.",
+       "Her shottan sonra sepet temizlenir, grup başlığından su akıtılır.",
+       "Bezler ayrı tutulur, süt hep buzdolabında durur.",
+       "Süt asla ikinci kez köpürtülmez."
       ]
      }
     },
@@ -847,6 +1034,28 @@
        "dogru": 1,
        "aciklama": "Crema taze kahvenin ve doğru demlemenin işaretidir.",
        "gorsel": "espresso"
+      },
+      {
+       "soru": "Buhar çubuğu ne zaman silinir?",
+       "secenekler": [
+        "Gün sonunda bir kez",
+        "Her köpürtmeden hemen sonra",
+        "Haftada bir",
+        "Kirli görünürse"
+       ],
+       "dogru": 1,
+       "aciklama": "Süt çubukta hemen kurur; her kullanımdan sonra silinir ve kısa buharla boşaltılır."
+      },
+      {
+       "soru": "Hangisi cortadoyu en iyi anlatır?",
+       "secenekler": [
+        "Espresso + eşit miktarda sıcak süt, küçük bardak",
+        "Espresso + bol süt, büyük bardak",
+        "Espresso + sıcak su",
+        "Buzlu latte"
+       ],
+       "dogru": 0,
+       "aciklama": "Cortado küçük ve dengelidir: espressonun sertliği eşit sütle kesilir."
       }
      ]
     }
@@ -855,7 +1064,7 @@
   },
   {
    "ad": "Kalfa",
-   "hedefXp": 305,
+   "hedefXp": 365,
    "rozet": {
     "ad": "Kalfa Barista",
     "ikon": "🥛"
@@ -1147,6 +1356,136 @@
      }
     },
     {
+     "id": "k-musteri",
+     "sablon": "senaryo",
+     "ikon": "🗣️",
+     "baslik": "Sipariş ve şikâyet",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Bugün kasada da sen varsın. İyi kahve kadar, müşteriyle doğru konuşmak da senin işin.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "\"Orta boy latte, yulaf sütlü, şekersiz lütfen.\"",
+       "secenekler": [
+        {
+         "metin": "\"Orta boy yulaf sütlü latte, şekersiz. Doğru mu?\" diye tekrar ederim",
+         "dogru": true,
+         "aciklama": "Siparişi tekrar etmek yanlış içeceği baştan önler; süt türü ve şeker en çok karışan detaylardır."
+        },
+        {
+         "metin": "\"Tamam\" deyip hemen bara geçerim",
+         "dogru": false,
+         "aciklama": "Yoğunlukta detay kaçar. Yanlış süt hem israf hem de alerjisi olan biri için tehlike demektir."
+        },
+        {
+         "metin": "Normal sütle yaparım, fark etmez",
+         "dogru": false,
+         "aciklama": "Müşteri yulaf sütü istedi; bunun bir alerji ya da sağlık nedeni olabilir. İstek neyse o yapılır."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Sırada altı kişi var. Müşteri soruyor: \"Ne kadar sürer?\"",
+       "secenekler": [
+        {
+         "metin": "\"Hemen geliyor\" derim, sonra on dakika bekletirim",
+         "dogru": false,
+         "aciklama": "Tutulmayan söz, beklemekten daha çok kızdırır."
+        },
+        {
+         "metin": "\"Önünüzde birkaç sipariş var, yaklaşık 5–6 dakika\" diye dürüstçe söylerim",
+         "dogru": true,
+         "aciklama": "Dürüst bir süre, müşterinin karar vermesini sağlar ve güven kazandırır."
+        },
+        {
+         "metin": "Cevap vermeden işime devam ederim",
+         "dogru": false,
+         "aciklama": "Soruyu duymazdan gelmek kaba görünür. Kısa bir cevap yeter."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Başka bir müşteri geri geliyor: \"Bu kahve ılık, hiç sıcak değil!\"",
+       "secenekler": [
+        {
+         "metin": "\"Süt fazla ısınırsa yanar, böyle olması gerekiyor\" diye açıklarım",
+         "dogru": false,
+         "aciklama": "Bilgi doğru olsa bile önce tartışmak müşteriyi haksız çıkarır. Önce çözüm, açıklama sonra ve kibarca."
+        },
+        {
+         "metin": "\"Kusura bakmayın\" der, hemen biraz daha sıcak yenisini yaparım",
+         "dogru": true,
+         "aciklama": "Özür, dinlemek ve hızlı çözüm: şikâyeti sadık müşteriye çevirmenin yolu. Bazı müşteriler daha sıcak içer; 65 °C'yi geçmemeye dikkat et."
+        },
+        {
+         "metin": "\"Ben yapmadım, arkadaşım yaptı\" derim",
+         "dogru": false,
+         "aciklama": "Müşteri için bar tek bir ekiptir. Suçu başkasına atmak güveni bozar."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Bir müşteri: \"Bu espresso çok acı, hiç beğenmedim.\"",
+       "secenekler": [
+        {
+         "metin": "\"Espresso acı olur\" deyip geçerim",
+         "dogru": false,
+         "aciklama": "Aşırı acılık çoğu zaman bir ayar hatasının işaretidir. Müşteri sana bilgi veriyor."
+        },
+        {
+         "metin": "Özür dileyip ne sevdiğini sorarım, yenisini ya da daha yumuşak bir içecek öneririm; sonra shotun süresini kontrol ederim",
+         "dogru": true,
+         "aciklama": "Hem müşteriyi memnun edersin hem de sorunu bulursun. Shot fazla uzun akıyorsa öğütme çok incedir."
+        },
+        {
+         "metin": "İçine şeker atıp geri veririm",
+         "dogru": false,
+         "aciklama": "Müşteriye sormadan içeceğini değiştirmek doğru değil; sorun da çözülmez."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Müşteri sesini yükseltiyor ve sana hakaret etmeye başlıyor.",
+       "secenekler": [
+        {
+         "metin": "Ben de sesimi yükseltirim",
+         "dogru": false,
+         "aciklama": "Tartışma büyür, diğer müşteriler de rahatsız olur."
+        },
+        {
+         "metin": "Sakin kalır, tartışmaya girmem; ustayı ya da sorumluyu çağırırım",
+         "dogru": true,
+         "aciklama": "Hakarete tek başına göğüs germek zorunda değilsin. Sorumluyu çağırmak doğru ve profesyonel olandır."
+        },
+        {
+         "metin": "Barı bırakıp giderim",
+         "dogru": false,
+         "aciklama": "Barı boş bırakmak diğer müşterileri mağdur eder. Önce yardım çağır."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Müşteriyle konuşmak",
+      "maddeler": [
+       "Siparişi tekrar et, özellikle süt ve şekeri.",
+       "Bekleme süresini dürüstçe söyle.",
+       "Şikâyette: özür, dinle, hızlı çöz.",
+       "Hakarette tartışma, sorumluyu çağır."
+      ]
+     }
+    },
+    {
      "id": "k5-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -1241,6 +1580,17 @@
        ],
        "dogru": 1,
        "aciklama": "Köpüğün kabaracağı yer kalmalı."
+      },
+      {
+       "soru": "Müşteri kahvesinin ılık olduğunu söylüyor. İlk ne yaparsın?",
+       "secenekler": [
+        "Neden böyle olduğunu uzun uzun anlatırım",
+        "Özür dileyip hemen yenisini yaparım",
+        "Mikrodalgada ısıtırım",
+        "Duymazdan gelirim"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce özür ve çözüm. Açıklama gerekiyorsa sonra ve kibarca yapılır."
       }
      ]
     }
@@ -1248,7 +1598,7 @@
   },
   {
    "ad": "Usta",
-   "hedefXp": 375,
+   "hedefXp": 425,
    "rozet": {
     "ad": "Usta Barista",
     "ikon": "🏆"
@@ -1299,6 +1649,80 @@
        "terim": "su kalitesi"
       }
      ]
+    },
+    {
+     "id": "u-teshis",
+     "sablon": "soru",
+     "ikon": "🔎",
+     "baslik": "Shotu oku",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "18 g kahveden 36 g espresso 16 saniyede aktı. Tadı ekşi ve sulu. Ne yaparsın?",
+       "secenekler": [
+        "Öğütmeyi kalınlaştırırım",
+        "Öğütmeyi inceltirim",
+        "Daha çok su akıtırım",
+        "Hiçbir şey, normal"
+       ],
+       "dogru": 1,
+       "aciklama": "Hızlı akış = su kahveden yeterince tat alamadı (az demlenme), bu yüzden ekşi. İnce öğütme suyu yavaşlatır."
+      },
+      {
+       "soru": "Aynı doz 45 saniyede aktı. Tadı acı, buruk ve ağızda kuruluk bırakıyor. Ne yaparsın?",
+       "secenekler": [
+        "Öğütmeyi kalınlaştırırım",
+        "Öğütmeyi daha da inceltirim",
+        "Daha sert tamplarım",
+        "Fincanı ısıtırım"
+       ],
+       "dogru": 0,
+       "aciklama": "Yavaş akış = fazla demlenme, bu yüzden acı ve buruk. Kalın öğütme suyu hızlandırır."
+      },
+      {
+       "soru": "Süre doğru (28 sn) ama tadı hem ekşi hem acı. Portafiltrenin altında akış bir yerden fışkırıyor. Sebep ne?",
+       "secenekler": [
+        "Çekirdek çok taze",
+        "Su çok soğuk",
+        "Kanal oluşmuş: kahve eşit dağıtılmamış ya da yamuk tamplanmış",
+        "Fincan çok küçük"
+       ],
+       "dogru": 2,
+       "aciklama": "Su kolay yolu bulup bir kanaldan geçer: o kısım fazla, geri kalanı az demlenir. Çözüm: kahveyi sepete eşit dağıt, düz tamp et."
+      },
+      {
+       "soru": "Öğütme ayarını değiştirdin. İlk shottan önce ne yaparsın?",
+       "secenekler": [
+        "Hemen müşteriye shot çekerim",
+        "Öğütücüde kalan eski ayarlı kahveyi biraz öğütüp atarım",
+        "Makineyi kapatıp açarım",
+        "Dozu iki katına çıkarırım"
+       ],
+       "dogru": 1,
+       "aciklama": "Öğütücünün içinde eski ayarda öğütülmüş kahve kalır. Onu atmazsan yeni ayarı doğru test edemezsin."
+      },
+      {
+       "soru": "Ayar yaparken neden bir seferde yalnızca tek şey değiştirilir?",
+       "secenekler": [
+        "Daha hızlı olduğu için",
+        "Hangi değişikliğin tadı neden değiştirdiğini anlamak için",
+        "Makine bozulmasın diye",
+        "Kural yok, fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Doz, öğütme ve süreyi aynı anda değiştirirsen hangisinin işe yaradığını bilemezsin."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Shotu okumak",
+      "maddeler": [
+       "Hızlı ve ekşi → incelt.",
+       "Yavaş ve acı → kalınlaştır.",
+       "Süre doğru ama hem ekşi hem acı → kanal: dağıtım ve tamper.",
+       "Ayar değişince eski kahveyi boşalt, sonra tart ve tat."
+      ]
+     }
     },
     {
      "id": "u2-ayar",
@@ -1687,6 +2111,17 @@
        ],
        "dogru": 1,
        "aciklama": "Filtreli su makineyi korur."
+      },
+      {
+       "soru": "Shot 15 saniyede aktı ve tadı ekşi. Doğru hamle hangisi?",
+       "secenekler": [
+        "Öğütmeyi inceltmek",
+        "Öğütmeyi kalınlaştırmak",
+        "Fincanı değiştirmek",
+        "Sütü artırmak"
+       ],
+       "dogru": 0,
+       "aciklama": "Hızlı ve ekşi = az demlenme. İnce öğütme akışı yavaşlatır."
       }
      ]
     }
