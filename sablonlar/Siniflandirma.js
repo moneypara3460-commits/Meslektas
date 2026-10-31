@@ -1,4 +1,5 @@
 // Genel şablon: her öğeyi doğru kategoriye koy (depolama, görev dağıtımı, alet türü...)
+import { t as dt } from '../dil';
 import React, { useMemo, useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Aciklama, Kart, Giris, R, useTema } from '../ui';
@@ -18,7 +19,7 @@ export default function Siniflandirma({ gorev, onBitir, onKapat }) {
     onBitir({ yildiz: y, d1: [`${ogeler.length - hata}/${ogeler.length}`, 'doğru'], d2: [hata, 'hata'], ipucu: y === 3 ? 'Hepsi yerli yerinde!' : 'Üç yıldız için hiç hata yapma.', bilgi: gorev.bilgiKarti });
   };
   return (
-    <Ekran alt={cevaplandi ? <Dugme yazi={i === ogeler.length - 1 ? 'Sonucu gör' : 'Sıradaki'} onPress={devam} /> : null}>
+    <Ekran alt={cevaplandi ? <Dugme yazi={i === ogeler.length - 1 ? dt('Sonucu gör') : dt('Sıradaki')} onPress={devam} /> : null}>
       <Ust baslik={gorev.baslik} sayac={`${i + 1}/${ogeler.length}`} onKapat={onKapat} ilerleme={i / ogeler.length} />
       {i === 0 && !cevaplandi ? <Text style={{ fontSize: 15, color: R.soluk, marginBottom: 12, lineHeight: 21 }}>{gorev.aciklama}</Text> : null}
       <Giris key={i}>

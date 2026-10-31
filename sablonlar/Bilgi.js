@@ -1,3 +1,4 @@
+import { t as dt } from '../dil';
 import React, { useState } from 'react';
 import { View, Text, ScrollView, useWindowDimensions } from 'react-native';
 import { Ekran, Ust, Dugme, Kart, Giris, R, useTema } from '../ui';

@@ -1,4 +1,5 @@
 // Barista'ya özel: öğütücü ayarı. Büyük sayı = kalın öğütme = hızlı akış.
+import { t as dt } from '../dil';
 import React, { useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Aciklama, Kart, R, useTema } from '../ui';
@@ -22,7 +23,7 @@ export default function Ayar({ gorev, onBitir, onKapat }) {
   };
   const son = gecmis[gecmis.length - 1];
   return (
-    <Ekran alt={bitti ? <Dugme yazi={ti === gorev.turlar.length - 1 ? 'Sonucu gör' : 'Sonraki tur'} onPress={ileri} /> : <Dugme yazi={`Test shotu çek (${deneme}/${gorev.maxDeneme})`} onPress={shot} />}>
+    <Ekran alt={bitti ? <Dugme yazi={ti === gorev.turlar.length - 1 ? dt('Sonucu gör') : dt('Sonraki tur')} onPress={ileri} /> : <Dugme yazi={`Test shotu çek (${deneme}/${gorev.maxDeneme})`} onPress={shot} />}>
       <Ust baslik={gorev.baslik} sayac={`Tur ${ti + 1}/${gorev.turlar.length}`} onKapat={onKapat} ilerleme={ti / gorev.turlar.length} />
       {ti === 0 && !gecmis.length ? <Text style={{ color: R.soluk, marginBottom: 12, lineHeight: 20 }}>{gorev.aciklama}</Text> : null}
       <Kart style={{ marginBottom: 14 }}>

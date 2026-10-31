@@ -1,4 +1,5 @@
 // Hem "soru" hem "sinav" şablonu
+import { t as dt } from '../dil';
 import React, { useMemo, useState } from 'react';
 import { View, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Secenek, Aciklama, Konusma, Giris, R } from '../ui';
@@ -26,7 +27,7 @@ export default function Soru({ gorev, paket, onBitir, onKapat }) {
   };
   const cevaplandi = secim != null; const ok = secim === s.dogru;
   return (
-    <Ekran alt={cevaplandi ? <Dugme yazi={i === sorular.length - 1 ? 'Sonucu gör' : 'Devam'} onPress={devam} /> : null}>
+    <Ekran alt={cevaplandi ? <Dugme yazi={i === sorular.length - 1 ? dt('Sonucu gör') : dt('Devam')} onPress={devam} /> : null}>
       <Ust baslik={gorev.baslik} sayac={`${i + 1}/${sorular.length}`} onKapat={onKapat} ilerleme={i / sorular.length} />
       <Konusma kim="usta" ruh={!cevaplandi ? 'notr' : ok ? 'mutlu' : 'kizgin'} ad={ad} metin={s.soru} />
       {gorselVar(s.gorsel) ? <Giris key={'g' + i} style={{ alignItems: 'center', marginBottom: 14 }}><Gorsel ad={s.gorsel} boyut={200} /></Giris> : null}

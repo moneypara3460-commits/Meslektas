@@ -1,4 +1,5 @@
 // Adımları doğru sırayla yap. Görevde "sahne" varsa her doğru adımda animasyon oynar ve usta tepki verir.
+import { t as dt } from '../dil';
 import React, { useMemo, useRef, useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Aciklama, Kart, Giris, Konusma, R, useTema } from '../ui';
@@ -37,7 +38,7 @@ export default function Siralama({ gorev, paket, onBitir, onKapat }) {
   };
   const yapilan = gorev.adimlar.slice(0, sira);
   return (
-    <Ekran alt={bitti ? <Dugme yazi="Sonucu gör" onPress={bitir} /> : null}>
+    <Ekran alt={bitti ? <Dugme yazi={dt('Sonucu gör')} onPress={bitir} /> : null}>
       <Ust baslik={gorev.baslik} sayac={`${sira}/${gorev.adimlar.length}`} onKapat={onKapat} ilerleme={sira / gorev.adimlar.length} />
       {Sahne ? <Sahne ref={sahneRef} /> : null}
       {Sahne ? (

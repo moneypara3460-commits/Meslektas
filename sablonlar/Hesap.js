@@ -1,4 +1,5 @@
 // Maliyet hesabı ve fiyat belirleme
+import { t as dt } from '../dil';
 import React, { useMemo, useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Secenek, Aciklama, Kart, Cubuk, R, useTema } from '../ui';
@@ -32,7 +33,7 @@ export default function Hesap({ gorev, onBitir, onKapat }) {
     onBitir({ yildiz: y, d1: [`${puan}/${max}`, 'doğru karar'], d2: [gorev.urunler.length, 'ürün'], ipucu: gorev.kural, bilgi: gorev.bilgiKarti });
   };
   return (
-    <Ekran alt={adim === 2 ? <Dugme yazi="Bu fiyatı onayla" onPress={onayla} /> : adim === 3 ? <Dugme yazi={ui === gorev.urunler.length - 1 ? 'Sonucu gör' : 'Sonraki ürün'} onPress={ileri} /> : null}>
+    <Ekran alt={adim === 2 ? <Dugme yazi={dt('Bu fiyatı onayla')} onPress={onayla} /> : adim === 3 ? <Dugme yazi={ui === gorev.urunler.length - 1 ? dt('Sonucu gör') : dt('Sonraki ürün')} onPress={ileri} /> : null}>
       <Ust baslik={gorev.baslik} sayac={`Ürün ${ui + 1}/${gorev.urunler.length}`} onKapat={onKapat} ilerleme={ui / gorev.urunler.length} />
       {ui === 0 && adim === 1 ? <Text style={{ color: R.soluk, marginBottom: 12, lineHeight: 20 }}>{gorev.aciklama}</Text> : null}
       <Kart style={{ marginBottom: 14 }}>

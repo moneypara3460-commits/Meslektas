@@ -1,3 +1,4 @@
+import { t as dt } from '../dil';
 import React, { useState } from 'react';
 import { Ekran, Ust, Secenek, Aciklama, Konusma } from '../ui';
 import { ses, titret } from '../motor/his';

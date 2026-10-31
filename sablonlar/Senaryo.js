@@ -1,3 +1,4 @@
+import { t as dt } from '../dil';
 import React, { useMemo, useState } from 'react';
 import { Ekran, Ust, Dugme, Secenek, Aciklama, Konusma } from '../ui';
 import { karistir, yildizHesap } from '../motor/kurallar';
@@ -9,7 +10,7 @@ export default function Senaryo({ gorev, paket, onBitir, onKapat }) {
   const [i, setI] = useState(-1); const [secim, setSecim] = useState(null); const [dogru, setDogru] = useState(0);
   if (i < 0) {
     return (
-      <Ekran alt={<Dugme yazi={m.senaryoBasla || 'Başla'} onPress={() => setI(0)} />}>
+      <Ekran alt={<Dugme yazi={m.senaryoBasla || dt('Başla')} onPress={() => setI(0)} />}>
         <Ust baslik={gorev.baslik} onKapat={onKapat} ilerleme={0} />
         <Konusma kim="usta" ruh="mutlu" ad={adlar.usta} metin={gorev.giris} />
       </Ekran>
@@ -23,7 +24,7 @@ export default function Senaryo({ gorev, paket, onBitir, onKapat }) {
     onBitir({ yildiz: y, d1: [`${dogru}/${n}`, 'doğru karar'], d2: [n - dogru, 'hatalı karar'], ipucu: y === 3 ? (m.ucYildiz || 'Kusursuz!') : 'Üç yıldız için her kararı doğru ver.', bilgi: gorev.bilgiKarti });
   };
   return (
-    <Ekran alt={cevaplandi ? <Dugme yazi={i === adimlar.length - 1 ? (m.senaryoBitir || 'Bitir') : 'Devam'} onPress={devam} /> : null}>
+    <Ekran alt={cevaplandi ? <Dugme yazi={i === adimlar.length - 1 ? (m.senaryoBitir || dt('Bitir')) : dt('Devam')} onPress={devam} /> : null}>
       <Ust baslik={gorev.baslik} sayac={`${i + 1}/${adimlar.length}`} onKapat={onKapat} ilerleme={i / adimlar.length} />
       <Konusma kim={a.kim} ruh={!cevaplandi ? a.ruh : ok ? 'mutlu' : 'kizgin'} ad={adlar[a.kim]} metin={a.metin} />
       {a.sira.map((o, j) => (

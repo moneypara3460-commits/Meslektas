@@ -1,5 +1,6 @@
 // Genel beceri şablonu: gösterge yükselir, hedef aralığa girince DURDUR.
 // Örnek: kızartma yağı sıcaklığı, etin iç sıcaklığı, boya kuruma süresi, kaynak akımı...
+import { t as dt } from '../dil';
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Pressable, Animated, Easing } from 'react-native';
 import { Ekran, Ust, Dugme, Aciklama, Kart, R, useTema } from '../ui';
@@ -36,7 +37,7 @@ export default function Zamanlama({ gorev, onBitir, onKapat }) {
   const boy = a.interpolate({ inputRange: [0, 1], outputRange: ['0%', '100%'] });
   const renk = a.interpolate({ inputRange: [0, (tur.hedef[0] - tur.baslangic) / (tur.bitis - tur.baslangic), (tur.tehlike - tur.baslangic) / (tur.bitis - tur.baslangic), 1], outputRange: ['#5f8fb0', t.vurgu, R.kirmizi, '#7a1f12'] });
   return (
-    <Ekran alt={durum === 'hazir' ? <Dugme yazi="Başlat" onPress={basla} /> : durum === 'bitti' ? <Dugme yazi={ti === gorev.turlar.length - 1 ? 'Sonucu gör' : 'Sonraki tur'} onPress={ileri} /> : null}>
+    <Ekran alt={durum === 'hazir' ? <Dugme yazi={dt('Başlat')} onPress={basla} /> : durum === 'bitti' ? <Dugme yazi={ti === gorev.turlar.length - 1 ? dt('Sonucu gör') : dt('Sonraki tur')} onPress={ileri} /> : null}>
       <Ust baslik={gorev.baslik} sayac={`Tur ${ti + 1}/${gorev.turlar.length}`} onKapat={onKapat} ilerleme={ti / gorev.turlar.length} />
       {ti === 0 && durum === 'hazir' ? <Text style={{ color: R.soluk, marginBottom: 12, lineHeight: 20 }}>{gorev.aciklama}</Text> : null}
       <Kart style={{ marginBottom: 14 }}>

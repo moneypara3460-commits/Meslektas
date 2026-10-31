@@ -1,4 +1,5 @@
 // Barista'ya özel: süt köpürtme. Buhar düğmesini basılı tut; uç yüzeydeyse hava (köpük), içerdeyse girdap (ısınma).
+import { t as dt } from '../dil';
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import { Ekran, Ust, Dugme, Aciklama, Kart, Cubuk, R, useTema } from '../ui';
@@ -29,7 +30,7 @@ export default function Kopurtme({ gorev, onBitir, onKapat }) {
     onBitir({ yildiz: y, d1: [`${puan}/${max}`, 'doğru'], d2: [gorev.siparisler.length, 'sipariş'], ipucu: 'Önce hava, sonra girdap.', bilgi: gorev.bilgiKarti });
   };
   return (
-    <Ekran alt={bitti ? <Dugme yazi={si === gorev.siparisler.length - 1 ? 'Sonucu gör' : 'Sonraki sipariş'} onPress={ileri} /> : <Dugme yazi="Buharı kapat ve servis et" onPress={bitir} kapali={isi < 20} />}>
+    <Ekran alt={bitti ? <Dugme yazi={si === gorev.siparisler.length - 1 ? dt('Sonucu gör') : dt('Sonraki sipariş')} onPress={ileri} /> : <Dugme yazi={dt('Buharı kapat ve servis et')} onPress={bitir} kapali={isi < 20} />}>
       <Ust baslik={gorev.baslik} sayac={`${si + 1}/${gorev.siparisler.length}`} onKapat={onKapat} ilerleme={si / gorev.siparisler.length} />
       <Kart style={{ marginBottom: 14 }}><Text style={{ fontSize: 20, fontWeight: '900', color: t.ana }}>☕ {sip.ad}</Text><Text style={{ color: R.soluk }}>{sip.not} · {gorev.sicaklik[0]}–{gorev.sicaklik[1]} °C</Text></Kart>
       <Text style={{ fontWeight: '800', color: R.yazi }}>Sıcaklık: {Math.round(isi)} °C</Text>

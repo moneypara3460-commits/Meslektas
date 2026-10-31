@@ -1,0 +1,217 @@
+// Arayüz dili: Türkçe (varsayılan), English, Deutsch, العربية.
+// Anahtar = Türkçe metin. Meslek görev içerikleri (icerik/*.json) şimdilik Türkçe kalır.
+import React from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export const DILLER = [['tr', 'Türkçe'], ['en', 'English'], ['de', 'Deutsch'], ['ar', 'العربية']];
+const SIRA = { en: 0, de: 1, ar: 2 };
+let DIL = 'tr';
+export const dilNe = () => DIL;
+export const DilContext = React.createContext({ dil: 'tr', setDil: () => {} });
+
+export async function dilOku() {
+  try { const d = await AsyncStorage.getItem('meslektas:dil'); if (d && DILLER.some(([k]) => k === d)) DIL = d; } catch (e) {}
+  return DIL;
+}
+export function dilYaz(d) { DIL = d; AsyncStorage.setItem('meslektas:dil', d).catch(() => {}); }
+
+// t('Merhaba {0}', ad) → seçili dilde metin
+export function t(tr, ...arg) {
+  let s = tr;
+  if (DIL !== 'tr' && S[tr]) s = S[tr][SIRA[DIL]] || tr;
+  arg.forEach((v, i) => { s = s.split('{' + i + '}').join(String(v)); });
+  return s;
+}
+
+const S = {
+  // ---- açılış / ana ekran ----
+  'Rozet kazandın!': ['Badge earned!', 'Abzeichen verdient!', 'حصلت على شارة!'],
+  'Çırak Barista': ['Apprentice Barista', 'Barista-Lehrling', 'باريستا متدرّب'],
+  'Mükemmel sıralama': ['Perfect order', 'Perfekte Reihenfolge', 'ترتيب مثالي'],
+  '3 / 3 yıldız': ['3 / 3 stars', '3 / 3 Sterne', '٣ / ٣ نجوم'],
+  'Kademe sınavı': ['Level exam', 'Stufenprüfung', 'اختبار المستوى'],
+  'Pusula': ['Compass', 'Kompass', 'البوصلة'],
+  'Sana en yakın: Aşçı': ['Best match: Cook', 'Passt am besten: Koch', 'الأقرب إليك: طاهٍ'],
+  'Bir mesleği': ['Learn a profession', 'Lerne einen Beruf', 'تعلّم مهنة'],
+  'oynayarak': ['by playing', 'spielend', 'باللعب'],
+  'öğren.': ['.', '.', '.'],
+  'meslek': ['professions', 'Berufe', 'مهنة'],
+  'kademe': ['levels', 'Stufen', 'مستويات'],
+  'soruluk Pusula': ['Compass questions', 'Fragen im Kompass', 'سؤالًا في البوصلة'],
+  'Hadi başlayalım  →': ["Let's start  →", "Los geht's  →", 'لنبدأ  ←'],
+  'Hesabın var mı? Giriş yap': ['Have an account? Sign in', 'Schon ein Konto? Anmelden', 'لديك حساب؟ سجّل الدخول'],
+  '👤 Hesabım': ['👤 My account', '👤 Mein Konto', '👤 حسابي'],
+  'Giriş yap': ['Sign in', 'Anmelden', 'تسجيل الدخول'],
+  'Bugün hangi mesleği\ndeneyeceksin?': ['Which profession will\nyou try today?', 'Welchen Beruf\nprobierst du heute?', 'أي مهنة ستجرّب\nاليوم؟'],
+  'Meraktan ustalığa, oynayarak öğren.': ['From curiosity to mastery – learn by playing.', 'Von Neugier zur Meisterschaft – spielend lernen.', 'من الفضول إلى الإتقان، تعلّم باللعب.'],
+  'toplam XP': ['total XP', 'XP gesamt', 'مجموع XP'],
+  'rozet': ['badges', 'Abzeichen', 'شارات'],
+  'MESLEKLER': ['PROFESSIONS', 'BERUFE', 'المهن'],
+  'Yeni meslekler yolda': ['New professions on the way', 'Neue Berufe sind unterwegs', 'مهن جديدة في الطريق'],
+  'Meslektaş kurslara ön hazırlık amaçlıdır; resmî eğitim veya sertifika yerine geçmez.': ['Meslektaş is meant as preparation for courses; it does not replace official training or certificates.', 'Meslektaş dient zur Vorbereitung auf Kurse; es ersetzt keine offizielle Ausbildung oder Zertifikate.', 'Meslektaş للتحضير المسبق للدورات، ولا يحلّ محلّ التعليم الرسمي أو الشهادات.'],
+  'Görsel kaynakları': ['Image credits', 'Bildnachweise', 'مصادر الصور'],
+  '5 kademe': ['5 levels', '5 Stufen', '٥ مستويات'],
+  'Devam': ['Continue', 'Weiter', 'متابعة'],
+  'Başla': ['Start', 'Start', 'ابدأ'],
+  'KALDIĞIN YERDEN DEVAM ET': ['PICK UP WHERE YOU LEFT OFF', 'MACH DORT WEITER, WO DU WARST', 'تابع من حيث توقفت'],
+  '{0} kademesi · %{1}': ['{0} level · {1}%', 'Stufe {0} · {1} %', 'مستوى {0} · ‎%{1}'],
+  '30 kısa soru · 3 dakika · Evet ya da Hayır': ['30 short questions · 3 minutes · Yes or No', '30 kurze Fragen · 3 Minuten · Ja oder Nein', '٣٠ سؤالًا قصيرًا · ٣ دقائق · نعم أو لا'],
+  'Sana hangi meslek yakışır?': ['Which profession suits you?', 'Welcher Beruf passt zu dir?', 'أي مهنة تناسبك؟'],
+  'Sana en yakışan: {0}': ['Your best match: {0}', 'Passt am besten: {0}', 'الأنسب لك: {0}'],
+  'Pusulan hazır': ['Your compass is ready', 'Dein Kompass ist fertig', 'بوصلتك جاهزة'],
+  '{0} – {1} · sonucu gör': ['{0} – {1} · see result', '{0} – {1} · Ergebnis ansehen', '{0} – {1} · اعرض النتيجة'],
+  'MESLEK PUSULASI': ['CAREER COMPASS', 'BERUFSKOMPASS', 'بوصلة المهن'],
+  'Meslek Pusulası': ['Career Compass', 'Berufskompass', 'بوصلة المهن'],
+  'Dil': ['Language', 'Sprache', 'اللغة'],
+  'Meslek görevleri şimdilik Türkçe.': ['Profession tasks are in Turkish for now.', 'Die Berufsaufgaben sind vorerst auf Türkisch.', 'مهام المهن باللغة التركية حاليًا.'],
+
+  // ---- harita ----
+  '🔒 Önceki kademenin sınavını geçince açılır.': ['🔒 Unlocks after you pass the previous level exam.', '🔒 Wird freigeschaltet, wenn du die vorherige Stufenprüfung bestehst.', '🔒 يُفتح بعد اجتياز اختبار المستوى السابق.'],
+  'Rozet: {0}': ['Badge: {0}', 'Abzeichen: {0}', 'الشارة: {0}'],
+  '🎓 Tamamlama belgemi göster': ['🎓 Show my completion certificate', '🎓 Abschlussbescheinigung anzeigen', '🎓 اعرض شهادة الإتمام'],
+  'Bilgi kartları': ['Info cards', 'Infokarten', 'بطاقات المعلومات'],
+  'Soru': ['Questions', 'Fragen', 'أسئلة'],
+  'Senaryo': ['Scenario', 'Szenario', 'سيناريو'],
+  'Kendini tanı': ['Know yourself', 'Lerne dich kennen', 'اعرف نفسك'],
+  'Sıralama': ['Ordering', 'Reihenfolge', 'ترتيب'],
+  'Yerleştir': ['Sort it', 'Zuordnen', 'صنّف'],
+  'Hesap': ['Calculation', 'Rechnen', 'حساب'],
+  'Beceri': ['Skill', 'Geschick', 'مهارة'],
+
+  // ---- sonuç / belge ----
+  'Haritaya dön': ['Back to map', 'Zurück zur Karte', 'العودة إلى الخريطة'],
+  'Tekrar dene': ['Try again', 'Nochmal versuchen', 'حاول مجددًا'],
+  'Tekrar oyna': ['Play again', 'Nochmal spielen', 'العب مجددًا'],
+  '🎓 Tamamlama belgesi': ['🎓 Completion certificate', '🎓 Abschlussbescheinigung', '🎓 شهادة الإتمام'],
+  'KADEME TAMAMLANDI': ['LEVEL COMPLETE', 'STUFE ABGESCHLOSSEN', 'اكتمل المستوى'],
+  'Tebrikler, artık {0}sın!': ['Congratulations, you are now a {0}!', 'Glückwunsch, du bist jetzt {0}!', 'تهانينا، أصبحت الآن {0}!'],
+  'Bu sefer olmadı': ['Not this time', 'Diesmal nicht', 'ليس هذه المرة'],
+  'Tamamlama belgesi': ['Completion certificate', 'Abschlussbescheinigung', 'شهادة الإتمام'],
+  'Belgede görünecek adın': ['Your name on the certificate', 'Dein Name auf der Bescheinigung', 'اسمك على الشهادة'],
+  'Adını yaz': ['Write your name', 'Schreib deinen Namen', 'اكتب اسمك'],
+  'Bu görev türü bu sürümde yok.': ['This task type is not in this version.', 'Dieser Aufgabentyp ist in dieser Version nicht enthalten.', 'نوع المهمة هذا غير متوفر في هذا الإصدار.'],
+
+  // ---- hesap ----
+  'Hoş geldin 👋': ['Welcome 👋', 'Willkommen 👋', 'أهلًا بك 👋'],
+  'Hesapsız da oynayabilirsin. Hesap açarsan ilerlemen ve rozetlerin sunucuda saklanır, telefon değişse de kaybolmaz.': ['You can play without an account. With an account, your progress and badges are saved on the server and kept even if you change phones.', 'Du kannst auch ohne Konto spielen. Mit Konto werden Fortschritt und Abzeichen auf dem Server gespeichert – auch bei einem neuen Handy.', 'يمكنك اللعب بدون حساب. إذا أنشأت حسابًا تُحفظ تقدّمك وشاراتك على الخادم ولا تضيع حتى لو غيّرت هاتفك.'],
+  'E-posta': ['Email', 'E-Mail', 'البريد الإلكتروني'],
+  'Şifre (en az 8 karakter)': ['Password (at least 8 characters)', 'Passwort (mind. 8 Zeichen)', 'كلمة المرور (٨ أحرف على الأقل)'],
+  'Yeni hesap aç': ['Create account', 'Konto erstellen', 'إنشاء حساب'],
+  'Giriş olmadı: e-posta ya da şifre hatalı.': ['Sign-in failed: wrong email or password.', 'Anmeldung fehlgeschlagen: E-Mail oder Passwort falsch.', 'فشل تسجيل الدخول: البريد أو كلمة المرور غير صحيحة.'],
+  'Şifre en az 8 karakter olmalı.': ['Password must be at least 8 characters.', 'Das Passwort muss mindestens 8 Zeichen haben.', 'يجب أن تتكون كلمة المرور من ٨ أحرف على الأقل.'],
+  'Hesap açıldı. E-postana gelen onay bağlantısına dokun, sonra giriş yap.': ['Account created. Tap the confirmation link in your email, then sign in.', 'Konto erstellt. Tippe auf den Bestätigungslink in deiner E-Mail und melde dich dann an.', 'تم إنشاء الحساب. اضغط رابط التأكيد في بريدك ثم سجّل الدخول.'],
+  'Hesabım': ['My account', 'Mein Konto', 'حسابي'],
+  'Giriş yapılan e-posta': ['Signed in as', 'Angemeldet als', 'تم تسجيل الدخول باسم'],
+  'İlerlemen sunucuya kaydediliyor; telefon değiştirsen de kaybolmaz.': ['Your progress is saved to the server; it stays even if you change phones.', 'Dein Fortschritt wird auf dem Server gespeichert und bleibt auch bei einem neuen Handy erhalten.', 'يُحفظ تقدّمك على الخادم ولا يضيع حتى لو غيّرت هاتفك.'],
+  'Çıkış yap': ['Sign out', 'Abmelden', 'تسجيل الخروج'],
+  'Oyundaki fotoğraflar ücretsiz lisanslı kaynaklardandır. Çizimler Meslektaş\'a aittir.': ['Photos in the game come from free-licensed sources. Drawings belong to Meslektaş.', 'Die Fotos im Spiel stammen aus frei lizenzierten Quellen. Die Zeichnungen gehören Meslektaş.', 'الصور في اللعبة من مصادر ذات تراخيص مجانية. الرسومات ملك لـ Meslektaş.'],
+  'Fotoğraf: {0} · Lisans: {1}': ['Photo: {0} · License: {1}', 'Foto: {0} · Lizenz: {1}', 'الصورة: {0} · الترخيص: {1}'],
+
+  // ---- şablon düğmeleri ----
+  'Sonucu gör': ['See result', 'Ergebnis ansehen', 'اعرض النتيجة'],
+  'Sıradaki': ['Next', 'Weiter', 'التالي'],
+  'Sonraki tur': ['Next round', 'Nächste Runde', 'الجولة التالية'],
+  'Sonraki sipariş': ['Next order', 'Nächste Bestellung', 'الطلب التالي'],
+  'Sonraki ürün': ['Next product', 'Nächstes Produkt', 'المنتج التالي'],
+  'Bu fiyatı onayla': ['Confirm this price', 'Diesen Preis bestätigen', 'أكّد هذا السعر'],
+  'Başlat': ['Start', 'Starten', 'ابدأ'],
+  'Bitir': ['Finish', 'Fertig', 'إنهاء'],
+  'Buharı kapat ve servis et': ['Turn off steam and serve', 'Dampf aus und servieren', 'أطفئ البخار وقدّم'],
+
+  // ---- Pusula ----
+  'soru': ['questions', 'Fragen', 'سؤالًا'],
+  'ilgi tipi': ['interest types', 'Interessentypen', 'أنواع الاهتمام'],
+  'süre': ['duration', 'Dauer', 'المدة'],
+  '3 dk': ['3 min', '3 Min.', '٣ د'],
+  'Teste başla': ['Start the test', 'Test starten', 'ابدأ الاختبار'],
+  '30 kısa soru, yaklaşık 3 dakika. Her soruya Evet, Hayır ya da Kararsızım de. Doğru ya da yanlış cevap yok; ilk aklına geleni seç.': ['30 short questions, about 3 minutes. Answer each with Yes, No or Not sure. There are no right or wrong answers – go with your first thought.', '30 kurze Fragen, etwa 3 Minuten. Antworte jeweils mit Ja, Nein oder Unsicher. Es gibt kein Richtig oder Falsch – nimm das, was dir zuerst einfällt.', '٣٠ سؤالًا قصيرًا في نحو ٣ دقائق. أجب عن كل سؤال بنعم أو لا أو لست متأكدًا. لا توجد إجابة صحيحة أو خاطئة؛ اختر أول ما يخطر ببالك.'],
+  'Bu test ilgi alanlarını gösterir; bilimsel bir tanı veya kariyer danışmanlığı yerine geçmez.': ['This test shows your interests; it is not a scientific diagnosis or a substitute for career counselling.', 'Dieser Test zeigt deine Interessen; er ersetzt weder eine wissenschaftliche Diagnose noch eine Berufsberatung.', 'يُظهر هذا الاختبار اهتماماتك، ولا يُعدّ تشخيصًا علميًا ولا بديلًا عن الإرشاد المهني.'],
+  '← Önceki soru': ['← Previous question', '← Vorherige Frage', '→ السؤال السابق'],
+  'Evet': ['Yes', 'Ja', 'نعم'],
+  'Kararsızım': ['Not sure', 'Unsicher', 'لست متأكدًا'],
+  'Hayır': ['No', 'Nein', 'لا'],
+  '{0} ile başla →': ['Start with {0} →', 'Mit {0} starten →', 'ابدأ مع {0} ←'],
+  'SENİN İLGİ TİPİN': ['YOUR INTEREST TYPE', 'DEIN INTERESSENTYP', 'نوع اهتمامك'],
+  'Cevapların birbirine çok yakın çıktı, bu yüzden sonuç net değil. Testi daha kararlı cevaplarla yeniden çözebilirsin.': ['Your answers were very similar, so the result is not clear. You can retake the test with more decisive answers.', 'Deine Antworten lagen sehr nah beieinander, daher ist das Ergebnis nicht eindeutig. Mach den Test gern noch einmal mit entschiedeneren Antworten.', 'جاءت إجاباتك متقاربة جدًا لذا النتيجة غير واضحة. يمكنك إعادة الاختبار بإجابات أكثر حسمًا.'],
+  'SANA EN YAKIŞAN MESLEK': ['YOUR BEST-MATCHING PROFESSION', 'DEIN PASSENDSTER BERUF', 'المهنة الأنسب لك'],
+  '%{0} uyum': ['{0}% match', '{0} % Übereinstimmung', 'توافق ‎%{0}'],
+  'Diğer mesleklerle uyumun': ['Your match with other professions', 'Deine Übereinstimmung mit anderen Berufen', 'توافقك مع المهن الأخرى'],
+  'İlgi haritan': ['Your interest map', 'Deine Interessenkarte', 'خريطة اهتماماتك'],
+  'Sana uygun olabilecek diğer meslekler': ['Other professions that may suit you', 'Weitere Berufe, die zu dir passen könnten', 'مهن أخرى قد تناسبك'],
+  'Bu meslekler yakında oyuna eklenecek.': ['These professions will be added to the game soon.', 'Diese Berufe kommen bald ins Spiel.', 'ستُضاف هذه المهن إلى اللعبة قريبًا.'],
+  '↻ Testi yeniden çöz': ['↻ Retake the test', '↻ Test wiederholen', '↻ أعد الاختبار'],
+  // ilgi tipleri
+  'Gerçekçi': ['Realistic', 'Praktisch', 'واقعي'], 'Eli işe yatkın': ['Hands-on', 'Handwerklich begabt', 'ماهر يدويًا'],
+  'Elle tutulur işler, aletler ve hareket sende. Sonucunu gözünle gördüğün işlerde parlıyorsun.': ['Hands-on work, tools and movement are your thing. You shine at work whose results you can see.', 'Greifbare Arbeit, Werkzeuge und Bewegung liegen dir. Du glänzt bei Aufgaben, deren Ergebnis du siehst.', 'الأعمال الملموسة والأدوات والحركة تناسبك. تتألق في الأعمال التي ترى نتيجتها بعينك.'],
+  'Araştırmacı': ['Investigative', 'Forschend', 'باحث'], 'Meraklı çözümcü': ['Curious problem-solver', 'Neugieriger Problemlöser', 'حلّال فضولي'],
+  'Bir şeyin nedenini bulmadan rahat etmezsin. Öğrenmek, denemek ve geliştirmek seni çalıştırır.': ["You can't rest until you know why. Learning, experimenting and improving drive you.", 'Du ruhst nicht, bis du das Warum kennst. Lernen, Ausprobieren und Verbessern treiben dich an.', 'لا ترتاح حتى تعرف السبب. التعلّم والتجربة والتطوير هي ما يحفّزك.'],
+  'Sanatsal': ['Artistic', 'Künstlerisch', 'فني'], 'Yaratıcı ruh': ['Creative soul', 'Kreativer Kopf', 'روح مبدعة'],
+  'Güzellik, tat ve tarz senin için önemli. İşine kendi imzanı atmak istersin.': ['Beauty, taste and style matter to you. You want to put your own signature on your work.', 'Schönheit, Geschmack und Stil sind dir wichtig. Du willst deiner Arbeit deine eigene Handschrift geben.', 'الجمال والذوق والأسلوب مهمّة لك. تحب أن تضع بصمتك على عملك.'],
+  'Sosyal': ['Social', 'Sozial', 'اجتماعي'], 'İnsan insanı': ['People person', 'Menschenfreund', 'محبّ للناس'],
+  'İnsanlarla olmak sana enerji verir. Birini mutlu etmek en büyük ödülün.': ['Being with people energises you. Making someone happy is your biggest reward.', 'Menschen geben dir Energie. Jemanden glücklich zu machen ist deine größte Belohnung.', 'التواجد مع الناس يمنحك الطاقة. إسعاد شخص ما هو أكبر مكافأة لك.'],
+  'Girişimci': ['Enterprising', 'Unternehmerisch', 'ريادي'], 'Lider ruhlu': ['Born leader', 'Führungsnatur', 'قائد بالفطرة'],
+  'Sorumluluk almaktan, yönetmekten ve hedefe koşmaktan çekinmezsin.': ["You don't shy away from responsibility, leading and chasing goals.", 'Du scheust dich nicht, Verantwortung zu übernehmen, zu führen und Ziele zu verfolgen.', 'لا تتردد في تحمّل المسؤولية والقيادة والسعي نحو الهدف.'],
+  'Düzenli': ['Conventional', 'Ordnungsliebend', 'منظّم'], 'Düzen ustası': ['Master of order', 'Ordnungsprofi', 'سيد التنظيم'],
+  'Planlı, kurallı ve eksiksiz çalışırsın. Her şey yerli yerinde olunca huzur bulursun.': ['You work in a planned, rule-based and thorough way. You feel at ease when everything is in its place.', 'Du arbeitest geplant, regelgerecht und gründlich. Wenn alles an seinem Platz ist, bist du zufrieden.', 'تعمل بتخطيط والتزام ودقة. تشعر بالراحة حين يكون كل شيء في مكانه.'],
+  // sorular
+  'Elinle bir şey yapmayı (tamir, yemek, montaj gibi) sever misin?': ['Do you like making things with your hands (repairs, cooking, assembly)?', 'Machst du gern etwas mit den Händen (Reparieren, Kochen, Montieren)?', 'هل تحب صنع الأشياء بيديك (الإصلاح، الطبخ، التركيب)؟'],
+  'Yeni insanlarla tanışmak hoşuna gider mi?': ['Do you enjoy meeting new people?', 'Lernst du gern neue Leute kennen?', 'هل تستمتع بالتعرّف على أشخاص جدد؟'],
+  'Giydiğin ya da yaptığın şeylerin güzel görünmesine dikkat eder misin?': ['Do you care whether what you wear or make looks good?', 'Achtest du darauf, dass deine Kleidung oder deine Arbeit gut aussieht?', 'هل تهتم بأن يبدو ما ترتديه أو تصنعه جميلًا؟'],
+  'Odan ya da çalıştığın yer genelde düzenli midir?': ['Is your room or workplace usually tidy?', 'Ist dein Zimmer oder Arbeitsplatz meist ordentlich?', 'هل غرفتك أو مكان عملك مرتّب عادةً؟'],
+  'Bir grupta liderliği üstlenmeyi sever misin?': ['Do you like taking the lead in a group?', 'Übernimmst du in einer Gruppe gern die Führung?', 'هل تحب تولّي القيادة في مجموعة؟'],
+  'Bir şeyin neden öyle olduğunu merak eder misin?': ['Do you wonder why things are the way they are?', 'Fragst du dich, warum Dinge so sind, wie sie sind?', 'هل تتساءل لماذا تكون الأشياء على ما هي عليه؟'],
+  'Birine yardım edince mutlu olur musun?': ['Does helping someone make you happy?', 'Macht es dich glücklich, jemandem zu helfen?', 'هل تسعد عندما تساعد أحدًا؟'],
+  'Bütün gün oturmak yerine ayakta, hareket ederek çalışmak ister misin?': ['Would you rather work on your feet and moving than sitting all day?', 'Arbeitest du lieber in Bewegung als den ganzen Tag im Sitzen?', 'هل تفضّل العمل واقفًا ومتحركًا بدل الجلوس طوال اليوم؟'],
+  'Bir sorun çıkınca önce sebebini bulmaya çalışır mısın?': ['When a problem comes up, do you first try to find the cause?', 'Suchst du bei einem Problem zuerst nach der Ursache?', 'عندما تظهر مشكلة، هل تحاول أولًا معرفة سببها؟'],
+  'İşleri kendi tarzınla yapmayı sever misin?': ['Do you like doing things your own way?', 'Machst du Dinge gern auf deine eigene Art?', 'هل تحب إنجاز الأمور بأسلوبك الخاص؟'],
+  'İnsanları bir fikre ikna etmekte iyi misin?': ['Are you good at convincing people of an idea?', 'Kannst du Menschen gut von einer Idee überzeugen?', 'هل أنت جيد في إقناع الناس بفكرة؟'],
+  'Kurallara uyarak çalışmak seni rahatlatır mı?': ['Does working by the rules put you at ease?', 'Fühlst du dich wohl, wenn du nach Regeln arbeitest?', 'هل يريحك العمل وفق القواعد؟'],
+  'Bozulan bir eşyayı açıp kurcalamak hoşuna gider mi?': ['Do you enjoy opening up and tinkering with broken things?', 'Bastelst du gern an kaputten Dingen herum?', 'هل تستمتع بفتح الأشياء المعطّلة والعبث بها؟'],
+  'Renklere, tatlara ya da kokulara çok dikkat eder misin?': ['Do you pay a lot of attention to colours, tastes or smells?', 'Achtest du sehr auf Farben, Geschmäcker oder Gerüche?', 'هل تنتبه كثيرًا للألوان أو المذاقات أو الروائح؟'],
+  'Bir müşteriyi memnun etmek seni sevindirir mi?': ['Does satisfying a customer make you glad?', 'Freut es dich, einen Kunden zufriedenzustellen?', 'هل يسعدك إرضاء زبون؟'],
+  'Yeni bir konuyu derinlemesine öğrenmek hoşuna gider mi?': ['Do you enjoy learning a new topic in depth?', 'Lernst du gern ein neues Thema gründlich?', 'هل تستمتع بتعلّم موضوع جديد بعمق؟'],
+  'Rakamlara ve küçük ayrıntılara dikkat eder misin?': ['Do you pay attention to numbers and small details?', 'Achtest du auf Zahlen und kleine Details?', 'هل تنتبه للأرقام والتفاصيل الصغيرة؟'],
+  'Bir gün kendi işini kurmak ister misin?': ['Would you like to start your own business one day?', 'Möchtest du eines Tages dein eigenes Geschäft gründen?', 'هل تودّ أن تبدأ عملك الخاص يومًا ما؟'],
+  'Yeni bir şey tasarlamak ya da kendi tarifini uydurmak hoşuna gider mi?': ['Do you enjoy designing something new or inventing your own recipe?', 'Entwirfst du gern Neues oder erfindest eigene Rezepte?', 'هل تحب تصميم شيء جديد أو ابتكار وصفتك الخاصة؟'],
+  'Bilgisayar başında değil, elle tutulur bir şey ürettiğin bir iş ister misin?': ['Would you like a job where you make something tangible, not sit at a computer?', 'Möchtest du einen Job, in dem du etwas Greifbares herstellst statt am Computer zu sitzen?', 'هل تريد عملًا تنتج فيه شيئًا ملموسًا بدل الجلوس أمام الحاسوب؟'],
+  'Bildiğin bir şeyi başkasına öğretmeyi sever misin?': ['Do you like teaching others what you know?', 'Bringst du anderen gern bei, was du weißt?', 'هل تحب تعليم الآخرين ما تعرفه؟'],
+  'Bir işi bitirince her şeyi tek tek kontrol eder misin?': ['When you finish a job, do you check everything one by one?', 'Prüfst du nach einer Arbeit alles einzeln nach?', 'عند إنهاء عمل، هل تراجع كل شيء واحدًا واحدًا؟'],
+  'Bir işi farklı yollarla deneyip en iyisini bulmayı sever misin?': ['Do you like trying different ways to find the best one?', 'Probierst du gern verschiedene Wege aus, um den besten zu finden?', 'هل تحب تجربة طرق مختلفة لإيجاد الأفضل؟'],
+  'Acele bir durumda hızlıca karar verebilir misin?': ['Can you make quick decisions in a rush?', 'Kannst du in Eile schnell entscheiden?', 'هل تستطيع اتخاذ قرار سريع في موقف مستعجل؟'],
+  'Kalabalık, hareketli yerlerde bulunmak hoşuna gider mi?': ['Do you enjoy being in busy, lively places?', 'Bist du gern an belebten, trubeligen Orten?', 'هل تحب التواجد في أماكن مزدحمة ونابضة بالحركة؟'],
+  'Çizmek, süslemek ya da bir yeri dekore etmek hoşuna gider mi?': ['Do you enjoy drawing, decorating or styling a place?', 'Zeichnest, schmückst oder dekorierst du gern?', 'هل تحب الرسم أو التزيين أو ديكور الأماكن؟'],
+  'Alet edevat (tornavida, bıçak, makine) kullanmak hoşuna gider mi?': ['Do you enjoy using tools (screwdriver, knife, machines)?', 'Benutzt du gern Werkzeuge (Schraubendreher, Messer, Maschinen)?', 'هل تحب استخدام الأدوات (مفك، سكين، آلات)؟'],
+  'Bilim, deney ya da araştırma videoları ilgini çeker mi?': ['Do science, experiment or research videos interest you?', 'Interessieren dich Wissenschafts-, Experiment- oder Forschungsvideos?', 'هل تثير اهتمامك فيديوهات العلوم أو التجارب أو الأبحاث؟'],
+  'Bir işe başlamadan önce plan yapar mısın?': ['Do you make a plan before starting a task?', 'Machst du einen Plan, bevor du anfängst?', 'هل تضع خطة قبل البدء في عمل؟'],
+  'Bir hedef koyup ona ulaşmak için yarışmayı sever misin?': ['Do you like setting a goal and racing to reach it?', 'Setzt du dir gern ein Ziel und kämpfst darum, es zu erreichen?', 'هل تحب أن تضع هدفًا وتتسابق لتحقيقه؟'],
+  // yakında meslekler
+  'Elektrikçi': ['Electrician', 'Elektriker', 'كهربائي'], 'Kuaför': ['Hairdresser', 'Friseur', 'مصفف شعر'], 'Mobilya ustası': ['Furniture maker', 'Möbeltischler', 'صانع أثاث'],
+  'Laborant': ['Lab technician', 'Laborant', 'فني مختبر'], 'Eczane teknisyeni': ['Pharmacy technician', 'Pharmazeutisch-techn. Assistent', 'فني صيدلة'], 'Veri analisti': ['Data analyst', 'Datenanalyst', 'محلل بيانات'],
+  'Pastacı': ['Pastry chef', 'Konditor', 'حلواني'], 'İç mimar': ['Interior designer', 'Innenarchitekt', 'مصمم داخلي'], 'Fotoğrafçı': ['Photographer', 'Fotograf', 'مصوّر'],
+  'Hemşire': ['Nurse', 'Pflegekraft', 'ممرض'], 'Çocuk gelişimci': ['Child development specialist', 'Kinderpädagoge', 'أخصائي نمو الطفل'], 'Sosyal hizmet uzmanı': ['Social worker', 'Sozialarbeiter', 'أخصائي اجتماعي'],
+  'Emlak danışmanı': ['Real estate agent', 'Immobilienmakler', 'وكيل عقارات'], 'Mağaza müdürü': ['Store manager', 'Filialleiter', 'مدير متجر'], 'Etkinlik organizatörü': ['Event organiser', 'Eventmanager', 'منظّم فعاليات'],
+  'İnsan kaynakları uzmanı': ['HR specialist', 'Personalreferent', 'أخصائي موارد بشرية'], 'Depo sorumlusu': ['Warehouse supervisor', 'Lagerverantwortlicher', 'مسؤول مستودع'], 'Banka gişe görevlisi': ['Bank teller', 'Bankkassierer', 'صرّاف بنك'],
+
+  // ---- meslek adları ve kategoriler ----
+  'Barista': ['Barista', 'Barista', 'باريستا'],
+  'Aşçı': ['Cook', 'Koch', 'طاهٍ'],
+  'Salon Servisi': ['Restaurant Service', 'Restaurantservice', 'خدمة الصالة'],
+  'Mimar': ['Architect', 'Architekt', 'مهندس معماري'],
+  'İnşaat Teknisyeni': ['Construction Technician', 'Bautechniker', 'فني إنشاءات'],
+  'Universal Freze Operatörü': ['Universal Milling Operator', 'Universalfräser', 'مشغّل التفريز الشامل'],
+  'Kaynakçı': ['Welder', 'Schweißer', 'لحّام'],
+  'Yazılımcı': ['Software Developer', 'Softwareentwickler', 'مطوّر برمجيات'],
+  'Grafik Tasarımcı': ['Graphic Designer', 'Grafikdesigner', 'مصمم جرافيك'],
+  'Muhasebe Elemanı': ['Accounting Clerk', 'Buchhaltungskraft', 'موظف محاسبة'],
+  'İtfaiyeci': ['Firefighter', 'Feuerwehrmann', 'رجل إطفاء'],
+  'Satış Danışmanı ve Kasiyer': ['Sales Assistant & Cashier', 'Verkäufer & Kassierer', 'مستشار مبيعات وأمين صندوق'],
+  'Yiyecek & İçecek': ['Food & Beverage', 'Gastronomie', 'الأطعمة والمشروبات'],
+  'Tasarım & Yapı': ['Design & Building', 'Planung & Bau', 'التصميم والبناء'],
+  'Yapı & Şantiye': ['Construction & Site', 'Bau & Baustelle', 'البناء والموقع'],
+  'Üretim & İmalat': ['Production & Manufacturing', 'Produktion & Fertigung', 'الإنتاج والتصنيع'],
+  'Bilişim & Teknoloji': ['IT & Technology', 'IT & Technik', 'المعلوماتية والتقنية'],
+  'Sanat & Tasarım': ['Art & Design', 'Kunst & Design', 'الفن والتصميم'],
+  'Ofis & Finans': ['Office & Finance', 'Büro & Finanzen', 'المكتب والمالية'],
+  'Kamu & Acil Durum': ['Public & Emergency', 'Öffentlicher Dienst & Notfall', 'القطاع العام والطوارئ'],
+  'Ticaret & Hizmet': ['Retail & Service', 'Handel & Service', 'التجارة والخدمات'],
+};
