@@ -1,5 +1,5 @@
 {
- "paketSurumu": 5,
+ "paketSurumu": 6,
  "meslek": {
   "id": "servis",
   "ad": "Salon Servisi",
@@ -295,7 +295,7 @@
   },
   {
    "ad": "Komi",
-   "hedefXp": 360,
+   "hedefXp": 460,
    "rozet": {
     "ad": "Komi",
     "ikon": "🍽️"
@@ -629,6 +629,183 @@
      "sahne": "salon"
     },
     {
+     "id": "ko-icecek",
+     "sablon": "soru",
+     "ikon": "🫖",
+     "baslik": "İçecek servisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Misafir çay istedi. Ne sorarsın?",
+       "secenekler": [
+        "\"Demli mi, açık mı olsun?\"",
+        "\"Kaç bardak içeceksiniz?\"",
+        "Hiçbir şey sormam, getiririm",
+        "\"Bardakta mı, kupada mı?\""
+       ],
+       "dogru": 0,
+       "aciklama": "Herkes çayı aynı içmez. Demli ya da açık sormak küçük ama misafirin hemen fark ettiği bir özendir."
+      },
+      {
+       "soru": "Çay bardağı masaya nasıl konur?",
+       "secenekler": [
+        "Tabaksız, doğrudan masaya",
+        "Tabağıyla, kaşık tabakta, misafirin sağına",
+        "Ağzından tutularak misafirin eline",
+        "Misafirin soluna, kaşık bardağın içinde"
+       ],
+       "dogru": 1,
+       "aciklama": "Çay tabağıyla gelir, kaşık tabağa konur. İçecekler misafirin sağından servis edilir; bardak ağzından tutulmaz."
+      },
+      {
+       "soru": "Masaya şişede şarap getirdin. Açmadan önce ne yaparsın?",
+       "secenekler": [
+        "Mutfakta açıp getiririm",
+        "Etiketi siparişi veren misafire gösterip doğru şarap olduğunu teyit ederim",
+        "Hemen herkesin kadehini doldururum",
+        "Şişeyi masaya bırakırım, kendileri açar"
+       ],
+       "dogru": 1,
+       "aciklama": "Etiket gösterilir, şişe misafirin önünde açılır. Sipariş verene önce tadımlık az konur; onay gelince diğerlerine, en son ona servis edilir."
+      },
+      {
+       "soru": "Şarap kadehi ne kadar doldurulur?",
+       "secenekler": [
+        "Ağzına kadar",
+        "Genelde üçte biri ile yarısı arası",
+        "Birkaç damla",
+        "Misafir \"dur\" diyene kadar"
+       ],
+       "dogru": 1,
+       "aciklama": "Kadehte boşluk kalmalı ki şarap hava alsın ve kokusu hissedilsin; dolu kadeh de kolay devrilir."
+      },
+      {
+       "soru": "Rakı siparişinde misafire ne sorulur?",
+       "secenekler": [
+        "Hiçbir şey, standart getirilir",
+        "Tek mi duble mi, su ve buzun nasıl olacağı",
+        "Yaşı",
+        "Hangi yemeği yiyeceği"
+       ],
+       "dogru": 1,
+       "aciklama": "Rakı kişiye göre içilir: tek ya da duble, su ve buz ayrı getirilip misafirin isteğine göre konur."
+      },
+      {
+       "soru": "Bir masanın su bardakları boşalmak üzere. Ne yaparsın?",
+       "secenekler": [
+        "İsteyene kadar beklerim",
+        "Fark edip sorarak doldururum",
+        "Bardakları toplarım",
+        "Yeni şişe açıp masaya bırakırım"
+       ],
+       "dogru": 1,
+       "aciklama": "İyi garson istenmeden fark eder. Bardak masadayken, misafirin sağından doldurulur."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "İçecekte dikkat",
+      "maddeler": [
+       "Çay: demli mi açık mı sor, tabağıyla getir.",
+       "Şarap: etiket göster, önünde aç, tadım ver.",
+       "Kadehi doldurma, bardağı ağzından tutma.",
+       "Boşalan bardağı istenmeden fark et."
+      ]
+     }
+    },
+    {
+     "id": "ko-guvenlik",
+     "sablon": "siniflandirma",
+     "ikon": "⚠️",
+     "baslik": "Güvenli salon",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Salonda kaza bir saniyede olur. Her davranışa dokun: doğru mu, yanlış mı?",
+     "kategoriler": [
+      {
+       "id": "dogru",
+       "ad": "Doğru",
+       "ikon": "✅"
+      },
+      {
+       "id": "yanlis",
+       "ad": "Yanlış",
+       "ikon": "❌"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Kırık bardağı fırça ve faraşla toplamak",
+       "ikon": "🧹",
+       "kategori": "dogru",
+       "aciklama": "Cam parçası eli keser. Fırça-faraşla toplanır, ayrı ve işaretli bir kaba atılır."
+      },
+      {
+       "ad": "Kırık bardağı eliyle hızlıca toplamak",
+       "ikon": "✋",
+       "kategori": "yanlis",
+       "aciklama": "Hız için el kullanılmaz; küçük kırıklar görünmez ve keser."
+      },
+      {
+       "ad": "Islak zemine uyarı levhası koymak",
+       "ikon": "🟨",
+       "kategori": "dogru",
+       "aciklama": "Kayma salonda en sık görülen kazadır. Önce levha, sonra hemen kurulama."
+      },
+      {
+       "ad": "Arkasından geçerken \"Arkandayım!\" diye seslenmek",
+       "ikon": "🗣️",
+       "kategori": "dogru",
+       "aciklama": "Elinde tepsi olan biri aniden dönerse çarpışma olur. Kısa bir uyarı kazayı önler."
+      },
+      {
+       "ad": "Sıcak tabağı servis beziyle tutup misafiri \"Tabak sıcak\" diye uyarmak",
+       "ikon": "♨️",
+       "kategori": "dogru",
+       "aciklama": "Hem eli hem misafiri korur."
+      },
+      {
+       "ad": "Yoğunlukta dolu tepsiyle koşmak",
+       "ikon": "🏃",
+       "kategori": "yanlis",
+       "aciklama": "Hızlı yürü ama koşma. Düşen tepsi hem kaza hem zaman kaybıdır."
+      },
+      {
+       "ad": "Acil çıkışın önüne fazla sandalye koymak",
+       "ikon": "🚪",
+       "kategori": "yanlis",
+       "aciklama": "Acil çıkışlar ve yolları her zaman açık kalır."
+      },
+      {
+       "ad": "Fenalaşan misafir için 112'yi arayıp şef garsona haber vermek",
+       "ikon": "🚑",
+       "kategori": "dogru",
+       "aciklama": "Ciddi durumda önce 112. Ekipte ilk yardım eğitimi olan biri varsa hemen çağrılır."
+      },
+      {
+       "ad": "Yemekten sonra dudakları şişen misafire \"Geçer\" demek",
+       "ikon": "🤐",
+       "kategori": "yanlis",
+       "aciklama": "Bu bir alerji belirtisi olabilir ve hızla ağırlaşabilir. 112 aranır, şef garsona haber verilir."
+      },
+      {
+       "ad": "Kapı aralığından tepsiyle geçerken kapıyı sırtla itmek",
+       "ikon": "🔙",
+       "kategori": "dogru",
+       "aciklama": "Tepsi önde, kapıyı sırtınla aç; mutfak kapısında \"giriş\" ve \"çıkış\" kuralına uy."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Güvenli salon",
+      "maddeler": [
+       "Kırık cam: fırça ve faraş, asla el.",
+       "Islak zemin: önce levha, sonra kurula.",
+       "Hızlı yürü, koşma; arkadan geçerken seslen.",
+       "Fenalık ya da alerji belirtisinde 112."
+      ]
+     }
+    },
+    {
      "id": "ko6-ogle",
      "sablon": "senaryo",
      "ikon": "🍽️",
@@ -808,6 +985,28 @@
        ],
        "dogru": 1,
        "aciklama": "Hijyen Eğitimi Yönetmeliği servis personelini de kapsar."
+      },
+      {
+       "soru": "Salonda bir bardak kırıldı. Ne yaparsın?",
+       "secenekler": [
+        "Elimle hemen toplarım",
+        "Fırça ve faraşla toplar, ayrı kaba atarım",
+        "Servis bitince toplarım",
+        "Üstüne peçete örterim"
+       ],
+       "dogru": 1,
+       "aciklama": "Kırık cam hemen ve elle değil, fırça-faraşla toplanır."
+      },
+      {
+       "soru": "Şarap şişesi nerede açılır?",
+       "secenekler": [
+        "Mutfakta",
+        "Misafirin önünde, etiket gösterildikten sonra",
+        "Barda",
+        "Fark etmez"
+       ],
+       "dogru": 1,
+       "aciklama": "Misafir doğru şarabın, kapalı şişeden geldiğini görmelidir."
       }
      ]
     }
@@ -816,7 +1015,7 @@
   },
   {
    "ad": "Garson",
-   "hedefXp": 290,
+   "hedefXp": 400,
    "rozet": {
     "ad": "Garson",
     "ikon": "📝"
@@ -1096,6 +1295,210 @@
      }
     },
     {
+     "id": "ga-odeme",
+     "sablon": "senaryo",
+     "ikon": "💳",
+     "baslik": "Hesap masada",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Akşam servisi bitiyor. Masaların hesabını sen alıyorsun.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Dört arkadaş: \"Hesabı ayrı ayrı ödeyebilir miyiz?\"",
+       "secenekler": [
+        {
+         "metin": "\"Tabii\" der, kimin ne yediğini adisyondan tek tek ayırırım",
+         "dogru": true,
+         "aciklama": "Oturma yeriyle yazılan adisyon tam bunun için vardır: kim ne yediyse onu öder."
+        },
+        {
+         "metin": "\"Bölemiyoruz, tek hesap\" derim",
+         "dogru": false,
+         "aciklama": "Mümkün olan bir isteği reddetmek misafiri kaybettirir. İşletmenin kuralı yoksa yardımcı ol."
+        },
+        {
+         "metin": "Toplamı dörde bölüp herkese aynı tutarı söylerim",
+         "dogru": false,
+         "aciklama": "Ayrı hesap isteyen, kendi yediğini ödemek ister. Eşit bölmeyi ancak misafir isterse yap."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Misafir kartla ödeyecek.",
+       "secenekler": [
+        {
+         "metin": "Kartı alıp kasaya götürürüm",
+         "dogru": false,
+         "aciklama": "Kart misafirin gözünden ayrılmamalı; bu güven ve güvenlik meselesidir."
+        },
+        {
+         "metin": "POS cihazını masaya getiririm, şifreyi misafir kendisi girer",
+         "dogru": true,
+         "aciklama": "Doğru. Şifre girilirken başını çevir; şifreyi asla sorma."
+        },
+        {
+         "metin": "Şifresini söylemesini isterim, ben girerim",
+         "dogru": false,
+         "aciklama": "Şifre kişiye özeldir; garson asla şifre istemez."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Başka bir masa nakit ödüyor: 650 TL hesaba 1000 TL verdi.",
+       "secenekler": [
+        {
+         "metin": "Para üstünü \"Bahşiş kalsın\" varsayıp getirmem",
+         "dogru": false,
+         "aciklama": "Bahşiş misafirin kararıdır. Para üstü her zaman getirilir."
+        },
+        {
+         "metin": "350 TL para üstünü fişle birlikte getirip misafirin önünde sayarım",
+         "dogru": true,
+         "aciklama": "Önünde saymak yanlış anlaşılmayı önler. Her satışta fiş ya da fatura verilmesi yasal zorunluluktur."
+        },
+        {
+         "metin": "\"Bozuk yok\" deyip 300 TL getiririm",
+         "dogru": false,
+         "aciklama": "Misafirin hakkı olan para eksik verilemez. Bozuk yoksa şef garsondan ya da kasadan istenir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Misafir: \"Fişe gerek yok, kalsın.\"",
+       "secenekler": [
+        {
+         "metin": "Fişi yine de keser, misafirin önüne bırakırım",
+         "dogru": true,
+         "aciklama": "Fiş vermek işletmenin yasal görevidir; misafir istemese de kesilir."
+        },
+        {
+         "metin": "Fiş kesmem, kâğıttan tasarruf olur",
+         "dogru": false,
+         "aciklama": "Fiş kesmemek vergi kaçırma sayılabilir ve işletmeye ceza getirir."
+        },
+        {
+         "metin": "Adisyonu fiş yerine veririm",
+         "dogru": false,
+         "aciklama": "Adisyon iç kayıttır; yasal fişin yerini tutmaz."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "mutlu",
+       "metin": "Misafirler kalkıyor.",
+       "secenekler": [
+        {
+         "metin": "\"Bahşiş bırakmadınız\" diye hatırlatırım",
+         "dogru": false,
+         "aciklama": "Bahşiş gönüllüdür; istemek ya da ima etmek yanlıştır."
+        },
+        {
+         "metin": "Teşekkür eder, yine beklediğimizi söyleyerek uğurlarım; masada unutulan eşya var mı bakarım",
+         "dogru": true,
+         "aciklama": "Son izlenim de ilki kadar önemlidir. Unutulan telefon ya da anahtar fark edilirse hemen yetiştirilir."
+        },
+        {
+         "metin": "Hemen masayı toplamaya başlarım",
+         "dogru": false,
+         "aciklama": "Misafir kapıdan çıkmadan masayı toplamak \"gidin\" mesajı verir."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Hesap kuralları",
+      "maddeler": [
+       "Ayrı hesap: oturma yerine göre böl.",
+       "Kart gözden ayrılmaz, şifre asla sorulmaz.",
+       "Para üstü önünde sayılır, fiş her zaman verilir.",
+       "Bahşiş istenmez; teşekkür et, uğurla."
+      ]
+     }
+    },
+    {
+     "id": "ga-alkol",
+     "sablon": "soru",
+     "ikon": "🍷",
+     "baslik": "Sorumlu alkol servisi",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Türkiye'de kaç yaşından küçüklere alkollü içki satılamaz ve sunulamaz?",
+       "secenekler": [
+        "16",
+        "18",
+        "21",
+        "25"
+       ],
+       "dogru": 1,
+       "aciklama": "18 yaşını doldurmamış kişilere alkollü içki satılamaz ve sunulamaz. Bu kural yetişkin bir masadaki gence de geçerlidir."
+      },
+      {
+       "soru": "Çok genç görünen bir misafir bira istiyor. Ne yaparsın?",
+       "secenekler": [
+        "Getiririm, yaşını sormak ayıp",
+        "Kibarca kimliğini görmek isterim",
+        "Yanındaki büyüğe sorarım",
+        "Alkolsüz bira getiririm, söylemem"
+       ],
+       "dogru": 1,
+       "aciklama": "Emin değilsen kimlik sormak hem hakkın hem görevindir. Kibar bir \"Kimliğinizi görebilir miyim?\" yeterlidir."
+      },
+      {
+       "soru": "Yetişkin bir masada 16 yaşındaki çocuk için babası rakı istiyor. Ne olur?",
+       "secenekler": [
+        "Babası izin verdiği için getirilir",
+        "Getirilmez; kibarca açıklanıp alkolsüz bir içecek önerilir",
+        "Az miktar getirilir",
+        "Hesaba yazılmadan getirilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Ebeveyn izni yasayı değiştirmez. Sorumluluk işletmeye ve servisi yapana aittir."
+      },
+      {
+       "soru": "Bir misafir fazla içmiş, sesi yükseliyor ve bir kadeh daha istiyor. Doğru davranış?",
+       "secenekler": [
+        "İstediği kadar getiririm, satış artar",
+        "Şef garsona haber verir, alkol yerine su ya da yemek öneririm",
+        "Masada herkesin önünde uyarırım",
+        "Görmezden gelirim"
+       ],
+       "dogru": 1,
+       "aciklama": "Sorumlu servis, misafirin ve diğerlerinin güvenliğini korur. Kararı tek başına değil, şef garsonla birlikte ver."
+      },
+      {
+       "soru": "Alkol almış misafir arabasıyla gideceğini söylüyor. Ne yapabilirsin?",
+       "secenekler": [
+        "Hiçbir şey, beni ilgilendirmez",
+        "Taksi çağırmayı teklif ederim",
+        "Arabasının anahtarını zorla alırım",
+        "Bir kahve verip yolcu ederim, kahve ayıltır"
+       ],
+       "dogru": 1,
+       "aciklama": "Kahve ayıltmaz; yalnızca zaman ayıltır. Taksi teklif etmek nazik ve hayat kurtarıcı bir adımdır."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Sorumlu servis",
+      "maddeler": [
+       "18 yaş altına alkol yok, ebeveyn izniyle de yok.",
+       "Emin değilsen kibarca kimlik sor.",
+       "Fazla içmiş misafire alkol değil, su ve yemek.",
+       "Araç kullanacaksa taksi öner."
+      ]
+     }
+    },
+    {
      "id": "ga5-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -1190,6 +1593,28 @@
        ],
        "dogru": 1,
        "aciklama": "Sakin ve hızlı yardım."
+      },
+      {
+       "soru": "Misafir \"Fişe gerek yok\" dedi. Ne yaparsın?",
+       "secenekler": [
+        "Fiş kesmem",
+        "Yine de fişi keserim; yasal zorunluluktur",
+        "Adisyonu veririm",
+        "Ertesi gün keserim"
+       ],
+       "dogru": 1,
+       "aciklama": "Her satış için fiş ya da fatura verilir; misafir istemese de."
+      },
+      {
+       "soru": "17 yaşında bir misafir bira istiyor. Ne yaparsın?",
+       "secenekler": [
+        "Getiririm",
+        "Kibarca reddedip alkolsüz bir içecek öneririm",
+        "Yarım bardak getiririm",
+        "Ailesi izin verirse getiririm"
+       ],
+       "dogru": 1,
+       "aciklama": "18 yaş altına alkol satılamaz ve sunulamaz."
       }
      ]
     }
