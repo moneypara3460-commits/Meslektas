@@ -1,5 +1,5 @@
 {
- "paketSurumu": 5,
+ "paketSurumu": 6,
  "meslek": {
   "id": "asci",
   "ad": "Aşçı",
@@ -295,7 +295,7 @@
   },
   {
    "ad": "Çırak",
-   "hedefXp": 360,
+   "hedefXp": 470,
    "rozet": {
     "ad": "Çırak Aşçı",
     "ikon": "🔪"
@@ -647,6 +647,171 @@
      "sahne": "mutfak"
     },
     {
+     "id": "c-pilav",
+     "sablon": "siralama",
+     "ikon": "🍚",
+     "baslik": "Tane tane pilav",
+     "aciklama": "Lokantanın en çok çıkan yemeği pilavdır. Pirinç pilavını doğru sırayla yap.",
+     "adimlar": [
+      {
+       "id": "islat",
+       "ikon": "💧",
+       "metin": "Pirinci yıka, ılık tuzlu suda bekletip süz",
+       "neden": "Yüzeydeki nişasta gider; taneler yapışmaz ve kırılmaz.",
+       "ipucu": "Ocağa koymadan önce pirincin kendisi."
+      },
+      {
+       "id": "yag",
+       "ikon": "🧈",
+       "metin": "Tereyağını tencerede erit",
+       "neden": "Pirinç sıcak yağda kavrulacak.",
+       "ipucu": "Tencere ısınıyor; içine ilk ne girer?"
+      },
+      {
+       "id": "kavur",
+       "ikon": "🔥",
+       "metin": "Pirinci ekleyip taneler şeffaflaşana kadar kavur",
+       "neden": "Kavrulan tanenin dışı yağla kaplanır, pişince dağılmaz.",
+       "ipucu": "Yağ hazır, şimdi pirinç."
+      },
+      {
+       "id": "su",
+       "ikon": "🫗",
+       "metin": "Ölçülü sıcak suyu ve tuzu ekle",
+       "neden": "Su miktarı pirincin türüne göre reçetede yazar; sıcak su kavurmayı bozmaz.",
+       "ipucu": "Kavrulan pirinç sıvı bekliyor."
+      },
+      {
+       "id": "pisir",
+       "ikon": "♨️",
+       "metin": "Kaynayınca kısık ateşte, kapağı kapalı ve karıştırmadan suyunu çektir",
+       "neden": "Karıştırmak taneleri kırar ve lapalaştırır.",
+       "ipucu": "Su eklendi; şimdi sabır."
+      },
+      {
+       "id": "demlen",
+       "ikon": "🧺",
+       "metin": "Ocaktan alıp kapağın altına temiz bez koyarak demlendir",
+       "neden": "Bez buharı emer; taneler kendi buharında oturur.",
+       "ipucu": "Su bitti ama pilav henüz servise hazır değil."
+      },
+      {
+       "id": "havalandir",
+       "ikon": "🥄",
+       "metin": "Servisten önce pilavı nazikçe havalandırarak karıştır",
+       "neden": "Tane tane görünüm ve doğru kıvam servisten hemen önce sağlanır.",
+       "ipucu": "Son dokunuş."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Pilavın sırrı",
+      "maddeler": [
+       "Yıka ve ıslat: nişasta gitsin.",
+       "Kavur, sonra sıcak su ekle.",
+       "Pişerken karıştırma.",
+       "Demlendir, sonra havalandır."
+      ]
+     }
+    },
+    {
+     "id": "c-guvenlik",
+     "sablon": "siniflandirma",
+     "ikon": "⛑️",
+     "baslik": "Mutfakta güvenlik",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "aciklama": "Mutfakta kaza bir anlık dikkatsizlikle olur. Her davranışa dokun: doğru mu, yanlış mı?",
+     "kategoriler": [
+      {
+       "id": "dogru",
+       "ad": "Doğru",
+       "ikon": "✅"
+      },
+      {
+       "id": "yanlis",
+       "ad": "Yanlış",
+       "ikon": "❌"
+      }
+     ],
+     "ogeler": [
+      {
+       "ad": "Bıçakla yürürken ucunu aşağı tutup \"Bıçak geçiyor!\" demek",
+       "ikon": "🔪",
+       "kategori": "dogru",
+       "aciklama": "Mutfakta herkes hareket hâlinde; uyarı çarpışmayı önler."
+      },
+      {
+       "ad": "Bıçağı köpüklü bulaşık suyunun içine bırakmak",
+       "ikon": "🫧",
+       "kategori": "yanlis",
+       "aciklama": "Suyun içindeki bıçak görünmez; elini sokan kesilir. Bıçak ayrı yıkanır."
+      },
+      {
+       "ad": "Tencere saplarını ocağın dışına taşacak şekilde bırakmak",
+       "ikon": "🍳",
+       "kategori": "yanlis",
+       "aciklama": "Geçen biri sapa çarparsa kaynar yemek dökülür. Saplar içe çevrilir."
+      },
+      {
+       "ad": "Sıcak tepsiyi ıslak bezle tutmak",
+       "ikon": "💦",
+       "kategori": "yanlis",
+       "aciklama": "Islak bez ısıyı hemen iletir ve buhar eli haşlar. Kuru bez ya da fırın eldiveni kullanılır."
+      },
+      {
+       "ad": "Yanan yeri en az 10 dakika serin akan suyun altında tutmak",
+       "ikon": "🚰",
+       "kategori": "dogru",
+       "aciklama": "Serin su yanığın derinleşmesini durdurur. Büyük ya da ciddi yanıkta 112 aranır."
+      },
+      {
+       "ad": "Yanığa diş macunu ya da yoğurt sürmek",
+       "ikon": "🪥",
+       "kategori": "yanlis",
+       "aciklama": "Isıyı içeride tutar ve mikrop kaptırır. Yanığa su dışında bir şey sürülmez."
+      },
+      {
+       "ad": "Kesiği temiz bezle bastırıp bandajlamak ve eldivenle çalışmak",
+       "ikon": "🩹",
+       "kategori": "dogru",
+       "aciklama": "Kanama durur, yara gıdaya temas etmez. Derin kesikte sağlık kuruluşuna gidilir."
+      },
+      {
+       "ad": "Dökülen yağı hemen silip zemini uyarı levhasıyla işaretlemek",
+       "ikon": "🟨",
+       "kategori": "dogru",
+       "aciklama": "Yağlı zemin mutfakta en sık kayma sebebidir."
+      },
+      {
+       "ad": "Ağır un çuvalını belinden eğilerek kaldırmak",
+       "ikon": "🏋️",
+       "kategori": "yanlis",
+       "aciklama": "Dizlerden çömelip yükü gövdeye yakın tutarak kaldırılır; çok ağırsa yardım istenir."
+      },
+      {
+       "ad": "Doğrarken tahtanın altına nemli bez koymak",
+       "ikon": "🪵",
+       "kategori": "dogru",
+       "aciklama": "Kayan tahta, bıçağın ele kaymasının en yaygın sebebidir."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Güvenli mutfak",
+      "maddeler": [
+       "Bıçak: ucu aşağı, sesli uyarı, ayrı yıka.",
+       "Saplar içe, sıcak kaba kuru bez.",
+       "Yanık: serin akan su; macun, yoğurt yok.",
+       "Zemin kuru, yük dizlerden kalkar."
+      ]
+     }
+    },
+    {
      "id": "c6-ogle",
      "sablon": "senaryo",
      "ikon": "🍽️",
@@ -827,6 +992,28 @@
        ],
        "dogru": 0,
        "aciklama": "Eski stok önce kullanılır, bozulma önlenir."
+      },
+      {
+       "soru": "Yanan ele ilk ne yapılır?",
+       "secenekler": [
+        "Diş macunu sürülür",
+        "En az 10 dakika serin akan suya tutulur",
+        "Buz bastırılır",
+        "Hiçbir şey yapılmaz"
+       ],
+       "dogru": 1,
+       "aciklama": "Serin akan su yanığın derinleşmesini durdurur."
+      },
+      {
+       "soru": "Pilav pişerken neden karıştırılmaz?",
+       "secenekler": [
+        "Taneler kırılıp lapalaşır",
+        "Su biter",
+        "Tuz çöker",
+        "Kural yoktur"
+       ],
+       "dogru": 0,
+       "aciklama": "Pilav kapağı kapalı ve karıştırılmadan suyunu çeker."
       }
      ]
     }
@@ -835,7 +1022,7 @@
   },
   {
    "ad": "Kalfa",
-   "hedefXp": 305,
+   "hedefXp": 415,
    "rozet": {
     "ad": "Kalfa Aşçı",
     "ikon": "🍳"
@@ -1119,6 +1306,210 @@
      }
     },
     {
+     "id": "k-sogutma",
+     "sablon": "soru",
+     "ikon": "🧊",
+     "baslik": "Soğut, sakla, ısıt",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Akşamdan kalan 20 litrelik tencere dolusu sıcak nohut var. Nasıl soğutursun?",
+       "secenekler": [
+        "Tencereyi kapağı kapalı tezgâhta sabaha kadar bırakırım",
+        "Sığ kaplara bölüp buz banyosunda karıştırarak hızla soğutur, sonra buzdolabına koyarım",
+        "Sıcak tencereyi olduğu gibi buzdolabına koyarım",
+        "Üstüne buz atarım"
+       ],
+       "dogru": 1,
+       "aciklama": "Büyük kütle ortadan çok geç soğur ve uzun süre tehlikeli aralıkta kalır. Sığ kap ve buz banyosu soğumayı hızlandırır."
+      },
+      {
+       "soru": "Sıcak tencere neden doğrudan buzdolabına konmaz?",
+       "secenekler": [
+        "Tencere çatlar",
+        "Dolabın içini ısıtır, diğer gıdalar da tehlikeli aralığa girer",
+        "Yemeğin tadı değişir",
+        "Elektrik faturası artar"
+       ],
+       "dogru": 1,
+       "aciklama": "Buzdolabı sıcak yükü kaldıramaz; içindeki her şey ısınır."
+      },
+      {
+       "soru": "Soğutulup saklanan yemeğin kabına ne yazılır?",
+       "secenekler": [
+        "Hiçbir şey",
+        "Sadece adı",
+        "Adı, hazırlanma tarihi ve hazırlayan",
+        "Fiyatı"
+       ],
+       "dogru": 2,
+       "aciklama": "Etiketsiz yemeğin ne zaman yapıldığı bilinmez; bilinmeyen yemek imha edilir."
+      },
+      {
+       "soru": "Saklanan yemek servise nasıl ısıtılır?",
+       "secenekler": [
+        "Ilıyana kadar",
+        "Bir kez, iç sıcaklığı en az 75 °C olana kadar",
+        "Her servis öncesi tekrar tekrar",
+        "Isıtmadan servis edilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Her soğuma-ısınma tehlikeli aralıktan bir geçiştir. Yemek bir kez ve tamamen ısıtılır; artanı yeniden saklanmaz."
+      },
+      {
+       "soru": "Buzdolabında hangi sıralama doğrudur?",
+       "secenekler": [
+        "Pişmiş yemek üstte, çiğ et en altta",
+        "Çiğ et üstte, pişmiş altta",
+        "Fark etmez",
+        "Hepsi aynı kapta"
+       ],
+       "dogru": 0,
+       "aciklama": "Çiğ etin suyu aşağı damlar; altında pişmiş yemek olursa çapraz bulaşma olur."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Soğutma kuralları",
+      "maddeler": [
+       "Sığ kap + buz banyosu = hızlı soğuma.",
+       "Sıcak tencere doğrudan dolaba girmez.",
+       "Etiket: ad, tarih, hazırlayan.",
+       "Bir kez ısıt, 75 °C'ye kadar."
+      ]
+     }
+    },
+    {
+     "id": "k-tabak",
+     "sablon": "senaryo",
+     "ikon": "🍽️",
+     "baslik": "Tabak çıkıyor",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Akşam servisi. Pass'a çıkan her tabak senin imzan.",
+     "adimlar": [
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Tabağı hazırladın, kenarında sos damlası var.",
+       "secenekler": [
+        {
+         "metin": "Temiz bezle kenarı silip öyle çıkarırım",
+         "dogru": true,
+         "aciklama": "Misafir önce gözüyle yer. Kenarı temiz tabak, özenli mutfak demektir."
+        },
+        {
+         "metin": "Önemli değil, çıkarırım",
+         "dogru": false,
+         "aciklama": "Küçük leke, büyük izlenim bırakır."
+        },
+        {
+         "metin": "Parmağımla silerim",
+         "dogru": false,
+         "aciklama": "Parmakla tabağa dokunmak hijyen hatasıdır."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Sıcak ana yemek için tabak rafındaki tabaklar soğuk.",
+       "secenekler": [
+        {
+         "metin": "Isıtılmış tabak kullanırım",
+         "dogru": true,
+         "aciklama": "Soğuk tabak yemeği birkaç dakikada soğutur. Sıcak yemek sıcak tabakta çıkar."
+        },
+        {
+         "metin": "Yemeği daha sıcak pişiririm, telafi eder",
+         "dogru": false,
+         "aciklama": "Fazla pişen yemek bozulur; sorun tabakta."
+        },
+        {
+         "metin": "Fark etmez, çıkarırım",
+         "dogru": false,
+         "aciklama": "Misafir ılık yemek için şikâyet eder."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Şef: \"Tadına baktın mı?\" Tencereden tat bakacaksın.",
+       "secenekler": [
+        {
+         "metin": "Temiz bir kaşıkla tadar, kaşığı bir daha tencereye sokmam",
+         "dogru": true,
+         "aciklama": "Her tadım için temiz kaşık. Ağza giren kaşık tencereye girmez."
+        },
+        {
+         "metin": "Kepçeden doğrudan içerim",
+         "dogru": false,
+         "aciklama": "Kepçe tencereye geri döner; bu bulaşma demektir."
+        },
+        {
+         "metin": "Tatmam, tarif doğrudur",
+         "dogru": false,
+         "aciklama": "Malzemenin tuzu ve suyu her gün değişir; tatmadan tabak çıkmaz."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Aynı masanın dört tabağından üçü hazır, biri 3 dakika sonra bitecek.",
+       "secenekler": [
+        {
+         "metin": "Hazır olanları ısıtma lambasının altında tutar, dördünü birlikte çıkarırım",
+         "dogru": true,
+         "aciklama": "Aynı masanın tabakları birlikte gider; kimse arkadaşı yerken bekleyerek oturmamalı."
+        },
+        {
+         "metin": "Üçünü hemen gönderirim, dördüncü sonra gelir",
+         "dogru": false,
+         "aciklama": "Masada bir kişi aç bekler, diğerlerinin yemeği soğur."
+        },
+        {
+         "metin": "Dördüncüyü yarım pişmiş çıkarırım",
+         "dogru": false,
+         "aciklama": "Eksik pişmiş yemek hem kalite hem gıda güvenliği sorunudur."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "kizgin",
+       "metin": "Ana yemeğin garnitürü bitti, sipariş geldi.",
+       "secenekler": [
+        {
+         "metin": "Başka bir garnitür koyar, kimseye söylemem",
+         "dogru": false,
+         "aciklama": "Yeni garnitürde misafirin alerjisi olan bir şey olabilir. Değişiklik mutlaka haber verilir."
+        },
+        {
+         "metin": "Şefe hemen haber veririm; değişiklik garsonla misafire sorulur",
+         "dogru": true,
+         "aciklama": "Mutfak ve salon birlikte çalışır; misafir tabağında ne olduğunu bilmeli."
+        },
+        {
+         "metin": "Garnitürsüz çıkarırım",
+         "dogru": false,
+         "aciklama": "Eksik tabak sormadan gönderilmez."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Pass kuralları",
+      "maddeler": [
+       "Kenar temiz, tabak sıcak.",
+       "Temiz kaşıkla tat, kaşık tencereye dönmez.",
+       "Aynı masa birlikte çıkar.",
+       "Değişikliği şefe ve salona haber ver."
+      ]
+     }
+    },
+    {
      "id": "k5-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -1215,6 +1606,28 @@
        ],
        "dogru": 1,
        "aciklama": "Karma yöntemdir, sert etleri yumuşatır."
+      },
+      {
+       "soru": "Büyük tencere dolusu sıcak yemek nasıl soğutulur?",
+       "secenekler": [
+        "Tezgâhta bekletilir",
+        "Sığ kaplara bölünüp buz banyosunda soğutulur",
+        "Olduğu gibi buzdolabına konur",
+        "Dondurucuya konur"
+       ],
+       "dogru": 1,
+       "aciklama": "Hızlı soğuma, tehlikeli aralıkta geçen süreyi kısaltır."
+      },
+      {
+       "soru": "Tat bakılan kaşıkla ne yapılır?",
+       "secenekler": [
+        "Tencereye geri sokulur",
+        "Yıkamaya gider, her tadım için temiz kaşık alınır",
+        "Önlüğe silinip tekrar kullanılır",
+        "Tezgâhta bekletilir"
+       ],
+       "dogru": 1,
+       "aciklama": "Ağza giren kaşık tencereye girmez."
       }
      ]
     }
