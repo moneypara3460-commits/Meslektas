@@ -60,6 +60,7 @@ def yaz(mid, dil, dosya):
         l = l.rstrip('\n')
         if not l.strip(): continue
         n, _, s = l.partition('\t')
+        if int(n) in satir: sys.exit(f'HATA {mid}/{dil}: {n}. satır iki kez yazılmış')
         satir[int(n)] = s.replace('\\n', '\n')
     eksik = [i for i in range(1, len(m) + 1) if not satir.get(i, '').strip()]
     fazla = [i for i in satir if i > len(m)]
