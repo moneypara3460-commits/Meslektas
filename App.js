@@ -14,6 +14,7 @@ import { FOTOLAR } from './gorseller';
 import { ses, titret } from './motor/his';
 import { Linking } from 'react-native';
 import { Pusula } from './Pusula';
+import { PaylasModal } from './paylas';
 import { t, dilNe, dilOku, dilYaz, DilContext, DILLER } from './dil';
 import { Modal } from 'react-native';
 import { pusulaOku, analiz, TIPLER } from './motor/pusula';
@@ -440,9 +441,17 @@ function Sonuc({ paket, ekran, onHarita, onTekrar, onBelge }) {
   const basarisiz = s.sinav && !s.gecti;
   const sonKademe = ekran.ki === paket.kademeler.length - 1;
   const gosterYildiz = !basarisiz && !['bilgi', 'uyum', 'sinav'].includes(g.sablon);
+  const [paylasV, setPaylasV] = useState(null);
+  const kartAc = () => setPaylasV({
+    ikon: rozet.ikon, ust: t('KADEME TAMAMLANDI'), baslik: rozet.ad,
+    alt: t('{0} yolunda bir kademe daha tamam!', t(paket.meslek.ad)),
+    etiketler: [t('{0}/{1} kademe', ekran.ki + 1, paket.kademeler.length)],
+    metin: t('Meslektaş\'ta {0} oldum! 🎉', rozet.ad),
+  });
   return (
     <Ekran alt={<>
-      <Dugme yazi={t('Haritaya dön')} onPress={onHarita} />
+      {rozet ? <Dugme yazi={t('📤 Başarını paylaş')} onPress={kartAc} style={{ marginBottom: 10 }} /> : null}
+      <Dugme yazi={t('Haritaya dön')} ikincil={!!rozet} onPress={onHarita} />
       {!s.tekrarYok ? <Dugme yazi={basarisiz ? t('Tekrar dene') : t('Tekrar oyna')} ikincil onPress={onTekrar} style={{ marginTop: 10 }} /> : null}
       {rozet && sonKademe ? <Dugme yazi={t('🎓 Tamamlama belgesi')} ikincil onPress={onBelge} style={{ marginTop: 10 }} /> : null}
     </>}>
@@ -473,6 +482,7 @@ function Sonuc({ paket, ekran, onHarita, onTekrar, onBelge }) {
         <Text style={{ fontWeight: '900', color: R.yazi, marginBottom: 8 }}>{s.bilgi.baslik}</Text>
         {s.bilgi.maddeler.map((m, j) => <Text key={j} style={{ color: R.yazi, lineHeight: 22 }}>• {m}</Text>)}
       </Kart> : null}
+      <PaylasModal v={paylasV} onKapat={() => setPaylasV(null)} />
     </Ekran>
   );
 }
@@ -481,8 +491,14 @@ function Sonuc({ paket, ekran, onHarita, onTekrar, onBelge }) {
 function Belge({ paket, sonuclar, onGeri }) {
   const [ad, setAd] = useState('');
   const B = paket.meslek.tamamlamaBelgesi; const xp = toplamXp(paket, sonuclar);
+  const [paylasV, setPaylasV] = useState(null);
+  const kartAc = () => setPaylasV({
+    ikon: '🎓', ust: t('YOLU TAMAMLADIM'), baslik: ad.trim() || t(paket.meslek.ad), alt: B.baslik,
+    etiketler: [paket.kademeler.map((k) => k.rozet.ikon).join(' '), `${xp} XP`],
+    metin: t('Meslektaş\'ta {0} yolunu baştan sona tamamladım! 🎓', t(paket.meslek.ad)),
+  });
   return (
-    <Ekran>
+    <Ekran alt={<Dugme yazi={t('📤 Belgemi paylaş')} onPress={kartAc} />}>
       <Ust baslik={t('Tamamlama belgesi')} onKapat={onGeri} />
       <TextInput value={ad} onChangeText={setAd} placeholder={t('Belgede görünecek adın')} maxLength={40}
         style={{ backgroundColor: '#fff', borderWidth: 1, borderColor: R.cizgi, borderRadius: 12, padding: 12, fontSize: 16, marginBottom: 16 }} />
@@ -496,6 +512,7 @@ function Belge({ paket, sonuclar, onGeri }) {
         <Text style={{ fontWeight: '900', marginTop: 12, color: R.yazi }}>{xp} XP · {new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })}</Text>
         <Text style={{ fontSize: 12, color: R.soluk, textAlign: 'center', marginTop: 14 }}>{B.not}</Text>
       </Kart>
+      <PaylasModal v={paylasV} onKapat={() => setPaylasV(null)} />
     </Ekran>
   );
 }

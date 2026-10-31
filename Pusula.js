@@ -6,6 +6,7 @@ import { SORULAR, CEVAPLAR, TIPLER, puanla, analiz, pusulaYaz } from './motor/pu
 import { MESLEKLER, meslekBul } from './icerik';
 import { ses, titret } from './motor/his';
 import { t } from './dil';
+import { PaylasModal } from './paylas';
 
 const ANA = '#0a1f44'; const VURGU = '#3b82f6';
 const NOT = 'Bu test ilgi alanlarını gösterir; bilimsel bir tanı veya kariyer danışmanlığı yerine geçmez.'; // t(NOT) ile gösterilir
@@ -77,6 +78,14 @@ function Sonuc({ puanlar, onGeri, onMeslek, onTekrar }) {
   const a = analiz(puanlar, MESLEKLER.map((p) => p.meslek.id));
   const [t1, t2] = a.kod; const ilk = a.meslekler[0]; const paket = ilk && meslekBul(ilk.id);
   const renk = { ana: ANA, vurgu: '#7cc4ff' };
+  const [paylasV, setPaylasV] = useState(null);
+  const tip = `${t(TIPLER[t1].ad)} – ${t(TIPLER[t2].ad)}`;
+  const kartAc = () => setPaylasV({
+    ikon: '🧭', ust: t('MESLEK PUSULAM'), baslik: tip,
+    alt: paket ? t('Bana en yakışan meslek: {0}', t(paket.meslek.ad)) : null,
+    etiketler: paket ? [t('%{0} uyum', ilk.uyum)] : [],
+    metin: paket ? t('Meslek Pusulam: {0}. Bana en yakışan meslek: {1} (%{2} uyum) 🧭', tip, t(paket.meslek.ad), ilk.uyum) : t('Meslek Pusulam: {0} 🧭', tip),
+  });
   return (
     <Ekran alt={paket ? <Dugme yazi={t('{0} ile başla →', t(paket.meslek.ad))} onPress={() => onMeslek(paket)} /> : null}>
       <Ust baslik={t('Pusulan hazır')} onKapat={onGeri} />
@@ -128,8 +137,10 @@ function Sonuc({ puanlar, onGeri, onMeslek, onTekrar }) {
         <Text style={{ color: R.soluk, fontSize: 12, marginTop: 4 }}>{t('Bu meslekler yakında oyuna eklenecek.')}</Text>
       </Kart></Giris>
 
+      <Dugme yazi={t('📤 Sonucumu paylaş')} ikincil onPress={kartAc} style={{ marginTop: 18 }} />
       <Pressable onPress={onTekrar} hitSlop={10}><Text style={{ color: ANA, textAlign: 'center', fontWeight: '800', marginTop: 18 }}>{t('↻ Testi yeniden çöz')}</Text></Pressable>
       <Text style={{ color: R.soluk, fontSize: 12, textAlign: 'center', marginTop: 12 }}>{t(NOT)}</Text>
+      <PaylasModal v={paylasV} onKapat={() => setPaylasV(null)} />
     </Ekran>
   );
 }
