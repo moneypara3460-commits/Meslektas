@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { View, Text, Pressable, TextInput, Animated, Easing, BackHandler, ActivityIndicator, ScrollView, useWindowDimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { MESLEKLER } from './icerik';
+import { MESLEKLER, icerikDili, ceviriVar } from './icerik';
 import { SABLONLAR, SABLON_ETIKET } from './sablonlar';
 import { TemaContext, Ekran, Ust, Dugme, Kart, Cubuk, Giris, Karakter, R, st, MARKA, Logo, Gradyan } from './ui';
 import { ilerlemeOku, gorevBitti, esitle } from './motor/ilerleme';
@@ -32,11 +32,11 @@ export default function App() {
   const [oturum, setOturum] = useState(null);
   const [pusula, setPusula] = useState(null);
   const [dil, setDilDurum] = useState(dilNe());
-  const setDil = (d) => { dilYaz(d); setDilDurum(d); };
+  const setDil = (d) => { dilYaz(d); icerikDili(d); setDilDurum(d); };
 
   const tumunuOku = async () => { const h = {}; for (const p of MESLEKLER) h[p.meslek.id] = await ilerlemeOku(p.meslek.id); setHepsi(h); return h; };
   useEffect(() => {
-    tumunuOku(); pusulaOku().then(setPusula); dilOku().then(setDilDurum);
+    tumunuOku(); pusulaOku().then(setPusula); dilOku().then((d) => { icerikDili(d); setDilDurum(d); });
     supabase.auth.getSession().then(({ data }) => setOturum(data.session));
     const { data: dinle } = supabase.auth.onAuthStateChange((_e, s) => { setOturum(s); if (s) esitle(MESLEKLER.map((p) => p.meslek.id)).then(tumunuOku); });
     return () => dinle.subscription.unsubscribe();
@@ -109,7 +109,8 @@ function DilSecici() {
                 <Text style={{ fontSize: 16, fontWeight: '700', color: dil === k ? '#fff' : R.yazi }}>{ad}</Text>
                 <Text style={{ fontSize: 11, fontWeight: '900', color: dil === k ? '#fff' : R.soluk }}>{k.toUpperCase()}</Text>
               </Pressable>))}
-            {dil !== 'tr' ? <Text style={{ color: R.soluk, fontSize: 11.5, paddingHorizontal: 10, paddingVertical: 8 }}>{t('Meslek görevleri şimdilik Türkçe.')}</Text> : null}
+            <Text style={{ color: R.soluk, fontSize: 11.5, paddingHorizontal: 10, paddingTop: 8 }}>🇹🇷 {t('Oyundaki tüm bilgi ve kurallar Türkiye\'de geçerli mevzuata göredir.')}</Text>
+            {dil !== 'tr' && MESLEKLER.some((p) => !ceviriVar(dil, p.meslek.id)) ? <Text style={{ color: R.soluk, fontSize: 11.5, paddingHorizontal: 10, paddingVertical: 6 }}>{t('Bazı meslekler henüz bu dilde değil; Türkçe açılır.')}</Text> : <View style={{ height: 8 }} />}
           </View>
         </Pressable>
       </Modal>
@@ -232,6 +233,7 @@ function AnaEkran({ hepsi, oturum, onMeslek, onHesap, onKaynak, pusula, onPusula
             <Text style={{ fontSize: 22 }}>✨</Text>
             <Text style={{ fontWeight: '900', color: MARKA.lacivert, marginTop: 4 }}>{t('Yeni meslekler yolda')}</Text>
             <Text style={{ color: R.soluk, fontSize: 12, textAlign: 'center', marginTop: 4 }}>{t('Meslektaş kurslara ön hazırlık amaçlıdır; resmî eğitim veya sertifika yerine geçmez.')}</Text>
+            <Text style={{ color: MARKA.lacivert, fontSize: 12, fontWeight: '700', textAlign: 'center', marginTop: 6 }}>🇹🇷 {t('Oyundaki tüm bilgi ve kurallar Türkiye\'de geçerli mevzuata göredir.')}</Text>
           </View>
           <Pressable onPress={onKaynak} hitSlop={10}><Text style={{ color: R.soluk, textAlign: 'center', marginTop: 14, fontSize: 13, textDecorationLine: 'underline' }}>{t('Görsel kaynakları')}</Text></Pressable>
         </View>
@@ -338,6 +340,7 @@ function HaritaKabuk({ paket, sonuclar, onGeri, children }) {
             <View style={{ flex: 1, marginRight: 12 }}><Cubuk oran={xp / max} renk={MARKA.gok} yukseklik={8} style={{ backgroundColor: 'rgba(255,255,255,0.18)' }} /></View>
             <Text style={{ color: '#fff', fontWeight: '800', fontSize: 13 }}>⚡ {xp} XP · 🏅 {rozet}/{paket.kademeler.length}</Text>
           </View>
+          <Text style={{ color: '#bcd3f3', fontSize: 11.5, marginTop: 10 }}>🇹🇷 {t('Bu meslek Türkiye\'deki kurallara ve mevzuata göre anlatılır.')}</Text>
         </View>
         <View style={{ padding: 18 }}>{children}</View>
       </ScrollView>

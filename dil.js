@@ -63,7 +63,9 @@ const S = {
   'MESLEK PUSULASI': ['CAREER COMPASS', 'BERUFSKOMPASS', 'بوصلة المهن'],
   'Meslek Pusulası': ['Career Compass', 'Berufskompass', 'بوصلة المهن'],
   'Dil': ['Language', 'Sprache', 'اللغة'],
-  'Meslek görevleri şimdilik Türkçe.': ['Profession tasks are in Turkish for now.', 'Die Berufsaufgaben sind vorerst auf Türkisch.', 'مهام المهن باللغة التركية حاليًا.'],
+  "Oyundaki tüm bilgi ve kurallar Türkiye'de geçerli mevzuata göredir.": ['All information and rules in the game are based on the laws and regulations in force in Türkiye.', 'Alle Informationen und Regeln im Spiel beruhen auf den in der Türkei geltenden Vorschriften.', 'جميع المعلومات والقواعد في اللعبة وفق التشريعات السارية في تركيا.'],
+  "Bu meslek Türkiye'deki kurallara ve mevzuata göre anlatılır.": ['This profession is taught according to the rules and regulations in Türkiye.', 'Dieser Beruf wird nach den in der Türkei geltenden Regeln und Vorschriften vermittelt.', 'تُشرح هذه المهنة وفق القواعد والتشريعات المعمول بها في تركيا.'],
+  'Bazı meslekler henüz bu dilde değil; Türkçe açılır.': ['Some professions are not yet in this language; they open in Turkish.', 'Einige Berufe gibt es noch nicht in dieser Sprache; sie öffnen sich auf Türkisch.', 'بعض المهن غير متوفرة بهذه اللغة بعد، وتُفتح بالتركية.'],
 
   // ---- harita ----
   '🔒 Önceki kademenin sınavını geçince açılır.': ['🔒 Unlocks after you pass the previous level exam.', '🔒 Wird freigeschaltet, wenn du die vorherige Stufenprüfung bestehst.', '🔒 يُفتح بعد اجتياز اختبار المستوى السابق.'],
