@@ -1,5 +1,5 @@
 {
- "paketSurumu": 1,
+ "paketSurumu": 2,
  "meslek": {
   "id": "insaat",
   "ad": "İnşaat Teknisyeni",
@@ -301,7 +301,7 @@
   },
   {
    "ad": "Çırak",
-   "hedefXp": 360,
+   "hedefXp": 420,
    "rozet": {
     "ad": "Şantiye Çırağı",
     "ikon": "⛑️"
@@ -717,6 +717,72 @@
      "sahne": "santiye"
     },
     {
+     "id": "c-duvar",
+     "sablon": "siralama",
+     "ikon": "🧱",
+     "baslik": "Duvarı ör",
+     "aciklama": "Kaba yapı bitti, sıra dolgu duvarlarda. Tuğla duvarı doğru sırayla ör.",
+     "adimlar": [
+      {
+       "id": "ciz",
+       "ikon": "📐",
+       "metin": "Duvarın yerini projeden ölçüp zemine çiz",
+       "neden": "Yanlış yere örülen duvar yıkılır; her şey ölçüyle başlar.",
+       "ipucu": "Önce yer."
+      },
+      {
+       "id": "uclar",
+       "ikon": "📏",
+       "metin": "İki uca ilk tuğlaları şakül ve su terazisiyle yerleştir",
+       "neden": "Uçlar doğruysa aradaki duvar da doğru olur.",
+       "ipucu": "Yer çizildi; şimdi duvarın iki ucu."
+      },
+      {
+       "id": "ip",
+       "ikon": "🧵",
+       "metin": "İki uç arasına ip çek",
+       "neden": "İp, her sıranın düz ve aynı hizada olmasını sağlar.",
+       "ipucu": "Uçlar hazır; aralarını ne birleştirir?"
+      },
+      {
+       "id": "or",
+       "ikon": "🧱",
+       "metin": "Harcı serip tuğlaları ipe göre, derzleri şaşırtarak ör",
+       "neden": "Üst üste gelen düşey derz duvarı zayıflatır ve çatlatır.",
+       "ipucu": "İp gerili; şimdi ör."
+      },
+      {
+       "id": "lento",
+       "ikon": "🚪",
+       "metin": "Kapı ve pencere boşluklarının üstüne lento yap",
+       "neden": "Lento, boşluğun üstündeki duvar yükünü yanlara aktarır.",
+       "ipucu": "Duvar yükseldi, boşluklara geldin."
+      },
+      {
+       "id": "kontrol",
+       "ikon": "✅",
+       "metin": "Duvarı şakül ve terazide kontrol et, taşan harcı temizle",
+       "neden": "Eğri duvar sonra kalın sıvayla düzeltilmeye çalışılır; bu hem para hem ağırlık demektir.",
+       "ipucu": "Son adım: kontrol."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Duvar ustalığı",
+      "maddeler": [
+       "Ölç, uçları kur, ip çek.",
+       "Derzler şaşırtmalı olur.",
+       "Boşluk üstüne lento.",
+       "Şakül ve terazi her sırada."
+      ]
+     }
+    },
+    {
      "id": "c7-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -811,6 +877,17 @@
        ],
        "dogru": 1,
        "aciklama": "Taşıyıcılar statik projede."
+      },
+      {
+       "soru": "Tuğla duvarda derzler nasıl olmalı?",
+       "secenekler": [
+        "Üst üste",
+        "Şaşırtmalı",
+        "Rastgele",
+        "Derz olmaz"
+       ],
+       "dogru": 1,
+       "aciklama": "Şaşırtmalı derz duvarı birbirine bağlar."
       }
      ]
     }
@@ -818,7 +895,7 @@
   },
   {
    "ad": "Teknisyen",
-   "hedefXp": 305,
+   "hedefXp": 415,
    "rozet": {
     "ad": "İnşaat Teknisyeni",
     "ikon": "🧱"
@@ -1082,6 +1159,142 @@
      }
     },
     {
+     "id": "tk-mantolama",
+     "sablon": "siralama",
+     "ikon": "🧣",
+     "baslik": "Mantolama",
+     "aciklama": "Dış cepheye ısı yalıtımı (mantolama) yapılacak. Adımları doğru sırayla uygula.",
+     "adimlar": [
+      {
+       "id": "temizle",
+       "ikon": "🧽",
+       "metin": "Cephe yüzeyini temizle, düzgünlüğünü kontrol et",
+       "neden": "Tozlu ya da bozuk yüzeye levha iyi yapışmaz.",
+       "ipucu": "Önce zemin hazırlığı."
+      },
+      {
+       "id": "profil",
+       "ikon": "📏",
+       "metin": "En alta başlangıç profilini tak",
+       "neden": "İlk sıra levhalar bu profilin üstüne düz oturur.",
+       "ipucu": "Levhalar nereden başlayacak?"
+      },
+      {
+       "id": "harc",
+       "ikon": "🪣",
+       "metin": "Yapıştırma harcını levhanın kenarlarına şerit, ortasına nokta şeklinde sür",
+       "neden": "Kenar şeridi arkada hava akımını engeller, levha tam oturur.",
+       "ipucu": "Levhaya ne sürülür?"
+      },
+      {
+       "id": "yapistir",
+       "ikon": "⬜",
+       "metin": "Levhaları alttan yukarı, derzleri şaşırtarak yapıştır",
+       "neden": "Üst üste gelen derzler çatlak ve ısı köprüsü yapar.",
+       "ipucu": "Harç sürüldü; şimdi duvara."
+      },
+      {
+       "id": "dubel",
+       "ikon": "📌",
+       "metin": "Harç kuruyunca levhaları dübelle sabitle",
+       "neden": "Dübel rüzgâr emmesine karşı ek güvencedir.",
+       "ipucu": "Yapıştırma tuttu; ek sabitleme."
+      },
+      {
+       "id": "file",
+       "ikon": "🕸️",
+       "metin": "File donatılı sıvayı uygula",
+       "neden": "File, sıvanın çatlamasını önler.",
+       "ipucu": "Levhalar sabit; şimdi koruyucu kat."
+      },
+      {
+       "id": "son",
+       "ikon": "🎨",
+       "metin": "Son kat dekoratif sıva ya da boyayı uygula",
+       "neden": "Son kat yalıtımı güneşten ve yağmurdan korur.",
+       "ipucu": "Bitiş."
+      }
+     ],
+     "puanlama": {
+      "temelXp": 30,
+      "yildizBasinaXp": 10,
+      "ucYildizMaxHata": 0,
+      "ikiYildizMaxHata": 2
+     },
+     "bilgiKarti": {
+      "baslik": "Mantolama sırası",
+      "maddeler": [
+       "Temiz yüzey, başlangıç profili.",
+       "Harç: kenar şerit + orta nokta.",
+       "Levhalar şaşırtmalı, sonra dübel.",
+       "File sıva, son kat."
+      ]
+     }
+    },
+    {
+     "id": "tk-deprem",
+     "sablon": "soru",
+     "ikon": "🌍",
+     "baslik": "Depreme dayanıklı detaylar",
+     "temelXp": 20,
+     "yildizBasinaXp": 10,
+     "sorular": [
+      {
+       "soru": "Kolon etriyelerinin uçları nasıl bükülür?",
+       "secenekler": [
+        "Düz bırakılır",
+        "90° bükülür",
+        "135° kancayla bükülüp çekirdeğe gömülür",
+        "Kaynakla birleştirilir"
+       ],
+       "dogru": 2,
+       "aciklama": "135° kanca depremde etriyenin açılmasını önler. 90° kanca açılıp kolonu çözülmeye bırakır."
+      },
+      {
+       "soru": "Kolonların alt ve üst uçlarında etriyeler neden daha sıktır?",
+       "secenekler": [
+        "Demir arttığı için",
+        "Depremde en çok zorlanan bölgeler oralardır",
+        "Görüntü için",
+        "Kalıp kolay kapansın diye"
+       ],
+       "dogru": 1,
+       "aciklama": "Bu sık bölgelere sarılma bölgesi denir; projedeki aralıktan seyrek bağlanamaz."
+      },
+      {
+       "soru": "Zemin kattaki dükkân sahibi \"Vitrin için şu duvarları ve kolonu kaldıralım\" diyor. Ne olur?",
+       "secenekler": [
+        "Sorun olmaz",
+        "Kolon kesilemez; zemin kat zayıflayıp yumuşak kat oluşur, bina depremde çökebilir",
+        "Sadece boya değişir",
+        "Bina daha hafif olur, iyidir"
+       ],
+       "dogru": 1,
+       "aciklama": "Taşıyıcıya dokunulmaz. Değişiklik ancak statik proje ve izinle yapılır."
+      },
+      {
+       "soru": "Döşeme dökümünde işçilerin üst donatıya basıp onu ezmesini ne önler?",
+       "secenekler": [
+        "Hiçbir şey, sorun değil",
+        "Sehpa (ayak) demirleri ve yürüme yolları",
+        "Daha çok beton",
+        "Demirleri bağlamamak"
+       ],
+       "dogru": 1,
+       "aciklama": "Ezilen üst donatı yerinden kayar ve döşeme taşıması gereken yükü taşıyamaz."
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Deprem detayları",
+      "maddeler": [
+       "Etriye kancası 135°.",
+       "Kolon uçlarında etriye sık.",
+       "Kolon ve kiriş kesilmez.",
+       "Üst donatı sehpayla korunur."
+      ]
+     }
+    },
+    {
      "id": "t5-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -1176,6 +1389,28 @@
        ],
        "dogru": 0,
        "aciklama": "Erken kuruma çatlatır."
+      },
+      {
+       "soru": "Etriye uçları kaç derece kancayla bükülür?",
+       "secenekler": [
+        "45°",
+        "90°",
+        "135°",
+        "180°"
+       ],
+       "dogru": 2,
+       "aciklama": "135° kanca depremde açılmaz."
+      },
+      {
+       "soru": "Mantolamada levhalar dübelle ne zaman sabitlenir?",
+       "secenekler": [
+        "Harç sürülmeden önce",
+        "Yapıştırma harcı kuruduktan sonra",
+        "Son kat boyadan sonra",
+        "Hiç"
+       ],
+       "dogru": 1,
+       "aciklama": "Önce yapıştırma, kuruyunca dübel."
       }
      ]
     }
@@ -1183,7 +1418,7 @@
   },
   {
    "ad": "Tekniker",
-   "hedefXp": 340,
+   "hedefXp": 400,
    "rozet": {
     "ad": "İnşaat Teknikeri",
     "ikon": "📐"
@@ -1548,6 +1783,136 @@
      }
     },
     {
+     "id": "k-kalip",
+     "sablon": "senaryo",
+     "ikon": "🪵",
+     "baslik": "Kalıp güvenliği",
+     "temelXp": 30,
+     "yildizBasinaXp": 10,
+     "giris": "Kalıp, beton kendini taşıyana kadar her şeyi taşır. Bugün kalıp işleri senden sorulur.",
+     "adimlar": [
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Kalıpçı ustası: \"Döşeme dün döküldü, bugün dikmeleri sökelim.\"",
+       "secenekler": [
+        {
+         "metin": "Sökeriz, iş hızlansın",
+         "dogru": false,
+         "aciklama": "Beton bir günde taşıyacak dayanıma ulaşmaz; erken söküm döşemeyi çökertebilir."
+        },
+        {
+         "metin": "Söküm zamanını şantiye şefi ve statik projeye göre belirleriz",
+         "dogru": true,
+         "aciklama": "Süre beton sınıfına, havaya ve açıklığa göre değişir; karar sorumlu mühendisindir."
+        },
+        {
+         "metin": "Yarısını sökeriz",
+         "dogru": false,
+         "aciklama": "Yarım söküm de döşemeyi taşıyamayacağı bir yüke bırakır."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Dikmelerden biri çatlak ve eğri.",
+       "secenekler": [
+        {
+         "metin": "Döküm öncesi değiştirtirim",
+         "dogru": true,
+         "aciklama": "Tek zayıf dikme bütün kalıbın göçmesini başlatabilir."
+        },
+        {
+         "metin": "Yanına bir tane daha koyarım, çatlağı kalsın",
+         "dogru": false,
+         "aciklama": "Çatlak dikme yük alıp kırılabilir; değiştirilir."
+        },
+        {
+         "metin": "Bant sararım",
+         "dogru": false,
+         "aciklama": "Bant taşıyıcılık kazandırmaz."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "kizgin",
+       "metin": "Döküm sürerken kalıptan çatırtı geliyor, döşeme ortası sarkıyor.",
+       "secenekler": [
+        {
+         "metin": "Dökümü durdurur, herkesi altından ve üstünden uzaklaştırırım",
+         "dogru": true,
+         "aciklama": "Önce can güvenliği. Kalıp takviye edilmeden döküme devam edilmez."
+        },
+        {
+         "metin": "Hızlanırız, beton çabuk biter",
+         "dogru": false,
+         "aciklama": "Yük artarken göçme riski de artar."
+        },
+        {
+         "metin": "Altına girip bakarım",
+         "dogru": false,
+         "aciklama": "Sarkan kalıbın altı en tehlikeli yerdir."
+        }
+       ]
+      },
+      {
+       "kim": "musteri",
+       "ruh": "notr",
+       "metin": "Sökülen kalıp tahtaları çivileriyle yerde duruyor.",
+       "secenekler": [
+        {
+         "metin": "Çivileri söktürüp tahtaları düzgün istifletirim",
+         "dogru": true,
+         "aciklama": "Çivi batması şantiyede çok sık görülen bir kazadır."
+        },
+        {
+         "metin": "Akşam toplanır",
+         "dogru": false,
+         "aciklama": "O saate kadar biri basabilir."
+        },
+        {
+         "metin": "Üstlerine toprak atarım",
+         "dogru": false,
+         "aciklama": "Görünmeyen çivi daha tehlikelidir."
+        }
+       ]
+      },
+      {
+       "kim": "usta",
+       "ruh": "notr",
+       "metin": "Kıdemli tekniker: \"Yarın sabah don bekleniyor, döküm planlı.\"",
+       "secenekler": [
+        {
+         "metin": "Hiçbir önlem almadan dökeriz",
+         "dogru": false,
+         "aciklama": "Taze betondaki su donarsa beton dayanımını kaybeder."
+        },
+        {
+         "metin": "Şefle konuşup dökümü erteler ya da soğuk hava önlemlerini (örtü, koruma, uygun beton) planlarım",
+         "dogru": true,
+         "aciklama": "Soğuk havada beton korunmadan dökülmez; donmuş kalıba ya da zemine döküm yapılmaz."
+        },
+        {
+         "metin": "Betona tuz katarız",
+         "dogru": false,
+         "aciklama": "Tuz donatıyı paslandırır; katkı ancak projeye uygun ve onaylı olur."
+        }
+       ]
+      }
+     ],
+     "bilgiKarti": {
+      "baslik": "Kalıp kuralları",
+      "maddeler": [
+       "Söküm zamanına mühendis karar verir.",
+       "Çatlak dikme değiştirilir.",
+       "Kalıp sarkıyorsa döküm durur.",
+       "Donda korumasız döküm yok."
+      ]
+     }
+    },
+    {
      "id": "k6-sinav",
      "sablon": "sinav",
      "ikon": "🎓",
@@ -1642,6 +2007,17 @@
        ],
        "dogru": 0,
        "aciklama": "Onay gelmeden döküm olmaz."
+      },
+      {
+       "soru": "Döşeme kalıbının söküm zamanına kim karar verir?",
+       "secenekler": [
+        "Kalıpçı ustası",
+        "Şantiye şefi, statik projeye göre",
+        "Mikser şoförü",
+        "Kimse, bir gün sonra sökülür"
+       ],
+       "dogru": 1,
+       "aciklama": "Erken söküm döşemeyi çökertebilir."
       }
      ]
     }
